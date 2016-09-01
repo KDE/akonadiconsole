@@ -46,8 +46,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
       mWindow(Q_NULLPTR)
 {
     QWidget *mainWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     ui->setupUi(mainWidget);
 

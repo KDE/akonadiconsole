@@ -68,8 +68,7 @@ void TagPropertiesDialog::setupUi()
 
     QWidget *widget = new QWidget(this);
     ui.setupUi(widget);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
 

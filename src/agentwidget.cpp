@@ -58,8 +58,7 @@ public:
         : QDialog(parent)
     {
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
-        QVBoxLayout *mainLayout = new QVBoxLayout;
-        setLayout(mainLayout);
+        QVBoxLayout *mainLayout = new QVBoxLayout(this);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
