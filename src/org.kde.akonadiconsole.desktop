@@ -1,9 +1,25 @@
 [Desktop Entry]
 Name=Akonadi Console
+Name[ca]=Consola de l'Akonadi
+Name[nl]=Akonadi-console
+Name[pt]=Consola do Akonadi
+Name[pt_BR]=Console do Akonadi
+Name[sl]=Konzola za Akonadi
+Name[sv]=Akonadi-terminal
+Name[uk]=Термінал Akonadi
+Name[x-test]=xxAkonadi Consolexx
 Exec=akonadiconsole
 Icon=akonadiconsole
 Type=Application
 Comment=Akonadi Management and Debugging Console
+Comment[ca]=Consola de gestió i depuració per a l'Akonadi
+Comment[nl]=Akonadi-beheer en debugging-console
+Comment[pt]=Consola de Gestão e Depuração do Akonadi
+Comment[pt_BR]=Console de gerenciamento e depuração do Akonadi
+Comment[sl]=Akonadijeva konzola za upravljanje in razhroščevanje
+Comment[sv]=Akonadi hanterings- och felsökningsterminal
+Comment[uk]=Термінал керування і діагностики Akonadi
+Comment[x-test]=xxAkonadi Management and Debugging Consolexx
 Terminal=false
 Categories=Qt;KDE;Development;
 X-DBUS-ServiceName=org.kde.akonadiconsole
