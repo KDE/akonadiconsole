@@ -20,6 +20,7 @@
 #include "notificationmonitor.h"
 #include "notificationmodel.h"
 
+#include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
 
 #include <KLocalizedString>

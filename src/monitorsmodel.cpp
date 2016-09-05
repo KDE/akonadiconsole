@@ -140,6 +140,9 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
         case Akonadi::Monitor::Subscribers:
             rv << QStringLiteral("Subscribers");
             break;
+        case Akonadi::Monitor::Notifications:
+            rv << QStringLiteral("Debug Notifications");
+            break;
         }
     }
     return rv.join(QStringLiteral(", "));

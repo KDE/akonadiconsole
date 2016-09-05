@@ -25,8 +25,13 @@
 #include <QDBusInterface>
 
 #include <AkonadiCore/Monitor>
+#include <AkonadiCore/ChangeNotification>
 
-class QDBusInterface;
+namespace Akonadi {
+namespace Protocol {
+class ChangeNotification;
+}
+}
 
 class NotificationModel : public QAbstractItemModel
 {
@@ -42,6 +47,8 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
+    Akonadi::Protocol::ChangeNotification notification(const QModelIndex &index) const;
+
     bool isEnabled() const
     {
         return m_monitor;
@@ -52,7 +59,7 @@ public Q_SLOTS:
     void setEnabled(bool enable);
 
 private Q_SLOTS:
-    void slotNotify(const QVector<QByteArray> &msgs);
+    void slotNotify(const Akonadi::ChangeNotification &msg);
 
 private:
     class Item;
@@ -62,6 +69,7 @@ private:
     class CollectionNotificationNode;
     class TagNotificationNode;
     class RelationNotificationNode;
+    class SubscriptionNotificationNode;
 
     QList<Item *> m_data;
 

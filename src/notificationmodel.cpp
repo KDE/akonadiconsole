@@ -288,31 +288,79 @@ public:
     Protocol::RelationChangeNotification msg;
 };
 
+class NotificationModel::SubscriptionNotificationNode : public NotificationModel::Item
+{
+public:
+    SubscriptionNotificationNode(const Protocol::SubscriptionChangeNotification &msg,
+                                 NotificationModel::Item *parent)
+        : NotificationModel::Item(Protocol::Command::SubscriptionChangeNotification, parent)
+        , msg(msg)
+    {
+    }
+
+    ~SubscriptionNotificationNode()
+    {
+    }
+
+    QVariant data(int column) const Q_DECL_OVERRIDE
+    {
+        switch (column) {
+            case 0: {
+                switch (msg.operation()) {
+                case Protocol::SubscriptionChangeNotification::Add:
+                    return QStringLiteral("Add");
+                case Protocol::SubscriptionChangeNotification::Modify:
+                    return QStringLiteral("Modify");
+                case Protocol::SubscriptionChangeNotification::Remove:
+                    return QStringLiteral("Remove");
+                default:
+                    return QStringLiteral("Invalid");
+                }
+            }
+            case 1:
+                return QStringLiteral("Subscription");
+            case 2:
+                return msg.subscriber();
+            default:
+                return QString();
+        }
+    }
+
+    Protocol::SubscriptionChangeNotification msg;
+};
+
 class NotificationModel::NotificationBlock: public NotificationModel::Item
 {
 public:
-    NotificationBlock(const Akonadi::Protocol::ChangeNotification::List &msgs)
+    NotificationBlock(const Akonadi::ChangeNotification &msg)
         : NotificationModel::Item(-2, Q_NULLPTR)
     {
-        timestamp = QDateTime::currentDateTime();
-        Q_FOREACH (const Protocol::ChangeNotification &msg, msgs) {
-            switch (msg.type()) {
-            case Protocol::Command::ItemChangeNotification:
-                nodes << new ItemNotificationNode(msg, this);
-                break;
-            case Protocol::Command::CollectionChangeNotification:
-                nodes << new CollectionNotificationNode(msg, this);
-                break;
-            case Protocol::Command::TagChangeNotification:
-                nodes << new TagNotificationNode(msg, this);
-                break;
-            case Protocol::Command::RelationChangeNotification:
-                nodes << new RelationNotificationNode(msg, this);
-                break;
-            default:
-                qWarning() << "Unknown Notification type" << msg.type();
-                break;
-            }
+        timestamp = msg.timestamp();
+        QStringList list;
+        list.reserve(msg.listeners().count());
+        Q_FOREACH (const auto &l, msg.listeners()) {
+            list.push_back(QString::fromLatin1(l));
+        }
+        listeners = list.join(QStringLiteral(", "));
+        switch (msg.type()) {
+        case Akonadi::ChangeNotification::Items:
+            nodes << new ItemNotificationNode(msg.notification(), this);
+            break;
+        case Akonadi::ChangeNotification::Collection:
+            nodes << new CollectionNotificationNode(msg.notification(), this);
+            break;
+        case Akonadi::ChangeNotification::Tag:
+            nodes << new TagNotificationNode(msg.notification(), this);
+            break;
+        case Akonadi::ChangeNotification::Relation:
+            nodes << new RelationNotificationNode(msg.notification(), this);
+            break;
+        case Akonadi::ChangeNotification::Subscription:
+            nodes << new SubscriptionNotificationNode(msg.notification(), this);
+            break;
+        default:
+            qWarning() << "Unknown Notification type" << msg.type();
+            break;
         }
     }
 
@@ -327,11 +375,14 @@ public:
                    .arg(timestamp.time().msec(), 3, 10, QLatin1Char('0'));
         case 1:
             return nodes.count();
+        case 2:
+            return listeners;
         default:
             return QVariant();
         }
     }
 
+    QString listeners;
     QDateTime timestamp;
 };
 
@@ -339,10 +390,6 @@ NotificationModel::NotificationModel(QObject *parent) :
     QAbstractItemModel(parent),
     m_monitor(Q_NULLPTR)
 {
-    QString service = QStringLiteral("org.freedesktop.Akonadi");
-    if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-        service += QLatin1String(".") + Akonadi::ServerManager::instanceIdentifier();
-    }
 }
 
 NotificationModel::~NotificationModel()
@@ -382,12 +429,13 @@ QModelIndex NotificationModel::index(int row, int column, const QModelIndex &par
     }
 
     Item *parentItem = static_cast<Item *>(parent.internalPointer());
+    Q_ASSERT(parentItem);
     if (parentItem) {
         Item *item = parentItem->nodes.at(row);
         return createIndex(row, column, item);
-    } else {
-        return createIndex(row, column, m_data.at(row));
     }
+
+    return QModelIndex();
 }
 
 QModelIndex NotificationModel::parent(const QModelIndex &child) const
@@ -397,14 +445,15 @@ QModelIndex NotificationModel::parent(const QModelIndex &child) const
     }
 
     Item *childItem = static_cast<Item *>(child.internalPointer());
+    Q_ASSERT(childItem);
     if (childItem) {
         Item *parent = childItem->parent;
         if (!parent) {
             return QModelIndex();
         }
 
-        const int parentIndex = parent->parent ? parent->parent->nodes.indexOf(childItem) : m_data.indexOf(childItem);
-
+        const int parentIndex = parent->parent ? parent->parent->nodes.indexOf(parent) : m_data.indexOf(parent);
+        Q_ASSERT(parentIndex > -1);
         return createIndex(parentIndex, 0, parent);
     }
 
@@ -448,18 +497,10 @@ QVariant NotificationModel::headerData(int section, Qt::Orientation orientation,
     return QAbstractItemModel::headerData(section, orientation, role);
 }
 
-void NotificationModel::slotNotify(const QVector<QByteArray> &data)
+void NotificationModel::slotNotify(const Akonadi::ChangeNotification &ntf)
 {
-    Protocol::ChangeNotification::List ntfs;
-    ntfs.reserve(data.size());
-    Q_FOREACH (const QByteArray &d, data) {
-        QBuffer buffer(const_cast<QByteArray *>(&d));
-        buffer.open(QIODevice::ReadOnly);
-        ntfs << Protocol::deserialize(&buffer);
-    }
-
     beginInsertRows(QModelIndex(), m_data.size(), m_data.size());
-    m_data.append(new NotificationBlock(ntfs));
+    m_data.append(new NotificationBlock(ntf));
     endInsertRows();
 }
 
@@ -470,14 +511,35 @@ void NotificationModel::clear()
     reset();
 }
 
+Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &index) const
+{
+    Item *item = static_cast<Item*>(index.internalPointer());
+    Q_ASSERT(item);
+    switch (item->type) {
+    case Protocol::Command::ItemChangeNotification:
+        return static_cast<ItemNotificationNode*>(item)->msg;
+    case Protocol::Command::CollectionChangeNotification:
+        return static_cast<CollectionNotificationNode*>(item)->msg;
+    case Protocol::Command::TagChangeNotification:
+        return static_cast<TagNotificationNode*>(item)->msg;
+    case Protocol::Command::RelationChangeNotification:
+        return static_cast<RelationNotificationNode*>(item)->msg;
+    case Protocol::Command::SubscriptionChangeNotification:
+        return static_cast<SubscriptionNotificationNode*>(item)->msg;
+    default:
+        return Protocol::ChangeNotification();
+    }
+}
+
 void NotificationModel::setEnabled(bool enable)
 {
     if (enable) {
         m_monitor = new Akonadi::Monitor(this);
-        m_monitor->setAllMonitored(true);
-        m_monitor->setExclusive(true);
-
-    } else {
+        m_monitor->setObjectName(QStringLiteral("notificationMonitor"));
+        m_monitor->setTypeMonitored(Akonadi::Monitor::Notifications);
+        connect(m_monitor, &Akonadi::Monitor::debugNotification,
+                this, &NotificationModel::slotNotify);
+    } else if (m_monitor) {
         m_monitor->deleteLater();
         m_monitor = Q_NULLPTR;
     }
