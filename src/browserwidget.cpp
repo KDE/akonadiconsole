@@ -113,6 +113,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     splitter->addWidget(splitter2);
 
     ChangeRecorder *tagRecorder = new ChangeRecorder(this);
+    tagRecorder->setObjectName(QStringLiteral("tagRecorder"));
     tagRecorder->setTypeMonitored(Monitor::Tags);
     tagRecorder->setChangeRecordingEnabled(false);
     mTagView = new QTreeView(this);
@@ -128,6 +129,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
 
     // monitor collection changes
     mBrowserMonitor = new ChangeRecorder(this);
+    mBrowserMonitor->setObjectName(QStringLiteral("collectionMonitor"));
     mBrowserMonitor->setSession(session);
     mBrowserMonitor->setCollectionMonitored(Collection::root());
     mBrowserMonitor->fetchCollection(true);
@@ -357,6 +359,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
         mMonitor->deleteLater();    // might be the one calling us
     }
     mMonitor = new Monitor(this);
+    mMonitor->setObjectName(QStringLiteral("itemMonitor"));
     mMonitor->setItemMonitored(item);
     mMonitor->itemFetchScope().fetchFullPayload();
     mMonitor->itemFetchScope().fetchAllAttributes();
