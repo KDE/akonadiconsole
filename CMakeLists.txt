@@ -87,7 +87,7 @@ include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR})
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
-install( FILES akonadiconsole.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES akonadiconsole.renamecategories akonadiconsole.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(src)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

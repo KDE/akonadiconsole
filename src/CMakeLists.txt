@@ -42,7 +42,7 @@ set(akonadiconsole_bin_SRCS
     tagpropertiesdialog.cpp
     )
 
-ecm_qt_declare_logging_category(akonadiconsole_bin_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME log_akonadiconsole)
+ecm_qt_declare_logging_category(akonadiconsole_bin_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole)
 
 qt5_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
 qt5_add_dbus_adaptor(akonadiconsole_bin_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Akonadi.JobTracker.xml jobtracker.h JobTracker)
