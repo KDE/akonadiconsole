@@ -305,24 +305,24 @@ public:
     QVariant data(int column) const Q_DECL_OVERRIDE
     {
         switch (column) {
-            case 0: {
-                switch (msg.operation()) {
-                case Protocol::SubscriptionChangeNotification::Add:
-                    return QStringLiteral("Add");
-                case Protocol::SubscriptionChangeNotification::Modify:
-                    return QStringLiteral("Modify");
-                case Protocol::SubscriptionChangeNotification::Remove:
-                    return QStringLiteral("Remove");
-                default:
-                    return QStringLiteral("Invalid");
-                }
-            }
-            case 1:
-                return QStringLiteral("Subscription");
-            case 2:
-                return msg.subscriber();
+        case 0: {
+            switch (msg.operation()) {
+            case Protocol::SubscriptionChangeNotification::Add:
+                return QStringLiteral("Add");
+            case Protocol::SubscriptionChangeNotification::Modify:
+                return QStringLiteral("Modify");
+            case Protocol::SubscriptionChangeNotification::Remove:
+                return QStringLiteral("Remove");
             default:
-                return QString();
+                return QStringLiteral("Invalid");
+            }
+        }
+        case 1:
+            return QStringLiteral("Subscription");
+        case 2:
+            return msg.subscriber();
+        default:
+            return QString();
         }
     }
 
@@ -513,19 +513,19 @@ void NotificationModel::clear()
 
 Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &index) const
 {
-    Item *item = static_cast<Item*>(index.internalPointer());
+    Item *item = static_cast<Item *>(index.internalPointer());
     Q_ASSERT(item);
     switch (item->type) {
     case Protocol::Command::ItemChangeNotification:
-        return static_cast<ItemNotificationNode*>(item)->msg;
+        return static_cast<ItemNotificationNode *>(item)->msg;
     case Protocol::Command::CollectionChangeNotification:
-        return static_cast<CollectionNotificationNode*>(item)->msg;
+        return static_cast<CollectionNotificationNode *>(item)->msg;
     case Protocol::Command::TagChangeNotification:
-        return static_cast<TagNotificationNode*>(item)->msg;
+        return static_cast<TagNotificationNode *>(item)->msg;
     case Protocol::Command::RelationChangeNotification:
-        return static_cast<RelationNotificationNode*>(item)->msg;
+        return static_cast<RelationNotificationNode *>(item)->msg;
     case Protocol::Command::SubscriptionChangeNotification:
-        return static_cast<SubscriptionNotificationNode*>(item)->msg;
+        return static_cast<SubscriptionNotificationNode *>(item)->msg;
     default:
         return Protocol::ChangeNotification();
     }

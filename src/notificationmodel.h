@@ -27,8 +27,10 @@
 #include <AkonadiCore/Monitor>
 #include <AkonadiCore/ChangeNotification>
 
-namespace Akonadi {
-namespace Protocol {
+namespace Akonadi
+{
+namespace Protocol
+{
 class ChangeNotification;
 }
 }
