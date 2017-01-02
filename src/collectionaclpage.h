@@ -28,7 +28,7 @@ class CollectionAclPage : public Akonadi::CollectionPropertiesPage
 {
     Q_OBJECT
 public:
-    explicit CollectionAclPage(QWidget *parent = Q_NULLPTR);
+    explicit CollectionAclPage(QWidget *parent = nullptr);
 
     void load(const Akonadi::Collection &col) Q_DECL_OVERRIDE;
     void save(Akonadi::Collection &col) Q_DECL_OVERRIDE;

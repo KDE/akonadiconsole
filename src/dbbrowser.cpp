@@ -26,7 +26,7 @@
 
 DbBrowser::DbBrowser(QWidget *parent) :
     QWidget(parent),
-    mTableModel(Q_NULLPTR)
+    mTableModel(nullptr)
 {
     ui.setupUi(this);
 

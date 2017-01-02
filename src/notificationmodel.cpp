@@ -333,7 +333,7 @@ class NotificationModel::NotificationBlock: public NotificationModel::Item
 {
 public:
     NotificationBlock(const Akonadi::ChangeNotification &msg)
-        : NotificationModel::Item(-2, Q_NULLPTR)
+        : NotificationModel::Item(-2, nullptr)
     {
         timestamp = msg.timestamp();
         QStringList list;
@@ -388,7 +388,7 @@ public:
 
 NotificationModel::NotificationModel(QObject *parent) :
     QAbstractItemModel(parent),
-    m_monitor(Q_NULLPTR)
+    m_monitor(nullptr)
 {
 }
 
@@ -541,7 +541,7 @@ void NotificationModel::setEnabled(bool enable)
                 this, &NotificationModel::slotNotify);
     } else if (m_monitor) {
         m_monitor->deleteLater();
-        m_monitor = Q_NULLPTR;
+        m_monitor = nullptr;
     }
 }
 

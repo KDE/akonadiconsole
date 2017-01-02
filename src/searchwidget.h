@@ -41,7 +41,7 @@ class SearchWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit SearchWidget(QWidget *parent = Q_NULLPTR);
+    explicit SearchWidget(QWidget *parent = nullptr);
     ~SearchWidget();
 
 private Q_SLOTS:

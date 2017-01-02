@@ -86,10 +86,10 @@ Q_DECLARE_METATYPE(QSet<QByteArray>)
 
 BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     QWidget(parent),
-    mAttrModel(Q_NULLPTR),
-    mStdActionManager(Q_NULLPTR),
-    mMonitor(Q_NULLPTR),
-    mCacheOnlyAction(Q_NULLPTR)
+    mAttrModel(nullptr),
+    mStdActionManager(nullptr),
+    mMonitor(nullptr),
+    mCacheOnlyAction(nullptr)
 {
     Q_ASSERT(xmlGuiWindow);
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -256,7 +256,7 @@ void BrowserWidget::clear()
     contentUi.modificationtime->clear();
     contentUi.flags->clear();
     contentUi.tags->clear();
-    contentUi.attrView->setModel(Q_NULLPTR);
+    contentUi.attrView->setModel(nullptr);
 }
 
 void BrowserWidget::itemActivated(const QModelIndex &index)

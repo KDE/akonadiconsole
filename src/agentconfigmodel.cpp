@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include "akonadiconsole_debug.h"
 
-AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(Q_NULLPTR)
+AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)
 {
 }
 

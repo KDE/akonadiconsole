@@ -56,7 +56,7 @@ class BrowserWidget: public QWidget
     Q_OBJECT
 
 public:
-    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = Q_NULLPTR);
+    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = nullptr);
     ~BrowserWidget();
 
 public Q_SLOTS:

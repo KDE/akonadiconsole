@@ -35,7 +35,7 @@
 
 DbConsole::DbConsole(QWidget *parent) :
     QWidget(parent),
-    mQueryModel(Q_NULLPTR)
+    mQueryModel(nullptr)
 {
     ui.setupUi(this);
 

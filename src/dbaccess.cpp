@@ -55,7 +55,7 @@ public:
         database.setPassword(settings.value(QStringLiteral("Password"), QString()).toString());
         database.setConnectOptions(settings.value(QStringLiteral("Options"), QString()).toString());
         if (!database.open()) {
-            KMessageBox::error(Q_NULLPTR, QStringLiteral("Failed to connect to database: %1").arg(database.lastError().text()));
+            KMessageBox::error(nullptr, QStringLiteral("Failed to connect to database: %1").arg(database.lastError().text()));
         }
     }
 

@@ -38,7 +38,7 @@ class QueryDebugger : public QWidget
     Q_OBJECT
 
 public:
-    explicit QueryDebugger(QWidget *parent = Q_NULLPTR);
+    explicit QueryDebugger(QWidget *parent = nullptr);
     virtual ~QueryDebugger();
 
 private Q_SLOTS:

@@ -293,7 +293,7 @@ void AkonadiBrowserModel::setItemDisplayMode(AkonadiBrowserModel::ItemDisplayMod
 {
     const int oldColumnCount = columnCount();
     m_itemDisplayMode = itemDisplayMode;
-    AkonadiBrowserModel::State *newState = Q_NULLPTR;
+    AkonadiBrowserModel::State *newState = nullptr;
     switch (itemDisplayMode) {
     case MailMode:
         newState = m_mailState;

@@ -31,7 +31,7 @@ class AgentConfigModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    explicit AgentConfigModel(QObject *parent = Q_NULLPTR);
+    explicit AgentConfigModel(QObject *parent = nullptr);
     ~AgentConfigModel();
     void setAgentInstance(const Akonadi::AgentInstance &instance);
 

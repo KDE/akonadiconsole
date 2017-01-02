@@ -30,7 +30,7 @@ using namespace Akonadi;
 
 CollectionAttributePage::CollectionAttributePage(QWidget *parent) :
     CollectionPropertiesPage(parent),
-    mModel(Q_NULLPTR)
+    mModel(nullptr)
 {
     setPageTitle(QStringLiteral("Attributes"));
     ui.setupUi(this);

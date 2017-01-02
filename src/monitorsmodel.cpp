@@ -27,7 +27,7 @@
 
 MonitorsModel::MonitorsModel(QObject *parent):
     QAbstractItemModel(parent),
-    mMonitor(Q_NULLPTR)
+    mMonitor(nullptr)
 {
     QTimer::singleShot(0, this, &MonitorsModel::init);
 }

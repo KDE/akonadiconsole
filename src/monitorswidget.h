@@ -30,7 +30,7 @@ class MonitorsWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit MonitorsWidget(QWidget *parent = Q_NULLPTR);
+    explicit MonitorsWidget(QWidget *parent = nullptr);
     virtual ~MonitorsWidget();
 
 private:

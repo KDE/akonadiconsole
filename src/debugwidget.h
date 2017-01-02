@@ -37,7 +37,7 @@ class DebugWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit DebugWidget(QWidget *parent = Q_NULLPTR);
+    explicit DebugWidget(QWidget *parent = nullptr);
 
 private Q_SLOTS:
     void connectionStarted(const QString &, const QString &);
