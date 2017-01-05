@@ -243,7 +243,8 @@ QList<JobInfo> JobTracker::jobs(const QString &parent) const
     assert(d->jobs.contains(parent));
     const QStringList jobs = d->jobs.value(parent);
     QList<JobInfo> infoList;
-    Q_FOREACH (const QString &job, jobs) {
+    infoList.reserve(jobs.count());
+    for (const QString &job : jobs) {
         infoList << d->infoList.value(job);
     }
     return infoList;

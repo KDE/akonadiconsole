@@ -41,6 +41,7 @@ class JobTrackerWidget::Private
 {
 public:
     JobTrackerModel *model;
+    QTreeView *tv;
 };
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
@@ -56,16 +57,16 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     connect(enableCB, &QAbstractButton::toggled, d->model, &JobTrackerModel::setEnabled);
     layout->addWidget(enableCB);
 
-    QTreeView *tv = new QTreeView(this);
-    tv->setModel(d->model);
-    tv->expandAll();
-    tv->setAlternatingRowColors(true);
-    tv->setContextMenuPolicy(Qt::CustomContextMenu);
+    d->tv = new QTreeView(this);
+    d->tv->setModel(d->model);
+    d->tv->expandAll();
+    d->tv->setAlternatingRowColors(true);
+    d->tv->setContextMenuPolicy(Qt::CustomContextMenu);
     // too slow with many jobs:
     // tv->header()->setResizeMode( QHeaderView::ResizeToContents );
-    connect(d->model, &JobTrackerModel::modelReset, tv, &QTreeView::expandAll);
-    connect(tv, &QTreeView::customContextMenuRequested, this, &JobTrackerWidget::contextMenu);
-    layout->addWidget(tv);
+    connect(d->model, &JobTrackerModel::modelReset, d->tv, &QTreeView::expandAll);
+    connect(d->tv, &QTreeView::customContextMenuRequested, this, &JobTrackerWidget::contextMenu);
+    layout->addWidget(d->tv);
     d->model->setEnabled(false);   // since it can be slow, default to off
 
     QHBoxLayout *layout2 = new QHBoxLayout;
@@ -88,7 +89,18 @@ void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
 {
     QMenu menu;
     menu.addAction(QStringLiteral("Clear View"), d->model, &JobTrackerModel::resetTracker);
+    menu.addSeparator();
+    menu.addAction(QStringLiteral("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
     menu.exec(QCursor::pos());
+}
+#include <QDebug>
+void JobTrackerWidget::copyJobInfo()
+{
+    QModelIndex index = d->tv->currentIndex();
+    if (index.isValid()) {
+        const QModelIndex index = d->model->index(index.row(), 6, index.parent());
+        qDebug() << "index " << index.data();
+    }
 }
 
 void JobTrackerWidget::slotSaveToFile()
