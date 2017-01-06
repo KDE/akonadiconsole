@@ -39,6 +39,7 @@ set(akonadiconsole_bin_SRCS
     jobtracker.cpp
     jobtrackerwidget.cpp
     jobtrackermodel.cpp
+    jobtrackerfilterproxymodel.cpp
     tagpropertiesdialog.cpp
     )
 
