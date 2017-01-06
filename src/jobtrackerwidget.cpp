@@ -36,6 +36,8 @@
 #include <QPushButton>
 #include <QFile>
 #include <QFileDialog>
+#include <QApplication>
+#include <QClipboard>
 
 class JobTrackerWidget::Private
 {
@@ -93,13 +95,14 @@ void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
     menu.addAction(QStringLiteral("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
     menu.exec(QCursor::pos());
 }
-#include <QDebug>
+
 void JobTrackerWidget::copyJobInfo()
 {
     QModelIndex index = d->tv->currentIndex();
     if (index.isValid()) {
-        const QModelIndex index = d->model->index(index.row(), 6, index.parent());
-        qDebug() << "index " << index.data();
+        const QModelIndex newIndex = d->model->index(index.row(), 6, index.parent());
+        QClipboard *cb = QApplication::clipboard();
+        cb->setText(newIndex.data().toString(), QClipboard::Clipboard);
     }
 }
 
