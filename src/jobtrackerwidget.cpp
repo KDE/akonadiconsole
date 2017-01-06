@@ -93,7 +93,21 @@ void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
     menu.addAction(QStringLiteral("Clear View"), d->model, &JobTrackerModel::resetTracker);
     menu.addSeparator();
     menu.addAction(QStringLiteral("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
+    menu.addSeparator();
+    menu.addAction(QStringLiteral("Collapse All"), this, &JobTrackerWidget::collapseAll);
+    menu.addAction(QStringLiteral("Expand All"), this, &JobTrackerWidget::expandAll);
+
     menu.exec(QCursor::pos());
+}
+
+void JobTrackerWidget::expandAll()
+{
+    d->tv->expandAll();
+}
+
+void JobTrackerWidget::collapseAll()
+{
+    d->tv->collapseAll();
 }
 
 void JobTrackerWidget::copyJobInfo()

@@ -38,7 +38,9 @@ private Q_SLOTS:
     void slotSaveToFile();
 
 private:
+    void expandAll();
     void copyJobInfo();
+    void collapseAll();
     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
 
     class Private;
