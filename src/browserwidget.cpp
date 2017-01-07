@@ -48,6 +48,7 @@
 #include <AkonadiCore/tagmodel.h>
 #include <AkonadiCore/statisticsproxymodel.h>
 #include <AkonadiCore/tagdeletejob.h>
+#include <AkonadiXml/XmlWriteJob>
 #include <kviewstatemaintainer.h>
 
 #include <kcontacts/addressee.h>
@@ -472,10 +473,9 @@ void BrowserWidget::dumpToXml()
     if (fileName.isEmpty()) {
         return;
     }
-#if 0 // TODO: port me, can't use XmlWriteJob here, it's in runtime, call the akonadi2xml cli tool instead
+
     XmlWriteJob *job = new XmlWriteJob(root, fileName, this);
     connect(job, &XmlWriteJob::result, this, &BrowserWidget::dumpToXmlResult);
-#endif
 }
 
 void BrowserWidget::dumpToXmlResult(KJob *job)
