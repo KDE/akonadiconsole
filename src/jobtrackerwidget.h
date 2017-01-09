@@ -41,6 +41,7 @@ private:
     void expandAll();
     void copyJobInfo();
     void collapseAll();
+    void textFilterChanged();
     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
 
     class Private;

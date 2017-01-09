@@ -36,7 +36,9 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
         return true;
     }
     QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
-    return sourceModel()->data(index).toString().contains(filterRegExp());
+    QRegExp reg = filterRegExp();
+    reg.setCaseSensitivity(Qt::CaseInsensitive);
+    return sourceModel()->data(index).toString().contains(reg);
 }
 
 void JobTrackerFilterProxyModel::setSearchColumn(int column)

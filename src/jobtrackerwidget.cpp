@@ -23,6 +23,7 @@
 #include <QCheckBox>
 
 #include "jobtrackermodel.h"
+#include "jobtrackerfilterproxymodel.h"
 
 #include <AkonadiWidgets/controlgui.h>
 
@@ -38,12 +39,15 @@
 #include <QFileDialog>
 #include <QApplication>
 #include <QClipboard>
+#include <QLineEdit>
 
 class JobTrackerWidget::Private
 {
 public:
     JobTrackerModel *model;
     QTreeView *tv;
+    QLineEdit *searchLineEdit;
+    JobTrackerFilterProxyModel *filterProxyModel;
 };
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
@@ -59,8 +63,17 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     connect(enableCB, &QAbstractButton::toggled, d->model, &JobTrackerModel::setEnabled);
     layout->addWidget(enableCB);
 
+    d->searchLineEdit = new QLineEdit(this);
+    d->searchLineEdit->setClearButtonEnabled(true);
+    d->searchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
+    layout->addWidget(d->searchLineEdit);
+    connect(d->searchLineEdit, &QLineEdit::textChanged, this, &JobTrackerWidget::textFilterChanged);
+
+    d->filterProxyModel = new JobTrackerFilterProxyModel(this);
+    d->filterProxyModel->setSourceModel(d->model);
+
     d->tv = new QTreeView(this);
-    d->tv->setModel(d->model);
+    d->tv->setModel(d->filterProxyModel);
     d->tv->expandAll();
     d->tv->setAlternatingRowColors(true);
     d->tv->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -85,6 +98,12 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
 JobTrackerWidget::~JobTrackerWidget()
 {
     delete d;
+}
+
+void JobTrackerWidget::textFilterChanged()
+{
+    d->filterProxyModel->setFilterFixedString(d->searchLineEdit->text());
+    d->tv->expandAll();
 }
 
 void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
