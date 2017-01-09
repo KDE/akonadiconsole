@@ -17,6 +17,7 @@
 
 
 #include "jobtrackerfilterproxymodel.h"
+//#include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent),
@@ -35,10 +36,25 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
     if (filterRegExp().isEmpty()) {
         return true;
     }
-    QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
     QRegExp reg = filterRegExp();
     reg.setCaseSensitivity(Qt::CaseInsensitive);
-    return sourceModel()->data(index).toString().contains(reg);
+    if (mSearchColumn == -1) {//Search on All Column
+        for (int i = 0; i < 7; i++) {
+            QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
+            if (index.isValid()) {
+                //qDebug() << " sourceModel()->data(index).toString( "<<sourceModel()->data(index).toString() << " column " <<i << "reg" << reg
+                if (sourceModel()->data(index).toString().contains(reg)) {
+                    return true;
+                }
+            } else {
+                return true;
+            }
+        }
+        return false;
+    } else {
+        QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
+        return sourceModel()->data(index).toString().contains(reg);
+    }
 }
 
 void JobTrackerFilterProxyModel::setSearchColumn(int column)
