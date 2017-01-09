@@ -19,7 +19,8 @@
 #include "jobtrackerfilterproxymodel.h"
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
-    : QSortFilterProxyModel(parent)
+    : QSortFilterProxyModel(parent),
+      mSearchColumn(0)
 {
 
 }
@@ -34,7 +35,11 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
     if (filterRegExp().isEmpty()) {
         return true;
     }
-    QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
+    QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
     return sourceModel()->data(index).toString().contains(filterRegExp());
 }
 
+void JobTrackerFilterProxyModel::setSearchColumn(int column)
+{
+    mSearchColumn = column;
+}
