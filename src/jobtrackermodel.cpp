@@ -89,7 +89,7 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &paren
     }
     // non-toplevel job
     const QStringList jobs = d->tracker.jobNames(parent.internalId());
-    if (row >= jobs.size()) {
+    if (row < 0 || row >= jobs.size()) {
         return QModelIndex();
     }
     return createIndex(row, column, d->tracker.idForJob(jobs.at(row)));
