@@ -22,6 +22,7 @@
 
 #include "jobtracker.h"
 #include "jobtrackeradaptor.h"
+#include <akonadi/private/instance_p.h>
 #include "akonadiconsole_debug.h"
 #include <QString>
 #include <QStringList>
@@ -87,7 +88,8 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     : QObject(parent), d(new Private(this))
 {
     new JobTrackerAdaptor(this);
-    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole"));
+    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
             this, QDBusConnection::ExportAdaptors);
 
