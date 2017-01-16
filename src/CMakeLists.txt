@@ -1,8 +1,4 @@
 
-include_directories(
-    ${AKONADI_INCLUDE_DIR}
-    )
-
 include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
