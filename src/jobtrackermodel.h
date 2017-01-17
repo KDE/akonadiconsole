@@ -23,8 +23,9 @@
 #define AKONADICONSOLE_JOBTRACKERMODEL_H
 
 #include <QAbstractItemModel>
+#include "akonadiconsolelib_export.h"
 
-class JobTrackerModel : public QAbstractItemModel
+class AKONADICONSOLELIB_EXPORT JobTrackerModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:

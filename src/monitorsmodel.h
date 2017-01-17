@@ -22,7 +22,7 @@
 
 #include <QAbstractItemModel>
 #include <AkonadiCore/NotificationSubscriber>
-
+#include "akonadiconsolelib_export.h"
 class MonitorItem;
 
 namespace Akonadi
@@ -30,7 +30,7 @@ namespace Akonadi
 class Monitor;
 }
 
-class MonitorsModel : public QAbstractItemModel
+class AKONADICONSOLELIB_EXPORT MonitorsModel : public QAbstractItemModel
 {
     Q_OBJECT
 

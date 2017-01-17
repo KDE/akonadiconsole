@@ -52,7 +52,7 @@ set(KDEPIM_LIB_SOVERSION "5")
 
 
 set(QT_REQUIRED_VERSION "5.6.0")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql Test)
 set(MESSAGELIB_LIB_VERSION_LIB "5.4.40")
 set(LIBKLEO_LIB_VERSION_LIB "5.4.40")
 set(LIBKDEPIM_LIB_VERSION_LIB "5.4.40")
@@ -94,4 +94,7 @@ add_definitions(-DQT_USE_QSTRINGBUILDER)
 install( FILES akonadiconsole.renamecategories akonadiconsole.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(src)
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

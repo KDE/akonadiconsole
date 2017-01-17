@@ -27,7 +27,7 @@
 #include <QDateTime>
 #include <QList>
 #include <QPair>
-
+#include "akonadiconsolelib_export.h"
 class JobInfo
 {
 public:
@@ -60,7 +60,7 @@ public:
     QString stateAsString() const;
 };
 
-class JobTracker : public QObject
+class AKONADICONSOLELIB_EXPORT JobTracker : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.freedesktop.Akonadi.JobTracker")
