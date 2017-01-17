@@ -23,6 +23,7 @@
 #define INSTANCESELECTOR_H
 
 #include "mainwindow.h"
+#include "akonadiconsolelib_export.h"
 
 #include <QDialog>
 #include <KConfigGroup>
@@ -35,7 +36,7 @@ class InstanceSelector;
 /** Check if there are multiple instances of Akonadi running, and if so present
  *  a list to select the one to connect to.
  */
-class InstanceSelector : public QDialog
+class AKONADICONSOLELIB_EXPORT InstanceSelector : public QDialog
 {
     Q_OBJECT
 public:
