@@ -68,8 +68,10 @@ JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
 {
     connect(&d->tracker, SIGNAL(reset()),
             this, SIGNAL(modelReset()));
+    connect(&d->tracker, &JobTracker::aboutToAdd,
+            this, &JobTrackerModel::jobAboutToBeAdded);
     connect(&d->tracker, &JobTracker::added,
-            this, &JobTrackerModel::jobsAdded);
+            this, &JobTrackerModel::jobAdded);
     connect(&d->tracker, &JobTracker::updated,
             this, &JobTrackerModel::jobsUpdated);
 }
@@ -77,6 +79,11 @@ JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
 JobTrackerModel::~JobTrackerModel()
 {
     delete d;
+}
+
+JobTracker &JobTrackerModel::jobTracker()
+{
+    return d->tracker;
 }
 
 QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &parent) const
@@ -237,33 +244,28 @@ void JobTrackerModel::setEnabled(bool on)
     d->tracker.setEnabled(on);
 }
 
-void JobTrackerModel::jobsAdded(const QList< QPair< int, int > > &jobs)
+void JobTrackerModel::jobAboutToBeAdded(int pos, int parentId)
 {
-    // TODO group them by parent? It's likely that multiple jobs for the same
-    // parent will come in in the same batch, isn't it?
-#define PAIR QPair<int, int> // the parser in foreach barfs otherwise
-    Q_FOREACH (const PAIR &job, jobs) {
-        const int pos = job.first;
-        const int parentId = job.second;
-        QModelIndex parentIdx;
-        if (parentId != -1) {
-            const int row = d->rowForParentId(parentId);
-            if (row >= 0) {
-                parentIdx = createIndex(row, 0, parentId);
-            }
+    QModelIndex parentIdx;
+    if (parentId != -1) {
+        const int row = d->rowForParentId(parentId);
+        if (row >= 0) {
+            parentIdx = createIndex(row, 0, parentId);
         }
-        beginInsertRows(parentIdx, pos, pos);
-        endInsertRows();
     }
-#undef PAIR
+    beginInsertRows(parentIdx, pos, pos);
+}
+
+void JobTrackerModel::jobAdded()
+{
+    endInsertRows();
 }
 
 void JobTrackerModel::jobsUpdated(const QList< QPair< int, int > > &jobs)
 {
     // TODO group them by parent? It's likely that multiple jobs for the same
     // parent will come in in the same batch, isn't it?
-#define PAIR QPair<int, int> // the parser in foreach barfs otherwise
-    Q_FOREACH (const PAIR &job, jobs) {
+    for (const auto &job : jobs) {
         const int pos = job.first;
         const int parentId = job.second;
         QModelIndex parentIdx;
@@ -275,6 +277,5 @@ void JobTrackerModel::jobsUpdated(const QList< QPair< int, int > > &jobs)
         }
         dataChanged(index(pos, 0, parentIdx), index(pos, 3, parentIdx));
     }
-#undef PAIR
 }
 

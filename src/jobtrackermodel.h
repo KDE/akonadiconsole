@@ -25,26 +25,34 @@
 #include <QAbstractItemModel>
 #include "akonadiconsolelib_export.h"
 
+class JobTracker;
+
 class AKONADICONSOLELIB_EXPORT JobTrackerModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    JobTrackerModel(const char *name, QObject *parent);
+    JobTrackerModel(const char *name, QObject *parent = nullptr);
     virtual ~JobTrackerModel();
 
+    JobTracker &jobTracker(); // for the unittest
+
     /* QAIM API */
-    QModelIndex index(int, int, const QModelIndex &) const Q_DECL_OVERRIDE;
+    QModelIndex index(int, int, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     QModelIndex parent(const QModelIndex &) const Q_DECL_OVERRIDE;
-    int rowCount(const QModelIndex &) const Q_DECL_OVERRIDE;
-    int columnCount(const QModelIndex &) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     bool isEnabled() const;
+
 public Q_SLOTS:
     void resetTracker();
-    void jobsAdded(const QList< QPair<int, int> > &);
-    void jobsUpdated(const QList< QPair<int, int> > &);
     void setEnabled(bool);
+
+private Q_SLOTS:
+    void jobAboutToBeAdded(int pos, int parentId);
+    void jobAdded();
+    void jobsUpdated(const QList< QPair<int, int> > &);
 
 private:
     class Private;

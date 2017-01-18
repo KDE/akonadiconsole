@@ -15,25 +15,23 @@
   with this program; if not, write to the Free Software Foundation, Inc.,
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
-#ifndef JOBTRACKERTEST_H
-#define JOBTRACKERTEST_H
+#ifndef JOBTRACKERMODELTEST_H
+#define JOBTRACKERMODELTEST_H
 
 #include <QObject>
 
 class JobTracker;
 
-class JobTrackerTest : public QObject
+class JobTrackerModelTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit JobTrackerTest(QObject *parent = nullptr);
-    ~JobTrackerTest();
+    explicit JobTrackerModelTest(QObject *parent = nullptr);
+    ~JobTrackerModelTest();
 private slots:
     void initTestCase();
     void shouldBeEmpty();
     void shouldDisplayOneJob();
-    void shouldHandleJobStart();
-    void shouldHandleJobEnd();
 };
 
 #endif // JOBTRACKERTEST_H

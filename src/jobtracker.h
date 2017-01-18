@@ -97,13 +97,16 @@ public:
     bool isEnabled() const;
 
 Q_SIGNALS:
-    /** Emitted when jobs (or sessions) have been added to the tracker.
-      * The format is a list of pairs consisting of the position of the
-      * job or session relative to the parent and the id of that parent.
+
+
+    /** Emitted when a job (or session) is about to be added to the tracker.
+      * @param pos the position of the job or session relative to the parent
+      * @param parentId the id of that parent.
       * This makes it easy for the model to find and update the right
       * part of the model, for efficiency.
       */
-    void added(const QList< QPair<int, int> > &additions);
+    void aboutToAdd(int pos, int parentId);
+    void added();
 
     /** Emitted when jobs (or sessiona) have been updated in the tracker.
     * The format is a list of pairs consisting of the position of the
@@ -121,9 +124,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void jobEnded(const QString &job, const QString &error);
     Q_SCRIPTABLE void triggerReset();
     Q_SCRIPTABLE void setEnabled(bool on);
-
-private Q_SLOTS:
-    void signalUpdates();
+    void signalUpdates(); // public for the unittest
 
 private:
     class Private;

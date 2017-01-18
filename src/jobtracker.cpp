@@ -63,7 +63,7 @@ public:
         return id < -1;
     }
 
-    void emitUpdated()
+    void startUpdatedSignalTimer()
     {
         if (!timer.isActive() && !disabled) {
             timer.start();
@@ -78,7 +78,6 @@ public:
     int lastId;
     QTimer timer;
     bool disabled;
-    QList< QPair<int, int> > unpublishedAdds;
     QList< QPair<int, int> > unpublishedUpdates;
 private:
     JobTracker *const q;
@@ -92,37 +91,6 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
             this, QDBusConnection::ExportAdaptors);
-
-#if 0
-    // dummy data for testing
-    d->sessions << "one" << "two" << "three";
-    d->jobs.insert("one", QStringList() << "eins");
-    d->jobs.insert("two", QStringList());
-    d->jobs.insert("three", QStringList());
-
-    // create some fake jobs
-    d->jobs.insert("eins", QStringList() << "sub-eins" << "sub-zwei");
-    d->idToSequence.insert("eins", 0);
-    d->sequenceToId.insert(0, "eins");
-    JobInfo info;
-    info.id = "eins";
-    info.parent = -2;
-    d->infoList.insert("eins", info);
-
-    d->jobs.insert("sub-eins", QStringList());
-    d->idToSequence.insert("sub-eins", 1);
-    d->sequenceToId.insert(1, "sub-eins");
-    info.id = "sub-eins";
-    info.parent = 0;
-    d->infoList.insert("sub-eins", info);
-
-    d->jobs.insert("sub-zwei", QStringList());
-    d->idToSequence.insert("sub-zwei", 2);
-    d->sequenceToId.insert(2, "sub-zwei");
-    info.id = "sub-zwei";
-    info.parent = 0;
-    d->infoList.insert("sub-zwei", info);
-#endif
 }
 
 JobTracker::~JobTracker()
@@ -142,9 +110,10 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
     }
     // check if it's a new session, if so, add it
     if (!d->sessions.contains(session)) {
+        emit aboutToAdd(d->sessions.count(), -1);
         d->sessions.append(session);
         d->jobs.insert(session, QStringList());
-        d->unpublishedAdds << QPair<int, int>(d->sessions.count() - 1, -1);
+        emit added();
     }
 
     // deal with the job
@@ -155,15 +124,19 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
         // otherwise it just means the pointer got reused... replace old job
     }
 
+    const QString daddy = parent.isEmpty() ? session : parent;
+    const int parentId = parent.isEmpty() ? idForSession(session) : idForJob(parent);
+    assert(!daddy.isEmpty());
+    QStringList& kids = d->jobs[daddy];
+    const int pos = kids.size();
+
+    emit aboutToAdd(pos, parentId);
+
     d->jobs.insert(job, QStringList());
 
     JobInfo info;
     info.id = job;
-    if (parent.isEmpty()) {
-        info.parent = idForSession(session);
-    } else {
-        info.parent = idForJob(parent);
-    }
+    info.parent = parentId;
     info.state = JobInfo::Initial;
     info.timestamp = QDateTime::currentDateTime();
     info.type = jobType;
@@ -172,21 +145,9 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
     const int id = d->lastId++;
     d->idToSequence.insert(job, id);
     d->sequenceToId.insert(id, job);
-
-    QString daddy;
-    if (parent.isEmpty()) {
-        daddy = session;
-    } else {
-        daddy = parent;
-    }
-
-    assert(!daddy.isEmpty());
-    QStringList& kids = d->jobs[daddy];
-    const int pos = kids.size();
     kids << job;
 
-    d->unpublishedAdds << QPair<int, int>(pos, info.parent);
-    d->emitUpdated();
+    emit added();
 }
 
 void JobTracker::jobEnded(const QString &job, const QString &error)
@@ -206,7 +167,7 @@ void JobTracker::jobEnded(const QString &job, const QString &error)
     info.endedTimestamp = QDateTime::currentDateTime();
 
     d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
-    d->emitUpdated();
+    d->startUpdatedSignalTimer();
 }
 
 void JobTracker::jobStarted(const QString &job)
@@ -221,7 +182,7 @@ void JobTracker::jobStarted(const QString &job)
     info.startedTimestamp = QDateTime::currentDateTime();
 
     d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
-    d->emitUpdated();
+    d->startUpdatedSignalTimer();
 }
 
 QStringList JobTracker::sessions() const
@@ -338,10 +299,6 @@ bool JobTracker::isEnabled() const
 
 void JobTracker::signalUpdates()
 {
-    if (!d->unpublishedAdds.isEmpty()) {
-        Q_EMIT added(d->unpublishedAdds);
-        d->unpublishedAdds.clear();
-    }
     if (!d->unpublishedUpdates.isEmpty()) {
         Q_EMIT updated(d->unpublishedUpdates);
         d->unpublishedUpdates.clear();

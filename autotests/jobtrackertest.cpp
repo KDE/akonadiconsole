@@ -1,5 +1,6 @@
 /*
   Copyright (c) 2017 Montel Laurent <montel@kde.org>
+  Copyright (c) 2017 David Faure <faure@kde.org>
 
   This program is free software; you can redistribute it and/or modify it
   under the terms of the GNU General Public License, version 2, as
@@ -36,12 +37,10 @@ static QString intPairListToString(const QVariant &var)
 JobTrackerTest::JobTrackerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 JobTrackerTest::~JobTrackerTest()
 {
-
 }
 
 void JobTrackerTest::initTestCase()
@@ -64,7 +63,7 @@ void JobTrackerTest::shouldDisplayOneJob()
     // GIVEN
     JobTracker tracker("jobtracker");
     const QString jobName("job1");
-    QSignalSpy spyAdded(&tracker, &JobTracker::added);
+    QSignalSpy spyAboutToAdd(&tracker, &JobTracker::aboutToAdd);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
 
     // WHEN
@@ -85,10 +84,11 @@ void JobTrackerTest::shouldDisplayOneJob()
     QCOMPARE(tracker.jobNames(42), QStringList()); // no child
     QCOMPARE(tracker.parentId(-2), -1);
 
-    flushUpdates(tracker);
-
-    QCOMPARE(spyAdded.count(), 1);
-    QCOMPARE(intPairListToString(spyAdded.at(0).at(0)), QStringLiteral("0,-1 0,-2"));
+    QCOMPARE(spyAboutToAdd.count(), 2);
+    QCOMPARE(spyAboutToAdd.at(0).at(0).toInt(), 0);
+    QCOMPARE(spyAboutToAdd.at(0).at(1).toInt(), -1);
+    QCOMPARE(spyAboutToAdd.at(1).at(0).toInt(), 0);
+    QCOMPARE(spyAboutToAdd.at(1).at(1).toInt(), -2);
     QCOMPARE(spyUpdated.count(), 0);
 }
 
@@ -98,7 +98,7 @@ void JobTrackerTest::shouldHandleJobStart()
     JobTracker tracker("jobtracker");
     const QString jobName("job1");
     tracker.jobCreated("session1", jobName, QString(), "type1", "debugStr1");
-    flushUpdates(tracker);
+    tracker.signalUpdates();
     QSignalSpy spyAdded(&tracker, &JobTracker::added);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
 
@@ -108,7 +108,7 @@ void JobTrackerTest::shouldHandleJobStart()
     // THEN
     QCOMPARE(tracker.info(jobName).state, JobInfo::Running);
 
-    flushUpdates(tracker);
+    tracker.signalUpdates();
 
     QCOMPARE(spyAdded.count(), 0);
     QCOMPARE(spyUpdated.count(), 1);
@@ -122,7 +122,7 @@ void JobTrackerTest::shouldHandleJobEnd()
     const QString jobName("job1");
     tracker.jobCreated("session1", jobName, QString(), "type1", "debugStr1");
     tracker.jobStarted(jobName);
-    flushUpdates(tracker);
+    tracker.signalUpdates();
     QSignalSpy spyAdded(&tracker, &JobTracker::added);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
 
@@ -133,17 +133,11 @@ void JobTrackerTest::shouldHandleJobEnd()
     QCOMPARE(tracker.info(jobName).state, JobInfo::Failed);
     QCOMPARE(tracker.info(jobName).error, QStringLiteral("errorString"));
 
-    flushUpdates(tracker);
+    tracker.signalUpdates();
 
     QCOMPARE(spyAdded.count(), 0);
     QCOMPARE(spyUpdated.count(), 1);
     QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), QStringLiteral("0,-2"));
-}
-
-void JobTrackerTest::flushUpdates(JobTracker &tracker)
-{
-    // I'm not a patient man :-)
-    QMetaObject::invokeMethod(&tracker, "signalUpdates");
 }
 
 QTEST_MAIN(JobTrackerTest)

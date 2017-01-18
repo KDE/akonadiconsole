@@ -17,4 +17,6 @@ macro(add_unittest _source _additionalsource)
         akonadiconsolelib
         )
 endmacro ()
-add_unittest( jobtrackertest.cpp "")
+
+add_unittest(jobtrackertest.cpp "")
+add_unittest(jobtrackermodeltest.cpp "")
