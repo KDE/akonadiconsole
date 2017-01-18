@@ -19,12 +19,23 @@
 
 #include <QObject>
 
+class JobTracker;
+
 class JobTrackerTest : public QObject
 {
     Q_OBJECT
 public:
     explicit JobTrackerTest(QObject *parent = nullptr);
     ~JobTrackerTest();
+private slots:
+    void initTestCase();
+    void shouldBeEmpty();
+    void shouldDisplayOneJob();
+    void shouldHandleJobStart();
+    void shouldHandleJobEnd();
+
+private:
+    void flushUpdates(JobTracker &tracker);
 };
 
 #endif // JOBTRACKERTEST_H

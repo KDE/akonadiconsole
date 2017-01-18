@@ -17,13 +17,13 @@
 
 
 #include "jobtrackerfilterproxymodel.h"
-//#include <QDebug>
+#include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
-    : QSortFilterProxyModel(parent),
-      mSearchColumn(0)
+    : KRecursiveFilterProxyModel(parent),
+      mSearchColumn(-1)
 {
-
+    setDynamicSortFilter(true);
 }
 
 JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
@@ -31,7 +31,7 @@ JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
 
 }
 
-bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     if (filterRegExp().isEmpty()) {
         return true;
@@ -39,15 +39,17 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
     QRegExp reg = filterRegExp();
     reg.setCaseSensitivity(Qt::CaseInsensitive);
     if (mSearchColumn == -1) {//Search on All Column
-        for (int i = 0; i < 7; i++) {
+        const int colCount = sourceModel()->columnCount();
+        qDebug() << "Searching in" << colCount << "columns";
+        for (int i = 0; i < colCount; i++) {
             QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
             if (index.isValid()) {
-                //qDebug() << " sourceModel()->data(index).toString( "<<sourceModel()->data(index).toString() << " column " <<i << "reg" << reg
+                qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
                 if (sourceModel()->data(index).toString().contains(reg)) {
                     return true;
                 }
             } else {
-                return true;
+                return false;
             }
         }
         return false;

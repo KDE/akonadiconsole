@@ -68,26 +68,36 @@ class AKONADICONSOLELIB_EXPORT JobTracker : public QObject
 public:
     explicit JobTracker(const char *name, QObject *parent = nullptr);
     ~JobTracker();
-    QStringList sessions() const;
 
-    /** Returns the list of (sub)jobs of a session or another job. */
-    QList<JobInfo> jobs(const QString &parent) const;
-    QStringList jobNames(int id) const;
-    QList<JobInfo> jobs(int id) const;
+    QStringList sessions() const;
 
     int idForJob(const QString &job) const;
     QString jobForId(int id) const;
     int idForSession(const QString &session) const;
     QString sessionForId(int id) const;
-    int parentId(int id) const;
 
     JobInfo info(const QString &job) const;
     JobInfo info(int) const;
 
+    /**
+     * Returns the list of (sub)jobs of a session or another job.
+     * (i.e. going down)
+     */
+    QList<JobInfo> jobs(const QString &parent) const;
+    QStringList jobNames(int parentId) const;
+    QList<JobInfo> jobs(int parentId) const;
+
+    /**
+     * Returns the parent (job/session) ID for the given (job/session) ID,
+     * or -1 if the ID has no parent.
+     * (i.e. going up)
+     */
+    int parentId(int id) const;
+
     bool isEnabled() const;
 
 Q_SIGNALS:
-    /** Emitted when jobs (or sessiona) have been added to the tracker.
+    /** Emitted when jobs (or sessions) have been added to the tracker.
       * The format is a list of pairs consisting of the position of the
       * job or session relative to the parent and the id of that parent.
       * This makes it easy for the model to find and update the right

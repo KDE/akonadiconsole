@@ -141,7 +141,7 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
         jobCreated(session, parent, QString(), QStringLiteral("dummy job type"), QString());
     }
     // check if it's a new session, if so, add it
-    if (d->sessions.isEmpty() || !d->sessions.contains(session)) {
+    if (!d->sessions.contains(session)) {
         d->sessions.append(session);
         d->jobs.insert(session, QStringList());
         d->unpublishedAdds << QPair<int, int>(d->sessions.count() - 1, -1);
@@ -181,10 +181,9 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
     }
 
     assert(!daddy.isEmpty());
-    QStringList kids = d->jobs[daddy];
+    QStringList& kids = d->jobs[daddy];
+    const int pos = kids.size();
     kids << job;
-    const int pos = d->jobs[daddy].size();
-    d->jobs[daddy] = kids;
 
     d->unpublishedAdds << QPair<int, int>(pos, info.parent);
     d->emitUpdated();
@@ -197,7 +196,7 @@ void JobTracker::jobEnded(const QString &job, const QString &error)
         return;
     }
 
-    JobInfo info = d->infoList[job];
+    JobInfo &info = d->infoList[job];
     if (error.isEmpty()) {
         info.state = JobInfo::Ended;
     } else {
@@ -205,7 +204,6 @@ void JobTracker::jobEnded(const QString &job, const QString &error)
         info.error = error;
     }
     info.endedTimestamp = QDateTime::currentDateTime();
-    d->infoList[job] = info;
 
     d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
     d->emitUpdated();
@@ -218,10 +216,9 @@ void JobTracker::jobStarted(const QString &job)
         return;
     }
 
-    JobInfo info = d->infoList[job];
+    JobInfo &info = d->infoList[job];
     info.state = JobInfo::Running;
     info.startedTimestamp = QDateTime::currentDateTime();
-    d->infoList[job] = info;
 
     d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
     d->emitUpdated();
@@ -232,12 +229,12 @@ QStringList JobTracker::sessions() const
     return d->sessions;
 }
 
-QList<JobInfo> JobTracker::jobs(int id) const
+QList<JobInfo> JobTracker::jobs(int parentId) const
 {
-    if (d->isSession(id)) {
-        return jobs(sessionForId(id));
+    if (d->isSession(parentId)) {
+        return jobs(sessionForId(parentId));
     }
-    return jobs(jobForId(id));
+    return jobs(jobForId(parentId));
 }
 
 QList<JobInfo> JobTracker::jobs(const QString &parent) const
@@ -252,12 +249,12 @@ QList<JobInfo> JobTracker::jobs(const QString &parent) const
     return infoList;
 }
 
-QStringList JobTracker::jobNames(int id) const
+QStringList JobTracker::jobNames(int parentId) const
 {
-    if (d->isSession(id)) {
-        return d->jobs.value(sessionForId(id));
+    if (d->isSession(parentId)) {
+        return d->jobs.value(sessionForId(parentId));
     }
-    return d->jobs.value(jobForId(id));
+    return d->jobs.value(jobForId(parentId));
 }
 
 // only works on jobs
@@ -302,7 +299,7 @@ int JobTracker::parentId(int id) const
         return -1;
     } else {
         const QString job = d->sequenceToId.value(id);
-        return d->infoList[job].parent;
+        return d->infoList.value(job).parent;
     }
 
 }
@@ -341,9 +338,12 @@ bool JobTracker::isEnabled() const
 
 void JobTracker::signalUpdates()
 {
-    Q_EMIT added(d->unpublishedAdds);
-    Q_EMIT updated(d->unpublishedUpdates);
-    d->unpublishedAdds.clear();
-    d->unpublishedUpdates.clear();
+    if (!d->unpublishedAdds.isEmpty()) {
+        Q_EMIT added(d->unpublishedAdds);
+        d->unpublishedAdds.clear();
+    }
+    if (!d->unpublishedUpdates.isEmpty()) {
+        Q_EMIT updated(d->unpublishedUpdates);
+        d->unpublishedUpdates.clear();
+    }
 }
-
