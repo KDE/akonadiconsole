@@ -28,33 +28,29 @@ JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
 
 JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
 {
-
 }
 
 bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    if (filterRegExp().isEmpty()) {
+    QRegExp reg = filterRegExp();
+    if (reg.isEmpty()) {
         return true;
     }
-    QRegExp reg = filterRegExp();
     reg.setCaseSensitivity(Qt::CaseInsensitive);
-    if (mSearchColumn == -1) {//Search on All Column
+    if (mSearchColumn == -1) { // search in all columns
         const int colCount = sourceModel()->columnCount();
-        qDebug() << "Searching in" << colCount << "columns";
         for (int i = 0; i < colCount; i++) {
-            QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
+            const QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
             if (index.isValid()) {
-                qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
+                //qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
                 if (sourceModel()->data(index).toString().contains(reg)) {
                     return true;
                 }
-            } else {
-                return false;
             }
         }
         return false;
     } else {
-        QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
+        const QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
         return sourceModel()->data(index).toString().contains(reg);
     }
 }
