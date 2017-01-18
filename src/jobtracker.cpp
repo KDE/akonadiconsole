@@ -276,15 +276,14 @@ JobInfo JobTracker::info(const QString &job) const
     return d->infoList.value(job);
 }
 
-void JobTracker::triggerReset()
+void JobTracker::clear()
 {
     d->sessions.clear();
     d->idToSequence.clear();
     d->sequenceToId.clear();
     d->jobs.clear();
     d->infoList.clear();
-
-    Q_EMIT reset();
+    d->unpublishedUpdates.clear();
 }
 
 void JobTracker::setEnabled(bool on)

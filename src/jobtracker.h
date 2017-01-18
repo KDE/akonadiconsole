@@ -96,9 +96,9 @@ public:
 
     bool isEnabled() const;
 
+    void clear();
+
 Q_SIGNALS:
-
-
     /** Emitted when a job (or session) is about to be added to the tracker.
       * @param pos the position of the job or session relative to the parent
       * @param parentId the id of that parent.
@@ -116,13 +116,10 @@ Q_SIGNALS:
     */
     void updated(const QList< QPair<int, int> > &updates);
 
-    void reset();
-
 public Q_SLOTS:
     Q_SCRIPTABLE void jobCreated(const QString &session, const QString &job, const QString &parentJob, const QString &jobType, const QString &debugString);
     Q_SCRIPTABLE void jobStarted(const QString &job);
     Q_SCRIPTABLE void jobEnded(const QString &job, const QString &error);
-    Q_SCRIPTABLE void triggerReset();
     Q_SCRIPTABLE void setEnabled(bool on);
     void signalUpdates(); // public for the unittest
 

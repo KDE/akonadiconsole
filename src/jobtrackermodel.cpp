@@ -231,7 +231,9 @@ QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, i
 
 void JobTrackerModel::resetTracker()
 {
-    d->tracker.triggerReset();
+    beginResetModel();
+    d->tracker.clear();
+    endResetModel();
 }
 
 bool JobTrackerModel::isEnabled() const
