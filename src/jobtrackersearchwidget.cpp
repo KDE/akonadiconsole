@@ -38,7 +38,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     mSelectColumn = new QComboBox(this);
     mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
     mainLayout->addWidget(mSelectColumn);
-    mSelectColumn->addItem(QStringLiteral("All Column"), -1);
+    mSelectColumn->addItem(QStringLiteral("All Columns"), -1);
     mSelectColumn->addItem(QStringLiteral("Job ID"), 0);
     mSelectColumn->addItem(QStringLiteral("Created"), 1);
     mSelectColumn->addItem(QStringLiteral("Wait time"), 2);
