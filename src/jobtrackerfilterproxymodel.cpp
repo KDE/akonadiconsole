@@ -17,6 +17,7 @@
 
 
 #include "jobtrackerfilterproxymodel.h"
+#include "akonadiconsole_debug.h"
 #include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
@@ -50,8 +51,14 @@ bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sou
         }
         return false;
     } else {
-        const QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
-        return sourceModel()->data(index).toString().contains(reg);
+        const int colCount = sourceModel()->columnCount();
+        if (mSearchColumn < colCount) {
+            const QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
+            return sourceModel()->data(index).toString().contains(reg);
+        } else {
+            qCWarning(AKONADICONSOLE_LOG) << "You try to select a column which doesn't exist " << mSearchColumn << " model number of column " << colCount;
+            return true;
+        }
     }
 }
 
