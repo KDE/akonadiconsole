@@ -27,8 +27,9 @@ static QString intPairListToString(const QVariant &var)
     auto arg = var.value<QList<QPair<int, int>>>();
     QString ret;
     for (const auto &pair : arg) {
-        if (!ret.isEmpty())
+        if (!ret.isEmpty()) {
             ret += ' ';
+        }
         ret += QString::number(pair.first) + "," + QString::number(pair.second);
     }
     return ret;
@@ -48,7 +49,7 @@ void JobTrackerTest::initTestCase()
     // Don't interfer with a running akonadiconsole
     Akonadi::Instance::setIdentifier("jobtrackertest");
 
-    qRegisterMetaType<QList<QPair<int,int>>>();
+    qRegisterMetaType<QList<QPair<int, int>>>();
 }
 
 void JobTrackerTest::shouldBeEmpty()

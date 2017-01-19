@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "jobtrackerfilterproxymodel.h"
 #include "akonadiconsole_debug.h"
 #include <QDebug>

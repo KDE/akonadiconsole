@@ -70,11 +70,12 @@ void JobTrackerModelTest::shouldDisplayOneJob()
     int sessionRowCountBefore = -1;
     int jobRowCountBefore = -1;
     connect(&model, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, [&](const QModelIndex &parent) {
-        if (!parent.isValid())
+    this, [&](const QModelIndex & parent) {
+        if (!parent.isValid()) {
             sessionRowCountBefore = model.rowCount(parent);
-        else
+        } else {
             jobRowCountBefore = model.rowCount(parent);
+        }
     });
 
     // WHEN

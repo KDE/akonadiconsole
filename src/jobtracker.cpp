@@ -127,7 +127,7 @@ void JobTracker::jobCreated(const QString &session, const QString &job, const QS
     const QString daddy = parent.isEmpty() ? session : parent;
     const int parentId = parent.isEmpty() ? idForSession(session) : idForJob(parent);
     assert(!daddy.isEmpty());
-    QStringList& kids = d->jobs[daddy];
+    QStringList &kids = d->jobs[daddy];
     const int pos = kids.size();
 
     emit aboutToAdd(pos, parentId);

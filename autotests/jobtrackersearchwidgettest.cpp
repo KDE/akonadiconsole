@@ -37,10 +37,9 @@ JobTrackerSearchWidgetTest::~JobTrackerSearchWidgetTest()
 void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
 {
     JobTrackerSearchWidget w;
-    QHBoxLayout * mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
-
 
     QLineEdit *mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
     QVERIFY(mSearchLineEdit);
