@@ -19,6 +19,7 @@
 #include "jobtrackermodeltest.h"
 #include "jobtracker.h"
 #include "jobtrackermodel.h"
+//#include "modeltest.h"
 #include <akonadi/private/instance_p.h>
 #include <QSignalSpy>
 #include <QTest>
@@ -64,17 +65,26 @@ void JobTrackerModelTest::shouldDisplayOneJob()
 {
     // GIVEN
     JobTrackerModel model("jobtracker");
+    //ModelTest modelTest(&model);
     const QString jobName("job1");
     QSignalSpy rowATBISpy(&model, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)));
     QSignalSpy rowInsertedSpy(&model, SIGNAL(rowsInserted(QModelIndex,int,int)));
-    int sessionRowCountBefore = -1;
-    int jobRowCountBefore = -1;
     connect(&model, &QAbstractItemModel::rowsAboutToBeInserted,
-    this, [&](const QModelIndex & parent) {
+            this, [&](const QModelIndex & parent) {
+        // rowsAboutToBeInserted is supposed to be emitted before the insert
         if (!parent.isValid()) {
-            sessionRowCountBefore = model.rowCount(parent);
+            QCOMPARE(model.rowCount(), 0);
         } else {
-            jobRowCountBefore = model.rowCount(parent);
+            QCOMPARE(model.rowCount(parent), 0);
+        }
+    });
+    connect(&model, &QAbstractItemModel::rowsInserted,
+            this, [&](const QModelIndex & parent) {
+        if (!parent.isValid()) {
+            QCOMPARE(model.rowCount(), 1);
+            QVERIFY(model.index(0, 0).isValid());
+        } else {
+            QCOMPARE(model.rowCount(parent), 1);
         }
     });
 
@@ -83,12 +93,17 @@ void JobTrackerModelTest::shouldDisplayOneJob()
 
     // THEN
     QCOMPARE(model.rowCount(), 1);
-    QCOMPARE(model.index(0, 0).data().toString(), QStringLiteral("session1"));
+    const QModelIndex sessionIndex = model.index(0, 0);
+    QCOMPARE(sessionIndex.data().toString(), QStringLiteral("session1"));
+    QCOMPARE(model.rowCount(sessionIndex), 1);
+    const QModelIndex sessionCol1Index = model.index(0, 1);
+    QVERIFY(sessionCol1Index.isValid());
+    QCOMPARE(model.rowCount(sessionCol1Index), 0);
+    const QModelIndex jobIndex = model.index(0, 0, sessionIndex);
+    QCOMPARE(jobIndex.data().toString(), QStringLiteral("job1"));
+    QCOMPARE(model.rowCount(jobIndex), 0);
     QCOMPARE(rowSpyToText(rowATBISpy), QStringLiteral("0,0;0,0"));
     QCOMPARE(rowSpyToText(rowInsertedSpy), QStringLiteral("0,0;0,0"));
-    // rowsAboutToBeInserted is supposed to be emitted before the insert
-    QCOMPARE(sessionRowCountBefore, 0);
-    QCOMPARE(jobRowCountBefore, 0);
 }
 
 void JobTrackerModelTest::shouldSignalDataChanges()

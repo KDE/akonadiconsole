@@ -20,4 +20,4 @@ endmacro ()
 
 add_unittest(jobtrackertest.cpp "")
 add_unittest(jobtrackermodeltest.cpp "")
-add_unittest(jobtrackersearchwidgettest "")
+add_unittest(jobtrackersearchwidgettest.cpp "")

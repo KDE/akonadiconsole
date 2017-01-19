@@ -92,6 +92,9 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &paren
         }
         return createIndex(row, column, d->tracker.idForSession(d->tracker.sessions().at(row)));
     }
+    if (parent.column() != 0) {
+        return QModelIndex();
+    }
     // non-toplevel job
     const QStringList jobs = d->tracker.jobNames(parent.internalId());
     if (row < 0 || row >= jobs.size()) {
@@ -124,6 +127,9 @@ int JobTrackerModel::rowCount(const QModelIndex &parent) const
     if (!parent.isValid()) {
         return d->tracker.sessions().size();
     } else {
+        if (parent.column() != 0) {
+            return 0;
+        }
         return d->tracker.jobNames(parent.internalId()).size();
     }
 }
