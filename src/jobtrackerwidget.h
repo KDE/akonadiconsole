@@ -38,6 +38,7 @@ private Q_SLOTS:
     void slotSaveToFile();
 
 private:
+    void searchColumnChanged(int index);
     void expandAll();
     void copyJobInfo();
     void collapseAll();

@@ -50,6 +50,7 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
     QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
     QVERIFY(mSelectColumn);
     QCOMPARE(mSelectColumn->count(), 8);
+    QCOMPARE(mSelectColumn->currentIndex(), 0);
 }
 
 void JobTrackerSearchWidgetTest::shouldEmitSignal()
@@ -73,7 +74,6 @@ void JobTrackerSearchWidgetTest::shouldEmitColumnChanged()
     QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
     mSelectColumn->setCurrentIndex(2);
     QCOMPARE(columnChangedSignal.count(), 1);
-
 }
 
 QTEST_MAIN(JobTrackerSearchWidgetTest)
