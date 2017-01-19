@@ -23,6 +23,7 @@
 #include "akonadiconsolelib_export.h"
 
 class QLineEdit;
+class QComboBox;
 class AKONADICONSOLELIB_EXPORT JobTrackerSearchWidget : public QWidget
 {
     Q_OBJECT
@@ -32,9 +33,14 @@ public:
 
 Q_SIGNALS:
     void searchTextChanged(const QString &);
+    void columnChanged(int col);
+
+private Q_SLOTS:
+    void slotColumnChanged(int index);
 
 private:
     QLineEdit *mSearchLineEdit;
+    QComboBox *mSelectColumn;
 };
 
 #endif // JOBTRACKERSEARCHWIDGET_H

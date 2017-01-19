@@ -21,6 +21,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QSignalSpy>
+#include <QComboBox>
 
 JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
     : QObject(parent)
@@ -45,6 +46,10 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
     QVERIFY(mSearchLineEdit->text().isEmpty());
+
+    QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
+    QVERIFY(mSelectColumn);
+    QCOMPARE(mSelectColumn->count(), 8);
 }
 
 void JobTrackerSearchWidgetTest::shouldEmitSignal()
@@ -59,6 +64,16 @@ void JobTrackerSearchWidgetTest::shouldEmitSignal()
     mSearchLineEdit->clear();
     QCOMPARE(searchWidgetSignal.count(), 2);
     QCOMPARE(searchWidgetSignal.at(1).at(0).toString(), QString());
+}
+
+void JobTrackerSearchWidgetTest::shouldEmitColumnChanged()
+{
+    JobTrackerSearchWidget w;
+    QSignalSpy columnChangedSignal(&w, SIGNAL(columnChanged(int)));
+    QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
+    mSelectColumn->setCurrentIndex(2);
+    QCOMPARE(columnChangedSignal.count(), 1);
+
 }
 
 QTEST_MAIN(JobTrackerSearchWidgetTest)

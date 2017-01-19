@@ -29,6 +29,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEmitSignal();
+    void shouldEmitColumnChanged();
 };
 
 #endif // JOBTRACKERSEARCHWIDGETTEST_H

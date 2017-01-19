@@ -19,6 +19,7 @@
 
 #include <QHBoxLayout>
 #include <QLineEdit>
+#include <QComboBox>
 
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
@@ -33,9 +34,31 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     mSearchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
+
+    mSelectColumn = new QComboBox(this);
+    mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
+    mainLayout->addWidget(mSelectColumn);
+    mSelectColumn->addItem(QStringLiteral("All Column"), -1);
+    mSelectColumn->addItem(QStringLiteral("Job ID"), 0);
+    mSelectColumn->addItem(QStringLiteral("Created"), 1);
+    mSelectColumn->addItem(QStringLiteral("Wait time"), 2);
+    mSelectColumn->addItem(QStringLiteral("Job duration"), 3);
+    mSelectColumn->addItem(QStringLiteral("Job Type"), 4);
+    mSelectColumn->addItem(QStringLiteral("State"), 5);
+    mSelectColumn->addItem(QStringLiteral("Info"), 6);
+    connect(mSelectColumn, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &JobTrackerSearchWidget::slotColumnChanged);
+
 }
 
 JobTrackerSearchWidget::~JobTrackerSearchWidget()
 {
 
+}
+
+void JobTrackerSearchWidget::slotColumnChanged(int index)
+{
+    QVariant var = mSelectColumn->itemData(index);
+    if (var.isValid()) {
+        Q_EMIT columnChanged(var.toInt());
+    }
 }
