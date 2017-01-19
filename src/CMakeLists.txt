@@ -7,6 +7,14 @@ add_definitions( -DQT_NO_CAST_TO_ASCII )
 add_subdirectory(icons)
 add_subdirectory(kconf_update)
 
+set(akonadiconsole_lib_tracker_SRCS
+    jobtracker.cpp
+    jobtrackerwidget.cpp
+    jobtrackermodel.cpp
+    jobtrackerfilterproxymodel.cpp
+    jobtrackersearchwidget.cpp
+    )
+
 set(akonadiconsole_lib_SRCS
     agentwidget.cpp
     agentconfigdialog.cpp
@@ -31,11 +39,8 @@ set(akonadiconsole_lib_SRCS
     searchdialog.cpp
     searchwidget.cpp
     querydebugger.cpp
-    jobtracker.cpp
-    jobtrackerwidget.cpp
-    jobtrackermodel.cpp
-    jobtrackerfilterproxymodel.cpp
     tagpropertiesdialog.cpp
+    ${akonadiconsole_lib_tracker_SRCS}
     )
 
 qt5_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
@@ -101,8 +106,6 @@ set_target_properties(akonadiconsolelib
 set(akonadiconsole_bin_SRCS
     main.cpp
     )
-
-
 
 qt5_add_resources(akonadiconsole_bin_SRCS akonadiconsole.qrc)
 
