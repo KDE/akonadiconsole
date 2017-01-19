@@ -24,6 +24,7 @@
 
 #include "jobtrackermodel.h"
 #include "jobtrackerfilterproxymodel.h"
+#include "jobtrackersearchwidget.h"
 
 #include <AkonadiWidgets/controlgui.h>
 
@@ -46,8 +47,8 @@ class JobTrackerWidget::Private
 public:
     JobTrackerModel *model;
     QTreeView *tv;
-    QLineEdit *searchLineEdit;
     JobTrackerFilterProxyModel *filterProxyModel;
+    JobTrackerSearchWidget *searchLineEditWidget;
 };
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
@@ -63,11 +64,9 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     connect(enableCB, &QAbstractButton::toggled, d->model, &JobTrackerModel::setEnabled);
     layout->addWidget(enableCB);
 
-    d->searchLineEdit = new QLineEdit(this);
-    d->searchLineEdit->setClearButtonEnabled(true);
-    d->searchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
-    layout->addWidget(d->searchLineEdit);
-    connect(d->searchLineEdit, &QLineEdit::textChanged, this, &JobTrackerWidget::textFilterChanged);
+    d->searchLineEditWidget = new JobTrackerSearchWidget(this);
+    layout->addWidget(d->searchLineEditWidget);
+    connect(d->searchLineEditWidget, &JobTrackerSearchWidget::searchTextChanged, this, &JobTrackerWidget::textFilterChanged);
 
     d->filterProxyModel = new JobTrackerFilterProxyModel(this);
     d->filterProxyModel->setSourceModel(d->model);
@@ -100,9 +99,9 @@ JobTrackerWidget::~JobTrackerWidget()
     delete d;
 }
 
-void JobTrackerWidget::textFilterChanged()
+void JobTrackerWidget::textFilterChanged(const QString &str)
 {
-    d->filterProxyModel->setFilterFixedString(d->searchLineEdit->text());
+    d->filterProxyModel->setFilterFixedString(str);
     d->tv->expandAll();
 }
 
