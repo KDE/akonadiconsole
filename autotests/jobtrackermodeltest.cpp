@@ -80,7 +80,6 @@ void JobTrackerModelTest::shouldDisplayOneJob()
 
     // WHEN
     model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
-    model.jobTracker().signalUpdates();
 
     // THEN
     QCOMPARE(model.rowCount(), 1);
@@ -92,6 +91,51 @@ void JobTrackerModelTest::shouldDisplayOneJob()
     QCOMPARE(jobRowCountBefore, 0);
 }
 
-// TODO reset
+void JobTrackerModelTest::shouldSignalDataChanges()
+{
+    // GIVEN
+    JobTrackerModel model("jobtracker");
+    const QString jobName("job1");
+    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    QSignalSpy dataChangedSpy(&model, &JobTrackerModel::dataChanged);
+
+    // WHEN
+    model.jobTracker().jobStarted(jobName);
+    model.jobTracker().signalUpdates();
+
+    // THEN
+    QCOMPARE(dataChangedSpy.count(), 1);
+
+    // AND WHEN
+    model.jobTracker().jobEnded(jobName, QString());
+    model.jobTracker().signalUpdates();
+
+    // THEN
+    QCOMPARE(dataChangedSpy.count(), 2);
+}
+
+void JobTrackerModelTest::shouldHandleReset()
+{
+    // GIVEN
+    JobTrackerModel model("jobtracker");
+    const QString jobName("job1");
+    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    QSignalSpy modelATBResetSpy(&model, &JobTrackerModel::modelAboutToBeReset);
+    QSignalSpy modelResetSpy(&model, &JobTrackerModel::modelReset);
+    QSignalSpy dataChangedSpy(&model, &JobTrackerModel::dataChanged);
+
+    // WHEN
+    model.resetTracker();
+    QCOMPARE(modelATBResetSpy.count(), 1);
+    QCOMPARE(modelResetSpy.count(), 1);
+
+    // AND then an update comes for that job which has been removed
+    model.jobTracker().jobStarted(jobName);
+    model.jobTracker().jobEnded(jobName, QString());
+    model.jobTracker().signalUpdates();
+
+    // THEN it should be ignored
+    QCOMPARE(dataChangedSpy.count(), 0);
+}
 
 QTEST_MAIN(JobTrackerModelTest)

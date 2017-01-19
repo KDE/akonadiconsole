@@ -32,6 +32,8 @@ private slots:
     void initTestCase();
     void shouldBeEmpty();
     void shouldDisplayOneJob();
+    void shouldSignalDataChanges();
+    void shouldHandleReset();
 };
 
 #endif // JOBTRACKERTEST_H

@@ -66,8 +66,6 @@ public:
 JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
     : QAbstractItemModel(parent), d(new Private(name, this))
 {
-    connect(&d->tracker, SIGNAL(reset()),
-            this, SIGNAL(modelReset()));
     connect(&d->tracker, &JobTracker::aboutToAdd,
             this, &JobTrackerModel::jobAboutToBeAdded);
     connect(&d->tracker, &JobTracker::added,
