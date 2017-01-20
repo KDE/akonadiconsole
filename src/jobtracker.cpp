@@ -71,10 +71,9 @@ public:
     }
 
     QStringList sessions;
-    QHash<QString, int> nameToSequence;
-    QHash<int, QString> sequenceToName;
-    QHash<QString, QStringList> jobs;
-    QHash<QString, JobInfo> infoList;
+    QHash<QString, int> nameToId;
+    QHash<int, QVector<int> > childJobs;
+    QHash<int, JobInfo> infoList;
     int lastId;
     QTimer timer;
     bool disabled;
@@ -104,35 +103,42 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
         return;
     }
 
-    if (!parent.isEmpty() && !d->jobs.contains(parent)) {
+    int parentId = parent.isEmpty() ? -1 /*for now*/ : idForJob(parent);
+
+    if (!parent.isEmpty() && parentId == -1) {
         qCWarning(AKONADICONSOLE_LOG) << "JobTracker: Job" << jobName << "arrived before its parent" << parent << " jobType=" << jobType << "! Fix the library!";
         jobCreated(session, parent, QString(), QStringLiteral("dummy job type"), QString());
+        parentId = idForJob(parent);
+        assert(parentId != -1);
     }
+    int sessionId = idForSession(session);
     // check if it's a new session, if so, add it
-    if (!d->sessions.contains(session)) {
+    if (sessionId == -1) {
         emit aboutToAdd(d->sessions.count(), -1);
         d->sessions.append(session);
-        d->jobs.insert(session, QStringList());
         emit added();
+        sessionId = idForSession(session);
+    }
+    if (parent.isEmpty()) {
+        parentId = sessionId;
     }
 
     // deal with the job
-    if (d->jobs.contains(jobName)) {
-        if (d->infoList.value(jobName).state == JobInfo::Running) {
-            qCDebug(AKONADICONSOLE_LOG) << "Job was already known and still running:" << jobName << "from" << d->infoList.value(jobName).timestamp.secsTo(QDateTime::currentDateTime()) << "s ago";
+    const int existingId = idForJob(jobName);
+    if (existingId != -1) {
+        if (d->infoList.value(existingId).state == JobInfo::Running) {
+            qCDebug(AKONADICONSOLE_LOG) << "Job was already known and still running:" << jobName << "from" << d->infoList.value(existingId).timestamp.secsTo(QDateTime::currentDateTime()) << "s ago";
         }
         // otherwise it just means the pointer got reused... insert duplicate
     }
 
-    const QString daddy = parent.isEmpty() ? session : parent;
-    const int parentId = parent.isEmpty() ? idForSession(session) : idForJob(parent);
-    assert(!daddy.isEmpty());
-    QStringList &kids = d->jobs[daddy];
+    assert(parentId != -1);
+    QVector<int> &kids = d->childJobs[parentId];
     const int pos = kids.size();
 
     emit aboutToAdd(pos, parentId);
 
-    d->jobs.insert(jobName, QStringList());
+    const int id = d->lastId++;
 
     JobInfo info;
     info.name = jobName;
@@ -141,23 +147,25 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     info.timestamp = QDateTime::currentDateTime();
     info.type = jobType;
     info.debugString = debugString;
-    d->infoList.insert(jobName, info);
-    const int id = d->lastId++;
-    d->nameToSequence.insert(jobName, id);
-    d->sequenceToName.insert(id, jobName);
-    kids << jobName;
+    d->infoList.insert(id, info);
+    d->nameToId.insert(jobName, id); // this replaces any previous entry for jobName, which is exactly what we want
+    kids << id;
 
     emit added();
 }
 
-void JobTracker::jobEnded(const QString &job, const QString &error)
+void JobTracker::jobEnded(const QString &jobName, const QString &error)
 {
+    if (d->disabled) {
+        return;
+    }
     // this is called from dbus, so better be defensive
-    if (d->disabled || !d->jobs.contains(job) || !d->infoList.contains(job)) {
+    const int jobId = idForJob(jobName);
+    if (jobId == -1 || !d->infoList.contains(jobId)) {
         return;
     }
 
-    JobInfo &info = d->infoList[job];
+    JobInfo &info = d->infoList[jobId];
     if (error.isEmpty()) {
         info.state = JobInfo::Ended;
     } else {
@@ -166,22 +174,26 @@ void JobTracker::jobEnded(const QString &job, const QString &error)
     }
     info.endedTimestamp = QDateTime::currentDateTime();
 
-    d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
+    d->unpublishedUpdates << QPair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
     d->startUpdatedSignalTimer();
 }
 
-void JobTracker::jobStarted(const QString &job)
+void JobTracker::jobStarted(const QString &jobName)
 {
+    if (d->disabled) {
+        return;
+    }
     // this is called from dbus, so better be defensive
-    if (d->disabled || !d->jobs.contains(job) || !d->infoList.contains(job)) {
+    const int jobId = idForJob(jobName);
+    if (jobId == -1 || !d->infoList.contains(jobId)) {
         return;
     }
 
-    JobInfo &info = d->infoList[job];
+    JobInfo &info = d->infoList[jobId];
     info.state = JobInfo::Running;
     info.startedTimestamp = QDateTime::currentDateTime();
 
-    d->unpublishedUpdates << QPair<int, int>(d->jobs[jobForId(info.parent)].size() - 1, info.parent);
+    d->unpublishedUpdates << QPair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
     d->startUpdatedSignalTimer();
 }
 
@@ -190,42 +202,25 @@ QStringList JobTracker::sessions() const
     return d->sessions;
 }
 
-QStringList JobTracker::jobNames(int parentId) const
+QVector<int> JobTracker::childJobs(int parentId) const
 {
-    if (d->isSession(parentId)) {
-        return d->jobs.value(sessionForId(parentId));
-    }
-    return d->jobs.value(jobForId(parentId));
+    return d->childJobs.value(parentId);
 }
 
-// only works on jobs
 int JobTracker::jobCount(int parentId) const
 {
-    return d->jobs.value(jobForId(parentId)).count();
+    return d->childJobs.value(parentId).count();
 }
 
 int JobTracker::jobIdAt(int childPos, int parentId) const
 {
-    // TODO: better data structure to make this faster
-    const QStringList jobNames = d->jobs.value(jobForId(parentId));
-    return idForJob(jobNames.at(childPos));
+    return d->childJobs.value(parentId).at(childPos);
 }
 
 // only works on jobs
 int JobTracker::idForJob(const QString &job) const
 {
-    assert(d->nameToSequence.contains(job));
-    return d->nameToSequence.value(job);
-}
-
-QString JobTracker::jobForId(int id) const
-{
-    if (d->isSession(id)) {
-        return sessionForId(id);
-    }
-    const QString jobName = d->sequenceToName.value(id);
-    assert(!jobName.isEmpty());
-    return jobName;
+    return d->nameToId.value(job, -1);
 }
 
 // To find a session, we take the offset in the list of sessions
@@ -233,7 +228,6 @@ QString JobTracker::jobForId(int id) const
 // way we can discern session ids from job ids and use -1 for invalid
 int JobTracker::idForSession(const QString &session) const
 {
-    assert(d->sessions.contains(session));
     return (d->sessions.indexOf(session) + 2) * -1;
 }
 
@@ -253,33 +247,26 @@ int JobTracker::parentId(int id) const
     if (d->isSession(id)) {
         return -1;
     } else {
-        const QString job = d->sequenceToName.value(id);
-        return d->infoList.value(job).parent;
+        return d->infoList.value(id).parent;
     }
 }
 
 int JobTracker::rowForJob(int id, int parentId) const
 {
-    return jobNames(parentId).indexOf(jobForId(id));
+    return childJobs(parentId).indexOf(id);
 }
 
 JobInfo JobTracker::info(int id) const
 {
-    return info(jobForId(id));
-}
-
-JobInfo JobTracker::info(const QString &job) const
-{
-    assert(d->infoList.contains(job));
-    return d->infoList.value(job);
+    assert(d->infoList.contains(id));
+    return d->infoList.value(id);
 }
 
 void JobTracker::clear()
 {
     d->sessions.clear();
-    d->nameToSequence.clear();
-    d->sequenceToName.clear();
-    d->jobs.clear();
+    d->nameToId.clear();
+    d->childJobs.clear();
     d->infoList.clear();
     d->unpublishedUpdates.clear();
 }

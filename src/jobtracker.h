@@ -115,17 +115,15 @@ Q_SIGNALS:
     void updated(const QList< QPair<int, int> > &updates);
 
 public Q_SLOTS:
-    Q_SCRIPTABLE void jobCreated(const QString &session, const QString &job, const QString &parentJob, const QString &jobType, const QString &debugString);
-    Q_SCRIPTABLE void jobStarted(const QString &job);
-    Q_SCRIPTABLE void jobEnded(const QString &job, const QString &error);
+    Q_SCRIPTABLE void jobCreated(const QString &session, const QString &jobName, const QString &parentJob, const QString &jobType, const QString &debugString);
+    Q_SCRIPTABLE void jobStarted(const QString &jobName);
+    Q_SCRIPTABLE void jobEnded(const QString &jobName, const QString &error);
     Q_SCRIPTABLE void setEnabled(bool on);
     void signalUpdates(); // public for the unittest
 
 private:
-    JobInfo info(const QString &job) const;
-    QStringList jobNames(int parentId) const;
+    QVector<int> childJobs(int parentId) const;
     int idForJob(const QString &job) const;
-    QString jobForId(int id) const;
 
     class Private;
     Private *const d;

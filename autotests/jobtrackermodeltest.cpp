@@ -181,7 +181,6 @@ void JobTrackerModelTest::shouldHandleDuplicateJob()
     model.jobTracker().signalUpdates();
 
     // THEN
-    QEXPECT_FAIL("", "JobTracker fails to handle duplicates at this point, due to names as keys", Continue);
     QCOMPARE(sessionIndex.child(0, JobTrackerModel::ColumnState).data().toString(), QStringLiteral("Ended"));
     QCOMPARE(sessionIndex.child(1, JobTrackerModel::ColumnState).data().toString(), QStringLiteral("Failed: error"));
 }
