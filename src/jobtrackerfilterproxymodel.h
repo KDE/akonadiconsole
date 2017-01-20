@@ -29,11 +29,14 @@ public:
 
     void setSearchColumn(int column);
 
+    void setShowOnlyFailed(bool showOnlyFailed);
+
 protected:
     bool acceptRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
 
 private:
     int mSearchColumn;
+    bool mShowOnlyFailed;
 };
 
 #endif // JOBTRACKERFILTERPROXYMODEL_H

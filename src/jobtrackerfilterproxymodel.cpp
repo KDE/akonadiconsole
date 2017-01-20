@@ -16,12 +16,14 @@
 */
 
 #include "jobtrackerfilterproxymodel.h"
+#include "jobtrackermodel.h"
 #include "akonadiconsole_debug.h"
 #include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
     : KRecursiveFilterProxyModel(parent),
-      mSearchColumn(-1)
+      mSearchColumn(-1),
+      mShowOnlyFailed(false)
 {
     setDynamicSortFilter(true);
 }
@@ -43,6 +45,9 @@ bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sou
             const QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
             if (index.isValid()) {
                 //qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
+                if (mShowOnlyFailed && !sourceModel()->data(index, JobTrackerModel::FailedIdRole).toBool()) {
+                    return false;
+                }
                 if (sourceModel()->data(index).toString().contains(reg)) {
                     return true;
                 }
@@ -53,12 +58,20 @@ bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sou
         const int colCount = sourceModel()->columnCount();
         if (mSearchColumn < colCount) {
             const QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
+            if (mShowOnlyFailed && !sourceModel()->data(index, JobTrackerModel::FailedIdRole).toBool()) {
+                return false;
+            }
             return sourceModel()->data(index).toString().contains(reg);
         } else {
             qCWarning(AKONADICONSOLE_LOG) << "You try to select a column which doesn't exist " << mSearchColumn << " model number of column " << colCount;
             return true;
         }
     }
+}
+
+void JobTrackerFilterProxyModel::setShowOnlyFailed(bool showOnlyFailed)
+{
+    mShowOnlyFailed = showOnlyFailed;
 }
 
 void JobTrackerFilterProxyModel::setSearchColumn(int column)

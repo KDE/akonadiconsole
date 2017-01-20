@@ -210,6 +210,8 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
             if (info.state == JobInfo::Failed) {
                 return info.error;
             }
+        } else if (role == FailedIdRole) {
+            return (info.state == JobInfo::Failed);
         }
     }
     return QVariant();
