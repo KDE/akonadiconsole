@@ -20,6 +20,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QComboBox>
+#include <QCheckBox>
 
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
@@ -34,6 +35,12 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     mSearchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
+
+    mSelectOnlyError = new QCheckBox(QStringLiteral("Show Only Errors"), this);
+    mSelectOnlyError->setObjectName(QStringLiteral("selectonlyerror"));
+    mainLayout->addWidget(mSelectOnlyError);
+    connect(mSelectOnlyError, &QCheckBox::toggled, this, &JobTrackerSearchWidget::selectOnlyErrorChanged);
+
 
     mSelectColumn = new QComboBox(this);
     mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));

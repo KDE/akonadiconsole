@@ -68,6 +68,7 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     layout->addWidget(d->searchLineEditWidget);
     connect(d->searchLineEditWidget, &JobTrackerSearchWidget::searchTextChanged, this, &JobTrackerWidget::textFilterChanged);
     connect(d->searchLineEditWidget, &JobTrackerSearchWidget::columnChanged, this, &JobTrackerWidget::searchColumnChanged);
+    connect(d->searchLineEditWidget, &JobTrackerSearchWidget::selectOnlyErrorChanged, this, &JobTrackerWidget::selectOnlyErrorChanged);
     d->filterProxyModel = new JobTrackerFilterProxyModel(this);
     d->filterProxyModel->setSourceModel(d->model);
 
@@ -99,9 +100,16 @@ JobTrackerWidget::~JobTrackerWidget()
     delete d;
 }
 
+void JobTrackerWidget::selectOnlyErrorChanged(bool state)
+{
+     d->filterProxyModel->setShowOnlyFailed(state);
+     d->tv->expandAll();
+}
+
 void JobTrackerWidget::searchColumnChanged(int index)
 {
     d->filterProxyModel->setSearchColumn(index);
+    d->tv->expandAll();
 }
 
 void JobTrackerWidget::textFilterChanged(const QString &str)

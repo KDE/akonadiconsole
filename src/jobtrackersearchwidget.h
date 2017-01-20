@@ -24,6 +24,7 @@
 
 class QLineEdit;
 class QComboBox;
+class QCheckBox;
 class AKONADICONSOLELIB_EXPORT JobTrackerSearchWidget : public QWidget
 {
     Q_OBJECT
@@ -34,6 +35,7 @@ public:
 Q_SIGNALS:
     void searchTextChanged(const QString &);
     void columnChanged(int col);
+    void selectOnlyErrorChanged(bool state);
 
 private Q_SLOTS:
     void slotColumnChanged(int index);
@@ -41,6 +43,7 @@ private Q_SLOTS:
 private:
     QLineEdit *mSearchLineEdit;
     QComboBox *mSelectColumn;
+    QCheckBox *mSelectOnlyError;
 };
 
 #endif // JOBTRACKERSEARCHWIDGET_H

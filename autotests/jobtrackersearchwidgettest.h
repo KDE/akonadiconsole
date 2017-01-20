@@ -30,6 +30,7 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEmitSignal();
     void shouldEmitColumnChanged();
+    void shouldEmitSelectOnlyErrorChanged();
 };
 
 #endif // JOBTRACKERSEARCHWIDGETTEST_H

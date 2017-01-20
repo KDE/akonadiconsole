@@ -22,6 +22,7 @@
 #include <QLineEdit>
 #include <QSignalSpy>
 #include <QComboBox>
+#include <QCheckBox>
 
 JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
     : QObject(parent)
@@ -50,6 +51,12 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mSelectColumn);
     QCOMPARE(mSelectColumn->count(), 8);
     QCOMPARE(mSelectColumn->currentIndex(), 0);
+
+
+    QCheckBox *mSelectOnlyError = w.findChild<QCheckBox *>(QStringLiteral("selectonlyerror"));
+    QVERIFY(mSelectOnlyError);
+    QVERIFY(!mSelectOnlyError->text().isEmpty());
+    QCOMPARE(mSelectOnlyError->checkState(), Qt::Unchecked);
 }
 
 void JobTrackerSearchWidgetTest::shouldEmitSignal()
@@ -73,6 +80,15 @@ void JobTrackerSearchWidgetTest::shouldEmitColumnChanged()
     QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
     mSelectColumn->setCurrentIndex(2);
     QCOMPARE(columnChangedSignal.count(), 1);
+}
+
+void JobTrackerSearchWidgetTest::shouldEmitSelectOnlyErrorChanged()
+{
+    JobTrackerSearchWidget w;
+    QSignalSpy selectOnlyErrorChangedSignal(&w, &JobTrackerSearchWidget::selectOnlyErrorChanged);
+    QCheckBox *mSelectOnlyError = w.findChild<QCheckBox *>(QStringLiteral("selectonlyerror"));
+    mSelectOnlyError->setChecked(true);
+    QCOMPARE(selectOnlyErrorChangedSignal.count(), 1);
 }
 
 QTEST_MAIN(JobTrackerSearchWidgetTest)
