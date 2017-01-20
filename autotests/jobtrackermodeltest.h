@@ -34,6 +34,7 @@ private slots:
     void shouldDisplayOneJob();
     void shouldSignalDataChanges();
     void shouldHandleReset();
+    void shouldHandleDuplicateJob();
 };
 
 #endif // JOBTRACKERTEST_H

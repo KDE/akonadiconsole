@@ -52,7 +52,7 @@ public:
             }
         } else {
             // offset of the parent in the list of children of the grandparent
-            row = tracker.jobNames(grandparentid).indexOf(tracker.jobForId(parentid));
+            row = tracker.rowForJob(parentid, grandparentid);
         }
         return row;
     }
@@ -86,6 +86,9 @@ JobTracker &JobTrackerModel::jobTracker()
 
 QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &parent) const
 {
+    if (column < 0 || column >= NumColumns) {
+        return QModelIndex();
+    }
     if (!parent.isValid()) { // session, at top level
         if (row < 0 || row >= d->tracker.sessions().size()) {
             return QModelIndex();
@@ -95,12 +98,12 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &paren
     if (parent.column() != 0) {
         return QModelIndex();
     }
-    // non-toplevel job
-    const QStringList jobs = d->tracker.jobNames(parent.internalId());
-    if (row < 0 || row >= jobs.size()) {
+    // job, i.e. non-toplevel
+    const int jobCount = d->tracker.jobCount(parent.internalId());
+    if (row < 0 || row >= jobCount) {
         return QModelIndex();
     }
-    return createIndex(row, column, d->tracker.idForJob(jobs.at(row)));
+    return createIndex(row, column, d->tracker.jobIdAt(row, parent.internalId()));
 }
 
 QModelIndex JobTrackerModel::parent(const QModelIndex &idx) const
@@ -130,14 +133,14 @@ int JobTrackerModel::rowCount(const QModelIndex &parent) const
         if (parent.column() != 0) {
             return 0;
         }
-        return d->tracker.jobNames(parent.internalId()).size();
+        return d->tracker.jobCount(parent.internalId());
     }
 }
 
 int JobTrackerModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return 7;
+    return NumColumns;
 }
 
 static QString formatTimeWithMsec(const QTime &time)
@@ -165,28 +168,32 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
         }
     } else { // not top level, so a job or subjob
         const int id = idx.internalId();
+        if (role != Qt::DisplayRole && role != Qt::ForegroundRole && role != Qt::FontRole && role != Qt::ToolTipRole) {
+            // Avoid the QHash lookup for all other roles
+            return QVariant();
+        }
         const JobInfo info = d->tracker.info(id);
         if (role == Qt::DisplayRole) {
             switch (idx.column()) {
-            case 0:
-                return info.id;
-            case 1:
+            case ColumnJobId:
+                return info.name;
+            case ColumnCreated:
                 return formatTimeWithMsec(info.timestamp.time());
-            case 2:
+            case ColumnWaitTime:
                 if (info.startedTimestamp.isNull() || info.timestamp.isNull()) {
                     return QString();
                 }
                 return formatDurationWithMsec(info.timestamp.msecsTo(info.startedTimestamp));
-            case 3:
+            case ColumnJobDuration:
                 if (info.endedTimestamp.isNull() || info.startedTimestamp.isNull()) {
                     return QString();
                 }
                 return formatDurationWithMsec(info.startedTimestamp.msecsTo(info.endedTimestamp));
-            case 4:
+            case ColumnJobType:
                 return info.type;
-            case 5:
+            case ColumnState:
                 return info.stateAsString();
-            case 6:
+            case ColumnInfo:
                 return info.debugString;
             }
         } else if (role == Qt::ForegroundRole) {
@@ -213,19 +220,19 @@ QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, i
     if (role == Qt::DisplayRole) {
         if (orientation == Qt::Horizontal) {
             switch (section) {
-            case 0:
+            case ColumnJobId:
                 return QStringLiteral("Job ID");
-            case 1:
+            case ColumnCreated:
                 return QStringLiteral("Created");
-            case 2:
+            case ColumnWaitTime:
                 return QStringLiteral("Wait time");      // duration  (time started - time created)
-            case 3:
+            case ColumnJobDuration:
                 return QStringLiteral("Job duration");   // duration (time ended - time started)
-            case 4:
+            case ColumnJobType:
                 return QStringLiteral("Job Type");
-            case 5:
+            case ColumnState:
                 return QStringLiteral("State");
-            case 6:
+            case ColumnInfo:
                 return QStringLiteral("Info");
             }
         }

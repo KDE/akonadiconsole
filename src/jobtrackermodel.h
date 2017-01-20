@@ -36,6 +36,19 @@ public:
 
     JobTracker &jobTracker(); // for the unittest
 
+    enum Column
+    {
+        ColumnJobId,
+        ColumnCreated,
+        ColumnWaitTime,
+        ColumnJobDuration,
+        ColumnJobType,
+        ColumnState,
+        ColumnInfo,
+
+        NumColumns // always last
+    };
+
     /* QAIM API */
     QModelIndex index(int, int, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     QModelIndex parent(const QModelIndex &) const Q_DECL_OVERRIDE;

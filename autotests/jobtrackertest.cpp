@@ -75,15 +75,15 @@ void JobTrackerTest::shouldDisplayOneJob()
     QCOMPARE(tracker.sessions().at(0), QStringLiteral("session1"));
     QCOMPARE(tracker.idForSession("session1"), -2);
     QCOMPARE(tracker.sessionForId(-2), QStringLiteral("session1"));
-    QCOMPARE(tracker.info(jobName).id, jobName);
-    QCOMPARE(tracker.info(jobName).state, JobInfo::Initial);
-    QCOMPARE(tracker.idForJob(jobName), 42);
-    QCOMPARE(tracker.jobForId(42), jobName);
-
-    QCOMPARE(tracker.jobNames(-2), QStringList{jobName}); // job is child of session
-    QCOMPARE(tracker.parentId(42), -2);
-    QCOMPARE(tracker.jobNames(42), QStringList()); // no child
     QCOMPARE(tracker.parentId(-2), -1);
+    QCOMPARE(tracker.jobCount(-2), 1);
+    QCOMPARE(tracker.jobIdAt(0, -2), 42); // job is child of session
+
+    QCOMPARE(tracker.info(42).name, jobName);
+    QCOMPARE(tracker.info(42).state, JobInfo::Initial);
+    QCOMPARE(tracker.parentId(42), -2);
+    QCOMPARE(tracker.rowForJob(42, -2), 0);
+    QCOMPARE(tracker.jobCount(42), 0); // no child
 
     QCOMPARE(spyAboutToAdd.count(), 2);
     QCOMPARE(spyAboutToAdd.at(0).at(0).toInt(), 0);
@@ -107,7 +107,7 @@ void JobTrackerTest::shouldHandleJobStart()
     tracker.jobStarted(jobName);
 
     // THEN
-    QCOMPARE(tracker.info(jobName).state, JobInfo::Running);
+    QCOMPARE(tracker.info(42).state, JobInfo::Running);
 
     tracker.signalUpdates();
 
@@ -131,8 +131,8 @@ void JobTrackerTest::shouldHandleJobEnd()
     tracker.jobEnded("job1", "errorString");
 
     // THEN
-    QCOMPARE(tracker.info(jobName).state, JobInfo::Failed);
-    QCOMPARE(tracker.info(jobName).error, QStringLiteral("errorString"));
+    QCOMPARE(tracker.info(42).state, JobInfo::Failed);
+    QCOMPARE(tracker.info(42).error, QStringLiteral("errorString"));
 
     tracker.signalUpdates();
 

@@ -35,14 +35,14 @@ public:
     {}
     bool operator==(const JobInfo &other) const
     {
-        return id == other.id
+        return name == other.name
                && parent == other.parent
                && type == other.type
                && timestamp == other.timestamp
                && state == other.state;
     }
 
-    QString id;
+    QString name;
     int parent;
     QString type;
     QDateTime timestamp;
@@ -71,21 +71,17 @@ public:
 
     QStringList sessions() const;
 
-    int idForJob(const QString &job) const;
-    QString jobForId(int id) const;
     int idForSession(const QString &session) const;
     QString sessionForId(int id) const;
 
-    JobInfo info(const QString &job) const;
-    JobInfo info(int) const;
+    JobInfo info(int id) const;
 
     /**
-     * Returns the list of (sub)jobs of a session or another job.
+     * Returns the number of (sub)jobs of a session or another job.
      * (i.e. going down)
      */
-    QList<JobInfo> jobs(const QString &parent) const;
-    QStringList jobNames(int parentId) const;
-    QList<JobInfo> jobs(int parentId) const;
+    int jobCount(int parentId) const;
+    int jobIdAt(int childPos, int parentId) const;
 
     /**
      * Returns the parent (job/session) ID for the given (job/session) ID,
@@ -93,6 +89,8 @@ public:
      * (i.e. going up)
      */
     int parentId(int id) const;
+
+    int rowForJob(int id, int parentId) const;
 
     bool isEnabled() const;
 
@@ -124,6 +122,11 @@ public Q_SLOTS:
     void signalUpdates(); // public for the unittest
 
 private:
+    JobInfo info(const QString &job) const;
+    QStringList jobNames(int parentId) const;
+    int idForJob(const QString &job) const;
+    QString jobForId(int id) const;
+
     class Private;
     Private *const d;
 };

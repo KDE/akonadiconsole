@@ -67,8 +67,8 @@ void JobTrackerModelTest::shouldDisplayOneJob()
     JobTrackerModel model("jobtracker");
     //ModelTest modelTest(&model);
     const QString jobName("job1");
-    QSignalSpy rowATBISpy(&model, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)));
-    QSignalSpy rowInsertedSpy(&model, SIGNAL(rowsInserted(QModelIndex,int,int)));
+    QSignalSpy rowATBISpy(&model, &QAbstractItemModel::rowsAboutToBeInserted);
+    QSignalSpy rowInsertedSpy(&model, &QAbstractItemModel::rowsInserted);
     connect(&model, &QAbstractItemModel::rowsAboutToBeInserted,
             this, [&](const QModelIndex & parent) {
         // rowsAboutToBeInserted is supposed to be emitted before the insert
@@ -151,6 +151,39 @@ void JobTrackerModelTest::shouldHandleReset()
 
     // THEN it should be ignored
     QCOMPARE(dataChangedSpy.count(), 0);
+}
+
+void JobTrackerModelTest::shouldHandleDuplicateJob()
+{
+    // GIVEN
+    JobTrackerModel model("jobtracker");
+    const QString jobName("job1");
+    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    model.jobTracker().jobStarted(jobName);
+    model.jobTracker().jobEnded(jobName, QString());
+    model.jobTracker().signalUpdates();
+
+    // WHEN
+    QSignalSpy rowATBISpy(&model, &QAbstractItemModel::rowsAboutToBeInserted);
+    QSignalSpy rowInsertedSpy(&model, &QAbstractItemModel::rowsInserted);
+    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+
+    // THEN
+    QCOMPARE(model.rowCount(), 1); // 1 session
+    const QModelIndex sessionIndex = model.index(0, 0);
+    QCOMPARE(rowSpyToText(rowATBISpy), QStringLiteral("1,1"));
+    QCOMPARE(rowSpyToText(rowInsertedSpy), QStringLiteral("1,1"));
+    QCOMPARE(model.rowCount(sessionIndex), 2);
+
+    // AND WHEN
+    model.jobTracker().jobStarted(jobName);
+    model.jobTracker().jobEnded(jobName, QStringLiteral("error"));
+    model.jobTracker().signalUpdates();
+
+    // THEN
+    QEXPECT_FAIL("", "JobTracker fails to handle duplicates at this point, due to names as keys", Continue);
+    QCOMPARE(sessionIndex.child(0, JobTrackerModel::ColumnState).data().toString(), QStringLiteral("Ended"));
+    QCOMPARE(sessionIndex.child(1, JobTrackerModel::ColumnState).data().toString(), QStringLiteral("Failed: error"));
 }
 
 QTEST_MAIN(JobTrackerModelTest)
