@@ -71,10 +71,16 @@ bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sou
 
 void JobTrackerFilterProxyModel::setShowOnlyFailed(bool showOnlyFailed)
 {
-    mShowOnlyFailed = showOnlyFailed;
+    if (mShowOnlyFailed != showOnlyFailed) {
+        mShowOnlyFailed = showOnlyFailed;
+        invalidateFilter();
+    }
 }
 
 void JobTrackerFilterProxyModel::setSearchColumn(int column)
 {
-    mSearchColumn = column;
+    if (mSearchColumn != column) {
+        mSearchColumn = column;
+        invalidateFilter();
+    }
 }
