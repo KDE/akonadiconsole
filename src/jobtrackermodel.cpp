@@ -168,7 +168,7 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
         }
     } else { // not top level, so a job or subjob
         const int id = idx.internalId();
-        if (role != Qt::DisplayRole && role != Qt::ForegroundRole && role != Qt::FontRole && role != Qt::ToolTipRole) {
+        if (role != Qt::DisplayRole && role != Qt::ForegroundRole && role != Qt::FontRole && role != Qt::ToolTipRole && role != FailedIdRole) {
             // Avoid the QHash lookup for all other roles
             return QVariant();
         }
