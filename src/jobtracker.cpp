@@ -253,7 +253,11 @@ int JobTracker::parentId(int id) const
 
 int JobTracker::rowForJob(int id, int parentId) const
 {
-    return childJobs(parentId).indexOf(id);
+    const QVector<int> children = childJobs(parentId);
+    // Simple version:
+    //return children.indexOf(id);
+    // But we can do faster since the vector is sorted
+    return std::lower_bound(children.constBegin(), children.constEnd(), id) - children.constBegin();
 }
 
 JobInfo JobTracker::info(int id) const
