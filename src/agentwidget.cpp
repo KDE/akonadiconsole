@@ -175,7 +175,7 @@ void AgentWidget::slotDataChanged(const QModelIndex &topLeft, const QModelIndex 
         selectedRows.append(ui.instanceWidget->view()->selectionModel()->currentIndex());
     }
     QList<int> rows;
-    Q_FOREACH (const QModelIndex &index, selectedRows) {
+    foreach (const QModelIndex &index, selectedRows) {
         rows.append(index.row());
     }
     std::sort(rows.begin(), rows.end());
@@ -188,7 +188,7 @@ void AgentWidget::slotDataChanged(const QModelIndex &topLeft, const QModelIndex 
 
 void AgentWidget::removeAgent()
 {
-    AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
+    const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty()) {
         if (KMessageBox::questionYesNo(this,
                                        i18np("Do you really want to delete the selected agent instance?",
@@ -200,7 +200,7 @@ void AgentWidget::removeAgent()
                                        QString(),
                                        KMessageBox::Dangerous)
                 == KMessageBox::Yes) {
-            foreach (const AgentInstance &agent, list) {
+            for (const AgentInstance &agent : list) {
                 AgentManager::self()->removeInstance(agent);
             }
         }
@@ -228,9 +228,9 @@ void AgentWidget::configureAgentRemote()
 
 void AgentWidget::synchronizeAgent()
 {
-    AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
+    const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty())
-        foreach (AgentInstance agent, list) {
+        for (AgentInstance agent : list) {
             agent.synchronize();
         }
 }
@@ -296,18 +296,18 @@ void AgentWidget::showChangeNotifications()
 
 void AgentWidget::synchronizeTree()
 {
-    AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
+    const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty())
-        foreach (AgentInstance agent, list) {
+        for (AgentInstance agent : list) {
             agent.synchronizeCollectionTree();
         }
 }
 
 void AgentWidget::abortAgent()
 {
-    AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
+    const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty())
-        foreach (const AgentInstance &agent, list) {
+        for (const AgentInstance &agent : list) {
             agent.abortCurrentTask();
         }
 }

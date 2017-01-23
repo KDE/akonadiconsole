@@ -288,7 +288,7 @@ void QueryDebugger::addQuery(double sequence, uint duration, const QString &quer
 
     QString q = query;
     const QStringList keys = values.uniqueKeys();
-    Q_FOREACH (const QString &key, keys) {
+    for (const QString &key : keys) {
         int pos = q.indexOf(QStringLiteral("?"));
         const QVariant val = values.value(key);
         q.replace(pos, 1, variantToString(val));

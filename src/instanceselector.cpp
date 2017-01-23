@@ -70,7 +70,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
         slotAccept();
     } else {
         QStandardItemModel *model = new QStandardItemModel(this);
-        foreach (const QString &inst, insts) {
+        for (const QString &inst : insts) {
             QStandardItem *item = new QStandardItem;
             item->setText(inst.isEmpty() ? QStringLiteral("<global>") : inst);
             item->setData(inst, Qt::UserRole);
@@ -133,7 +133,7 @@ QStringList InstanceSelector::instances()
 
     const QStringList allServices = QDBusConnection::sessionBus().interface()->registeredServiceNames();
     QStringList insts;
-    foreach (const QString &service, allServices) {
+    for (const QString &service : allServices) {
         if (!service.startsWith(lockService)) {
             continue;
         }

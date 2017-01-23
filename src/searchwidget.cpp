@@ -101,7 +101,8 @@ void SearchWidget::searchFinished(KJob *job)
     QStringList uidList;
     Akonadi::ItemSearchJob *searchJob = qobject_cast<Akonadi::ItemSearchJob *>(job);
     const Akonadi::Item::List items = searchJob->items();
-    foreach (const Akonadi::Item &item, items) {
+    uidList.reserve(items.count());
+    for (const Akonadi::Item &item : items) {
         uidList << QString::number(item.id());
     }
 
