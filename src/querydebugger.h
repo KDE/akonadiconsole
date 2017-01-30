@@ -23,15 +23,31 @@
 #include <QWidget>
 #include <QMap>
 #include <QVariant>
+#include <QScopedPointer>
 
-#include "storagedebuggerinterface.h"
-namespace KPIMTextEdit
+class QDBusArgument;
+
+namespace Ui
 {
-class RichTextEditorWidget;
+class QueryDebugger;
 }
 
-class QCheckBox;
 class QueryDebuggerModel;
+class QueryTreeModel;
+class OrgFreedesktopAkonadiStorageDebuggerInterface;
+
+struct DbConnection {
+    qint64 id;
+    QString name;
+    qint64 start;
+    qint64 transactionStart;
+};
+
+Q_DECLARE_METATYPE(DbConnection)
+Q_DECLARE_METATYPE(QVector<DbConnection>)
+
+QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con);
+const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con);
 
 class QueryDebugger : public QWidget
 {
@@ -42,19 +58,23 @@ public:
     virtual ~QueryDebugger();
 
 private Q_SLOTS:
-    void addQuery(double sequence, uint duration, const QString &query,
+    void debuggerToggled(bool on);
+    void addQuery(double sequence, qint64 connectionId, qint64 timestamp,
+                  uint duration, const QString &query,
                   const QMap<QString, QVariant> &values, int resultsCount,
                   const QList<QList<QVariant> > &result, const QString &error);
+    void queryTreeDoubleClicked(const QModelIndex &index);
     void clear();
+    void saveTreeToFile();
 
 private:
     QString variantToString(const QVariant &val);
 
-    org::freedesktop::Akonadi::StorageDebugger *mDebugger;
+    QScopedPointer<Ui::QueryDebugger> mUi;
+    OrgFreedesktopAkonadiStorageDebuggerInterface *mDebugger;
 
-    KPIMTextEdit::RichTextEditorWidget *mView;
-    QueryDebuggerModel *mModel;
-    QCheckBox *mOnlyAggregate;
+    QueryDebuggerModel *mQueryList;
+    QueryTreeModel *mQueryTree;
 };
 
 #endif // QUERYDEBUGGER_H

@@ -56,6 +56,9 @@ qt5_add_dbus_interface(akonadiconsole_lib_SRCS
     debuginterface
     )
 
+set_source_files_properties(${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
+    PROPERTIES INCLUDE querydebugger.h
+)
 qt5_add_dbus_interface(akonadiconsole_lib_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     storagedebuggerinterface
@@ -73,6 +76,8 @@ ki18n_wrap_ui(akonadiconsole_lib_SRCS
     browserwidget_contentview.ui
     collectioninternalspage.ui
     tagpropertiesdialog.ui
+    querydebugger.ui
+    queryviewdialog.ui
     )
 
 

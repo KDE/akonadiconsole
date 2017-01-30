@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2013  Daniel Vrátil <dvratil@redhat.com>
+ * Copyright (C) 2017  Daniel Vrátil <dvratil@kde.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,36 +19,59 @@
  */
 
 #include "querydebugger.h"
+#include "ui_querydebugger.h"
+#include "ui_queryviewdialog.h"
+#include "storagedebuggerinterface.h"
 
-#include <QVBoxLayout>
-#include <QCheckBox>
 #include <QMenu>
+#include <QGuiApplication>
 
-#include <QToolButton>
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
-#include <QTreeView>
 #include <QHeaderView>
+#include <QDateTime>
+#include <QIcon>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QTableWidget>
+#include <QFileDialog>
 
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusArgument>
 #include <QtDBus/QDBusMetaType>
-#include <QDateTime>
 
 #include <AkonadiCore/servermanager.h>
 #include <AkonadiWidgets/controlgui.h>
 
-#include "kpimtextedit/richtexteditorwidget.h"
-#include "kpimtextedit/richtexteditor.h"
-#include <KTextEdit>
 #include <KLocalizedString>
-#include <QFontDatabase>
-
-#include <QIcon>
+#include <KColorScheme>
 
 #include <algorithm>
 
 Q_DECLARE_METATYPE(QList< QList<QVariant> >)
+
+
+QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con)
+{
+    arg.beginStructure();
+    arg << con.id
+        << con.name
+        << con.start
+        << con.transactionStart;
+    arg.endStructure();
+    return arg;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con)
+{
+    arg.beginStructure();
+    arg >> con.id
+        >> con.name
+        >> con.start
+        >> con.transactionStart;
+    arg.endStructure();
+    return arg;
+}
 
 struct QueryInfo {
     QString query;
@@ -61,6 +85,440 @@ struct QueryInfo {
 };
 
 Q_DECLARE_TYPEINFO(QueryInfo, Q_MOVABLE_TYPE);
+
+class QueryTreeModel : public QAbstractItemModel
+{
+    Q_OBJECT
+
+public:
+    enum RowType {
+        Connection,
+        Transaction,
+        Query
+    };
+
+private:
+    class Node
+    {
+    public:
+        virtual ~Node() {}
+
+        Node *parent;
+        RowType type;
+        qint64 start;
+        uint duration;
+    };
+
+    class QueryNode : public Node
+    {
+    public:
+        QString query;
+        QString error;
+        QMap<QString, QVariant> values;
+        QList<QList<QVariant>> results;
+        int resultsCount;
+    };
+
+    class TransactionNode : public QueryNode
+    {
+    public:
+        ~TransactionNode()
+        {
+            qDeleteAll(queries);
+        }
+
+        enum TransactionType {
+            Begin, Commit, Rollback
+        };
+        TransactionType transactionType;
+        QVector<QueryNode*> queries;
+    };
+
+    class ConnectionNode : public Node
+    {
+    public:
+        ~ConnectionNode()
+        {
+            qDeleteAll(queries);
+        }
+
+        QString name;
+        QVector<Node*> queries; // FIXME: Why can' I use QVector<Query*> here??
+    };
+
+public:
+    enum {
+        RowTypeRole = Qt::UserRole + 1,
+        QueryRole,
+        QueryResultsCountRole,
+        QueryResultsRole,
+        QueryValuesRole
+    };
+
+    QueryTreeModel(QObject *parent)
+        : QAbstractItemModel(parent)
+    {}
+
+    ~QueryTreeModel()
+    {
+        qDeleteAll(mConnections);
+    }
+
+    void clear()
+    {
+        beginResetModel();
+        qDeleteAll(mConnections);
+        mConnections.clear();
+        endResetModel();
+    }
+
+    void addConnection(qint64 id, const QString &name, qint64 timestamp)
+    {
+        auto con = new ConnectionNode;
+        con->parent = nullptr;
+        con->type = Connection;
+        con->name = name;
+        con->start = timestamp;
+        beginInsertRows(QModelIndex(), mConnections.count(), mConnections.count());
+        mConnections << con;
+        mConnectionById.insert(id, con);
+        endInsertRows();
+    }
+
+    void updateConnection(qint64 id, const QString &name)
+    {
+        auto con = mConnectionById.value(id);
+        if (!con) {
+            return;
+        }
+
+        con->name = name;
+        const QModelIndex index = createIndex(mConnections.indexOf(con), columnCount() - 1, con);
+        Q_EMIT dataChanged(index, index.sibling(index.row(), 5));
+    }
+
+    void addTransaction(qint64 connectionId, qint64 timestamp, uint duration, const QString &error)
+    {
+        auto con = mConnectionById.value(connectionId);
+        if (!con) {
+            return;
+        }
+
+        auto trx = new TransactionNode;
+        trx->parent = con;
+        trx->type = Transaction;
+        trx->start = timestamp;
+        trx->duration = duration;
+        trx->transactionType = TransactionNode::Begin;
+        trx->error = error.trimmed();
+        const QModelIndex conIdx = createIndex(mConnections.indexOf(con), 0, con);
+        beginInsertRows(conIdx, con->queries.count(), con->queries.count());
+        con->queries << trx;
+        endInsertRows();
+    }
+
+    void closeTransaction(qint64 connectionId, bool commit, qint64 timestamp,
+                          uint, const QString &error)
+    {
+        auto con = mConnectionById.value(connectionId);
+        if (!con) {
+            return;
+        }
+
+        // Find the last open transaction and change it to closed
+        for (int i = con->queries.count() - 1; i >= 0; i--) {
+            Node *node = con->queries[i];
+            if (node->type == Transaction) {
+                auto trx = static_cast<TransactionNode*>(node);
+                if (trx->transactionType != TransactionNode::Begin) {
+                    continue;
+                }
+
+                trx->transactionType = commit ? TransactionNode::Commit : TransactionNode::Rollback;
+                trx->duration = timestamp - trx->start;
+                trx->error = error.trimmed();
+
+                const QModelIndex trxIdx = createIndex(i, 0, trx);
+                Q_EMIT dataChanged(trxIdx, trxIdx.sibling(trxIdx.row(), columnCount() - 1));
+                return;
+            }
+        }
+    }
+
+    void addQuery(qint64 connectionId, qint64 timestamp, uint duration,
+                  const QString &queryStr, const QMap<QString, QVariant> values,
+                  int resultsCount, const QList<QList<QVariant>> &results, const QString &error)
+    {
+        auto con = mConnectionById.value(connectionId);
+        if (!con) {
+            return;
+        }
+
+        auto query = new QueryNode;
+        query->type = Query;
+        query->start = timestamp;
+        query->duration = duration;
+        query->query = queryStr;
+        query->values = values;
+        query->resultsCount = resultsCount;
+        query->results = results;
+        query->error = error.trimmed();
+
+        if (con->queries.isEmpty() || con->queries.last()->type == Query) {
+            query->parent = con;
+            beginInsertRows(createIndex(mConnections.indexOf(con), 0, con),
+                            con->queries.count(), con->queries.count());
+            con->queries << query;
+            endInsertRows();
+        } else {
+            auto trx = static_cast<TransactionNode*>(con->queries.last());
+            query->parent = trx;
+            beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx),
+                            trx->queries.count(), trx->queries.count());
+            trx->queries << query;
+            endInsertRows();
+        }
+    }
+
+    int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE
+    {
+        if (!parent.isValid()) {
+            return mConnections.count();
+        }
+
+        Node *node = reinterpret_cast<Node*>(parent.internalPointer());
+        switch (node->type) {
+        case Connection:
+            return static_cast<ConnectionNode*>(node)->queries.count();
+        case Transaction:
+            return static_cast<TransactionNode*>(node)->queries.count();
+        case Query:
+            return 0;
+        }
+
+        Q_UNREACHABLE();
+    }
+
+    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    {
+        Q_UNUSED(parent);
+        return 5;
+    }
+
+    QModelIndex parent(const QModelIndex &child) const Q_DECL_OVERRIDE
+    {
+        if (!child.isValid() || !child.internalPointer()) {
+            return QModelIndex();
+        }
+
+        Node *childNode = reinterpret_cast<Node*>(child.internalPointer());
+        // childNode is a Connection
+        if (!childNode->parent) {
+            return QModelIndex();
+        }
+
+        // childNode is a query in transaction
+        if (childNode->parent->parent) {
+            ConnectionNode *connection = static_cast<ConnectionNode*>(childNode->parent->parent);
+            const int trxIdx = connection->queries.indexOf(childNode->parent);
+            return createIndex(trxIdx, 0, childNode->parent);
+        } else {
+            // childNode is a query without transaction or a transaction
+            return createIndex(mConnections.indexOf(static_cast<ConnectionNode*>(childNode->parent)),
+                               0, childNode->parent);
+        }
+    }
+
+    QModelIndex index(int row, int column, const QModelIndex &parent) const Q_DECL_OVERRIDE
+    {
+        if (!parent.isValid()) {
+            if (row < mConnections.count()) {
+                return createIndex(row, column, mConnections.at(row));
+            } else {
+                return QModelIndex();
+            }
+        }
+
+        Node *parentNode = reinterpret_cast<Node*>(parent.internalPointer());
+        switch (parentNode->type) {
+        case Connection:
+            if (row < static_cast<ConnectionNode*>(parentNode)->queries.count()) {
+                return createIndex(row, column, static_cast<ConnectionNode*>(parentNode)->queries.at(row));
+            } else {
+                return QModelIndex();
+            }
+        case Transaction:
+            if (row < static_cast<TransactionNode*>(parentNode)->queries.count()) {
+                return createIndex(row, column, static_cast<TransactionNode*>(parentNode)->queries.at(row));
+            } else {
+                return QModelIndex();
+            }
+        case Query:
+            // Query can never have children
+            return QModelIndex();
+        }
+
+        Q_UNREACHABLE();
+    }
+
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const Q_DECL_OVERRIDE
+    {
+        if (orientation != Qt::Horizontal || role != Qt::DisplayRole) {
+            return QVariant();
+        }
+
+        switch (section) {
+        case 0: return QStringLiteral("Name / Query");
+        case 1: return QStringLiteral("Started");
+        case 2: return QStringLiteral("Ended");
+        case 3: return QStringLiteral("Duration");
+        case 4: return QStringLiteral("Error");
+        }
+
+        return QVariant();
+    }
+
+    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE
+    {
+        if (!index.isValid()) {
+            return QVariant();
+        }
+
+        Node *node = reinterpret_cast<Node*>(index.internalPointer());
+        if (role == RowTypeRole) {
+            return node->type;
+        } else {
+            switch (node->type) {
+            case Connection:
+                return connectionData(static_cast<ConnectionNode*>(node), index.column(), role);
+            case Transaction:
+                return transactionData(static_cast<TransactionNode*>(node), index.column(), role);
+            case Query:
+                return queryData(static_cast<QueryNode*>(node), index.column(), role);
+            }
+        }
+
+        Q_UNREACHABLE();
+    }
+
+    void dumpRow(QFile &file, const QModelIndex &idx, int depth)
+    {
+        if (idx.isValid()) {
+            QTextStream stream(&file);
+            stream << QStringLiteral("  |").repeated(depth)
+                   << QLatin1String("- ");
+
+            Node *node = reinterpret_cast<Node*>(idx.internalPointer());
+            switch (node->type) {
+            case Connection: {
+                auto con = static_cast<ConnectionNode*>(node);
+                stream << con->name << "    " << fromMSecsSinceEpoch(con->start);
+                break;
+            }
+            case Transaction: {
+                auto trx = static_cast<TransactionNode*>(node);
+                switch (trx->transactionType) {
+                case TransactionNode::Begin: stream << QStringLiteral("BEGIN"); break;
+                case TransactionNode::Commit: stream << QStringLiteral("COMMIT"); break;
+                case TransactionNode::Rollback: stream << QStringLiteral("ROLLBACK"); break;
+                }
+                stream << "    " << fromMSecsSinceEpoch(trx->start);
+                if (trx->transactionType > TransactionNode::Begin) {
+                    stream << " - " << fromMSecsSinceEpoch(trx->start + trx->duration);
+                }
+                break;
+            }
+            case Query: {
+                auto query = static_cast<QueryNode*>(node);
+                stream << query->query << "    " << fromMSecsSinceEpoch(query->start) << ", took " << query->duration << " ms";
+                break;
+            }
+            }
+
+            if (node->type >= Transaction) {
+                auto query = static_cast<QueryNode*>(node);
+                if (!query->error.isEmpty()) {
+                    stream << '\n'
+                           << QStringLiteral("  |").repeated(depth)
+                           << QStringLiteral("  Error: ") << query->error;
+                }
+            }
+
+            stream << '\n';
+        }
+
+        for (int i = 0, c = rowCount(idx); i < c; ++i) {
+            dumpRow(file, index(i, 0, idx), depth + 1);
+        }
+    }
+private:
+    QString fromMSecsSinceEpoch(qint64 msecs) const
+    {
+        return QDateTime::fromMSecsSinceEpoch(msecs).toString(QStringLiteral("dd.MM.yyyy HH:mm:ss.zzz"));
+    }
+
+    QVariant connectionData(ConnectionNode *connection, int column, int role) const
+    {
+        if (role != Qt::DisplayRole) {
+            return QVariant();
+        }
+
+        switch (column) {
+        case 0: return connection->name;
+        case 1: return fromMSecsSinceEpoch(connection->start);
+        }
+
+        return QVariant();
+    }
+
+    QVariant transactionData(TransactionNode *transaction, int column, int role) const
+    {
+        if (role == Qt::DisplayRole && column == 0) {
+            switch (transaction->transactionType) {
+            case TransactionNode::Begin: return QStringLiteral("BEGIN");
+            case TransactionNode::Commit: return QStringLiteral("COMMIT");
+            case TransactionNode::Rollback: return QStringLiteral("ROLLBACK");
+            }
+            Q_UNREACHABLE();
+        } else {
+            return queryData(transaction, column, role);
+        }
+    }
+
+    QVariant queryData(QueryNode *query, int column, int role) const
+    {
+        switch (role) {
+        case Qt::BackgroundRole:
+            if (!query->error.isEmpty()) {
+                return KColorScheme(QPalette::Normal).background(KColorScheme::NegativeBackground).color();
+            }
+            break;
+        case Qt::DisplayRole:
+            switch (column) {
+            case 0: return query->query;
+            case 1: return fromMSecsSinceEpoch(query->start);
+            case 2: return fromMSecsSinceEpoch(query->start + query->duration);
+            case 3: return QTime(0, 0, 0).addMSecs(query->duration).toString(QStringLiteral("HH:mm:ss.zzz"));
+            case 4: return query->error;
+            }
+            break;
+        case QueryRole:
+            return query->query;
+        case QueryResultsCountRole:
+            return query->resultsCount;
+        case QueryResultsRole:
+            return QVariant::fromValue(query->results);
+        case QueryValuesRole:
+            return query->values;
+        }
+
+        return QVariant();
+    }
+
+    QVector<ConnectionNode *> mConnections;
+    QHash<qint64, ConnectionNode *> mConnectionById;
+};
+
 
 class QueryDebuggerModel : public QAbstractListModel
 {
@@ -199,10 +657,66 @@ private:
     QueryInfo mSpecialRows[NUM_SPECIAL_ROWS];
 };
 
+
+class QueryViewDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    QueryViewDialog(const QString &query,
+                    const QMap<QString,QVariant> &values,
+                    int resultsCount,
+                    const QList<QList<QVariant>> &results,
+                    QWidget *parent = nullptr)
+        : QDialog(parent)
+        , mUi(new Ui::QueryViewDialog)
+    {
+        mUi->setupUi(this);
+
+        QString q = query;
+        for (int i = 0; i < values.count(); ++i) {
+            const int pos = q.indexOf(QLatin1Char('?'));
+            if (pos == -1) {
+                break;
+            }
+            q.replace(pos, 1, values.value(QStringLiteral(":%1").arg(i)).toString());
+        }
+        mUi->queryLbl->setText(q);
+        if (!q.startsWith(QLatin1String("SELECT"))) {
+            mUi->resultsLabelLbl->setText(QStringLiteral("Affected Rows:"));
+        }
+        mUi->resultsLbl->setText(QString::number(resultsCount));
+
+        if (!results.isEmpty()) {
+            mUi->tableWidget->setRowCount(resultsCount);
+            const auto &headers = results[0];
+            mUi->tableWidget->setColumnCount(headers.count());
+            for (int c = 0; c < headers.count(); ++c) {
+                mUi->tableWidget->setHorizontalHeaderItem(c, new QTableWidgetItem(headers[c].toString()));
+            }
+            for (int r = 1; r <= resultsCount; ++r) {
+                const auto &row = results[r];
+                for (int c = 0; c < row.size(); ++c) {
+                    mUi->tableWidget->setItem(r - 1, c, new QTableWidgetItem(row[c].toString()));
+                }
+            }
+        }
+
+        connect(mUi->buttonBox, &QDialogButtonBox::rejected,
+                this, &QDialog::accept);
+
+    }
+
+private:
+    QScopedPointer<Ui::QueryViewDialog> mUi;
+};
+
 QueryDebugger::QueryDebugger(QWidget *parent):
-    QWidget(parent)
+    QWidget(parent),
+    mUi(new Ui::QueryDebugger)
 {
     qDBusRegisterMetaType< QList< QList<QVariant> > >();
+    qDBusRegisterMetaType<DbConnection>();
+    qDBusRegisterMetaType<QVector<DbConnection>>();
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
@@ -214,50 +728,34 @@ QueryDebugger::QueryDebugger(QWidget *parent):
     connect(mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::queryExecuted,
             this, &QueryDebugger::addQuery);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    mUi->setupUi(this);
+    connect(mUi->enableDebuggingChkBox, &QAbstractButton::toggled,
+            this, &QueryDebugger::debuggerToggled);
 
-    QHBoxLayout *checkBoxLayout = new QHBoxLayout;
-
-    QCheckBox *enableCB = new QCheckBox(this);
-    enableCB->setText(QStringLiteral("Enable query debugger (slows down server!)"));
-    enableCB->setChecked(mDebugger->isSQLDebuggingEnabled());
-    connect(enableCB, &QAbstractButton::toggled, mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::enableSQLDebugging);
-    checkBoxLayout->addWidget(enableCB);
-
-    mOnlyAggregate = new QCheckBox(this);
-    mOnlyAggregate->setText(QStringLiteral("Only Aggregate data"));
-    mOnlyAggregate->setChecked(true);
-    checkBoxLayout->addWidget(mOnlyAggregate);
-
-    QToolButton *clearButton = new QToolButton;
-    clearButton->setText(QStringLiteral("clear"));
-    clearButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-list")));
-    clearButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    connect(clearButton, &QAbstractButton::clicked, this, &QueryDebugger::clear);
-    checkBoxLayout->addWidget(clearButton);
-
-    layout->addLayout(checkBoxLayout);
-
-    QTreeView *queryList = new QTreeView(this);
-    mModel = new QueryDebuggerModel(this);
+    mQueryList = new QueryDebuggerModel(this);
     QSortFilterProxyModel *proxy = new QSortFilterProxyModel(this);
-    proxy->setSourceModel(mModel);
+    proxy->setSourceModel(mQueryList);
     proxy->setDynamicSortFilter(true);
-    queryList->setModel(proxy);
-    queryList->setRootIsDecorated(false);
-    queryList->setSortingEnabled(true);
-    queryList->setUniformRowHeights(true);
-    queryList->header()->setResizeMode(QueryDebuggerModel::CallsColumn, QHeaderView::Fixed);
-    queryList->header()->setResizeMode(QueryDebuggerModel::DurationColumn, QHeaderView::Fixed);
-    queryList->header()->setResizeMode(QueryDebuggerModel::AvgDurationColumn, QHeaderView::Fixed);
-    queryList->header()->setResizeMode(QueryDebuggerModel::QueryColumn, QHeaderView::ResizeToContents);
+    mUi->queryListView->setModel(proxy);
+    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::CallsColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::DurationColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::AvgDurationColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::QueryColumn, QHeaderView::ResizeToContents);
 
-    layout->addWidget(queryList);
-
-    mView = new KPIMTextEdit::RichTextEditorWidget(this);
-    mView->setReadOnly(true);
-    mView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
-    layout->addWidget(mView);
+    connect(mUi->queryTreeView, &QTreeView::doubleClicked,
+            this, &QueryDebugger::queryTreeDoubleClicked);
+    connect(mUi->saveToFileBtn, &QPushButton::clicked,
+            this, &QueryDebugger::saveTreeToFile);
+    mQueryTree = new QueryTreeModel(this);
+    mUi->queryTreeView->setModel(mQueryTree);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionOpened,
+            mQueryTree, &QueryTreeModel::addConnection);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionChanged,
+            mQueryTree, &QueryTreeModel::updateConnection);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionStarted,
+            mQueryTree, &QueryTreeModel::addTransaction);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionFinished,
+            mQueryTree, &QueryTreeModel::closeTransaction);
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 }
@@ -271,89 +769,65 @@ QueryDebugger::~QueryDebugger()
 
 void QueryDebugger::clear()
 {
-    mView->clear();
-    mModel->clear();
+    mQueryList->clear();
 }
 
-void QueryDebugger::addQuery(double sequence, uint duration, const QString &query,
-                             const QMap<QString, QVariant> &values,
+void QueryDebugger::debuggerToggled(bool on)
+{
+    mDebugger->enableSQLDebugging(on);
+    if (on) {
+        mQueryTree->clear();
+
+        const QVector<DbConnection> conns = mDebugger->connections();
+        for (const auto &con : conns) {
+            mQueryTree->addConnection(con.id, con.name, con.start);
+            if (con.transactionStart > 0) {
+                mQueryTree->addTransaction(con.id, con.transactionStart, 0, QString());
+            }
+        }
+    }
+}
+
+void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timestamp,
+                             uint duration, const QString &query, const QMap<QString, QVariant> &values,
                              int resultsCount, const QList<QList<QVariant> > &result,
                              const QString &error)
 {
-    mModel->addQuery(query, duration);
-
-    if (mOnlyAggregate->isChecked()) {
-        return;
-    }
-
-    QString q = query;
-    const QStringList keys = values.uniqueKeys();
-    for (const QString &key : keys) {
-        int pos = q.indexOf(QStringLiteral("?"));
-        const QVariant val = values.value(key);
-        q.replace(pos, 1, variantToString(val));
-    }
-
-    mView->editor()->append(QStringLiteral("%1: <font color=\"blue\">%2</font>") .arg(sequence).arg(q));
-
-    if (!error.isEmpty()) {
-        mView->editor()->append(QStringLiteral("<font color=\"red\">Error: %1</font>\n").arg(error));
-        return;
-    }
-
-    mView->editor()->append(QStringLiteral("<font color=\"green\">Success</font>: Query took %1 msecs ").arg(duration));
-    if (query.startsWith(QStringLiteral("SELECT"))) {
-        mView->editor()->append(QStringLiteral("Fetched %1 results").arg(resultsCount));
-    } else {
-        mView->editor()->append(QStringLiteral("Affected %1 rows").arg(resultsCount));
-    }
-
-    if (!result.isEmpty()) {
-        const QVariantList headerRow = result.first();
-        QString header;
-        for (int i = 0; i < headerRow.size(); ++i) {
-            if (i > 0) {
-                header += QLatin1String(" | ");
-            }
-            header += headerRow.at(i).toString();
-        }
-        mView->editor()->append(header);
-
-        QString sep;
-        mView->editor()->append(sep.fill(QLatin1Char('-'), header.length()));
-
-        for (int row = 1; row < result.count(); ++row) {
-            const QVariantList columns = result.at(row);
-            QString rowStr;
-            for (int column = 0; column < columns.count(); ++column) {
-                if (column > 0) {
-                    rowStr += QLatin1String(" | ");
-                }
-                rowStr += variantToString(columns.at(column));
-            }
-            mView->editor()->append(rowStr);
-        }
-    }
-
-    mView->editor()->append(QStringLiteral("\n"));
+    Q_UNUSED(sequence);
+    mQueryList->addQuery(query, duration);
+    mQueryTree->addQuery(connectionId, timestamp, duration, query, values, resultsCount, result, error);
 }
 
-QString QueryDebugger::variantToString(const QVariant &val)
+void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 {
-    if (val.canConvert(QVariant::String)) {
-        return val.toString();
-    } else if (val.canConvert(QVariant::DateTime)) {
-        return val.toDateTime().toString(Qt::ISODate);
+    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt())
+            != QueryTreeModel::Query) {
+        return;
     }
 
-    QDBusArgument arg = val.value<QDBusArgument>();
-    if (arg.currentType() == QDBusArgument::StructureType) {
-        QDateTime t = qdbus_cast<QDateTime>(arg);
-        if (t.isValid()) {
-            return t.toString(Qt::ISODate);
-        }
-    }
-
-    return QString();
+    auto dlg = new QueryViewDialog(
+        index.data(QueryTreeModel::QueryRole).toString(),
+        index.data(QueryTreeModel::QueryValuesRole).value<QMap<QString,QVariant>>(),
+        index.data(QueryTreeModel::QueryResultsCountRole).toInt(),
+        index.data(QueryTreeModel::QueryResultsRole).value<QList<QList<QVariant>>>(),
+        this);
+    connect(dlg, &QDialog::finished, dlg, &QObject::deleteLater);
+    dlg->show();
 }
+
+void QueryDebugger::saveTreeToFile()
+{
+  const QString fileName = QFileDialog::getSaveFileName(this);
+  QFile file(fileName);
+  if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+    // show error
+    return;
+  }
+
+  mQueryTree->dumpRow(file, QModelIndex(), 0);
+
+  file.close();
+}
+
+
 #include "querydebugger.moc"
