@@ -264,18 +264,20 @@ public:
         query->results = results;
         query->error = error.trimmed();
 
-        if (con->queries.isEmpty() || con->queries.last()->type == Query) {
-            query->parent = con;
-            beginInsertRows(createIndex(mConnections.indexOf(con), 0, con),
-                            con->queries.count(), con->queries.count());
-            con->queries << query;
-            endInsertRows();
-        } else {
+        if (!con->queries.isEmpty()
+            && con->queries.last()->type == Transaction
+            && static_cast<TransactionNode*>(con->queries.last())->transactionType == TransactionNode::Begin) {
             auto trx = static_cast<TransactionNode*>(con->queries.last());
             query->parent = trx;
             beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx),
                             trx->queries.count(), trx->queries.count());
             trx->queries << query;
+            endInsertRows();
+        } else {
+            query->parent = con;
+            beginInsertRows(createIndex(mConnections.indexOf(con), 0, con),
+                            con->queries.count(), con->queries.count());
+            con->queries << query;
             endInsertRows();
         }
     }
