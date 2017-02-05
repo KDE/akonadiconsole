@@ -40,6 +40,7 @@ struct DbConnection {
     qint64 id;
     QString name;
     qint64 start;
+    QString trxName;
     qint64 transactionStart;
 };
 

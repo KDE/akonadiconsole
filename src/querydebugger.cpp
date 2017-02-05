@@ -57,6 +57,7 @@ QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con)
     arg << con.id
         << con.name
         << con.start
+        << con.trxName
         << con.transactionStart;
     arg.endStructure();
     return arg;
@@ -68,6 +69,7 @@ const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con)
     arg >> con.id
         >> con.name
         >> con.start
+        >> con.trxName
         >> con.transactionStart;
     arg.endStructure();
     return arg;
@@ -197,7 +199,7 @@ public:
         Q_EMIT dataChanged(index, index.sibling(index.row(), 5));
     }
 
-    void addTransaction(qint64 connectionId, qint64 timestamp, uint duration, const QString &error)
+    void addTransaction(qint64 connectionId, const QString &name, qint64 timestamp, uint duration, const QString &error)
     {
         auto con = mConnectionById.value(connectionId);
         if (!con) {
@@ -205,6 +207,7 @@ public:
         }
 
         auto trx = new TransactionNode;
+        trx->query = name;
         trx->parent = con;
         trx->type = Transaction;
         trx->start = timestamp;
@@ -419,12 +422,8 @@ public:
             }
             case Transaction: {
                 auto trx = static_cast<TransactionNode*>(node);
-                switch (trx->transactionType) {
-                case TransactionNode::Begin: stream << QStringLiteral("BEGIN"); break;
-                case TransactionNode::Commit: stream << QStringLiteral("COMMIT"); break;
-                case TransactionNode::Rollback: stream << QStringLiteral("ROLLBACK"); break;
-                }
-                stream << "    " << fromMSecsSinceEpoch(trx->start);
+                stream << idx.data(Qt::DisplayRole).toString()
+                       << "    " << fromMSecsSinceEpoch(trx->start);
                 if (trx->transactionType > TransactionNode::Begin) {
                     stream << " - " << fromMSecsSinceEpoch(trx->start + trx->duration);
                 }
@@ -476,12 +475,13 @@ private:
     QVariant transactionData(TransactionNode *transaction, int column, int role) const
     {
         if (role == Qt::DisplayRole && column == 0) {
+            QString mode;
             switch (transaction->transactionType) {
-            case TransactionNode::Begin: return QStringLiteral("BEGIN");
-            case TransactionNode::Commit: return QStringLiteral("COMMIT");
-            case TransactionNode::Rollback: return QStringLiteral("ROLLBACK");
+            case TransactionNode::Begin: mode = QStringLiteral("BEGIN");
+            case TransactionNode::Commit: mode = QStringLiteral("COMMIT");
+            case TransactionNode::Rollback: mode = QStringLiteral("ROLLBACK");
             }
-            Q_UNREACHABLE();
+            return QStringLiteral("%1 %2").arg(mode, transaction->query);
         } else {
             return queryData(transaction, column, role);
         }
@@ -784,7 +784,7 @@ void QueryDebugger::debuggerToggled(bool on)
         for (const auto &con : conns) {
             mQueryTree->addConnection(con.id, con.name, con.start);
             if (con.transactionStart > 0) {
-                mQueryTree->addTransaction(con.id, con.transactionStart, 0, QString());
+                mQueryTree->addTransaction(con.id, con.trxName, con.transactionStart, 0, QString());
             }
         }
     }
