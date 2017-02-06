@@ -71,7 +71,7 @@ ki18n_wrap_ui(libakonadiconsole_SRCS
     collectionattributespage.ui
     collectionaclpage.ui
     dbbrowser.ui
-    dbconsole.ui
+    dbconsoletab.ui
     instanceselector.ui
     browserwidget_contentview.ui
     collectioninternalspage.ui

@@ -20,9 +20,13 @@
 #ifndef AKONADICONSOLE_DBCONSOLE_H
 #define AKONADICONSOLE_DBCONSOLE_H
 
-#include "ui_dbconsole.h"
+#include <QWidget>
+#include "ui_dbconsoletab.h"
 
 class QSqlQueryModel;
+class QTabWidget;
+
+class DbConsoleTab;
 
 class DbConsole : public QWidget
 {
@@ -31,12 +35,34 @@ public:
     explicit DbConsole(QWidget *parent = nullptr);
 
 private Q_SLOTS:
+    DbConsoleTab *addTab();
+    void saveQueries();
+
+private:
+    int mTabCounter;
+    QTabWidget *mTabWidget;
+};
+
+class DbConsoleTab : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit DbConsoleTab(int index, QWidget *parent = nullptr);
+
+    void setQuery(const QString &query);
+    QString query() const;
+
+Q_SIGNALS:
+    void saveQueries();
+
+private Q_SLOTS:
     void execClicked();
     void copyCell();
 
 private:
-    Ui::DbConsole ui;
+    Ui::DbConsoleTab ui;
     QSqlQueryModel *mQueryModel;
+    int mIndex;
 };
 
 #endif
