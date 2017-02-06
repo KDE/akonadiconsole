@@ -818,6 +818,9 @@ void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 void QueryDebugger::saveTreeToFile()
 {
   const QString fileName = QFileDialog::getSaveFileName(this);
+  if (fileName.isEmpty()) {
+      return;
+  }
   QFile file(fileName);
   if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
     // show error
