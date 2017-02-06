@@ -817,19 +817,19 @@ void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 
 void QueryDebugger::saveTreeToFile()
 {
-  const QString fileName = QFileDialog::getSaveFileName(this);
-  if (fileName.isEmpty()) {
-      return;
-  }
-  QFile file(fileName);
-  if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-    // show error
-    return;
-  }
+    const QString fileName = QFileDialog::getSaveFileName(this);
+    if (fileName.isEmpty()) {
+        return;
+    }
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        // show error
+        return;
+    }
 
-  mQueryTree->dumpRow(file, QModelIndex(), 0);
+    mQueryTree->dumpRow(file, QModelIndex(), 0);
 
-  file.close();
+    file.close();
 }
 
 
