@@ -23,7 +23,7 @@
 #define INSTANCESELECTOR_H
 
 #include "mainwindow.h"
-#include "akonadiconsolelib_export.h"
+#include "libakonadiconsole_export.h"
 
 #include <QDialog>
 #include <KConfigGroup>

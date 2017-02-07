@@ -20,7 +20,7 @@
 
 #include <QWidget>
 
-#include "akonadiconsolelib_export.h"
+#include "libakonadiconsole_export.h"
 
 class QLineEdit;
 class QComboBox;

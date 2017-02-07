@@ -27,7 +27,7 @@
 #include <QDateTime>
 #include <QList>
 #include <QPair>
-#include "akonadiconsolelib_export.h"
+#include "libakonadiconsole_export.h"
 class JobInfo
 {
 public:

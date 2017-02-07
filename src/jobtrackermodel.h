@@ -23,7 +23,7 @@
 #define AKONADICONSOLE_JOBTRACKERMODEL_H
 
 #include <QAbstractItemModel>
-#include "akonadiconsolelib_export.h"
+#include "libakonadiconsole_export.h"
 
 class JobTracker;
 

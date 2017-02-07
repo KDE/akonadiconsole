@@ -22,7 +22,7 @@
 
 #include <QAbstractItemModel>
 #include <AkonadiCore/NotificationSubscriber>
-#include "akonadiconsolelib_export.h"
+#include "libakonadiconsole_export.h"
 class MonitorItem;
 
 namespace Akonadi
