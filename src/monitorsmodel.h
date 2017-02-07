@@ -30,7 +30,7 @@ namespace Akonadi
 class Monitor;
 }
 
-class AKONADICONSOLELIB_EXPORT MonitorsModel : public QAbstractItemModel
+class LIBAKONADICONSOLE_EXPORT MonitorsModel : public QAbstractItemModel
 {
     Q_OBJECT
 

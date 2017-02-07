@@ -60,7 +60,7 @@ public:
     QString stateAsString() const;
 };
 
-class AKONADICONSOLELIB_EXPORT JobTracker : public QObject
+class LIBAKONADICONSOLE_EXPORT JobTracker : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.freedesktop.Akonadi.JobTracker")

@@ -27,7 +27,7 @@
 
 class JobTracker;
 
-class AKONADICONSOLELIB_EXPORT JobTrackerModel : public QAbstractItemModel
+class LIBAKONADICONSOLE_EXPORT JobTrackerModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:

@@ -25,7 +25,7 @@
 class QLineEdit;
 class QComboBox;
 class QCheckBox;
-class AKONADICONSOLELIB_EXPORT JobTrackerSearchWidget : public QWidget
+class LIBAKONADICONSOLE_EXPORT JobTrackerSearchWidget : public QWidget
 {
     Q_OBJECT
 public:
