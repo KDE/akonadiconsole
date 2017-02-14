@@ -41,7 +41,7 @@ public:
     {
     }
 
-    int rowForParentId(int parentid)
+    int rowForParentId(int parentid) const
     {
         const int grandparentid = tracker.parentId(parentid);
         int row = -1;
