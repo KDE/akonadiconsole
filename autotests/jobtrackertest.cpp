@@ -141,4 +141,4 @@ void JobTrackerTest::shouldHandleJobEnd()
     QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), QStringLiteral("0,-2"));
 }
 
-QTEST_MAIN(JobTrackerTest)
+QTEST_GUILESS_MAIN(JobTrackerTest)

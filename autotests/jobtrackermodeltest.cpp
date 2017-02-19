@@ -185,4 +185,4 @@ void JobTrackerModelTest::shouldHandleDuplicateJob()
     QCOMPARE(sessionIndex.child(1, JobTrackerModel::ColumnState).data().toString(), QStringLiteral("Failed: error"));
 }
 
-QTEST_MAIN(JobTrackerModelTest)
+QTEST_GUILESS_MAIN(JobTrackerModelTest)
