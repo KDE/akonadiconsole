@@ -64,7 +64,7 @@ qt5_add_dbus_interface(libakonadiconsole_SRCS
     storagedebuggerinterface
     )
 
-ki18n_wrap_ui(libakonadiconsole_SRCS
+qt5_wrap_ui(libakonadiconsole_SRCS
     agentwidget.ui
     agentconfigdialog.ui
     browserwidget_itemview.ui
