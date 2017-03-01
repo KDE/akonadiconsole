@@ -19,6 +19,7 @@
 
 #include "tagpropertiesdialog.h"
 #include "dbaccess.h"
+#include "helper_p.h"
 
 #include <AkonadiCore/AttributeFactory>
 #include <QSqlQuery>
@@ -253,7 +254,7 @@ void TagPropertiesDialog::slotAccept()
     mTag.setType(ui.typeEdit->text().toLatin1());
     mTag.setGid(ui.gidEdit->text().toLatin1());
 
-    Q_FOREACH (const QString &removedAttr, mRemovedAttrs) {
+    for (const QString &removedAttr : qAsConst(mRemovedAttrs)) {
         mTag.removeAttribute(removedAttr.toLatin1());
     }
     for (int i = 0; i < mAttributesModel->rowCount(); ++i) {
@@ -290,7 +291,7 @@ void TagPropertiesDialog::slotAccept()
         queryStr += conds.join(QStringLiteral(" OR ")) + QLatin1String(")");
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
-        Q_FOREACH (const QString &removedRid, mRemovedRIDs) {
+        for (const QString &removedRid : qAsConst(mRemovedRIDs)) {
             query.addBindValue(removedRid);
         }
         if (!query.exec()) {
@@ -311,7 +312,7 @@ void TagPropertiesDialog::slotAccept()
             }
             queryStr += conds.join(QStringLiteral(" OR "));
             query.prepare(queryStr);
-            Q_FOREACH (const QString &res, mChangedRIDs) {
+            for (const QString &res : qAsConst(mChangedRIDs)) {
                 query.addBindValue(res);
             }
             if (!query.exec()) {

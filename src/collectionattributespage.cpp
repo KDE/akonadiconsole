@@ -18,7 +18,7 @@
 */
 
 #include "collectionattributespage.h"
-
+#include "helper_p.h"
 #include <AkonadiCore/attributefactory.h>
 #include <AkonadiCore/collection.h>
 
@@ -63,7 +63,7 @@ void CollectionAttributePage::load(const Collection &col)
 
 void CollectionAttributePage::save(Collection &col)
 {
-    foreach (const QString &del, mDeleted) {
+    for (const QString &del : qAsConst(mDeleted)) {
         col.removeAttribute(del.toLatin1());
     }
     for (int i = 0; i < mModel->rowCount(); ++i) {

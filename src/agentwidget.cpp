@@ -20,6 +20,7 @@
 */
 
 #include "agentwidget.h"
+#include "helper_p.h"
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
@@ -175,7 +176,7 @@ void AgentWidget::slotDataChanged(const QModelIndex &topLeft, const QModelIndex 
         selectedRows.append(ui.instanceWidget->view()->selectionModel()->currentIndex());
     }
     QList<int> rows;
-    foreach (const QModelIndex &index, selectedRows) {
+    for (const QModelIndex &index : qAsConst(selectedRows)) {
         rows.append(index.row());
     }
     std::sort(rows.begin(), rows.end());
