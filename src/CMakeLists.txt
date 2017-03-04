@@ -91,6 +91,7 @@ target_link_libraries(libakonadiconsole
     KF5::AkonadiCore
     KF5::AkonadiPrivate
     KF5::AkonadiContact
+    KF5::AkonadiWidgets
     KF5::AkonadiXml
     KF5::CalendarSupport
     KF5::CalendarCore
