@@ -69,6 +69,9 @@ DbConsole::DbConsole(QWidget *parent)
         auto tab = addTab();
         tab->setQuery(query);
     }
+    if (queries.isEmpty()) {
+        addTab();
+    }
 }
 
 void DbConsole::saveQueries()
