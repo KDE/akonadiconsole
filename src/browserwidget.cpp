@@ -491,15 +491,45 @@ void BrowserWidget::clearCache()
     if (!coll.isValid()) {
         return;
     }
+
+    const auto ridCount = QStringLiteral("SELECT COUNT(*) FROM PimItemTable WHERE collectionId=%1 AND remoteId=''").arg(coll.id());
+    QSqlQuery query(DbAccess::database());
+    if (!query.exec(ridCount)) {
+        qCWarning(AKONADICONSOLE_LOG) << "Failed to execute query" << ridCount << ":" << query.lastError().text();
+        KMessageBox::error(this, query.lastError().text());
+        return;
+    }
+
+    query.next();
+    const int emptyRidCount = query.value(0).toInt();
+    if (emptyRidCount > 0) {
+        if (KMessageBox::warningContinueCancel(this, QStringLiteral(
+                "The collection '%1' contains %2 items without Remote ID. "
+                "Those items were likely never uploaded to the destination server, "
+                "so clearing this collection means that those <b>data will be lost</b>. "
+                "Are you sure you want to proceed?").arg(coll.id()).arg(emptyRidCount),
+                QStringLiteral("POSSIBLE DATA LOSS!")) == KMessageBox::Cancel) {
+            return;
+        }
+    }
+
     QString str = QStringLiteral("DELETE FROM PimItemTable WHERE collectionId=%1").arg(coll.id());
     qCDebug(AKONADICONSOLE_LOG) << str;
-    QSqlQuery query(str, DbAccess::database());
+    query = QSqlQuery(str, DbAccess::database());
     if (query.exec()) {
         if (query.lastError().isValid()) {
             qCDebug(AKONADICONSOLE_LOG) << query.lastError();
             KMessageBox::error(this, query.lastError().text());
         }
     }
+
+    // TODO: Clear external parts
+    // TODO: Reset Akonadi's internall collection statistics cache
+    // TODO: Notify all clients EXCEPT FOR THE RESOURCE about the deletion?
+    // TODO: Clear search index
+    // TODO: ???
+
+    KMessageBox::information(this, QStringLiteral("Collection cache cleared. You should restart Akonadi now."));
 }
 
 Akonadi::Collection BrowserWidget::currentCollection() const
