@@ -18,7 +18,7 @@
 */
 
 #include "collectionattributespage.h"
-#include "helper_p.h"
+
 #include <AkonadiCore/attributefactory.h>
 #include <AkonadiCore/collection.h>
 

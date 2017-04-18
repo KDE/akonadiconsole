@@ -19,7 +19,7 @@
 
 #include "tagpropertiesdialog.h"
 #include "dbaccess.h"
-#include "helper_p.h"
+
 
 #include <AkonadiCore/AttributeFactory>
 #include <QSqlQuery>

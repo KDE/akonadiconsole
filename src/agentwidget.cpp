@@ -20,7 +20,7 @@
 */
 
 #include "agentwidget.h"
-#include "helper_p.h"
+
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
