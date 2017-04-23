@@ -56,8 +56,7 @@ public:
 class NotificationModel::NotificationEntity: public NotificationModel::Item
 {
 public:
-    NotificationEntity(Protocol::ChangeNotification::Id id,
-                       const QString &remoteId, const QString &remoteRevision,
+    NotificationEntity(qint64 id, const QString &remoteId, const QString &remoteRevision,
                        const QString &mimeType, NotificationModel::Item *parent)
         : NotificationModel::Item(-1, parent)
         , id(id)
@@ -87,7 +86,7 @@ public:
         }
     }
 
-    Protocol::ChangeNotification::Id id;
+    qint64 id;
     QString remoteId;
     QString remoteRevision;
     QString mimeType;
@@ -96,12 +95,12 @@ public:
 class NotificationModel::ItemNotificationNode: public NotificationModel::Item
 {
 public:
-    ItemNotificationNode(const Protocol::ItemChangeNotification &msg,
+    ItemNotificationNode(const Protocol::ItemChangeNotificationPtr &msg,
                          NotificationModel::Item *parent)
         : NotificationModel::Item(Protocol::Command::ItemChangeNotification, parent)
         , msg(msg)
     {
-        Q_FOREACH (const auto &item, msg.items()) {
+        Q_FOREACH (const auto &item, msg->items()) {
             nodes << new NotificationEntity(item.id, item.remoteId,
                                             item.remoteRevision, item.mimeType,
                                             this);
@@ -115,7 +114,7 @@ public:
     {
         switch (column) {
         case 0: {
-            switch (msg.operation()) {
+            switch (msg->operation()) {
             case Protocol::ItemChangeNotification::Add: return QStringLiteral("Add");
             case Protocol::ItemChangeNotification::Modify: return QStringLiteral("Modify");
             case Protocol::ItemChangeNotification::ModifyFlags: return QStringLiteral("ModifyFlags");
@@ -130,38 +129,38 @@ public:
             return QStringLiteral("Items");
         }
         case 2:
-            return QString::fromUtf8(msg.sessionId());
+            return QString::fromUtf8(msg->sessionId());
         case 3:
-            return QString::fromUtf8(msg.resource());
+            return QString::fromUtf8(msg->resource());
         case 4:
-            return QString::fromUtf8(msg.destinationResource());
+            return QString::fromUtf8(msg->destinationResource());
         case 5:
-            return QString::number(msg.parentCollection());
+            return QString::number(msg->parentCollection());
         case 6:
-            return QString::number(msg.parentDestCollection());
+            return QString::number(msg->parentDestCollection());
         case 7:
-            return QString::fromUtf8(Akonadi::ImapParser::join(msg.itemParts(), ", "));
+            return QString::fromUtf8(Akonadi::ImapParser::join(msg->itemParts(), ", "));
         case 8:
-            return QString::fromUtf8(Akonadi::ImapParser::join(msg.addedFlags(), ", "));
+            return QString::fromUtf8(Akonadi::ImapParser::join(msg->addedFlags(), ", "));
         case 9:
-            return QString::fromUtf8(Akonadi::ImapParser::join(msg.removedFlags(), ", "));
+            return QString::fromUtf8(Akonadi::ImapParser::join(msg->removedFlags(), ", "));
         default:
             return QString();
         }
     }
 
-    Protocol::ItemChangeNotification msg;
+    Protocol::ItemChangeNotificationPtr msg;
 };
 
 class NotificationModel::CollectionNotificationNode : public NotificationModel::Item
 {
 public:
-    CollectionNotificationNode(const Protocol::CollectionChangeNotification &msg,
+    CollectionNotificationNode(const Protocol::CollectionChangeNotificationPtr &msg,
                                NotificationModel::Item *parent)
         : NotificationModel::Item(Protocol::Command::CollectionChangeNotification, parent)
         , msg(msg)
     {
-        nodes << new NotificationEntity(msg.id(), msg.remoteId(), msg.remoteRevision(),
+        nodes << new NotificationEntity(msg->id(), msg->remoteId(), msg->remoteRevision(),
                                         QString(), this);
     }
 
@@ -172,7 +171,7 @@ public:
     {
         switch (column) {
         case 0: {
-            switch (msg.operation()) {
+            switch (msg->operation()) {
             case Protocol::CollectionChangeNotification::Add: return QStringLiteral("Add");
             case Protocol::CollectionChangeNotification::Modify: return QStringLiteral("Modify");
             case Protocol::CollectionChangeNotification::Move: return QStringLiteral("Move");
@@ -186,34 +185,34 @@ public:
             return QStringLiteral("Collections");
         }
         case 2:
-            return QString::fromUtf8(msg.sessionId());
+            return QString::fromUtf8(msg->sessionId());
         case 3:
-            return QString::fromUtf8(msg.resource());
+            return QString::fromUtf8(msg->resource());
         case 4:
-            return QString::fromUtf8(msg.destinationResource());
+            return QString::fromUtf8(msg->destinationResource());
         case 5:
-            return QString::number(msg.parentCollection());
+            return QString::number(msg->parentCollection());
         case 6:
-            return QString::number(msg.parentDestCollection());
+            return QString::number(msg->parentDestCollection());
         case 7:
-            return QString::fromUtf8(Akonadi::ImapParser::join(msg.changedParts(), ", "));
+            return QString::fromUtf8(Akonadi::ImapParser::join(msg->changedParts(), ", "));
         default:
             return QString();
         }
     }
 
-    Protocol::CollectionChangeNotification msg;
+    Protocol::CollectionChangeNotificationPtr msg;
 };
 
 class NotificationModel::TagNotificationNode : public NotificationModel::Item
 {
 public:
-    TagNotificationNode(const Protocol::TagChangeNotification &msg,
+    TagNotificationNode(const Protocol::TagChangeNotificationPtr &msg,
                         NotificationModel::Item *parent)
         : NotificationModel::Item(Protocol::Command::TagChangeNotification, parent)
         , msg(msg)
     {
-        nodes << new NotificationEntity(msg.id(), msg.remoteId(), QString(),
+        nodes << new NotificationEntity(msg->id(), msg->remoteId(), QString(),
                                         QString(), this);
     }
 
@@ -224,7 +223,7 @@ public:
     {
         switch (column) {
         case 0: {
-            switch (msg.operation()) {
+            switch (msg->operation()) {
             case Protocol::TagChangeNotification::Add: return QStringLiteral("Add");
             case Protocol::TagChangeNotification::Modify: return QStringLiteral("Modify");
             case Protocol::TagChangeNotification::Remove: return QStringLiteral("Delete");
@@ -235,21 +234,21 @@ public:
             return QStringLiteral("Tags");
         }
         case 2:
-            return QString::fromUtf8(msg.sessionId());
+            return QString::fromUtf8(msg->sessionId());
         case 3:
-            return QString::fromUtf8(msg.resource());
+            return QString::fromUtf8(msg->resource());
         default:
             return QString();
         }
     }
 
-    Protocol::TagChangeNotification msg;
+    Protocol::TagChangeNotificationPtr msg;
 };
 
 class NotificationModel::RelationNotificationNode : public NotificationModel::Item
 {
 public:
-    RelationNotificationNode(const Protocol::RelationChangeNotification &msg,
+    RelationNotificationNode(const Protocol::RelationChangeNotificationPtr &msg,
                              NotificationModel::Item *parent)
         : NotificationModel::Item(Protocol::Command::RelationChangeNotification, parent)
         , msg(msg)
@@ -263,7 +262,7 @@ public:
     {
         switch (column) {
         case 0: {
-            switch (msg.operation()) {
+            switch (msg->operation()) {
             case Protocol::RelationChangeNotification::Add: return QStringLiteral("Add");
             case Protocol::RelationChangeNotification::Remove: return QStringLiteral("Delete");
             default: return QStringLiteral("Invalid");
@@ -273,25 +272,25 @@ public:
             return QStringLiteral("Relation");
         }
         case 2:
-            return QString::fromUtf8(msg.sessionId());
+            return QString::fromUtf8(msg->sessionId());
         case 3:
-            return QString::number(msg.leftItem());
+            return QString::number(msg->leftItem());
         case 4:
-            return QString::number(msg.rightItem());
+            return QString::number(msg->rightItem());
         case 5:
-            return msg.remoteId();
+            return msg->remoteId();
         default:
             return QString();
         }
     }
 
-    Protocol::RelationChangeNotification msg;
+    Protocol::RelationChangeNotificationPtr msg;
 };
 
 class NotificationModel::SubscriptionNotificationNode : public NotificationModel::Item
 {
 public:
-    SubscriptionNotificationNode(const Protocol::SubscriptionChangeNotification &msg,
+    SubscriptionNotificationNode(const Protocol::SubscriptionChangeNotificationPtr &msg,
                                  NotificationModel::Item *parent)
         : NotificationModel::Item(Protocol::Command::SubscriptionChangeNotification, parent)
         , msg(msg)
@@ -306,7 +305,7 @@ public:
     {
         switch (column) {
         case 0: {
-            switch (msg.operation()) {
+            switch (msg->operation()) {
             case Protocol::SubscriptionChangeNotification::Add:
                 return QStringLiteral("Add");
             case Protocol::SubscriptionChangeNotification::Modify:
@@ -320,13 +319,13 @@ public:
         case 1:
             return QStringLiteral("Subscription");
         case 2:
-            return msg.subscriber();
+            return msg->subscriber();
         default:
             return QString();
         }
     }
 
-    Protocol::SubscriptionChangeNotification msg;
+    Protocol::SubscriptionChangeNotificationPtr msg;
 };
 
 class NotificationModel::NotificationBlock: public NotificationModel::Item
@@ -344,19 +343,19 @@ public:
         listeners = list.join(QStringLiteral(", "));
         switch (msg.type()) {
         case Akonadi::ChangeNotification::Items:
-            nodes << new ItemNotificationNode(msg.notification(), this);
+            nodes << new ItemNotificationNode(msg.notification().staticCast<Protocol::ItemChangeNotification>(), this);
             break;
         case Akonadi::ChangeNotification::Collection:
-            nodes << new CollectionNotificationNode(msg.notification(), this);
+            nodes << new CollectionNotificationNode(msg.notification().staticCast<Protocol::CollectionChangeNotification>(), this);
             break;
         case Akonadi::ChangeNotification::Tag:
-            nodes << new TagNotificationNode(msg.notification(), this);
+            nodes << new TagNotificationNode(msg.notification().staticCast<Protocol::TagChangeNotification>(), this);
             break;
         case Akonadi::ChangeNotification::Relation:
-            nodes << new RelationNotificationNode(msg.notification(), this);
+            nodes << new RelationNotificationNode(msg.notification().staticCast<Protocol::RelationChangeNotification>(), this);
             break;
         case Akonadi::ChangeNotification::Subscription:
-            nodes << new SubscriptionNotificationNode(msg.notification(), this);
+            nodes << new SubscriptionNotificationNode(msg.notification().staticCast<Protocol::SubscriptionChangeNotification>(), this);
             break;
         default:
             qWarning() << "Unknown Notification type" << msg.type();
@@ -511,7 +510,7 @@ void NotificationModel::clear()
     reset();
 }
 
-Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &index) const
+Protocol::ChangeNotificationPtr NotificationModel::notification(const QModelIndex &index) const
 {
     Item *item = static_cast<Item *>(index.internalPointer());
     Q_ASSERT(item);
@@ -527,7 +526,7 @@ Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &
     case Protocol::Command::SubscriptionChangeNotification:
         return static_cast<SubscriptionNotificationNode *>(item)->msg;
     default:
-        return Protocol::ChangeNotification();
+        return Protocol::ChangeNotificationPtr();
     }
 }
 
