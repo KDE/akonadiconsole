@@ -1,8 +1,8 @@
 
 include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+add_definitions(-DQT_NO_CAST_TO_ASCII)
 
 add_subdirectory(icons)
 add_subdirectory(kconf_update)
