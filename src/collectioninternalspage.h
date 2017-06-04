@@ -30,8 +30,8 @@ class CollectionInternalsPage : public Akonadi::CollectionPropertiesPage
 public:
     explicit CollectionInternalsPage(QWidget *parent = nullptr);
 
-    void load(const Akonadi::Collection &col) Q_DECL_OVERRIDE;
-    void save(Akonadi::Collection &col) Q_DECL_OVERRIDE;
+    void load(const Akonadi::Collection &col) override;
+    void save(Akonadi::Collection &col) override;
 
 private:
     Ui::CollectionInternalsPage ui;

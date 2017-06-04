@@ -52,7 +52,7 @@ public:
     {
     }
 
-    QVariant entityData(const Item &item, int column, int role) const Q_DECL_OVERRIDE
+    QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -81,7 +81,7 @@ public:
     }
     virtual ~MailState() {}
 
-    QVariant entityData(const Item &item, int column, int role) const Q_DECL_OVERRIDE
+    QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -128,7 +128,7 @@ public:
     }
     virtual ~ContactsState() {}
 
-    QVariant entityData(const Item &item, int column, int role) const Q_DECL_OVERRIDE
+    QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -174,7 +174,7 @@ public:
     }
     virtual ~CalendarState() {}
 
-    QVariant entityData(const Item &item, int column, int role) const Q_DECL_OVERRIDE
+    QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();

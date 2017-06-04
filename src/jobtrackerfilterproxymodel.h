@@ -32,7 +32,7 @@ public:
     void setShowOnlyFailed(bool showOnlyFailed);
 
 protected:
-    bool acceptRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
+    bool acceptRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
     int mSearchColumn;

@@ -70,7 +70,7 @@ public:
         , id(-1)
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0:
@@ -110,7 +110,7 @@ public:
     ~ItemNotificationNode()
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0: {
@@ -167,7 +167,7 @@ public:
     ~CollectionNotificationNode()
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0: {
@@ -219,7 +219,7 @@ public:
     ~TagNotificationNode()
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0: {
@@ -258,7 +258,7 @@ public:
     ~RelationNotificationNode()
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0: {
@@ -301,7 +301,7 @@ public:
     {
     }
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0: {
@@ -366,7 +366,7 @@ public:
     ~NotificationBlock()
     {}
 
-    QVariant data(int column) const Q_DECL_OVERRIDE
+    QVariant data(int column) const override
     {
         switch (column) {
         case 0:

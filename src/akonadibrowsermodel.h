@@ -44,12 +44,12 @@ public:
     void setItemDisplayMode(ItemDisplayMode itemDisplayMode);
     ItemDisplayMode itemDisplayMode() const;
 
-    QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
+    QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
 
-    QVariant entityData(const Item &item, int column, int role) const Q_DECL_OVERRIDE;
-    QVariant entityData(const Collection &collection, int column, int role) const Q_DECL_OVERRIDE;
+    QVariant entityData(const Item &item, int column, int role) const override;
+    QVariant entityData(const Collection &collection, int column, int role) const override;
 
-    int entityColumnCount(HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
+    int entityColumnCount(HeaderGroup headerGroup) const override;
 
     class State;
 
@@ -74,7 +74,7 @@ public:
     ~AkonadiBrowserSortModel();
 
 protected:
-    bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
 private:
     AkonadiBrowserModel *mBrowserModel;

@@ -285,7 +285,7 @@ public:
         }
     }
 
-    int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE
+    int rowCount(const QModelIndex &parent) const override
     {
         if (!parent.isValid()) {
             return mConnections.count();
@@ -304,13 +304,13 @@ public:
         Q_UNREACHABLE();
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         Q_UNUSED(parent);
         return 5;
     }
 
-    QModelIndex parent(const QModelIndex &child) const Q_DECL_OVERRIDE
+    QModelIndex parent(const QModelIndex &child) const override
     {
         if (!child.isValid() || !child.internalPointer()) {
             return QModelIndex();
@@ -334,7 +334,7 @@ public:
         }
     }
 
-    QModelIndex index(int row, int column, const QModelIndex &parent) const Q_DECL_OVERRIDE
+    QModelIndex index(int row, int column, const QModelIndex &parent) const override
     {
         if (!parent.isValid()) {
             if (row < mConnections.count()) {
@@ -366,7 +366,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const Q_DECL_OVERRIDE
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override
     {
         if (orientation != Qt::Horizontal || role != Qt::DisplayRole) {
             return QVariant();
@@ -383,7 +383,7 @@ public:
         return QVariant();
     }
 
-    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE
+    QVariant data(const QModelIndex &index, int role) const override
     {
         if (!index.isValid()) {
             return QVariant();
@@ -546,7 +546,7 @@ public:
         NUM_COLUMNS
     };
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || section < 0 || section >= NUM_COLUMNS || (role != Qt::DisplayRole && role != Qt::ToolTipRole)) {
             return QVariant();
@@ -565,7 +565,7 @@ public:
         return QVariant();
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (role != Qt::DisplayRole && role != Qt::ToolTipRole) {
             return QVariant();
@@ -601,7 +601,7 @@ public:
         return QVariant();
     }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mQueries.size() + NUM_SPECIAL_ROWS;
@@ -610,7 +610,7 @@ public:
         }
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return NUM_COLUMNS;
