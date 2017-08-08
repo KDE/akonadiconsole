@@ -53,7 +53,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     mSelectColumn->addItem(QStringLiteral("Job Type"), 4);
     mSelectColumn->addItem(QStringLiteral("State"), 5);
     mSelectColumn->addItem(QStringLiteral("Info"), 6);
-    connect(mSelectColumn, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &JobTrackerSearchWidget::slotColumnChanged);
+    connect(mSelectColumn, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &JobTrackerSearchWidget::slotColumnChanged);
 }
 
 JobTrackerSearchWidget::~JobTrackerSearchWidget()
