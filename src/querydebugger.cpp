@@ -477,9 +477,15 @@ private:
         if (role == Qt::DisplayRole && column == 0) {
             QString mode;
             switch (transaction->transactionType) {
-            case TransactionNode::Begin: mode = QStringLiteral("BEGIN");
-            case TransactionNode::Commit: mode = QStringLiteral("COMMIT");
-            case TransactionNode::Rollback: mode = QStringLiteral("ROLLBACK");
+            case TransactionNode::Begin:
+                mode = QStringLiteral("BEGIN");
+                break;
+            case TransactionNode::Commit:
+                mode = QStringLiteral("COMMIT");
+                break;
+            case TransactionNode::Rollback:
+                mode = QStringLiteral("ROLLBACK");
+                break;
             }
             return QStringLiteral("%1 %2").arg(mode, transaction->query);
         } else {
