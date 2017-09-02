@@ -34,7 +34,7 @@
     <Separator/>
     <Action name="akonadi_item_delete"/>
   </Menu>
-  <Menu name="cache"><text>&ammp;Cache</text>
+  <Menu name="cache"><text>&amp;Cache</text>
     <Action name="akonadiconsole_cacheonly"/>
   </Menu>
   <Menu name="server"><text>&amp;Server</text>
@@ -95,4 +95,3 @@
    <Action name="akonadi_item_delete"/>
  </Menu>
 </gui>
-
