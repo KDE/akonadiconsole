@@ -50,7 +50,7 @@ JobTrackerModelTest::~JobTrackerModelTest()
 
 void JobTrackerModelTest::initTestCase()
 {
-    // Don't interfer with a running akonadiconsole
+    // Don't interfere with a running akonadiconsole
     Akonadi::Instance::setIdentifier("jobtrackertest");
 }
 

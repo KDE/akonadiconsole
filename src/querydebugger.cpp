@@ -542,7 +542,7 @@ public:
         TOTAL,
         NUM_SPECIAL_ROWS
     };
-    enum Colums {
+    enum COLUMNS {
         DurationColumn,
         CallsColumn,
         AvgDurationColumn,

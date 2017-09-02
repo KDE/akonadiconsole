@@ -46,7 +46,7 @@ JobTrackerTest::~JobTrackerTest()
 
 void JobTrackerTest::initTestCase()
 {
-    // Don't interfer with a running akonadiconsole
+    // Don't interfere with a running akonadiconsole
     Akonadi::Instance::setIdentifier("jobtrackertest");
 
     qRegisterMetaType<QList<QPair<int, int>>>();
