@@ -30,7 +30,7 @@ static QString intPairListToString(const QVariant &var)
         if (!ret.isEmpty()) {
             ret += ' ';
         }
-        ret += QString::number(pair.first) + "," + QString::number(pair.second);
+        ret += QString::number(pair.first) + ',' + QString::number(pair.second);
     }
     return ret;
 }
