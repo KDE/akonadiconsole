@@ -36,9 +36,9 @@
 #include <QTableWidget>
 #include <QFileDialog>
 
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusArgument>
-#include <QtDBus/QDBusMetaType>
+#include <QDBusConnection>
+#include <QDBusArgument>
+#include <QDBusMetaType>
 
 #include <AkonadiCore/servermanager.h>
 #include <AkonadiWidgets/controlgui.h>
@@ -49,7 +49,6 @@
 #include <algorithm>
 
 Q_DECLARE_METATYPE(QList< QList<QVariant> >)
-
 
 QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con)
 {
@@ -267,9 +266,9 @@ public:
         query->results = results;
         query->error = error.trimmed();
 
-        if (!con->queries.isEmpty()
-            && con->queries.last()->type == Transaction
-            && static_cast<TransactionNode*>(con->queries.last())->transactionType == TransactionNode::Begin) {
+        if (!con->queries.isEmpty() &&
+            con->queries.last()->type == Transaction &&
+            static_cast<TransactionNode*>(con->queries.last())->transactionType == TransactionNode::Begin) {
             auto trx = static_cast<TransactionNode*>(con->queries.last());
             query->parent = trx;
             beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx),
@@ -527,7 +526,6 @@ private:
     QHash<qint64, ConnectionNode *> mConnectionById;
 };
 
-
 class QueryDebuggerModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -586,9 +584,8 @@ public:
             return QVariant();
         }
 
-        const QueryInfo &info = (row < NUM_SPECIAL_ROWS)
-                                ? mSpecialRows[row]
-                                : mQueries.at(row - NUM_SPECIAL_ROWS);
+        const QueryInfo &info =
+            (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
 
         if (role == Qt::ToolTipRole) {
             return QString(QLatin1String("<qt>") + info.query + QLatin1String("</qt>"));
@@ -665,7 +662,6 @@ private:
     QueryInfo mSpecialRows[NUM_SPECIAL_ROWS];
 };
 
-
 class QueryViewDialog : public QDialog
 {
     Q_OBJECT
@@ -711,7 +707,6 @@ public:
 
         connect(mUi->buttonBox, &QDialogButtonBox::rejected,
                 this, &QDialog::accept);
-
     }
 
 private:
@@ -808,8 +803,8 @@ void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timest
 
 void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 {
-    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt())
-            != QueryTreeModel::Query) {
+    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt()) !=
+        QueryTreeModel::Query) {
         return;
     }
 
@@ -839,6 +834,5 @@ void QueryDebugger::saveTreeToFile()
 
     file.close();
 }
-
 
 #include "querydebugger.moc"

@@ -19,19 +19,20 @@
     USA.
 */
 
-#include <kaboutdata.h>
-#include <qapplication.h>
-
 #include "instanceselector.h"
 
 #include <Kdelibs4ConfigMigrator>
+
+#include <KAboutData>
 #include <KDBusService>
 #include <KCrash>
-#include <stdlib.h>
+
+#include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QDBusMetaType>
 
-#include <QtDBus/QDBusMetaType>
+#include <stdlib.h>
 
 int main(int argc, char **argv)
 {
@@ -52,7 +53,7 @@ int main(int argc, char **argv)
                          QStringLiteral("https://community.kde.org/KDE_PIM/akonadi"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     aboutData.addAuthor(QStringLiteral("Tobias König"), QStringLiteral("Author"), QStringLiteral("tokoe@kde.org"));
-    aboutData.addAuthor(QStringLiteral("Volker Krause"),  QStringLiteral("Author"), QStringLiteral("vkrause@kde.org"));
+    aboutData.addAuthor(QStringLiteral("Volker Krause"), QStringLiteral("Author"), QStringLiteral("vkrause@kde.org"));
     KAboutData::setApplicationData(aboutData);
 
     KCrash::initialize();

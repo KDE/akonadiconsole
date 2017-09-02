@@ -17,9 +17,14 @@
     02110-1301, USA.
 */
 
+#ifndef AKONADICONSOLE_METATYPES_H
+#define AKONADICONSOLE_METATYPES_H
+
 #include <akonadi/private/notificationmessagev2_p.h>
 
-#include <QtCore/QMetaType>
+#include <QMetaType>
 
 Q_DECLARE_METATYPE(QList<QByteArray>)
 Q_DECLARE_METATYPE(QList<long long>)
+
+#endif
