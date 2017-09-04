@@ -25,7 +25,6 @@
 #include "dbbrowser.h"
 #include "dbconsole.h"
 #include "debugwidget.h"
-#include "searchdialog.h"
 #include "searchwidget.h"
 #include "jobtrackerwidget.h"
 #include "notificationmonitor.h"
@@ -68,11 +67,7 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     tabWidget->addTab(new SearchWidget(tabWidget), QStringLiteral("Item Search"));
     tabWidget->addTab(new MonitorsWidget(tabWidget), QStringLiteral("Monitors"));
 
-    QAction *action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_search"));
-    action->setText(QStringLiteral("Create Search..."));
-    connect(action, &QAction::triggered, this, &MainWidget::createSearch);
-
-    action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_akonadi2xml"));
+    auto action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_akonadi2xml"));
     action->setText(QStringLiteral("Dump to XML..."));
     connect(action, &QAction::triggered, mBrowser, &BrowserWidget::dumpToXml);
 
@@ -96,30 +91,6 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
 MainWidget::~MainWidget()
 {
     delete mBrowser;
-}
-
-void MainWidget::createSearch()
-{
-//QT5 TODO need to reimplement it
-#pragma message("port to QT5")
-#if 0
-    SearchDialog dlg;
-    if (!dlg.exec()) {
-        return;
-    }
-
-    const QString query = dlg.searchQuery();
-    if (query.isEmpty()) {
-        return;
-    }
-
-    QString name = dlg.searchName();
-    if (name.isEmpty()) {
-        name = "My Search";
-    }
-
-    new Akonadi::SearchCreateJob(name, query);
-#endif
 }
 
 void MainWidget::startServer()

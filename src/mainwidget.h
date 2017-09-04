@@ -37,7 +37,6 @@ public:
     ~MainWidget();
 
 private Q_SLOTS:
-    void createSearch();
     void startServer();
     void stopServer();
     void restartServer();

@@ -1,10 +1,9 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui version="4" name="akonadiconsole" >
+<gui version="5" name="akonadiconsole" >
 
  <MenuBar>
   <Menu name="edit">
     <Action name="akonadi_paste" append="edit_paste_merge"/>
-    <Action name="akonadiconsole_search"/>
   </Menu>
   <Menu name="collection"><text>&amp;Collection</text>
     <Action name="akonadi_collection_create"/>
