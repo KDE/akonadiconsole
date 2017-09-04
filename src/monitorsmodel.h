@@ -37,7 +37,6 @@ class LIBAKONADICONSOLE_EXPORT MonitorsModel : public QAbstractItemModel
 public:
     enum Column {
         IdentifierColumn = 0,
-        SessionColumn,
         IsAllMonitoredColumn,
         MonitoredCollectionsColumn,
         MonitoredItemsColumn,
@@ -70,8 +69,11 @@ private Q_SLOTS:
     void slotSubscriberChanged(const Akonadi::NotificationSubscriber &subscriber);
     void slotSubscriberRemoved(const Akonadi::NotificationSubscriber &subscriber);
 
+    QModelIndex indexForSession(const QByteArray &sesion);
+
 private:
-    QVector<Akonadi::NotificationSubscriber> mData;
+    QList<QByteArray> mSessions;
+    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;
 };
 

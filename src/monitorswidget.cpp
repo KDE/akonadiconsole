@@ -38,7 +38,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent):
     mTreeView = new QTreeView(this);
     mTreeView->setModel(mModel);
     mTreeView->setAlternatingRowColors(true);
-    mTreeView->setRootIsDecorated(false);
+    mTreeView->setRootIsDecorated(true);
     layout->addWidget(mTreeView);
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);

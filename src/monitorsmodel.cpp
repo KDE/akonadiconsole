@@ -48,21 +48,39 @@ void MonitorsModel::init()
             this, &MonitorsModel::slotSubscriberRemoved);
 }
 
+QModelIndex MonitorsModel::indexForSession(const QByteArray &session)
+{
+    int pos = mSessions.indexOf(session);
+    if (pos == -1) {
+        pos = mSessions.count();
+        beginInsertRows({}, pos, pos);
+        mSessions.push_back(session);
+        mData.insert(session, {});
+        endInsertRows();
+    }
+
+    return index(pos, 0);
+}
+
 void MonitorsModel::slotSubscriberAdded(const Akonadi::NotificationSubscriber &subscriber)
 {
-    beginInsertRows(QModelIndex(), mData.count(), mData.count());
-    mData.push_back(subscriber);
+    auto sessionIdx = indexForSession(subscriber.sessionId());
+    auto &sessions = mData[subscriber.sessionId()];
+    beginInsertRows(sessionIdx, sessions.count(), sessions.count());
+    sessions.push_back(subscriber);
     endInsertRows();
 }
 
 void MonitorsModel::slotSubscriberRemoved(const Akonadi::NotificationSubscriber &subscriber)
 {
     int idx = -1;
-    for (auto it = mData.begin(), end = mData.end(); it != end; ++it) {
+    auto sessionIdx = indexForSession(subscriber.sessionId());
+    auto &sessions = mData[subscriber.sessionId()];
+    for (auto it = sessions.begin(), end = sessions.end(); it != end; ++it) {
         ++idx;
         if (it->subscriber() == subscriber.subscriber()) {
-            beginRemoveRows(QModelIndex(), idx, idx);
-            mData.erase(it);
+            beginRemoveRows(sessionIdx, idx, idx);
+            sessions.erase(it);
             endRemoveRows();
             return;
         }
@@ -72,11 +90,13 @@ void MonitorsModel::slotSubscriberRemoved(const Akonadi::NotificationSubscriber 
 void MonitorsModel::slotSubscriberChanged(const Akonadi::NotificationSubscriber &subscriber)
 {
     int idx = -1;
-    for (auto it = mData.begin(), end = mData.end(); it != end; ++it) {
+    auto sessionIdx = indexForSession(subscriber.sessionId());
+    auto sessions = mData[subscriber.sessionId()];
+    for (auto it = sessions.begin(), end = sessions.end(); it != end; ++it) {
         ++idx;
         if (it->subscriber() == subscriber.subscriber()) {
             *it = subscriber;
-            Q_EMIT dataChanged(index(idx, 0), index(idx, ColumnsCount));
+            Q_EMIT dataChanged(index(idx, 0, sessionIdx), index(idx, ColumnsCount, sessionIdx));
             return;
         }
     }
@@ -87,9 +107,8 @@ QVariant MonitorsModel::headerData(int section, Qt::Orientation orientation, int
     if (role == Qt::DisplayRole) {
         if (orientation == Qt::Horizontal) {
             switch (static_cast<Column>(section)) {
-            case IdentifierColumn: return QStringLiteral("Subscriber");
-            case SessionColumn: return QStringLiteral("Session");
-            case IsAllMonitoredColumn: return QStringLiteral("All");
+            case IdentifierColumn: return QStringLiteral("Session/Subscriber");
+            case IsAllMonitoredColumn: return QStringLiteral("Monitor All");
             case MonitoredCollectionsColumn: return QStringLiteral("Collections");
             case MonitoredItemsColumn: return QStringLiteral("Items");
             case MonitoredTagsColumn: return QStringLiteral("Tags");
@@ -155,25 +174,36 @@ QVariant MonitorsModel::data(const QModelIndex &index, int role) const
     if (!index.isValid()) {
         return QVariant();
     }
-    if (index.row() >= mData.count()) {
-        return QVariant();
-    }
+    if ((int)index.internalId() == -1) {
+        if (index.row() >= mSessions.count()) {
+            return {};
+        }
+        
+        if (role == Qt::DisplayRole && index.column() == 0) {
+            return mSessions.at(index.row());
+        }
+    } else {
+        if (role == Qt::DisplayRole || role == Qt::ToolTipRole) {
+            const auto session = mSessions.at(index.parent().row());
+            const auto subscribers = mData.value(session);
+            if (index.row() >= subscribers.count()) {
+                return {};
+            }
 
-    if (role == Qt::DisplayRole || role == Qt::ToolTipRole) {
-        const auto subscriber = mData[index.row()];
-        switch (static_cast<Column>(index.column())) {
-        case IdentifierColumn: return subscriber.subscriber();
-        case SessionColumn: return subscriber.sessionId();
-        case IsAllMonitoredColumn: return subscriber.isAllMonitored();
-        case MonitoredCollectionsColumn: return toString(subscriber.monitoredCollections());
-        case MonitoredItemsColumn: return toString(subscriber.monitoredItems());
-        case MonitoredTagsColumn: return toString(subscriber.monitoredTags());
-        case MonitoredResourcesColumn: return toString(subscriber.monitoredResources());
-        case MonitoredMimeTypesColumn: return toString(subscriber.monitoredMimeTypes());
-        case MonitoredTypesColumn: return toString(subscriber.monitoredTypes());
-        case IgnoredSessionsColumn: return toString(subscriber.ignoredSessions());
-        case IsExclusiveColumn: return subscriber.isExclusive();
-        case ColumnsCount: Q_ASSERT(false); return QString();
+            const auto subscriber = subscribers.at(index.row()); 
+            switch (static_cast<Column>(index.column())) {
+            case IdentifierColumn: return subscriber.subscriber();
+            case IsAllMonitoredColumn: return subscriber.isAllMonitored();
+            case MonitoredCollectionsColumn: return toString(subscriber.monitoredCollections());
+            case MonitoredItemsColumn: return toString(subscriber.monitoredItems());
+            case MonitoredTagsColumn: return toString(subscriber.monitoredTags());
+            case MonitoredResourcesColumn: return toString(subscriber.monitoredResources());
+            case MonitoredMimeTypesColumn: return toString(subscriber.monitoredMimeTypes());
+            case MonitoredTypesColumn: return toString(subscriber.monitoredTypes());
+            case IgnoredSessionsColumn: return toString(subscriber.ignoredSessions());
+            case IsExclusiveColumn: return subscriber.isExclusive();
+            case ColumnsCount: Q_ASSERT(false); return QString();
+            }
         }
     }
 
@@ -188,27 +218,35 @@ int MonitorsModel::columnCount(const QModelIndex &parent) const
 
 int MonitorsModel::rowCount(const QModelIndex &parent) const
 {
-    if (parent.isValid()) {
-        return 0;
+    if (!parent.isValid()) {
+        return mSessions.count();
     }
 
-    return mData.count();
+    if ((int)parent.internalId() == -1) {
+        const auto session = mSessions.at(parent.row());
+        return mData.value(session).count();
+    }
+
+    return 0;
 }
 
 QModelIndex MonitorsModel::parent(const QModelIndex &child) const
 {
-    Q_UNUSED(child);
+    if ((int)child.internalId() == -1) {
+        return {};
+    } else {
+        return index(child.internalId(), 0, {});
+    }
 
     return QModelIndex();
 }
 
 QModelIndex MonitorsModel::index(int row, int column, const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
-    if (row >= mData.count()) {
-        return QModelIndex();
+    if (!parent.isValid()) {
+        return createIndex(row, column, -1);
     }
 
-    return createIndex(row, column);
+    return createIndex(row, column, parent.row());
 }
 
