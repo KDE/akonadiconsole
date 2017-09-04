@@ -19,7 +19,10 @@
     USA.
 */
 
+#include <xapian.h>
+
 #include "searchwidget.h"
+#include "akonadiconsole_debug.h"
 
 #include <AkonadiWidgets/controlgui.h>
 #include <AkonadiCore/itemfetchjob.h>
@@ -28,110 +31,161 @@
 #include <AkonadiCore/SearchQuery>
 #include <kpimtextedit/plaintexteditorwidget.h>
 
+
+#include <AkonadiSearch/Core/searchstore.h>
+#include <AkonadiSearch/Xapian/xapiansearchstore.h>
+
 #include <KComboBox>
 #include <KMessageBox>
 #include <QTextBrowser>
 #include <KTextEdit>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 #include <QGridLayout>
 #include <QLabel>
 #include <QListView>
 #include <QPushButton>
 #include <QStringListModel>
+#include <QStandardItemModel>
+#include <QTreeView>
+#include <QSplitter>
 
 SearchWidget::SearchWidget(QWidget *parent)
     : QWidget(parent)
+    , mDatabase(nullptr)
 {
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
-    QGridLayout *layout = new QGridLayout(this);
 
-    mQueryCombo = new KComboBox;
+    QVBoxLayout *layout = new QVBoxLayout(this);
+
+    QHBoxLayout *hbox = new QHBoxLayout;
+    hbox->addWidget(new QLabel(QStringLiteral("Search store:")), 0, 0);
+    mStoreCombo = new KComboBox;
+    mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
+    hbox->addWidget(mStoreCombo);
+    hbox->addStretch();
+    auto button = new QPushButton(QStringLiteral("Search"));
+    hbox->addWidget(button);
+    layout->addLayout(hbox);
+
+    mVSplitter = new QSplitter(Qt::Vertical);
+    mVSplitter->setObjectName(QStringLiteral("SearchVSplitter"));
+    auto w = new QWidget;
+    QVBoxLayout *vbox = new QVBoxLayout(w);
+    vbox->addWidget(new QLabel(QStringLiteral("Search query:")));
     mQueryWidget = new KPIMTextEdit::PlainTextEditorWidget;
-    mResultView = new QListView;
+    vbox->addWidget(mQueryWidget);
+    mVSplitter->addWidget(w);
+
+    mHSplitter = new QSplitter(Qt::Horizontal);
+    mHSplitter->setObjectName(QStringLiteral("SearchHSplitter"));
+    w = new QWidget;
+    vbox = new QVBoxLayout(w);
+    vbox->addWidget(new QLabel(QStringLiteral("Results (Documents):")));
+    mDatabaseView = new QListView;
+    mDatabaseView->setEditTriggers(QListView::NoEditTriggers);
+    mDocumentModel = new QStandardItemModel(this);
+    mDatabaseView->setModel(mDocumentModel);
+    vbox->addWidget(mDatabaseView);
+    mHSplitter->addWidget(w);
+
+    w = new QWidget;
+    vbox = new QVBoxLayout(w);
+    vbox->addWidget(new QLabel(QStringLiteral("Document:")));
+    mDocumentView = new QTreeView;
+    mDocumentView->setEditTriggers(QTreeView::NoEditTriggers);
+    mTermModel = new QStandardItemModel(this);
+    mDocumentView->setModel(mTermModel);
+    vbox->addWidget(mDocumentView);
+    mHSplitter->addWidget(w);
+
+    w = new QWidget;
+    vbox = new QVBoxLayout(w);
+    vbox->addWidget(new QLabel(QStringLiteral("Item:")));
     mItemView = new QTextBrowser;
-    QPushButton *button = new QPushButton(QStringLiteral("Search"));
+    vbox->addWidget(mItemView);
+    mHSplitter->addWidget(w);
 
-    layout->addWidget(new QLabel(QStringLiteral("Query:")), 0, 0);
-    layout->addWidget(mQueryCombo, 0, 1, Qt::AlignRight);
+    mVSplitter->addWidget(mHSplitter);
 
-    layout->addWidget(mQueryWidget, 1, 0, 1, 2);
+    layout->addWidget(mVSplitter);
 
-    layout->addWidget(new QLabel(QStringLiteral("Matching Item UIDs:")), 2, 0);
-    layout->addWidget(new QLabel(QStringLiteral("View:")), 2, 1);
 
-    layout->addWidget(mResultView, 3, 0, 1, 1);
-    layout->addWidget(mItemView, 3, 1, 1, 1);
-
-    layout->addWidget(button, 4, 1, Qt::AlignRight);
-
-    mQueryCombo->addItem(QStringLiteral("Empty"));
-    mQueryCombo->addItem(QStringLiteral("Contacts by email address"));
-    mQueryCombo->addItem(QStringLiteral("Contacts by name"));
-    mQueryCombo->addItem(QStringLiteral("Email by From/Full Name"));
+    const auto stores = Akonadi::Search::SearchStore::searchStores();
+    for (const auto &store : stores) {
+        mStoreCombo->addItem(store->types().last(), QVariant::fromValue(store));
+    }
 
     connect(button, &QPushButton::clicked, this, &SearchWidget::search);
-    connect(mQueryCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &SearchWidget::querySelected);
-    connect(mResultView, &QListView::activated, this, &SearchWidget::fetchItem);
+    connect(mDatabaseView, &QListView::activated, this, &SearchWidget::fetchItem);
+    connect(mStoreCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &SearchWidget::openStore);
 
-    mResultModel = new QStringListModel(this);
-    mResultView->setModel(mResultModel);
+    openStore(0);
+
+    KConfigGroup config(KSharedConfig::openConfig(), "SearchWidget");
+    mQueryWidget->setPlainText(config.readEntry("query"));
 }
 
 SearchWidget::~SearchWidget()
 {
+    KConfigGroup config(KSharedConfig::openConfig(), "SearchWidget");
+    config.writeEntry("query", mQueryWidget->toPlainText());
+    config.sync();
 }
+
+void SearchWidget::openStore(int idx)
+{
+    auto store = mStoreCombo->itemData(idx, Qt::UserRole).value<QSharedPointer<Akonadi::Search::SearchStore>>();
+    auto xapianStore = store.objectCast<Akonadi::Search::XapianSearchStore>();
+    Q_ASSERT(xapianStore);
+
+    if (mDatabase) {
+        mDatabase->close();
+        delete mDatabase;
+    }
+
+    try {
+        qCDebug(AKONADICONSOLE_LOG) << "Opening store" << xapianStore->dbPath();
+        mDatabase = new Xapian::Database(xapianStore->dbPath().toStdString(), Xapian::DB_OPEN);
+    } catch (Xapian::Error &e) {
+        xapianError(e);
+        delete mDatabase;
+        mDatabase = nullptr;
+    }
+}
+
+void SearchWidget::xapianError(const Xapian::Error &e)
+{
+    qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << QString::fromStdString(e.get_error_string());
+    QMessageBox::critical(this, QStringLiteral("Xapian error"),
+                          QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
+}
+
+
 
 void SearchWidget::search()
 {
-    Akonadi::ItemSearchJob *job = new Akonadi::ItemSearchJob(
-        Akonadi::SearchQuery::fromJSON(mQueryWidget->toPlainText().toUtf8()));
-    connect(job, &Akonadi::ItemSearchJob::result, this, &SearchWidget::searchFinished);
-}
-
-void SearchWidget::searchFinished(KJob *job)
-{
-    mResultModel->setStringList(QStringList());
-    mItemView->clear();
-
-    if (job->error()) {
-        KMessageBox::error(this, job->errorString());
+    if (!mDatabase) {
+        QMessageBox::critical(this, QStringLiteral("Error"),
+                              QStringLiteral("No Xapian database is opened"));
         return;
     }
 
-    QStringList uidList;
-    Akonadi::ItemSearchJob *searchJob = qobject_cast<Akonadi::ItemSearchJob *>(job);
-    const Akonadi::Item::List items = searchJob->items();
-    uidList.reserve(items.count());
-    for (const Akonadi::Item &item : items) {
-        uidList << QString::number(item.id());
-    }
+    mDocumentModel->clear();
+    try {
+        const auto q = mQueryWidget->toPlainText().toStdString();
+        auto it = mDatabase->postlist_begin(q);
+        const auto end = mDatabase->postlist_end(q);
 
-    mResultModel->setStringList(uidList);
-}
-
-void SearchWidget::querySelected(int index)
-{
-    if (index == 0) {
-        mQueryWidget->clear();
-    } else if (index == 1) {
-        mQueryWidget->setPlainText(QStringLiteral("SELECT ?person WHERE {\n"
-                                   "  ?person <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> ?email .\n"
-                                   "  ?email <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#emailAddress> \"tokoe@kde.org\"^^<http://www.w3.org/2001/XMLSchema#string> .\n"
-                                   " }\n"
-                                                 ));
-    } else if (index == 2) {
-        mQueryWidget->setPlainText(QStringLiteral("prefix nco:<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#>\n"
-                                   "SELECT ?r WHERE {\n"
-                                   "  ?r nco:fullname \"Tobias Koenig\"^^<http://www.w3.org/2001/XMLSchema#string>.\n"
-                                   "}\n"
-                                                 ));
-    } else if (index == 3) {
-        mQueryWidget->setPlainText(QStringLiteral("SELECT ?mail WHERE {\n"
-                                   " ?mail <http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#from> ?person .\n"
-                                   " ?person <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> "
-                                   "'Martin Koller'^^<http://www.w3.org/2001/XMLSchema#string> .\n"
-                                   "}\n"
-                                                 ));
+        for (; it != end; ++it) {
+            auto item = new QStandardItem(QString::number(*it));
+            item->setData(*it, Qt::UserRole);
+            mDocumentModel->appendRow(item);
+        }
+    } catch (Xapian::Error &e) {
+        xapianError(e);
+        return;
     }
 }
 
@@ -141,8 +195,35 @@ void SearchWidget::fetchItem(const QModelIndex &index)
         return;
     }
 
-    const QString uid = index.data(Qt::DisplayRole).toString();
-    Akonadi::ItemFetchJob *fetchJob = new Akonadi::ItemFetchJob(Akonadi::Item(uid.toLongLong()));
+    const auto docId = index.data(Qt::UserRole).value<Xapian::docid>();
+
+    try {
+        const auto doc = mDatabase->get_document(docId);
+
+        mTermModel->clear();
+        mTermModel->setColumnCount(2);
+        mTermModel->setHorizontalHeaderLabels({ QStringLiteral("Term/Value"), QStringLiteral("WDF/Slot") });
+
+        auto termsRoot = new QStandardItem(QStringLiteral("Terms"));
+        mTermModel->appendRow(termsRoot);
+        for (auto it = doc.termlist_begin(), end = doc.termlist_end(); it != end; ++it) {
+            termsRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
+                                   new QStandardItem(QString::number(it.get_wdf())) });
+        }
+
+        auto valuesRoot = new QStandardItem(QStringLiteral("Values"));
+        mTermModel->appendRow(valuesRoot);
+        for (auto it = doc.values_begin(), end = doc.values_end(); it != end; ++it) {
+            valuesRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
+                                    new QStandardItem(QString::number(it.get_valueno())) });
+        }
+    } catch (const Xapian::Error &e) {
+        xapianError(e);
+        return;
+    }
+
+
+    Akonadi::ItemFetchJob *fetchJob = new Akonadi::ItemFetchJob(Akonadi::Item(docId));
     fetchJob->fetchScope().fetchFullPayload();
     connect(fetchJob, &Akonadi::ItemFetchJob::result, this, &SearchWidget::itemFetched);
 }
@@ -162,4 +243,3 @@ void SearchWidget::itemFetched(KJob *job)
         mItemView->setPlainText(QString::fromUtf8(item.payloadData()));
     }
 }
-

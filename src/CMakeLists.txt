@@ -93,6 +93,8 @@ target_link_libraries(libakonadiconsole
     KF5::AkonadiContact
     KF5::AkonadiWidgets
     KF5::AkonadiXml
+    KF5::AkonadiSearchCore
+    KF5::AkonadiSearchXapian
     KF5::CalendarSupport
     KF5::CalendarCore
     KF5::Libkdepim
@@ -127,6 +129,8 @@ target_link_libraries(akonadiconsole
     KF5::AkonadiPrivate
     KF5::AkonadiContact
     KF5::AkonadiXml
+    KF5::AkonadiSearchCore
+    KF5::AkonadiSearchXapian
     KF5::CalendarSupport
     KF5::CalendarCore
     KF5::Libkdepim

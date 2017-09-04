@@ -32,10 +32,18 @@ class KTextEdit;
 class QListView;
 class QModelIndex;
 class QStringListModel;
+class QStandardItemModel;
+class QTreeView;
+class QSplitter;
 namespace KPIMTextEdit
 {
 class PlainTextEditorWidget;
 }
+namespace Xapian {
+class Database;
+class Error;
+}
+
 class SearchWidget : public QWidget
 {
     Q_OBJECT
@@ -46,17 +54,24 @@ public:
 
 private Q_SLOTS:
     void search();
-    void searchFinished(KJob *);
-    void querySelected(int);
+    void openStore(int idx);
     void fetchItem(const QModelIndex &);
     void itemFetched(KJob *);
 
 private:
-    KComboBox *mQueryCombo;
+    void xapianError(const Xapian::Error &e);
+    
+    KComboBox *mStoreCombo;
     QTextBrowser *mItemView;
     KPIMTextEdit::PlainTextEditorWidget *mQueryWidget;
-    QListView *mResultView;
-    QStringListModel *mResultModel;
+    QListView *mDatabaseView;
+    QStandardItemModel *mDocumentModel;
+    QTreeView *mDocumentView;
+    QStandardItemModel *mTermModel;
+    QSplitter *mHSplitter;
+    QSplitter *mVSplitter;
+
+    Xapian::Database *mDatabase;
 };
 
 #endif
