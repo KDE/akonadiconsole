@@ -99,7 +99,15 @@ find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION_LIB} CONFIG REQUIRED)
 
-include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR})
+find_package(Xapian CONFIG)
+set_package_properties(Xapian PROPERTIES
+    DESCRIPTION "The Xapian search engine library"
+    URL "http://xapian.org"
+    TYPE REQUIRED
+)
+
+
+include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
