@@ -147,7 +147,7 @@ void SearchWidget::openStore(int idx)
 
     try {
         qCDebug(AKONADICONSOLE_LOG) << "Opening store" << xapianStore->dbPath();
-        mDatabase = new Xapian::Database(xapianStore->dbPath().toStdString(), Xapian::DB_OPEN);
+        mDatabase = new Xapian::Database(xapianStore->dbPath().toStdString());
     } catch (Xapian::Error &e) {
         xapianError(e);
         delete mDatabase;
@@ -213,7 +213,8 @@ void SearchWidget::fetchItem(const QModelIndex &index)
 
         auto valuesRoot = new QStandardItem(QStringLiteral("Values"));
         mTermModel->appendRow(valuesRoot);
-        for (auto it = doc.values_begin(), end = doc.values_end(); it != end; ++it) {
+	const auto end = doc.values_end(); // Xapian 1.2 has different type for _begin() and _end() iters
+        for (auto it = doc.values_begin(); it != end; ++it) {
             valuesRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
                                     new QStandardItem(QString::number(it.get_valueno())) });
         }
