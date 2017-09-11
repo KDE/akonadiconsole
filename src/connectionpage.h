@@ -45,7 +45,7 @@ private Q_SLOTS:
     void connectionDataOutput(const QString &, const QString &);
 
 private:
-    KTextEdit *mDataView;
+    KTextEdit *mDataView = nullptr;
     QString mIdentifier;
     bool mShowAllConnections;
 };

@@ -43,7 +43,7 @@ private Q_SLOTS:
 
 private:
     Ui::CollectionAttributesPage ui;
-    QStandardItemModel *mModel;
+    QStandardItemModel *mModel = nullptr;
     QSet<QString> mDeleted;
     QSet<QString> mChanged;
 };

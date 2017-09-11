@@ -89,20 +89,20 @@ private Q_SLOTS:
 private:
     Akonadi::Collection currentCollection() const;
 
-    Akonadi::ChangeRecorder *mBrowserMonitor;
-    AkonadiBrowserModel *mBrowserModel;
-    Akonadi::EntityTreeView *mCollectionView;
-    Akonadi::StatisticsProxyModel *statisticsProxyModel;
+    Akonadi::ChangeRecorder *mBrowserMonitor = nullptr;
+    AkonadiBrowserModel *mBrowserModel = nullptr;
+    Akonadi::EntityTreeView *mCollectionView = nullptr;
+    Akonadi::StatisticsProxyModel *statisticsProxyModel = nullptr;
     Ui::ItemViewWidget itemUi;
     Ui::ContentViewWidget contentUi;
     Akonadi::Item mCurrentItem;
-    QStandardItemModel *mAttrModel;
-    Akonadi::StandardActionManager *mStdActionManager;
-    Akonadi::Monitor *mMonitor;
-    KViewStateMaintainer<Akonadi::ETMViewStateSaver> *m_stateMaintainer;
-    KToggleAction *mCacheOnlyAction;
-    QTreeView *mTagView;
-    Akonadi::TagModel *mTagModel;
+    QStandardItemModel *mAttrModel = nullptr;
+    Akonadi::StandardActionManager *mStdActionManager = nullptr;
+    Akonadi::Monitor *mMonitor = nullptr;
+    KViewStateMaintainer<Akonadi::ETMViewStateSaver> *m_stateMaintainer = nullptr;
+    KToggleAction *mCacheOnlyAction = nullptr;
+    QTreeView *mTagView = nullptr;
+    Akonadi::TagModel *mTagModel = nullptr;
 };
 
 #endif

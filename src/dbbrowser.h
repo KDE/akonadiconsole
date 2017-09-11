@@ -36,7 +36,7 @@ private Q_SLOTS:
 
 private:
     Ui::DbBrowser ui;
-    QSqlTableModel *mTableModel;
+    QSqlTableModel *mTableModel = nullptr;
 };
 
 #endif
