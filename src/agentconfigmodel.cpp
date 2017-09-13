@@ -35,8 +35,9 @@ AgentConfigModel::~AgentConfigModel()
 
 void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
 {
+    beginResetModel();
     m_settings.clear();
-    reset();
+
 
     m_interface = new QDBusInterface(
         QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(instance.identifier()),
@@ -46,12 +47,13 @@ void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
         delete m_interface;
         return;
     }
-
+    endResetModel();
     reload();
 }
 
 void AgentConfigModel::reload()
 {
+    beginResetModel();
     m_settings.clear();
     for (int i = 0; i < m_interface->metaObject()->methodCount(); ++i) {
         const QMetaMethod method = m_interface->metaObject()->method(i);
@@ -77,7 +79,7 @@ void AgentConfigModel::reload()
         const QString settingName = methodName.at(0).toUpper() + methodName.mid(1);
         m_settings.append(qMakePair(settingName, reply.arguments().at(0)));
     }
-    reset();
+    endResetModel();
 }
 
 int AgentConfigModel::columnCount(const QModelIndex &parent) const

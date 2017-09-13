@@ -505,9 +505,10 @@ void NotificationModel::slotNotify(const Akonadi::ChangeNotification &ntf)
 
 void NotificationModel::clear()
 {
+    beginResetModel();
     qDeleteAll(m_data);
     m_data.clear();
-    reset();
+    endResetModel();
 }
 
 Protocol::ChangeNotificationPtr NotificationModel::notification(const QModelIndex &index) const

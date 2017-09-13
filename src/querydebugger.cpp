@@ -740,10 +740,10 @@ QueryDebugger::QueryDebugger(QWidget *parent):
     proxy->setSourceModel(mQueryList);
     proxy->setDynamicSortFilter(true);
     mUi->queryListView->setModel(proxy);
-    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::CallsColumn, QHeaderView::Fixed);
-    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::DurationColumn, QHeaderView::Fixed);
-    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::AvgDurationColumn, QHeaderView::Fixed);
-    mUi->queryListView->header()->setResizeMode(QueryDebuggerModel::QueryColumn, QHeaderView::ResizeToContents);
+    mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::CallsColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::DurationColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::AvgDurationColumn, QHeaderView::Fixed);
+    mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::QueryColumn, QHeaderView::ResizeToContents);
 
     connect(mUi->queryTreeView, &QTreeView::doubleClicked,
             this, &QueryDebugger::queryTreeDoubleClicked);

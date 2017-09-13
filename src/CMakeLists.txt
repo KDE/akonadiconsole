@@ -102,6 +102,10 @@ target_link_libraries(libakonadiconsole
     KF5::PimTextEdit
     Qt5::Sql
     KF5::Crash
+    KF5::Completion
+    KF5::ItemViews
+    KF5::TextWidgets
+    KF5::XmlGui
     )
 
 set_target_properties(libakonadiconsole
@@ -138,6 +142,10 @@ target_link_libraries(akonadiconsole
     KF5::PimTextEdit
     Qt5::Sql
     KF5::Crash
+    KF5::Completion
+    KF5::ItemViews
+    KF5::TextWidgets
+    KF5::XmlGui
     )
 
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

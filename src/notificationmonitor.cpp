@@ -53,7 +53,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     tv->expandAll();
     tv->setAlternatingRowColors(true);
     tv->setContextMenuPolicy(Qt::CustomContextMenu);
-    tv->header()->setResizeMode(QHeaderView::ResizeToContents);
+    tv->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     connect(tv, &QTreeView::customContextMenuRequested, this, &NotificationMonitor::contextMenu);
     layout->addWidget(tv);
 
