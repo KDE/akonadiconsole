@@ -27,11 +27,9 @@
 class KComboBox;
 class KJob;
 class QTextBrowser;
-class KTextEdit;
 
 class QListView;
 class QModelIndex;
-class QStringListModel;
 class QStandardItemModel;
 class QTreeView;
 class QSplitter;
