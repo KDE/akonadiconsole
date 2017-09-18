@@ -57,8 +57,8 @@ private:
     Ui::TagPropertiesDialog ui;
     Akonadi::Tag mTag;
 
-    QStandardItemModel *mAttributesModel;
-    QStandardItemModel *mRemoteIdsModel;
+    QStandardItemModel *mAttributesModel = nullptr;
+    QStandardItemModel *mRemoteIdsModel = nullptr;
 
     bool mChanged;
     QSet<QString> mChangedAttrs;

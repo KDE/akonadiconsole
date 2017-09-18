@@ -41,9 +41,9 @@ private Q_SLOTS:
     void slotColumnChanged(int index);
 
 private:
-    QLineEdit *mSearchLineEdit;
-    QComboBox *mSelectColumn;
-    QCheckBox *mSelectOnlyError;
+    QLineEdit *mSearchLineEdit = nullptr;
+    QComboBox *mSelectColumn = nullptr;
+    QCheckBox *mSelectOnlyError = nullptr;
 };
 
 #endif // JOBTRACKERSEARCHWIDGET_H

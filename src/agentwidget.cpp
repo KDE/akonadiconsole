@@ -75,7 +75,7 @@ public:
     }
 
 private:
-    KPIMTextEdit::PlainTextEditorWidget *mText;
+    KPIMTextEdit::PlainTextEditorWidget *mText = nullptr;
 };
 
 using namespace Akonadi;

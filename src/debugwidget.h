@@ -55,10 +55,10 @@ private Q_SLOTS:
     void closeAllTabs();
 
 private:
-    KTextEdit *mGeneralView;
-    QTabWidget *mConnectionPages;
+    KTextEdit *mGeneralView = nullptr;
+    QTabWidget *mConnectionPages = nullptr;
     QHash<QString, ConnectionPage *> mPageHash;
-    org::freedesktop::Akonadi::DebugInterface *mDebugInterface;
+    org::freedesktop::Akonadi::DebugInterface *mDebugInterface = nullptr;
 };
 
 #endif

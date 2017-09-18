@@ -38,7 +38,7 @@ private Q_SLOTS:
 
 private:
     Ui::AgentConfigDialog ui;
-    AgentConfigModel *m_model;
+    AgentConfigModel *m_model = nullptr;
     Akonadi::AgentInstance m_instance;
 };
 

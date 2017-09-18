@@ -39,7 +39,7 @@ private Q_SLOTS:
 private:
     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
 
-    NotificationModel *m_model;
+    NotificationModel *m_model = nullptr;
 };
 
 #endif

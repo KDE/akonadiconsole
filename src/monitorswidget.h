@@ -34,8 +34,8 @@ public:
     virtual ~MonitorsWidget();
 
 private:
-    QTreeView *mTreeView;
-    MonitorsModel *mModel;
+    QTreeView *mTreeView = nullptr;
+    MonitorsModel *mModel = nullptr;
 };
 
 #endif // MONITORSWIDGET_H

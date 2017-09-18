@@ -53,7 +53,7 @@ private:
     QScopedPointer<Ui::InstanceSelector> ui;
     QString m_remoteHost;
     QString m_instance;
-    MainWindow *mWindow;
+    MainWindow *mWindow = nullptr;
 };
 
 #endif // INSTANCESELECTOR_H

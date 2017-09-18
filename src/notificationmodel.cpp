@@ -46,7 +46,7 @@ public:
 
     virtual QVariant data(int column) const = 0;
 
-    NotificationModel::Item *parent;
+    NotificationModel::Item *parent = nullptr;
     QVector<Item *> nodes;
     int type;
 };

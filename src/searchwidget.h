@@ -59,17 +59,17 @@ private Q_SLOTS:
 private:
     void xapianError(const Xapian::Error &e);
     
-    KComboBox *mStoreCombo;
-    QTextBrowser *mItemView;
-    KPIMTextEdit::PlainTextEditorWidget *mQueryWidget;
-    QListView *mDatabaseView;
-    QStandardItemModel *mDocumentModel;
-    QTreeView *mDocumentView;
-    QStandardItemModel *mTermModel;
-    QSplitter *mHSplitter;
-    QSplitter *mVSplitter;
+    KComboBox *mStoreCombo = nullptr;
+    QTextBrowser *mItemView = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *mQueryWidget = nullptr;
+    QListView *mDatabaseView = nullptr;
+    QStandardItemModel *mDocumentModel = nullptr;
+    QTreeView *mDocumentView = nullptr;
+    QStandardItemModel *mTermModel = nullptr;
+    QSplitter *mHSplitter = nullptr;
+    QSplitter *mVSplitter = nullptr;
 
-    Xapian::Database *mDatabase;
+    Xapian::Database *mDatabase = nullptr;
 };
 
 #endif

@@ -40,7 +40,7 @@ private Q_SLOTS:
 
 private:
     int mTabCounter;
-    QTabWidget *mTabWidget;
+    QTabWidget *mTabWidget = nullptr;
 };
 
 class DbConsoleTab : public QWidget
@@ -61,7 +61,7 @@ private Q_SLOTS:
 
 private:
     Ui::DbConsoleTab ui;
-    QSqlQueryModel *mQueryModel;
+    QSqlQueryModel *mQueryModel = nullptr;
     int mIndex;
 };
 

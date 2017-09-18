@@ -57,11 +57,11 @@ Q_SIGNALS:
     void columnsChanged();
 
 private:
-    State *m_currentState;
-    State *m_genericState;
-    State *m_mailState;
-    State *m_contactsState;
-    State *m_calendarState;
+    State *m_currentState = nullptr;
+    State *m_genericState = nullptr;
+    State *m_mailState = nullptr;
+    State *m_contactsState = nullptr;
+    State *m_calendarState = nullptr;
 
     ItemDisplayMode m_itemDisplayMode;
 };

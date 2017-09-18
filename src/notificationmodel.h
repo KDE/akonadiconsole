@@ -73,7 +73,7 @@ private:
 
     QList<Item *> m_data;
 
-    Akonadi::Monitor *m_monitor;
+    Akonadi::Monitor *m_monitor = nullptr;
 };
 
 #endif

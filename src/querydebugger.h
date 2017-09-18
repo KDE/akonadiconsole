@@ -72,10 +72,10 @@ private:
     QString variantToString(const QVariant &val);
 
     QScopedPointer<Ui::QueryDebugger> mUi;
-    OrgFreedesktopAkonadiStorageDebuggerInterface *mDebugger;
+    OrgFreedesktopAkonadiStorageDebuggerInterface *mDebugger = nullptr;
 
-    QueryDebuggerModel *mQueryList;
-    QueryTreeModel *mQueryTree;
+    QueryDebuggerModel *mQueryList = nullptr;
+    QueryTreeModel *mQueryTree = nullptr;
 };
 
 #endif // QUERYDEBUGGER_H

@@ -48,7 +48,7 @@ public Q_SLOTS:
 
 private:
     QVector<QPair<QString, QVariant> > m_settings;
-    QDBusInterface *m_interface;
+    QDBusInterface *m_interface = nullptr;
 };
 
 #endif

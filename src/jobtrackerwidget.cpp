@@ -42,10 +42,10 @@
 class JobTrackerWidget::Private
 {
 public:
-    JobTrackerModel *model;
-    QTreeView *tv;
-    JobTrackerFilterProxyModel *filterProxyModel;
-    JobTrackerSearchWidget *searchLineEditWidget;
+    JobTrackerModel *model = nullptr;
+    QTreeView *tv = nullptr;
+    JobTrackerFilterProxyModel *filterProxyModel = nullptr;
+    JobTrackerSearchWidget *searchLineEditWidget = nullptr;
 };
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)

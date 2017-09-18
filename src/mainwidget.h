@@ -42,7 +42,7 @@ private Q_SLOTS:
     void restartServer();
 
 private:
-    BrowserWidget *mBrowser;
+    BrowserWidget *mBrowser = nullptr;
 };
 
 #endif
