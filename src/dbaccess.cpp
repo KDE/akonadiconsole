@@ -26,10 +26,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 
-#include <KLocalizedString>
 #include <KMessageBox>
 
-#include <QDebug>
 
 using namespace Akonadi;
 

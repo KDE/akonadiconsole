@@ -34,11 +34,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardGuiItem>
-#include <KTextEdit>
-#include <QLineEdit>
 #include <QIcon>
 
-#include <QFile>
 #include <QPointer>
 #include <QMenu>
 #include <QPushButton>
@@ -49,7 +46,6 @@
 #include <QResizeEvent>
 #include <KGuiItem>
 #include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QVBoxLayout>
 
 class TextDialog : public QDialog

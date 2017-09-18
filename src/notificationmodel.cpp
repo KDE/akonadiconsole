@@ -19,8 +19,6 @@
 
 #include "notificationmodel.h"
 
-#include <QCoreApplication>
-#include <QBuffer>
 
 #include <QLocale>
 

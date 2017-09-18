@@ -37,7 +37,6 @@
 #include <AkonadiCore/searchcreatejob.h>
 #include <AkonadiCore/servermanager.h>
 
-#include <QIcon>
 #include <QAction>
 #include <KActionCollection>
 #include <QTabWidget>

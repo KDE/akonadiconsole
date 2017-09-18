@@ -26,7 +26,6 @@
 #include "libakonadiconsole_export.h"
 
 #include <QDialog>
-#include <KConfigGroup>
 
 namespace Ui
 {

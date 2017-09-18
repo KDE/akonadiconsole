@@ -21,7 +21,6 @@
 
 #include <QDBusInterface>
 #include <QMetaMethod>
-#include <KLocalizedString>
 #include "akonadiconsole_debug.h"
 
 AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)

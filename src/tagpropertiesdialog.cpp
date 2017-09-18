@@ -23,9 +23,8 @@
 
 #include <AkonadiCore/AttributeFactory>
 #include <QSqlQuery>
-#include <QSqlError>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
+#include <QSqlError>
 
 using namespace Akonadi;
 

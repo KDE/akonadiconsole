@@ -21,8 +21,6 @@
 #define AKONADICONSOLE_NOTIFICATIONMODEL_H
 
 #include <QAbstractItemModel>
-#include <QDateTime>
-#include <QDBusInterface>
 
 #include <AkonadiCore/Monitor>
 #include <AkonadiCore/ChangeNotification>

@@ -23,14 +23,11 @@
 #include "ui_queryviewdialog.h"
 #include "storagedebuggerinterface.h"
 
-#include <QMenu>
-#include <QGuiApplication>
 
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 #include <QHeaderView>
 #include <QDateTime>
-#include <QIcon>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QTableWidget>
@@ -38,12 +35,10 @@
 
 #include <QDBusConnection>
 #include <QDBusArgument>
-#include <QDBusMetaType>
 
 #include <AkonadiCore/servermanager.h>
 #include <AkonadiWidgets/controlgui.h>
 
-#include <KLocalizedString>
 #include <KColorScheme>
 
 #include <algorithm>

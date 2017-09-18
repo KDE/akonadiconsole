@@ -23,8 +23,6 @@
 #include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
 
-#include <KLocalizedString>
-#include <QUrl>
 
 #include <QHeaderView>
 #include <QCheckBox>

@@ -24,7 +24,6 @@
 #include <AkonadiCore/tag.h>
 
 #include <QStandardItemModel>
-#include <KConfigGroup>
 
 #include "ui_tagpropertiesdialog.h"
 

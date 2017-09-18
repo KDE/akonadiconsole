@@ -38,18 +38,16 @@
 #include <KComboBox>
 #include <KMessageBox>
 #include <QTextBrowser>
-#include <KTextEdit>
 #include <KSharedConfig>
 #include <KConfigGroup>
 
-#include <QGridLayout>
 #include <QLabel>
 #include <QListView>
 #include <QPushButton>
-#include <QStringListModel>
 #include <QStandardItemModel>
 #include <QTreeView>
 #include <QSplitter>
+#include <QVBoxLayout>
 
 SearchWidget::SearchWidget(QWidget *parent)
     : QWidget(parent)

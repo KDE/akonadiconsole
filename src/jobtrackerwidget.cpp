@@ -28,8 +28,6 @@
 
 #include <AkonadiWidgets/controlgui.h>
 
-#include <KLocalizedString>
-#include <QUrl>
 
 #include <QTreeView>
 #include <QHeaderView>
@@ -40,7 +38,6 @@
 #include <QFileDialog>
 #include <QApplication>
 #include <QClipboard>
-#include <QLineEdit>
 
 class JobTrackerWidget::Private
 {

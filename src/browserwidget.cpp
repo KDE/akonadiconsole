@@ -65,17 +65,16 @@
 #include <AkonadiCore/tagmodifyjob.h>
 #include <AkonadiCore/tagcreatejob.h>
 
-#include <KLocalizedString>
 
 #include <QSplitter>
 #include <QVBoxLayout>
 #include <QStandardItemModel>
 #include <QSqlQuery>
 #include <QTimer>
-#include <QSqlError>
 #include <KSharedConfig>
 #include <QMenu>
 #include <QFileDialog>
+#include <QSqlError>
 
 using namespace Akonadi;
 

@@ -26,7 +26,6 @@
 
 #include <AkonadiWidgets/controlgui.h>
 
-#include <KLocalizedString>
 #include <QTabWidget>
 #include <KTextEdit>
 #include <AkonadiCore/ServerManager>

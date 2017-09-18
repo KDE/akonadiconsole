@@ -19,9 +19,6 @@
 
 #include "agentconfigdialog.h"
 #include "agentconfigmodel.h"
-#include <KLocalizedString>
-#include <QIcon>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <KGuiItem>

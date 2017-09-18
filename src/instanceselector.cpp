@@ -24,7 +24,6 @@
 
 #include "akonadiconsole_debug.h"
 #include <QIcon>
-#include <KLocalizedString>
 #include <akonadi/private/instance_p.h>
 #include <akonadi/private/dbus_p.h>
 #include <akonadi/private/xdgbasedirs_p.h>
@@ -34,7 +33,6 @@
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QStandardItemModel>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

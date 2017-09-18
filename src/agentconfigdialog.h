@@ -23,7 +23,6 @@
 #include "ui_agentconfigdialog.h"
 #include <AkonadiCore/AgentInstance>
 #include <QDialog>
-#include <KConfigGroup>
 
 class AgentConfigModel;
 
