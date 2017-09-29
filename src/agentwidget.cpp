@@ -54,18 +54,19 @@ public:
     explicit TextDialog(QWidget *parent = nullptr)
         : QDialog(parent)
     {
-        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
         QVBoxLayout *mainLayout = new QVBoxLayout(this);
+        mText = new KPIMTextEdit::PlainTextEditorWidget(this);
+        mText->setReadOnly(true);
+
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
         connect(buttonBox, &QDialogButtonBox::accepted, this, &TextDialog::accept);
         connect(buttonBox, &QDialogButtonBox::rejected, this, &TextDialog::reject);
 
-        mText = new KPIMTextEdit::PlainTextEditorWidget;
         mainLayout->addWidget(mText);
         mainLayout->addWidget(buttonBox);
-        mText->setReadOnly(true);
         resize(QSize(400, 600));
     }
 
