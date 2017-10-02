@@ -34,7 +34,7 @@ AgentConfigDialog::AgentConfigDialog(QWidget *parent) :
     ui.setupUi(mainWidget);
     ui.propertyView->setModel(m_model);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Apply);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Apply, this);
     QPushButton *user1Button = new QPushButton;
     buttonBox->addButton(user1Button, QDialogButtonBox::ActionRole);
     QPushButton *user2Button = new QPushButton;
