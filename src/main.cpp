@@ -58,8 +58,6 @@ int main(int argc, char **argv)
 
     KCrash::initialize();
     QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("remote"), QStringLiteral("Connect to an Akonadi remote debugging server"), QStringLiteral("server")));
 
