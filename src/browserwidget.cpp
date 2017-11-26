@@ -457,9 +457,7 @@ void BrowserWidget::delAttribute()
         return;
     }
     mAttrModel->removeRow(selection.first().row());
-    if (mAttrModel->rowCount() == 0) {
-        contentUi.saveButton->setEnabled(false);
-    }
+    contentUi.saveButton->setEnabled(true);
 }
 
 void BrowserWidget::dumpToXml()
