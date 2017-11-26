@@ -155,7 +155,7 @@ void SearchWidget::openStore(int idx)
 
 void SearchWidget::xapianError(const Xapian::Error &e)
 {
-    qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << QString::fromStdString(e.get_error_string());
+    qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << e.get_error_string();
     QMessageBox::critical(this, QStringLiteral("Xapian error"),
                           QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
 }
