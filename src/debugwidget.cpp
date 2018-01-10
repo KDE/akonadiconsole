@@ -45,7 +45,7 @@ DebugWidget::DebugWidget(QWidget *parent)
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-        service += QLatin1String(".") + Akonadi::ServerManager::instanceIdentifier();
+        service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     }
     mDebugInterface = new DebugInterface(service, QStringLiteral("/debug"), QDBusConnection::sessionBus(), this);
     QCheckBox *cb = new QCheckBox(QStringLiteral("Enable debugger"), this);

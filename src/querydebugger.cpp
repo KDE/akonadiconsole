@@ -718,7 +718,7 @@ QueryDebugger::QueryDebugger(QWidget *parent):
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-        service += QLatin1String(".") + Akonadi::ServerManager::instanceIdentifier();
+        service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     }
     mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service,
             QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
