@@ -40,8 +40,6 @@ set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 set(KDEPIM_LIB_VERSION "${KDEPIM_VERSION_NUMBER}")
 set(KDEPIM_LIB_SOVERSION "5")
 
-
-
 set(AKONADI_MIMELIB_VERSION "5.7.40")
 set(AKONADI_CONTACT_VERSION "5.7.40")
 set(CALENDARSUPPORT_LIB_VERSION_LIB "5.7.40")
@@ -59,7 +57,6 @@ set(LIBKDEPIM_LIB_VERSION_LIB "5.7.40")
 set(KCALENDARCORE_LIB_VERSION "5.7.40")
 set(KCONTACTS_LIB_VERSION "5.7.40")
 set(KMIME_LIB_VERSION "5.7.40")
-set(KIMAP_LIB_VERSION "5.7.40")
 
 # Find KF5 package
 find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
@@ -81,23 +78,30 @@ find_package(KF5KIO ${KF5_VERSION} REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5Contacts ${KCONTACTS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${KCALENDARCORE_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5AkonadiContact ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
-find_package(KF5CalendarSupport ${CALENDARSUPPORT_LIB_VERSION_LIB} CONFIG REQUIRED)
-find_package(KF5AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
-
-find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
 
-find_package(Xapian CONFIG)
-set_package_properties(Xapian PROPERTIES
-    DESCRIPTION "The Xapian search engine library"
-    URL "http://xapian.org"
-    TYPE REQUIRED
-)
+if (NOT WIN32)
+    find_package(KF5AkonadiContact ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
+    find_package(KF5CalendarSupport ${CALENDARSUPPORT_LIB_VERSION_LIB} CONFIG REQUIRED)
+    find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
+    find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
+    find_package(KF5AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
 
+    find_package(Xapian CONFIG)
+    set_package_properties(Xapian PROPERTIES
+        DESCRIPTION "The Xapian search engine library"
+        URL "http://xapian.org"
+        TYPE REQUIRED
+    )
+
+    set(ENABLE_LIBKDEPIM TRUE)
+    set(ENABLE_SEARCH TRUE)
+    set(ENABLE_CONTENTVIEWS TRUE)
+endif()
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
+
+configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)

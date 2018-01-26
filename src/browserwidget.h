@@ -49,6 +49,16 @@ class StandardActionManager;
 class Monitor;
 class TagModel;
 class StatisticsProxyModel;
+class ContactViewer;
+class ContactGroupViewer;
+}
+
+namespace CalendarSupport {
+class IncidenceViewer;
+}
+
+namespace MessageViewer {
+class Viewer;
 }
 
 class BrowserWidget: public QWidget
@@ -103,6 +113,11 @@ private:
     KToggleAction *mCacheOnlyAction = nullptr;
     QTreeView *mTagView = nullptr;
     Akonadi::TagModel *mTagModel = nullptr;
+
+    Akonadi::ContactViewer *mContactView = nullptr;
+    Akonadi::ContactGroupViewer *mContactGroupView = nullptr;
+    CalendarSupport::IncidenceViewer *mIncidenceView = nullptr;
+    MessageViewer::Viewer *mMailView = nullptr;
 };
 
 #endif

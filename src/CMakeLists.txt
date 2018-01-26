@@ -36,11 +36,17 @@ set(libakonadiconsole_SRCS
     monitorsmodel.cpp
     notificationmodel.cpp
     notificationmonitor.cpp
-    searchwidget.cpp
     querydebugger.cpp
     tagpropertiesdialog.cpp
     ${libakonadiconsole_tracker_SRCS}
+)
+
+if (ENABLE_SEARCH)
+    set(libakonadiconsole_SRCS
+        ${libakonadiconsole_SRCS}
+        searchwidget.cpp
     )
+endif()
 
 qt5_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
 qt5_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Akonadi.JobTracker.xml jobtracker.h JobTracker)
@@ -89,24 +95,38 @@ generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
 target_link_libraries(libakonadiconsole
     KF5::AkonadiCore
     KF5::AkonadiPrivate
-    KF5::AkonadiContact
     KF5::AkonadiWidgets
     KF5::AkonadiXml
-    KF5::AkonadiSearchCore
-    KF5::AkonadiSearchXapian
-    KF5::CalendarSupport
+    KF5::Mime
+    KF5::Contacts
     KF5::CalendarCore
-    KF5::Libkdepim
-    KF5::MessageViewer
-    KF5::DBusAddons
-    KF5::PimTextEdit
     Qt5::Sql
-    KF5::Crash
     KF5::Completion
     KF5::ItemViews
     KF5::TextWidgets
     KF5::XmlGui
     )
+
+if (ENABLE_SEARCH)
+    target_link_libraries(libakonadiconsole
+        KF5::AkonadiSearchCore
+        KF5::AkonadiSearchXapian
+    )
+endif()
+
+if (ENABLE_CONTENTVIEWS)
+    target_link_libraries(libakonadiconsole
+        KF5::AkonadiContact
+        KF5::CalendarSupport
+        KF5::MessageViewer
+    )
+endif()
+
+if (ENABLE_LIBKDEPIM)
+    target_link_libraries(libakonadiconsole
+        KF5::Libkdepim
+    )
+endif()
 
 set_target_properties(libakonadiconsole
     PROPERTIES OUTPUT_NAME akonadiconsole
@@ -128,25 +148,10 @@ add_executable(akonadiconsole ${akonadiconsole_SRCS})
 
 target_link_libraries(akonadiconsole
     libakonadiconsole
-    KF5::AkonadiCore
-    KF5::AkonadiPrivate
-    KF5::AkonadiContact
-    KF5::AkonadiXml
-    KF5::AkonadiSearchCore
-    KF5::AkonadiSearchXapian
-    KF5::CalendarSupport
-    KF5::CalendarCore
-    KF5::Libkdepim
-    KF5::MessageViewer
     KF5::DBusAddons
-    KF5::PimTextEdit
-    Qt5::Sql
+    KF5::CoreAddons
     KF5::Crash
-    KF5::Completion
-    KF5::ItemViews
-    KF5::TextWidgets
-    KF5::XmlGui
-    )
+)
 
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.akonadiconsole.desktop DESTINATION ${KDE_INSTALL_APPDIR})

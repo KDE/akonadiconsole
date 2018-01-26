@@ -21,11 +21,14 @@
 
 #include "mainwidget.h"
 
+#include "config-akonadiconsole.h"
 #include "agentwidget.h"
 #include "dbbrowser.h"
 #include "dbconsole.h"
 #include "debugwidget.h"
+#ifdef ENABLE_SEARCH
 #include "searchwidget.h"
+#endif
 #include "jobtrackerwidget.h"
 #include "notificationmonitor.h"
 #include "monitorswidget.h"
@@ -63,7 +66,9 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     tabWidget->addTab(new JobTrackerWidget("jobtracker", tabWidget, QStringLiteral("Enable job tracker")), QStringLiteral("Job Tracker"));
     tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, QStringLiteral("Enable tracking of Resource Schedulers")), QStringLiteral("Resources Schedulers"));
     tabWidget->addTab(new NotificationMonitor(tabWidget), QStringLiteral("Notification Monitor"));
+#ifdef ENABLE_SEARCH
     tabWidget->addTab(new SearchWidget(tabWidget), QStringLiteral("Item Search"));
+#endif
     tabWidget->addTab(new MonitorsWidget(tabWidget), QStringLiteral("Monitors"));
 
     auto action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_akonadi2xml"));

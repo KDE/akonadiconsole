@@ -94,58 +94,6 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="contactViewPage">
-          <layout class="QVBoxLayout" name="verticalLayout_5">
-           <item>
-            <widget class="Akonadi::ContactViewer" name="contactView" native="true"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="contactGroupViewPage">
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
-            <widget class="Akonadi::ContactGroupViewer" name="contactGroupView" native="true"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="incidenceViewPage">
-          <layout class="QVBoxLayout">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="CalendarSupport::IncidenceViewer" name="incidenceView" native="true"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="mailViewPage">
-          <layout class="QGridLayout" name="gridLayout1">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item row="0" column="0">
-            <widget class="MessageViewer::Viewer" name="mailView"/>
-           </item>
-          </layout>
-         </widget>
         </widget>
        </item>
       </layout>
@@ -429,28 +377,6 @@
    <class>KEditListWidget</class>
    <extends>QWidget</extends>
    <header>keditlistwidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>CalendarSupport::IncidenceViewer</class>
-   <extends>QWidget</extends>
-   <header location="global">CalendarSupport/IncidenceViewer</header>
-  </customwidget>
-  <customwidget>
-   <class>MessageViewer::Viewer</class>
-   <extends>QTextBrowser</extends>
-   <header location="global">messageviewer/viewer.h</header>
-  </customwidget>
-  <customwidget>
-   <class>Akonadi::ContactViewer</class>
-   <extends>QWidget</extends>
-   <header location="global">Akonadi/Contact/ContactViewer</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Akonadi::ContactGroupViewer</class>
-   <extends>QWidget</extends>
-   <header location="global">Akonadi/Contact/ContactGroupViewer</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

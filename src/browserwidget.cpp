@@ -25,6 +25,7 @@
 #include "dbaccess.h"
 #include "akonadibrowsermodel.h"
 #include "tagpropertiesdialog.h"
+#include "config-akonadiconsole.h"
 
 #include <AkonadiCore/attributefactory.h>
 #include <AkonadiCore/changerecorder.h>
@@ -75,6 +76,13 @@
 #include <QMenu>
 #include <QFileDialog>
 #include <QSqlError>
+
+#ifdef ENABLE_CONTENTVIEWS
+#include <CalendarSupport/IncidenceViewer>
+#include <messageviewer/viewer.h>
+#include <Akonadi/Contact/ContactViewer>
+#include <Akonadi/Contact/ContactGroupViewer>
+#endif
 
 using namespace Akonadi;
 
@@ -209,6 +217,28 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     connect(contentUi.saveButton, &QPushButton::clicked, this, &BrowserWidget::save);
     splitter3->addWidget(contentViewParent);
 
+#ifdef ENABLE_CONTENTVIEWS
+    auto w = new QWidget;
+    w->setLayout(new QVBoxLayout);
+    w->layout()->addWidget(mContactView = new Akonadi::ContactViewer);
+    contentUi.stack->addWidget(w);
+
+    w = new QWidget;
+    w->setLayout(new QVBoxLayout);
+    w->layout()->addWidget(mContactGroupView = new Akonadi::ContactGroupViewer);
+    contentUi.stack->addWidget(w);
+
+    w = new QWidget;
+    w->setLayout(new QVBoxLayout);
+    w->layout()->addWidget(mIncidenceView = new CalendarSupport::IncidenceViewer);
+    contentUi.stack->addWidget(w);
+
+    w = new QWidget;
+    w->setLayout(new QVBoxLayout);
+    w->layout()->addWidget(mMailView = new MessageViewer::Viewer(this));
+    contentUi.stack->addWidget(w);
+#endif
+
     connect(contentUi.attrAddButton, &QPushButton::clicked, this, &BrowserWidget::addAttribute);
     connect(contentUi.attrDeleteButton, &QPushButton::clicked, this, &BrowserWidget::delAttribute);
     connect(contentUi.flags, &KEditListWidget::changed, this, &BrowserWidget::contentViewChanged);
@@ -295,20 +325,23 @@ void BrowserWidget::contentViewChanged()
 void BrowserWidget::setItem(const Akonadi::Item &item)
 {
     mCurrentItem = item;
+#ifdef ENABLE_CONTENTVIEWS
     if (item.hasPayload<KContacts::Addressee>()) {
-        contentUi.contactView->setItem(item);
-        contentUi.stack->setCurrentWidget(contentUi.contactViewPage);
+        mContactView->setItem(item);
+        contentUi.stack->setCurrentWidget(mContactView->parentWidget());
     } else if (item.hasPayload<KContacts::ContactGroup>()) {
-        contentUi.contactGroupView->setItem(item);
-        contentUi.stack->setCurrentWidget(contentUi.contactGroupViewPage);
+        mContactGroupView->setItem(item);
+        contentUi.stack->setCurrentWidget(mContactGroupView->parentWidget());
     } else if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
-        contentUi.incidenceView->setItem(item);
-        contentUi.stack->setCurrentWidget(contentUi.incidenceViewPage);
+        mIncidenceView->setItem(item);
+        contentUi.stack->setCurrentWidget(mIncidenceView->parentWidget());
     } else if (item.mimeType() == QLatin1String("message/rfc822")
                || item.mimeType() == QLatin1String("message/news")) {
-        contentUi.mailView->setMessageItem(item, MimeTreeParser::Force);
-        contentUi.stack->setCurrentWidget(contentUi.mailViewPage);
-    } else if (item.hasPayload<QPixmap>()) {
+        mMailView->setMessageItem(item, MimeTreeParser::Force);
+        contentUi.stack->setCurrentWidget(mMailView->parentWidget());
+    } else
+#endif
+    if (item.hasPayload<QPixmap>()) {
         contentUi.imageView->setPixmap(item.payload<QPixmap>());
         contentUi.stack->setCurrentWidget(contentUi.imageViewPage);
     } else {
