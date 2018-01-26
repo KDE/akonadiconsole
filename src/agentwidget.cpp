@@ -23,7 +23,6 @@
 
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
-#include "kpimtextedit/plaintexteditorwidget.h"
 #include <AkonadiWidgets/agenttypedialog.h>
 #include <AkonadiWidgets/agentinstancewidget.h>
 #include <AkonadiCore/agentmanager.h>
@@ -47,6 +46,7 @@
 #include <KGuiItem>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QPlainTextEdit>
 
 class TextDialog : public QDialog
 {
@@ -55,7 +55,7 @@ public:
         : QDialog(parent)
     {
         QVBoxLayout *mainLayout = new QVBoxLayout(this);
-        mText = new KPIMTextEdit::PlainTextEditorWidget(this);
+        mText = new QPlainTextEdit(this);
         mText->setReadOnly(true);
 
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
@@ -76,7 +76,7 @@ public:
     }
 
 private:
-    KPIMTextEdit::PlainTextEditorWidget *mText = nullptr;
+    QPlainTextEdit *mText = nullptr;
 };
 
 using namespace Akonadi;

@@ -29,7 +29,6 @@
 #include <AkonadiCore/itemfetchscope.h>
 #include <AkonadiCore/itemsearchjob.h>
 #include <AkonadiCore/SearchQuery>
-#include <kpimtextedit/plaintexteditorwidget.h>
 
 
 #include <AkonadiSearch/Core/searchstore.h>
@@ -38,6 +37,7 @@
 #include <KComboBox>
 #include <KMessageBox>
 #include <QTextBrowser>
+#include <QPlainTextEdit>
 #include <KSharedConfig>
 #include <KConfigGroup>
 
@@ -72,7 +72,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     auto w = new QWidget;
     QVBoxLayout *vbox = new QVBoxLayout(w);
     vbox->addWidget(new QLabel(QStringLiteral("Search query:")));
-    mQueryWidget = new KPIMTextEdit::PlainTextEditorWidget;
+    mQueryWidget = new QPlainTextEdit;
     vbox->addWidget(mQueryWidget);
     mVSplitter->addWidget(w);
 

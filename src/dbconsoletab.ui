@@ -73,7 +73,7 @@
      <widget class="QWidget" name="layoutWidget">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="KPIMTextEdit::PlainTextEditorWidget" name="queryEdit"/>
+        <widget class="QPlainTextEdit" name="queryEdit"/>
        </item>
        <item>
         <widget class="QPushButton" name="execButton">
@@ -94,13 +94,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KPIMTextEdit::PlainTextEditorWidget</class>
-   <extends>QWidget</extends>
-   <header>kpimtextedit/plaintexteditorwidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

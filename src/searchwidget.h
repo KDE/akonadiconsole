@@ -33,10 +33,8 @@ class QModelIndex;
 class QStandardItemModel;
 class QTreeView;
 class QSplitter;
-namespace KPIMTextEdit
-{
-class PlainTextEditorWidget;
-}
+class QPlainTextEdit;
+
 namespace Xapian {
 class Database;
 class Error;
@@ -58,10 +56,10 @@ private Q_SLOTS:
 
 private:
     void xapianError(const Xapian::Error &e);
-    
+
     KComboBox *mStoreCombo = nullptr;
     QTextBrowser *mItemView = nullptr;
-    KPIMTextEdit::PlainTextEditorWidget *mQueryWidget = nullptr;
+    QPlainTextEdit *mQueryWidget = nullptr;
     QListView *mDatabaseView = nullptr;
     QStandardItemModel *mDocumentModel = nullptr;
     QTreeView *mDocumentView = nullptr;
