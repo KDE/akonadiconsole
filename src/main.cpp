@@ -32,8 +32,6 @@
 #include <QCommandLineOption>
 #include <QDBusMetaType>
 
-#include <stdlib.h>
-
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -73,8 +71,8 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("remote"))) {
         const QString akonadiAddr = QStringLiteral("tcp:host=%1,port=31415").arg(parser.value(QStringLiteral("remote")));
         const QString dbusAddr = QStringLiteral("tcp:host=%1,port=31416").arg(parser.value(QStringLiteral("remote")));
-        setenv("AKONADI_SERVER_ADDRESS", akonadiAddr.toLatin1(), 1);
-        setenv("DBUS_SESSION_BUS_ADDRESS", dbusAddr.toLatin1(), 1);
+        qputenv("AKONADI_SERVER_ADDRESS", akonadiAddr.toLatin1());
+        qputenv("DBUS_SESSION_BUS_ADDRESS", dbusAddr.toLatin1());
     }
 
     InstanceSelector instanceSelector(parser.isSet(QStringLiteral("remote")) ? parser.value(QStringLiteral("remote")) : QString());
