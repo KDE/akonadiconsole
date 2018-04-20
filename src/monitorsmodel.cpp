@@ -25,6 +25,8 @@
 
 #include <QTimer>
 
+Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
+
 MonitorsModel::MonitorsModel(QObject *parent):
     QAbstractItemModel(parent),
     mMonitor(nullptr)
@@ -89,14 +91,15 @@ void MonitorsModel::slotSubscriberRemoved(const Akonadi::NotificationSubscriber 
 
 void MonitorsModel::slotSubscriberChanged(const Akonadi::NotificationSubscriber &subscriber)
 {
-    int idx = -1;
+    int row = -1;
     auto sessionIdx = indexForSession(subscriber.sessionId());
     auto sessions = mData[subscriber.sessionId()];
     for (auto it = sessions.begin(), end = sessions.end(); it != end; ++it) {
-        ++idx;
+        ++row;
         if (it->subscriber() == subscriber.subscriber()) {
             *it = subscriber;
-            Q_EMIT dataChanged(index(idx, 0, sessionIdx), index(idx, ColumnsCount, sessionIdx));
+            const auto idx = index(row, 0, sessionIdx);
+            Q_EMIT dataChanged(idx, idx);
             return;
         }
     }
@@ -106,18 +109,8 @@ QVariant MonitorsModel::headerData(int section, Qt::Orientation orientation, int
 {
     if (role == Qt::DisplayRole) {
         if (orientation == Qt::Horizontal) {
-            switch (static_cast<Column>(section)) {
-            case IdentifierColumn: return QStringLiteral("Session/Subscriber");
-            case IsAllMonitoredColumn: return QStringLiteral("Monitor All");
-            case MonitoredCollectionsColumn: return QStringLiteral("Collections");
-            case MonitoredItemsColumn: return QStringLiteral("Items");
-            case MonitoredTagsColumn: return QStringLiteral("Tags");
-            case MonitoredResourcesColumn: return QStringLiteral("Resources");
-            case MonitoredMimeTypesColumn: return QStringLiteral("Mime Types");
-            case MonitoredTypesColumn: return QStringLiteral("Types");
-            case IgnoredSessionsColumn: return QStringLiteral("Ignored Sessions");
-            case IsExclusiveColumn: return QStringLiteral("Exclusive");
-            case ColumnsCount: Q_ASSERT(false); return QString();
+            if (section == 0) {
+                return QStringLiteral("Session/Subscriber");
             }
         }
     }
@@ -125,85 +118,30 @@ QVariant MonitorsModel::headerData(int section, Qt::Orientation orientation, int
     return QVariant();
 }
 
-namespace
-{
-
-template<typename T>
-QString toString(const QSet<T> &set)
-{
-    QStringList rv;
-    for (const auto &v : set) {
-        rv << QVariant(v).toString();
-    }
-    return rv.join(QStringLiteral(", "));
-}
-
-template<>
-QString toString(const QSet<Akonadi::Monitor::Type> &set)
-{
-    QStringList rv;
-    for (auto v : set) {
-        switch (v) {
-        case Akonadi::Monitor::Items:
-            rv << QStringLiteral("Items");
-            break;
-        case Akonadi::Monitor::Collections:
-            rv << QStringLiteral("Collections");
-            break;
-        case Akonadi::Monitor::Tags:
-            rv << QStringLiteral("Tags");
-            break;
-        case Akonadi::Monitor::Relations:
-            rv << QStringLiteral("Relations");
-            break;
-        case Akonadi::Monitor::Subscribers:
-            rv << QStringLiteral("Subscribers");
-            break;
-        case Akonadi::Monitor::Notifications:
-            rv << QStringLiteral("Debug Notifications");
-            break;
-        }
-    }
-    return rv.join(QStringLiteral(", "));
-}
-
-}
-
 QVariant MonitorsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
+    if (!index.isValid() || index.column() != 0) {
         return QVariant();
     }
     if ((int)index.internalId() == -1) {
         if (index.row() >= mSessions.count()) {
             return {};
         }
-        
-        if (role == Qt::DisplayRole && index.column() == 0) {
+
+        if (role == Qt::DisplayRole) {
             return mSessions.at(index.row());
         }
     } else {
+        const auto session = mSessions.at(index.parent().row());
+        const auto subscribers = mData.value(session);
+        if (index.row() >= subscribers.count()) {
+            return {};
+        }
+        const auto subscriber = subscribers.at(index.row()); 
         if (role == Qt::DisplayRole || role == Qt::ToolTipRole) {
-            const auto session = mSessions.at(index.parent().row());
-            const auto subscribers = mData.value(session);
-            if (index.row() >= subscribers.count()) {
-                return {};
-            }
-
-            const auto subscriber = subscribers.at(index.row()); 
-            switch (static_cast<Column>(index.column())) {
-            case IdentifierColumn: return subscriber.subscriber();
-            case IsAllMonitoredColumn: return subscriber.isAllMonitored();
-            case MonitoredCollectionsColumn: return toString(subscriber.monitoredCollections());
-            case MonitoredItemsColumn: return toString(subscriber.monitoredItems());
-            case MonitoredTagsColumn: return toString(subscriber.monitoredTags());
-            case MonitoredResourcesColumn: return toString(subscriber.monitoredResources());
-            case MonitoredMimeTypesColumn: return toString(subscriber.monitoredMimeTypes());
-            case MonitoredTypesColumn: return toString(subscriber.monitoredTypes());
-            case IgnoredSessionsColumn: return toString(subscriber.ignoredSessions());
-            case IsExclusiveColumn: return subscriber.isExclusive();
-            case ColumnsCount: Q_ASSERT(false); return QString();
-            }
+            return subscriber.subscriber();
+        } else if (role == SubscriberRole) {
+            return QVariant::fromValue(subscriber);
         }
     }
 
@@ -213,7 +151,7 @@ QVariant MonitorsModel::data(const QModelIndex &index, int role) const
 int MonitorsModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return ColumnsCount;
+    return 1;
 }
 
 int MonitorsModel::rowCount(const QModelIndex &parent) const

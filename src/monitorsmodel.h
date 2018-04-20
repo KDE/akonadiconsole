@@ -34,21 +34,10 @@ class LIBAKONADICONSOLE_EXPORT MonitorsModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum Column {
-        IdentifierColumn = 0,
-        IsAllMonitoredColumn,
-        MonitoredCollectionsColumn,
-        MonitoredItemsColumn,
-        MonitoredTagsColumn,
-        MonitoredResourcesColumn,
-        MonitoredMimeTypesColumn,
-        MonitoredTypesColumn,
-        IgnoredSessionsColumn,
-        IsExclusiveColumn,
-
-        ColumnsCount
+    enum Roles {
+        SubscriberRole = Qt::UserRole
     };
-
+        
     explicit MonitorsModel(QObject *parent = nullptr);
     virtual ~MonitorsModel();
 

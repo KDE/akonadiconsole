@@ -23,6 +23,12 @@
 #include <QWidget>
 #include <QTreeView>
 
+class QStandardItem;
+namespace Akonadi {
+class TagFetchScope;
+class CollectionFetchScope;
+}
+
 class MonitorsModel;
 
 class MonitorsWidget : public QWidget
@@ -33,8 +39,16 @@ public:
     explicit MonitorsWidget(QWidget *parent = nullptr);
     virtual ~MonitorsWidget();
 
+private Q_SLOTS:
+    void onSubscriberSelected(const QModelIndex &index);
+
+    void populateTagFetchScope(QStandardItem *parent,
+                               const Akonadi::TagFetchScope &tfs);
+    void populateCollectionFetchScope(QStandardItem *parent,
+                                      const Akonadi::CollectionFetchScope &cfs);
 private:
     QTreeView *mTreeView = nullptr;
+    QTreeView *mSubscriberView = nullptr;
     MonitorsModel *mModel = nullptr;
 };
 
