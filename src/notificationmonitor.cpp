@@ -19,6 +19,7 @@
 
 #include "notificationmonitor.h"
 #include "notificationmodel.h"
+#include "utils.h"
 
 #include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
@@ -29,8 +30,15 @@
 #include <QMenu>
 #include <QTreeView>
 #include <QVBoxLayout>
-#include <QPushButton>
-#include <QFileDialog>
+#include <QSplitter>
+#include <QStandardItemModel>
+#include <QStandardItem>
+#include <QItemSelectionModel>
+
+#include <KSharedConfig>
+#include <KConfigGroup>
+
+Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 
 NotificationMonitor::NotificationMonitor(QWidget *parent) :
     QWidget(parent)
@@ -46,24 +54,44 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     connect(enableCB, &QCheckBox::toggled, m_model, &NotificationModel::setEnabled);
     layout->addWidget(enableCB);
 
-    QTreeView *tv = new QTreeView(this);
-    tv->setModel(m_model);
-    tv->expandAll();
-    tv->setAlternatingRowColors(true);
-    tv->setContextMenuPolicy(Qt::CustomContextMenu);
-    tv->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    connect(tv, &QTreeView::customContextMenuRequested, this, &NotificationMonitor::contextMenu);
-    layout->addWidget(tv);
 
-    QHBoxLayout *layout2 = new QHBoxLayout;
-    QPushButton *button = new QPushButton(QStringLiteral("Save to file..."), this);
-    connect(button, &QPushButton::clicked, this, &NotificationMonitor::slotSaveToFile);
-    layout2->addWidget(button);
-    layout2->addStretch(1);
-    layout->addLayout(layout2);
+    m_splitter = new QSplitter(this);
+    layout->addWidget(m_splitter);
+
+    m_treeView = new QTreeView(this);
+    m_treeView->setModel(m_model);
+    m_treeView->expandAll();
+    m_treeView->setAlternatingRowColors(true);
+    m_treeView->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_treeView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    connect(m_treeView, &QTreeView::customContextMenuRequested, this, &NotificationMonitor::contextMenu);
+    connect(m_treeView->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &NotificationMonitor::onNotificationSelected);
+    m_splitter->addWidget(m_treeView);
+
+    m_ntfView = new QTreeView(this);
+    m_ntfView->setModel(new QStandardItemModel(this));
+    m_ntfView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    m_splitter->addWidget(m_ntfView);
+
+    onNotificationSelected({});
+
+    KConfigGroup config(KSharedConfig::openConfig(), "NotificationMonitor");
+    m_treeView->header()->restoreState(config.readEntry<QByteArray>("tv", QByteArray()));
+    m_ntfView->header()->restoreState(config.readEntry<QByteArray>("ntfView", QByteArray()));
+    m_splitter->restoreState(config.readEntry<QByteArray>("splitter", QByteArray()));
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 }
+
+NotificationMonitor::~NotificationMonitor()
+{
+    KConfigGroup config(KSharedConfig::openConfig(), "NotificationMonitor");
+    config.writeEntry("tv", m_treeView->header()->saveState());
+    config.writeEntry("ntfView", m_ntfView->header()->saveState());
+    config.writeEntry("splitter", m_splitter->saveState());
+}
+
 
 void NotificationMonitor::contextMenu(const QPoint & /*pos*/)
 {
@@ -72,44 +100,486 @@ void NotificationMonitor::contextMenu(const QPoint & /*pos*/)
     menu.exec(QCursor::pos());
 }
 
-void NotificationMonitor::slotSaveToFile()
+void NotificationMonitor::onNotificationSelected(const QModelIndex &index)
 {
-    const QString fileName = QFileDialog::getSaveFileName(this);
-    if (fileName.isEmpty()) {
+    auto model = qobject_cast<QStandardItemModel*>(m_ntfView->model());
+    const auto state = m_ntfView->header()->saveState();
+    model->clear();
+    model->setHorizontalHeaderLabels({ QStringLiteral("Properties"), QStringLiteral("Values") });
+    m_ntfView->header()->restoreState(state);
+
+    const auto ntf = index.data(NotificationModel::NotificationRole).value<Akonadi::ChangeNotification>();
+    if (!ntf.isValid()) {
         return;
     }
 
-    QFile file(fileName);
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-        return;
+    appendRow(model, QStringLiteral("Timestamp"), ntf.timestamp().toString(Qt::ISODate));
+    appendRow(model, QStringLiteral("Type"),
+              index.sibling(index.row(), NotificationModel::TypeColumn).data().toString());
+    appendRow(model, QStringLiteral("Listeners"),
+              index.sibling(index.row(), NotificationModel::ListenersColumn).data().toString());
+    switch (ntf.type()) {
+    case Akonadi::ChangeNotification::Items:
+        populateItemNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::ItemChangeNotification>(ntf.notification()));
+        break;
+    case Akonadi::ChangeNotification::Collection:
+        populateCollectionNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::CollectionChangeNotification>(ntf.notification()));
+        break;
+    case Akonadi::ChangeNotification::Tag:
+        populateTagNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::TagChangeNotification>(ntf.notification()));
+        break;
+    case Akonadi::ChangeNotification::Relation:
+        populateRelationNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::RelationChangeNotification>(ntf.notification()));
+        break;
+    case Akonadi::ChangeNotification::Subscription:
+        populateSubscriptionNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::SubscriptionChangeNotification>(ntf.notification()));
+        break;
     }
 
-    file.write("Operation/ID\tType/RID\tSession/REV\tResource/MimeType\tDestination Resource\tParent\tDestination\tParts\tAdded Flags\tRemoved Flags\n");
-
-    writeRows(QModelIndex(), file, 0);
-
-    file.close();
+    m_ntfView->expandAll();
 }
 
-void NotificationMonitor::writeRows(const QModelIndex &parent, QFile &file, int indentLevel)
+void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const Akonadi::Protocol::ItemChangeNotification &ntf)
 {
-    for (int row = 0; row < m_model->rowCount(parent); ++row) {
-        QByteArray data;
-        for (int tabs = 0; tabs < indentLevel; ++tabs) {
-            data += '\t';
-        }
-        const int columnCount = m_model->columnCount(parent);
-        for (int column = 0; column < columnCount; ++column) {
-            const QModelIndex index = m_model->index(row, column, parent);
-            data += index.data().toByteArray();
-            if (column < columnCount - 1) {
-                data += '\t';
-            }
-        }
-        data += '\n';
-        file.write(data);
-
-        const QModelIndex index = m_model->index(row, 0, parent);
-        writeRows(index, file, indentLevel + 1);
+    QString operation;
+    switch (ntf.operation()) {
+    case Akonadi::Protocol::ItemChangeNotification::Add:
+        operation = QStringLiteral("Add");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::Modify:
+        operation = QStringLiteral("Modify");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::Move:
+        operation = QStringLiteral("Move");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::Remove:
+        operation = QStringLiteral("Remove");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::Link:
+        operation = QStringLiteral("Link");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::Unlink:
+        operation = QStringLiteral("Unlink");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::ModifyFlags:
+        operation = QStringLiteral("ModifyFlags");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::ModifyTags:
+        operation = QStringLiteral("ModifyTags");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::ModifyRelations:
+        operation = QStringLiteral("ModifyRelations");
+        break;
+    case Akonadi::Protocol::ItemChangeNotification::InvalidOp:
+        operation = QStringLiteral("InvalidOp");
+        break;
     }
+
+    appendRow(model, QStringLiteral("Operation"), operation);
+    appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
+    appendRow(model, QStringLiteral("Parent Collection"),
+              QString::number(ntf.parentCollection()));
+    appendRow(model, QStringLiteral("Parent Dest Col"),
+              QString::number(ntf.parentDestCollection()));
+    appendRow(model, QStringLiteral("Destination Resource"),
+              QString::fromUtf8(ntf.destinationResource()));
+    appendRow(model, QStringLiteral("Item Parts"),
+              toString(ntf.itemParts()));
+    appendRow(model, QStringLiteral("Added Flags"),
+              toString(ntf.addedFlags()));
+    appendRow(model, QStringLiteral("Removed Flags"),
+              toString(ntf.removedFlags()));
+    appendRow(model, QStringLiteral("Added Tags"),
+              toString(ntf.addedTags()));;
+    appendRow(model, QStringLiteral("Removed Tags"),
+              toString(ntf.removedTags()));
+    auto relationsItem = new QStandardItem(QStringLiteral("Added Relations"));
+    const auto addedRelations = ntf.addedRelations();
+    for (const auto &addedRelation : addedRelations) {
+        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(
+                    QString::number(addedRelation.leftId),
+                    QString::number(addedRelation.rightId),
+                    addedRelation.type));
+        relationsItem->appendRow(item);
+    }
+    model->appendRow(relationsItem);
+
+    relationsItem = new QStandardItem(QStringLiteral("Removed Relations"));
+    const auto removedRelations = ntf.removedRelations();
+    for (const auto &removedRelation : removedRelations) {
+        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(
+                    QString::number(removedRelation.leftId),
+                    QString::number(removedRelation.rightId),
+                    removedRelation.type));
+        relationsItem->appendRow(item);
+    }
+    model->appendRow(relationsItem);
+
+    auto itemsItem = new QStandardItem(QStringLiteral("Items"));
+    const auto items = ntf.items();
+    for (const auto &item : items) {
+        auto i = new QStandardItem(QString::number(item->id()));
+        populateItemTree(i, *item);
+        itemsItem->appendRow(i);
+    }
+    model->appendRow(itemsItem);
+}
+
+QStandardItem *NotificationMonitor::populateAncestorTree(QStandardItem *parent, const Akonadi::Protocol::Ancestor &ancestor)
+{
+    appendRow(parent, QStringLiteral("id"), QString::number(ancestor.id()));
+    appendRow(parent, QStringLiteral("remoteId"), ancestor.remoteId());
+    appendRow(parent, QStringLiteral("name"), ancestor.name());
+    populateAttributesTree(parent, ancestor.attributes());
+    auto ancestorItem = new QStandardItem(QStringLiteral("Ancestor"));
+    parent->appendRow(ancestorItem);
+    return ancestorItem;
+}
+
+void NotificationMonitor::populateTagTree(QStandardItem *parent, const Akonadi::Protocol::FetchTagsResponse &tag)
+{
+    appendRow(parent, QStringLiteral("ID"), QString::number(tag.id()));
+    appendRow(parent, QStringLiteral("Parent ID"), QString::number(tag.parentId()));
+    appendRow(parent, QStringLiteral("GID"), QString::fromUtf8(tag.gid()));
+    appendRow(parent, QStringLiteral("Type"), QString::fromUtf8(tag.type()));
+    appendRow(parent, QStringLiteral("Remote ID"), QString::fromUtf8(tag.remoteId()));
+    populateAttributesTree(parent, tag.attributes());
+}
+
+void NotificationMonitor::populateAttributesTree(QStandardItem *parent, const Akonadi::Protocol::Attributes &attributes)
+{
+    auto attributesItem = new QStandardItem(QStringLiteral("Attributes"));
+    for (auto it = attributes.cbegin(), end = attributes.cend(); it != end; ++it) {
+        appendRow(attributesItem, QString::fromUtf8(it.key()), QString::fromUtf8(it.value()));
+    }
+    parent->appendRow(attributesItem);
+}
+
+void NotificationMonitor::populateItemTree(QStandardItem *parent, const Akonadi::Protocol::FetchItemsResponse &item)
+{
+    appendRow(parent, QStringLiteral("Revision"), QString::number(item.revision()));
+    appendRow(parent, QStringLiteral("ParentID"), QString::number(item.parentId()));
+    appendRow(parent, QStringLiteral("RemoteID"), item.remoteId());
+    appendRow(parent, QStringLiteral("RemoteRev"), item.remoteRevision());
+    appendRow(parent, QStringLiteral("GID"), item.gid());
+    appendRow(parent, QStringLiteral("Size"), QString::number(item.size()));
+    appendRow(parent, QStringLiteral("MimeType"), item.mimeType());
+    appendRow(parent, QStringLiteral("MTime"), item.mTime().toString(Qt::ISODate));
+    appendRow(parent, QStringLiteral("Flags"), toString(item.flags()));
+    auto tagItem = new QStandardItem(QStringLiteral("Tags"));
+    const auto tags = item.tags();
+    for (const auto tag : tags) {
+        auto item = new QStandardItem(QString::number(tag.id()));
+        populateTagTree(item, tag);
+        tagItem->appendRow(item);
+    }
+    parent->appendRow(tagItem);
+
+    appendRow(parent, QStringLiteral("VRefs"), toString(item.virtualReferences()));
+    auto relationItem = new QStandardItem(QStringLiteral("Relations"));
+    const auto relations = item.relations();
+    for (const auto relation : relations) {
+        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(QString::number(relation.left()), QString::number(relation.right()), QString::fromUtf8(relation.type())));
+        relationItem->appendRow(item);
+    }
+    parent->appendRow(relationItem);
+
+    const auto ancestors = item.ancestors();
+    auto i = new QStandardItem(QStringLiteral("Ancestor"));
+    parent->appendRow(i);
+    for (const auto &ancestor : ancestors) {
+        i = populateAncestorTree(i, ancestor);
+    }
+
+    auto partsItem = new QStandardItem(QStringLiteral("Parts"));
+    const auto parts = item.parts();
+    for (const auto &part : parts) {
+        auto item = new QStandardItem(QString::fromUtf8(part.payloadName()));
+        QString type;
+        switch (part.metaData().storageType()) {
+        case Akonadi::Protocol::PartMetaData::External:
+            type = QStringLiteral("External");
+            break;
+        case Akonadi::Protocol::PartMetaData::Internal:
+            type = QStringLiteral("Internal");
+            break;
+        case Akonadi::Protocol::PartMetaData::Foreign:
+            type = QStringLiteral("Foreign");
+            break;
+        }
+        appendRow(item, QStringLiteral("Size"), QString::number(part.metaData().size()));
+        appendRow(item, QStringLiteral("Storage Type"), type);
+        appendRow(item, QStringLiteral("Version"), QString::number(part.metaData().version()));
+        appendRow(item, QStringLiteral("Data"), QString::fromUtf8( part.data().toHex()));
+
+        partsItem->appendRow(item);
+    }
+    parent->appendRow(partsItem);
+}
+
+void NotificationMonitor::populateCollectionTree(QStandardItem *parent, const Akonadi::Protocol::FetchCollectionsResponse &collection)
+{
+    appendRow(parent, QStringLiteral("ID"), QString::number(collection.id()));
+    appendRow(parent, QStringLiteral("Parent ID"), QString::number(collection.parentId()));
+    appendRow(parent, QStringLiteral("Name"), collection.name());
+    appendRow(parent, QStringLiteral("Mime Types"), toString(static_cast<QList<QString>>(collection.mimeTypes())));
+    appendRow(parent, QStringLiteral("Remote ID"), collection.remoteId());
+    appendRow(parent, QStringLiteral("Remote Revision"), collection.remoteRevision());
+    auto statsItem = new QStandardItem(QStringLiteral("Statistics"));
+    const auto stats = collection.statistics();
+    appendRow(statsItem, QStringLiteral("Count"), QString::number(stats.count()));
+    appendRow(statsItem, QStringLiteral("Unseen"), QString::number(stats.unseen()));
+    appendRow(statsItem, QStringLiteral("Size"), QString::number(stats.size()));
+    parent->appendRow(statsItem);
+    appendRow(parent, QStringLiteral("Search Query"), collection.searchQuery());
+    appendRow(parent, QStringLiteral("Search Collections"), toString(collection.searchCollections()));
+    auto i = new QStandardItem(QStringLiteral("Ancestor"));
+    parent->appendRow(i);
+    const auto ancestors = collection.ancestors();
+    for (const auto &ancestor : ancestors) {
+        i = populateAncestorTree(i, ancestor);
+    }
+    auto cpItem = new QStandardItem(QStringLiteral("Cache Policy"));
+    const auto cp = collection.cachePolicy();
+    appendRow(cpItem, QStringLiteral("Inherit"), toString(cp.inherit()));
+    appendRow(cpItem, QStringLiteral("Check Interval"), QString::number(cp.checkInterval()));
+    appendRow(cpItem, QStringLiteral("Cache Timeout"), QString::number(cp.cacheTimeout()));
+    appendRow(cpItem, QStringLiteral("Sync on Demand"), toString(cp.syncOnDemand()));
+    appendRow(cpItem, QStringLiteral("Local Parts"), toString(static_cast<QList<QString>>(cp.localParts())));
+    parent->appendRow(cpItem);
+
+    populateAttributesTree(parent, collection.attributes());
+
+    appendRow(parent, QStringLiteral("Enabled"), toString(collection.enabled()));
+    appendRow(parent, QStringLiteral("DisplayPref"), toString(collection.displayPref()));
+    appendRow(parent, QStringLiteral("SyncPref"), toString(collection.syncPref()));
+    appendRow(parent, QStringLiteral("IndexPref"), toString(collection.indexPref()));
+    appendRow(parent, QStringLiteral("Referenced"), toString(collection.referenced()));
+    appendRow(parent, QStringLiteral("Virtual"), toString(collection.isVirtual()));
+}
+
+
+void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, const Akonadi::Protocol::CollectionChangeNotification &ntf)
+{
+    QString operation;
+    switch (ntf.operation()) {
+    case Akonadi::Protocol::CollectionChangeNotification::Add:
+        operation = QStringLiteral("Add");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::Modify:
+        operation = QStringLiteral("Modify");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::Move:
+        operation = QStringLiteral("Move");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::Remove:
+        operation = QStringLiteral("Remove");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::Subscribe:
+        operation = QStringLiteral("Subscribe");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::Unsubscribe:
+        operation = QStringLiteral("Unsubscribe");
+        break;
+    case Akonadi::Protocol::CollectionChangeNotification::InvalidOp:
+        operation = QStringLiteral("InvalidIp");
+        break;
+    }
+    appendRow(model, QStringLiteral("Operation"), operation);
+    appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
+    appendRow(model, QStringLiteral("Parent Collection"), 
+              QString::number(ntf.parentCollection()));
+    appendRow(model, QStringLiteral("Parent Dest Collection"),
+              QString::number(ntf.parentDestCollection()));
+    appendRow(model, QStringLiteral("Destination Resource"),
+              QString::fromUtf8(ntf.destinationResource()));
+    appendRow(model, QStringLiteral("Changed Parts"),
+              toString(ntf.changedParts()));
+    auto item = new QStandardItem(QStringLiteral("Collection"));
+    populateCollectionTree(item, *ntf.collection());
+}
+
+void NotificationMonitor::populateRelationNtfTree(QStandardItemModel *model, const Akonadi::Protocol::RelationChangeNotification &ntf)
+{
+    QString operation;
+    switch (ntf.operation()) {
+    case Akonadi::Protocol::RelationChangeNotification::Add:
+        operation = QStringLiteral("Add");
+        break;
+    case Akonadi::Protocol::RelationChangeNotification::Remove:
+        operation = QStringLiteral("Remove");
+        break;
+    case Akonadi::Protocol::RelationChangeNotification::InvalidOp:
+        operation = QStringLiteral("InvalidOp");
+        break;
+    }
+    appendRow(model, QStringLiteral("Operation"), operation);
+    auto item = new QStandardItem(QStringLiteral("Relation"));
+    const auto rel = ntf.relation();
+    appendRow(item, QStringLiteral("Left ID"), QString::number(rel->left()));
+    appendRow(item, QStringLiteral("Left MimeType"), QString::fromUtf8(rel->leftMimeType()));
+    appendRow(item, QStringLiteral("Right ID"), QString::number(rel->right()));
+    appendRow(item, QStringLiteral("Right MimeType"), QString::fromUtf8(rel->rightMimeType()));
+    appendRow(item, QStringLiteral("Remote ID"), QString::fromUtf8(rel->remoteId()));
+    model->appendRow(item);
+}
+
+void NotificationMonitor::populateTagNtfTree(QStandardItemModel *model, const Akonadi::Protocol::TagChangeNotification &ntf)
+{
+    QString operation;
+    switch (ntf.operation()) {
+    case Akonadi::Protocol::TagChangeNotification::Add:
+        operation = QStringLiteral("Add");
+        break;
+    case Akonadi::Protocol::TagChangeNotification::Modify:
+        operation = QStringLiteral("Modify");
+        break;
+    case Akonadi::Protocol::TagChangeNotification::Remove:
+        operation = QStringLiteral("Remove");
+        break;
+    case Akonadi::Protocol::TagChangeNotification::InvalidOp:
+        operation = QStringLiteral("InvalidOp");
+        break;
+    }
+    appendRow(model, QStringLiteral("Operation"), operation);
+    appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
+    auto tagItem = new QStandardItem(QStringLiteral("Tag"));
+    populateTagTree(tagItem, *ntf.tag());
+    model->appendRow(tagItem);
+}
+
+void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model, const Akonadi::Protocol::SubscriptionChangeNotification &ntf)
+{
+    QString operation;
+    switch (ntf.operation()) {
+    case Akonadi::Protocol::SubscriptionChangeNotification::Add:
+        operation = QStringLiteral("Add");
+        break;
+    case Akonadi::Protocol::SubscriptionChangeNotification::Modify:
+        operation = QStringLiteral("Modify");
+        break;
+    case Akonadi::Protocol::SubscriptionChangeNotification::Remove:
+        operation = QStringLiteral("Remove");
+        break;
+    case Akonadi::Protocol::SubscriptionChangeNotification::InvalidOp:
+        operation = QStringLiteral("InvalidOp");
+        break;
+    }
+    appendRow(model, QStringLiteral("Operation"), operation);
+    appendRow(model, QStringLiteral("Subscriber"), QString::fromUtf8(ntf.subscriber()));
+    appendRow(model, QStringLiteral("Monitored Collections"), toString(ntf.collections()));
+    appendRow(model, QStringLiteral("Monitored Items"), toString(ntf.items()));
+    appendRow(model, QStringLiteral("Monitored Tags"), toString(ntf.tags()));
+    QStringList types;
+    const auto typesSet = ntf.types();
+    for (const auto &type : typesSet) {
+        switch (type) {
+        case Akonadi::Protocol::ModifySubscriptionCommand::ItemChanges:
+            types.push_back(QStringLiteral("Items"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::CollectionChanges:
+            types.push_back(QStringLiteral("Collections"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::TagChanges:
+            types.push_back(QStringLiteral("Tags"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::RelationChanges:
+            types.push_back(QStringLiteral("Relations"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::SubscriptionChanges:
+            types.push_back(QStringLiteral("Subscriptions"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::ChangeNotifications:
+            types.push_back(QStringLiteral("Changes"));
+            break;
+        case Akonadi::Protocol::ModifySubscriptionCommand::NoType:
+            types.push_back(QStringLiteral("No Type"));
+            break;
+        }
+    }
+    appendRow(model, QStringLiteral("Monitored Types"), types.join(QStringLiteral(", ")));
+    appendRow(model, QStringLiteral("Monitored Mime Types"), toString(ntf.mimeTypes()));
+    appendRow(model, QStringLiteral("Monitored Resources"), toString(ntf.resources()));
+    appendRow(model, QStringLiteral("Ignored Sessions"), toString(ntf.ignoredSessions()));
+    appendRow(model, QStringLiteral("All Monitored"), toString(ntf.allMonitored()));
+    appendRow(model, QStringLiteral("Exclusive"), toString(ntf.exclusive()));
+
+    auto item = new QStandardItem(QStringLiteral("Item Fetch Scope"));
+    const auto ifs = ntf.itemFetchScope();
+    appendRow(item, QStringLiteral("Requested Parts"), toString(ifs.requestedParts()));
+    appendRow(item, QStringLiteral("Changed Since"), ifs.changedSince().toString(Qt::ISODate));
+    appendRow(item, QStringLiteral("Tag Fetch Scope"), toString(ifs.tagFetchScope()));
+    QString ancestorDepth;
+    switch (ifs.ancestorDepth()) {
+    case Akonadi::Protocol::ItemFetchScope::NoAncestor:
+        ancestorDepth = QStringLiteral("No Ancestor");
+        break;
+    case Akonadi::Protocol::ItemFetchScope::ParentAncestor:
+        ancestorDepth = QStringLiteral("Parent  Ancestor");
+        break;
+    case Akonadi::Protocol::ItemFetchScope::AllAncestors:
+        ancestorDepth = QStringLiteral("All Ancestors");
+        break;
+    }
+    appendRow(item, QStringLiteral("Ancestor Depth"), ancestorDepth);
+    appendRow(item, QStringLiteral("Cache Only"), toString(ifs.cacheOnly()));
+    appendRow(item, QStringLiteral("Check Cached Payload Parts Only"), toString(ifs.checkCachedPayloadPartsOnly()));
+    appendRow(item, QStringLiteral("Full Payload"), toString(ifs.fullPayload()));
+    appendRow(item, QStringLiteral("All Attributes"), toString(ifs.allAttributes()));
+    appendRow(item, QStringLiteral("Fetch Size"), toString(ifs.fetchSize()));
+    appendRow(item, QStringLiteral("Fetch MTime"), toString(ifs.fetchMTime()));
+    appendRow(item, QStringLiteral("Fetch Remote Revision"), toString(ifs.fetchRemoteRevision()));
+    appendRow(item, QStringLiteral("Ignore Errors"), toString(ifs.ignoreErrors()));
+    appendRow(item, QStringLiteral("Fetch Flags"), toString(ifs.fetchFlags()));
+    appendRow(item, QStringLiteral("Fetch RemoteID"), toString(ifs.fetchRemoteId()));
+    appendRow(item, QStringLiteral("Fetch GID"), toString(ifs.fetchGID()));
+    appendRow(item, QStringLiteral("Fetch Tags"), toString(ifs.fetchTags()));
+    appendRow(item, QStringLiteral("Fetch Relations"), toString(ifs.fetchRelations()));
+    appendRow(item, QStringLiteral("Fetch VRefs"), toString(ifs.fetchVirtualReferences()));
+    model->appendRow(item);
+
+    item = new QStandardItem(QStringLiteral("Collection Fetch Scope"));
+    const auto cfs = ntf.collectionFetchScope();
+    QString listFilter;
+    switch (cfs.listFilter()) {
+    case Akonadi::Protocol::CollectionFetchScope::NoFilter:
+        listFilter = QStringLiteral("No Filter");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::Display:
+        listFilter = QStringLiteral("Display");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::Enabled:
+        listFilter = QStringLiteral("Enabled");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::Index:
+        listFilter = QStringLiteral("Index");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::Sync:
+        listFilter = QStringLiteral("Sync");
+        break;
+    }
+    appendRow(item, QStringLiteral("List Filter"), listFilter);
+    appendRow(item, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
+    appendRow(item, QStringLiteral("Resource"), cfs.resource());
+    appendRow(item, QStringLiteral("Content Mime Types"),
+              cfs.contentMimeTypes().join(QStringLiteral(", ")));
+    appendRow(item, QStringLiteral("Attributes"), toString(cfs.attributes()));
+    appendRow(item, QStringLiteral("Fetch ID Only"), toString(cfs.fetchIdOnly()));
+    QString ancestorRetrieval;
+    switch (cfs.ancestorRetrieval()) {
+    case Akonadi::Protocol::CollectionFetchScope::All:
+        ancestorRetrieval = QStringLiteral("All");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::Parent:
+        ancestorRetrieval = QStringLiteral("Parent");
+        break;
+    case Akonadi::Protocol::CollectionFetchScope::None:
+        ancestorRetrieval = QStringLiteral("None");
+        break;
+    }
+    appendRow(item, QStringLiteral("Ancestor Retrieval"), ancestorRetrieval);
+    appendRow(item, QStringLiteral("Ancestor Fetch ID Only"),  toString(cfs.ancestorFetchIdOnly()));
+    appendRow(item, QStringLiteral("Ancestor Attributes"), toString(cfs.ancestorAttributes()));
+    appendRow(item, QStringLiteral("Ignore Retrieval Errors"), toString(cfs.ignoreRetrievalErrors()));
+    model->appendRow(item);
 }

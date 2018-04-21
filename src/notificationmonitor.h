@@ -21,25 +21,45 @@
 #define AKONADICONSOLE_NOTIFICATIONMONITOR_H
 
 #include <QWidget>
+#include <akonadi/private/protocol_p.h>
 
 class QModelIndex;
 class NotificationModel;
 class QFile;
+class QTreeView;
+class QStandardItem;
+class QStandardItemModel;
+class QSplitter;
 
 class NotificationMonitor : public QWidget
 {
     Q_OBJECT
 public:
     explicit NotificationMonitor(QWidget *parent);
+    ~NotificationMonitor() override;
 
 private Q_SLOTS:
     void contextMenu(const QPoint &pos);
-    void slotSaveToFile();
 
 private:
-    void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
+    void onNotificationSelected(const QModelIndex &index);
+
+    void populateItemNtfTree(QStandardItemModel *model, const Akonadi::Protocol::ItemChangeNotification &ntf);
+    void populateCollectionNtfTree(QStandardItemModel *mddel, const Akonadi::Protocol::CollectionChangeNotification &ntf);
+    void populateTagNtfTree(QStandardItemModel *model, const Akonadi::Protocol::TagChangeNotification &ntf);
+    void populateRelationNtfTree(QStandardItemModel *model, const Akonadi::Protocol::RelationChangeNotification &ntf);
+    void populateSubscriptionNtfTree(QStandardItemModel *model, const Akonadi::Protocol::SubscriptionChangeNotification &ntf);
+
+    void populateItemTree(QStandardItem *parent, const Akonadi::Protocol::FetchItemsResponse &item);
+    void populateCollectionTree(QStandardItem *parent, const Akonadi::Protocol::FetchCollectionsResponse &collection);
+    void populateTagTree(QStandardItem *parent, const Akonadi::Protocol::FetchTagsResponse &tag);
+    void populateAttributesTree(QStandardItem *parent, const Akonadi::Protocol::Attributes &attributes);
+    QStandardItem *populateAncestorTree(QStandardItem *parent, const Akonadi::Protocol::Ancestor &ancestor);
 
     NotificationModel *m_model = nullptr;
+    QSplitter *m_splitter = nullptr;
+    QTreeView *m_treeView = nullptr;
+    QTreeView *m_ntfView = nullptr;
 };
 
 #endif

@@ -37,6 +37,20 @@ class NotificationModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
+    enum Role {
+        NotificationRole = Qt::UserRole
+    };
+    enum Columns {
+        DateColumn,
+        TypeColumn,
+        OperationColumn,
+        IdsColumn,
+        SessionColumn,
+        ListenersColumn,
+
+        _ColumnCount
+    };
+
     explicit NotificationModel(QObject *parent);
     ~NotificationModel();
 
@@ -62,16 +76,7 @@ private Q_SLOTS:
     void slotNotify(const Akonadi::ChangeNotification &msg);
 
 private:
-    class Item;
-    class NotificationBlock;
-    class NotificationEntity;
-    class ItemNotificationNode;
-    class CollectionNotificationNode;
-    class TagNotificationNode;
-    class RelationNotificationNode;
-    class SubscriptionNotificationNode;
-
-    QList<Item *> m_data;
+    QList<Akonadi::ChangeNotification> m_data;
 
     Akonadi::Monitor *m_monitor = nullptr;
 };
