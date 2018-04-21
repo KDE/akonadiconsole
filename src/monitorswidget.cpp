@@ -19,6 +19,7 @@
 
 #include "monitorswidget.h"
 #include "monitorsmodel.h"
+#include "utils.h"
 
 #include <QVBoxLayout>
 #include <qheaderview.h>
@@ -72,18 +73,7 @@ MonitorsWidget::~MonitorsWidget()
     config.writeEntry("subscriberViewState", mSubscriberView->header()->saveState());
 }
 
-namespace {
-
-template<typename T, template<typename> class Container>
-QString toString(const Container<T> &set)
-{
-    QStringList rv;
-    for (const auto &v : set) {
-        rv << QVariant(v).toString();
-    }
-    return rv.join(QStringLiteral(", "));
-}
-
+// Specialization of function template from utils.h
 template<>
 QString toString(const QSet<Akonadi::Monitor::Type> &set)
 {
@@ -113,31 +103,15 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
     return rv.join(QStringLiteral(", "));
 }
 
-QString toString(bool value)
-{
-    return value ? QStringLiteral("true") : QStringLiteral("false");
-}
-
-QString toString(const QDateTime &dt)
-{
-    return dt.toString(Qt::ISODate);
-}
-
-}
 
 void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent,
                                                   const Akonadi::CollectionFetchScope &cfs)
 {
-    parent->appendRow({ new QStandardItem(QStringLiteral("List Filter")),
-                         new QStandardItem(toString(cfs.listFilter())) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Include Statistics")),
-                         new QStandardItem(toString(cfs.includeStatistics())) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Resource")),
-                         new QStandardItem(cfs.resource()) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Content MimeTypes")),
-                         new QStandardItem(toString(static_cast<QList<QString>>(cfs.contentMimeTypes()))) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Ancestor Retrieval")),
-                         new QStandardItem(toString(cfs.ancestorRetrieval())) });
+    appendRow(parent, QStringLiteral("List Filter"), toString(cfs.listFilter()));
+    appendRow(parent, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
+    appendRow(parent, QStringLiteral("Resource"), cfs.resource());
+    appendRow(parent, QStringLiteral("Content MimeTypes"), toString(static_cast<QList<QString>>(cfs.contentMimeTypes())));
+    appendRow(parent, QStringLiteral("Ancestor Retrieval"), toString(cfs.ancestorRetrieval()));
 
     const auto ancestorFs = cfs.ancestorFetchScope();
     if (!ancestorFs.isEmpty()) {
@@ -146,22 +120,16 @@ void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent,
         parent->appendRow(ancestorItem);
     }
 
-    parent->appendRow({ new QStandardItem(QStringLiteral("Attributes")),
-                         new QStandardItem(toString(cfs.attributes())) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Fetch ID Only")),
-                         new QStandardItem(toString(cfs.fetchIdOnly())) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Ignore Retrieval Error")),
-                         new QStandardItem(toString(cfs.ignoreRetrievalErrors())) });
-
+    appendRow(parent, QStringLiteral("Attributes"), toString(cfs.attributes()));
+    appendRow(parent, QStringLiteral("Fetch ID Only"), toString(cfs.fetchIdOnly()));
+    appendRow(parent, QStringLiteral("Ignore Retrieval Error"), toString(cfs.ignoreRetrievalErrors()));
 }
 
 void MonitorsWidget::populateTagFetchScope(QStandardItem *parent,
                                            const Akonadi::TagFetchScope& tfs)
 {
-    parent->appendRow({ new QStandardItem(QStringLiteral("Attributes")),
-                        new QStandardItem(toString(tfs.attributes())) });
-    parent->appendRow({ new QStandardItem(QStringLiteral("Fetch ID Only")),
-                        new QStandardItem(toString(tfs.fetchIdOnly())) });
+    appendRow(parent, QStringLiteral("Attributes"), toString(tfs.attributes()));
+    appendRow(parent, QStringLiteral("Fetch ID Only"), toString(tfs.fetchIdOnly()));
 }
 
 
@@ -178,67 +146,38 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex& index)
         return;
     }
 
-    model->appendRow({ new QStandardItem(QStringLiteral("Subscriber")),
-                       new QStandardItem(QString::fromUtf8(subscriber.subscriber())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Session ID")),
-                       new QStandardItem(QString::fromUtf8(subscriber.sessionId())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Collections:")),
-                       new QStandardItem(toString(subscriber.monitoredCollections())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Items:")),
-                       new QStandardItem(toString(subscriber.monitoredItems())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Tags:")),
-                       new QStandardItem(toString(subscriber.monitoredTags())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Types:")),
-                       new QStandardItem(toString(subscriber.monitoredTypes())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Mime Types:")),
-                       new QStandardItem(toString(subscriber.monitoredMimeTypes())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Monitored Resources:")), 
-                       new QStandardItem(toString(subscriber.monitoredResources())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Ignored Sessions:")),
-                       new QStandardItem(toString(subscriber.ignoredSessions())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("All Monitored:")),
-                       new QStandardItem(toString(subscriber.isAllMonitored())) });
-    model->appendRow({ new QStandardItem(QStringLiteral("Is Exclusive:")),
-                       new QStandardItem(toString(subscriber.isExclusive())) });
+    appendRow(model, QStringLiteral("Subscriber"), QString::fromUtf8(subscriber.subscriber()));
+    appendRow(model, QStringLiteral("Session ID"), QString::fromUtf8(subscriber.sessionId()));
+    appendRow(model, QStringLiteral("Monitored Collections:"), toString(subscriber.monitoredCollections()));
+    appendRow(model, QStringLiteral("Monitored Items:"), toString(subscriber.monitoredItems()));
+    appendRow(model, QStringLiteral("Monitored Tags:"), toString(subscriber.monitoredTags()));
+    appendRow(model, QStringLiteral("Monitored Types:"), toString(subscriber.monitoredTypes()));
+    appendRow(model, QStringLiteral("Monitored Mime Types:"), toString(subscriber.monitoredMimeTypes()));
+    appendRow(model, QStringLiteral("Monitored Resources:"), toString(subscriber.monitoredResources()));
+    appendRow(model, QStringLiteral("Ignored Sessions:"), toString(subscriber.ignoredSessions()));
+    appendRow(model, QStringLiteral("All Monitored:"), toString(subscriber.isAllMonitored()));
+    appendRow(model, QStringLiteral("Is Exclusive:"), toString(subscriber.isExclusive()));
 
+    auto ifsItem = new QStandardItem(QStringLiteral("Item Fetch Scope"));
     const auto ifs = subscriber.itemFetchScope();
-    auto ifsItem = new QStandardItem(QStringLiteral("ItemFetchScope"));
-    model->appendRow(ifsItem);
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Payload Parts")),
-                         new QStandardItem(toString(ifs.payloadParts())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Full Paryload")),
-                         new QStandardItem(toString(ifs.fullPayload())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Attributes")),
-                         new QStandardItem(toString(ifs.attributes())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("All Attributes")),
-                         new QStandardItem(toString(ifs.allAttributes())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Cache only")),
-                         new QStandardItem(toString(ifs.cacheOnly())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Check for Cached Payloads Parts Only")),
-                         new QStandardItem(toString(ifs.checkForCachedPayloadPartsOnly())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Ancestor Retrieval")),
-                         new QStandardItem(toString(ifs.ancestorRetrieval())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch mtime")),
-                         new QStandardItem(toString(ifs.fetchModificationTime())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch GID")),
-                         new QStandardItem(toString(ifs.fetchGid())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Ignore Retrieval Errors")),
-                         new QStandardItem(toString(ifs.ignoreRetrievalErrors())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch Change Since")),
-                         new QStandardItem(toString(ifs.fetchChangedSince())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch RID")),
-                         new QStandardItem(toString(ifs.fetchRemoteIdentification())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch Tags")),
-                         new QStandardItem(toString(ifs.fetchTags())) });
+    appendRow(ifsItem, QStringLiteral("Payload Parts"), toString(ifs.payloadParts()));
+    appendRow(ifsItem, QStringLiteral("Full Paryload"), toString(ifs.fullPayload()));
+    appendRow(ifsItem, QStringLiteral("Attributes"), toString(ifs.attributes()));
+    appendRow(ifsItem, QStringLiteral("All Attributes"), toString(ifs.allAttributes()));
+    appendRow(ifsItem, QStringLiteral("Cache only"), toString(ifs.cacheOnly()));
+    appendRow(ifsItem, QStringLiteral("Check for Cached Payloads Parts Only"),
+              toString(ifs.checkForCachedPayloadPartsOnly()));
+    appendRow(ifsItem, QStringLiteral("Ancestor Retrieval"), toString(ifs.ancestorRetrieval()));
+    appendRow(ifsItem, QStringLiteral("Fetch mtime"), toString(ifs.fetchModificationTime()));
+    appendRow(ifsItem, QStringLiteral("Fetch GID"), toString(ifs.fetchGid()));
+    appendRow(ifsItem, QStringLiteral("Ignore Retrieval Errors"), toString(ifs.ignoreRetrievalErrors()));
+    appendRow(ifsItem, QStringLiteral("Fetch Change Since"), toString(ifs.fetchChangedSince()));
+    appendRow(ifsItem, QStringLiteral("Fetch RID"), toString(ifs.fetchRemoteIdentification()));
+    appendRow(ifsItem, QStringLiteral("Fetch Tags"), toString(ifs.fetchTags()));
 
     auto tfsItem = new QStandardItem(QStringLiteral("Tag Fetch Scope"));
     populateTagFetchScope(tfsItem, ifs.tagFetchScope());
-    ifsItem->appendRow(tfsItem);
-
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch VRefs")),
-                         new QStandardItem(toString(ifs.fetchVirtualReferences())) });
-    ifsItem->appendRow({ new QStandardItem(QStringLiteral("Fetch Relations")),
-                         new QStandardItem(toString(ifs.fetchRelations())) });
+    model->appendRow(ifsItem);
 
     const auto cfs = subscriber.collectionFetchScope();
     auto cfsItem = new QStandardItem(QStringLiteral("Collection Fetch Scope"));
