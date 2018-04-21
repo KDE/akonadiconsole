@@ -397,6 +397,7 @@ void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, c
               toString(ntf.changedParts()));
     auto item = new QStandardItem(QStringLiteral("Collection"));
     populateCollectionTree(item, *ntf.collection());
+    model->appendRow(item);
 }
 
 void NotificationMonitor::populateRelationNtfTree(QStandardItemModel *model, const Akonadi::Protocol::RelationChangeNotification &ntf)
