@@ -84,13 +84,17 @@ QString toString(const Container<T> &set)
 inline
 void appendRow(QStandardItemModel *model, const QString &name, const QString &value)
 {
-    model->appendRow({ new QStandardItem(name), new QStandardItem(value) });
+    auto item = new QStandardItem(value);
+    item->setToolTip(value);
+    model->appendRow({ new QStandardItem(name), item });
 }
 
 inline
 void appendRow(QStandardItem *parent, const QString &name, const QString &value)
 {
-    parent->appendRow({ new QStandardItem(name), new QStandardItem(value) });
+    auto item = new QStandardItem(value);
+    item->setToolTip(value);
+    parent->appendRow({ new QStandardItem(name), item });
 }
 
 #endif
