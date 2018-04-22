@@ -55,6 +55,7 @@
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 #include <KCalCore/Incidence>
+#include <KCalCore/ICalFormat>
 
 #include "akonadiconsole_debug.h"
 #include <kconfig.h>
@@ -351,6 +352,21 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     contentUi.saveButton->setEnabled(false);
 
     QByteArray data = item.payloadData();
+
+    // Note that this is true for *all* items as soon as the binary format is enabled.
+    // Independently from how they are actually stored in the database.
+    if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+        quint32 magic;
+        QDataStream input(data);
+        input >> magic;
+        KCalCore::ICalFormat format;
+        if (magic == KCalCore::IncidenceBase::magicSerializationIdentifier()) {
+            // Binary format isn't readable, show KCalCore string instead.
+            auto incidence = item.payload<KCalCore::Incidence::Ptr>();
+            data = "(converted from binary format)\n" + format.toRawString(incidence);
+        }
+    }
+
     contentUi.dataView->setPlainText(QString::fromLatin1(data));
 
     contentUi.id->setText(QString::number(item.id()));
