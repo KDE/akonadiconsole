@@ -30,6 +30,9 @@ set(libakonadiconsole_SRCS
     dbconsole.cpp
     debugwidget.cpp
     instanceselector.cpp
+    logging.cpp
+    loggingfiltermodel.cpp
+    loggingmodel.cpp
     mainwidget.cpp
     mainwindow.cpp
     monitorswidget.cpp
@@ -50,6 +53,7 @@ endif()
 
 qt5_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
 qt5_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Akonadi.JobTracker.xml jobtracker.h JobTracker)
+qt5_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.akonadiconsole.logger.xml logging.h Logging)
 
 qt5_add_dbus_interfaces(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.TracerNotification.xml

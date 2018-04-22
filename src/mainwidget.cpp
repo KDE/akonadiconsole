@@ -33,6 +33,7 @@
 #include "notificationmonitor.h"
 #include "monitorswidget.h"
 #include "querydebugger.h"
+#include "logging.h"
 
 #include <AkonadiWidgets/agentinstancewidget.h>
 #include <AkonadiCore/agentfilterproxymodel.h>
@@ -60,6 +61,7 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     mBrowser = new BrowserWidget(parent, tabWidget);
     tabWidget->addTab(mBrowser, QStringLiteral("Browser"));
     tabWidget->addTab(new DebugWidget(tabWidget), QStringLiteral("Debugger"));
+    tabWidget->addTab(new Logging(tabWidget), QStringLiteral("Logging"));
     tabWidget->addTab(new DbBrowser(tabWidget), QStringLiteral("DB Browser"));
     tabWidget->addTab(new DbConsole(tabWidget), QStringLiteral("DB Console"));
     tabWidget->addTab(new QueryDebugger(tabWidget), QStringLiteral("Query Debugger"));
