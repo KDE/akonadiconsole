@@ -21,21 +21,27 @@
 
 #include "connectionpage.h"
 
-#include <KTextEdit>
+#include <QHeaderView>
+#include <QTableView>
 
 #include <QVBoxLayout>
 #include <QFontDatabase>
 
 #include "tracernotificationinterface.h"
+#include <QStandardItemModel>
 
 ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     : QWidget(parent), mIdentifier(identifier), mShowAllConnections(false)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
 
-    mDataView = new KTextEdit(this);
-    mDataView->setReadOnly(true);
+    mModel = new QStandardItemModel(0,3,this);
+    mModel->setHorizontalHeaderLabels({ QStringLiteral("Sender"), QStringLiteral("Direction"), QStringLiteral("Message") });
+
+    auto mDataView = new QTableView(this);
+    mDataView->setModel(mModel);
     mDataView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
+    mDataView->horizontalHeader()->setStretchLastSection(true);
 
     layout->addWidget(mDataView);
 
@@ -45,6 +51,8 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
             this, &ConnectionPage::connectionDataInput);
     connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataOutput,
             this, &ConnectionPage::connectionDataOutput);
+    connect(mDataView->horizontalHeader(), &QHeaderView::sectionResized,
+            mDataView, &QTableView::resizeRowsToContents);
 }
 
 void ConnectionPage::connectionDataInput(const QString &identifier, const QString &msg)
@@ -52,7 +60,10 @@ void ConnectionPage::connectionDataInput(const QString &identifier, const QStrin
     QString str = QStringLiteral("<font color=\"green\">%2</font>").arg(identifier) + QLatin1Char(' ');
     if (mShowAllConnections || identifier == mIdentifier) {
         str += QStringLiteral("<font color=\"red\">%1</font>").arg(msg.toHtmlEscaped());
-        mDataView->append(str);
+
+        auto out = new QStandardItem(QStringLiteral("<-"));
+        out->setForeground(Qt::red);
+        mModel->appendRow(QList<QStandardItem*>() << new QStandardItem(identifier) << out <<  new QStandardItem(msg.trimmed()));
     }
 }
 
@@ -61,7 +72,10 @@ void ConnectionPage::connectionDataOutput(const QString &identifier, const QStri
     QString str = QStringLiteral("<font color=\"green\">%2</font>").arg(identifier) + QLatin1Char(' ');
     if (mShowAllConnections || identifier == mIdentifier) {
         str += msg.toHtmlEscaped();
-        mDataView->append(str);
+
+        auto out = new QStandardItem(QStringLiteral("->"));
+        out->setForeground(Qt::green);
+        mModel->appendRow({new QStandardItem(identifier), out, new QStandardItem(msg.trimmed())});
     }
 }
 
@@ -72,11 +86,21 @@ void ConnectionPage::showAllConnections(bool show)
 
 QString ConnectionPage::toHtml() const
 {
-    return mDataView->toHtml();
+    QString ret;
+    int anz = mModel->rowCount();
+    for (int row=0; row < anz; row++) {
+        const auto &identifier = mModel->data(mModel->index(row,0)).toString();
+        const auto &direction = mModel->data(mModel->index(row,1)).toString();
+        const auto &msg = mModel->data(mModel->index(row,2)).toString();
+
+        ret += identifier + direction + msg + QStringLiteral("\n");
+
+    }
+    return ret;
 }
 
 void ConnectionPage::clear()
 {
-    mDataView->clear();
+    mModel->removeRows(0, mModel->rowCount());
 }
 

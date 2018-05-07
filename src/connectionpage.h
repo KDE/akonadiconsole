@@ -24,7 +24,8 @@
 
 #include <QWidget>
 
-class KTextEdit;
+class QTableView;
+class QStandardItemModel;
 
 class ConnectionPage : public QWidget
 {
@@ -45,7 +46,8 @@ private Q_SLOTS:
     void connectionDataOutput(const QString &, const QString &);
 
 private:
-    KTextEdit *mDataView = nullptr;
+    QStandardItemModel *mModel = nullptr;
+    QTableView *mDataView = nullptr;
     QString mIdentifier;
     bool mShowAllConnections;
 };
