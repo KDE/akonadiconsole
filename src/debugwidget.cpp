@@ -57,134 +57,41 @@ DebugWidget::DebugWidget(QWidget *parent)
     splitter->setObjectName(QStringLiteral("debugSplitter"));
     layout->addWidget(splitter);
 
-    mConnectionPages = new QTabWidget(splitter);
-    mConnectionPages->setTabsClosable(true);
+    mConnectionPage = new ConnectionPage(QStringLiteral("All"), splitter);
+    mConnectionPage->showAllConnections(true);
 
     mGeneralView = new KTextEdit(splitter);
     mGeneralView->setReadOnly(true);
 
-    ConnectionPage *page = new ConnectionPage(QStringLiteral("All"));
-    page->showAllConnections(true);
-    mConnectionPages->addTab(page, QStringLiteral("All"));
-
-    connect(mConnectionPages, &QTabWidget::tabCloseRequested, this, &DebugWidget::tabCloseRequested);
 
     org::freedesktop::Akonadi::TracerNotification *iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
 
-    connect(iface, &org::freedesktop::Akonadi::TracerNotification::connectionStarted, this, &DebugWidget::connectionStarted);
-    connect(iface, &org::freedesktop::Akonadi::TracerNotification::connectionEnded, this, &DebugWidget::connectionEnded);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::signalEmitted, this, &DebugWidget::signalEmitted);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::warningEmitted, this, &DebugWidget::warningEmitted);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::errorEmitted, this, &DebugWidget::errorEmitted);
 
-    // in case we started listening when the connection is already ongoing
-    connect(iface, &org::freedesktop::Akonadi::TracerNotification::connectionDataInput, this, &DebugWidget::connectionStarted);
-    connect(iface, &org::freedesktop::Akonadi::TracerNotification::connectionDataOutput, this, &DebugWidget::connectionStarted);
-
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     layout->addLayout(buttonLayout);
 
-    QPushButton *clearAllButton = new QPushButton(QStringLiteral("Clear All Tabs"), this);
-    QPushButton *clearCurrentButton = new QPushButton(QStringLiteral("Clear Current Tab"), this);
     QPushButton *clearGeneralButton = new QPushButton(QStringLiteral("Clear Information View"), this);
-    QPushButton *closeAllTabsButton = new QPushButton(QStringLiteral("Close All Tabs"), this);
-    QPushButton *saveRichtextButton = new QPushButton(QStringLiteral("Save as RichText..."), this);
+    QPushButton *clearFilteredButton = new QPushButton(QStringLiteral("Clear Filtered Messages"), this);
+    QPushButton *clearAllButton = new QPushButton(QStringLiteral("Clear All Messages"), this);
+    QPushButton *saveRichtextButton = new QPushButton(QStringLiteral("Save Filtered Messages ..."), this);
+    QPushButton *saveRichtextEverythingButton = new QPushButton(QStringLiteral("Save All Messages ..."), this);
 
+    buttonLayout->addWidget(clearFilteredButton);
     buttonLayout->addWidget(clearAllButton);
-    buttonLayout->addWidget(clearCurrentButton);
     buttonLayout->addWidget(clearGeneralButton);
-    buttonLayout->addWidget(closeAllTabsButton);
     buttonLayout->addWidget(saveRichtextButton);
+    buttonLayout->addWidget(saveRichtextEverythingButton);
 
-    connect(clearAllButton, &QPushButton::clicked, this, &DebugWidget::clearAllTabs);
-    connect(clearCurrentButton, &QPushButton::clicked, this, &DebugWidget::clearCurrentTab);
+    connect(clearFilteredButton, &QPushButton::clicked, mConnectionPage, &ConnectionPage::clearFiltered);
+    connect(clearAllButton, &QPushButton::clicked, mConnectionPage, &ConnectionPage::clear);
     connect(clearGeneralButton, &QPushButton::clicked, mGeneralView, &KTextEdit::clear);
-    connect(closeAllTabsButton, &QPushButton::clicked, this, &DebugWidget::closeAllTabs);
     connect(saveRichtextButton, &QPushButton::clicked, this, &DebugWidget::saveRichText);
+    connect(saveRichtextEverythingButton, &QPushButton::clicked, this, &DebugWidget::saveEverythingRichText);
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
-}
-
-void DebugWidget::connectionStarted(const QString &identifier, const QString &msg)
-{
-    Q_UNUSED(msg);
-    if (mPageHash.contains(identifier)) {
-        return;
-    }
-
-    ConnectionPage *page = new ConnectionPage(identifier);
-    mConnectionPages->addTab(page, identifier);
-
-    mPageHash.insert(identifier, page);
-}
-
-void DebugWidget::connectionEnded(const QString &identifier, const QString &)
-{
-    if (!mPageHash.contains(identifier)) {
-        return;
-    }
-
-    QWidget *widget = mPageHash[ identifier ];
-
-    mConnectionPages->removeTab(mConnectionPages->indexOf(widget));
-
-    mPageHash.remove(identifier);
-    delete widget;
-}
-
-void DebugWidget::tabCloseRequested(int index)
-{
-    if (index != 0) {
-        QWidget *page = mConnectionPages->widget(index);
-        QMutableHashIterator<QString, ConnectionPage *> it(mPageHash);
-        while (it.hasNext()) {
-            it.next();
-            if (it.value() == page) {
-                it.remove();
-                break;
-            }
-        }
-
-        mConnectionPages->removeTab(index);
-        delete page;
-    }
-}
-
-void DebugWidget::clearAllTabs()
-{
-    ConnectionPage *page = qobject_cast<ConnectionPage *>(mConnectionPages->widget(0));
-    if (page) {
-        page->clear();
-    }
-
-    QMutableHashIterator<QString, ConnectionPage *> it(mPageHash);
-    while (it.hasNext()) {
-        it.next().value()->clear();
-    }
-}
-
-void DebugWidget::clearCurrentTab()
-{
-    ConnectionPage *page = qobject_cast<ConnectionPage *>(mConnectionPages->currentWidget());
-    if (!page) {
-        return;
-    }
-
-    page->clear();
-}
-
-void DebugWidget::closeAllTabs()
-{
-    ConnectionPage *page = qobject_cast<ConnectionPage *>(mConnectionPages->widget(0));
-    if (page) {
-        page->clear();
-    }
-
-    while (mConnectionPages->count() > 1) {
-        mConnectionPages->removeTab(1);
-    }
-    qDeleteAll(mPageHash);
-    mPageHash.clear();
 }
 
 void DebugWidget::signalEmitted(const QString &signalName, const QString &msg)
@@ -209,11 +116,6 @@ void DebugWidget::enableDebugger(bool enable)
 
 void DebugWidget::saveRichText()
 {
-    ConnectionPage *page = qobject_cast<ConnectionPage *>(mConnectionPages->currentWidget());
-    if (!page) {
-        return;
-    }
-
     const QString fileName = QFileDialog::getSaveFileName(this);
     if (fileName.isEmpty()) {
         return;
@@ -224,7 +126,22 @@ void DebugWidget::saveRichText()
         return;
     }
 
-    file.write(page->toHtml().toUtf8());
+    file.write(mConnectionPage->toHtmlFiltered().toUtf8());
     file.close();
 }
 
+void DebugWidget::saveEverythingRichText()
+{
+    const QString fileName = QFileDialog::getSaveFileName(this);
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly)) {
+        return;
+    }
+
+    file.write(mConnectionPage->toHtml().toUtf8());
+    file.close();
+}

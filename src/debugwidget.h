@@ -27,7 +27,6 @@
 #include <QHash>
 #include <QWidget>
 
-class QTabWidget;
 class KTextEdit;
 
 class ConnectionPage;
@@ -40,24 +39,18 @@ public:
     explicit DebugWidget(QWidget *parent = nullptr);
 
 private Q_SLOTS:
-    void connectionStarted(const QString &, const QString &);
-    void connectionEnded(const QString &, const QString &);
     void signalEmitted(const QString &, const QString &);
     void warningEmitted(const QString &, const QString &);
     void errorEmitted(const QString &, const QString &);
 
     void enableDebugger(bool enable);
 
-    void tabCloseRequested(int index);
-    void clearAllTabs();
-    void clearCurrentTab();
     void saveRichText();
-    void closeAllTabs();
+    void saveEverythingRichText();
 
 private:
     KTextEdit *mGeneralView = nullptr;
-    QTabWidget *mConnectionPages = nullptr;
-    QHash<QString, ConnectionPage *> mPageHash;
+    ConnectionPage *mConnectionPage = nullptr;
     org::freedesktop::Akonadi::DebugInterface *mDebugInterface = nullptr;
 };
 

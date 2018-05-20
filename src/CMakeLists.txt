@@ -28,6 +28,8 @@ set(libakonadiconsole_SRCS
     dbaccess.cpp
     dbbrowser.cpp
     dbconsole.cpp
+    debugfiltermodel.cpp
+    debugmodel.cpp
     debugwidget.cpp
     instanceselector.cpp
     logging.cpp

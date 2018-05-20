@@ -24,8 +24,14 @@
 
 #include <QWidget>
 
+class DebugModel;
+class DebugFilterModel;
+class QAbstractItemModel;
 class QTableView;
-class QStandardItemModel;
+
+namespace KPIM {
+class KCheckComboBox;
+}
 
 class ConnectionPage : public QWidget
 {
@@ -37,17 +43,23 @@ public:
     void showAllConnections(bool);
 
     QString toHtml() const;
+    QString toHtmlFiltered() const;
 
 public Q_SLOTS:
     void clear();
+    void clearFiltered();
 
 private Q_SLOTS:
     void connectionDataInput(const QString &, const QString &);
     void connectionDataOutput(const QString &, const QString &);
 
 private:
-    QStandardItemModel *mModel = nullptr;
+    QString toHtml(QAbstractItemModel *model) const;
+
+    DebugModel *mModel = nullptr;
+    DebugFilterModel *mFilterModel = nullptr;
     QTableView *mDataView = nullptr;
+    KPIM::KCheckComboBox *mSenderFilter = nullptr;
     QString mIdentifier;
     bool mShowAllConnections;
 };
