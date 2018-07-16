@@ -172,6 +172,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 case Akonadi::Protocol::SubscriptionChangeNotification::InvalidOp:
                     return QStringLiteral("InvalidOp");
                 }
+                return {};
             default:
                 return QStringLiteral("Unknown");
             }
@@ -181,14 +182,14 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 QStringList rv;
                 const auto items = Protocol::cmdCast<Protocol::ItemChangeNotification>(msg.notification()).items();
                 for (const auto &item : items) {
-                    rv.push_back(QString::number(item->id()));
+                    rv.push_back(QString::number(item.id()));
                 }
                 return rv.join(QStringLiteral(", "));
             }
             case ChangeNotification::Collection:
-                return Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).collection()->id();
+                return Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).collection().id();
             case ChangeNotification::Tag:
-                return Protocol::cmdCast<Protocol::TagChangeNotification>(msg.notification()).tag()->id();
+                return Protocol::cmdCast<Protocol::TagChangeNotification>(msg.notification()).tag().id();
             case ChangeNotification::Relation:
             case ChangeNotification::Subscription:
                 return {};

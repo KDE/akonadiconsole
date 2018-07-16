@@ -216,10 +216,10 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     model->appendRow(relationsItem);
 
     auto itemsItem = new QStandardItem(QStringLiteral("Items"));
-    const auto items = ntf.items();
+    const auto &items = ntf.items();
     for (const auto &item : items) {
-        auto i = new QStandardItem(QString::number(item->id()));
-        populateItemTree(i, *item);
+        auto i = new QStandardItem(QString::number(item.id()));
+        populateItemTree(i, item);
         itemsItem->appendRow(i);
     }
     model->appendRow(itemsItem);
@@ -387,7 +387,7 @@ void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, c
     }
     appendRow(model, QStringLiteral("Operation"), operation);
     appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
-    appendRow(model, QStringLiteral("Parent Collection"), 
+    appendRow(model, QStringLiteral("Parent Collection"),
               QString::number(ntf.parentCollection()));
     appendRow(model, QStringLiteral("Parent Dest Collection"),
               QString::number(ntf.parentDestCollection()));
@@ -396,7 +396,7 @@ void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, c
     appendRow(model, QStringLiteral("Changed Parts"),
               toString(ntf.changedParts()));
     auto item = new QStandardItem(QStringLiteral("Collection"));
-    populateCollectionTree(item, *ntf.collection());
+    populateCollectionTree(item, ntf.collection());
     model->appendRow(item);
 }
 
@@ -417,11 +417,11 @@ void NotificationMonitor::populateRelationNtfTree(QStandardItemModel *model, con
     appendRow(model, QStringLiteral("Operation"), operation);
     auto item = new QStandardItem(QStringLiteral("Relation"));
     const auto rel = ntf.relation();
-    appendRow(item, QStringLiteral("Left ID"), QString::number(rel->left()));
-    appendRow(item, QStringLiteral("Left MimeType"), QString::fromUtf8(rel->leftMimeType()));
-    appendRow(item, QStringLiteral("Right ID"), QString::number(rel->right()));
-    appendRow(item, QStringLiteral("Right MimeType"), QString::fromUtf8(rel->rightMimeType()));
-    appendRow(item, QStringLiteral("Remote ID"), QString::fromUtf8(rel->remoteId()));
+    appendRow(item, QStringLiteral("Left ID"), QString::number(rel.left()));
+    appendRow(item, QStringLiteral("Left MimeType"), QString::fromUtf8(rel.leftMimeType()));
+    appendRow(item, QStringLiteral("Right ID"), QString::number(rel.right()));
+    appendRow(item, QStringLiteral("Right MimeType"), QString::fromUtf8(rel.rightMimeType()));
+    appendRow(item, QStringLiteral("Remote ID"), QString::fromUtf8(rel.remoteId()));
     model->appendRow(item);
 }
 
@@ -445,7 +445,7 @@ void NotificationMonitor::populateTagNtfTree(QStandardItemModel *model, const Ak
     appendRow(model, QStringLiteral("Operation"), operation);
     appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
     auto tagItem = new QStandardItem(QStringLiteral("Tag"));
-    populateTagTree(tagItem, *ntf.tag());
+    populateTagTree(tagItem, ntf.tag());
     model->appendRow(tagItem);
 }
 
