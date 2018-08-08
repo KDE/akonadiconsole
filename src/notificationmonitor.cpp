@@ -215,6 +215,9 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     }
     model->appendRow(relationsItem);
 
+    appendRow(model, QStringLiteral("Must retrieve"),
+              toString(ntf.mustRetrieve()));
+
     auto itemsItem = new QStandardItem(QStringLiteral("Items"));
     const auto &items = ntf.items();
     for (const auto &item : items) {
