@@ -80,7 +80,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
         const auto msg = m_data.at(index.row());
         switch (index.column()) {
         case DateColumn:
-            return msg.timestamp();
+            return msg.timestamp().toString(Qt::ISODateWithMs);
         case TypeColumn:
             switch (msg.type()) {
             case ChangeNotification::Items:
