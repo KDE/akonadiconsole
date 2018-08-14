@@ -113,7 +113,7 @@ void NotificationMonitor::onNotificationSelected(const QModelIndex &index)
         return;
     }
 
-    appendRow(model, QStringLiteral("Timestamp"), ntf.timestamp().toString(Qt::ISODate));
+    appendRow(model, QStringLiteral("Timestamp"), ntf.timestamp().toString(Qt::ISODateWithMs));
     appendRow(model, QStringLiteral("Type"),
               index.sibling(index.row(), NotificationModel::TypeColumn).data().toString());
     appendRow(model, QStringLiteral("Listeners"),
@@ -511,7 +511,7 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     auto item = new QStandardItem(QStringLiteral("Item Fetch Scope"));
     const auto ifs = ntf.itemFetchScope();
     appendRow(item, QStringLiteral("Requested Parts"), toString(ifs.requestedParts()));
-    appendRow(item, QStringLiteral("Changed Since"), ifs.changedSince().toString(Qt::ISODate));
+    appendRow(item, QStringLiteral("Changed Since"), ifs.changedSince().toString(Qt::ISODateWithMs));
     appendRow(item, QStringLiteral("Tag Fetch Scope"), toString(ifs.tagFetchScope()));
     QString ancestorDepth;
     switch (ifs.ancestorDepth()) {
