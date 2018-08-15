@@ -40,6 +40,7 @@ set(libakonadiconsole_SRCS
     monitorswidget.cpp
     monitorsmodel.cpp
     notificationmodel.cpp
+    notificationfiltermodel.cpp
     notificationmonitor.cpp
     querydebugger.cpp
     tagpropertiesdialog.cpp

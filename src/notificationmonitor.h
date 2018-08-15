@@ -25,11 +25,15 @@
 
 class QModelIndex;
 class NotificationModel;
+class NotificationFilterModel;
 class QFile;
 class QTreeView;
 class QStandardItem;
 class QStandardItemModel;
 class QSplitter;
+namespace KPIM {
+class KCheckComboBox;
+}
 
 class NotificationMonitor : public QWidget
 {
@@ -60,6 +64,8 @@ private:
     QSplitter *m_splitter = nullptr;
     QTreeView *m_treeView = nullptr;
     QTreeView *m_ntfView = nullptr;
+    KPIM::KCheckComboBox *mTypeFilterCombo = nullptr;
+    NotificationFilterModel *m_filterModel = nullptr;
 };
 
 #endif

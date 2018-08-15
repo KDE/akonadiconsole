@@ -78,7 +78,7 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
 private:
-    QString cacheString(const QString &str, QSet<QString> &cache, QStandardItemModel *model = nullptr);
+    static QString cacheString(const QString &str, QSet<QString> &cache, QStandardItemModel *model = nullptr);
 
     QVector<Message> mMessages;
     QStandardItemModel *mAppFilterModel = nullptr;

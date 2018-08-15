@@ -19,14 +19,15 @@
 
 #include "notificationmonitor.h"
 #include "notificationmodel.h"
+#include "notificationfiltermodel.h"
 #include "utils.h"
 
 #include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
 
-
 #include <QHeaderView>
 #include <QCheckBox>
+#include <QLabel>
 #include <QMenu>
 #include <QTreeView>
 #include <QVBoxLayout>
@@ -35,8 +36,11 @@
 #include <QStandardItem>
 #include <QItemSelectionModel>
 
+#include <KCheckComboBox>
 #include <KSharedConfig>
 #include <KConfigGroup>
+
+using KPIM::KCheckComboBox;
 
 Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 
@@ -46,20 +50,30 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     m_model = new NotificationModel(this);
     m_model->setEnabled(false);   // since it can be slow, default to off
 
+    m_filterModel = new NotificationFilterModel(this);
+    m_filterModel->setSourceModel(m_model);
+
     QVBoxLayout *layout = new QVBoxLayout(this);
+    auto hLayout = new QHBoxLayout;
+    layout->addLayout(hLayout);
 
     QCheckBox *enableCB = new QCheckBox(this);
     enableCB->setText(QStringLiteral("Enable notification monitor"));
     enableCB->setChecked(m_model->isEnabled());
     connect(enableCB, &QCheckBox::toggled, m_model, &NotificationModel::setEnabled);
-    layout->addWidget(enableCB);
+    hLayout->addWidget(enableCB);
 
+    hLayout->addWidget(new QLabel(QStringLiteral("Types:"), this));
+    hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
+    hLayout->addStretch();
+    mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    m_filterModel->setTypeFilter(mTypeFilterCombo);
 
     m_splitter = new QSplitter(this);
     layout->addWidget(m_splitter);
 
     m_treeView = new QTreeView(this);
-    m_treeView->setModel(m_model);
+    m_treeView->setModel(m_filterModel);
     m_treeView->expandAll();
     m_treeView->setAlternatingRowColors(true);
     m_treeView->setContextMenuPolicy(Qt::CustomContextMenu);
