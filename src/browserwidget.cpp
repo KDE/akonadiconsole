@@ -146,6 +146,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     // TODO: Only fetch the envelope etc if possible.
     mBrowserMonitor->itemFetchScope().fetchFullPayload(true);
     mBrowserMonitor->itemFetchScope().setCacheOnly(true);
+    mBrowserMonitor->itemFetchScope().setFetchGid(true);
 
     mBrowserModel = new AkonadiBrowserModel(mBrowserMonitor, this);
     mBrowserModel->setItemPopulationStrategy(EntityTreeModel::LazyPopulation);
@@ -245,6 +246,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     connect(contentUi.flags, &KEditListWidget::changed, this, &BrowserWidget::contentViewChanged);
     connect(contentUi.tags, &KEditListWidget::changed, this, &BrowserWidget::contentViewChanged);
     connect(contentUi.remoteId, &QLineEdit::textChanged, this, &BrowserWidget::contentViewChanged);
+    connect(contentUi.gid, &QLineEdit::textChanged, this, &BrowserWidget::contentViewChanged);
 
     CollectionPropertiesDialog::registerPage(new CollectionAclPageFactory());
     CollectionPropertiesDialog::registerPage(new CollectionAttributePageFactory());
@@ -281,6 +283,7 @@ void BrowserWidget::clear()
     contentUi.dataView->clear();
     contentUi.id->clear();
     contentUi.remoteId->clear();
+    contentUi.gid->clear();
     contentUi.mimeType->clear();
     contentUi.revision->clear();
     contentUi.size->clear();
@@ -371,6 +374,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
 
     contentUi.id->setText(QString::number(item.id()));
     contentUi.remoteId->setText(item.remoteId());
+    contentUi.gid->setText(item.gid());
     contentUi.mimeType->setText(item.mimeType());
     contentUi.revision->setText(QString::number(item.revision()));
     contentUi.size->setText(QString::number(item.size()));
@@ -441,6 +445,7 @@ void BrowserWidget::save()
     const QByteArray data = contentUi.dataView->toPlainText().toUtf8();
     Item item = mCurrentItem;
     item.setRemoteId(contentUi.remoteId->text());
+    item.setGid(contentUi.gid->text());
     foreach (const Item::Flag &f, mCurrentItem.flags()) {
         item.clearFlag(f);
     }
