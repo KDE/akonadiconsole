@@ -67,6 +67,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
     hLayout->addStretch();
     mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    mTypeFilterCombo->setMinimumWidth(fontMetrics().width(QStringLiteral("Subscription,Items,Collections")) + 60); // make it wide enough for most use cases
     m_filterModel->setTypeFilter(mTypeFilterCombo);
 
     m_splitter = new QSplitter(this);
