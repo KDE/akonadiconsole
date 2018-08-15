@@ -214,6 +214,23 @@
            <item>
             <layout class="QHBoxLayout">
              <item>
+              <widget class="QLabel" name="label_gid">
+               <property name="text">
+                <string>GID:</string>
+               </property>
+               <property name="buddy">
+                <cstring>gid</cstring>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="gid"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout">
+             <item>
               <widget class="QLabel" name="label_3">
                <property name="text">
                 <string>Revision:</string>

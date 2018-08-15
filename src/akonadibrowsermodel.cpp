@@ -46,11 +46,18 @@ public:
     GenericState()
     {
         m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("MimeType");
+        m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("GID") << QStringLiteral("MimeType");
     }
     virtual ~GenericState()
     {
     }
+
+    enum Columns {
+        IdColumn = 0,
+        RemoteIdColumn = 1,
+        GIDColumn = 2,
+        MimeTypeColumn = 3
+    };
 
     QVariant entityData(const Item &item, int column, int role) const override
     {
@@ -59,11 +66,13 @@ public:
         }
 
         switch (column) {
-        case 0:
+        case IdColumn:
             return item.id();
-        case 1:
+        case RemoteIdColumn:
             return item.remoteId();
-        case 2:
+        case GIDColumn:
+            return item.gid();
+        case MimeTypeColumn:
             return item.mimeType();
         }
         return QVariant();

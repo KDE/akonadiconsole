@@ -25,16 +25,23 @@
 #include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
 
+#include <QFileDialog>
+#include <QFile>
 #include <QHeaderView>
 #include <QCheckBox>
 #include <QLabel>
 #include <QMenu>
+#include <QMessageBox>
 #include <QTreeView>
 #include <QVBoxLayout>
 #include <QSplitter>
 #include <QStandardItemModel>
 #include <QStandardItem>
 #include <QItemSelectionModel>
+#include <QPushButton>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include <KCheckComboBox>
 #include <KSharedConfig>
@@ -67,6 +74,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
     hLayout->addStretch();
     mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    mTypeFilterCombo->setMinimumWidth(fontMetrics().width(QStringLiteral("Subscription,Items,Collections")) + 60); // make it wide enough for most use cases
     m_filterModel->setTypeFilter(mTypeFilterCombo);
 
     m_splitter = new QSplitter(this);
@@ -87,6 +95,14 @@ NotificationMonitor::NotificationMonitor(QWidget *parent) :
     m_ntfView->setModel(new QStandardItemModel(this));
     m_ntfView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_splitter->addWidget(m_ntfView);
+
+    auto *h = new QHBoxLayout;
+    layout->addLayout(h);
+
+    auto btn = new QPushButton(QStringLiteral("Save to File..."));
+    connect(btn, &QPushButton::clicked, this, &NotificationMonitor::saveToFile);
+    h->addWidget(btn);
+    h->addStretch(1);
 
     onNotificationSelected({});
 
@@ -116,11 +132,17 @@ void NotificationMonitor::contextMenu(const QPoint & /*pos*/)
 
 void NotificationMonitor::onNotificationSelected(const QModelIndex &index)
 {
-    auto model = qobject_cast<QStandardItemModel*>(m_ntfView->model());
     const auto state = m_ntfView->header()->saveState();
+    populateNtfModel(index);
+    m_ntfView->header()->restoreState(state);
+    m_ntfView->expandAll();
+}
+
+void NotificationMonitor::populateNtfModel(const QModelIndex &index)
+{
+    auto model = qobject_cast<QStandardItemModel*>(m_ntfView->model());
     model->clear();
     model->setHorizontalHeaderLabels({ QStringLiteral("Properties"), QStringLiteral("Values") });
-    m_ntfView->header()->restoreState(state);
 
     const auto ntf = index.data(NotificationModel::NotificationRole).value<Akonadi::ChangeNotification>();
     if (!ntf.isValid()) {
@@ -149,8 +171,6 @@ void NotificationMonitor::onNotificationSelected(const QModelIndex &index)
         populateSubscriptionNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::SubscriptionChangeNotification>(ntf.notification()));
         break;
     }
-
-    m_ntfView->expandAll();
 }
 
 void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const Akonadi::Protocol::ItemChangeNotification &ntf)
@@ -600,4 +620,43 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, QStringLiteral("Ancestor Attributes"), toString(cfs.ancestorAttributes()));
     appendRow(item, QStringLiteral("Ignore Retrieval Errors"), toString(cfs.ignoreRetrievalErrors()));
     model->appendRow(item);
+}
+
+void NotificationMonitor::saveToFile()
+{
+    const auto filename = QFileDialog::getSaveFileName(this, QStringLiteral("Save to File..."));
+    if (filename.isEmpty()) {
+        return;
+    }
+
+    QFile file(filename);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        QMessageBox::warning(this, QStringLiteral("Error"), QStringLiteral("Failed to open file: %1").arg(file.errorString()));
+        return;
+    }
+
+    QJsonObject json;
+    auto ntfModel = qobject_cast<QStandardItemModel*>(m_ntfView->model());
+    Q_ASSERT(ntfModel);
+
+    QJsonArray rowArray;
+    // Note that the use of m_model here means we save everything, not just what's visible (in case of filtering).
+    const int rows = m_model->rowCount();
+    for (int row = 0; row < rows; ++row) {
+        QJsonObject rowObject;
+        // The Ntf model has all the data that m_model has in its columns, apart from the session
+        rowObject.insert(QStringLiteral("Session"), m_model->index(row, NotificationModel::SessionColumn).data().toString());
+
+        populateNtfModel(m_model->index(row, 0));
+        for (int r = 0, cnt = ntfModel->rowCount(); r < cnt; ++r) {
+            const auto idx0 = ntfModel->index(r, 0);
+            const auto idx1 = ntfModel->index(r, 1);
+            rowObject.insert(idx0.data().toString(), QJsonValue::fromVariant(idx1.data()));
+        }
+
+        rowArray.append(rowObject);
+    }
+    json.insert(QStringLiteral("notifications"), rowArray);
+    QJsonDocument saveDoc(json);
+    file.write(saveDoc.toJson());
 }
