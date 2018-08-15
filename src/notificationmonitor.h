@@ -60,6 +60,9 @@ private:
     void populateAttributesTree(QStandardItem *parent, const Akonadi::Protocol::Attributes &attributes);
     QStandardItem *populateAncestorTree(QStandardItem *parent, const Akonadi::Protocol::Ancestor &ancestor);
 
+    void populateNtfModel(const QModelIndex &index);
+    void saveToFile();
+
     NotificationModel *m_model = nullptr;
     QSplitter *m_splitter = nullptr;
     QTreeView *m_treeView = nullptr;
