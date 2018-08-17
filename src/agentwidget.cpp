@@ -29,6 +29,7 @@
 #include <AkonadiCore/AgentFilterProxyModel>
 #include <AkonadiCore/agentinstancecreatejob.h>
 #include <AkonadiWidgets/controlgui.h>
+#include <AkonadiWidgets/AgentConfigurationDialog>
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -209,7 +210,9 @@ void AgentWidget::configureAgent()
 {
     AgentInstance agent = ui.instanceWidget->currentAgentInstance();
     if (agent.isValid()) {
-        agent.configure(this);
+        QPointer<AgentConfigurationDialog> dlg = new AgentConfigurationDialog(agent, this);
+        dlg->exec();
+        delete dlg;
     }
 }
 
