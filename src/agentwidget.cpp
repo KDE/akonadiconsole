@@ -114,6 +114,18 @@ AgentWidget::AgentWidget(QWidget *parent)
     mSyncMenu = new QMenu(QStringLiteral("Synchronize"), this);
     mSyncMenu->addAction(QStringLiteral("Synchronize All"), this, &AgentWidget::synchronizeAgent);
     mSyncMenu->addAction(QStringLiteral("Synchronize Collection Tree"), this, &AgentWidget::synchronizeTree);
+    mSyncMenu->addAction(QStringLiteral("Synchronize Tags"), this, [this]() {
+        const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
+        for (auto agent : list) {
+            agent.synchronizeTags();
+        }
+    });
+    mSyncMenu->addAction(QStringLiteral("Synchronize Relations"), this, [this]() {
+        const auto list = ui.instanceWidget->selectedAgentInstances();
+        for (auto agent : list) {
+            agent.synchronizeRelations();
+        }
+    });
     mSyncMenu->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ui.syncButton->setMenu(mSyncMenu);
     ui.syncButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
@@ -298,19 +310,17 @@ void AgentWidget::showChangeNotifications()
 void AgentWidget::synchronizeTree()
 {
     const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
-    if (!list.isEmpty())
-        for (AgentInstance agent : list) {
-            agent.synchronizeCollectionTree();
-        }
+    for (AgentInstance agent : list) {
+        agent.synchronizeCollectionTree();
+    }
 }
 
 void AgentWidget::abortAgent()
 {
     const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
-    if (!list.isEmpty())
-        for (const AgentInstance &agent : list) {
-            agent.abortCurrentTask();
-        }
+    for (const AgentInstance &agent : list) {
+        agent.abortCurrentTask();
+    }
 }
 
 void AgentWidget::restartAgent()
