@@ -21,7 +21,7 @@ include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
@@ -102,9 +102,6 @@ include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${
 
 configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
-add_definitions(-DQT_USE_QSTRINGBUILDER)
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 install( FILES akonadiconsole.renamecategories akonadiconsole.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(src)

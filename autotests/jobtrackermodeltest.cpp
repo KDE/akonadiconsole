@@ -51,7 +51,7 @@ JobTrackerModelTest::~JobTrackerModelTest()
 void JobTrackerModelTest::initTestCase()
 {
     // Don't interfere with a running akonadiconsole
-    Akonadi::Instance::setIdentifier("jobtrackertest");
+    Akonadi::Instance::setIdentifier(QStringLiteral("jobtrackertest"));
 }
 
 void JobTrackerModelTest::shouldBeEmpty()
@@ -66,7 +66,7 @@ void JobTrackerModelTest::shouldDisplayOneJob()
     // GIVEN
     JobTrackerModel model("jobtracker");
     //ModelTest modelTest(&model);
-    const QString jobName("job1");
+    const QString jobName(QStringLiteral("job1"));
     QSignalSpy rowATBISpy(&model, &QAbstractItemModel::rowsAboutToBeInserted);
     QSignalSpy rowInsertedSpy(&model, &QAbstractItemModel::rowsInserted);
     connect(&model, &QAbstractItemModel::rowsAboutToBeInserted,
@@ -89,7 +89,7 @@ void JobTrackerModelTest::shouldDisplayOneJob()
     });
 
     // WHEN
-    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    model.jobTracker().jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
 
     // THEN
     QCOMPARE(model.rowCount(), 1);
@@ -110,8 +110,8 @@ void JobTrackerModelTest::shouldSignalDataChanges()
 {
     // GIVEN
     JobTrackerModel model("jobtracker");
-    const QString jobName("job1");
-    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    const QString jobName(QStringLiteral("job1"));
+    model.jobTracker().jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
     QSignalSpy dataChangedSpy(&model, &JobTrackerModel::dataChanged);
 
     // WHEN
@@ -133,8 +133,8 @@ void JobTrackerModelTest::shouldHandleReset()
 {
     // GIVEN
     JobTrackerModel model("jobtracker");
-    const QString jobName("job1");
-    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    const QString jobName(QStringLiteral("job1"));
+    model.jobTracker().jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
     QSignalSpy modelATBResetSpy(&model, &JobTrackerModel::modelAboutToBeReset);
     QSignalSpy modelResetSpy(&model, &JobTrackerModel::modelReset);
     QSignalSpy dataChangedSpy(&model, &JobTrackerModel::dataChanged);
@@ -157,8 +157,8 @@ void JobTrackerModelTest::shouldHandleDuplicateJob()
 {
     // GIVEN
     JobTrackerModel model("jobtracker");
-    const QString jobName("job1");
-    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    const QString jobName(QStringLiteral("job1"));
+    model.jobTracker().jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
     model.jobTracker().jobStarted(jobName);
     model.jobTracker().jobEnded(jobName, QString());
     model.jobTracker().signalUpdates();
@@ -166,7 +166,7 @@ void JobTrackerModelTest::shouldHandleDuplicateJob()
     // WHEN
     QSignalSpy rowATBISpy(&model, &QAbstractItemModel::rowsAboutToBeInserted);
     QSignalSpy rowInsertedSpy(&model, &QAbstractItemModel::rowsInserted);
-    model.jobTracker().jobCreated("session1", jobName, QString(), "type1", "debugStr1");
+    model.jobTracker().jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
 
     // THEN
     QCOMPARE(model.rowCount(), 1); // 1 session

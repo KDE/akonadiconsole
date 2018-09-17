@@ -58,7 +58,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout(this);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    hbox->addWidget(new QLabel(QStringLiteral("Search store:")), 0, 0);
+    hbox->addWidget(new QLabel(QStringLiteral("Search store:")), 0, {});
     mStoreCombo = new KComboBox;
     mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
     hbox->addWidget(mStoreCombo);

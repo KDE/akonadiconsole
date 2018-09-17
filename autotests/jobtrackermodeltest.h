@@ -28,7 +28,7 @@ class JobTrackerModelTest : public QObject
 public:
     explicit JobTrackerModelTest(QObject *parent = nullptr);
     ~JobTrackerModelTest();
-private slots:
+private Q_SLOTS:
     void initTestCase();
     void shouldBeEmpty();
     void shouldDisplayOneJob();
