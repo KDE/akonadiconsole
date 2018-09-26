@@ -175,16 +175,12 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex& index)
     appendRow(ifsItem, QStringLiteral("Fetch RID"), toString(ifs.fetchRemoteIdentification()));
     appendRow(ifsItem, QStringLiteral("Fetch Tags"), toString(ifs.fetchTags()));
 
-    auto tfsItem = new QStandardItem(QStringLiteral("Tag Fetch Scope"));
-    populateTagFetchScope(tfsItem, ifs.tagFetchScope());
-    model->appendRow(ifsItem);
-
     const auto cfs = subscriber.collectionFetchScope();
     auto cfsItem = new QStandardItem(QStringLiteral("Collection Fetch Scope"));
     populateCollectionFetchScope(cfsItem, cfs);
 
     auto tagScope = new QStandardItem(QStringLiteral("Tag Fetch Scope"));
-    populateTagFetchScope(tagScope, ifs.tagFetchScope());
+    populateTagFetchScope(tagScope, subscriber.tagFetchScope());
     model->appendRow(tagScope);
 
     mSubscriberView->expandAll();

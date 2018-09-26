@@ -546,7 +546,6 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     const auto ifs = ntf.itemFetchScope();
     appendRow(item, QStringLiteral("Requested Parts"), toString(ifs.requestedParts()));
     appendRow(item, QStringLiteral("Changed Since"), ifs.changedSince().toString(Qt::ISODateWithMs));
-    appendRow(item, QStringLiteral("Tag Fetch Scope"), toString(ifs.tagFetchScope()));
     QString ancestorDepth;
     switch (ifs.ancestorDepth()) {
     case Akonadi::Protocol::ItemFetchScope::NoAncestor:
@@ -619,6 +618,14 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, QStringLiteral("Ancestor Fetch ID Only"),  toString(cfs.ancestorFetchIdOnly()));
     appendRow(item, QStringLiteral("Ancestor Attributes"), toString(cfs.ancestorAttributes()));
     appendRow(item, QStringLiteral("Ignore Retrieval Errors"), toString(cfs.ignoreRetrievalErrors()));
+    model->appendRow(item);
+
+    item = new QStandardItem(QStringLiteral("Tag Fetch Scope"));
+    const Akonadi::Protocol::TagFetchScope tfs = ntf.tagFetchScope();
+    appendRow(item, QStringLiteral("Fetch ID Only"), toString(tfs.fetchIdOnly()));
+    appendRow(item, QStringLiteral("Fetch RemoteID"), toString(tfs.fetchRemoteID()));
+    appendRow(item, QStringLiteral("Fetch All Attributes"), toString(tfs.fetchAllAttributes()));
+    appendRow(item, QStringLiteral("Attributes"), toString(tfs.attributes()));
     model->appendRow(item);
 }
 
