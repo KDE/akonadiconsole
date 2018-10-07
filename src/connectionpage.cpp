@@ -60,6 +60,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     mDataView->setModel(mFilterModel);
     mDataView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
     mDataView->horizontalHeader()->setStretchLastSection(true);
+    mDataView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
 
     layout->addWidget(mDataView);
 
