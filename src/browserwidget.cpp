@@ -49,6 +49,7 @@
 #include <AkonadiCore/tagmodel.h>
 #include <AkonadiCore/statisticsproxymodel.h>
 #include <AkonadiCore/tagdeletejob.h>
+#include <AkonadiCore/TagFetchScope>
 #include <AkonadiXml/XmlWriteJob>
 #include <kviewstatemaintainer.h>
 
@@ -305,6 +306,9 @@ void BrowserWidget::itemActivated(const QModelIndex &index)
     job->fetchScope().fetchFullPayload();
     job->fetchScope().fetchAllAttributes();
     job->fetchScope().setFetchTags(true);
+    auto &tfs = job->fetchScope().tagFetchScope();
+    tfs.setFetchIdOnly(false);
+    tfs.fetchAllAttributes();
     connect(job, &ItemFetchJob::result, this, &BrowserWidget::itemFetchDone);
 }
 
