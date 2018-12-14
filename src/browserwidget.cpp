@@ -167,11 +167,8 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     statisticsProxyModel->setToolTipEnabled(true);
     statisticsProxyModel->setSourceModel(collectionFilter);
 
-    Akonadi::QuotaColorProxyModel *quotaProxyModel = new Akonadi::QuotaColorProxyModel(this);
-    quotaProxyModel->setWarningThreshold(50.0);
-    quotaProxyModel->setSourceModel(statisticsProxyModel);
 
-    mCollectionView->setModel(quotaProxyModel);
+    mCollectionView->setModel(statisticsProxyModel);
 
     Akonadi::SelectionProxyModel *selectionProxyModel = new Akonadi::SelectionProxyModel(mCollectionView->selectionModel(), this);
     selectionProxyModel->setSourceModel(mBrowserModel);
