@@ -208,7 +208,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     connect(itemUi.itemView, SIGNAL(clicked(QModelIndex)), SLOT(itemActivated(QModelIndex)));
 
     splitter3->addWidget(itemViewParent);
-    itemViewParent->layout()->setMargin(0);
+    itemViewParent->layout()->setContentsMargins(0, 0, 0, 0);
 
     QWidget *contentViewParent = new QWidget(this);
     contentUi.setupUi(contentViewParent);
