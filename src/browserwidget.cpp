@@ -196,7 +196,6 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     itemUi.modelBox->addItem(QStringLiteral("Generic"));
     itemUi.modelBox->addItem(QStringLiteral("Mail"));
     itemUi.modelBox->addItem(QStringLiteral("Contacts"));
-    itemUi.modelBox->addItem(QStringLiteral("Calendar"));
     itemUi.modelBox->addItem(QStringLiteral("Calendar/Tasks"));
     connect(itemUi.modelBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &BrowserWidget::modelChanged);
     QTimer::singleShot(0, this, &BrowserWidget::modelChanged);
