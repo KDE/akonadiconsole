@@ -179,7 +179,7 @@ public:
     CalendarState()
     {
         m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End") << QStringLiteral("Type");
+        m_itemHeaders << QStringLiteral("UID") << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End") << QStringLiteral("Type");
     }
     virtual ~CalendarState() {}
 
@@ -195,17 +195,15 @@ public:
         const IncidencePtr incidence = item.payload<IncidencePtr>();
         switch (column) {
         case 0:
-            return incidence->summary();
-            break;
+            return incidence->uid();
         case 1:
-            return incidence->dtStart().toString();
-            break;
+            return incidence->summary();
         case 2:
-            return incidence->dateTime(KCalCore::Incidence::RoleEnd).toString();
-            break;
+            return incidence->dtStart().toString();
         case 3:
+            return incidence->dateTime(KCalCore::Incidence::RoleEnd).toString();
+        case 4:
             return incidence->typeStr();
-            break;
         default:
             break;
         }
