@@ -391,7 +391,6 @@ void NotificationMonitor::populateCollectionTree(QStandardItem *parent, const Ak
     appendRow(parent, QStringLiteral("DisplayPref"), toString(collection.displayPref()));
     appendRow(parent, QStringLiteral("SyncPref"), toString(collection.syncPref()));
     appendRow(parent, QStringLiteral("IndexPref"), toString(collection.indexPref()));
-    appendRow(parent, QStringLiteral("Referenced"), toString(collection.referenced()));
     appendRow(parent, QStringLiteral("Virtual"), toString(collection.isVirtual()));
 }
 
