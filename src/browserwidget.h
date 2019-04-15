@@ -74,7 +74,7 @@ public Q_SLOTS:
     void clearCache();
 
 private Q_SLOTS:
-    void itemActivated(const QModelIndex &index);
+    void currentChanged(const QModelIndex &index);
     void itemFetchDone(KJob *job);
     void modelChanged();
     void save();

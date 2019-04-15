@@ -203,8 +203,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     itemUi.itemView->setXmlGuiClient(xmlGuiWindow);
     itemUi.itemView->setModel(sortModel);
     itemUi.itemView->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    connect(itemUi.itemView, &Akonadi::EntityTreeView::activated, this, &BrowserWidget::itemActivated);
-    connect(itemUi.itemView, SIGNAL(clicked(QModelIndex)), SLOT(itemActivated(QModelIndex)));
+    connect(itemUi.itemView->selectionModel(), &QItemSelectionModel::currentChanged, this, &BrowserWidget::currentChanged);
 
     splitter3->addWidget(itemViewParent);
     itemViewParent->layout()->setContentsMargins(0, 0, 0, 0);
@@ -289,7 +288,7 @@ void BrowserWidget::clear()
     contentUi.attrView->setModel(nullptr);
 }
 
-void BrowserWidget::itemActivated(const QModelIndex &index)
+void BrowserWidget::currentChanged(const QModelIndex &index)
 {
     const Item item = index.sibling(index.row(), 0).data(EntityTreeModel::ItemRole).value< Item >();
     if (!item.isValid()) {

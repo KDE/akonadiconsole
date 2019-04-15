@@ -101,6 +101,7 @@ public:
         }
         const KMime::Message::Ptr mail = item.payload<KMime::Message::Ptr>();
 
+        // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
         switch (column) {
         case 0:
             if (mail->subject()) {
@@ -193,6 +194,7 @@ public:
             return QVariant();
         }
         const IncidencePtr incidence = item.payload<IncidencePtr>();
+        // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
         switch (column) {
         case 0:
             return incidence->uid();
@@ -350,7 +352,7 @@ AkonadiBrowserSortModel::~AkonadiBrowserSortModel()
 bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
     if (mBrowserModel->itemDisplayMode() == AkonadiBrowserModel::CalendarMode) {
-        if (left.column() == 1 || left.column() == 2) {
+        if (left.column() == 2 || left.column() == 3) {
             const Item leftItem = left.data(EntityTreeModel::ItemRole).value<Item>();
             const Item rightItem = right.data(EntityTreeModel::ItemRole).value<Item>();
             if (!leftItem.hasPayload<IncidencePtr>() || !rightItem.hasPayload<IncidencePtr>()) {
