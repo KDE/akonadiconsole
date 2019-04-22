@@ -243,7 +243,7 @@ public:
     }
 
     void addQuery(qint64 connectionId, qint64 timestamp, uint duration,
-                  const QString &queryStr, const QMap<QString, QVariant> values,
+                  const QString &queryStr, const QMap<QString, QVariant> &values,
                   int resultsCount, const QList<QList<QVariant>> &results, const QString &error)
     {
         auto con = mConnectionById.value(connectionId);

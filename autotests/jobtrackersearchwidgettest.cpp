@@ -62,7 +62,7 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
 void JobTrackerSearchWidgetTest::shouldEmitSignal()
 {
     JobTrackerSearchWidget w;
-    QSignalSpy searchWidgetSignal(&w, SIGNAL(searchTextChanged(QString)));
+    QSignalSpy searchWidgetSignal(&w, &JobTrackerSearchWidget::searchTextChanged);
     QLineEdit *mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
     const QString foo = QStringLiteral("foo");
     mSearchLineEdit->setText(foo);
@@ -76,7 +76,7 @@ void JobTrackerSearchWidgetTest::shouldEmitSignal()
 void JobTrackerSearchWidgetTest::shouldEmitColumnChanged()
 {
     JobTrackerSearchWidget w;
-    QSignalSpy columnChangedSignal(&w, SIGNAL(columnChanged(int)));
+    QSignalSpy columnChangedSignal(&w, &JobTrackerSearchWidget::columnChanged);
     QComboBox *mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
     mSelectColumn->setCurrentIndex(2);
     QCOMPARE(columnChangedSignal.count(), 1);

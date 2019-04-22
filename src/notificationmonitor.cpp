@@ -305,7 +305,7 @@ void NotificationMonitor::populateItemTree(QStandardItem *parent, const Akonadi:
     appendRow(parent, QStringLiteral("Flags"), toString(item.flags()));
     auto tagItem = new QStandardItem(QStringLiteral("Tags"));
     const auto tags = item.tags();
-    for (const auto tag : tags) {
+    for (const auto &tag : tags) {
         auto item = new QStandardItem(QString::number(tag.id()));
         populateTagTree(item, tag);
         tagItem->appendRow(item);
@@ -315,7 +315,7 @@ void NotificationMonitor::populateItemTree(QStandardItem *parent, const Akonadi:
     appendRow(parent, QStringLiteral("VRefs"), toString(item.virtualReferences()));
     auto relationItem = new QStandardItem(QStringLiteral("Relations"));
     const auto relations = item.relations();
-    for (const auto relation : relations) {
+    for (const auto &relation : relations) {
         auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(QString::number(relation.left()), QString::number(relation.right()), QString::fromUtf8(relation.type())));
         relationItem->appendRow(item);
     }
