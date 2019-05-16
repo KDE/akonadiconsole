@@ -93,7 +93,7 @@ if (NOT WIN32)
     set(ENABLE_SEARCH TRUE)
     set(ENABLE_CONTENTVIEWS TRUE)
 endif()
-
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
 
 configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
