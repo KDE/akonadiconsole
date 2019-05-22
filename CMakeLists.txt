@@ -85,7 +85,7 @@ if (NOT WIN32)
     find_package(Xapian CONFIG)
     set_package_properties(Xapian PROPERTIES
         DESCRIPTION "The Xapian search engine library"
-        URL "http://xapian.org"
+        URL "https://xapian.org"
         TYPE REQUIRED
     )
 
