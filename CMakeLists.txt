@@ -98,7 +98,11 @@ include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${
 
 configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 
-install( FILES akonadiconsole.renamecategories akonadiconsole.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+if (${ECM_VERSION} STRGREATER "5.58.0")
+    install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+else()
+    install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION ${KDE_INSTALL_CONFDIR})
+endif()
 
 add_subdirectory(src)
 if(BUILD_TESTING)
