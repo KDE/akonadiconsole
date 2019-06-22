@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 set(KDEPIM_VERSION_NUMBER "5.11.40")
 project(akonadiconsole VERSION ${KDEPIM_VERSION_NUMBER})
 
-set(KF5_MIN_VERSION "5.58.0")
+set(KF5_MIN_VERSION "5.59.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -98,11 +98,7 @@ include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${
 
 configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 
-if (${ECM_VERSION} STRGREATER "5.58.0")
-    install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-else()
-    install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION ${KDE_INSTALL_CONFDIR})
-endif()
+install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(src)
 if(BUILD_TESTING)
