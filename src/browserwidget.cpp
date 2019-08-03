@@ -54,8 +54,8 @@
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KCalCore/Incidence>
-#include <KCalCore/ICalFormat>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ICalFormat>
 
 #include "akonadiconsole_debug.h"
 #include <kconfig.h>
@@ -334,7 +334,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     } else if (item.hasPayload<KContacts::ContactGroup>()) {
         mContactGroupView->setItem(item);
         contentUi.stack->setCurrentWidget(mContactGroupView->parentWidget());
-    } else if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+    } else if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         mIncidenceView->setItem(item);
         contentUi.stack->setCurrentWidget(mIncidenceView->parentWidget());
     } else if (item.mimeType() == QLatin1String("message/rfc822")
@@ -356,14 +356,14 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
 
     // Note that this is true for *all* items as soon as the binary format is enabled.
     // Independently from how they are actually stored in the database.
-    if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+    if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         quint32 magic;
         QDataStream input(data);
         input >> magic;
-        KCalCore::ICalFormat format;
-        if (magic == KCalCore::IncidenceBase::magicSerializationIdentifier()) {
-            // Binary format isn't readable, show KCalCore string instead.
-            auto incidence = item.payload<KCalCore::Incidence::Ptr>();
+        KCalendarCore::ICalFormat format;
+        if (magic == KCalendarCore::IncidenceBase::magicSerializationIdentifier()) {
+            // Binary format isn't readable, show KCalendarCore string instead.
+            auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             data = "(converted from binary format)\n" + format.toRawString(incidence);
         }
     }
