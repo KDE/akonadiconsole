@@ -24,10 +24,10 @@
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 
-#include <KCalCore/Incidence>
-#include <KCalCore/Event>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/Event>
 
-typedef QSharedPointer<KCalCore::Incidence> IncidencePtr;
+typedef QSharedPointer<KCalendarCore::Incidence> IncidencePtr;
 
 class AkonadiBrowserModel::State
 {
@@ -203,7 +203,7 @@ public:
         case 2:
             return incidence->dtStart().toString();
         case 3:
-            return incidence->dateTime(KCalCore::Incidence::RoleEnd).toString();
+            return incidence->dateTime(KCalendarCore::Incidence::RoleEnd).toString();
         case 4:
             return incidence->typeStr();
         default:
@@ -364,7 +364,7 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
             if (left.column() == 1) {
                 return leftInc->dtStart() < rightInc->dtStart();
             } else if (left.column() == 2) {
-                return leftInc->dateTime(KCalCore::IncidenceBase::RoleEnd) < rightInc->dateTime(KCalCore::IncidenceBase::RoleEnd);
+                return leftInc->dateTime(KCalendarCore::IncidenceBase::RoleEnd) < rightInc->dateTime(KCalendarCore::IncidenceBase::RoleEnd);
             }
         }
     } else if (mBrowserModel->itemDisplayMode() == AkonadiBrowserModel::MailMode) {
