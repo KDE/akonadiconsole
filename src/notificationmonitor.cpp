@@ -534,7 +534,7 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
             break;
         }
     }
-    appendRow(model, QStringLiteral("Monitored Types"), types.join(QStringLiteral(", ")));
+    appendRow(model, QStringLiteral("Monitored Types"), types.join(QLatin1String(", ")));
     appendRow(model, QStringLiteral("Monitored Mime Types"), toString(ntf.mimeTypes()));
     appendRow(model, QStringLiteral("Monitored Resources"), toString(ntf.resources()));
     appendRow(model, QStringLiteral("Ignored Sessions"), toString(ntf.ignoredSessions()));
@@ -598,7 +598,7 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
     appendRow(item, QStringLiteral("Resource"), cfs.resource());
     appendRow(item, QStringLiteral("Content Mime Types"),
-              cfs.contentMimeTypes().join(QStringLiteral(", ")));
+              cfs.contentMimeTypes().join(QLatin1String(", ")));
     appendRow(item, QStringLiteral("Attributes"), toString(cfs.attributes()));
     appendRow(item, QStringLiteral("Fetch ID Only"), toString(cfs.fetchIdOnly()));
     QString ancestorRetrieval;

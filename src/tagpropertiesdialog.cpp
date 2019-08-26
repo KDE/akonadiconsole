@@ -287,7 +287,7 @@ void TagPropertiesDialog::slotAccept()
         for (int i = 0; i < mRemovedRIDs.count(); ++i) {
             conds << QStringLiteral("name = ?");
         }
-        queryStr += conds.join(QStringLiteral(" OR ")) + QLatin1String(")");
+        queryStr += conds.join(QLatin1String(" OR ")) + QLatin1String(")");
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
         for (const QString &removedRid : qAsConst(mRemovedRIDs)) {
@@ -309,7 +309,7 @@ void TagPropertiesDialog::slotAccept()
             for (int i = 0; i < mChangedRIDs.count(); ++i) {
                 conds << QStringLiteral("name = ?");
             }
-            queryStr += conds.join(QStringLiteral(" OR "));
+            queryStr += conds.join(QLatin1String(" OR "));
             query.prepare(queryStr);
             for (const QString &res : qAsConst(mChangedRIDs)) {
                 query.addBindValue(res);

@@ -78,7 +78,7 @@ QString toString(const Container<T> &set)
     for (const auto &v : set) {
         rv << toString(v);
     }
-    return rv.join(QStringLiteral(", "));
+    return rv.join(QLatin1String(", "));
 }
 
 inline

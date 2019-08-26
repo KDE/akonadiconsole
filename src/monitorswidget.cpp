@@ -100,7 +100,7 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
             break;
         }
     }
-    return rv.join(QStringLiteral(", "));
+    return rv.join(QLatin1String(", "));
 }
 
 

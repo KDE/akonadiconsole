@@ -435,8 +435,8 @@ void AgentWidget::currentChanged()
             i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"",
                   "%1, %2", onlineStatus, agentStatus));
         ui.statusMessageLabel->setText(instance.statusMessage());
-        ui.capabilitiesLabel->setText(instance.type().capabilities().join(QStringLiteral(", ")));
-        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QStringLiteral(", ")));
+        ui.capabilitiesLabel->setText(instance.type().capabilities().join(QLatin1String(", ")));
+        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QLatin1String(", ")));
     } else {
         ui.identifierLabel->setText(QString());
         ui.typeLabel->setText(QString());

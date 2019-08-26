@@ -184,7 +184,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 for (const auto &item : items) {
                     rv.push_back(QString::number(item.id()));
                 }
-                return rv.join(QStringLiteral(", "));
+                return rv.join(QLatin1String(", "));
             }
             case ChangeNotification::Collection:
                 return Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).collection().id();
@@ -203,7 +203,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             for (const auto &l : listeners) {
                 rv.push_back(QString::fromUtf8(l));
             }
-            return rv.join(QStringLiteral(", "));
+            return rv.join(QLatin1String(", "));
         }
         }
     } else if (role == NotificationRole) {
