@@ -98,7 +98,7 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
 endif()
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
-
+configure_file(akonadiconsole-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/akonadiconsole-version.h @ONLY)
 configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 
 install(FILES akonadiconsole.renamecategories akonadiconsole.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})

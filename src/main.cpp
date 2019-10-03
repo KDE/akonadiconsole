@@ -20,7 +20,7 @@
 */
 
 #include "instanceselector.h"
-
+#include "akonadiconsole-version.h"
 #include <Kdelibs4ConfigMigrator>
 
 #include <KAboutData>
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 
     KAboutData aboutData(QStringLiteral("akonadiconsole"),
                          QStringLiteral("Akonadi Console"),
-                         QStringLiteral("0.99"),
+                         QStringLiteral(KDEPIM_VERSION),
                          QStringLiteral("The Management and Debugging Console for Akonadi"),
                          KAboutLicense::GPL,
                          QStringLiteral("(c) 2006-2019 the Akonadi developer"), QString(),
