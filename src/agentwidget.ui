@@ -12,7 +12,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="7">
-    <widget class="KFilterProxySearchLine" name="mFilterAccount"/>
+    <widget class="QLineEdit" name="mFilterAccount"/>
    </item>
    <item row="1" column="0" colspan="7">
     <widget class="Akonadi::AgentInstanceWidget" name="instanceWidget" native="true">
@@ -246,14 +246,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>Akonadi::AgentInstanceWidget</class>
-   <extends>QWidget</extends>
-   <header location="global">AkonadiWidgets/agentinstancewidget.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
