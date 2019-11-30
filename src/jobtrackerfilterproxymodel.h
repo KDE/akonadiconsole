@@ -18,9 +18,9 @@
 #ifndef JOBTRACKERFILTERPROXYMODEL_H
 #define JOBTRACKERFILTERPROXYMODEL_H
 
-#include <KRecursiveFilterProxyModel>
+#include <QSortFilterProxyModel>
 
-class JobTrackerFilterProxyModel : public KRecursiveFilterProxyModel
+class JobTrackerFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
@@ -32,7 +32,7 @@ public:
     void setShowOnlyFailed(bool showOnlyFailed);
 
 protected:
-    bool acceptRow(int source_row, const QModelIndex &source_parent) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
     int mSearchColumn;

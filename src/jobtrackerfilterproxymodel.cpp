@@ -21,10 +21,11 @@
 #include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
-    : KRecursiveFilterProxyModel(parent),
+    : QSortFilterProxyModel(parent),
       mSearchColumn(-1),
       mShowOnlyFailed(false)
 {
+    setRecursiveFilteringEnabled(true);
     setDynamicSortFilter(true);
 }
 
@@ -32,7 +33,7 @@ JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
 {
 }
 
-bool JobTrackerFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
+bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     if (mShowOnlyFailed) {
         const QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
