@@ -50,7 +50,7 @@
 #include <AkonadiCore/tagdeletejob.h>
 #include <AkonadiCore/TagFetchScope>
 #include <AkonadiXml/XmlWriteJob>
-#include <kviewstatemaintainer.h>
+#include <KViewStateMaintainer>
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
@@ -58,10 +58,10 @@
 #include <KCalendarCore/ICalFormat>
 
 #include "akonadiconsole_debug.h"
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kmessagebox.h>
-#include <kxmlguiwindow.h>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KMessageBox>
+#include <KXmlGuiWindow>
 #include <KToggleAction>
 #include <KActionCollection>
 #include <AkonadiCore/tagmodifyjob.h>
