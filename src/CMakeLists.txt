@@ -91,7 +91,16 @@ qt5_wrap_ui(libakonadiconsole_SRCS
 
 
 
-ecm_qt_declare_logging_category(libakonadiconsole_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(libakonadiconsole_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole)
+else()
+    ecm_qt_declare_logging_category(libakonadiconsole_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole
+        OLD_CATEGORY_NAMES log_akonadiconsole
+        DESCRIPTION "akonadiconsole (akonadiconsole)" EXPORT AKONADICONSOLE)
+endif()
+
+
+
 add_library(libakonadiconsole ${libakonadiconsole_SRCS})
 
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
@@ -160,3 +169,7 @@ target_link_libraries(akonadiconsole
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.akonadiconsole.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS libakonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+
+if (NOT ECM_VERSION VERSION_LESS "5.68.0")
+   ecm_qt_install_logging_categories(EXPORT AKONADICONSOLE FILE akonadiconsole.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+endif()
