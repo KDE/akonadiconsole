@@ -65,7 +65,7 @@ QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cach
         return identifier;
     } else if (cache[identifier].isEmpty()) {
         cache[identifier] = name;
-        auto item = model->findItems(identifier).first();
+        const auto item = model->findItems(identifier).constFirst();
         item->setData(displaySender(identifier), Qt::DisplayRole);
     }
     return identifier;
@@ -93,7 +93,7 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
     // find elements that needs to be deleted.
     for(const auto &identifer: mSenderCache.keys()) {
         bool found = false;
-        for(const auto &msg: mMessages) {
+        for(const auto &msg: qAsConst(mMessages)) {
             if (msg.sender == identifer) {
                 found = true;
                 break;

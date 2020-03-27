@@ -24,7 +24,7 @@
 
 static QString intPairListToString(const QVariant &var)
 {
-    auto arg = var.value<QList<QPair<int, int>>>();
+    const auto arg = var.value<QList<QPair<int, int>>>();
     QString ret;
     for (const auto &pair : arg) {
         if (!ret.isEmpty()) {

@@ -65,7 +65,7 @@ DbConsole::DbConsole(QWidget *parent)
         queries = group.readEntry("queryTexts", QStringList());
     }
 
-    for (const auto &query : queries) {
+    for (const auto &query : qAsConst(queries)) {
         auto tab = addTab();
         tab->setQuery(query);
     }
