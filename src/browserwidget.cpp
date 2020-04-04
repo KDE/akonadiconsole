@@ -80,7 +80,7 @@
 
 #ifdef ENABLE_CONTENTVIEWS
 #include <CalendarSupport/IncidenceViewer>
-#include <messageviewer/viewer.h>
+#include <MessageViewer/Viewer>
 #include <Akonadi/Contact/ContactViewer>
 #include <Akonadi/Contact/ContactGroupViewer>
 #endif
