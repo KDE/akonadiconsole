@@ -117,11 +117,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     connect(button, &QPushButton::clicked, this, &SearchWidget::search);
     connect(mDatabaseView, &QListView::activated, this, &SearchWidget::fetchItem);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mStoreCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &SearchWidget::openStore);
-#else
-    connect(mStoreCombo, QOverload<int, const QString &>::of(&KComboBox::currentIndexChanged), this, &SearchWidget::openStore);
-#endif
 
     openStore(0);
 
