@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.5)
 set(PIM_VERSION "5.14.40")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
+# Needs C++17 because Akonadi uses it and we link
+# against its private API
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(KF5_MIN_VERSION "5.68.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
