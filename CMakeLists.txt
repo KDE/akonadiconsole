@@ -99,7 +99,7 @@ if (NOT WIN32)
 endif()
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400)
+   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054500)
 endif()
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
