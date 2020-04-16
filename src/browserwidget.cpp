@@ -378,13 +378,15 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     contentUi.size->setText(QString::number(item.size()));
     contentUi.modificationtime->setText(item.modificationTime().toString() + QStringLiteral(" UTC"));
     QStringList flags;
-    foreach (const Item::Flag &f, item.flags()) {
+    const auto itemFlags = item.flags();
+    for (const Item::Flag &f : itemFlags) {
         flags << QString::fromUtf8(f);
     }
     contentUi.flags->setItems(flags);
 
     QStringList tags;
-    foreach (const Tag &tag, item.tags()) {
+    const auto itemTags = item.tags();
+    for (const Tag &tag : itemTags) {
         tags << QLatin1String(tag.gid());
     }
     contentUi.tags->setItems(tags);
@@ -444,16 +446,20 @@ void BrowserWidget::save()
     Item item = mCurrentItem;
     item.setRemoteId(contentUi.remoteId->text());
     item.setGid(contentUi.gid->text());
-    foreach (const Item::Flag &f, mCurrentItem.flags()) {
+    const auto currentItemFlags = mCurrentItem.flags();
+    for (const Item::Flag &f : currentItemFlags) {
         item.clearFlag(f);
     }
-    foreach (const QString &s, contentUi.flags->items()) {
+    const auto contentUiItemFlags = contentUi.flags->items();
+    for (const QString &s : contentUiItemFlags) {
         item.setFlag(s.toUtf8());
     }
-    foreach (const Tag &tag, mCurrentItem.tags()) {
+    const auto contentUiItemTags = mCurrentItem.tags();
+    for (const Tag &tag : contentUiItemTags) {
         item.clearTag(tag);
     }
-    foreach (const QString &s, contentUi.tags->items()) {
+    const auto contentUiTagsItems = contentUi.tags->items();
+    for (const QString &s : contentUiTagsItems) {
         Tag tag;
         tag.setGid(s.toLatin1());
         item.setTag(tag);

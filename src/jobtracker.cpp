@@ -114,9 +114,9 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     int sessionId = idForSession(session);
     // check if it's a new session, if so, add it
     if (sessionId == -1) {
-        emit aboutToAdd(d->sessions.count(), -1);
+        Q_EMIT aboutToAdd(d->sessions.count(), -1);
         d->sessions.append(session);
-        emit added();
+        Q_EMIT added();
         sessionId = idForSession(session);
     }
     if (parent.isEmpty()) {
@@ -136,7 +136,7 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     QVector<int> &kids = d->childJobs[parentId];
     const int pos = kids.size();
 
-    emit aboutToAdd(pos, parentId);
+    Q_EMIT aboutToAdd(pos, parentId);
 
     const int id = d->lastId++;
 
@@ -151,7 +151,7 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     d->nameToId.insert(jobName, id); // this replaces any previous entry for jobName, which is exactly what we want
     kids << id;
 
-    emit added();
+    Q_EMIT added();
 }
 
 void JobTracker::jobEnded(const QString &jobName, const QString &error)
