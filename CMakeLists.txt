@@ -97,6 +97,18 @@ if (NOT WIN32)
     set(ENABLE_SEARCH TRUE)
     set(ENABLE_CONTENTVIEWS TRUE)
 endif()
+
+# From akonadi's CMakeLists.txt. Needed to fix:
+# FAILED: src/CMakeFiles/libakonadiconsole.dir/browserwidget.cpp.obj
+# ...
+# Z:\CraftRoot\include\KF5\AkonadiCore/item.h(596): error C2039:
+# "auto_ptr" ist kein Member von "std".
+if (MSVC)
+    # This sets the __cplusplus macro to a real value based on the version of C++ specified by
+    # the /std switch. Without it MSVC keeps reporting C++98, so feature detection doesn't work.
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
+endif()
+
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
    add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054500)
