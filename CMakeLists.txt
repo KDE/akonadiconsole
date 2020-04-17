@@ -78,12 +78,12 @@ find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
+find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED) # Because of KPIM::KCheckComboBox, KPIM::UiStateSaver
 
 if (NOT WIN32)
     find_package(KF5AkonadiContact ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
     find_package(KF5CalendarSupport ${CALENDARSUPPORT_LIB_VERSION_LIB} CONFIG REQUIRED)
     find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
-    find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
     find_package(KF5AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
 
     find_package(Xapian CONFIG)
@@ -93,7 +93,6 @@ if (NOT WIN32)
         TYPE REQUIRED
     )
 
-    set(ENABLE_LIBKDEPIM TRUE)
     set(ENABLE_SEARCH TRUE)
     set(ENABLE_CONTENTVIEWS TRUE)
 endif()
