@@ -114,6 +114,7 @@ target_link_libraries(libakonadiconsole
     KF5::ItemViews
     KF5::TextWidgets
     KF5::XmlGui
+    KF5::Libkdepim
     )
 
 if (ENABLE_SEARCH)
@@ -128,12 +129,6 @@ if (ENABLE_CONTENTVIEWS)
         KF5::AkonadiContact
         KF5::CalendarSupport
         KF5::MessageViewer
-    )
-endif()
-
-if (ENABLE_LIBKDEPIM)
-    target_link_libraries(libakonadiconsole
-        KF5::Libkdepim
     )
 endif()
 
