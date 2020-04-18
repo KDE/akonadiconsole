@@ -85,7 +85,7 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
         return false;
     }
 
-    beginRemoveRows(parent, row, row + count);
+    beginRemoveRows(parent, row, row + count - 1);
     mMessages.remove(row, count);
 
     QVector<QString> toDelete;
