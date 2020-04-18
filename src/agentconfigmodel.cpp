@@ -103,7 +103,11 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
         if (index.column() == 0) {
             return setting.first;
         } else if (index.column() == 1) {
-            return setting.second;
+            if (setting.second.type() == QVariant::StringList) {
+                return setting.second.toStringList().join(QStringLiteral(", "));
+            } else {
+                return setting.second;
+            }
         } else if (index.column() == 2) {
             return QLatin1String(setting.second.typeName());
         }
