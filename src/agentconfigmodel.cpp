@@ -151,6 +151,6 @@ Qt::ItemFlags AgentConfigModel::flags(const QModelIndex &index) const
 
 void AgentConfigModel::writeConfig()
 {
-    m_interface->call(QStringLiteral("writeConfig"));
+    m_interface->call(QStringLiteral("save"));
 }
 
