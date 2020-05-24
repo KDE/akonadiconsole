@@ -24,6 +24,7 @@
 #include <QVBoxLayout>
 #include <qheaderview.h>
 #include <QStandardItemModel>
+#include <QSortFilterProxyModel>
 
 #include <AkonadiCore/NotificationSubscriber>
 #include <AkonadiWidgets/controlgui.h>
@@ -44,7 +45,12 @@ MonitorsWidget::MonitorsWidget(QWidget *parent):
     QHBoxLayout *layout = new QHBoxLayout(this);
 
     mTreeView = new QTreeView(this);
-    mTreeView->setModel(mModel);
+    QSortFilterProxyModel *mProxyModel = new QSortFilterProxyModel(this);
+    mProxyModel->setDynamicSortFilter(true);
+    mProxyModel->sort(0);
+    mProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    mProxyModel->setSourceModel(mModel);
+    mTreeView->setModel(mProxyModel);
     mTreeView->setAlternatingRowColors(true);
     mTreeView->setRootIsDecorated(true);
     connect(mTreeView->selectionModel(), &QItemSelectionModel::currentChanged,
