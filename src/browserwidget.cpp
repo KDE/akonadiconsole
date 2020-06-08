@@ -393,20 +393,16 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
 
     Attribute::List list = item.attributes();
     delete mAttrModel;
-    mAttrModel = new QStandardItemModel(list.count(), 2);
-    QStringList labels;
-    labels << QStringLiteral("Attribute") << QStringLiteral("Value");
+    mAttrModel = new QStandardItemModel();
+    QStringList labels{QStringLiteral("Attribute"), QStringLiteral("Value")};
     mAttrModel->setHorizontalHeaderLabels(labels);
-    for (int i = 0; i < list.count(); ++i) {
-        QModelIndex index = mAttrModel->index(i, 0);
-        Q_ASSERT(index.isValid());
-        mAttrModel->setData(index, QString::fromLatin1(list[i]->type()));
-        index = mAttrModel->index(i, 1);
-        Q_ASSERT(index.isValid());
-        mAttrModel->setData(index, QString::fromLatin1(list[i]->serialized()));
-        mAttrModel->itemFromIndex(index)->setFlags(Qt::ItemIsEditable | mAttrModel->flags(index));
+    for (const auto *attr : list) {
+        auto type = new QStandardItem(QString::fromLatin1(attr->type()));
+        type->setEditable(false);
+        mAttrModel->appendRow({type, new QStandardItem(QString::fromLatin1(attr->serialized()))});
     }
     contentUi.attrView->setModel(mAttrModel);
+    connect(mAttrModel, &QStandardItemModel::itemChanged, this, &BrowserWidget::contentViewChanged);
 
     if (mMonitor) {
         mMonitor->deleteLater();    // might be the one calling us
