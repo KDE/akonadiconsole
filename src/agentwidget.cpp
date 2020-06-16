@@ -136,6 +136,7 @@ AgentWidget::AgentWidget(QWidget *parent)
     ui.restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));     //FIXME: Is using system-reboot icon here a good idea?
     connect(ui.restartButton, &QPushButton::clicked, this, &AgentWidget::restartAgent);
 
+    ui.instanceWidget->agentFilterProxyModel()->setFilterCaseSensitivity(Qt::CaseInsensitive);
     connect(ui.mFilterAccount, &QLineEdit::textChanged, ui.instanceWidget->agentFilterProxyModel(), &AgentFilterProxyModel::setFilterFixedString);
     ui.mFilterAccount->installEventFilter(this);
     ControlGui::widgetNeedsAkonadi(this);
