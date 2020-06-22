@@ -26,7 +26,6 @@
 class QModelIndex;
 class NotificationModel;
 class NotificationFilterModel;
-class QFile;
 class QTreeView;
 class QStandardItem;
 class QStandardItemModel;
