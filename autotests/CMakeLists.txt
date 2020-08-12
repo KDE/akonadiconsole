@@ -5,7 +5,7 @@ macro(add_unittest _source _additionalsource)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(akonadiconsole-${_name})
-    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=1;QT_NO_CPU_FEATURE=sse4.2")
+    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=1")
     target_link_libraries( ${_name}
         Qt5::Test
         KF5::I18n
