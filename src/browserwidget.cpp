@@ -562,7 +562,7 @@ void BrowserWidget::clearCache()
     }
 
     // TODO: Clear external parts
-    // TODO: Reset Akonadi's internall collection statistics cache
+    // TODO: Reset Akonadi's internal collection statistics cache
     // TODO: Notify all clients EXCEPT FOR THE RESOURCE about the deletion?
     // TODO: Clear search index
     // TODO: ???
