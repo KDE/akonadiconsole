@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Akonadi Console
 Name[ar]=معراض أكونادي
+Name[az]=Akonadi Konsolu
 Name[ca]=Consola de l'Akonadi
 Name[ca@valencia]=Consola de l'Akonadi
 Name[cs]=Konzole Akonadi
@@ -41,6 +42,7 @@ Icon=akonadiconsole
 Type=Application
 Comment=Akonadi Management and Debugging Console
 Comment[ar]=معراض لإدارة وتنقيح «أكونادي»
+Comment[az]=Akonadi İdarəetmə və Xəta Sazlama Konsolu
 Comment[ca]=Consola de gestió i depuració per a l'Akonadi
 Comment[ca@valencia]=Consola de gestió i depuració per a l'Akonadi
 Comment[cs]=Správa Akonadi a ladicí konzole
