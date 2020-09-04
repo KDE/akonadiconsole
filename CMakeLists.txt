@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.15.1")
+set(PIM_VERSION "5.15.2")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
 # Needs C++17 because Akonadi uses it and we link
@@ -38,7 +38,7 @@ set(KDEPIM_DEV_VERSION )
 if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
-set(RELEASE_SERVICE_VERSION "20.08.1")
+set(RELEASE_SERVICE_VERSION "20.08.2")
 
 set(KDEPIM_VERSION "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})")
 
