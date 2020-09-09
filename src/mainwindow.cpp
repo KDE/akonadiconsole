@@ -9,7 +9,7 @@
 #include "mainwindow.h"
 #include "config-akonadiconsole.h"
 
-#include <Libkdepim/UiStateSaver>
+#include "uistatesaver.h"
 
 #include <KActionCollection>
 #include <KConfigGroup>
@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     KStandardAction::quit(qApp, &QApplication::quit, actionCollection());
 
     setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, QStringLiteral("akonadiconsoleui.rc"));
-    KPIM::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), "UiState"));
+    AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), "UiState"));
     KMessageBox::information(this, QStringLiteral("<p>Akonadi Console is purely a development tool. "
                              "It allows you to view and change internal data structures of Akonadi. "
                              "You should only change data in here if you know what you are doing, otherwise "
@@ -44,7 +44,7 @@ MainWindow::~MainWindow()
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     KConfigGroup config(KSharedConfig::openConfig(), "UiState");
-    KPIM::UiStateSaver::saveState(this, config);
+    AkonadiConsole::UiStateSaver::saveState(this, config);
     KSharedConfig::openConfig()->sync();
     KXmlGuiWindow::closeEvent(event);
 }

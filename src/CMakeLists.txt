@@ -41,6 +41,7 @@ set(libakonadiconsole_SRCS
     notificationmonitor.cpp
     querydebugger.cpp
     tagpropertiesdialog.cpp
+    uistatesaver.cpp
     ${libakonadiconsole_tracker_SRCS}
 )
 
