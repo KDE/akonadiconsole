@@ -25,8 +25,8 @@
 
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 
-MonitorsWidget::MonitorsWidget(QWidget *parent):
-    QWidget(parent)
+MonitorsWidget::MonitorsWidget(QWidget *parent)
+    : QWidget(parent)
 {
     mModel = new MonitorsModel(this);
 
@@ -97,14 +97,12 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
     return rv.join(QLatin1String(", "));
 }
 
-
-void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent,
-                                                  const Akonadi::CollectionFetchScope &cfs)
+void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs)
 {
     appendRow(parent, QStringLiteral("List Filter"), toString(cfs.listFilter()));
     appendRow(parent, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
     appendRow(parent, QStringLiteral("Resource"), cfs.resource());
-    appendRow(parent, QStringLiteral("Content MimeTypes"), toString(static_cast<QList<QString>>(cfs.contentMimeTypes())));
+    appendRow(parent, QStringLiteral("Content MimeTypes"), toString(static_cast<QList<QString> >(cfs.contentMimeTypes())));
     appendRow(parent, QStringLiteral("Ancestor Retrieval"), toString(cfs.ancestorRetrieval()));
 
     const auto ancestorFs = cfs.ancestorFetchScope();
@@ -119,17 +117,15 @@ void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent,
     appendRow(parent, QStringLiteral("Ignore Retrieval Error"), toString(cfs.ignoreRetrievalErrors()));
 }
 
-void MonitorsWidget::populateTagFetchScope(QStandardItem *parent,
-                                           const Akonadi::TagFetchScope& tfs)
+void MonitorsWidget::populateTagFetchScope(QStandardItem *parent, const Akonadi::TagFetchScope &tfs)
 {
     appendRow(parent, QStringLiteral("Attributes"), toString(tfs.attributes()));
     appendRow(parent, QStringLiteral("Fetch ID Only"), toString(tfs.fetchIdOnly()));
 }
 
-
-void MonitorsWidget::onSubscriberSelected(const QModelIndex& index)
+void MonitorsWidget::onSubscriberSelected(const QModelIndex &index)
 {
-    auto model = qobject_cast<QStandardItemModel*>(mSubscriberView->model());
+    auto model = qobject_cast<QStandardItemModel *>(mSubscriberView->model());
     const auto state = mSubscriberView->header()->saveState();
     model->clear();
     model->setHorizontalHeaderLabels({ QStringLiteral("Properties"), QStringLiteral("Values") });
@@ -179,4 +175,3 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex& index)
 
     mSubscriberView->expandAll();
 }
-

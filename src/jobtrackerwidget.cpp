@@ -15,7 +15,6 @@
 
 #include <AkonadiWidgets/controlgui.h>
 
-
 #include <QTreeView>
 #include <QHeaderView>
 #include <QVBoxLayout>
@@ -36,8 +35,8 @@ public:
 };
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
-    : QWidget(parent),
-      d(new Private)
+    : QWidget(parent)
+    , d(new Private)
 {
     d->model = new JobTrackerModel(name, this);
 
@@ -86,8 +85,8 @@ JobTrackerWidget::~JobTrackerWidget()
 
 void JobTrackerWidget::selectOnlyErrorChanged(bool state)
 {
-     d->filterProxyModel->setShowOnlyFailed(state);
-     d->tv->expandAll();
+    d->filterProxyModel->setShowOnlyFailed(state);
+    d->tv->expandAll();
 }
 
 void JobTrackerWidget::searchColumnChanged(int index)
@@ -102,7 +101,7 @@ void JobTrackerWidget::textFilterChanged(const QString &str)
     d->tv->expandAll();
 }
 
-void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
+void JobTrackerWidget::contextMenu(const QPoint & /*pos*/)
 {
     QMenu menu;
     menu.addAction(QStringLiteral("Clear View"), d->model, &JobTrackerModel::resetTracker);

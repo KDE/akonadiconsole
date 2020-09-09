@@ -11,9 +11,9 @@
 #include <KGuiItem>
 #include <QVBoxLayout>
 
-AgentConfigDialog::AgentConfigDialog(QWidget *parent) :
-    QDialog(parent),
-    m_model(new AgentConfigModel(this))
+AgentConfigDialog::AgentConfigDialog(QWidget *parent)
+    : QDialog(parent)
+    , m_model(new AgentConfigModel(this))
 {
     QWidget *mainWidget = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -50,4 +50,3 @@ void AgentConfigDialog::reconfigure()
 {
     m_instance.reconfigure();
 }
-

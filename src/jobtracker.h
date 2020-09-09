@@ -18,8 +18,11 @@
 class JobInfo
 {
 public:
-    JobInfo() : parent(-1), state(Initial)
-    {}
+    JobInfo() : parent(-1)
+        , state(Initial)
+    {
+    }
+
     bool operator==(const JobInfo &other) const
     {
         return name == other.name

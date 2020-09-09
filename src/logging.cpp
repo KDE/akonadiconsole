@@ -41,8 +41,8 @@ Logging::Logging(QWidget *parent)
     mEnabledCheckbox = new QCheckBox(QStringLiteral("Enable"));
     connect(mEnabledCheckbox, &QCheckBox::toggled,
             this, [this](bool toggled) {
-                Q_EMIT enabledChanged(toggled);
-            });
+        Q_EMIT enabledChanged(toggled);
+    });
     l->addWidget(mEnabledCheckbox);
 
     auto h = new QHBoxLayout;
@@ -79,8 +79,8 @@ Logging::Logging(QWidget *parent)
     mView->setRootIsDecorated(false);
     l->addWidget(mView);
     mView->setModel(filterModel);
-    mModel->setAppFilterModel(qobject_cast<QStandardItemModel*>(mAppFilter->model()));
-    mModel->setCategoryFilterModel(qobject_cast<QStandardItemModel*>(mCategoryFilter->model()));
+    mModel->setAppFilterModel(qobject_cast<QStandardItemModel *>(mAppFilter->model()));
+    mModel->setCategoryFilterModel(qobject_cast<QStandardItemModel *>(mCategoryFilter->model()));
 
     h = new QHBoxLayout;
     l->addLayout(h);
@@ -103,15 +103,12 @@ Logging::~Logging()
     config.writeEntry("view", mView->header()->saveState());
 }
 
-
 bool Logging::enabled() const
 {
     return mEnabledCheckbox->isChecked();
 }
 
-void Logging::message(qint64 timestamp, const QString &app, qint64 pid, int type, const QString &category,
-                      const QString &file, const QString &function, int line,
-                      int /*version*/, const QString &msg)
+void Logging::message(qint64 timestamp, const QString &app, qint64 pid, int type, const QString &category, const QString &file, const QString &function, int line, int /*version*/, const QString &msg)
 {
     mModel->addMessage(timestamp, app, pid, static_cast<QtMsgType>(type), category, file, function, line, msg);
 }
@@ -138,7 +135,7 @@ void Logging::saveToFile()
             stream << msg.category << " ";
         }
         if (!msg.function.isEmpty()) {
-               stream << msg.function << ": ";
+            stream << msg.function << ": ";
         }
         stream << msg.message << "\n";
     }

@@ -100,4 +100,3 @@ void MainWidget::restartServer()
 {
     Akonadi::ControlGui::restart(this);
 }
-

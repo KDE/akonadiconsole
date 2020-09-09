@@ -11,7 +11,6 @@
 #include "ui_queryviewdialog.h"
 #include "storagedebuggerinterface.h"
 
-
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 #include <QHeaderView>
@@ -49,10 +48,10 @@ const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con)
 {
     arg.beginStructure();
     arg >> con.id
-        >> con.name
-        >> con.start
-        >> con.trxName
-        >> con.transactionStart;
+    >> con.name
+    >> con.start
+    >> con.trxName
+    >> con.transactionStart;
     arg.endStructure();
     return arg;
 }
@@ -85,7 +84,9 @@ private:
     class Node
     {
     public:
-        virtual ~Node() {}
+        virtual ~Node()
+        {
+        }
 
         Node *parent;
         RowType type;
@@ -99,7 +100,7 @@ private:
         QString query;
         QString error;
         QMap<QString, QVariant> values;
-        QList<QList<QVariant>> results;
+        QList<QList<QVariant> > results;
         int resultsCount;
     };
 
@@ -115,7 +116,7 @@ private:
             Begin, Commit, Rollback
         };
         TransactionType transactionType;
-        QVector<QueryNode*> queries;
+        QVector<QueryNode *> queries;
     };
 
     class ConnectionNode : public Node
@@ -127,7 +128,7 @@ private:
         }
 
         QString name;
-        QVector<Node*> queries; // FIXME: Why can' I use QVector<Query*> here??
+        QVector<Node *> queries; // FIXME: Why can' I use QVector<Query*> here??
     };
 
 public:
@@ -141,7 +142,8 @@ public:
 
     QueryTreeModel(QObject *parent)
         : QAbstractItemModel(parent)
-    {}
+    {
+    }
 
     ~QueryTreeModel()
     {
@@ -202,8 +204,7 @@ public:
         endInsertRows();
     }
 
-    void closeTransaction(qint64 connectionId, bool commit, qint64 timestamp,
-                          uint, const QString &error)
+    void closeTransaction(qint64 connectionId, bool commit, qint64 timestamp, uint, const QString &error)
     {
         auto con = mConnectionById.value(connectionId);
         if (!con) {
@@ -214,7 +215,7 @@ public:
         for (int i = con->queries.count() - 1; i >= 0; i--) {
             Node *node = con->queries[i];
             if (node->type == Transaction) {
-                auto trx = static_cast<TransactionNode*>(node);
+                auto trx = static_cast<TransactionNode *>(node);
                 if (trx->transactionType != TransactionNode::Begin) {
                     continue;
                 }
@@ -230,9 +231,7 @@ public:
         }
     }
 
-    void addQuery(qint64 connectionId, qint64 timestamp, uint duration,
-                  const QString &queryStr, const QMap<QString, QVariant> &values,
-                  int resultsCount, const QList<QList<QVariant>> &results, const QString &error)
+    void addQuery(qint64 connectionId, qint64 timestamp, uint duration, const QString &queryStr, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &results, const QString &error)
     {
         auto con = mConnectionById.value(connectionId);
         if (!con) {
@@ -249,10 +248,10 @@ public:
         query->results = results;
         query->error = error.trimmed();
 
-        if (!con->queries.isEmpty() &&
-            con->queries.last()->type == Transaction &&
-            static_cast<TransactionNode*>(con->queries.last())->transactionType == TransactionNode::Begin) {
-            auto trx = static_cast<TransactionNode*>(con->queries.last());
+        if (!con->queries.isEmpty()
+            && con->queries.last()->type == Transaction
+            && static_cast<TransactionNode *>(con->queries.last())->transactionType == TransactionNode::Begin) {
+            auto trx = static_cast<TransactionNode *>(con->queries.last());
             query->parent = trx;
             beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx),
                             trx->queries.count(), trx->queries.count());
@@ -273,12 +272,12 @@ public:
             return mConnections.count();
         }
 
-        Node *node = reinterpret_cast<Node*>(parent.internalPointer());
+        Node *node = reinterpret_cast<Node *>(parent.internalPointer());
         switch (node->type) {
         case Connection:
-            return static_cast<ConnectionNode*>(node)->queries.count();
+            return static_cast<ConnectionNode *>(node)->queries.count();
         case Transaction:
-            return static_cast<TransactionNode*>(node)->queries.count();
+            return static_cast<TransactionNode *>(node)->queries.count();
         case Query:
             return 0;
         }
@@ -298,7 +297,7 @@ public:
             return QModelIndex();
         }
 
-        Node *childNode = reinterpret_cast<Node*>(child.internalPointer());
+        Node *childNode = reinterpret_cast<Node *>(child.internalPointer());
         // childNode is a Connection
         if (!childNode->parent) {
             return QModelIndex();
@@ -306,12 +305,12 @@ public:
 
         // childNode is a query in transaction
         if (childNode->parent->parent) {
-            ConnectionNode *connection = static_cast<ConnectionNode*>(childNode->parent->parent);
+            ConnectionNode *connection = static_cast<ConnectionNode *>(childNode->parent->parent);
             const int trxIdx = connection->queries.indexOf(childNode->parent);
             return createIndex(trxIdx, 0, childNode->parent);
         } else {
             // childNode is a query without transaction or a transaction
-            return createIndex(mConnections.indexOf(static_cast<ConnectionNode*>(childNode->parent)),
+            return createIndex(mConnections.indexOf(static_cast<ConnectionNode *>(childNode->parent)),
                                0, childNode->parent);
         }
     }
@@ -326,17 +325,17 @@ public:
             }
         }
 
-        Node *parentNode = reinterpret_cast<Node*>(parent.internalPointer());
+        Node *parentNode = reinterpret_cast<Node *>(parent.internalPointer());
         switch (parentNode->type) {
         case Connection:
-            if (row < static_cast<ConnectionNode*>(parentNode)->queries.count()) {
-                return createIndex(row, column, static_cast<ConnectionNode*>(parentNode)->queries.at(row));
+            if (row < static_cast<ConnectionNode *>(parentNode)->queries.count()) {
+                return createIndex(row, column, static_cast<ConnectionNode *>(parentNode)->queries.at(row));
             } else {
                 return QModelIndex();
             }
         case Transaction:
-            if (row < static_cast<TransactionNode*>(parentNode)->queries.count()) {
-                return createIndex(row, column, static_cast<TransactionNode*>(parentNode)->queries.at(row));
+            if (row < static_cast<TransactionNode *>(parentNode)->queries.count()) {
+                return createIndex(row, column, static_cast<TransactionNode *>(parentNode)->queries.at(row));
             } else {
                 return QModelIndex();
             }
@@ -355,11 +354,16 @@ public:
         }
 
         switch (section) {
-        case 0: return QStringLiteral("Name / Query");
-        case 1: return QStringLiteral("Started");
-        case 2: return QStringLiteral("Ended");
-        case 3: return QStringLiteral("Duration");
-        case 4: return QStringLiteral("Error");
+        case 0:
+            return QStringLiteral("Name / Query");
+        case 1:
+            return QStringLiteral("Started");
+        case 2:
+            return QStringLiteral("Ended");
+        case 3:
+            return QStringLiteral("Duration");
+        case 4:
+            return QStringLiteral("Error");
         }
 
         return QVariant();
@@ -371,17 +375,17 @@ public:
             return QVariant();
         }
 
-        Node *node = reinterpret_cast<Node*>(index.internalPointer());
+        Node *node = reinterpret_cast<Node *>(index.internalPointer());
         if (role == RowTypeRole) {
             return node->type;
         } else {
             switch (node->type) {
             case Connection:
-                return connectionData(static_cast<ConnectionNode*>(node), index.column(), role);
+                return connectionData(static_cast<ConnectionNode *>(node), index.column(), role);
             case Transaction:
-                return transactionData(static_cast<TransactionNode*>(node), index.column(), role);
+                return transactionData(static_cast<TransactionNode *>(node), index.column(), role);
             case Query:
-                return queryData(static_cast<QueryNode*>(node), index.column(), role);
+                return queryData(static_cast<QueryNode *>(node), index.column(), role);
             }
         }
 
@@ -395,15 +399,17 @@ public:
             stream << QStringLiteral("  |").repeated(depth)
                    << QLatin1String("- ");
 
-            Node *node = reinterpret_cast<Node*>(idx.internalPointer());
+            Node *node = reinterpret_cast<Node *>(idx.internalPointer());
             switch (node->type) {
-            case Connection: {
-                auto con = static_cast<ConnectionNode*>(node);
+            case Connection:
+            {
+                auto con = static_cast<ConnectionNode *>(node);
                 stream << con->name << "    " << fromMSecsSinceEpoch(con->start);
                 break;
             }
-            case Transaction: {
-                auto trx = static_cast<TransactionNode*>(node);
+            case Transaction:
+            {
+                auto trx = static_cast<TransactionNode *>(node);
                 stream << idx.data(Qt::DisplayRole).toString()
                        << "    " << fromMSecsSinceEpoch(trx->start);
                 if (trx->transactionType > TransactionNode::Begin) {
@@ -411,15 +417,16 @@ public:
                 }
                 break;
             }
-            case Query: {
-                auto query = static_cast<QueryNode*>(node);
+            case Query:
+            {
+                auto query = static_cast<QueryNode *>(node);
                 stream << query->query << "    " << fromMSecsSinceEpoch(query->start) << ", took " << query->duration << " ms";
                 break;
             }
             }
 
             if (node->type >= Transaction) {
-                auto query = static_cast<QueryNode*>(node);
+                auto query = static_cast<QueryNode *>(node);
                 if (!query->error.isEmpty()) {
                     stream << '\n'
                            << QStringLiteral("  |").repeated(depth)
@@ -434,6 +441,7 @@ public:
             dumpRow(file, index(i, 0, idx), depth + 1);
         }
     }
+
 private:
     QString fromMSecsSinceEpoch(qint64 msecs) const
     {
@@ -447,8 +455,10 @@ private:
         }
 
         switch (column) {
-        case 0: return connection->name;
-        case 1: return fromMSecsSinceEpoch(connection->start);
+        case 0:
+            return connection->name;
+        case 1:
+            return fromMSecsSinceEpoch(connection->start);
         }
 
         return QVariant();
@@ -485,11 +495,16 @@ private:
             break;
         case Qt::DisplayRole:
             switch (column) {
-            case 0: return query->query;
-            case 1: return fromMSecsSinceEpoch(query->start);
-            case 2: return fromMSecsSinceEpoch(query->start + query->duration);
-            case 3: return QTime(0, 0, 0).addMSecs(query->duration).toString(QStringLiteral("HH:mm:ss.zzz"));
-            case 4: return query->error;
+            case 0:
+                return query->query;
+            case 1:
+                return fromMSecsSinceEpoch(query->start);
+            case 2:
+                return fromMSecsSinceEpoch(query->start + query->duration);
+            case 3:
+                return QTime(0, 0, 0).addMSecs(query->duration).toString(QStringLiteral("HH:mm:ss.zzz"));
+            case 4:
+                return query->error;
             }
             break;
         case QueryRole:
@@ -567,8 +582,8 @@ public:
             return QVariant();
         }
 
-        const QueryInfo &info =
-            (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
+        const QueryInfo &info
+            = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
 
         if (role == Qt::ToolTipRole) {
             return QString(QLatin1String("<qt>") + info.query + QLatin1String("</qt>"));
@@ -649,11 +664,7 @@ class QueryViewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    QueryViewDialog(const QString &query,
-                    const QMap<QString,QVariant> &values,
-                    int resultsCount,
-                    const QList<QList<QVariant>> &results,
-                    QWidget *parent = nullptr)
+    QueryViewDialog(const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &results, QWidget *parent = nullptr)
         : QDialog(parent)
         , mUi(new Ui::QueryViewDialog)
     {
@@ -696,20 +707,20 @@ private:
     QScopedPointer<Ui::QueryViewDialog> mUi;
 };
 
-QueryDebugger::QueryDebugger(QWidget *parent):
-    QWidget(parent),
-    mUi(new Ui::QueryDebugger)
+QueryDebugger::QueryDebugger(QWidget *parent)
+    : QWidget(parent)
+    , mUi(new Ui::QueryDebugger)
 {
     qDBusRegisterMetaType< QList< QList<QVariant> > >();
     qDBusRegisterMetaType<DbConnection>();
-    qDBusRegisterMetaType<QVector<DbConnection>>();
+    qDBusRegisterMetaType<QVector<DbConnection> >();
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
         service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     }
     mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service,
-            QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
+                                                               QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
 
     connect(mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::queryExecuted,
             this, &QueryDebugger::addQuery);
@@ -774,10 +785,7 @@ void QueryDebugger::debuggerToggled(bool on)
     }
 }
 
-void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timestamp,
-                             uint duration, const QString &query, const QMap<QString, QVariant> &values,
-                             int resultsCount, const QList<QList<QVariant> > &result,
-                             const QString &error)
+void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timestamp, uint duration, const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &result, const QString &error)
 {
     Q_UNUSED(sequence);
     mQueryList->addQuery(query, duration);
@@ -786,16 +794,16 @@ void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timest
 
 void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 {
-    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt()) !=
-        QueryTreeModel::Query) {
+    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt())
+        != QueryTreeModel::Query) {
         return;
     }
 
     auto dlg = new QueryViewDialog(
         index.data(QueryTreeModel::QueryRole).toString(),
-        index.data(QueryTreeModel::QueryValuesRole).value<QMap<QString,QVariant>>(),
+        index.data(QueryTreeModel::QueryValuesRole).value<QMap<QString, QVariant> >(),
         index.data(QueryTreeModel::QueryResultsCountRole).toInt(),
-        index.data(QueryTreeModel::QueryResultsRole).value<QList<QList<QVariant>>>(),
+        index.data(QueryTreeModel::QueryResultsRole).value<QList<QList<QVariant> > >(),
         this);
     connect(dlg, &QDialog::finished, dlg, &QObject::deleteLater);
     dlg->show();

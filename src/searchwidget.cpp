@@ -17,7 +17,6 @@
 #include <AkonadiCore/itemsearchjob.h>
 #include <AkonadiCore/SearchQuery>
 
-
 #include <AkonadiSearch/Core/searchstore.h>
 #include <AkonadiSearch/Xapian/xapiansearchstore.h>
 
@@ -95,7 +94,6 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     layout->addWidget(mVSplitter);
 
-
     const auto stores = Akonadi::Search::SearchStore::searchStores();
     for (const auto &store : stores) {
         mStoreCombo->addItem(store->types().last(), QVariant::fromValue(store));
@@ -120,7 +118,7 @@ SearchWidget::~SearchWidget()
 
 void SearchWidget::openStore(int idx)
 {
-    auto store = mStoreCombo->itemData(idx, Qt::UserRole).value<QSharedPointer<Akonadi::Search::SearchStore>>();
+    auto store = mStoreCombo->itemData(idx, Qt::UserRole).value<QSharedPointer<Akonadi::Search::SearchStore> >();
     auto xapianStore = store.objectCast<Akonadi::Search::XapianSearchStore>();
     Q_ASSERT(xapianStore);
 
@@ -145,8 +143,6 @@ void SearchWidget::xapianError(const Xapian::Error &e)
     QMessageBox::critical(this, QStringLiteral("Xapian error"),
                           QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
 }
-
-
 
 void SearchWidget::search()
 {
@@ -197,7 +193,7 @@ void SearchWidget::fetchItem(const QModelIndex &index)
 
         auto valuesRoot = new QStandardItem(QStringLiteral("Values"));
         mTermModel->appendRow(valuesRoot);
-	const auto end = doc.values_end(); // Xapian 1.2 has different type for _begin() and _end() iters
+        const auto end = doc.values_end(); // Xapian 1.2 has different type for _begin() and _end() iters
         for (auto it = doc.values_begin(); it != end; ++it) {
             valuesRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
                                     new QStandardItem(QString::number(it.get_valueno())) });
@@ -206,7 +202,6 @@ void SearchWidget::fetchItem(const QModelIndex &index)
         xapianError(e);
         return;
     }
-
 
     Akonadi::ItemFetchJob *fetchJob = new Akonadi::ItemFetchJob(Akonadi::Item(docId));
     fetchJob->fetchScope().fetchFullPayload();

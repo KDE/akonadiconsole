@@ -19,12 +19,14 @@ typedef QSharedPointer<KCalendarCore::Incidence> IncidencePtr;
 class AkonadiBrowserModel::State
 {
 public:
-    virtual ~State() {}
+    virtual ~State()
+    {
+    }
+
     QStringList m_collectionHeaders;
     QStringList m_itemHeaders;
 
     virtual QVariant entityData(const Item &item, int column, int role) const = 0;
-
 };
 
 class GenericState : public AkonadiBrowserModel::State
@@ -35,6 +37,7 @@ public:
         m_collectionHeaders << QStringLiteral("Collection");
         m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("GID") << QStringLiteral("MimeType");
     }
+
     virtual ~GenericState()
     {
     }
@@ -64,7 +67,6 @@ public:
         }
         return QVariant();
     }
-
 };
 
 class MailState : public AkonadiBrowserModel::State
@@ -75,7 +77,10 @@ public:
         m_collectionHeaders << QStringLiteral("Collection");
         m_itemHeaders << QStringLiteral("Subject") << QStringLiteral("Sender") << QStringLiteral("Date");
     }
-    virtual ~MailState() {}
+
+    virtual ~MailState()
+    {
+    }
 
     QVariant entityData(const Item &item, int column, int role) const override
     {
@@ -112,7 +117,6 @@ public:
 
         return QVariant();
     }
-
 };
 
 class ContactsState : public AkonadiBrowserModel::State
@@ -123,7 +127,10 @@ public:
         m_collectionHeaders << QStringLiteral("Collection");
         m_itemHeaders << QStringLiteral("Given Name") << QStringLiteral("Family Name") << QStringLiteral("Email");
     }
-    virtual ~ContactsState() {}
+
+    virtual ~ContactsState()
+    {
+    }
 
     QVariant entityData(const Item &item, int column, int role) const override
     {
@@ -149,7 +156,6 @@ public:
             return QVariant();
         }
         if (item.hasPayload<KContacts::ContactGroup>()) {
-
             switch (column) {
             case 0:
                 const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
@@ -169,7 +175,10 @@ public:
         m_collectionHeaders << QStringLiteral("Collection");
         m_itemHeaders << QStringLiteral("UID") << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End") << QStringLiteral("Type");
     }
-    virtual ~CalendarState() {}
+
+    virtual ~CalendarState()
+    {
+    }
 
     QVariant entityData(const Item &item, int column, int role) const override
     {
@@ -203,7 +212,6 @@ public:
 AkonadiBrowserModel::AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
 {
-
     m_genericState = new GenericState();
     m_mailState = new MailState();
     m_contactsState = new ContactsState();

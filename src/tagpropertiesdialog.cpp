@@ -8,7 +8,6 @@
 #include "tagpropertiesdialog.h"
 #include "dbaccess.h"
 
-
 #include <AkonadiCore/AttributeFactory>
 #include <QSqlQuery>
 #include <QDialogButtonBox>

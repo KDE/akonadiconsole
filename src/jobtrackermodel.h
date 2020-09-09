@@ -62,7 +62,6 @@ private Q_SLOTS:
 private:
     class Private;
     Private *const d;
-
 };
 
 #endif /* JOBTRACKERMODEL_H_ */

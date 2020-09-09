@@ -35,15 +35,15 @@ void LoggingFilterModel::setAppFilter(KCheckComboBox *appFilter)
     mAppFilter = appFilter;
     connect(mAppFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &items) {
-                mCheckedApps.clear();
-                mCheckedApps.reserve(items.count());
-                for (const auto &item : items) {
-                    mCheckedApps.insert(item);
-                }
-                if (!mInvalidateTimer.isActive()) {
-                    mInvalidateTimer.start();
-                }
-            });
+        mCheckedApps.clear();
+        mCheckedApps.reserve(items.count());
+        for (const auto &item : items) {
+            mCheckedApps.insert(item);
+        }
+        if (!mInvalidateTimer.isActive()) {
+            mInvalidateTimer.start();
+        }
+    });
 }
 
 void LoggingFilterModel::setTypeFilter(KCheckComboBox *typeFilter)
@@ -54,15 +54,15 @@ void LoggingFilterModel::setTypeFilter(KCheckComboBox *typeFilter)
     mTypeFilter = typeFilter;
     connect(mTypeFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &items) {
-                mCheckedTypes.clear();
-                mCheckedTypes.reserve(items.count());
-                for (const auto &item : mTypeFilter->checkedItems(Qt::UserRole)) {
-                    mCheckedTypes.insert(static_cast<QtMsgType>(item.toInt()));
-                }
-                if (!mInvalidateTimer.isActive()) {
-                    mInvalidateTimer.start();
-                }
-            });
+        mCheckedTypes.clear();
+        mCheckedTypes.reserve(items.count());
+        for (const auto &item : mTypeFilter->checkedItems(Qt::UserRole)) {
+            mCheckedTypes.insert(static_cast<QtMsgType>(item.toInt()));
+        }
+        if (!mInvalidateTimer.isActive()) {
+            mInvalidateTimer.start();
+        }
+    });
 }
 
 void LoggingFilterModel::setCategoryFilter(KCheckComboBox *categoryFilter)
@@ -73,23 +73,22 @@ void LoggingFilterModel::setCategoryFilter(KCheckComboBox *categoryFilter)
     mCategoryFilter = categoryFilter;
     connect(mCategoryFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &items) {
-                mCheckedCategories.clear();
-                mCheckedCategories.reserve(items.count());
-                for (const auto &item : items) {
-                    mCheckedCategories.insert(item);
-                }
-                if (!mInvalidateTimer.isActive()) {
-                    mInvalidateTimer.start();
-                }
-            });
+        mCheckedCategories.clear();
+        mCheckedCategories.reserve(items.count());
+        for (const auto &item : items) {
+            mCheckedCategories.insert(item);
+        }
+        if (!mInvalidateTimer.isActive()) {
+            mInvalidateTimer.start();
+        }
+    });
 }
-
 
 bool LoggingFilterModel::filterAcceptsRow(int source_row, const QModelIndex &) const
 {
     const auto source_idx = sourceModel()->index(source_row, 0);
     const auto msg = sourceModel()->data(source_idx, LoggingModel::MessageRole).value<LoggingModel::Message>();
-    return mCheckedApps.contains(msg.app) && 
-            mCheckedCategories.contains(msg.category) &&
-            mCheckedTypes.contains(msg.type);
+    return mCheckedApps.contains(msg.app)
+           && mCheckedCategories.contains(msg.category)
+           && mCheckedTypes.contains(msg.type);
 }

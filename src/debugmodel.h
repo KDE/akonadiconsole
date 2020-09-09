@@ -40,7 +40,6 @@ public:
         _ColumnCount
     };
 
-
     explicit DebugModel(QObject *parent = nullptr);
     ~DebugModel() override;
 
@@ -65,7 +64,7 @@ private:
 
     QVector<Message> mMessages;
     QStandardItemModel *mSenderFilterModel = nullptr;
-    QMap<QString,QString> mSenderCache;
+    QMap<QString, QString> mSenderCache;
 };
 
 #endif

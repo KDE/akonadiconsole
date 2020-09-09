@@ -9,8 +9,7 @@
 
 class QSqlDatabase;
 
-namespace DbAccess
-{
+namespace DbAccess {
 QSqlDatabase database();
 }
 

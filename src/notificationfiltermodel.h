@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2018 David Faure <faure@kde.org>
- * 
+ *
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
@@ -34,7 +34,7 @@ public:
     void setSourceModel(QAbstractItemModel *model) override;
 
 protected:
-    bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
     void slotRowsInserted(const QModelIndex &source_parent, int start, int end);

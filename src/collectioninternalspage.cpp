@@ -9,8 +9,8 @@
 #include <AkonadiCore/collection.h>
 using namespace Akonadi;
 
-CollectionInternalsPage::CollectionInternalsPage(QWidget *parent) :
-    CollectionPropertiesPage(parent)
+CollectionInternalsPage::CollectionInternalsPage(QWidget *parent)
+    : CollectionPropertiesPage(parent)
 {
     setPageTitle(QStringLiteral("Internals"));
     ui.setupUi(this);
@@ -33,4 +33,3 @@ void CollectionInternalsPage::save(Akonadi::Collection &col)
     col.setContentMimeTypes(ui.contentTypes->items());
     col.setVirtual(ui.virtCheck->isChecked());
 }
-

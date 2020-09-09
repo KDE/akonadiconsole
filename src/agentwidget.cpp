@@ -198,7 +198,7 @@ void AgentWidget::removeAgent()
                                        KStandardGuiItem::cancel(),
                                        QString(),
                                        KMessageBox::Dangerous)
-                == KMessageBox::Yes) {
+            == KMessageBox::Yes) {
             for (const AgentInstance &agent : list) {
                 AgentManager::self()->removeInstance(agent);
             }
@@ -230,10 +230,11 @@ void AgentWidget::configureAgentRemote()
 void AgentWidget::synchronizeAgent()
 {
     const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
-    if (!list.isEmpty())
+    if (!list.isEmpty()) {
         for (AgentInstance agent : list) {
             agent.synchronize();
         }
+    }
 }
 
 void AgentWidget::toggleOnline()
@@ -406,17 +407,21 @@ void AgentWidget::currentChanged()
         QString onlineStatus = (instance.isOnline() ? QStringLiteral("Online") : QStringLiteral("Offline"));
         QString agentStatus;
         switch (instance.status()) {
-        case AgentInstance::Idle: agentStatus =
-                i18nc("agent is in an idle state", "Idle");
+        case AgentInstance::Idle:
+            agentStatus
+                = i18nc("agent is in an idle state", "Idle");
             break;
-        case AgentInstance::Running: agentStatus =
-                i18nc("agent is running", "Running (%1%)", instance.progress());
+        case AgentInstance::Running:
+            agentStatus
+                = i18nc("agent is running", "Running (%1%)", instance.progress());
             break;
-        case AgentInstance::Broken: agentStatus =
-                i18nc("agent is broken somehow", "Broken");
+        case AgentInstance::Broken:
+            agentStatus
+                = i18nc("agent is broken somehow", "Broken");
             break;
-        case AgentInstance::NotConfigured: agentStatus =
-                i18nc("agent is not yet configured", "Not Configured");
+        case AgentInstance::NotConfigured:
+            agentStatus
+                = i18nc("agent is not yet configured", "Not Configured");
             break;
         }
         ui.statusLabel->setText(
@@ -455,4 +460,3 @@ void AgentWidget::resizeEvent(QResizeEvent *event)
 {
     ui.detailsBox->setVisible(event->size().height() > 400);
 }
-

@@ -25,10 +25,9 @@ class KXmlGuiWindow;
 
 class AkonadiBrowserModel;
 
-template <typename T> class KViewStateMaintainer;
+template<typename T> class KViewStateMaintainer;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ChangeRecorder;
 class EntityTreeView;
 class Job;
@@ -48,7 +47,7 @@ namespace MessageViewer {
 class Viewer;
 }
 
-class BrowserWidget: public QWidget
+class BrowserWidget : public QWidget
 {
     Q_OBJECT
 

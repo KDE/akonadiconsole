@@ -33,12 +33,10 @@ QString LoggingModel::cacheString(const QString &str, QSet<QString> &cache, QSta
         cache.insert(str);
         return str;
     }
-    return (*it);
+    return *it;
 }
 
-void LoggingModel::addMessage(qint64 timestamp, const QString &app, qint64 pid, QtMsgType type,
-                              const QString &category, const QString &file, 
-                              const QString &function, int line, const QString &message)
+void LoggingModel::addMessage(qint64 timestamp, const QString &app, qint64 pid, QtMsgType type, const QString &category, const QString &file, const QString &function, int line, const QString &message)
 {
     beginInsertRows({}, mMessages.count(), mMessages.count());
     mMessages.push_back({ timestamp, cacheString(app, mAppCache, mAppFilterModel), pid,
@@ -53,12 +51,12 @@ void LoggingModel::setAppFilterModel(QStandardItemModel *appFilterModel)
     mAppFilterModel = appFilterModel;
 }
 
-void LoggingModel::setCategoryFilterModel(QStandardItemModel* categoryFilterModel)
+void LoggingModel::setCategoryFilterModel(QStandardItemModel *categoryFilterModel)
 {
     mCategoryFilterModel = categoryFilterModel;
 }
 
-int LoggingModel::rowCount(const QModelIndex& parent) const
+int LoggingModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : mMessages.count();
 }
@@ -106,7 +104,6 @@ QVariant LoggingModel::headerData(int section, Qt::Orientation orientation, int 
     }
     return {};
 }
-
 
 QVariant LoggingModel::data(const QModelIndex &index, int role) const
 {
@@ -174,7 +171,3 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
 
     return {};
 }
-
-
-
-

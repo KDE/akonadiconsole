@@ -26,7 +26,9 @@
 Q_DECLARE_METATYPE(DebugModel::Message)
 
 ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
-    : QWidget(parent), mIdentifier(identifier), mShowAllConnections(false)
+    : QWidget(parent)
+    , mIdentifier(identifier)
+    , mShowAllConnections(false)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
     auto h = new QHBoxLayout;
@@ -37,7 +39,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     h->setStretchFactor(mSenderFilter, 2);
 
     mModel = new DebugModel(this);
-    mModel->setSenderFilterModel(qobject_cast<QStandardItemModel*>(mSenderFilter->model()));
+    mModel->setSenderFilterModel(qobject_cast<QStandardItemModel *>(mSenderFilter->model()));
 
     mFilterModel = new DebugFilterModel(this);
     mFilterModel->setSourceModel(mModel);
@@ -88,13 +90,12 @@ QString ConnectionPage::toHtml(QAbstractItemModel *model) const
 {
     QString ret;
     int anz = model->rowCount();
-    for (int row=0; row < anz; row++) {
+    for (int row = 0; row < anz; row++) {
         const auto message = model->data(model->index(row, 0), DebugModel::MessageRole).value<DebugModel::Message>();
         const auto &sender = model->data(model->index(row, DebugModel::SenderColumn)).toString();
 
-        ret += (message.direction==DebugModel::ClientToServer ? QStringLiteral("<- ") : QStringLiteral("-> "));
+        ret += (message.direction == DebugModel::ClientToServer ? QStringLiteral("<- ") : QStringLiteral("-> "));
         ret += sender + QStringLiteral(" ") + message.message + QStringLiteral("\n");
-
     }
     return ret;
 }

@@ -30,10 +30,8 @@ public:
 private Q_SLOTS:
     void onSubscriberSelected(const QModelIndex &index);
 
-    void populateTagFetchScope(QStandardItem *parent,
-                               const Akonadi::TagFetchScope &tfs);
-    void populateCollectionFetchScope(QStandardItem *parent,
-                                      const Akonadi::CollectionFetchScope &cfs);
+    void populateTagFetchScope(QStandardItem *parent, const Akonadi::TagFetchScope &tfs);
+    void populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs);
 private:
     QTreeView *mTreeView = nullptr;
     QTreeView *mSubscriberView = nullptr;

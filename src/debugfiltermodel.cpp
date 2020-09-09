@@ -35,17 +35,17 @@ void DebugFilterModel::setSenderFilter(KCheckComboBox *senderFilter)
     mSenderFilter = senderFilter;
     connect(mSenderFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &_items) {
-                Q_UNUSED(_items);
-                const auto items = mSenderFilter->checkedItems(DebugModel::IdentifierRole);
-                mCheckedSenders.clear();
-                mCheckedSenders.reserve(items.count());
-                for (const auto &item : items) {
-                    mCheckedSenders.insert(item);
-                }
-                if (!mInvalidateTimer.isActive()) {
-                    mInvalidateTimer.start();
-                }
-            });
+        Q_UNUSED(_items);
+        const auto items = mSenderFilter->checkedItems(DebugModel::IdentifierRole);
+        mCheckedSenders.clear();
+        mCheckedSenders.reserve(items.count());
+        for (const auto &item : items) {
+            mCheckedSenders.insert(item);
+        }
+        if (!mInvalidateTimer.isActive()) {
+            mInvalidateTimer.start();
+        }
+    });
 }
 
 bool DebugFilterModel::filterAcceptsRow(int source_row, const QModelIndex &) const

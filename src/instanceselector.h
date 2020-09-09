@@ -14,8 +14,7 @@
 
 #include <QDialog>
 
-namespace Ui
-{
+namespace Ui {
 class InstanceSelector;
 }
 

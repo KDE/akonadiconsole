@@ -12,8 +12,7 @@
 #include <AkonadiCore/NotificationSubscriber>
 #include "libakonadiconsole_export.h"
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 
@@ -25,7 +24,7 @@ public:
     enum Roles {
         SubscriberRole = Qt::UserRole
     };
-        
+
     explicit MonitorsModel(QObject *parent = nullptr);
     virtual ~MonitorsModel();
 
@@ -49,7 +48,7 @@ private Q_SLOTS:
 
 private:
     QList<QByteArray> mSessions;
-    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber>> mData;
+    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber> > mData;
     Akonadi::Monitor *mMonitor;
 };
 

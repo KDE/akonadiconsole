@@ -29,10 +29,10 @@ MainWindow::MainWindow(QWidget *parent)
     setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, QStringLiteral("akonadiconsoleui.rc"));
     AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), "UiState"));
     KMessageBox::information(this, QStringLiteral("<p>Akonadi Console is purely a development tool. "
-                             "It allows you to view and change internal data structures of Akonadi. "
-                             "You should only change data in here if you know what you are doing, otherwise "
-                             "you risk damaging or losing your personal information management data.<br/>"
-                             "<b>Use at your own risk!</b></p>"),
+                                                  "It allows you to view and change internal data structures of Akonadi. "
+                                                  "You should only change data in here if you know what you are doing, otherwise "
+                                                  "you risk damaging or losing your personal information management data.<br/>"
+                                                  "<b>Use at your own risk!</b></p>"),
                              QString(), QStringLiteral("UseAtYourOwnRiskWarning"));
 }
 

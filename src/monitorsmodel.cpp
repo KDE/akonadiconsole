@@ -15,8 +15,8 @@
 
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 
-MonitorsModel::MonitorsModel(QObject *parent):
-    QAbstractItemModel(parent)
+MonitorsModel::MonitorsModel(QObject *parent)
+    : QAbstractItemModel(parent)
 {
     QTimer::singleShot(0, this, &MonitorsModel::init);
 }
@@ -124,7 +124,7 @@ QVariant MonitorsModel::data(const QModelIndex &index, int role) const
         if (index.row() >= subscribers.count()) {
             return {};
         }
-        const auto subscriber = subscribers.at(index.row()); 
+        const auto subscriber = subscribers.at(index.row());
         if (role == Qt::DisplayRole || role == Qt::ToolTipRole) {
             return subscriber.subscriber();
         } else if (role == SubscriberRole) {
@@ -174,4 +174,3 @@ QModelIndex MonitorsModel::index(int row, int column, const QModelIndex &parent)
 
     return createIndex(row, column, parent.row());
 }
-

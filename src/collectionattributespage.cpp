@@ -9,13 +9,12 @@
 #include <AkonadiCore/attributefactory.h>
 #include <AkonadiCore/collection.h>
 
-
 #include <QStandardItemModel>
 
 using namespace Akonadi;
 
-CollectionAttributePage::CollectionAttributePage(QWidget *parent) :
-    CollectionPropertiesPage(parent)
+CollectionAttributePage::CollectionAttributePage(QWidget *parent)
+    : CollectionPropertiesPage(parent)
 {
     setPageTitle(QStringLiteral("Attributes"));
     ui.setupUi(this);
@@ -100,4 +99,3 @@ void CollectionAttributePage::attributeChanged(QStandardItem *item)
     mDeleted.remove(attr);
     mChanged.insert(attr);
 }
-

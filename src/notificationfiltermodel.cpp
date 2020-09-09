@@ -36,16 +36,16 @@ void NotificationFilterModel::setTypeFilter(KPIM::KCheckComboBox *typeFilter)
     mTypeFilter = typeFilter;
     connect(mTypeFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &items) {
-                mCheckedTypes.clear();
-                mCheckedTypes.reserve(items.count());
-                // it sucks a bit that KCheckComboBox::checkedItems can't return a QVariantList instead of a QStringList
-                for (const QString &item : mTypeFilter->checkedItems(Qt::UserRole)) {
-                    mCheckedTypes.insert(static_cast<Akonadi::ChangeNotification::Type>(item.toInt()));
-                }
-                if (!mInvalidateTimer.isActive()) {
-                    mInvalidateTimer.start();
-                }
-            });
+        mCheckedTypes.clear();
+        mCheckedTypes.reserve(items.count());
+        // it sucks a bit that KCheckComboBox::checkedItems can't return a QVariantList instead of a QStringList
+        for (const QString &item : mTypeFilter->checkedItems(Qt::UserRole)) {
+            mCheckedTypes.insert(static_cast<Akonadi::ChangeNotification::Type>(item.toInt()));
+        }
+        if (!mInvalidateTimer.isActive()) {
+            mInvalidateTimer.start();
+        }
+    });
 }
 
 bool NotificationFilterModel::filterAcceptsRow(int source_row, const QModelIndex &) const
@@ -55,15 +55,16 @@ bool NotificationFilterModel::filterAcceptsRow(int source_row, const QModelIndex
     return mCheckedTypes.contains(notification.type());
 }
 
-void NotificationFilterModel::setSourceModel(QAbstractItemModel* model)
+void NotificationFilterModel::setSourceModel(QAbstractItemModel *model)
 {
-    if (sourceModel())
+    if (sourceModel()) {
         disconnect(sourceModel(), &QAbstractItemModel::rowsInserted, this, &NotificationFilterModel::slotRowsInserted);
+    }
     connect(model, &QAbstractItemModel::rowsInserted, this, &NotificationFilterModel::slotRowsInserted);
     QSortFilterProxyModel::setSourceModel(model);
 }
 
-void NotificationFilterModel::slotRowsInserted(const QModelIndex& source_parent, int start, int end)
+void NotificationFilterModel::slotRowsInserted(const QModelIndex &source_parent, int start, int end)
 {
     // insert new types (if any) into the type filter combo
     Q_ASSERT(!source_parent.isValid());

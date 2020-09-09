@@ -16,12 +16,10 @@
 JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 JobTrackerSearchWidgetTest::~JobTrackerSearchWidgetTest()
 {
-
 }
 
 void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
@@ -48,7 +46,6 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mSelectColumn);
     QCOMPARE(mSelectColumn->count(), 8);
     QCOMPARE(mSelectColumn->currentIndex(), 0);
-
 
     QCheckBox *mSelectOnlyError = w.findChild<QCheckBox *>(QStringLiteral("selectonlyerror"));
     QVERIFY(mSelectOnlyError);

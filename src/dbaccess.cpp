@@ -15,7 +15,6 @@
 
 #include <KMessageBox>
 
-
 using namespace Akonadi;
 
 class DbAccessPrivate

@@ -38,10 +38,10 @@ QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cach
     auto identifier = str;
     QString name;
     if (pos != -1) {
-        identifier = str.mid(pos+1,str.size()-pos-2);
-        name = str.mid(0,pos-1);
+        identifier = str.mid(pos+1, str.size()-pos-2);
+        name = str.mid(0, pos-1);
     }
-    if (! cache.contains(identifier)) {
+    if (!cache.contains(identifier)) {
         cache.insert(identifier, name);
         if (model) {
             auto item = new QStandardItem(displaySender(identifier));
@@ -58,7 +58,7 @@ QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cach
     return identifier;
 }
 
-void DebugModel::addMessage(const QString& sender, DebugModel::Direction direction, const QString& message)
+void DebugModel::addMessage(const QString &sender, DebugModel::Direction direction, const QString &message)
 {
     beginInsertRows({}, mMessages.count(), mMessages.count());
     mMessages.push_back({ cacheString(sender, mSenderCache, mSenderFilterModel), direction,
@@ -66,7 +66,7 @@ void DebugModel::addMessage(const QString& sender, DebugModel::Direction directi
     endInsertRows();
 }
 
-bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
+bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
 {
     if (parent.isValid()) {
         return false;
@@ -78,9 +78,9 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
     QVector<QString> toDelete;
 
     // find elements that needs to be deleted.
-    for(const auto &identifer: mSenderCache.keys()) {
+    for (const auto &identifer: mSenderCache.keys()) {
         bool found = false;
-        for(const auto &msg: qAsConst(mMessages)) {
+        for (const auto &msg: qAsConst(mMessages)) {
             if (msg.sender == identifer) {
                 found = true;
                 break;
@@ -92,12 +92,11 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
     }
 
     // Update senderCache and senderFilterModel
-    for(const auto &i: toDelete) {
-
+    for (const auto &i: toDelete) {
         const auto &item = mSenderFilterModel->findItems(displaySender(i));
         if (!item.isEmpty()) {
             const auto &index = item.first()->index();
-            mSenderFilterModel->removeRows(index.row(),1);
+            mSenderFilterModel->removeRows(index.row(), 1);
         }
         mSenderCache.remove(i);
     }
@@ -105,13 +104,12 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex& parent)
     return true;
 }
 
-
 void DebugModel::setSenderFilterModel(QStandardItemModel *senderFilterModel)
 {
     mSenderFilterModel = senderFilterModel;
 }
 
-int DebugModel::rowCount(const QModelIndex& parent) const
+int DebugModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : mMessages.count();
 }

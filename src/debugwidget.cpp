@@ -50,7 +50,6 @@ DebugWidget::DebugWidget(QWidget *parent)
     mGeneralView = new KTextEdit(splitter);
     mGeneralView->setReadOnly(true);
 
-
     org::freedesktop::Akonadi::TracerNotification *iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
 
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::signalEmitted, this, &DebugWidget::signalEmitted);

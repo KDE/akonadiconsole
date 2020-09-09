@@ -10,8 +10,8 @@
 
 using namespace Akonadi;
 
-CollectionAclPage::CollectionAclPage(QWidget *parent) :
-    CollectionPropertiesPage(parent)
+CollectionAclPage::CollectionAclPage(QWidget *parent)
+    : CollectionPropertiesPage(parent)
 {
     setPageTitle(QStringLiteral("ACL"));
     ui.setupUi(this);
@@ -59,4 +59,3 @@ void CollectionAclPage::save(Collection &col)
     }
     col.setRights(rights);
 }
-

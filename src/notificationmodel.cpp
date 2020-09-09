@@ -6,7 +6,6 @@
 
 #include "notificationmodel.h"
 
-
 #include <QLocale>
 
 #include "akonadiconsole_debug.h"
@@ -20,8 +19,8 @@ Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 
 using namespace Akonadi;
 
-NotificationModel::NotificationModel(QObject *parent) :
-    QAbstractItemModel(parent)
+NotificationModel::NotificationModel(QObject *parent)
+    : QAbstractItemModel(parent)
 {
 }
 
@@ -164,7 +163,8 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             }
         case IdsColumn:
             switch (msg.type()) {
-            case ChangeNotification::Items: {
+            case ChangeNotification::Items:
+            {
                 QStringList rv;
                 const auto items = Protocol::cmdCast<Protocol::ItemChangeNotification>(msg.notification()).items();
                 for (const auto &item : items) {
@@ -183,7 +183,8 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             return {};
         case SessionColumn:
             return msg.notification()->sessionId();
-        case ListenersColumn: {
+        case ListenersColumn:
+        {
             const auto listeners = msg.listeners();
             QStringList rv;
             for (const auto &l : listeners) {
@@ -203,12 +204,18 @@ QVariant NotificationModel::headerData(int section, Qt::Orientation orientation,
 {
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
         switch (section) {
-        case DateColumn: return QStringLiteral("Date");
-        case TypeColumn: return QStringLiteral("Type");
-        case OperationColumn: return QStringLiteral("Operation");
-        case IdsColumn: return QStringLiteral("IDs");
-        case SessionColumn: return QStringLiteral("Session");
-        case ListenersColumn: return QStringLiteral("Listeners");
+        case DateColumn:
+            return QStringLiteral("Date");
+        case TypeColumn:
+            return QStringLiteral("Type");
+        case OperationColumn:
+            return QStringLiteral("Operation");
+        case IdsColumn:
+            return QStringLiteral("IDs");
+        case SessionColumn:
+            return QStringLiteral("Session");
+        case ListenersColumn:
+            return QStringLiteral("Listeners");
         }
     }
     return QAbstractItemModel::headerData(section, orientation, role);
@@ -241,4 +248,3 @@ void NotificationModel::setEnabled(bool enable)
         m_monitor = nullptr;
     }
 }
-

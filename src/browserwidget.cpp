@@ -54,7 +54,6 @@
 #include <AkonadiCore/tagmodifyjob.h>
 #include <AkonadiCore/tagcreatejob.h>
 
-
 #include <QSplitter>
 #include <QVBoxLayout>
 #include <QStandardItemModel>
@@ -80,8 +79,8 @@ AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAclPageFactory, CollectionA
 
 Q_DECLARE_METATYPE(QSet<QByteArray>)
 
-BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
-    QWidget(parent)
+BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
+    : QWidget(parent)
 {
     Q_ASSERT(xmlGuiWindow);
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -148,7 +147,6 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
     statisticsProxyModel = new Akonadi::StatisticsProxyModel(this);
     statisticsProxyModel->setToolTipEnabled(true);
     statisticsProxyModel->setSourceModel(collectionFilter);
-
 
     mCollectionView->setModel(statisticsProxyModel);
 
@@ -538,11 +536,11 @@ void BrowserWidget::clearCache()
     const int emptyRidCount = query.value(0).toInt();
     if (emptyRidCount > 0) {
         if (KMessageBox::warningContinueCancel(this, QStringLiteral(
-                "The collection '%1' contains %2 items without Remote ID. "
-                "Those items were likely never uploaded to the destination server, "
-                "so clearing this collection means that those <b>data will be lost</b>. "
-                "Are you sure you want to proceed?").arg(coll.id()).arg(emptyRidCount),
-                QStringLiteral("POSSIBLE DATA LOSS!")) == KMessageBox::Cancel) {
+                                                   "The collection '%1' contains %2 items without Remote ID. "
+                                                   "Those items were likely never uploaded to the destination server, "
+                                                   "so clearing this collection means that those <b>data will be lost</b>. "
+                                                   "Are you sure you want to proceed?").arg(coll.id()).arg(emptyRidCount),
+                                               QStringLiteral("POSSIBLE DATA LOSS!")) == KMessageBox::Cancel) {
             return;
         }
     }

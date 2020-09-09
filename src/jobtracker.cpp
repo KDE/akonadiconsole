@@ -38,7 +38,10 @@ class JobTracker::Private
 {
 public:
     Private(JobTracker *_q)
-        : lastId(42), timer(_q), disabled(false), q(_q)
+        : lastId(42)
+        , timer(_q)
+        , disabled(false)
+        , q(_q)
     {
         timer.setSingleShot(true);
         timer.setInterval(200);
@@ -70,13 +73,14 @@ private:
 };
 
 JobTracker::JobTracker(const char *name, QObject *parent)
-    : QObject(parent), d(new Private(this))
+    : QObject(parent)
+    , d(new Private(this))
 {
     new JobTrackerAdaptor(this);
     const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
-            this, QDBusConnection::ExportAdaptors);
+                                                 this, QDBusConnection::ExportAdaptors);
 }
 
 JobTracker::~JobTracker()

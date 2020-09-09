@@ -23,7 +23,8 @@ class JobTrackerModel::Private
 {
 public:
     Private(const char *name, JobTrackerModel *_q)
-        : q(_q), tracker(name)
+        : q(_q)
+        , tracker(name)
     {
     }
 
@@ -50,7 +51,8 @@ public:
 };
 
 JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
-    : QAbstractItemModel(parent), d(new Private(name, this))
+    : QAbstractItemModel(parent)
+    , d(new Private(name, this))
 {
     connect(&d->tracker, &JobTracker::aboutToAdd,
             this, &JobTrackerModel::jobAboutToBeAdded);
@@ -197,7 +199,7 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
                 return info.error;
             }
         } else if (role == FailedIdRole) {
-            return (info.state == JobInfo::Failed);
+            return info.state == JobInfo::Failed;
         }
     }
     return QVariant();
@@ -279,4 +281,3 @@ void JobTrackerModel::jobsUpdated(const QList< QPair< int, int > > &jobs)
         dataChanged(index(pos, 0, parentIdx), index(pos, 3, parentIdx));
     }
 }
-

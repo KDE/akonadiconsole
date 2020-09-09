@@ -11,8 +11,8 @@
 
 #include <QIcon>
 
-DbBrowser::DbBrowser(QWidget *parent) :
-    QWidget(parent)
+DbBrowser::DbBrowser(QWidget *parent)
+    : QWidget(parent)
 {
     ui.setupUi(this);
 
@@ -49,4 +49,3 @@ void DbBrowser::onSortIndicatorChanged(int column, Qt::SortOrder order)
 {
     mTableModel->sort(column, order);
 }
-

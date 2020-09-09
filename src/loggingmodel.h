@@ -44,13 +44,10 @@ public:
         _ColumnCount
     };
 
-
     explicit LoggingModel(QObject *parent = nullptr);
     ~LoggingModel() override;
 
-    void addMessage(qint64 timestamp, const QString &app, qint64 pid, QtMsgType type,
-                    const QString &category, const QString &file, const QString &function,
-                    int line, const QString &message);
+    void addMessage(qint64 timestamp, const QString &app, qint64 pid, QtMsgType type, const QString &category, const QString &file, const QString &function, int line, const QString &message);
 
     void setAppFilterModel(QStandardItemModel *appFilterModel);
     void setCategoryFilterModel(QStandardItemModel *categoryFilterModel);

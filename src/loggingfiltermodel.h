@@ -4,7 +4,6 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-
 #ifndef LOGGINGFILTERMODEL_H_
 #define LOGGINGFILTERMODEL_H_
 
@@ -28,7 +27,7 @@ public:
     void setTypeFilter(KPIM::KCheckComboBox *typeFilter);
 
 protected:
-    bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
     KPIM::KCheckComboBox *mAppFilter = nullptr;

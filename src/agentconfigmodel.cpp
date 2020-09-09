@@ -10,7 +10,8 @@
 #include <QMetaMethod>
 #include "akonadiconsole_debug.h"
 
-AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)
+AgentConfigModel::AgentConfigModel(QObject *parent) : QAbstractTableModel(parent)
+    , m_interface(nullptr)
 {
 }
 
@@ -23,7 +24,6 @@ void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
 {
     beginResetModel();
     m_settings.clear();
-
 
     m_interface = new QDBusInterface(
         QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(instance.identifier()),
@@ -140,4 +140,3 @@ void AgentConfigModel::writeConfig()
 {
     m_interface->call(QStringLiteral("save"));
 }
-

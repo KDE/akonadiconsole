@@ -31,9 +31,9 @@ DbConsole::DbConsole(QWidget *parent)
     mTabWidget->tabBar()->setTabsClosable(true);
     connect(mTabWidget->tabBar(), &QTabBar::tabCloseRequested,
             mTabWidget, [this](int index) {
-                mTabWidget->removeTab(index);
-                saveQueries();
-            });
+        mTabWidget->removeTab(index);
+        saveQueries();
+    });
     l->addWidget(mTabWidget);
 
     auto addTabButton = new QPushButton(QIcon::fromTheme(QStringLiteral("tab-new")), QString());
@@ -65,7 +65,7 @@ void DbConsole::saveQueries()
     QStringList queries;
     queries.reserve(mTabWidget->count());
     for (int i = 0; i < mTabWidget->count(); ++i) {
-        auto tab = qobject_cast<DbConsoleTab*>(mTabWidget->widget(i));
+        auto tab = qobject_cast<DbConsoleTab *>(mTabWidget->widget(i));
         queries << tab->query();
     }
     KSharedConfig::openConfig()->group("DBConsole").writeEntry("queryTexts", queries);
@@ -80,10 +80,10 @@ DbConsoleTab *DbConsole::addTab()
     return tab;
 }
 
-DbConsoleTab::DbConsoleTab(int index, QWidget *parent) :
-    QWidget(parent),
-    mQueryModel(nullptr),
-    mIndex(index)
+DbConsoleTab::DbConsoleTab(int index, QWidget *parent)
+    : QWidget(parent)
+    , mQueryModel(nullptr)
+    , mIndex(index)
 {
     ui.setupUi(this);
 
@@ -139,4 +139,3 @@ void DbConsoleTab::copyCell()
     QString text = index.data(Qt::DisplayRole).toString();
     QApplication::clipboard()->setText(text);
 }
-

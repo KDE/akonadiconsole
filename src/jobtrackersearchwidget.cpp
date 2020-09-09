@@ -30,7 +30,6 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     mainLayout->addWidget(mSelectOnlyError);
     connect(mSelectOnlyError, &QCheckBox::toggled, this, &JobTrackerSearchWidget::selectOnlyErrorChanged);
 
-
     mSelectColumn = new QComboBox(this);
     mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
     mainLayout->addWidget(mSelectColumn);
@@ -47,7 +46,6 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
 
 JobTrackerSearchWidget::~JobTrackerSearchWidget()
 {
-
 }
 
 void JobTrackerSearchWidget::slotColumnChanged(int index)
