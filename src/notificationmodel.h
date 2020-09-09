@@ -50,7 +50,7 @@ public:
 
     Akonadi::Protocol::ChangeNotificationPtr notification(const QModelIndex &index) const;
 
-    bool isEnabled() const
+    Q_REQUIRED_RESULT bool isEnabled() const
     {
         return m_monitor;
     }

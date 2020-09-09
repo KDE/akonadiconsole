@@ -24,8 +24,8 @@ protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    int mSearchColumn;
-    bool mShowOnlyFailed;
+    int mSearchColumn = -1;
+    bool mShowOnlyFailed = false;
 };
 
 #endif // JOBTRACKERFILTERPROXYMODEL_H

@@ -10,9 +10,7 @@
 #include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
-    : QSortFilterProxyModel(parent),
-      mSearchColumn(-1),
-      mShowOnlyFailed(false)
+    : QSortFilterProxyModel(parent)
 {
     setRecursiveFilteringEnabled(true);
     setDynamicSortFilter(true);

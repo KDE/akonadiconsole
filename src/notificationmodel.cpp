@@ -21,8 +21,7 @@ Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 using namespace Akonadi;
 
 NotificationModel::NotificationModel(QObject *parent) :
-    QAbstractItemModel(parent),
-    m_monitor(nullptr)
+    QAbstractItemModel(parent)
 {
 }
 

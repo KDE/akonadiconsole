@@ -81,11 +81,7 @@ AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAclPageFactory, CollectionA
 Q_DECLARE_METATYPE(QSet<QByteArray>)
 
 BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
-    QWidget(parent),
-    mAttrModel(nullptr),
-    mStdActionManager(nullptr),
-    mMonitor(nullptr),
-    mCacheOnlyAction(nullptr)
+    QWidget(parent)
 {
     Q_ASSERT(xmlGuiWindow);
     QVBoxLayout *layout = new QVBoxLayout(this);

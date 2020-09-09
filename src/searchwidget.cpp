@@ -38,7 +38,6 @@
 
 SearchWidget::SearchWidget(QWidget *parent)
     : QWidget(parent)
-    , mDatabase(nullptr)
 {
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 

@@ -18,7 +18,6 @@ using namespace Akonadi;
 
 TagPropertiesDialog::TagPropertiesDialog(QWidget *parent)
     : QDialog(parent)
-    , mChanged(false)
 {
     setupUi();
 }

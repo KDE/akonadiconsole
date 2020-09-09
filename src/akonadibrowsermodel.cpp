@@ -201,8 +201,7 @@ public:
 };
 
 AkonadiBrowserModel::AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent)
-    : EntityTreeModel(monitor, parent),
-      m_itemDisplayMode(GenericMode)
+    : EntityTreeModel(monitor, parent)
 {
 
     m_genericState = new GenericState();

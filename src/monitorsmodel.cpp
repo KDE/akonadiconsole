@@ -16,8 +16,7 @@
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 
 MonitorsModel::MonitorsModel(QObject *parent):
-    QAbstractItemModel(parent),
-    mMonitor(nullptr)
+    QAbstractItemModel(parent)
 {
     QTimer::singleShot(0, this, &MonitorsModel::init);
 }

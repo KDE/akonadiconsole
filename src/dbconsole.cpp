@@ -24,7 +24,6 @@
 
 DbConsole::DbConsole(QWidget *parent)
     : QWidget(parent)
-    , mTabCounter(0)
 {
     auto l = new QVBoxLayout(this);
 

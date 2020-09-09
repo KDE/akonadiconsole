@@ -12,8 +12,7 @@
 #include <QIcon>
 
 DbBrowser::DbBrowser(QWidget *parent) :
-    QWidget(parent),
-    mTableModel(nullptr)
+    QWidget(parent)
 {
     ui.setupUi(this);
 

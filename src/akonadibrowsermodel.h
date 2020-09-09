@@ -50,7 +50,7 @@ private:
     State *m_contactsState = nullptr;
     State *m_calendarState = nullptr;
 
-    ItemDisplayMode m_itemDisplayMode;
+    ItemDisplayMode m_itemDisplayMode = GenericMode;
 };
 
 class AkonadiBrowserSortModel : public QSortFilterProxyModel

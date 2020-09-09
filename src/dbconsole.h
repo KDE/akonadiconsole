@@ -26,7 +26,7 @@ private Q_SLOTS:
     void saveQueries();
 
 private:
-    int mTabCounter;
+    int mTabCounter = 0;
     QTabWidget *mTabWidget = nullptr;
 };
 

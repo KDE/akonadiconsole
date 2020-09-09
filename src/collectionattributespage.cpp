@@ -15,8 +15,7 @@
 using namespace Akonadi;
 
 CollectionAttributePage::CollectionAttributePage(QWidget *parent) :
-    CollectionPropertiesPage(parent),
-    mModel(nullptr)
+    CollectionPropertiesPage(parent)
 {
     setPageTitle(QStringLiteral("Attributes"));
     ui.setupUi(this);

@@ -26,8 +26,7 @@
 InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags),
       ui(new Ui::InstanceSelector),
-      m_remoteHost(remoteHost),
-      mWindow(nullptr)
+      m_remoteHost(remoteHost)
 {
     QWidget *mainWidget = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

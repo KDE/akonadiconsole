@@ -48,7 +48,7 @@ private:
     QStandardItemModel *mAttributesModel = nullptr;
     QStandardItemModel *mRemoteIdsModel = nullptr;
 
-    bool mChanged;
+    bool mChanged = false;
     QSet<QString> mChangedAttrs;
     QSet<QString> mRemovedAttrs;
     QSet<QString> mChangedRIDs;
