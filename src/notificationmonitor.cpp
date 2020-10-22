@@ -9,7 +9,6 @@
 #include "notificationfiltermodel.h"
 #include "utils.h"
 
-#include <akonadi/private/protocol_p.h>
 #include <AkonadiWidgets/ControlGui>
 
 #include <QFileDialog>

@@ -18,7 +18,6 @@
 #include <AkonadiCore/changerecorder.h>
 #include <AkonadiWidgets/controlgui.h>
 #include <AkonadiCore/entitymimetypefiltermodel.h>
-#include <AkonadiCore/item.h>
 #include <AkonadiCore/itemfetchjob.h>
 #include <AkonadiCore/itemfetchscope.h>
 #include <AkonadiCore/itemmodifyjob.h>
@@ -30,7 +29,6 @@
 #include <AkonadiWidgets/standardactionmanager.h>
 #include <AkonadiWidgets/entitylistview.h>
 #include <AkonadiWidgets/entitytreeview.h>
-#include <AkonadiWidgets/etmviewstatesaver.h>
 #include <AkonadiCore/favoritecollectionsmodel.h>
 #include <AkonadiCore/tagmodel.h>
 #include <AkonadiCore/statisticsproxymodel.h>

@@ -13,8 +13,6 @@
 #include "akonadiconsole_debug.h"
 #include <QString>
 #include <QStringList>
-#include <QPair>
-#include <QList>
 
 #include <cassert>
 
