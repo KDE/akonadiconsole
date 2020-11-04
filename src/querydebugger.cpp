@@ -305,7 +305,7 @@ public:
 
         // childNode is a query in transaction
         if (childNode->parent->parent) {
-            ConnectionNode *connection = static_cast<ConnectionNode *>(childNode->parent->parent);
+            auto *connection = static_cast<ConnectionNode *>(childNode->parent->parent);
             const int trxIdx = connection->queries.indexOf(childNode->parent);
             return createIndex(trxIdx, 0, childNode->parent);
         } else {
@@ -730,7 +730,7 @@ QueryDebugger::QueryDebugger(QWidget *parent)
             this, &QueryDebugger::debuggerToggled);
 
     mQueryList = new QueryDebuggerModel(this);
-    QSortFilterProxyModel *proxy = new QSortFilterProxyModel(this);
+    auto *proxy = new QSortFilterProxyModel(this);
     proxy->setSourceModel(mQueryList);
     proxy->setDynamicSortFilter(true);
     mUi->queryListView->setModel(proxy);

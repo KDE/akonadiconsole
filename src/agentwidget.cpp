@@ -42,11 +42,11 @@ public:
     explicit TextDialog(QWidget *parent = nullptr)
         : QDialog(parent)
     {
-        QVBoxLayout *mainLayout = new QVBoxLayout(this);
+        auto *mainLayout = new QVBoxLayout(this);
         mText = new QPlainTextEdit(this);
         mText->setReadOnly(true);
 
-        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
+        auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
         QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
         okButton->setDefault(true);
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -132,7 +132,7 @@ AgentWidget::AgentWidget(QWidget *parent)
 bool AgentWidget::eventFilter(QObject *obj, QEvent *event)
 {
     if (event->type() == QEvent::KeyPress && obj == ui.mFilterAccount) {
-        QKeyEvent *key = static_cast<QKeyEvent *>(event);
+        auto *key = static_cast<QKeyEvent *>(event);
         if ((key->key() == Qt::Key_Enter) || (key->key() == Qt::Key_Return)) {
             event->accept();
             return true;
@@ -148,7 +148,7 @@ void AgentWidget::addAgent()
         const AgentType agentType = dlg->agentType();
 
         if (agentType.isValid()) {
-            AgentInstanceCreateJob *job = new AgentInstanceCreateJob(agentType, this);
+            auto *job = new AgentInstanceCreateJob(agentType, this);
             job->configure(this);
             job->start(); // TODO: check result
         }
@@ -328,7 +328,7 @@ void AgentWidget::slotCloneAgent()
     }
     const AgentType agentType = mCloneSource.type();
     if (agentType.isValid()) {
-        AgentInstanceCreateJob *job = new AgentInstanceCreateJob(agentType, this);
+        auto *job = new AgentInstanceCreateJob(agentType, this);
         connect(job, &KJob::result, this, &AgentWidget::cloneAgent);
         job->start();
     } else {

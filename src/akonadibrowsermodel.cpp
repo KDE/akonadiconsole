@@ -14,7 +14,7 @@
 #include <KCalendarCore/Incidence>
 #include <KCalendarCore/Event>
 
-typedef QSharedPointer<KCalendarCore::Incidence> IncidencePtr;
+using IncidencePtr = QSharedPointer<KCalendarCore::Incidence>;
 
 class AkonadiBrowserModel::State
 {

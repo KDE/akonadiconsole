@@ -15,16 +15,16 @@ AgentConfigDialog::AgentConfigDialog(QWidget *parent)
     : QDialog(parent)
     , m_model(new AgentConfigModel(this))
 {
-    QWidget *mainWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainWidget = new QWidget(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     ui.setupUi(mainWidget);
     ui.propertyView->setModel(m_model);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Apply, this);
-    QPushButton *user1Button = new QPushButton;
+    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Apply, this);
+    auto *user1Button = new QPushButton;
     buttonBox->addButton(user1Button, QDialogButtonBox::ActionRole);
-    QPushButton *user2Button = new QPushButton;
+    auto *user2Button = new QPushButton;
     buttonBox->addButton(user2Button, QDialogButtonBox::ActionRole);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AgentConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AgentConfigDialog::reject);

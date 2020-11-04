@@ -46,11 +46,11 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     m_filterModel = new NotificationFilterModel(this);
     m_filterModel->setSourceModel(m_model);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     auto hLayout = new QHBoxLayout;
     layout->addLayout(hLayout);
 
-    QCheckBox *enableCB = new QCheckBox(this);
+    auto *enableCB = new QCheckBox(this);
     enableCB->setText(QStringLiteral("Enable notification monitor"));
     enableCB->setChecked(m_model->isEnabled());
     connect(enableCB, &QCheckBox::toggled, m_model, &NotificationModel::setEnabled);

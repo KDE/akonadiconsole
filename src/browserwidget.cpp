@@ -81,13 +81,13 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     : QWidget(parent)
 {
     Q_ASSERT(xmlGuiWindow);
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
 
-    QSplitter *splitter = new QSplitter(Qt::Horizontal, this);
+    auto *splitter = new QSplitter(Qt::Horizontal, this);
     splitter->setObjectName(QStringLiteral("collectionSplitter"));
     layout->addWidget(splitter);
 
-    QSplitter *splitter2 = new QSplitter(Qt::Vertical, this);
+    auto *splitter2 = new QSplitter(Qt::Vertical, this);
     splitter2->setObjectName(QStringLiteral("ffvSplitter"));
 
     mCollectionView = new Akonadi::EntityTreeView(xmlGuiWindow, this);
@@ -95,13 +95,13 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     mCollectionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     splitter2->addWidget(mCollectionView);
 
-    EntityListView *favoritesView = new EntityListView(xmlGuiWindow, this);
+    auto *favoritesView = new EntityListView(xmlGuiWindow, this);
     //favoritesView->setViewMode( QListView::IconMode );
     splitter2->addWidget(favoritesView);
 
     splitter->addWidget(splitter2);
 
-    ChangeRecorder *tagRecorder = new ChangeRecorder(this);
+    auto *tagRecorder = new ChangeRecorder(this);
     tagRecorder->setObjectName(QStringLiteral("tagRecorder"));
     tagRecorder->setTypeMonitored(Monitor::Tags);
     tagRecorder->setChangeRecordingEnabled(false);
@@ -135,7 +135,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 
 //   new ModelTest( mBrowserModel );
 
-    EntityMimeTypeFilterModel *collectionFilter = new EntityMimeTypeFilterModel(this);
+    auto *collectionFilter = new EntityMimeTypeFilterModel(this);
     collectionFilter->setSourceModel(mBrowserModel);
     collectionFilter->addMimeTypeInclusionFilter(Collection::mimeType());
     collectionFilter->setHeaderGroup(EntityTreeModel::CollectionTreeHeaders);
@@ -148,28 +148,28 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 
     mCollectionView->setModel(statisticsProxyModel);
 
-    Akonadi::SelectionProxyModel *selectionProxyModel = new Akonadi::SelectionProxyModel(mCollectionView->selectionModel(), this);
+    auto *selectionProxyModel = new Akonadi::SelectionProxyModel(mCollectionView->selectionModel(), this);
     selectionProxyModel->setSourceModel(mBrowserModel);
     selectionProxyModel->setFilterBehavior(KSelectionProxyModel::ChildrenOfExactSelection);
 
-    EntityMimeTypeFilterModel *itemFilter = new EntityMimeTypeFilterModel(this);
+    auto *itemFilter = new EntityMimeTypeFilterModel(this);
     itemFilter->setSourceModel(selectionProxyModel);
     itemFilter->addMimeTypeExclusionFilter(Collection::mimeType());
     itemFilter->setHeaderGroup(EntityTreeModel::ItemListHeaders);
 
     const KConfigGroup group = KSharedConfig::openConfig()->group("FavoriteCollectionsModel");
     connect(mBrowserModel, &AkonadiBrowserModel::columnsChanged, itemFilter, &EntityMimeTypeFilterModel::invalidate);
-    AkonadiBrowserSortModel *sortModel = new AkonadiBrowserSortModel(mBrowserModel, this);
+    auto *sortModel = new AkonadiBrowserSortModel(mBrowserModel, this);
     sortModel->setDynamicSortFilter(true);
     sortModel->setSourceModel(itemFilter);
-    FavoriteCollectionsModel *favoritesModel = new FavoriteCollectionsModel(mBrowserModel, group, this);
+    auto *favoritesModel = new FavoriteCollectionsModel(mBrowserModel, group, this);
     favoritesView->setModel(favoritesModel);
 
-    QSplitter *splitter3 = new QSplitter(Qt::Vertical, this);
+    auto *splitter3 = new QSplitter(Qt::Vertical, this);
     splitter3->setObjectName(QStringLiteral("itemSplitter"));
     splitter->addWidget(splitter3);
 
-    QWidget *itemViewParent = new QWidget(this);
+    auto *itemViewParent = new QWidget(this);
     itemUi.setupUi(itemViewParent);
 
     itemUi.modelBox->addItem(QStringLiteral("Generic"));
@@ -187,7 +187,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     splitter3->addWidget(itemViewParent);
     itemViewParent->layout()->setContentsMargins(0, 0, 0, 0);
 
-    QWidget *contentViewParent = new QWidget(this);
+    auto *contentViewParent = new QWidget(this);
     contentUi.setupUi(contentViewParent);
     contentUi.saveButton->setEnabled(false);
     connect(contentUi.saveButton, &QPushButton::clicked, this, &BrowserWidget::save);
@@ -275,7 +275,7 @@ void BrowserWidget::currentChanged(const QModelIndex &index)
         return;
     }
 
-    ItemFetchJob *job = new ItemFetchJob(item, this);
+    auto *job = new ItemFetchJob(item, this);
     job->fetchScope().fetchFullPayload();
     job->fetchScope().fetchAllAttributes();
     job->fetchScope().setFetchTags(true);
@@ -287,7 +287,7 @@ void BrowserWidget::currentChanged(const QModelIndex &index)
 
 void BrowserWidget::itemFetchDone(KJob *job)
 {
-    ItemFetchJob *fetch = static_cast<ItemFetchJob *>(job);
+    auto *fetch = static_cast<ItemFetchJob *>(job);
     if (job->error()) {
         qCWarning(AKONADICONSOLE_LOG) << "Item fetch failed: " << job->errorString();
     } else if (fetch->items().isEmpty()) {
@@ -453,7 +453,7 @@ void BrowserWidget::save()
         item.addAttribute(attr);
     }
 
-    ItemModifyJob *store = new ItemModifyJob(item, this);
+    auto *store = new ItemModifyJob(item, this);
     connect(store, &ItemModifyJob::result, this, &BrowserWidget::saveResult);
 }
 
@@ -504,7 +504,7 @@ void BrowserWidget::dumpToXml()
         return;
     }
 
-    XmlWriteJob *job = new XmlWriteJob(root, fileName, this);
+    auto *job = new XmlWriteJob(root, fileName, this);
     connect(job, &XmlWriteJob::result, this, &BrowserWidget::dumpToXmlResult);
 }
 
@@ -575,7 +575,7 @@ void BrowserWidget::updateItemFetchScope()
 void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
 {
     const QModelIndex index = mTagView->indexAt(pos);
-    QMenu *menu = new QMenu(this);
+    auto *menu = new QMenu(this);
     connect(menu, &QMenu::aboutToHide, menu, &QMenu::deleteLater);
     menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), QStringLiteral("&Add tag..."), this, &BrowserWidget::addTagRequested);
     if (index.isValid()) {
@@ -590,7 +590,7 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
 
 void BrowserWidget::addTagRequested()
 {
-    TagPropertiesDialog *dlg = new TagPropertiesDialog(this);
+    auto *dlg = new TagPropertiesDialog(this);
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::createTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -598,13 +598,13 @@ void BrowserWidget::addTagRequested()
 
 void BrowserWidget::addSubTagRequested()
 {
-    QAction *action = qobject_cast<QAction *>(sender());
+    auto *action = qobject_cast<QAction *>(sender());
     const Akonadi::Tag parentTag = action->parent()->property("Tag").value<Akonadi::Tag>();
 
     Akonadi::Tag tag;
     tag.setParent(parentTag);
 
-    TagPropertiesDialog *dlg = new TagPropertiesDialog(tag, this);
+    auto *dlg = new TagPropertiesDialog(tag, this);
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::createTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -612,9 +612,9 @@ void BrowserWidget::addSubTagRequested()
 
 void BrowserWidget::editTagRequested()
 {
-    QAction *action = qobject_cast<QAction *>(sender());
+    auto *action = qobject_cast<QAction *>(sender());
     const Akonadi::Tag tag = action->parent()->property("Tag").value<Akonadi::Tag>();
-    TagPropertiesDialog *dlg = new TagPropertiesDialog(tag, this);
+    auto *dlg = new TagPropertiesDialog(tag, this);
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -630,7 +630,7 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
     const Akonadi::Tag tag = mTagModel->data(index, TagModel::TagRole).value<Akonadi::Tag>();
     Q_ASSERT(tag.isValid());
 
-    TagPropertiesDialog *dlg = new TagPropertiesDialog(tag, this);
+    auto *dlg = new TagPropertiesDialog(tag, this);
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -644,14 +644,14 @@ void BrowserWidget::removeTagRequested()
         return;
     }
 
-    QAction *action = qobject_cast<QAction *>(sender());
+    auto *action = qobject_cast<QAction *>(sender());
     const Akonadi::Tag tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     new Akonadi::TagDeleteJob(tag, this);
 }
 
 void BrowserWidget::createTag()
 {
-    TagPropertiesDialog *dlg = qobject_cast<TagPropertiesDialog *>(sender());
+    auto *dlg = qobject_cast<TagPropertiesDialog *>(sender());
     Q_ASSERT(dlg);
 
     if (dlg->changed()) {
@@ -661,7 +661,7 @@ void BrowserWidget::createTag()
 
 void BrowserWidget::modifyTag()
 {
-    TagPropertiesDialog *dlg = qobject_cast<TagPropertiesDialog *>(sender());
+    auto *dlg = qobject_cast<TagPropertiesDialog *>(sender());
     Q_ASSERT(dlg);
 
     if (dlg->changed()) {

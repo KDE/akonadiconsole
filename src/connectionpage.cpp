@@ -30,7 +30,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     , mIdentifier(identifier)
     , mShowAllConnections(false)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     auto h = new QHBoxLayout;
     layout->addLayout(h);
 
