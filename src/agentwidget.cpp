@@ -124,9 +124,14 @@ AgentWidget::AgentWidget(QWidget *parent)
     connect(ui.restartButton, &QPushButton::clicked, this, &AgentWidget::restartAgent);
 
     ui.instanceWidget->agentFilterProxyModel()->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    connect(ui.mFilterAccount, &QLineEdit::textChanged, ui.instanceWidget->agentFilterProxyModel(), &AgentFilterProxyModel::setFilterFixedString);
+    connect(ui.mFilterAccount, &QLineEdit::textChanged, this, &AgentWidget::slotSearchAgentType);
     ui.mFilterAccount->installEventFilter(this);
     ControlGui::widgetNeedsAkonadi(this);
+}
+
+void AgentWidget::slotSearchAgentType(const QString &str)
+{
+    ui.instanceWidget->agentFilterProxyModel()->setFilterRegularExpression(str);
 }
 
 bool AgentWidget::eventFilter(QObject *obj, QEvent *event)
