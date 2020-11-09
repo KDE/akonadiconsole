@@ -56,6 +56,7 @@ private Q_SLOTS:
     void slotDataChanged(const QModelIndex &, const QModelIndex &);
 
 private:
+    void slotSearchAgentType(const QString &str);
     Ui::AgentWidget ui;
     QMenu *mSyncMenu, *mConfigMenu;
     Akonadi::AgentInstance mCloneSource;
