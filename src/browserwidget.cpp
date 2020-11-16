@@ -36,6 +36,7 @@
 #include <AkonadiCore/TagFetchScope>
 #include <AkonadiXml/XmlWriteJob>
 #include <KViewStateMaintainer>
+#include <akonadi/private/compressionstream_p.h>
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
@@ -61,6 +62,7 @@
 #include <QMenu>
 #include <QFileDialog>
 #include <QSqlError>
+#include <QBuffer>
 
 #ifdef ENABLE_CONTENTVIEWS
 #include <CalendarSupport/IncidenceViewer>
@@ -332,6 +334,14 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     contentUi.saveButton->setEnabled(false);
 
     QByteArray data = item.payloadData();
+    QBuffer buffer(&data);
+    buffer.open(QIODevice::ReadOnly);
+
+    if (Akonadi::CompressionStream::isCompressed(&buffer)) {
+        Akonadi::CompressionStream stream(&buffer);
+        stream.open(QIODevice::ReadOnly);
+        data = stream.readAll();
+    }
 
     // Note that this is true for *all* items as soon as the binary format is enabled.
     // Independently from how they are actually stored in the database.
