@@ -91,7 +91,7 @@ DbConsoleTab::DbConsoleTab(int index, QWidget *parent)
     ui.resultView->addAction(copyAction);
 
     ui.execButton->setIcon(QIcon::fromTheme(QStringLiteral("application-x-executable")));
-    ui.execButton->setShortcut(Qt::CTRL + Qt::Key_Return);
+    ui.execButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(ui.execButton, &QPushButton::clicked, this, &DbConsoleTab::execClicked);
 
     ui.queryEdit->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
