@@ -99,7 +99,9 @@ ecm_qt_declare_logging_category(libakonadiconsole_SRCS HEADER akonadiconsole_deb
 
 
 add_library(libakonadiconsole ${libakonadiconsole_SRCS})
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(libakonadiconsole PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
 
 target_link_libraries(libakonadiconsole
