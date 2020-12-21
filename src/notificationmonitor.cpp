@@ -35,7 +35,9 @@
 
 using KPIM::KCheckComboBox;
 
+#ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
+#endif
 
 NotificationMonitor::NotificationMonitor(QWidget *parent)
     : QWidget(parent)

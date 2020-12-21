@@ -25,8 +25,9 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
+#ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(LoggingModel::Message)
-
+#endif
 #define DBUS_PATH QStringLiteral("/logger")
 #define DBUS_INTERFACE QStringLiteral("org.kde.akonadiconsole.logger")
 

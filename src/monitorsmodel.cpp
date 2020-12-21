@@ -12,7 +12,9 @@
 
 #include <QTimer>
 
+#ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
+#endif
 
 MonitorsModel::MonitorsModel(QObject *parent)
     : QAbstractItemModel(parent)

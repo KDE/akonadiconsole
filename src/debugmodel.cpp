@@ -12,7 +12,9 @@
 #include <QDir>
 #include <QStandardItemModel>
 
+#ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(DebugModel::Message)
+#endif
 
 DebugModel::DebugModel(QObject *parent)
     : QAbstractItemModel(parent)
