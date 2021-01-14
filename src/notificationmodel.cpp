@@ -31,7 +31,7 @@ NotificationModel::~NotificationModel()
 
 int NotificationModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return _ColumnCount;
 }
 
@@ -51,7 +51,7 @@ QModelIndex NotificationModel::index(int row, int column, const QModelIndex &par
 
 QModelIndex NotificationModel::parent(const QModelIndex &child) const
 {
-    Q_UNUSED(child);
+    Q_UNUSED(child)
     return {};
 }
 

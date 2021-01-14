@@ -70,13 +70,13 @@ void AgentConfigModel::reload()
 
 int AgentConfigModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return 3;
 }
 
 int AgentConfigModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return m_settings.size();
 }
 

@@ -138,7 +138,7 @@ QVariant MonitorsModel::data(const QModelIndex &index, int role) const
 
 int MonitorsModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return 1;
 }
 

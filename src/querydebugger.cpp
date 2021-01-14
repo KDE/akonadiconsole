@@ -287,7 +287,7 @@ public:
 
     int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
-        Q_UNUSED(parent);
+        Q_UNUSED(parent)
         return 5;
     }
 
@@ -787,7 +787,7 @@ void QueryDebugger::debuggerToggled(bool on)
 
 void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timestamp, uint duration, const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &result, const QString &error)
 {
-    Q_UNUSED(sequence);
+    Q_UNUSED(sequence)
     mQueryList->addQuery(query, duration);
     mQueryTree->addQuery(connectionId, timestamp, duration, query, values, resultsCount, result, error);
 }

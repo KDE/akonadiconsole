@@ -37,7 +37,7 @@ void DebugFilterModel::setSenderFilter(KCheckComboBox *senderFilter)
     mSenderFilter = senderFilter;
     connect(mSenderFilter, &KCheckComboBox::checkedItemsChanged,
             this, [this](const QStringList &_items) {
-        Q_UNUSED(_items);
+        Q_UNUSED(_items)
         const auto items = mSenderFilter->checkedItems(DebugModel::IdentifierRole);
         mCheckedSenders.clear();
         mCheckedSenders.reserve(items.count());

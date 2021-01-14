@@ -127,7 +127,7 @@ int JobTrackerModel::rowCount(const QModelIndex &parent) const
 
 int JobTrackerModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return NumColumns;
 }
 
