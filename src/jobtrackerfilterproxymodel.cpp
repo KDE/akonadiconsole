@@ -5,8 +5,8 @@
 */
 
 #include "jobtrackerfilterproxymodel.h"
-#include "jobtrackermodel.h"
 #include "akonadiconsole_debug.h"
+#include "jobtrackermodel.h"
 #include <QDebug>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
@@ -42,7 +42,7 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
         for (int i = 0; i < colCount; i++) {
             const QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
             if (index.isValid()) {
-                //qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
+                // qDebug() << " " << index << " data=" << sourceModel()->data(index).toString();
                 if (sourceModel()->data(index).toString().contains(reg)) {
                     return true;
                 }

@@ -8,20 +8,20 @@
 
 #include "debugwidget.h"
 
-#include "tracernotificationinterface.h"
 #include "connectionpage.h"
+#include "tracernotificationinterface.h"
 
 #include <AkonadiWidgets/controlgui.h>
 
-#include <QTabWidget>
-#include <KTextEdit>
 #include <AkonadiCore/ServerManager>
+#include <KTextEdit>
+#include <QTabWidget>
 
+#include <QCheckBox>
+#include <QFileDialog>
 #include <QPushButton>
 #include <QSplitter>
 #include <QVBoxLayout>
-#include <QCheckBox>
-#include <QFileDialog>
 
 using org::freedesktop::Akonadi::DebugInterface;
 
@@ -50,7 +50,8 @@ DebugWidget::DebugWidget(QWidget *parent)
     mGeneralView = new KTextEdit(splitter);
     mGeneralView->setReadOnly(true);
 
-    org::freedesktop::Akonadi::TracerNotification *iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
+    org::freedesktop::Akonadi::TracerNotification *iface =
+        new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
 
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::signalEmitted, this, &DebugWidget::signalEmitted);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::warningEmitted, this, &DebugWidget::warningEmitted);

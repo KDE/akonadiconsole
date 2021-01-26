@@ -17,7 +17,8 @@ class QTreeView;
 class QStandardItem;
 class QStandardItemModel;
 class QSplitter;
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 

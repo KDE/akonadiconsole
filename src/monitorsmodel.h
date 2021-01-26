@@ -8,11 +8,12 @@
 #ifndef MONITORSMODEL_H
 #define MONITORSMODEL_H
 
-#include <QAbstractItemModel>
-#include <AkonadiCore/NotificationSubscriber>
 #include "libakonadiconsole_export.h"
+#include <AkonadiCore/NotificationSubscriber>
+#include <QAbstractItemModel>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Monitor;
 }
 
@@ -21,9 +22,7 @@ class LIBAKONADICONSOLE_EXPORT MonitorsModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum Roles {
-        SubscriberRole = Qt::UserRole
-    };
+    enum Roles { SubscriberRole = Qt::UserRole };
 
     explicit MonitorsModel(QObject *parent = nullptr);
     virtual ~MonitorsModel();
@@ -48,7 +47,7 @@ private Q_SLOTS:
 
 private:
     QList<QByteArray> mSessions;
-    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber> > mData;
+    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;
 };
 

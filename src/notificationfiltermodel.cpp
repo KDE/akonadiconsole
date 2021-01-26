@@ -20,8 +20,7 @@ NotificationFilterModel::NotificationFilterModel(QObject *parent)
 {
     mInvalidateTimer.setInterval(50);
     mInvalidateTimer.setSingleShot(true);
-    connect(&mInvalidateTimer, &QTimer::timeout,
-            this, &NotificationFilterModel::invalidateFilter);
+    connect(&mInvalidateTimer, &QTimer::timeout, this, &NotificationFilterModel::invalidateFilter);
 }
 
 NotificationFilterModel::~NotificationFilterModel()
@@ -34,8 +33,7 @@ void NotificationFilterModel::setTypeFilter(KPIM::KCheckComboBox *typeFilter)
         mTypeFilter->disconnect(this);
     }
     mTypeFilter = typeFilter;
-    connect(mTypeFilter, &KCheckComboBox::checkedItemsChanged,
-            this, [this](const QStringList &items) {
+    connect(mTypeFilter, &KCheckComboBox::checkedItemsChanged, this, [this](const QStringList &items) {
         mCheckedTypes.clear();
         mCheckedTypes.reserve(items.count());
         // it sucks a bit that KCheckComboBox::checkedItems can't return a QVariantList instead of a QStringList

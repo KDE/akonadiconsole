@@ -9,18 +9,18 @@
 
 #include <QAction>
 
-#include <KStandardAction>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
+#include <KStandardAction>
 #include <QIcon>
 
 #include <QApplication>
 #include <QClipboard>
-#include <QSqlQueryModel>
-#include <QSqlError>
 #include <QFontDatabase>
-#include <QTabWidget>
+#include <QSqlError>
+#include <QSqlQueryModel>
 #include <QTabBar>
+#include <QTabWidget>
 
 DbConsole::DbConsole(QWidget *parent)
     : QWidget(parent)
@@ -29,8 +29,7 @@ DbConsole::DbConsole(QWidget *parent)
 
     mTabWidget = new QTabWidget(this);
     mTabWidget->tabBar()->setTabsClosable(true);
-    connect(mTabWidget->tabBar(), &QTabBar::tabCloseRequested,
-            mTabWidget, [this](int index) {
+    connect(mTabWidget->tabBar(), &QTabBar::tabCloseRequested, mTabWidget, [this](int index) {
         mTabWidget->removeTab(index);
         saveQueries();
     });

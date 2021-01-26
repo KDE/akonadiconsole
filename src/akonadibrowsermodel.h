@@ -7,8 +7,8 @@
 #ifndef AKONADIBROWSERMODEL_H
 #define AKONADIBROWSERMODEL_H
 
-#include <AkonadiCore/entitytreemodel.h>
 #include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/entitytreemodel.h>
 
 #include <QSortFilterProxyModel>
 
@@ -21,12 +21,7 @@ public:
     explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = nullptr);
     ~AkonadiBrowserModel();
 
-    enum ItemDisplayMode {
-        GenericMode,
-        MailMode,
-        ContactsMode,
-        CalendarMode
-    };
+    enum ItemDisplayMode { GenericMode, MailMode, ContactsMode, CalendarMode };
 
     void setItemDisplayMode(ItemDisplayMode itemDisplayMode);
     ItemDisplayMode itemDisplayMode() const;

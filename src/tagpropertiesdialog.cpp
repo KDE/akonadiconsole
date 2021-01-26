@@ -9,9 +9,9 @@
 #include "dbaccess.h"
 
 #include <AkonadiCore/AttributeFactory>
-#include <QSqlQuery>
 #include <QDialogButtonBox>
 #include <QSqlError>
+#include <QSqlQuery>
 
 using namespace Akonadi;
 
@@ -101,10 +101,11 @@ void TagPropertiesDialog::setupUi()
             // resource than in the current context. Since Akonadi Console has
             // not resource context at all, we need to retrieve the IDs the hard way
             QSqlQuery query(DbAccess::database());
-            query.prepare(QStringLiteral("SELECT ResourceTable.name, TagRemoteIdResourceRelationTable.remoteId "
-                                         "FROM TagRemoteIdResourceRelationTable "
-                                         "LEFT JOIN ResourceTable ON ResourceTable.id = TagRemoteIdResourceRelationTable.resourceId "
-                                         "WHERE TagRemoteIdResourceRelationTable.tagid = ?"));
+            query.prepare(
+                QStringLiteral("SELECT ResourceTable.name, TagRemoteIdResourceRelationTable.remoteId "
+                               "FROM TagRemoteIdResourceRelationTable "
+                               "LEFT JOIN ResourceTable ON ResourceTable.id = TagRemoteIdResourceRelationTable.resourceId "
+                               "WHERE TagRemoteIdResourceRelationTable.tagid = ?"));
             query.addBindValue(mTag.id());
             if (query.exec()) {
                 while (query.next()) {
@@ -264,11 +265,12 @@ void TagPropertiesDialog::slotAccept()
 
     if (mTag.isValid() && !mRemovedRIDs.isEmpty()) {
         QSqlQuery query(DbAccess::database());
-        QString queryStr = QStringLiteral("DELETE FROM TagRemoteIdResourceRelationTable "
-                                          "WHERE tagId = ? AND "
-                                          "resourceId IN (SELECT id "
-                                          "FROM ResourceTable "
-                                          "WHERE ");
+        QString queryStr = QStringLiteral(
+            "DELETE FROM TagRemoteIdResourceRelationTable "
+            "WHERE tagId = ? AND "
+            "resourceId IN (SELECT id "
+            "FROM ResourceTable "
+            "WHERE ");
         QStringList conds;
         for (int i = 0; i < mRemovedRIDs.count(); ++i) {
             conds << QStringLiteral("name = ?");

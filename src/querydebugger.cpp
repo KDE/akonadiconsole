@@ -7,21 +7,21 @@
  */
 
 #include "querydebugger.h"
+#include "storagedebuggerinterface.h"
 #include "ui_querydebugger.h"
 #include "ui_queryviewdialog.h"
-#include "storagedebuggerinterface.h"
 
 #include <QAbstractListModel>
-#include <QSortFilterProxyModel>
-#include <QHeaderView>
 #include <QDateTime>
 #include <QDialog>
 #include <QDialogButtonBox>
-#include <QTableWidget>
 #include <QFileDialog>
+#include <QHeaderView>
+#include <QSortFilterProxyModel>
+#include <QTableWidget>
 
-#include <QDBusConnection>
 #include <QDBusArgument>
+#include <QDBusConnection>
 
 #include <AkonadiCore/servermanager.h>
 #include <AkonadiWidgets/controlgui.h>
@@ -30,16 +30,12 @@
 
 #include <algorithm>
 
-Q_DECLARE_METATYPE(QList< QList<QVariant> >)
+Q_DECLARE_METATYPE(QList<QList<QVariant>>)
 
 QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con)
 {
     arg.beginStructure();
-    arg << con.id
-        << con.name
-        << con.start
-        << con.trxName
-        << con.transactionStart;
+    arg << con.id << con.name << con.start << con.trxName << con.transactionStart;
     arg.endStructure();
     return arg;
 }
@@ -47,11 +43,7 @@ QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con)
 const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con)
 {
     arg.beginStructure();
-    arg >> con.id
-    >> con.name
-    >> con.start
-    >> con.trxName
-    >> con.transactionStart;
+    arg >> con.id >> con.name >> con.start >> con.trxName >> con.transactionStart;
     arg.endStructure();
     return arg;
 }
@@ -74,11 +66,7 @@ class QueryTreeModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum RowType {
-        Connection,
-        Transaction,
-        Query
-    };
+    enum RowType { Connection, Transaction, Query };
 
 private:
     class Node
@@ -100,7 +88,7 @@ private:
         QString query;
         QString error;
         QMap<QString, QVariant> values;
-        QList<QList<QVariant> > results;
+        QList<QList<QVariant>> results;
         int resultsCount;
     };
 
@@ -112,9 +100,7 @@ private:
             qDeleteAll(queries);
         }
 
-        enum TransactionType {
-            Begin, Commit, Rollback
-        };
+        enum TransactionType { Begin, Commit, Rollback };
         TransactionType transactionType;
         QVector<QueryNode *> queries;
     };
@@ -132,13 +118,7 @@ private:
     };
 
 public:
-    enum {
-        RowTypeRole = Qt::UserRole + 1,
-        QueryRole,
-        QueryResultsCountRole,
-        QueryResultsRole,
-        QueryValuesRole
-    };
+    enum { RowTypeRole = Qt::UserRole + 1, QueryRole, QueryResultsCountRole, QueryResultsRole, QueryValuesRole };
 
     QueryTreeModel(QObject *parent)
         : QAbstractItemModel(parent)
@@ -231,7 +211,14 @@ public:
         }
     }
 
-    void addQuery(qint64 connectionId, qint64 timestamp, uint duration, const QString &queryStr, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &results, const QString &error)
+    void addQuery(qint64 connectionId,
+                  qint64 timestamp,
+                  uint duration,
+                  const QString &queryStr,
+                  const QMap<QString, QVariant> &values,
+                  int resultsCount,
+                  const QList<QList<QVariant>> &results,
+                  const QString &error)
     {
         auto con = mConnectionById.value(connectionId);
         if (!con) {
@@ -248,19 +235,16 @@ public:
         query->results = results;
         query->error = error.trimmed();
 
-        if (!con->queries.isEmpty()
-            && con->queries.last()->type == Transaction
+        if (!con->queries.isEmpty() && con->queries.last()->type == Transaction
             && static_cast<TransactionNode *>(con->queries.last())->transactionType == TransactionNode::Begin) {
             auto trx = static_cast<TransactionNode *>(con->queries.last());
             query->parent = trx;
-            beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx),
-                            trx->queries.count(), trx->queries.count());
+            beginInsertRows(createIndex(con->queries.indexOf(trx), 0, trx), trx->queries.count(), trx->queries.count());
             trx->queries << query;
             endInsertRows();
         } else {
             query->parent = con;
-            beginInsertRows(createIndex(mConnections.indexOf(con), 0, con),
-                            con->queries.count(), con->queries.count());
+            beginInsertRows(createIndex(mConnections.indexOf(con), 0, con), con->queries.count(), con->queries.count());
             con->queries << query;
             endInsertRows();
         }
@@ -310,8 +294,7 @@ public:
             return createIndex(trxIdx, 0, childNode->parent);
         } else {
             // childNode is a query without transaction or a transaction
-            return createIndex(mConnections.indexOf(static_cast<ConnectionNode *>(childNode->parent)),
-                               0, childNode->parent);
+            return createIndex(mConnections.indexOf(static_cast<ConnectionNode *>(childNode->parent)), 0, childNode->parent);
         }
     }
 
@@ -396,29 +379,24 @@ public:
     {
         if (idx.isValid()) {
             QTextStream stream(&file);
-            stream << QStringLiteral("  |").repeated(depth)
-                   << QLatin1String("- ");
+            stream << QStringLiteral("  |").repeated(depth) << QLatin1String("- ");
 
             Node *node = reinterpret_cast<Node *>(idx.internalPointer());
             switch (node->type) {
-            case Connection:
-            {
+            case Connection: {
                 auto con = static_cast<ConnectionNode *>(node);
                 stream << con->name << "    " << fromMSecsSinceEpoch(con->start);
                 break;
             }
-            case Transaction:
-            {
+            case Transaction: {
                 auto trx = static_cast<TransactionNode *>(node);
-                stream << idx.data(Qt::DisplayRole).toString()
-                       << "    " << fromMSecsSinceEpoch(trx->start);
+                stream << idx.data(Qt::DisplayRole).toString() << "    " << fromMSecsSinceEpoch(trx->start);
                 if (trx->transactionType > TransactionNode::Begin) {
                     stream << " - " << fromMSecsSinceEpoch(trx->start + trx->duration);
                 }
                 break;
             }
-            case Query:
-            {
+            case Query: {
                 auto query = static_cast<QueryNode *>(node);
                 stream << query->query << "    " << fromMSecsSinceEpoch(query->start) << ", took " << query->duration << " ms";
                 break;
@@ -428,9 +406,7 @@ public:
             if (node->type >= Transaction) {
                 auto query = static_cast<QueryNode *>(node);
                 if (!query->error.isEmpty()) {
-                    stream << '\n'
-                           << QStringLiteral("  |").repeated(depth)
-                           << QStringLiteral("  Error: ") << query->error;
+                    stream << '\n' << QStringLiteral("  |").repeated(depth) << QStringLiteral("  Error: ") << query->error;
                 }
             }
 
@@ -536,17 +512,8 @@ public:
         mSpecialRows[TOTAL].calls = 0;
     }
 
-    enum SPECIAL_ROWS {
-        TOTAL,
-        NUM_SPECIAL_ROWS
-    };
-    enum COLUMNS {
-        DurationColumn,
-        CallsColumn,
-        AvgDurationColumn,
-        QueryColumn,
-        NUM_COLUMNS
-    };
+    enum SPECIAL_ROWS { TOTAL, NUM_SPECIAL_ROWS };
+    enum COLUMNS { DurationColumn, CallsColumn, AvgDurationColumn, QueryColumn, NUM_COLUMNS };
 
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
@@ -582,8 +549,7 @@ public:
             return QVariant();
         }
 
-        const QueryInfo &info
-            = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
+        const QueryInfo &info = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
 
         if (role == Qt::ToolTipRole) {
             return QString(QLatin1String("<qt>") + info.query + QLatin1String("</qt>"));
@@ -664,7 +630,11 @@ class QueryViewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    QueryViewDialog(const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &results, QWidget *parent = nullptr)
+    QueryViewDialog(const QString &query,
+                    const QMap<QString, QVariant> &values,
+                    int resultsCount,
+                    const QList<QList<QVariant>> &results,
+                    QWidget *parent = nullptr)
         : QDialog(parent)
         , mUi(new Ui::QueryViewDialog)
     {
@@ -699,8 +669,7 @@ public:
             }
         }
 
-        connect(mUi->buttonBox, &QDialogButtonBox::rejected,
-                this, &QDialog::accept);
+        connect(mUi->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::accept);
     }
 
 private:
@@ -711,23 +680,20 @@ QueryDebugger::QueryDebugger(QWidget *parent)
     : QWidget(parent)
     , mUi(new Ui::QueryDebugger)
 {
-    qDBusRegisterMetaType< QList< QList<QVariant> > >();
+    qDBusRegisterMetaType<QList<QList<QVariant>>>();
     qDBusRegisterMetaType<DbConnection>();
-    qDBusRegisterMetaType<QVector<DbConnection> >();
+    qDBusRegisterMetaType<QVector<DbConnection>>();
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
         service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     }
-    mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service,
-                                                               QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
+    mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service, QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
 
-    connect(mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::queryExecuted,
-            this, &QueryDebugger::addQuery);
+    connect(mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::queryExecuted, this, &QueryDebugger::addQuery);
 
     mUi->setupUi(this);
-    connect(mUi->enableDebuggingChkBox, &QAbstractButton::toggled,
-            this, &QueryDebugger::debuggerToggled);
+    connect(mUi->enableDebuggingChkBox, &QAbstractButton::toggled, this, &QueryDebugger::debuggerToggled);
 
     mQueryList = new QueryDebuggerModel(this);
     auto *proxy = new QSortFilterProxyModel(this);
@@ -739,20 +705,14 @@ QueryDebugger::QueryDebugger(QWidget *parent)
     mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::AvgDurationColumn, QHeaderView::Fixed);
     mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::QueryColumn, QHeaderView::ResizeToContents);
 
-    connect(mUi->queryTreeView, &QTreeView::doubleClicked,
-            this, &QueryDebugger::queryTreeDoubleClicked);
-    connect(mUi->saveToFileBtn, &QPushButton::clicked,
-            this, &QueryDebugger::saveTreeToFile);
+    connect(mUi->queryTreeView, &QTreeView::doubleClicked, this, &QueryDebugger::queryTreeDoubleClicked);
+    connect(mUi->saveToFileBtn, &QPushButton::clicked, this, &QueryDebugger::saveTreeToFile);
     mQueryTree = new QueryTreeModel(this);
     mUi->queryTreeView->setModel(mQueryTree);
-    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionOpened,
-            mQueryTree, &QueryTreeModel::addConnection);
-    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionChanged,
-            mQueryTree, &QueryTreeModel::updateConnection);
-    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionStarted,
-            mQueryTree, &QueryTreeModel::addTransaction);
-    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionFinished,
-            mQueryTree, &QueryTreeModel::closeTransaction);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionOpened, mQueryTree, &QueryTreeModel::addConnection);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::connectionChanged, mQueryTree, &QueryTreeModel::updateConnection);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionStarted, mQueryTree, &QueryTreeModel::addTransaction);
+    connect(mDebugger, &org::freedesktop::Akonadi::StorageDebugger::transactionFinished, mQueryTree, &QueryTreeModel::closeTransaction);
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 }
@@ -785,7 +745,15 @@ void QueryDebugger::debuggerToggled(bool on)
     }
 }
 
-void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timestamp, uint duration, const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &result, const QString &error)
+void QueryDebugger::addQuery(double sequence,
+                             qint64 connectionId,
+                             qint64 timestamp,
+                             uint duration,
+                             const QString &query,
+                             const QMap<QString, QVariant> &values,
+                             int resultsCount,
+                             const QList<QList<QVariant>> &result,
+                             const QString &error)
 {
     Q_UNUSED(sequence)
     mQueryList->addQuery(query, duration);
@@ -794,17 +762,15 @@ void QueryDebugger::addQuery(double sequence, qint64 connectionId, qint64 timest
 
 void QueryDebugger::queryTreeDoubleClicked(const QModelIndex &index)
 {
-    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt())
-        != QueryTreeModel::Query) {
+    if (static_cast<QueryTreeModel::RowType>(index.data(QueryTreeModel::RowTypeRole).toInt()) != QueryTreeModel::Query) {
         return;
     }
 
-    auto dlg = new QueryViewDialog(
-        index.data(QueryTreeModel::QueryRole).toString(),
-        index.data(QueryTreeModel::QueryValuesRole).value<QMap<QString, QVariant> >(),
-        index.data(QueryTreeModel::QueryResultsCountRole).toInt(),
-        index.data(QueryTreeModel::QueryResultsRole).value<QList<QList<QVariant> > >(),
-        this);
+    auto dlg = new QueryViewDialog(index.data(QueryTreeModel::QueryRole).toString(),
+                                   index.data(QueryTreeModel::QueryValuesRole).value<QMap<QString, QVariant>>(),
+                                   index.data(QueryTreeModel::QueryResultsCountRole).toInt(),
+                                   index.data(QueryTreeModel::QueryResultsRole).value<QList<QList<QVariant>>>(),
+                                   this);
     connect(dlg, &QDialog::finished, dlg, &QObject::deleteLater);
     dlg->show();
 }

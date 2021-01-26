@@ -8,8 +8,8 @@
 
 #include "mainwidget.h"
 
-#include "config-akonadiconsole.h"
 #include "agentwidget.h"
+#include "config-akonadiconsole.h"
 #include "dbbrowser.h"
 #include "dbconsole.h"
 #include "debugwidget.h"
@@ -17,21 +17,21 @@
 #include "searchwidget.h"
 #endif
 #include "jobtrackerwidget.h"
-#include "notificationmonitor.h"
-#include "monitorswidget.h"
-#include "querydebugger.h"
 #include "logging.h"
+#include "monitorswidget.h"
+#include "notificationmonitor.h"
+#include "querydebugger.h"
 
-#include <AkonadiWidgets/agentinstancewidget.h>
 #include <AkonadiCore/agentfilterproxymodel.h>
-#include <AkonadiWidgets/controlgui.h>
 #include <AkonadiCore/searchcreatejob.h>
 #include <AkonadiCore/servermanager.h>
+#include <AkonadiWidgets/agentinstancewidget.h>
+#include <AkonadiWidgets/controlgui.h>
 
-#include <QAction>
 #include <KActionCollection>
-#include <QTabWidget>
 #include <KXmlGuiWindow>
+#include <QAction>
+#include <QTabWidget>
 
 #include <QVBoxLayout>
 
@@ -53,7 +53,8 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     tabWidget->addTab(new DbConsole(tabWidget), QStringLiteral("DB Console"));
     tabWidget->addTab(new QueryDebugger(tabWidget), QStringLiteral("Query Debugger"));
     tabWidget->addTab(new JobTrackerWidget("jobtracker", tabWidget, QStringLiteral("Enable job tracker")), QStringLiteral("Job Tracker"));
-    tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, QStringLiteral("Enable tracking of Resource Schedulers")), QStringLiteral("Resources Schedulers"));
+    tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, QStringLiteral("Enable tracking of Resource Schedulers")),
+                      QStringLiteral("Resources Schedulers"));
     tabWidget->addTab(new NotificationMonitor(tabWidget), QStringLiteral("Notification Monitor"));
 #ifdef ENABLE_SEARCH
     tabWidget->addTab(new SearchWidget(tabWidget), QStringLiteral("Item Search"));

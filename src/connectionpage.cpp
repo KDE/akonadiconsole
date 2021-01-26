@@ -13,12 +13,12 @@
 
 #include <KCheckComboBox>
 
-#include <QLabel>
 #include <QHeaderView>
+#include <QLabel>
 #include <QTableView>
 
-#include <QVBoxLayout>
 #include <QFontDatabase>
+#include <QVBoxLayout>
 
 #include "tracernotificationinterface.h"
 #include <QStandardItemModel>
@@ -53,18 +53,14 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
 
     layout->addWidget(mDataView);
 
-    org::freedesktop::Akonadi::TracerNotification *iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
+    org::freedesktop::Akonadi::TracerNotification *iface =
+        new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
 
-    connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataInput,
-            this, &ConnectionPage::connectionDataInput);
-    connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataOutput,
-            this, &ConnectionPage::connectionDataOutput);
-    connect(mDataView->horizontalHeader(), &QHeaderView::sectionResized,
-            mDataView, &QTableView::resizeRowsToContents);
-    connect(mFilterModel, &QAbstractItemModel::modelReset,
-            mDataView, &QTableView::resizeRowsToContents);
-    connect(mFilterModel, &QAbstractItemModel::layoutChanged,
-            mDataView, &QTableView::resizeRowsToContents);
+    connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataInput, this, &ConnectionPage::connectionDataInput);
+    connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataOutput, this, &ConnectionPage::connectionDataOutput);
+    connect(mDataView->horizontalHeader(), &QHeaderView::sectionResized, mDataView, &QTableView::resizeRowsToContents);
+    connect(mFilterModel, &QAbstractItemModel::modelReset, mDataView, &QTableView::resizeRowsToContents);
+    connect(mFilterModel, &QAbstractItemModel::layoutChanged, mDataView, &QTableView::resizeRowsToContents);
 }
 
 void ConnectionPage::connectionDataInput(const QString &identifier, const QString &msg)

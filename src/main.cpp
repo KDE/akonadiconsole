@@ -6,17 +6,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "instanceselector.h"
 #include "akonadiconsole-version.h"
+#include "instanceselector.h"
 #include <Kdelibs4ConfigMigrator>
 
 #include <KAboutData>
-#include <KDBusService>
 #include <KCrash>
+#include <KDBusService>
 
 #include <QApplication>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QDBusMetaType>
 
 int main(int argc, char **argv)
@@ -34,7 +34,8 @@ int main(int argc, char **argv)
                          QStringLiteral(KDEPIM_VERSION),
                          QStringLiteral("The Management and Debugging Console for Akonadi"),
                          KAboutLicense::GPL,
-                         QStringLiteral("(c) 2006-2020 the Akonadi developer"), QString(),
+                         QStringLiteral("(c) 2006-2020 the Akonadi developer"),
+                         QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/akonadi"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     aboutData.addAuthor(QStringLiteral("Tobias König"), QStringLiteral("Author"), QStringLiteral("tokoe@kde.org"));
@@ -44,16 +45,18 @@ int main(int argc, char **argv)
     KCrash::initialize();
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("remote"), QStringLiteral("Connect to an Akonadi remote debugging server"), QStringLiteral("server")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("remote"),
+                                        QStringLiteral("Connect to an Akonadi remote debugging server"),
+                                        QStringLiteral("server")));
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
     KDBusService service;
 
-    qRegisterMetaType<QVector<QByteArray> >();
-    qDBusRegisterMetaType<QVector<qint64> >();
-    qDBusRegisterMetaType<QVector<QByteArray> >();
+    qRegisterMetaType<QVector<QByteArray>>();
+    qDBusRegisterMetaType<QVector<qint64>>();
+    qDBusRegisterMetaType<QVector<QByteArray>>();
 
     if (parser.isSet(QStringLiteral("remote"))) {
         const QString akonadiAddr = QStringLiteral("tcp:host=%1,port=31415").arg(parser.value(QStringLiteral("remote")));

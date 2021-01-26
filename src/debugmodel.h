@@ -16,10 +16,7 @@ class DebugModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    enum Direction {
-        ClientToServer,
-        ServerToClient
-    };
+    enum Direction { ClientToServer, ServerToClient };
 
     struct Message {
         QString sender;
@@ -27,10 +24,7 @@ public:
         QString message;
     };
 
-    enum Roles {
-        MessageRole = Qt::UserRole,
-        IdentifierRole
-    };
+    enum Roles { MessageRole = Qt::UserRole, IdentifierRole };
 
     enum Columns {
         DirectionColumn,

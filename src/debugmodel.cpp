@@ -6,9 +6,9 @@
 
 #include "debugmodel.h"
 
-#include <QDebug>
 #include <QColor>
 #include <QDateTime>
+#include <QDebug>
 #include <QDir>
 #include <QStandardItemModel>
 
@@ -40,8 +40,8 @@ QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cach
     auto identifier = str;
     QString name;
     if (pos != -1) {
-        identifier = str.mid(pos+1, str.size()-pos-2);
-        name = str.mid(0, pos-1);
+        identifier = str.mid(pos + 1, str.size() - pos - 2);
+        name = str.mid(0, pos - 1);
     }
     if (!cache.contains(identifier)) {
         cache.insert(identifier, name);
@@ -63,8 +63,7 @@ QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cach
 void DebugModel::addMessage(const QString &sender, DebugModel::Direction direction, const QString &message)
 {
     beginInsertRows({}, mMessages.count(), mMessages.count());
-    mMessages.push_back({ cacheString(sender, mSenderCache, mSenderFilterModel), direction,
-                          message });
+    mMessages.push_back({cacheString(sender, mSenderCache, mSenderFilterModel), direction, message});
     endInsertRows();
 }
 
@@ -80,9 +79,9 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
     QVector<QString> toDelete;
 
     // find elements that needs to be deleted.
-    for (const auto &identifer: mSenderCache.keys()) {
+    for (const auto &identifer : mSenderCache.keys()) {
         bool found = false;
-        for (const auto &msg: qAsConst(mMessages)) {
+        for (const auto &msg : qAsConst(mMessages)) {
             if (msg.sender == identifer) {
                 found = true;
                 break;
@@ -94,7 +93,7 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
     }
 
     // Update senderCache and senderFilterModel
-    for (const auto &i: toDelete) {
+    for (const auto &i : toDelete) {
         const auto &item = mSenderFilterModel->findItems(displaySender(i));
         if (!item.isEmpty()) {
             const auto &index = item.first()->index();

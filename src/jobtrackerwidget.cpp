@@ -9,21 +9,21 @@
 #include "jobtrackerwidget.h"
 #include <QCheckBox>
 
-#include "jobtrackermodel.h"
 #include "jobtrackerfilterproxymodel.h"
+#include "jobtrackermodel.h"
 #include "jobtrackersearchwidget.h"
 
 #include <AkonadiWidgets/controlgui.h>
 
-#include <QTreeView>
-#include <QHeaderView>
-#include <QVBoxLayout>
-#include <QMenu>
-#include <QPushButton>
-#include <QFile>
-#include <QFileDialog>
 #include <QApplication>
 #include <QClipboard>
+#include <QFile>
+#include <QFileDialog>
+#include <QHeaderView>
+#include <QMenu>
+#include <QPushButton>
+#include <QTreeView>
+#include <QVBoxLayout>
 
 class JobTrackerWidget::Private
 {
@@ -65,12 +65,11 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     connect(d->model, &JobTrackerModel::modelReset, d->tv, &QTreeView::expandAll);
     connect(d->tv, &QTreeView::customContextMenuRequested, this, &JobTrackerWidget::contextMenu);
     layout->addWidget(d->tv);
-    d->model->setEnabled(false);   // since it can be slow, default to off
+    d->model->setEnabled(false); // since it can be slow, default to off
 
     auto *layout2 = new QHBoxLayout;
     QPushButton *button = new QPushButton(QStringLiteral("Save to file..."), this);
-    connect(button, &QAbstractButton::clicked,
-            this, &JobTrackerWidget::slotSaveToFile);
+    connect(button, &QAbstractButton::clicked, this, &JobTrackerWidget::slotSaveToFile);
     layout2->addWidget(button);
     layout2->addStretch(1);
     layout->addLayout(layout2);

@@ -10,8 +10,8 @@
 
 #include <QSettings>
 #include <QSqlDatabase>
-#include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlQuery>
 
 #include <KMessageBox>
 

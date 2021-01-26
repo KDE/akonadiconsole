@@ -6,69 +6,69 @@
 
 #include "browserwidget.h"
 
+#include "akonadibrowsermodel.h"
+#include "collectionaclpage.h"
 #include "collectionattributespage.h"
 #include "collectioninternalspage.h"
-#include "collectionaclpage.h"
-#include "dbaccess.h"
-#include "akonadibrowsermodel.h"
-#include "tagpropertiesdialog.h"
 #include "config-akonadiconsole.h"
+#include "dbaccess.h"
+#include "tagpropertiesdialog.h"
 
+#include <AkonadiCore/TagFetchScope>
 #include <AkonadiCore/attributefactory.h>
 #include <AkonadiCore/changerecorder.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <AkonadiCore/collectionfilterproxymodel.h>
 #include <AkonadiCore/entitymimetypefiltermodel.h>
+#include <AkonadiCore/favoritecollectionsmodel.h>
 #include <AkonadiCore/itemfetchjob.h>
 #include <AkonadiCore/itemfetchscope.h>
 #include <AkonadiCore/itemmodifyjob.h>
 #include <AkonadiCore/job.h>
-#include <AkonadiCore/collectionfilterproxymodel.h>
-#include <AkonadiWidgets/collectionpropertiesdialog.h>
 #include <AkonadiCore/selectionproxymodel.h>
 #include <AkonadiCore/session.h>
-#include <AkonadiWidgets/standardactionmanager.h>
-#include <AkonadiWidgets/entitylistview.h>
-#include <AkonadiWidgets/entitytreeview.h>
-#include <AkonadiCore/favoritecollectionsmodel.h>
-#include <AkonadiCore/tagmodel.h>
 #include <AkonadiCore/statisticsproxymodel.h>
 #include <AkonadiCore/tagdeletejob.h>
-#include <AkonadiCore/TagFetchScope>
+#include <AkonadiCore/tagmodel.h>
+#include <AkonadiWidgets/collectionpropertiesdialog.h>
+#include <AkonadiWidgets/controlgui.h>
+#include <AkonadiWidgets/entitylistview.h>
+#include <AkonadiWidgets/entitytreeview.h>
+#include <AkonadiWidgets/standardactionmanager.h>
 #include <AkonadiXml/XmlWriteJob>
 #include <KViewStateMaintainer>
 #include <akonadi/private/compressionstream_p.h>
 
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Incidence>
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
-#include <KCalendarCore/Incidence>
-#include <KCalendarCore/ICalFormat>
 
 #include "akonadiconsole_debug.h"
+#include <AkonadiCore/tagcreatejob.h>
+#include <AkonadiCore/tagmodifyjob.h>
+#include <KActionCollection>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMessageBox>
-#include <KXmlGuiWindow>
 #include <KToggleAction>
-#include <KActionCollection>
-#include <AkonadiCore/tagmodifyjob.h>
-#include <AkonadiCore/tagcreatejob.h>
+#include <KXmlGuiWindow>
 
-#include <QSplitter>
-#include <QVBoxLayout>
-#include <QStandardItemModel>
-#include <QSqlQuery>
-#include <QTimer>
 #include <KSharedConfig>
-#include <QMenu>
-#include <QFileDialog>
-#include <QSqlError>
 #include <QBuffer>
+#include <QFileDialog>
+#include <QMenu>
+#include <QSplitter>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QStandardItemModel>
+#include <QTimer>
+#include <QVBoxLayout>
 
 #ifdef ENABLE_CONTENTVIEWS
+#include <Akonadi/Contact/ContactGroupViewer>
+#include <Akonadi/Contact/ContactViewer>
 #include <CalendarSupport/IncidenceViewer>
 #include <MessageViewer/Viewer>
-#include <Akonadi/Contact/ContactViewer>
-#include <Akonadi/Contact/ContactGroupViewer>
 #endif
 
 using namespace Akonadi;
@@ -98,7 +98,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     splitter2->addWidget(mCollectionView);
 
     auto *favoritesView = new EntityListView(xmlGuiWindow, this);
-    //favoritesView->setViewMode( QListView::IconMode );
+    // favoritesView->setViewMode( QListView::IconMode );
     splitter2->addWidget(favoritesView);
 
     splitter->addWidget(splitter2);
@@ -135,7 +135,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     mBrowserModel->setShowSystemEntities(true);
     mBrowserModel->setListFilter(CollectionFetchScope::Display);
 
-//   new ModelTest( mBrowserModel );
+    //   new ModelTest( mBrowserModel );
 
     auto *collectionFilter = new EntityMimeTypeFilterModel(this);
     collectionFilter->setSourceModel(mBrowserModel);
@@ -271,7 +271,7 @@ void BrowserWidget::clear()
 
 void BrowserWidget::currentChanged(const QModelIndex &index)
 {
-    const Item item = index.sibling(index.row(), 0).data(EntityTreeModel::ItemRole).value< Item >();
+    const Item item = index.sibling(index.row(), 0).data(EntityTreeModel::ItemRole).value<Item>();
     if (!item.isValid()) {
         clear();
         return;
@@ -318,13 +318,12 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     } else if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         mIncidenceView->setItem(item);
         contentUi.stack->setCurrentWidget(mIncidenceView->parentWidget());
-    } else if (item.mimeType() == QLatin1String("message/rfc822")
-               || item.mimeType() == QLatin1String("message/news")) {
+    } else if (item.mimeType() == QLatin1String("message/rfc822") || item.mimeType() == QLatin1String("message/news")) {
         mMailView->setMessageItem(item, MimeTreeParser::Force);
         contentUi.stack->setCurrentWidget(mMailView->parentWidget());
     } else
 #endif
-    if (item.hasPayload<QPixmap>()) {
+        if (item.hasPayload<QPixmap>()) {
         contentUi.imageView->setPixmap(item.payload<QPixmap>());
         contentUi.stack->setCurrentWidget(contentUi.imageViewPage);
     } else {
@@ -394,14 +393,14 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     connect(mAttrModel, &QStandardItemModel::itemChanged, this, &BrowserWidget::contentViewChanged);
 
     if (mMonitor) {
-        mMonitor->deleteLater();    // might be the one calling us
+        mMonitor->deleteLater(); // might be the one calling us
     }
     mMonitor = new Monitor(this);
     mMonitor->setObjectName(QStringLiteral("itemMonitor"));
     mMonitor->setItemMonitored(item);
     mMonitor->itemFetchScope().fetchFullPayload();
     mMonitor->itemFetchScope().fetchAllAttributes();
-    qRegisterMetaType<QSet<QByteArray> >();
+    qRegisterMetaType<QSet<QByteArray>>();
     connect(mMonitor, &Akonadi::Monitor::itemChanged, this, &BrowserWidget::setItem, Qt::QueuedConnection);
     contentUi.saveButton->setEnabled(false);
 }
@@ -543,12 +542,15 @@ void BrowserWidget::clearCache()
     query.next();
     const int emptyRidCount = query.value(0).toInt();
     if (emptyRidCount > 0) {
-        if (KMessageBox::warningContinueCancel(this, QStringLiteral(
-                                                   "The collection '%1' contains %2 items without Remote ID. "
-                                                   "Those items were likely never uploaded to the destination server, "
-                                                   "so clearing this collection means that those <b>data will be lost</b>. "
-                                                   "Are you sure you want to proceed?").arg(coll.id()).arg(emptyRidCount),
-                                               QStringLiteral("POSSIBLE DATA LOSS!")) == KMessageBox::Cancel) {
+        if (KMessageBox::warningContinueCancel(this,
+                                               QStringLiteral("The collection '%1' contains %2 items without Remote ID. "
+                                                              "Those items were likely never uploaded to the destination server, "
+                                                              "so clearing this collection means that those <b>data will be lost</b>. "
+                                                              "Are you sure you want to proceed?")
+                                                   .arg(coll.id())
+                                                   .arg(emptyRidCount),
+                                               QStringLiteral("POSSIBLE DATA LOSS!"))
+            == KMessageBox::Cancel) {
             return;
         }
     }
@@ -590,8 +592,16 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
     menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), QStringLiteral("&Add tag..."), this, &BrowserWidget::addTagRequested);
     if (index.isValid()) {
         menu->addAction(QStringLiteral("Add &subtag..."), this, &BrowserWidget::addSubTagRequested);
-        menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")), QStringLiteral("&Edit tag..."), this, &BrowserWidget::editTagRequested, QKeySequence(Qt::Key_Return));
-        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), QStringLiteral("&Delete tag..."), this, &BrowserWidget::removeTagRequested, QKeySequence::Delete);
+        menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")),
+                        QStringLiteral("&Edit tag..."),
+                        this,
+                        &BrowserWidget::editTagRequested,
+                        QKeySequence(Qt::Key_Return));
+        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
+                        QStringLiteral("&Delete tag..."),
+                        this,
+                        &BrowserWidget::removeTagRequested,
+                        QKeySequence::Delete);
         menu->setProperty("Tag", index.data(TagModel::TagRole));
     }
 
@@ -648,9 +658,14 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
 
 void BrowserWidget::removeTagRequested()
 {
-    if (KMessageBox::questionYesNo(this, QStringLiteral("Do you really want to remove selected tag?"),
-                                   QStringLiteral("Delete tag?"), KStandardGuiItem::del(), KStandardGuiItem::cancel(),
-                                   QString(), KMessageBox::Dangerous) == KMessageBox::No) {
+    if (KMessageBox::questionYesNo(this,
+                                   QStringLiteral("Do you really want to remove selected tag?"),
+                                   QStringLiteral("Delete tag?"),
+                                   KStandardGuiItem::del(),
+                                   KStandardGuiItem::cancel(),
+                                   QString(),
+                                   KMessageBox::Dangerous)
+        == KMessageBox::No) {
         return;
     }
 

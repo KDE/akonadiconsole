@@ -1,5 +1,5 @@
 /*
-  * SPDX-FileCopyrightText: 2013 Daniel Vrátil <dvratil@redhat.com>
+ * SPDX-FileCopyrightText: 2013 Daniel Vrátil <dvratil@redhat.com>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -8,11 +8,12 @@
 #ifndef MONITORSWIDGET_H
 #define MONITORSWIDGET_H
 
-#include <QWidget>
 #include <QTreeView>
+#include <QWidget>
 
 class QStandardItem;
-namespace Akonadi {
+namespace Akonadi
+{
 class TagFetchScope;
 class CollectionFetchScope;
 }
@@ -32,6 +33,7 @@ private Q_SLOTS:
 
     void populateTagFetchScope(QStandardItem *parent, const Akonadi::TagFetchScope &tfs);
     void populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs);
+
 private:
     QTreeView *mTreeView = nullptr;
     QTreeView *mSubscriberView = nullptr;

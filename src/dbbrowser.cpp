@@ -41,8 +41,7 @@ void DbBrowser::refreshClicked()
     mTableModel->setEditStrategy(QSqlTableModel::OnRowChange);
     mTableModel->select();
     ui.tableView->setModel(mTableModel);
-    connect(ui.tableView->horizontalHeader(), &QHeaderView::sortIndicatorChanged,
-            this, &DbBrowser::onSortIndicatorChanged);
+    connect(ui.tableView->horizontalHeader(), &QHeaderView::sortIndicatorChanged, this, &DbBrowser::onSortIndicatorChanged);
 }
 
 void DbBrowser::onSortIndicatorChanged(int column, Qt::SortOrder order)

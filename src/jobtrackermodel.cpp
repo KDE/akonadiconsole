@@ -10,12 +10,12 @@
 #include "jobtrackermodel.h"
 #include "jobtracker.h"
 
-#include <QLocale>
-#include <QStringList>
-#include <QModelIndex>
-#include <QFont>
-#include <QPair>
 #include <QColor>
+#include <QFont>
+#include <QLocale>
+#include <QModelIndex>
+#include <QPair>
+#include <QStringList>
 
 #include <cassert>
 
@@ -46,6 +46,7 @@ public:
 
 private:
     JobTrackerModel *const q;
+
 public:
     JobTracker tracker;
 };
@@ -54,12 +55,9 @@ JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
     : QAbstractItemModel(parent)
     , d(new Private(name, this))
 {
-    connect(&d->tracker, &JobTracker::aboutToAdd,
-            this, &JobTrackerModel::jobAboutToBeAdded);
-    connect(&d->tracker, &JobTracker::added,
-            this, &JobTrackerModel::jobAdded);
-    connect(&d->tracker, &JobTracker::updated,
-            this, &JobTrackerModel::jobsUpdated);
+    connect(&d->tracker, &JobTracker::aboutToAdd, this, &JobTrackerModel::jobAboutToBeAdded);
+    connect(&d->tracker, &JobTracker::added, this, &JobTrackerModel::jobAdded);
+    connect(&d->tracker, &JobTracker::updated, this, &JobTrackerModel::jobsUpdated);
 }
 
 JobTrackerModel::~JobTrackerModel()
@@ -102,7 +100,7 @@ QModelIndex JobTrackerModel::parent(const QModelIndex &idx) const
 
     const int parentid = d->tracker.parentId(idx.internalId());
     if (parentid == -1) {
-        return QModelIndex();    // top level session
+        return QModelIndex(); // top level session
     }
 
     const int row = d->rowForParentId(parentid);
@@ -133,8 +131,7 @@ int JobTrackerModel::columnCount(const QModelIndex &parent) const
 
 static QString formatTimeWithMsec(const QTime &time)
 {
-    return QString(QLocale().toString(time)
-                   + QStringLiteral(".%1").arg(time.msec(), 3, 10, QLatin1Char('0')));
+    return QString(QLocale().toString(time) + QStringLiteral(".%1").arg(time.msec(), 3, 10, QLatin1Char('0')));
 }
 
 static QString formatDurationWithMsec(qint64 msecs)
@@ -215,9 +212,9 @@ QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, i
             case ColumnCreated:
                 return QStringLiteral("Created");
             case ColumnWaitTime:
-                return QStringLiteral("Wait time");      // duration  (time started - time created)
+                return QStringLiteral("Wait time"); // duration  (time started - time created)
             case ColumnJobDuration:
-                return QStringLiteral("Job duration");   // duration (time ended - time started)
+                return QStringLiteral("Job duration"); // duration (time ended - time started)
             case ColumnJobType:
                 return QStringLiteral("Job Type");
             case ColumnState:
@@ -264,7 +261,7 @@ void JobTrackerModel::jobAdded()
     endInsertRows();
 }
 
-void JobTrackerModel::jobsUpdated(const QList< QPair< int, int > > &jobs)
+void JobTrackerModel::jobsUpdated(const QList<QPair<int, int>> &jobs)
 {
     // TODO group them by parent? It's likely that multiple jobs for the same
     // parent will come in in the same batch, isn't it?

@@ -16,7 +16,8 @@ class DebugFilterModel;
 class QAbstractItemModel;
 class QTableView;
 
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 

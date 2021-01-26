@@ -5,33 +5,33 @@
 */
 
 #include "notificationmonitor.h"
-#include "notificationmodel.h"
 #include "notificationfiltermodel.h"
+#include "notificationmodel.h"
 #include "utils.h"
 
 #include <AkonadiWidgets/ControlGui>
 
-#include <QFileDialog>
-#include <QFile>
-#include <QHeaderView>
 #include <QCheckBox>
-#include <QLabel>
-#include <QMenu>
-#include <QMessageBox>
-#include <QTreeView>
-#include <QVBoxLayout>
-#include <QSplitter>
-#include <QStandardItemModel>
-#include <QStandardItem>
+#include <QFile>
+#include <QFileDialog>
+#include <QHeaderView>
 #include <QItemSelectionModel>
-#include <QPushButton>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QLabel>
+#include <QMenu>
+#include <QMessageBox>
+#include <QPushButton>
+#include <QSplitter>
+#include <QStandardItem>
+#include <QStandardItemModel>
+#include <QTreeView>
+#include <QVBoxLayout>
 
 #include <KCheckComboBox>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 using KPIM::KCheckComboBox;
 
@@ -43,7 +43,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     : QWidget(parent)
 {
     m_model = new NotificationModel(this);
-    m_model->setEnabled(false);   // since it can be slow, default to off
+    m_model->setEnabled(false); // since it can be slow, default to off
 
     m_filterModel = new NotificationFilterModel(this);
     m_filterModel->setSourceModel(m_model);
@@ -62,7 +62,8 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
     hLayout->addStretch();
     mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-    mTypeFilterCombo->setMinimumWidth(fontMetrics().boundingRect(QStringLiteral("Subscription,Items,Collections")).width() + 60); // make it wide enough for most use cases
+    mTypeFilterCombo->setMinimumWidth(fontMetrics().boundingRect(QStringLiteral("Subscription,Items,Collections")).width()
+                                      + 60); // make it wide enough for most use cases
     m_filterModel->setTypeFilter(mTypeFilterCombo);
 
     m_splitter = new QSplitter(this);
@@ -75,8 +76,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     m_treeView->setContextMenuPolicy(Qt::CustomContextMenu);
     m_treeView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     connect(m_treeView, &QTreeView::customContextMenuRequested, this, &NotificationMonitor::contextMenu);
-    connect(m_treeView->selectionModel(), &QItemSelectionModel::currentChanged,
-            this, &NotificationMonitor::onNotificationSelected);
+    connect(m_treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &NotificationMonitor::onNotificationSelected);
     m_splitter->addWidget(m_treeView);
 
     m_ntfView = new QTreeView(this);
@@ -129,7 +129,7 @@ void NotificationMonitor::populateNtfModel(const QModelIndex &index)
 {
     auto model = qobject_cast<QStandardItemModel *>(m_ntfView->model());
     model->clear();
-    model->setHorizontalHeaderLabels({ QStringLiteral("Properties"), QStringLiteral("Values") });
+    model->setHorizontalHeaderLabels({QStringLiteral("Properties"), QStringLiteral("Values")});
 
     const auto ntf = index.data(NotificationModel::NotificationRole).value<Akonadi::ChangeNotification>();
     if (!ntf.isValid()) {
@@ -137,10 +137,8 @@ void NotificationMonitor::populateNtfModel(const QModelIndex &index)
     }
 
     appendRow(model, QStringLiteral("Timestamp"), ntf.timestamp().toString(Qt::ISODateWithMs));
-    appendRow(model, QStringLiteral("Type"),
-              index.sibling(index.row(), NotificationModel::TypeColumn).data().toString());
-    appendRow(model, QStringLiteral("Listeners"),
-              index.sibling(index.row(), NotificationModel::ListenersColumn).data().toString());
+    appendRow(model, QStringLiteral("Type"), index.sibling(index.row(), NotificationModel::TypeColumn).data().toString());
+    appendRow(model, QStringLiteral("Listeners"), index.sibling(index.row(), NotificationModel::ListenersColumn).data().toString());
     switch (ntf.type()) {
     case Akonadi::ChangeNotification::Items:
         populateItemNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::ItemChangeNotification>(ntf.notification()));
@@ -198,29 +196,19 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
 
     appendRow(model, QStringLiteral("Operation"), operation);
     appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
-    appendRow(model, QStringLiteral("Parent Collection"),
-              QString::number(ntf.parentCollection()));
-    appendRow(model, QStringLiteral("Parent Dest Col"),
-              QString::number(ntf.parentDestCollection()));
-    appendRow(model, QStringLiteral("Destination Resource"),
-              QString::fromUtf8(ntf.destinationResource()));
-    appendRow(model, QStringLiteral("Item Parts"),
-              toString(ntf.itemParts()));
-    appendRow(model, QStringLiteral("Added Flags"),
-              toString(ntf.addedFlags()));
-    appendRow(model, QStringLiteral("Removed Flags"),
-              toString(ntf.removedFlags()));
-    appendRow(model, QStringLiteral("Added Tags"),
-              toString(ntf.addedTags()));
-    appendRow(model, QStringLiteral("Removed Tags"),
-              toString(ntf.removedTags()));
+    appendRow(model, QStringLiteral("Parent Collection"), QString::number(ntf.parentCollection()));
+    appendRow(model, QStringLiteral("Parent Dest Col"), QString::number(ntf.parentDestCollection()));
+    appendRow(model, QStringLiteral("Destination Resource"), QString::fromUtf8(ntf.destinationResource()));
+    appendRow(model, QStringLiteral("Item Parts"), toString(ntf.itemParts()));
+    appendRow(model, QStringLiteral("Added Flags"), toString(ntf.addedFlags()));
+    appendRow(model, QStringLiteral("Removed Flags"), toString(ntf.removedFlags()));
+    appendRow(model, QStringLiteral("Added Tags"), toString(ntf.addedTags()));
+    appendRow(model, QStringLiteral("Removed Tags"), toString(ntf.removedTags()));
     auto relationsItem = new QStandardItem(QStringLiteral("Added Relations"));
     const auto addedRelations = ntf.addedRelations();
     for (const auto &addedRelation : addedRelations) {
-        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(
-                                          QString::number(addedRelation.leftId),
-                                          QString::number(addedRelation.rightId),
-                                          addedRelation.type));
+        auto item = new QStandardItem(
+            QStringLiteral("%lld-%lld %s").arg(QString::number(addedRelation.leftId), QString::number(addedRelation.rightId), addedRelation.type));
         relationsItem->appendRow(item);
     }
     model->appendRow(relationsItem);
@@ -228,16 +216,13 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     relationsItem = new QStandardItem(QStringLiteral("Removed Relations"));
     const auto removedRelations = ntf.removedRelations();
     for (const auto &removedRelation : removedRelations) {
-        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(
-                                          QString::number(removedRelation.leftId),
-                                          QString::number(removedRelation.rightId),
-                                          removedRelation.type));
+        auto item = new QStandardItem(
+            QStringLiteral("%lld-%lld %s").arg(QString::number(removedRelation.leftId), QString::number(removedRelation.rightId), removedRelation.type));
         relationsItem->appendRow(item);
     }
     model->appendRow(relationsItem);
 
-    appendRow(model, QStringLiteral("Must retrieve"),
-              toString(ntf.mustRetrieve()));
+    appendRow(model, QStringLiteral("Must retrieve"), toString(ntf.mustRetrieve()));
 
     auto itemsItem = new QStandardItem(QStringLiteral("Items"));
     const auto &items = ntf.items();
@@ -303,7 +288,8 @@ void NotificationMonitor::populateItemTree(QStandardItem *parent, const Akonadi:
     auto relationItem = new QStandardItem(QStringLiteral("Relations"));
     const auto relations = item.relations();
     for (const auto &relation : relations) {
-        auto item = new QStandardItem(QStringLiteral("%lld-%lld %s").arg(QString::number(relation.left()), QString::number(relation.right()), QString::fromUtf8(relation.type())));
+        auto item = new QStandardItem(
+            QStringLiteral("%lld-%lld %s").arg(QString::number(relation.left()), QString::number(relation.right()), QString::fromUtf8(relation.type())));
         relationItem->appendRow(item);
     }
     parent->appendRow(relationItem);
@@ -346,7 +332,7 @@ void NotificationMonitor::populateCollectionTree(QStandardItem *parent, const Ak
     appendRow(parent, QStringLiteral("ID"), QString::number(collection.id()));
     appendRow(parent, QStringLiteral("Parent ID"), QString::number(collection.parentId()));
     appendRow(parent, QStringLiteral("Name"), collection.name());
-    appendRow(parent, QStringLiteral("Mime Types"), toString(static_cast<QList<QString> >(collection.mimeTypes())));
+    appendRow(parent, QStringLiteral("Mime Types"), toString(static_cast<QList<QString>>(collection.mimeTypes())));
     appendRow(parent, QStringLiteral("Remote ID"), collection.remoteId());
     appendRow(parent, QStringLiteral("Remote Revision"), collection.remoteRevision());
     auto statsItem = new QStandardItem(QStringLiteral("Statistics"));
@@ -369,7 +355,7 @@ void NotificationMonitor::populateCollectionTree(QStandardItem *parent, const Ak
     appendRow(cpItem, QStringLiteral("Check Interval"), QString::number(cp.checkInterval()));
     appendRow(cpItem, QStringLiteral("Cache Timeout"), QString::number(cp.cacheTimeout()));
     appendRow(cpItem, QStringLiteral("Sync on Demand"), toString(cp.syncOnDemand()));
-    appendRow(cpItem, QStringLiteral("Local Parts"), toString(static_cast<QList<QString> >(cp.localParts())));
+    appendRow(cpItem, QStringLiteral("Local Parts"), toString(static_cast<QList<QString>>(cp.localParts())));
     parent->appendRow(cpItem);
 
     populateAttributesTree(parent, collection.attributes());
@@ -409,14 +395,10 @@ void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, c
     }
     appendRow(model, QStringLiteral("Operation"), operation);
     appendRow(model, QStringLiteral("Resource"), QString::fromUtf8(ntf.resource()));
-    appendRow(model, QStringLiteral("Parent Collection"),
-              QString::number(ntf.parentCollection()));
-    appendRow(model, QStringLiteral("Parent Dest Collection"),
-              QString::number(ntf.parentDestCollection()));
-    appendRow(model, QStringLiteral("Destination Resource"),
-              QString::fromUtf8(ntf.destinationResource()));
-    appendRow(model, QStringLiteral("Changed Parts"),
-              toString(ntf.changedParts()));
+    appendRow(model, QStringLiteral("Parent Collection"), QString::number(ntf.parentCollection()));
+    appendRow(model, QStringLiteral("Parent Dest Collection"), QString::number(ntf.parentDestCollection()));
+    appendRow(model, QStringLiteral("Destination Resource"), QString::fromUtf8(ntf.destinationResource()));
+    appendRow(model, QStringLiteral("Changed Parts"), toString(ntf.changedParts()));
     auto item = new QStandardItem(QStringLiteral("Collection"));
     populateCollectionTree(item, ntf.collection());
     model->appendRow(item);
@@ -583,8 +565,7 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, QStringLiteral("List Filter"), listFilter);
     appendRow(item, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
     appendRow(item, QStringLiteral("Resource"), cfs.resource());
-    appendRow(item, QStringLiteral("Content Mime Types"),
-              cfs.contentMimeTypes().join(QLatin1String(", ")));
+    appendRow(item, QStringLiteral("Content Mime Types"), cfs.contentMimeTypes().join(QLatin1String(", ")));
     appendRow(item, QStringLiteral("Attributes"), toString(cfs.attributes()));
     appendRow(item, QStringLiteral("Fetch ID Only"), toString(cfs.fetchIdOnly()));
     QString ancestorRetrieval;

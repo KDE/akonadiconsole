@@ -36,13 +36,26 @@ QString LoggingModel::cacheString(const QString &str, QSet<QString> &cache, QSta
     return *it;
 }
 
-void LoggingModel::addMessage(qint64 timestamp, const QString &app, qint64 pid, QtMsgType type, const QString &category, const QString &file, const QString &function, int line, const QString &message)
+void LoggingModel::addMessage(qint64 timestamp,
+                              const QString &app,
+                              qint64 pid,
+                              QtMsgType type,
+                              const QString &category,
+                              const QString &file,
+                              const QString &function,
+                              int line,
+                              const QString &message)
 {
     beginInsertRows({}, mMessages.count(), mMessages.count());
-    mMessages.push_back({ timestamp, cacheString(app, mAppCache, mAppFilterModel), pid,
-                          cacheString(category, mCategoryCache, mCategoryFilterModel),
-                          cacheString(file, mFileCache), cacheString(function, mFunctionCache),
-                          message, type, line });
+    mMessages.push_back({timestamp,
+                         cacheString(app, mAppCache, mAppFilterModel),
+                         pid,
+                         cacheString(category, mCategoryCache, mCategoryFilterModel),
+                         cacheString(file, mFileCache),
+                         cacheString(function, mFunctionCache),
+                         message,
+                         type,
+                         line});
     endInsertRows();
 }
 

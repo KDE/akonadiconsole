@@ -8,8 +8,8 @@
 #ifndef TAGPROPERTIESDIALOG_H
 #define TAGPROPERTIESDIALOG_H
 
-#include <QDialog>
 #include <AkonadiCore/tag.h>
+#include <QDialog>
 
 #include <QStandardItemModel>
 

@@ -11,8 +11,8 @@
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
 
-#include <KCalendarCore/Incidence>
 #include <KCalendarCore/Event>
+#include <KCalendarCore/Incidence>
 
 using IncidencePtr = QSharedPointer<KCalendarCore::Incidence>;
 
@@ -42,12 +42,7 @@ public:
     {
     }
 
-    enum Columns {
-        IdColumn = 0,
-        RemoteIdColumn = 1,
-        GIDColumn = 2,
-        MimeTypeColumn = 3
-    };
+    enum Columns { IdColumn = 0, RemoteIdColumn = 1, GIDColumn = 2, MimeTypeColumn = 3 };
 
     QVariant entityData(const Item &item, int column, int role) const override
     {
@@ -173,7 +168,8 @@ public:
     CalendarState()
     {
         m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("UID") << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End") << QStringLiteral("Type");
+        m_itemHeaders << QStringLiteral("UID") << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End")
+                      << QStringLiteral("Type");
     }
 
     virtual ~CalendarState()
@@ -314,7 +310,7 @@ void AkonadiBrowserModel::setItemDisplayMode(AkonadiBrowserModel::ItemDisplayMod
     }
     const int newColumnCount = qMax(newState->m_collectionHeaders.count(), newState->m_itemHeaders.count());
 
-    //qCDebug(AKONADICONSOLE_LOG) << "column count changed from" << oldColumnCount << "to" << newColumnCount;
+    // qCDebug(AKONADICONSOLE_LOG) << "column count changed from" << oldColumnCount << "to" << newColumnCount;
     if (newColumnCount > oldColumnCount) {
         beginInsertColumns(QModelIndex(), oldColumnCount, newColumnCount - 1);
         m_currentState = newState;

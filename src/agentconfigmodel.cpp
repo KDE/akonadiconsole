@@ -6,11 +6,12 @@
 
 #include "agentconfigmodel.h"
 
+#include "akonadiconsole_debug.h"
 #include <QDBusInterface>
 #include <QMetaMethod>
-#include "akonadiconsole_debug.h"
 
-AgentConfigModel::AgentConfigModel(QObject *parent) : QAbstractTableModel(parent)
+AgentConfigModel::AgentConfigModel(QObject *parent)
+    : QAbstractTableModel(parent)
     , m_interface(nullptr)
 {
 }
@@ -25,9 +26,7 @@ void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
     beginResetModel();
     m_settings.clear();
 
-    m_interface = new QDBusInterface(
-        QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(instance.identifier()),
-        QStringLiteral("/Settings"));
+    m_interface = new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(instance.identifier()), QStringLiteral("/Settings"));
     if (!m_interface->isValid()) {
         qCritical() << "Unable to obtain KConfigXT D-Bus interface of agent" << instance.identifier();
         delete m_interface;
@@ -43,17 +42,17 @@ void AgentConfigModel::reload()
     m_settings.clear();
     for (int i = 0; i < m_interface->metaObject()->methodCount(); ++i) {
         const QMetaMethod method = m_interface->metaObject()->method(i);
-        if (QByteArray(method.typeName()).isEmpty()) {   // returns void
+        if (QByteArray(method.typeName()).isEmpty()) { // returns void
             continue;
         }
         const QByteArray signature(method.methodSignature());
         if (signature.isEmpty()) {
             continue;
         }
-        if (signature.startsWith("set") || !signature.contains("()")) {     // setter or takes parameters // krazy:exclude=strings
+        if (signature.startsWith("set") || !signature.contains("()")) { // setter or takes parameters // krazy:exclude=strings
             continue;
         }
-        if (signature.startsWith("Introspect")) {   // D-Bus stuff // krazy:exclude=strings
+        if (signature.startsWith("Introspect")) { // D-Bus stuff // krazy:exclude=strings
             continue;
         }
         const QString methodName = QString::fromLatin1(signature.left(signature.indexOf('(')));

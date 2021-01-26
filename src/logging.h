@@ -12,7 +12,8 @@
 class QCheckBox;
 class QTreeView;
 class LoggingModel;
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 
@@ -28,7 +29,16 @@ public:
 
     bool enabled() const;
 
-    Q_INVOKABLE void message(qint64 timestamp, const QString &app, qint64 pid, int type, const QString &category, const QString &file, const QString &function, int line, int version, const QString &msg);
+    Q_INVOKABLE void message(qint64 timestamp,
+                             const QString &app,
+                             qint64 pid,
+                             int type,
+                             const QString &category,
+                             const QString &file,
+                             const QString &function,
+                             int line,
+                             int version,
+                             const QString &msg);
 
 Q_SIGNALS:
     void enabledChanged(bool enabled);

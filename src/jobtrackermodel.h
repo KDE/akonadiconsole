@@ -9,8 +9,8 @@
 #ifndef AKONADICONSOLE_JOBTRACKERMODEL_H
 #define AKONADICONSOLE_JOBTRACKERMODEL_H
 
-#include <QAbstractItemModel>
 #include "libakonadiconsole_export.h"
+#include <QAbstractItemModel>
 
 class JobTracker;
 
@@ -23,13 +23,9 @@ public:
 
     JobTracker &jobTracker(); // for the unittest
 
-    enum Roles
-    {
-        FailedIdRole = Qt::UserRole + 1
-    };
+    enum Roles { FailedIdRole = Qt::UserRole + 1 };
 
-    enum Column
-    {
+    enum Column {
         ColumnJobId,
         ColumnCreated,
         ColumnWaitTime,
@@ -57,7 +53,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void jobAboutToBeAdded(int pos, int parentId);
     void jobAdded();
-    void jobsUpdated(const QList< QPair<int, int> > &);
+    void jobsUpdated(const QList<QPair<int, int>> &);
 
 private:
     class Private;

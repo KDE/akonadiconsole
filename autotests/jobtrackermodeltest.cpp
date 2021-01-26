@@ -9,9 +9,9 @@
 #include "jobtracker.h"
 #include "jobtrackermodel.h"
 //#include "modeltest.h"
-#include <akonadi/private/instance_p.h>
 #include <QSignalSpy>
 #include <QTest>
+#include <akonadi/private/instance_p.h>
 
 static QString rowSpyToText(const QSignalSpy &spy)
 {
@@ -54,12 +54,11 @@ void JobTrackerModelTest::shouldDisplayOneJob()
 {
     // GIVEN
     JobTrackerModel model("jobtracker");
-    //ModelTest modelTest(&model);
+    // ModelTest modelTest(&model);
     const QString jobName(QStringLiteral("job1"));
     QSignalSpy rowATBISpy(&model, &QAbstractItemModel::rowsAboutToBeInserted);
     QSignalSpy rowInsertedSpy(&model, &QAbstractItemModel::rowsInserted);
-    connect(&model, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, [&](const QModelIndex &parent) {
+    connect(&model, &QAbstractItemModel::rowsAboutToBeInserted, this, [&](const QModelIndex &parent) {
         // rowsAboutToBeInserted is supposed to be emitted before the insert
         if (!parent.isValid()) {
             QCOMPARE(model.rowCount(), 0);
@@ -67,8 +66,7 @@ void JobTrackerModelTest::shouldDisplayOneJob()
             QCOMPARE(model.rowCount(parent), 0);
         }
     });
-    connect(&model, &QAbstractItemModel::rowsInserted,
-            this, [&](const QModelIndex &parent) {
+    connect(&model, &QAbstractItemModel::rowsInserted, this, [&](const QModelIndex &parent) {
         if (!parent.isValid()) {
             QCOMPARE(model.rowCount(), 1);
             QVERIFY(model.index(0, 0).isValid());

@@ -6,10 +6,10 @@
 
 #include "jobtrackersearchwidget.h"
 
+#include <QCheckBox>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QLineEdit>
-#include <QComboBox>
-#include <QCheckBox>
 
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)

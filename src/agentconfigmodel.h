@@ -34,7 +34,7 @@ public Q_SLOTS:
     void writeConfig();
 
 private:
-    QVector<QPair<QString, QVariant> > m_settings;
+    QVector<QPair<QString, QVariant>> m_settings;
     QDBusInterface *m_interface = nullptr;
 };
 

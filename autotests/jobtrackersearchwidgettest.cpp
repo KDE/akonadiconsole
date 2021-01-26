@@ -6,12 +6,12 @@
 
 #include "jobtrackersearchwidgettest.h"
 #include "jobtrackersearchwidget.h"
-#include <QTest>
+#include <QCheckBox>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QSignalSpy>
-#include <QComboBox>
-#include <QCheckBox>
+#include <QTest>
 
 JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
     : QObject(parent)

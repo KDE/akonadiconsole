@@ -9,11 +9,13 @@
 
 #include <QAbstractItemModel>
 
-#include <AkonadiCore/Monitor>
 #include <AkonadiCore/ChangeNotification>
+#include <AkonadiCore/Monitor>
 
-namespace Akonadi {
-namespace Protocol {
+namespace Akonadi
+{
+namespace Protocol
+{
 class ChangeNotification;
 }
 }
@@ -22,9 +24,7 @@ class NotificationModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    enum Role {
-        NotificationRole = Qt::UserRole
-    };
+    enum Role { NotificationRole = Qt::UserRole };
     enum Columns {
         DateColumn,
         TypeColumn,

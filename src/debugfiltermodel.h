@@ -7,11 +7,12 @@
 #ifndef DEBUGFILTERMODEL_H_
 #define DEBUGFILTERMODEL_H_
 
-#include <QSortFilterProxyModel>
 #include <QSet>
+#include <QSortFilterProxyModel>
 #include <QTimer>
 
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 

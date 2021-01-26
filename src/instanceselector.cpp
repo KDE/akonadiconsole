@@ -11,16 +11,16 @@
 
 #include "akonadiconsole_debug.h"
 #include <QIcon>
-#include <akonadi/private/instance_p.h>
 #include <akonadi/private/dbus_p.h>
+#include <akonadi/private/instance_p.h>
 
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
-#include <QStandardItemModel>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStandardItemModel>
 #include <QVBoxLayout>
 
 InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Qt::WindowFlags flags)
@@ -72,7 +72,7 @@ InstanceSelector::~InstanceSelector()
 
 void InstanceSelector::slotAccept()
 {
-    if (ui->listView->model()) {   // there was something to select
+    if (ui->listView->model()) { // there was something to select
         const QModelIndexList selection = ui->listView->selectionModel()->selectedRows();
         if (selection.size() != 1) {
             return;

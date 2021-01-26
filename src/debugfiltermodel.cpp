@@ -5,8 +5,8 @@
 */
 
 #include "debugfiltermodel.h"
-#include "debugmodel.h"
 #include "akonadiconsole_debug.h"
+#include "debugmodel.h"
 
 #include <KCheckComboBox>
 
@@ -21,8 +21,7 @@ DebugFilterModel::DebugFilterModel(QObject *parent)
 {
     mInvalidateTimer.setInterval(50);
     mInvalidateTimer.setSingleShot(true);
-    connect(&mInvalidateTimer, &QTimer::timeout,
-            this, &DebugFilterModel::invalidate);
+    connect(&mInvalidateTimer, &QTimer::timeout, this, &DebugFilterModel::invalidate);
 }
 
 DebugFilterModel::~DebugFilterModel()
@@ -35,8 +34,7 @@ void DebugFilterModel::setSenderFilter(KCheckComboBox *senderFilter)
         mSenderFilter->disconnect(this);
     }
     mSenderFilter = senderFilter;
-    connect(mSenderFilter, &KCheckComboBox::checkedItemsChanged,
-            this, [this](const QStringList &_items) {
+    connect(mSenderFilter, &KCheckComboBox::checkedItemsChanged, this, [this](const QStringList &_items) {
         Q_UNUSED(_items)
         const auto items = mSenderFilter->checkedItems(DebugModel::IdentifierRole);
         mCheckedSenders.clear();

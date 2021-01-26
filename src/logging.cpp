@@ -6,24 +6,24 @@
 
 #include "logging.h"
 #include "loggeradaptor.h"
-#include "loggingmodel.h"
 #include "loggingfiltermodel.h"
+#include "loggingmodel.h"
 
 #include <QCheckBox>
-#include <QHBoxLayout>
-#include <QTreeView>
-#include <QHeaderView>
-#include <QStandardItemModel>
-#include <QPushButton>
 #include <QDBusConnection>
 #include <QFileDialog>
-#include <QMessageBox>
+#include <QHBoxLayout>
+#include <QHeaderView>
 #include <QLabel>
+#include <QMessageBox>
+#include <QPushButton>
+#include <QStandardItemModel>
+#include <QTreeView>
 
 #include <KCheckComboBox>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(LoggingModel::Message)
@@ -40,8 +40,7 @@ Logging::Logging(QWidget *parent)
     setLayout(l);
 
     mEnabledCheckbox = new QCheckBox(QStringLiteral("Enable"));
-    connect(mEnabledCheckbox, &QCheckBox::toggled,
-            this, [this](bool toggled) {
+    connect(mEnabledCheckbox, &QCheckBox::toggled, this, [this](bool toggled) {
         Q_EMIT enabledChanged(toggled);
     });
     l->addWidget(mEnabledCheckbox);
@@ -109,7 +108,16 @@ bool Logging::enabled() const
     return mEnabledCheckbox->isChecked();
 }
 
-void Logging::message(qint64 timestamp, const QString &app, qint64 pid, int type, const QString &category, const QString &file, const QString &function, int line, int /*version*/, const QString &msg)
+void Logging::message(qint64 timestamp,
+                      const QString &app,
+                      qint64 pid,
+                      int type,
+                      const QString &category,
+                      const QString &file,
+                      const QString &function,
+                      int line,
+                      int /*version*/,
+                      const QString &msg)
 {
     mModel->addMessage(timestamp, app, pid, static_cast<QtMsgType>(type), category, file, function, line, msg);
 }
@@ -130,8 +138,7 @@ void Logging::saveToFile()
     QTextStream stream(&file);
     for (int row = 0, cnt = mModel->rowCount(); row < cnt; ++row) {
         const auto msg = mModel->data(mModel->index(row, 0), LoggingModel::MessageRole).value<LoggingModel::Message>();
-        stream << "[" << QDateTime::fromMSecsSinceEpoch(msg.timestamp, Qt::UTC).toString(Qt::ISODateWithMs) << "] "
-               << msg.app << " ";
+        stream << "[" << QDateTime::fromMSecsSinceEpoch(msg.timestamp, Qt::UTC).toString(Qt::ISODateWithMs) << "] " << msg.app << " ";
         if (!msg.category.isEmpty()) {
             stream << msg.category << " ";
         }

@@ -7,13 +7,13 @@
 
 #include "jobtrackertest.h"
 #include "jobtracker.h"
-#include <akonadi/private/instance_p.h>
 #include <QSignalSpy>
 #include <QTest>
+#include <akonadi/private/instance_p.h>
 
 static QString intPairListToString(const QVariant &var)
 {
-    const auto arg = var.value<QList<QPair<int, int> > >();
+    const auto arg = var.value<QList<QPair<int, int>>>();
     QString ret;
     for (const auto &pair : arg) {
         if (!ret.isEmpty()) {
@@ -38,7 +38,7 @@ void JobTrackerTest::initTestCase()
     // Don't interfere with a running akonadiconsole
     Akonadi::Instance::setIdentifier(QStringLiteral("jobtrackertest"));
 
-    qRegisterMetaType<QList<QPair<int, int> > >();
+    qRegisterMetaType<QList<QPair<int, int>>>();
 }
 
 void JobTrackerTest::shouldBeEmpty()

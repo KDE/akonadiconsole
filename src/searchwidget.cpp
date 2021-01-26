@@ -8,31 +8,31 @@
 
 #include <xapian.h>
 
-#include "searchwidget.h"
 #include "akonadiconsole_debug.h"
+#include "searchwidget.h"
 
-#include <AkonadiWidgets/controlgui.h>
+#include <AkonadiCore/SearchQuery>
 #include <AkonadiCore/itemfetchjob.h>
 #include <AkonadiCore/itemfetchscope.h>
 #include <AkonadiCore/itemsearchjob.h>
-#include <AkonadiCore/SearchQuery>
+#include <AkonadiWidgets/controlgui.h>
 
 #include <AkonadiSearch/Core/searchstore.h>
 #include <AkonadiSearch/Xapian/xapiansearchstore.h>
 
 #include <KComboBox>
-#include <KMessageBox>
-#include <QTextBrowser>
-#include <QPlainTextEdit>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KMessageBox>
+#include <KSharedConfig>
+#include <QPlainTextEdit>
+#include <QTextBrowser>
 
 #include <QLabel>
 #include <QListView>
 #include <QPushButton>
+#include <QSplitter>
 #include <QStandardItemModel>
 #include <QTreeView>
-#include <QSplitter>
 #include <QVBoxLayout>
 
 SearchWidget::SearchWidget(QWidget *parent)
@@ -118,7 +118,7 @@ SearchWidget::~SearchWidget()
 
 void SearchWidget::openStore(int idx)
 {
-    auto store = mStoreCombo->itemData(idx, Qt::UserRole).value<QSharedPointer<Akonadi::Search::SearchStore> >();
+    auto store = mStoreCombo->itemData(idx, Qt::UserRole).value<QSharedPointer<Akonadi::Search::SearchStore>>();
     auto xapianStore = store.objectCast<Akonadi::Search::XapianSearchStore>();
     Q_ASSERT(xapianStore);
 
@@ -140,15 +140,15 @@ void SearchWidget::openStore(int idx)
 void SearchWidget::xapianError(const Xapian::Error &e)
 {
     qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << e.get_error_string();
-    QMessageBox::critical(this, QStringLiteral("Xapian error"),
+    QMessageBox::critical(this,
+                          QStringLiteral("Xapian error"),
                           QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
 }
 
 void SearchWidget::search()
 {
     if (!mDatabase) {
-        QMessageBox::critical(this, QStringLiteral("Error"),
-                              QStringLiteral("No Xapian database is opened"));
+        QMessageBox::critical(this, QStringLiteral("Error"), QStringLiteral("No Xapian database is opened"));
         return;
     }
 
@@ -182,21 +182,19 @@ void SearchWidget::fetchItem(const QModelIndex &index)
 
         mTermModel->clear();
         mTermModel->setColumnCount(2);
-        mTermModel->setHorizontalHeaderLabels({ QStringLiteral("Term/Value"), QStringLiteral("WDF/Slot") });
+        mTermModel->setHorizontalHeaderLabels({QStringLiteral("Term/Value"), QStringLiteral("WDF/Slot")});
 
         auto termsRoot = new QStandardItem(QStringLiteral("Terms"));
         mTermModel->appendRow(termsRoot);
         for (auto it = doc.termlist_begin(), end = doc.termlist_end(); it != end; ++it) {
-            termsRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
-                                   new QStandardItem(QString::number(it.get_wdf())) });
+            termsRoot->appendRow({new QStandardItem(QString::fromStdString(*it)), new QStandardItem(QString::number(it.get_wdf()))});
         }
 
         auto valuesRoot = new QStandardItem(QStringLiteral("Values"));
         mTermModel->appendRow(valuesRoot);
         const auto end = doc.values_end(); // Xapian 1.2 has different type for _begin() and _end() iters
         for (auto it = doc.values_begin(); it != end; ++it) {
-            valuesRoot->appendRow({ new QStandardItem(QString::fromStdString(*it)),
-                                    new QStandardItem(QString::number(it.get_valueno())) });
+            valuesRoot->appendRow({new QStandardItem(QString::fromStdString(*it)), new QStandardItem(QString::number(it.get_valueno()))});
         }
     } catch (const Xapian::Error &e) {
         xapianError(e);

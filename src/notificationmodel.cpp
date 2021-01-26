@@ -11,9 +11,9 @@
 #include "akonadiconsole_debug.h"
 #include <AkonadiCore/ServerManager>
 
+#include <QMetaMethod>
 #include <akonadi/private/imapparser_p.h>
 #include <akonadi/private/protocol_p.h>
-#include <QMetaMethod>
 
 Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 
@@ -163,8 +163,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             }
         case IdsColumn:
             switch (msg.type()) {
-            case ChangeNotification::Items:
-            {
+            case ChangeNotification::Items: {
                 QStringList rv;
                 const auto items = Protocol::cmdCast<Protocol::ItemChangeNotification>(msg.notification()).items();
                 for (const auto &item : items) {
@@ -183,8 +182,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             return {};
         case SessionColumn:
             return msg.notification()->sessionId();
-        case ListenersColumn:
-        {
+        case ListenersColumn: {
             const auto listeners = msg.listeners();
             QStringList rv;
             for (const auto &l : listeners) {
@@ -241,8 +239,7 @@ void NotificationModel::setEnabled(bool enable)
         m_monitor = new Akonadi::Monitor(this);
         m_monitor->setObjectName(QStringLiteral("notificationMonitor"));
         m_monitor->setTypeMonitored(Akonadi::Monitor::Notifications);
-        connect(m_monitor, &Akonadi::Monitor::debugNotification,
-                this, &NotificationModel::slotNotify);
+        connect(m_monitor, &Akonadi::Monitor::debugNotification, this, &NotificationModel::slotNotify);
     } else if (m_monitor) {
         m_monitor->deleteLater();
         m_monitor = nullptr;

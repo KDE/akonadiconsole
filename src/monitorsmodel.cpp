@@ -30,12 +30,9 @@ void MonitorsModel::init()
 {
     mMonitor = new Akonadi::Monitor(this);
     mMonitor->setTypeMonitored(Akonadi::Monitor::Subscribers, true);
-    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberAdded,
-            this, &MonitorsModel::slotSubscriberAdded);
-    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberChanged,
-            this, &MonitorsModel::slotSubscriberChanged);
-    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberRemoved,
-            this, &MonitorsModel::slotSubscriberRemoved);
+    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberAdded, this, &MonitorsModel::slotSubscriberAdded);
+    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberChanged, this, &MonitorsModel::slotSubscriberChanged);
+    connect(mMonitor, &Akonadi::Monitor::notificationSubscriberRemoved, this, &MonitorsModel::slotSubscriberRemoved);
 }
 
 QModelIndex MonitorsModel::indexForSession(const QByteArray &session)

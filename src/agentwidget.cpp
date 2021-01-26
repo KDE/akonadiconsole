@@ -10,31 +10,31 @@
 
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
-#include <AkonadiWidgets/agenttypedialog.h>
-#include <AkonadiWidgets/agentinstancewidget.h>
-#include <AkonadiCore/agentmanager.h>
 #include <AkonadiCore/AgentFilterProxyModel>
 #include <AkonadiCore/agentinstancecreatejob.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <AkonadiCore/agentmanager.h>
 #include <AkonadiWidgets/AgentConfigurationDialog>
+#include <AkonadiWidgets/agentinstancewidget.h>
+#include <AkonadiWidgets/agenttypedialog.h>
+#include <AkonadiWidgets/controlgui.h>
 
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardGuiItem>
 #include <QIcon>
 
-#include <QPointer>
-#include <QMenu>
-#include <QPushButton>
+#include <KGuiItem>
 #include <QDBusInterface>
 #include <QDBusMessage>
 #include <QDBusReply>
-#include <QMetaMethod>
-#include <QResizeEvent>
-#include <KGuiItem>
 #include <QDialogButtonBox>
-#include <QVBoxLayout>
+#include <QMenu>
+#include <QMetaMethod>
 #include <QPlainTextEdit>
+#include <QPointer>
+#include <QPushButton>
+#include <QResizeEvent>
+#include <QVBoxLayout>
 
 class TextDialog : public QDialog
 {
@@ -120,7 +120,7 @@ AgentWidget::AgentWidget(QWidget *parent)
 
     ui.abortButton->setIcon(QIcon::fromTheme(QStringLiteral("dialog-cancel")));
     connect(ui.abortButton, &QPushButton::clicked, this, &AgentWidget::abortAgent);
-    ui.restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));     //FIXME: Is using system-reboot icon here a good idea?
+    ui.restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot"))); // FIXME: Is using system-reboot icon here a good idea?
     connect(ui.restartButton, &QPushButton::clicked, this, &AgentWidget::restartAgent);
 
     ui.instanceWidget->agentFilterProxyModel()->setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -194,15 +194,14 @@ void AgentWidget::removeAgent()
 {
     const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty()) {
-        if (KMessageBox::questionYesNo(this,
-                                       i18np("Do you really want to delete the selected agent instance?",
-                                             "Do you really want to delete these %1 agent instances?",
-                                             list.size()),
-                                       list.size() == 1 ? QStringLiteral("Agent Deletion") : QStringLiteral("Multiple Agent Deletion"),
-                                       KStandardGuiItem::del(),
-                                       KStandardGuiItem::cancel(),
-                                       QString(),
-                                       KMessageBox::Dangerous)
+        if (KMessageBox::questionYesNo(
+                this,
+                i18np("Do you really want to delete the selected agent instance?", "Do you really want to delete these %1 agent instances?", list.size()),
+                list.size() == 1 ? QStringLiteral("Agent Deletion") : QStringLiteral("Multiple Agent Deletion"),
+                KStandardGuiItem::del(),
+                KStandardGuiItem::cancel(),
+                QString(),
+                KMessageBox::Dangerous)
             == KMessageBox::Yes) {
             for (const AgentInstance &agent : list) {
                 AgentManager::self()->removeInstance(agent);
@@ -257,8 +256,7 @@ void AgentWidget::showTaskList()
         return;
     }
 
-    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(agent.identifier()),
-                         QStringLiteral("/Debug"), QString());
+    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(agent.identifier()), QStringLiteral("/Debug"), QString());
 
     QDBusReply<QString> reply = iface.call(QStringLiteral("dumpToString"));
     QString txt;
@@ -282,8 +280,7 @@ void AgentWidget::showChangeNotifications()
         return;
     }
 
-    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(agent.identifier()),
-                         QStringLiteral("/Debug"), QString());
+    QDBusInterface iface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(agent.identifier()), QStringLiteral("/Debug"), QString());
 
     QDBusReply<QString> reply = iface.call(QStringLiteral("dumpNotificationListToString"));
     QString txt;
@@ -352,15 +349,13 @@ void AgentWidget::cloneAgent(KJob *job)
     Q_ASSERT(cloneTarget.isValid());
     Q_ASSERT(mCloneSource.isValid());
 
-    QDBusInterface sourceIface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(mCloneSource.identifier()),
-                               QStringLiteral("/Settings"));
+    QDBusInterface sourceIface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(mCloneSource.identifier()), QStringLiteral("/Settings"));
     if (!sourceIface.isValid()) {
         qCritical() << "Unable to obtain KConfigXT D-Bus interface of source agent" << mCloneSource.identifier();
         return;
     }
 
-    QDBusInterface targetIface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(cloneTarget.identifier()),
-                               QStringLiteral("/Settings"));
+    QDBusInterface targetIface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(cloneTarget.identifier()), QStringLiteral("/Settings"));
     if (!targetIface.isValid()) {
         qCritical() << "Unable to obtain KConfigXT D-Bus interface of target agent" << cloneTarget.identifier();
         return;
@@ -372,17 +367,17 @@ void AgentWidget::cloneAgent(KJob *job)
     // corresponding setter in the target interface
     for (int i = 0; i < sourceIface.metaObject()->methodCount(); ++i) {
         const QMetaMethod method = sourceIface.metaObject()->method(i);
-        if (QByteArray(method.typeName()).isEmpty()) {   // returns void
+        if (QByteArray(method.typeName()).isEmpty()) { // returns void
             continue;
         }
         const QByteArray signature(method.methodSignature());
         if (signature.isEmpty()) {
             continue;
         }
-        if (signature.startsWith("set") || !signature.contains("()")) {     // setter or takes parameters // krazy:exclude=strings
+        if (signature.startsWith("set") || !signature.contains("()")) { // setter or takes parameters // krazy:exclude=strings
             continue;
         }
-        if (signature.startsWith("Introspect")) {   // D-Bus stuff // krazy:exclude=strings
+        if (signature.startsWith("Introspect")) { // D-Bus stuff // krazy:exclude=strings
             continue;
         }
         const QString methodName = QLatin1String(signature.left(signature.indexOf('(')));
@@ -413,25 +408,19 @@ void AgentWidget::currentChanged()
         QString agentStatus;
         switch (instance.status()) {
         case AgentInstance::Idle:
-            agentStatus
-                = i18nc("agent is in an idle state", "Idle");
+            agentStatus = i18nc("agent is in an idle state", "Idle");
             break;
         case AgentInstance::Running:
-            agentStatus
-                = i18nc("agent is running", "Running (%1%)", instance.progress());
+            agentStatus = i18nc("agent is running", "Running (%1%)", instance.progress());
             break;
         case AgentInstance::Broken:
-            agentStatus
-                = i18nc("agent is broken somehow", "Broken");
+            agentStatus = i18nc("agent is broken somehow", "Broken");
             break;
         case AgentInstance::NotConfigured:
-            agentStatus
-                = i18nc("agent is not yet configured", "Not Configured");
+            agentStatus = i18nc("agent is not yet configured", "Not Configured");
             break;
         }
-        ui.statusLabel->setText(
-            i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"",
-                  "%1, %2", onlineStatus, agentStatus));
+        ui.statusLabel->setText(i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"", "%1, %2", onlineStatus, agentStatus));
         ui.statusMessageLabel->setText(instance.statusMessage());
         ui.capabilitiesLabel->setText(instance.type().capabilities().join(QLatin1String(", ")));
         ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QLatin1String(", ")));
@@ -452,7 +441,10 @@ void AgentWidget::showContextMenu(const QPoint &pos)
     menu.addSeparator();
     menu.addMenu(mSyncMenu);
     menu.addAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), QStringLiteral("Abort Activity"), this, &AgentWidget::abortAgent);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("system-reboot")), QStringLiteral("Restart Agent"), this, &AgentWidget::restartAgent);    //FIXME: Is using system-reboot icon here a good idea?
+    menu.addAction(QIcon::fromTheme(QStringLiteral("system-reboot")),
+                   QStringLiteral("Restart Agent"),
+                   this,
+                   &AgentWidget::restartAgent); // FIXME: Is using system-reboot icon here a good idea?
     menu.addAction(QIcon::fromTheme(QStringLiteral("network-disconnect")), QStringLiteral("Toggle Online/Offline"), this, &AgentWidget::toggleOnline);
     menu.addAction(QStringLiteral("Show task list"), this, &AgentWidget::showTaskList);
     menu.addAction(QStringLiteral("Show change-notification log"), this, &AgentWidget::showChangeNotifications);

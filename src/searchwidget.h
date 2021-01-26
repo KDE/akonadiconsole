@@ -22,7 +22,8 @@ class QTreeView;
 class QSplitter;
 class QPlainTextEdit;
 
-namespace Xapian {
+namespace Xapian
+{
 class Database;
 class Error;
 }

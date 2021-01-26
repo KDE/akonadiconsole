@@ -8,14 +8,15 @@
 #ifndef QUERYDEBUGGER_H
 #define QUERYDEBUGGER_H
 
-#include <QWidget>
 #include <QMap>
-#include <QVariant>
 #include <QScopedPointer>
+#include <QVariant>
+#include <QWidget>
 
 class QDBusArgument;
 
-namespace Ui {
+namespace Ui
+{
 class QueryDebugger;
 }
 
@@ -47,7 +48,15 @@ public:
 
 private Q_SLOTS:
     void debuggerToggled(bool on);
-    void addQuery(double sequence, qint64 connectionId, qint64 timestamp, uint duration, const QString &query, const QMap<QString, QVariant> &values, int resultsCount, const QList<QList<QVariant> > &result, const QString &error);
+    void addQuery(double sequence,
+                  qint64 connectionId,
+                  qint64 timestamp,
+                  uint duration,
+                  const QString &query,
+                  const QMap<QString, QVariant> &values,
+                  int resultsCount,
+                  const QList<QList<QVariant>> &result,
+                  const QString &error);
     void queryTreeDoubleClicked(const QModelIndex &index);
     void clear();
     void saveTreeToFile();

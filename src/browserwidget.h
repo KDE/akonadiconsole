@@ -7,8 +7,8 @@
 #ifndef AKONADICONSOLE_BROWSERWIDGET_H
 #define AKONADICONSOLE_BROWSERWIDGET_H
 
-#include <ui_browserwidget_itemview.h>
 #include <ui_browserwidget_contentview.h>
+#include <ui_browserwidget_itemview.h>
 
 #include <AkonadiCore/collection.h>
 #include <AkonadiCore/item.h>
@@ -27,7 +27,8 @@ class AkonadiBrowserModel;
 
 template<typename T> class KViewStateMaintainer;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ChangeRecorder;
 class EntityTreeView;
 class Job;
@@ -39,11 +40,13 @@ class ContactViewer;
 class ContactGroupViewer;
 }
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class IncidenceViewer;
 }
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class Viewer;
 }
 
@@ -82,6 +85,7 @@ private Q_SLOTS:
     void removeTagRequested();
     void createTag();
     void modifyTag();
+
 private:
     Akonadi::Collection currentCollection() const;
 

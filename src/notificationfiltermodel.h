@@ -11,10 +11,11 @@
 
 #include <AkonadiCore/ChangeNotification>
 
-#include <QTimer>
 #include <QSet>
+#include <QTimer>
 
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 

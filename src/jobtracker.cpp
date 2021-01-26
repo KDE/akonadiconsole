@@ -8,11 +8,11 @@
  */
 
 #include "jobtracker.h"
-#include "jobtrackeradaptor.h"
-#include <akonadi/private/instance_p.h>
 #include "akonadiconsole_debug.h"
+#include "jobtrackeradaptor.h"
 #include <QString>
 #include <QStringList>
+#include <akonadi/private/instance_p.h>
 
 #include <cassert>
 
@@ -60,12 +60,13 @@ public:
 
     QStringList sessions;
     QHash<QString, int> nameToId;
-    QHash<int, QVector<int> > childJobs;
+    QHash<int, QVector<int>> childJobs;
     QHash<int, JobInfo> infoList;
     int lastId;
     QTimer timer;
     bool disabled;
-    QList< QPair<int, int> > unpublishedUpdates;
+    QList<QPair<int, int>> unpublishedUpdates;
+
 private:
     JobTracker *const q;
 };
@@ -77,8 +78,7 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     new JobTrackerAdaptor(this);
     const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
-    QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
-                                                 this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name), this, QDBusConnection::ExportAdaptors);
 }
 
 JobTracker::~JobTracker()
@@ -95,7 +95,8 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     int parentId = parent.isEmpty() ? -1 /*for now*/ : idForJob(parent);
 
     if (!parent.isEmpty() && parentId == -1) {
-        qCWarning(AKONADICONSOLE_LOG) << "JobTracker: Job" << jobName << "arrived before its parent" << parent << " jobType=" << jobType << "! Fix the library!";
+        qCWarning(AKONADICONSOLE_LOG) << "JobTracker: Job" << jobName << "arrived before its parent" << parent << " jobType=" << jobType
+                                      << "! Fix the library!";
         jobCreated(session, parent, QString(), QStringLiteral("dummy job type"), QString());
         parentId = idForJob(parent);
         assert(parentId != -1);
@@ -116,7 +117,8 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     const int existingId = idForJob(jobName);
     if (existingId != -1) {
         if (d->infoList.value(existingId).state == JobInfo::Running) {
-            qCDebug(AKONADICONSOLE_LOG) << "Job was already known and still running:" << jobName << "from" << d->infoList.value(existingId).timestamp.secsTo(QDateTime::currentDateTime()) << "s ago";
+            qCDebug(AKONADICONSOLE_LOG) << "Job was already known and still running:" << jobName << "from"
+                                        << d->infoList.value(existingId).timestamp.secsTo(QDateTime::currentDateTime()) << "s ago";
         }
         // otherwise it just means the pointer got reused... insert duplicate
     }
@@ -244,7 +246,7 @@ int JobTracker::rowForJob(int id, int parentId) const
 {
     const QVector<int> children = childJobs(parentId);
     // Simple version:
-    //return children.indexOf(id);
+    // return children.indexOf(id);
     // But we can do faster since the vector is sorted
     return std::lower_bound(children.constBegin(), children.constEnd(), id) - children.constBegin();
 }

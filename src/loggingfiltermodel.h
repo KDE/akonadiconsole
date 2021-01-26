@@ -7,11 +7,12 @@
 #ifndef LOGGINGFILTERMODEL_H_
 #define LOGGINGFILTERMODEL_H_
 
-#include <QSortFilterProxyModel>
 #include <QSet>
+#include <QSortFilterProxyModel>
 #include <QTimer>
 
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 

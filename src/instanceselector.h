@@ -9,12 +9,13 @@
 #ifndef INSTANCESELECTOR_H
 #define INSTANCESELECTOR_H
 
-#include "mainwindow.h"
 #include "libakonadiconsole_export.h"
+#include "mainwindow.h"
 
 #include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class InstanceSelector;
 }
 

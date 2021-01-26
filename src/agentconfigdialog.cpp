@@ -6,9 +6,9 @@
 
 #include "agentconfigdialog.h"
 #include "agentconfigmodel.h"
+#include <KGuiItem>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <KGuiItem>
 #include <QVBoxLayout>
 
 AgentConfigDialog::AgentConfigDialog(QWidget *parent)

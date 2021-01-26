@@ -9,19 +9,19 @@
 #include "monitorsmodel.h"
 #include "utils.h"
 
+#include <QSortFilterProxyModel>
+#include <QStandardItemModel>
 #include <QVBoxLayout>
 #include <qheaderview.h>
-#include <QStandardItemModel>
-#include <QSortFilterProxyModel>
 
-#include <AkonadiCore/NotificationSubscriber>
-#include <AkonadiWidgets/controlgui.h>
-#include <AkonadiCore/ItemFetchScope>
 #include <AkonadiCore/CollectionFetchScope>
+#include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/NotificationSubscriber>
 #include <AkonadiCore/TagFetchScope>
+#include <AkonadiWidgets/controlgui.h>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 
@@ -41,8 +41,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent)
     mTreeView->setModel(mProxyModel);
     mTreeView->setAlternatingRowColors(true);
     mTreeView->setRootIsDecorated(true);
-    connect(mTreeView->selectionModel(), &QItemSelectionModel::currentChanged,
-            this, &MonitorsWidget::onSubscriberSelected);
+    connect(mTreeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &MonitorsWidget::onSubscriberSelected);
     layout->addWidget(mTreeView);
 
     mSubscriberView = new QTreeView(this);
@@ -68,8 +67,7 @@ MonitorsWidget::~MonitorsWidget()
 }
 
 // Specialization of function template from utils.h
-template<>
-QString toString(const QSet<Akonadi::Monitor::Type> &set)
+template<> QString toString(const QSet<Akonadi::Monitor::Type> &set)
 {
     QStringList rv;
     for (const auto &v : set) {
@@ -102,7 +100,7 @@ void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent, const A
     appendRow(parent, QStringLiteral("List Filter"), toString(cfs.listFilter()));
     appendRow(parent, QStringLiteral("Include Statistics"), toString(cfs.includeStatistics()));
     appendRow(parent, QStringLiteral("Resource"), cfs.resource());
-    appendRow(parent, QStringLiteral("Content MimeTypes"), toString(static_cast<QList<QString> >(cfs.contentMimeTypes())));
+    appendRow(parent, QStringLiteral("Content MimeTypes"), toString(static_cast<QList<QString>>(cfs.contentMimeTypes())));
     appendRow(parent, QStringLiteral("Ancestor Retrieval"), toString(cfs.ancestorRetrieval()));
 
     const auto ancestorFs = cfs.ancestorFetchScope();
@@ -128,7 +126,7 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex &index)
     auto model = qobject_cast<QStandardItemModel *>(mSubscriberView->model());
     const auto state = mSubscriberView->header()->saveState();
     model->clear();
-    model->setHorizontalHeaderLabels({ QStringLiteral("Properties"), QStringLiteral("Values") });
+    model->setHorizontalHeaderLabels({QStringLiteral("Properties"), QStringLiteral("Values")});
     mSubscriberView->header()->restoreState(state);
 
     const auto subscriber = index.data(MonitorsModel::SubscriberRole).value<Akonadi::NotificationSubscriber>();
@@ -155,8 +153,7 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex &index)
     appendRow(ifsItem, QStringLiteral("Attributes"), toString(ifs.attributes()));
     appendRow(ifsItem, QStringLiteral("All Attributes"), toString(ifs.allAttributes()));
     appendRow(ifsItem, QStringLiteral("Cache only"), toString(ifs.cacheOnly()));
-    appendRow(ifsItem, QStringLiteral("Check for Cached Payloads Parts Only"),
-              toString(ifs.checkForCachedPayloadPartsOnly()));
+    appendRow(ifsItem, QStringLiteral("Check for Cached Payloads Parts Only"), toString(ifs.checkForCachedPayloadPartsOnly()));
     appendRow(ifsItem, QStringLiteral("Ancestor Retrieval"), toString(ifs.ancestorRetrieval()));
     appendRow(ifsItem, QStringLiteral("Fetch mtime"), toString(ifs.fetchModificationTime()));
     appendRow(ifsItem, QStringLiteral("Fetch GID"), toString(ifs.fetchGid()));

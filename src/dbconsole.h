@@ -7,8 +7,8 @@
 #ifndef AKONADICONSOLE_DBCONSOLE_H
 #define AKONADICONSOLE_DBCONSOLE_H
 
-#include <QWidget>
 #include "ui_dbconsoletab.h"
+#include <QWidget>
 
 class QSqlQueryModel;
 class QTabWidget;
