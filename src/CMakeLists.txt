@@ -144,9 +144,8 @@ set_target_properties(libakonadiconsole
 
 set(akonadiconsole_SRCS
     main.cpp
+    akonadiconsole.qrc
     )
-
-qt5_add_resources(akonadiconsole_SRCS akonadiconsole.qrc)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-akonadiconsole.png")
 ecm_add_app_icon(akonadiconsole_SRCS ICONS ${ICONS_SRCS})
