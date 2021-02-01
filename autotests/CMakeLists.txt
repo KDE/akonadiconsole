@@ -7,9 +7,9 @@ macro(add_unittest _source _additionalsource)
     ecm_mark_as_test(akonadiconsole-${_name})
     set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=1")
     target_link_libraries( ${_name}
-        Qt::Test
+        Qt5::Test
         KF5::I18n
-        Qt::Widgets
+        Qt5::Widgets
         KF5::ConfigCore
         KF5::WidgetsAddons
         KF5::ItemViews
