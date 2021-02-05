@@ -30,10 +30,10 @@ MonitorsWidget::MonitorsWidget(QWidget *parent)
 {
     mModel = new MonitorsModel(this);
 
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
 
     mTreeView = new QTreeView(this);
-    auto *mProxyModel = new QSortFilterProxyModel(this);
+    auto mProxyModel = new QSortFilterProxyModel(this);
     mProxyModel->setDynamicSortFilter(true);
     mProxyModel->sort(0);
     mProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);

@@ -48,11 +48,11 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     m_filterModel = new NotificationFilterModel(this);
     m_filterModel->setSourceModel(m_model);
 
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
     auto hLayout = new QHBoxLayout;
     layout->addLayout(hLayout);
 
-    auto *enableCB = new QCheckBox(this);
+    auto enableCB = new QCheckBox(this);
     enableCB->setText(QStringLiteral("Enable notification monitor"));
     enableCB->setChecked(m_model->isEnabled());
     connect(enableCB, &QCheckBox::toggled, m_model, &NotificationModel::setEnabled);
@@ -84,7 +84,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     m_ntfView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_splitter->addWidget(m_ntfView);
 
-    auto *h = new QHBoxLayout;
+    auto h = new QHBoxLayout;
     layout->addLayout(h);
 
     auto btn = new QPushButton(QStringLiteral("Save to File..."));

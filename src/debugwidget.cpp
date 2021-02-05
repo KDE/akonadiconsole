@@ -28,7 +28,7 @@ using org::freedesktop::Akonadi::DebugInterface;
 DebugWidget::DebugWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
@@ -40,7 +40,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     connect(cb, &QCheckBox::toggled, this, &DebugWidget::enableDebugger);
     layout->addWidget(cb);
 
-    auto *splitter = new QSplitter(Qt::Vertical, this);
+    auto splitter = new QSplitter(Qt::Vertical, this);
     splitter->setObjectName(QStringLiteral("debugSplitter"));
     layout->addWidget(splitter);
 
@@ -57,7 +57,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::warningEmitted, this, &DebugWidget::warningEmitted);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::errorEmitted, this, &DebugWidget::errorEmitted);
 
-    auto *buttonLayout = new QHBoxLayout;
+    auto buttonLayout = new QHBoxLayout;
     layout->addLayout(buttonLayout);
 
     QPushButton *clearGeneralButton = new QPushButton(QStringLiteral("Clear Information View"), this);

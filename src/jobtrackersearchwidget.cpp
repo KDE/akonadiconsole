@@ -14,7 +14,7 @@
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QHBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 

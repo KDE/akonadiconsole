@@ -40,9 +40,9 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
 {
     d->model = new JobTrackerModel(name, this);
 
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
-    auto *enableCB = new QCheckBox(this);
+    auto enableCB = new QCheckBox(this);
     enableCB->setText(checkboxText);
     connect(enableCB, &QAbstractButton::toggled, d->model, &JobTrackerModel::setEnabled);
     layout->addWidget(enableCB);
@@ -67,7 +67,7 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     layout->addWidget(d->tv);
     d->model->setEnabled(false); // since it can be slow, default to off
 
-    auto *layout2 = new QHBoxLayout;
+    auto layout2 = new QHBoxLayout;
     QPushButton *button = new QPushButton(QStringLiteral("Save to file..."), this);
     connect(button, &QAbstractButton::clicked, this, &JobTrackerWidget::slotSaveToFile);
     layout2->addWidget(button);

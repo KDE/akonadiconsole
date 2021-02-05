@@ -28,12 +28,12 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
     , ui(new Ui::InstanceSelector)
     , m_remoteHost(remoteHost)
 {
-    auto *mainWidget = new QWidget(this);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainWidget = new QWidget(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     ui->setupUi(mainWidget);
 
-    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -52,9 +52,9 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
         }
         slotAccept();
     } else {
-        auto *model = new QStandardItemModel(this);
+        auto model = new QStandardItemModel(this);
         for (const QString &inst : insts) {
-            auto *item = new QStandardItem;
+            auto item = new QStandardItem;
             item->setText(inst.isEmpty() ? QStringLiteral("<global>") : inst);
             item->setData(inst, Qt::UserRole);
             model->appendRow(item);
@@ -83,7 +83,7 @@ void InstanceSelector::slotAccept()
 
     qputenv("AKONADI_INSTANCE", m_instance.toUtf8());
     Akonadi::Instance::setIdentifier(m_instance);
-    auto *mWindow = new MainWindow;
+    auto mWindow = new MainWindow;
     if (!m_remoteHost.isEmpty()) {
         mWindow->setWindowTitle(QStringLiteral("Remote Akonadi Console (%1)").arg(m_remoteHost));
     } else if (!m_instance.isEmpty()) {

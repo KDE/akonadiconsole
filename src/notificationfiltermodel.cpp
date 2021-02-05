@@ -71,7 +71,7 @@ void NotificationFilterModel::slotRowsInserted(const QModelIndex &source_parent,
         const QString text = source_idx.data().toString();
         if (!mTypes.contains(text)) {
             mTypes.insert(text);
-            auto *comboModel = qobject_cast<QStandardItemModel *>(mTypeFilter->model());
+            auto comboModel = qobject_cast<QStandardItemModel *>(mTypeFilter->model());
             Q_ASSERT(comboModel);
             auto item = new QStandardItem(text);
             const auto notification = sourceModel()->data(source_idx, NotificationModel::NotificationRole).value<Akonadi::ChangeNotification>();

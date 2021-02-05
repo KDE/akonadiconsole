@@ -38,9 +38,9 @@
 MainWidget::MainWidget(KXmlGuiWindow *parent)
     : QWidget(parent)
 {
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
-    auto *tabWidget = new QTabWidget(this);
+    auto tabWidget = new QTabWidget(this);
     tabWidget->setObjectName(QStringLiteral("mainTab"));
     layout->addWidget(tabWidget);
 

@@ -45,16 +45,16 @@ bool TagPropertiesDialog::changed() const
 
 void TagPropertiesDialog::setupUi()
 {
-    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &TagPropertiesDialog::slotAccept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TagPropertiesDialog::reject);
 
-    auto *widget = new QWidget(this);
+    auto widget = new QWidget(this);
     ui.setupUi(widget);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
 

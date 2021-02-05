@@ -40,9 +40,9 @@ SearchWidget::SearchWidget(QWidget *parent)
 {
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
-    auto *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
     hbox->addWidget(new QLabel(QStringLiteral("Search store:")), 0, {});
     mStoreCombo = new KComboBox;
     mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
@@ -55,7 +55,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mVSplitter = new QSplitter(Qt::Vertical);
     mVSplitter->setObjectName(QStringLiteral("SearchVSplitter"));
     auto w = new QWidget;
-    auto *vbox = new QVBoxLayout(w);
+    auto vbox = new QVBoxLayout(w);
     vbox->addWidget(new QLabel(QStringLiteral("Search query:")));
     mQueryWidget = new QPlainTextEdit;
     vbox->addWidget(mQueryWidget);
@@ -215,7 +215,7 @@ void SearchWidget::itemFetched(KJob *job)
         return;
     }
 
-    auto *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
+    auto fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
     if (!fetchJob->items().isEmpty()) {
         const Akonadi::Item item = fetchJob->items().first();
         mItemView->setPlainText(QString::fromUtf8(item.payloadData()));
