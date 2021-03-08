@@ -40,6 +40,7 @@ int main(int argc, char **argv)
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     aboutData.addAuthor(QStringLiteral("Tobias König"), QStringLiteral("Author"), QStringLiteral("tokoe@kde.org"));
     aboutData.addAuthor(QStringLiteral("Volker Krause"), QStringLiteral("Author"), QStringLiteral("vkrause@kde.org"));
+    aboutData.setProductName(QByteArrayLiteral("Akonadi/akonadiconsole"));
     KAboutData::setApplicationData(aboutData);
 
     KCrash::initialize();
