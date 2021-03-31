@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_NOTIFICATIONMONITOR_H
-#define AKONADICONSOLE_NOTIFICATIONMONITOR_H
+#pragma once
 
 #include <QWidget>
 #include <akonadi/private/protocol_p.h>
@@ -58,4 +57,3 @@ private:
     NotificationFilterModel *m_filterModel = nullptr;
 };
 
-#endif

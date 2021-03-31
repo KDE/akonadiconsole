@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_COLLECTIONINTERNALSPAGE_H
-#define AKONADICONSOLE_COLLECTIONINTERNALSPAGE_H
+#pragma once
 
 #include "ui_collectioninternalspage.h"
 
@@ -24,4 +23,3 @@ private:
     Ui::CollectionInternalsPage ui;
 };
 
-#endif

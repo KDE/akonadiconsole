@@ -6,8 +6,7 @@
  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef AKONADICONSOLE_JOBTRACKERMODEL_H
-#define AKONADICONSOLE_JOBTRACKERMODEL_H
+#pragma once
 
 #include "libakonadiconsole_export.h"
 #include <QAbstractItemModel>
@@ -60,4 +59,3 @@ private:
     Private *const d;
 };
 
-#endif /* JOBTRACKERMODEL_H_ */

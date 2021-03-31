@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DEBUGFILTERMODEL_H_
-#define DEBUGFILTERMODEL_H_
+#pragma once
 
 #include <QSet>
 #include <QSortFilterProxyModel>
@@ -34,4 +33,3 @@ private:
     QTimer mInvalidateTimer;
 };
 
-#endif

@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_CONNECTIONPAGE_H
-#define AKONADICONSOLE_CONNECTIONPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -52,4 +51,3 @@ private:
     bool mShowAllConnections;
 };
 
-#endif

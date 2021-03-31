@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef QUERYDEBUGGER_H
-#define QUERYDEBUGGER_H
+#pragma once
 
 #include <QMap>
 #include <QScopedPointer>
@@ -71,4 +70,3 @@ private:
     QueryTreeModel *mQueryTree = nullptr;
 };
 
-#endif // QUERYDEBUGGER_H

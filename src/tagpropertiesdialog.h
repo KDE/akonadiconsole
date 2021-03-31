@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef TAGPROPERTIESDIALOG_H
-#define TAGPROPERTIESDIALOG_H
+#pragma once
 
 #include <AkonadiCore/tag.h>
 #include <QDialog>
@@ -55,4 +54,3 @@ private:
     QSet<QString> mRemovedRIDs;
 };
 
-#endif // TAGPROPERTIESDIALOG_H

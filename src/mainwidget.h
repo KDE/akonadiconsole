@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_MAINWIDGET_H
-#define AKONADICONSOLE_MAINWIDGET_H
+#pragma once
 
 #include "browserwidget.h"
 
@@ -32,4 +31,3 @@ private:
     BrowserWidget *mBrowser = nullptr;
 };
 
-#endif

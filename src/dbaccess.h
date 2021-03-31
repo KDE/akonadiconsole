@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_DBACCESS_H
-#define AKONADICONSOLE_DBACCESS_H
+#pragma once
 
 class QSqlDatabase;
 
@@ -14,4 +13,3 @@ namespace DbAccess
 QSqlDatabase database();
 }
 
-#endif

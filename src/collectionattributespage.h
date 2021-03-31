@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADI_COLLECTIONATTRIBUTESPAGE_H
-#define AKONADI_COLLECTIONATTRIBUTESPAGE_H
+#pragma once
 
 #include "ui_collectionattributespage.h"
 
@@ -35,4 +34,3 @@ private:
     QSet<QString> mChanged;
 };
 
-#endif

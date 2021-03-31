@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_SEARCHWIDGET_H
-#define AKONADICONSOLE_SEARCHWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -58,4 +57,3 @@ private:
     Xapian::Database *mDatabase = nullptr;
 };
 
-#endif

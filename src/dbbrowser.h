@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_DBBROWSER_H
-#define AKONADICONSOLE_DBBROWSER_H
+#pragma once
 
 #include "ui_dbbrowser.h"
 
@@ -26,4 +25,3 @@ private:
     QSqlTableModel *mTableModel = nullptr;
 };
 
-#endif

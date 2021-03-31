@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADIBROWSERMODEL_H
-#define AKONADIBROWSERMODEL_H
+#pragma once
 
 #include <AkonadiCore/changerecorder.h>
 #include <AkonadiCore/entitytreemodel.h>
@@ -62,4 +61,3 @@ private:
     AkonadiBrowserModel *mBrowserModel;
 };
 
-#endif

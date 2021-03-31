@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_AGENTWIDGET_H
-#define AKONADICONSOLE_AGENTWIDGET_H
+#pragma once
 
 #include "ui_agentwidget.h"
 
@@ -62,4 +61,3 @@ private:
     Akonadi::AgentInstance mCloneSource;
 };
 
-#endif

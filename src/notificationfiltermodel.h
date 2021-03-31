@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#ifndef NOTIFICATIONFILTERMODEL_H
-#define NOTIFICATIONFILTERMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -47,4 +46,3 @@ private:
     QTimer mInvalidateTimer;
 };
 
-#endif // NOTIFICATIONFILTERMODEL_H

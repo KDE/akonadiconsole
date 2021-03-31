@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_DBCONSOLE_H
-#define AKONADICONSOLE_DBCONSOLE_H
+#pragma once
 
 #include "ui_dbconsoletab.h"
 #include <QWidget>
@@ -52,4 +51,3 @@ private:
     int mIndex;
 };
 
-#endif

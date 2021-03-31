@@ -4,8 +4,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef JOBTRACKERTEST_H
-#define JOBTRACKERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -25,4 +24,3 @@ private Q_SLOTS:
     void shouldHandleJobEnd();
 };
 
-#endif // JOBTRACKERTEST_H

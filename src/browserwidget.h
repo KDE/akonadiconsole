@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_BROWSERWIDGET_H
-#define AKONADICONSOLE_BROWSERWIDGET_H
+#pragma once
 
 #include <ui_browserwidget_contentview.h>
 #include <ui_browserwidget_itemview.h>
@@ -110,4 +109,3 @@ private:
     MessageViewer::Viewer *mMailView = nullptr;
 };
 
-#endif

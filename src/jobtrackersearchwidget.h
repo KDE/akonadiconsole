@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef JOBTRACKERSEARCHWIDGET_H
-#define JOBTRACKERSEARCHWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -35,4 +34,3 @@ private:
     QCheckBox *mSelectOnlyError = nullptr;
 };
 
-#endif // JOBTRACKERSEARCHWIDGET_H

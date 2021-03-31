@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_AGENTCONFIGMODEL_H
-#define AKONADICONSOLE_AGENTCONFIGMODEL_H
+#pragma once
 
 #include <AkonadiCore/AgentInstance>
 
@@ -38,4 +37,3 @@ private:
     QDBusInterface *m_interface = nullptr;
 };
 
-#endif

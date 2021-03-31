@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_UTILS_H_
-#define AKONADICONSOLE_UTILS_H_
+#pragma once
 
 #include <QDateTime>
 #include <QStandardItem>
@@ -74,4 +73,3 @@ inline void appendRow(QStandardItem *parent, const QString &name, const QString 
     parent->appendRow({new QStandardItem(name), item});
 }
 
-#endif

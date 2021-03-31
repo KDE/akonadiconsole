@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef MONITORSMODEL_H
-#define MONITORSMODEL_H
+#pragma once
 
 #include "libakonadiconsole_export.h"
 #include <AkonadiCore/NotificationSubscriber>
@@ -51,4 +50,3 @@ private:
     Akonadi::Monitor *mMonitor;
 };
 
-#endif // MONITORSMODEL_H

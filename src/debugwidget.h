@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_DEBUGWIDGET_H
-#define AKONADICONSOLE_DEBUGWIDGET_H
+#pragma once
 
 #include "debuginterface.h"
 
@@ -41,4 +40,3 @@ private:
     org::freedesktop::Akonadi::DebugInterface *mDebugInterface = nullptr;
 };
 
-#endif

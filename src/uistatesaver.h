@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef UISTATESAVER_H
-#define UISTATESAVER_H
+#pragma once
 
 class QWidget;
 class KConfigGroup;
@@ -48,4 +47,3 @@ void restoreState(QWidget *widget, const KConfigGroup &config);
 }
 }
 
-#endif

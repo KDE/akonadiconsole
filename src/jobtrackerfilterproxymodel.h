@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef JOBTRACKERFILTERPROXYMODEL_H
-#define JOBTRACKERFILTERPROXYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -28,4 +27,3 @@ private:
     bool mShowOnlyFailed = false;
 };
 
-#endif // JOBTRACKERFILTERPROXYMODEL_H

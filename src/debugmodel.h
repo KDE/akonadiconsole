@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_DEBUGMODEL_H_
-#define AKONADICONSOLE_DEBUGMODEL_H_
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QMap>
@@ -61,4 +60,3 @@ private:
     QMap<QString, QString> mSenderCache;
 };
 
-#endif

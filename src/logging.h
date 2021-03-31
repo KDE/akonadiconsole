@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_LOGGING_H_
-#define AKONADICONSOLE_LOGGING_H_
+#pragma once
 
 #include <QWidget>
 
@@ -55,4 +54,3 @@ private:
     LoggingModel *mModel = nullptr;
 };
 
-#endif

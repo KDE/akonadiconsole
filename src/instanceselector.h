@@ -6,8 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSTANCESELECTOR_H
-#define INSTANCESELECTOR_H
+#pragma once
 
 #include "libakonadiconsole_export.h"
 #include "mainwindow.h"
@@ -43,4 +42,3 @@ private:
     MainWindow *mWindow = nullptr;
 };
 
-#endif // INSTANCESELECTOR_H

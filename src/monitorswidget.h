@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef MONITORSWIDGET_H
-#define MONITORSWIDGET_H
+#pragma once
 
 #include <QTreeView>
 #include <QWidget>
@@ -40,4 +39,3 @@ private:
     MonitorsModel *mModel = nullptr;
 };
 
-#endif // MONITORSWIDGET_H

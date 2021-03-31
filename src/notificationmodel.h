@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AKONADICONSOLE_NOTIFICATIONMODEL_H
-#define AKONADICONSOLE_NOTIFICATIONMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 
@@ -66,4 +65,3 @@ private:
     Akonadi::Monitor *m_monitor = nullptr;
 };
 
-#endif
