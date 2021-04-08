@@ -112,7 +112,7 @@ target_link_libraries(libakonadiconsole
     KF5::Mime
     KF5::Contacts
     KF5::CalendarCore
-    Qt5::Sql
+    Qt::Sql
     KF5::Completion
     KF5::ItemViews
     KF5::TextWidgets
