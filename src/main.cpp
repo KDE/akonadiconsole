@@ -38,7 +38,7 @@ int main(int argc, char **argv)
                          QStringLiteral(KDEPIM_VERSION),
                          QStringLiteral("The Management and Debugging Console for Akonadi"),
                          KAboutLicense::GPL,
-                         QStringLiteral("(c) 2006-2020 the Akonadi developer"),
+                         QStringLiteral("(c) 2006-2021 the Akonadi developer"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/akonadi"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
