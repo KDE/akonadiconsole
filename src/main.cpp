@@ -8,7 +8,10 @@
 
 #include "akonadiconsole-version.h"
 #include "instanceselector.h"
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 
 #include <KAboutData>
 #include <KCrash>
@@ -24,11 +27,12 @@ int main(int argc, char **argv)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("akonadiconsole"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("akonadiconsolerc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("akonadiconsoleui.rc"));
     migrate.migrate();
-
+#endif
     KAboutData aboutData(QStringLiteral("akonadiconsole"),
                          QStringLiteral("Akonadi Console"),
                          QStringLiteral(KDEPIM_VERSION),
