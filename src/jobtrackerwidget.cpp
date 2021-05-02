@@ -68,7 +68,7 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     d->model->setEnabled(false); // since it can be slow, default to off
 
     auto layout2 = new QHBoxLayout;
-    QPushButton *button = new QPushButton(QStringLiteral("Save to file..."), this);
+    auto button = new QPushButton(QStringLiteral("Save to file..."), this);
     connect(button, &QAbstractButton::clicked, this, &JobTrackerWidget::slotSaveToFile);
     layout2->addWidget(button);
     layout2->addStretch(1);

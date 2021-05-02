@@ -116,7 +116,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     connect(mTagView, &QTreeView::customContextMenuRequested, this, &BrowserWidget::tagViewContextMenuRequested);
     connect(mTagView, &QTreeView::doubleClicked, this, &BrowserWidget::tagViewDoubleClicked);
 
-    Session *session = new Session(("AkonadiConsole Browser Widget"), this);
+    auto session = new Session(("AkonadiConsole Browser Widget"), this);
 
     // monitor collection changes
     mBrowserMonitor = new ChangeRecorder(this);
@@ -384,7 +384,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     mAttrModel = new QStandardItemModel();
     QStringList labels{QStringLiteral("Attribute"), QStringLiteral("Value")};
     mAttrModel->setHorizontalHeaderLabels(labels);
-    for (const auto *attr : list) {
+    for (const auto attr : list) {
         auto type = new QStandardItem(QString::fromLatin1(attr->type()));
         type->setEditable(false);
         mAttrModel->appendRow({type, new QStandardItem(QString::fromLatin1(attr->serialized()))});
@@ -619,7 +619,7 @@ void BrowserWidget::addTagRequested()
 void BrowserWidget::addSubTagRequested()
 {
     auto action = qobject_cast<QAction *>(sender());
-    const Akonadi::Tag parentTag = action->parent()->property("Tag").value<Akonadi::Tag>();
+    const auto parentTag = action->parent()->property("Tag").value<Akonadi::Tag>();
 
     Akonadi::Tag tag;
     tag.setParent(parentTag);
@@ -633,7 +633,7 @@ void BrowserWidget::addSubTagRequested()
 void BrowserWidget::editTagRequested()
 {
     auto action = qobject_cast<QAction *>(sender());
-    const Akonadi::Tag tag = action->parent()->property("Tag").value<Akonadi::Tag>();
+    const auto tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     auto dlg = new TagPropertiesDialog(tag, this);
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
@@ -647,7 +647,7 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
         return;
     }
 
-    const Akonadi::Tag tag = mTagModel->data(index, TagModel::TagRole).value<Akonadi::Tag>();
+    const auto tag = mTagModel->data(index, TagModel::TagRole).value<Akonadi::Tag>();
     Q_ASSERT(tag.isValid());
 
     auto dlg = new TagPropertiesDialog(tag, this);
@@ -670,7 +670,7 @@ void BrowserWidget::removeTagRequested()
     }
 
     auto action = qobject_cast<QAction *>(sender());
-    const Akonadi::Tag tag = action->parent()->property("Tag").value<Akonadi::Tag>();
+    const auto tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     new Akonadi::TagDeleteJob(tag, this);
 }
 

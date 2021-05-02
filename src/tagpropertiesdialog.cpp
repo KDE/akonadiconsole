@@ -110,7 +110,7 @@ void TagPropertiesDialog::setupUi()
             if (query.exec()) {
                 while (query.next()) {
                     QList<QStandardItem *> items;
-                    QStandardItem *item = new QStandardItem(query.value(0).toString());
+                    auto item = new QStandardItem(query.value(0).toString());
                     item->setEditable(false);
                     items << item;
                     item = new QStandardItem(query.value(1).toString());

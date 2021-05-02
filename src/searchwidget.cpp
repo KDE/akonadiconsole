@@ -201,7 +201,7 @@ void SearchWidget::fetchItem(const QModelIndex &index)
         return;
     }
 
-    Akonadi::ItemFetchJob *fetchJob = new Akonadi::ItemFetchJob(Akonadi::Item(docId));
+    auto fetchJob = new Akonadi::ItemFetchJob(Akonadi::Item(docId));
     fetchJob->fetchScope().fetchFullPayload();
     connect(fetchJob, &Akonadi::ItemFetchJob::result, this, &SearchWidget::itemFetched);
 }

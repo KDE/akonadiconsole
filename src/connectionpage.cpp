@@ -53,8 +53,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
 
     layout->addWidget(mDataView);
 
-    org::freedesktop::Akonadi::TracerNotification *iface =
-        new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
+    auto iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
 
     connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataInput, this, &ConnectionPage::connectionDataInput);
     connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataOutput, this, &ConnectionPage::connectionDataOutput);

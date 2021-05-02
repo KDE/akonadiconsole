@@ -86,7 +86,7 @@ public:
         if (!item.hasPayload<KMime::Message::Ptr>()) {
             return QVariant();
         }
-        const KMime::Message::Ptr mail = item.payload<KMime::Message::Ptr>();
+        const auto mail = item.payload<KMime::Message::Ptr>();
 
         // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
         switch (column) {
@@ -138,7 +138,7 @@ public:
         }
 
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee addr = item.payload<KContacts::Addressee>();
+            const auto addr = item.payload<KContacts::Addressee>();
 
             switch (column) {
             case 0:
@@ -153,7 +153,7 @@ public:
         if (item.hasPayload<KContacts::ContactGroup>()) {
             switch (column) {
             case 0:
-                const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+                const auto group = item.payload<KContacts::ContactGroup>();
                 return group.name();
             }
             return QVariant();
@@ -185,7 +185,7 @@ public:
         if (!item.hasPayload<IncidencePtr>()) {
             return QVariant();
         }
-        const IncidencePtr incidence = item.payload<IncidencePtr>();
+        const auto incidence = item.payload<IncidencePtr>();
         // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
         switch (column) {
         case 0:
@@ -348,8 +348,8 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
             if (!leftItem.hasPayload<IncidencePtr>() || !rightItem.hasPayload<IncidencePtr>()) {
                 return false;
             }
-            const IncidencePtr leftInc = leftItem.payload<IncidencePtr>();
-            const IncidencePtr rightInc = rightItem.payload<IncidencePtr>();
+            const auto leftInc = leftItem.payload<IncidencePtr>();
+            const auto rightInc = rightItem.payload<IncidencePtr>();
 
             if (left.column() == 1) {
                 return leftInc->dtStart() < rightInc->dtStart();
@@ -364,8 +364,8 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
             if (!leftItem.hasPayload<KMime::Message::Ptr>() || !rightItem.hasPayload<KMime::Message::Ptr>()) {
                 return false;
             }
-            const KMime::Message::Ptr leftMail = leftItem.payload<KMime::Message::Ptr>();
-            const KMime::Message::Ptr rightMail = rightItem.payload<KMime::Message::Ptr>();
+            const auto leftMail = leftItem.payload<KMime::Message::Ptr>();
+            const auto rightMail = rightItem.payload<KMime::Message::Ptr>();
             const KMime::Headers::Date *ldate = leftMail->date(false);
             const KMime::Headers::Date *rdate = rightMail->date(false);
             if (ldate && rdate) {
