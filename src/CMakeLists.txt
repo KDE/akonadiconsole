@@ -52,16 +52,16 @@ if (ENABLE_SEARCH)
     )
 endif()
 
-qt5_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
-qt5_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Akonadi.JobTracker.xml jobtracker.h JobTracker)
-qt5_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.akonadiconsole.logger.xml logging.h Logging)
+qt_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
+qt_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Akonadi.JobTracker.xml jobtracker.h JobTracker)
+qt_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.akonadiconsole.logger.xml logging.h Logging)
 
-qt5_add_dbus_interfaces(libakonadiconsole_SRCS
+qt_add_dbus_interfaces(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.TracerNotification.xml
     )
 # Use intalled interface once we can depend on Akoandi 1.1
 set_source_files_properties(org.freedesktop.Akonadi.DebugInterface.xml PROPERTIES CLASSNAME DebugInterface)
-qt5_add_dbus_interface(libakonadiconsole_SRCS
+qt_add_dbus_interface(libakonadiconsole_SRCS
     org.freedesktop.Akonadi.DebugInterface.xml
     debuginterface
     )
@@ -69,7 +69,7 @@ qt5_add_dbus_interface(libakonadiconsole_SRCS
 set_source_files_properties(${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     PROPERTIES INCLUDE querydebugger.h
 )
-qt5_add_dbus_interface(libakonadiconsole_SRCS
+qt_add_dbus_interface(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     storagedebuggerinterface
     )
