@@ -1,6 +1,6 @@
 # convenience macro to add qtest unit tests
-macro(add_unittest _source _additionalsource)
-    set(_test ${_source} ${_additionalsource})
+macro(add_unittest _source)
+    set(_test ${_source})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
@@ -18,6 +18,6 @@ macro(add_unittest _source _additionalsource)
         )
 endmacro ()
 
-add_unittest(jobtrackertest.cpp "")
-add_unittest(jobtrackermodeltest.cpp "")
-add_unittest(jobtrackersearchwidgettest.cpp "")
+add_unittest(jobtrackertest.cpp)
+add_unittest(jobtrackermodeltest.cpp )
+add_unittest(jobtrackersearchwidgettest.cpp )
