@@ -179,7 +179,7 @@ void AgentWidget::slotDataChanged(const QModelIndex &topLeft, const QModelIndex 
         selectedRows.append(ui.instanceWidget->view()->selectionModel()->currentIndex());
     }
     QList<int> rows;
-    for (const QModelIndex &index : qAsConst(selectedRows)) {
+    for (const QModelIndex &index : std::as_const(selectedRows)) {
         rows.append(index.row());
     }
     std::sort(rows.begin(), rows.end());

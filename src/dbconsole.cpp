@@ -50,7 +50,7 @@ DbConsole::DbConsole(QWidget *parent)
         queries = group.readEntry("queryTexts", QStringList());
     }
 
-    for (const auto &query : qAsConst(queries)) {
+    for (const auto &query : std::as_const(queries)) {
         auto tab = addTab();
         tab->setQuery(query);
     }

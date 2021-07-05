@@ -81,7 +81,7 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
     // find elements that needs to be deleted.
     for (const auto &identifer : mSenderCache.keys()) {
         bool found = false;
-        for (const auto &msg : qAsConst(mMessages)) {
+        for (const auto &msg : std::as_const(mMessages)) {
             if (msg.sender == identifer) {
                 found = true;
                 break;

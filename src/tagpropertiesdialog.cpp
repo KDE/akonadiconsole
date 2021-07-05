@@ -240,7 +240,7 @@ void TagPropertiesDialog::slotAccept()
     mTag.setType(ui.typeEdit->text().toLatin1());
     mTag.setGid(ui.gidEdit->text().toLatin1());
 
-    for (const QString &removedAttr : qAsConst(mRemovedAttrs)) {
+    for (const QString &removedAttr : std::as_const(mRemovedAttrs)) {
         mTag.removeAttribute(removedAttr.toLatin1());
     }
     for (int i = 0; i < mAttributesModel->rowCount(); ++i) {
@@ -278,7 +278,7 @@ void TagPropertiesDialog::slotAccept()
         queryStr += conds.join(QLatin1String(" OR ")) + QLatin1Char(')');
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
-        for (const QString &removedRid : qAsConst(mRemovedRIDs)) {
+        for (const QString &removedRid : std::as_const(mRemovedRIDs)) {
             query.addBindValue(removedRid);
         }
         if (!query.exec()) {
@@ -299,7 +299,7 @@ void TagPropertiesDialog::slotAccept()
             }
             queryStr += conds.join(QLatin1String(" OR "));
             query.prepare(queryStr);
-            for (const QString &res : qAsConst(mChangedRIDs)) {
+            for (const QString &res : std::as_const(mChangedRIDs)) {
                 query.addBindValue(res);
             }
             if (!query.exec()) {

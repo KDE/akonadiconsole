@@ -47,7 +47,7 @@ void CollectionAttributePage::load(const Collection &col)
 
 void CollectionAttributePage::save(Collection &col)
 {
-    for (const QString &del : qAsConst(mDeleted)) {
+    for (const QString &del : std::as_const(mDeleted)) {
         col.removeAttribute(del.toLatin1());
     }
     for (int i = 0; i < mModel->rowCount(); ++i) {
