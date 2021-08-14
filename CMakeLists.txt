@@ -4,8 +4,6 @@ project(akonadiconsole VERSION ${PIM_VERSION})
 
 # Needs C++17 because Akonadi uses it and we link
 # against its private API
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(KF5_MIN_VERSION "5.85.0")
 
@@ -27,7 +25,6 @@ include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-set(KDE_COMPILERSETTINGS_LEVEL 5.85.0)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
