@@ -131,14 +131,14 @@ int JobTrackerModel::columnCount(const QModelIndex &parent) const
 
 static QString formatTimeWithMsec(const QTime &time)
 {
-    return QString(QLocale().toString(time) + QStringLiteral(".%1").arg(time.msec(), 3, 10, QLatin1Char('0')));
+    return time.toString(QStringLiteral("HH:mm:ss.zzz t"));
 }
 
 static QString formatDurationWithMsec(qint64 msecs)
 {
     QTime time(0, 0, 0);
     time = time.addMSecs(msecs);
-    return time.toString(QStringLiteral("hh:mm:ss.zzz"));
+    return time.toString(QStringLiteral("HH:mm:ss.zzz"));
 }
 
 QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
