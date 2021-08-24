@@ -27,6 +27,7 @@ DbBrowser::DbBrowser(QWidget *parent)
 
     ui.refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     connect(ui.refreshButton, &QPushButton::clicked, this, &DbBrowser::refreshClicked);
+    connect(ui.tableBox, &KComboBox::currentTextChanged, this, &DbBrowser::refreshClicked);
 }
 
 void DbBrowser::refreshClicked()
