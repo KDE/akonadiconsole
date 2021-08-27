@@ -15,7 +15,9 @@
 #include <akonadi/private/instance_p.h>
 
 #include <cassert>
+#include <chrono>
 
+using namespace std::chrono_literals;
 QString JobInfo::stateAsString() const
 {
     switch (state) {
@@ -42,7 +44,7 @@ public:
         , q(_q)
     {
         timer.setSingleShot(true);
-        timer.setInterval(200);
+        timer.setInterval(200ms);
         connect(&timer, &QTimer::timeout, q, &JobTracker::signalUpdates);
     }
 

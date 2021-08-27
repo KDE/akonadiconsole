@@ -10,6 +10,9 @@
 
 #include <KCheckComboBox>
 #include <QStandardItemModel>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 using KPIM::KCheckComboBox;
 
@@ -18,7 +21,7 @@ Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 NotificationFilterModel::NotificationFilterModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-    mInvalidateTimer.setInterval(50);
+    mInvalidateTimer.setInterval(50ms);
     mInvalidateTimer.setSingleShot(true);
     connect(&mInvalidateTimer, &QTimer::timeout, this, &NotificationFilterModel::invalidateFilter);
 }
