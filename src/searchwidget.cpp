@@ -101,7 +101,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     connect(button, &QPushButton::clicked, this, &SearchWidget::search);
     connect(mDatabaseView, &QListView::activated, this, &SearchWidget::fetchItem);
-    connect(mStoreCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &SearchWidget::openStore);
+    connect(mStoreCombo, qOverload<int>(&KComboBox::currentIndexChanged), this, &SearchWidget::openStore);
 
     openStore(0);
 
