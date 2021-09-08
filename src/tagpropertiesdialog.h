@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <AkonadiCore/tag.h>
+#include <Akonadi/Tag>
 #include <QDialog>
 
 #include <QStandardItemModel>

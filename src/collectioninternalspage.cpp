@@ -6,7 +6,7 @@
 
 #include "collectioninternalspage.h"
 
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 using namespace Akonadi;
 
 CollectionInternalsPage::CollectionInternalsPage(QWidget *parent)

@@ -7,7 +7,7 @@
 #include "collectionattributespage.h"
 
 #include <Akonadi/AttributeFactory>
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 
 #include <QStandardItemModel>
 

@@ -6,7 +6,7 @@
 
 #include "collectionaclpage.h"
 
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 
 using namespace Akonadi;
 

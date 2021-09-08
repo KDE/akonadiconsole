@@ -26,15 +26,15 @@
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemModifyJob>
+#include <Akonadi/Job>
 #include <Akonadi/SelectionProxyModel>
+#include <Akonadi/Session>
 #include <Akonadi/StandardActionManager>
 #include <Akonadi/StatisticsProxyModel>
 #include <Akonadi/TagDeleteJob>
 #include <Akonadi/TagFetchScope>
 #include <Akonadi/TagModel>
 #include <Akonadi/XmlWriteJob>
-#include <AkonadiCore/job.h>
-#include <AkonadiCore/session.h>
 #include <KViewStateMaintainer>
 #include <akonadi/private/compressionstream_p.h>
 
