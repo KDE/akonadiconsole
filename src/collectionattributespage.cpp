@@ -6,7 +6,7 @@
 
 #include "collectionattributespage.h"
 
-#include <AkonadiCore/attributefactory.h>
+#include <Akonadi/AttributeFactory>
 #include <AkonadiCore/collection.h>
 
 #include <QStandardItemModel>

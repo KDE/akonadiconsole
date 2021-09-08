@@ -22,11 +22,11 @@
 #include "notificationmonitor.h"
 #include "querydebugger.h"
 
-#include <AkonadiCore/agentfilterproxymodel.h>
-#include <AkonadiCore/searchcreatejob.h>
-#include <AkonadiCore/servermanager.h>
-#include <AkonadiWidgets/agentinstancewidget.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstanceWidget>
+#include <Akonadi/ControlGui>
+#include <Akonadi/SearchCreateJob>
+#include <Akonadi/ServerManager>
 
 #include <KActionCollection>
 #include <KXmlGuiWindow>

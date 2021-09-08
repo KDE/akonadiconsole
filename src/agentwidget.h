@@ -10,7 +10,7 @@
 
 #include "ui_agentwidget.h"
 
-#include <AkonadiCore/agentinstance.h>
+#include <Akonadi/AgentInstance>
 
 class KJob;
 class QMenu;

@@ -8,7 +8,7 @@
 
 #include "ui_collectioninternalspage.h"
 
-#include <AkonadiWidgets/collectionpropertiespage.h>
+#include <Akonadi/CollectionPropertiesPage>
 
 class CollectionInternalsPage : public Akonadi::CollectionPropertiesPage
 {

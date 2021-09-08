@@ -10,13 +10,13 @@
 
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
-#include <AkonadiCore/AgentFilterProxyModel>
-#include <AkonadiCore/agentinstancecreatejob.h>
-#include <AkonadiCore/agentmanager.h>
-#include <AkonadiWidgets/AgentConfigurationDialog>
-#include <AkonadiWidgets/agentinstancewidget.h>
-#include <AkonadiWidgets/agenttypedialog.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/AgentConfigurationDialog>
+#include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentInstanceWidget>
+#include <Akonadi/AgentManager>
+#include <Akonadi/AgentTypeDialog>
+#include <Akonadi/ControlGui>
 
 #include <KLocalizedString>
 #include <KMessageBox>

@@ -13,7 +13,7 @@
 #include "jobtrackermodel.h"
 #include "jobtrackersearchwidget.h"
 
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/ControlGui>
 
 #include <QApplication>
 #include <QClipboard>

@@ -8,8 +8,8 @@
 
 #include <QAbstractItemModel>
 
-#include <AkonadiCore/ChangeNotification>
-#include <AkonadiCore/Monitor>
+#include <Akonadi/ChangeNotification>
+#include <Akonadi/Monitor>
 
 namespace Akonadi
 {

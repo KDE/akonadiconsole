@@ -14,11 +14,11 @@
 #include <QVBoxLayout>
 #include <qheaderview.h>
 
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/NotificationSubscriber>
-#include <AkonadiCore/TagFetchScope>
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ControlGui>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/NotificationSubscriber>
+#include <Akonadi/TagFetchScope>
 
 #include <KConfigGroup>
 #include <KSharedConfig>

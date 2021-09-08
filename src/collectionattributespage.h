@@ -8,7 +8,7 @@
 
 #include "ui_collectionattributespage.h"
 
-#include <AkonadiWidgets/collectionpropertiespage.h>
+#include <Akonadi/CollectionPropertiesPage>
 
 class QStandardItem;
 class QStandardItemModel;

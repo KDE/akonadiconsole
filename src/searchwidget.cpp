@@ -11,11 +11,11 @@
 #include "akonadiconsole_debug.h"
 #include "searchwidget.h"
 
-#include <AkonadiCore/SearchQuery>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/itemsearchjob.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/ControlGui>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/ItemSearchJob>
+#include <Akonadi/SearchQuery>
 
 #include <AkonadiSearch/Core/searchstore.h>
 #include <AkonadiSearch/Xapian/xapiansearchstore.h>

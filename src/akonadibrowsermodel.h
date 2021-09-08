@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <AkonadiCore/changerecorder.h>
-#include <AkonadiCore/entitytreemodel.h>
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/EntityTreeModel>
 
 #include <QSortFilterProxyModel>
 

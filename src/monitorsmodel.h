@@ -8,7 +8,7 @@
 #pragma once
 
 #include "libakonadiconsole_export.h"
-#include <AkonadiCore/NotificationSubscriber>
+#include <Akonadi/NotificationSubscriber>
 #include <QAbstractItemModel>
 
 namespace Akonadi

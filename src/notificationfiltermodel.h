@@ -8,7 +8,7 @@
 
 #include <QSortFilterProxyModel>
 
-#include <AkonadiCore/ChangeNotification>
+#include <Akonadi/ChangeNotification>
 
 #include <QSet>
 #include <QTimer>

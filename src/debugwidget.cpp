@@ -11,9 +11,9 @@
 #include "connectionpage.h"
 #include "tracernotificationinterface.h"
 
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/ControlGui>
 
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/ServerManager>
 #include <KTextEdit>
 #include <QTabWidget>
 

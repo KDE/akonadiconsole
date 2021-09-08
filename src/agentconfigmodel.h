@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <AkonadiCore/AgentInstance>
+#include <Akonadi/AgentInstance>
 
 #include <QAbstractItemModel>
 #include <QVector>

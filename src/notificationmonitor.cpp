@@ -9,7 +9,7 @@
 #include "notificationmodel.h"
 #include "utils.h"
 
-#include <AkonadiWidgets/ControlGui>
+#include <Akonadi/ControlGui>
 
 #include <QCheckBox>
 #include <QFile>

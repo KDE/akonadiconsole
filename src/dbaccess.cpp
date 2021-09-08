@@ -6,7 +6,7 @@
 
 #include "dbaccess.h"
 
-#include <AkonadiCore/servermanager.h>
+#include <Akonadi/ServerManager>
 
 #include <QSettings>
 #include <QSqlDatabase>

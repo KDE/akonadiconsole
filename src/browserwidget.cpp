@@ -14,27 +14,27 @@
 #include "dbaccess.h"
 #include "tagpropertiesdialog.h"
 
-#include <AkonadiCore/TagFetchScope>
-#include <AkonadiCore/attributefactory.h>
-#include <AkonadiCore/changerecorder.h>
-#include <AkonadiCore/collectionfilterproxymodel.h>
-#include <AkonadiCore/entitymimetypefiltermodel.h>
-#include <AkonadiCore/favoritecollectionsmodel.h>
-#include <AkonadiCore/itemfetchjob.h>
-#include <AkonadiCore/itemfetchscope.h>
-#include <AkonadiCore/itemmodifyjob.h>
+#include <Akonadi/AttributeFactory>
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/CollectionFilterProxyModel>
+#include <Akonadi/CollectionPropertiesDialog>
+#include <Akonadi/ControlGui>
+#include <Akonadi/EntityListView>
+#include <Akonadi/EntityMimeTypeFilterModel>
+#include <Akonadi/EntityTreeView>
+#include <Akonadi/FavoriteCollectionsModel>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/ItemModifyJob>
+#include <Akonadi/SelectionProxyModel>
+#include <Akonadi/StandardActionManager>
+#include <Akonadi/StatisticsProxyModel>
+#include <Akonadi/TagDeleteJob>
+#include <Akonadi/TagFetchScope>
+#include <Akonadi/TagModel>
+#include <Akonadi/XmlWriteJob>
 #include <AkonadiCore/job.h>
-#include <AkonadiCore/selectionproxymodel.h>
 #include <AkonadiCore/session.h>
-#include <AkonadiCore/statisticsproxymodel.h>
-#include <AkonadiCore/tagdeletejob.h>
-#include <AkonadiCore/tagmodel.h>
-#include <AkonadiWidgets/collectionpropertiesdialog.h>
-#include <AkonadiWidgets/controlgui.h>
-#include <AkonadiWidgets/entitylistview.h>
-#include <AkonadiWidgets/entitytreeview.h>
-#include <AkonadiWidgets/standardactionmanager.h>
-#include <AkonadiXml/XmlWriteJob>
 #include <KViewStateMaintainer>
 #include <akonadi/private/compressionstream_p.h>
 
@@ -44,8 +44,8 @@
 #include <kcontacts/contactgroup.h>
 
 #include "akonadiconsole_debug.h"
-#include <AkonadiCore/tagcreatejob.h>
-#include <AkonadiCore/tagmodifyjob.h>
+#include <Akonadi/TagCreateJob>
+#include <Akonadi/TagModifyJob>
 #include <KActionCollection>
 #include <KConfig>
 #include <KConfigGroup>

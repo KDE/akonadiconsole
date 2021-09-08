@@ -23,8 +23,8 @@
 #include <QDBusArgument>
 #include <QDBusConnection>
 
-#include <AkonadiCore/servermanager.h>
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/ControlGui>
+#include <Akonadi/ServerManager>
 
 #include <KColorScheme>
 

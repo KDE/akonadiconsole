@@ -8,7 +8,7 @@
 
 #include "ui_collectionaclpage.h"
 
-#include <AkonadiWidgets/collectionpropertiespage.h>
+#include <Akonadi/CollectionPropertiesPage>
 
 class CollectionAclPage : public Akonadi::CollectionPropertiesPage
 {

@@ -9,7 +9,7 @@
 #include <QLocale>
 
 #include "akonadiconsole_debug.h"
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/ServerManager>
 
 #include <QMetaMethod>
 #include <akonadi/private/imapparser_p.h>

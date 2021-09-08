@@ -9,9 +9,9 @@
 #include <ui_browserwidget_contentview.h>
 #include <ui_browserwidget_itemview.h>
 
-#include <AkonadiCore/collection.h>
-#include <AkonadiCore/item.h>
-#include <AkonadiWidgets/etmviewstatesaver.h>
+#include <Akonadi/Collection>
+#include <Akonadi/ETMViewStateSaver>
+#include <Akonadi/Item>
 
 #include <QWidget>
 

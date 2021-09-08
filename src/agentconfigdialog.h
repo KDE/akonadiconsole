@@ -7,7 +7,7 @@
 #pragma once
 
 #include "ui_agentconfigdialog.h"
-#include <AkonadiCore/AgentInstance>
+#include <Akonadi/AgentInstance>
 #include <QDialog>
 
 class AgentConfigModel;
