@@ -8,7 +8,7 @@
 #include "monitorsmodel.h"
 #include "akonadiconsole_debug.h"
 #include <Akonadi/Monitor>
-#include <akonadi/session.h>
+#include <Akonadi/Session>
 
 #include <QTimer>
 
