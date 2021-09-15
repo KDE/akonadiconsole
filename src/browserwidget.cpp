@@ -40,8 +40,8 @@
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/Incidence>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include "akonadiconsole_debug.h"
 #include <Akonadi/TagCreateJob>

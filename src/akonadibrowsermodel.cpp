@@ -6,10 +6,10 @@
 
 #include "akonadibrowsermodel.h"
 
-#include <kmime/kmime_message.h>
+#include <KMime/KMimeMessage>
 
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Incidence>
