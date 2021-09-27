@@ -246,6 +246,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Akonadi::AgentInstanceWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">Akonadi/AgentInstanceWidget</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
