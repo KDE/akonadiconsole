@@ -7,9 +7,6 @@
 #include "debugmodel.h"
 
 #include <QColor>
-#include <QDateTime>
-#include <QDebug>
-#include <QDir>
 #include <QStandardItemModel>
 
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT

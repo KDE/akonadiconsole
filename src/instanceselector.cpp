@@ -17,7 +17,6 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <QDBusInterface>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QStandardItemModel>

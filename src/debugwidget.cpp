@@ -15,7 +15,6 @@
 
 #include <Akonadi/ServerManager>
 #include <KTextEdit>
-#include <QTabWidget>
 
 #include <QCheckBox>
 #include <QFileDialog>

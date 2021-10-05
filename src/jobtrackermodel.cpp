@@ -12,7 +12,6 @@
 
 #include <QColor>
 #include <QFont>
-#include <QLocale>
 #include <QModelIndex>
 #include <QPair>
 #include <QStringList>

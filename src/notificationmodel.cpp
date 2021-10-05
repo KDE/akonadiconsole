@@ -6,7 +6,6 @@
 
 #include "notificationmodel.h"
 
-#include <QLocale>
 
 #include "akonadiconsole_debug.h"
 #include <Akonadi/ServerManager>

@@ -9,9 +9,9 @@
 #include "monitorsmodel.h"
 #include "utils.h"
 
+#include <QHBoxLayout>
 #include <QSortFilterProxyModel>
 #include <QStandardItemModel>
-#include <QVBoxLayout>
 #include <qheaderview.h>
 
 #include <Akonadi/CollectionFetchScope>
