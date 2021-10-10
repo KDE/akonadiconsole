@@ -34,10 +34,10 @@ QString JobInfo::stateAsString() const
     }
 }
 
-class JobTracker::Private
+class JobTrackerPrivate
 {
 public:
-    Private(JobTracker *_q)
+    explicit JobTrackerPrivate(JobTracker *_q)
         : lastId(42)
         , timer(_q)
         , disabled(false)
@@ -45,7 +45,7 @@ public:
     {
         timer.setSingleShot(true);
         timer.setInterval(200ms);
-        connect(&timer, &QTimer::timeout, q, &JobTracker::signalUpdates);
+        QObject::connect(&timer, &QTimer::timeout, q, &JobTracker::signalUpdates);
     }
 
     bool isSession(int id) const
@@ -75,7 +75,7 @@ private:
 
 JobTracker::JobTracker(const char *name, QObject *parent)
     : QObject(parent)
-    , d(new Private(this))
+    , d(new JobTrackerPrivate(this))
 {
     new JobTrackerAdaptor(this);
     const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();

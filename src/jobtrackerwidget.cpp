@@ -25,7 +25,7 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 
-class JobTrackerWidget::Private
+class JobTrackerWidgetPrivate
 {
 public:
     JobTrackerModel *model = nullptr;
@@ -36,7 +36,7 @@ public:
 
 JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
     : QWidget(parent)
-    , d(new Private)
+    , d(new JobTrackerWidgetPrivate)
 {
     d->model = new JobTrackerModel(name, this);
 

@@ -18,10 +18,10 @@
 
 #include <cassert>
 
-class JobTrackerModel::Private
+class JobTrackerModelPrivate
 {
 public:
-    Private(const char *name, JobTrackerModel *_q)
+    JobTrackerModelPrivate(const char *name, JobTrackerModel *_q)
         : q(_q)
         , tracker(name)
     {
@@ -52,7 +52,7 @@ public:
 
 JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
     : QAbstractItemModel(parent)
-    , d(new Private(name, this))
+    , d(new JobTrackerModelPrivate(name, this))
 {
     connect(&d->tracker, &JobTracker::aboutToAdd, this, &JobTrackerModel::jobAboutToBeAdded);
     connect(&d->tracker, &JobTracker::added, this, &JobTrackerModel::jobAdded);

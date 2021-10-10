@@ -14,6 +14,7 @@
 #include <memory>
 
 class JobTracker;
+class JobTrackerModelPrivate;
 
 class LIBAKONADICONSOLE_EXPORT JobTrackerModel : public QAbstractItemModel
 {
@@ -57,7 +58,6 @@ private Q_SLOTS:
     void jobsUpdated(const QList<QPair<int, int>> &);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<JobTrackerModelPrivate> const d;
 };
 

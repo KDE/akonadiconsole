@@ -14,6 +14,8 @@
 
 class QModelIndex;
 class QFile;
+class JobTrackerWidgetPrivate;
+
 class JobTrackerWidget : public QWidget
 {
     Q_OBJECT
@@ -35,7 +37,6 @@ private:
     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<JobTrackerWidgetPrivate> const d;
 };
 

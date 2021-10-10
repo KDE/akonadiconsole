@@ -44,6 +44,8 @@ public:
     QString stateAsString() const;
 };
 
+class JobTrackerPrivate;
+
 class LIBAKONADICONSOLE_EXPORT JobTracker : public QObject
 {
     Q_OBJECT
@@ -110,7 +112,6 @@ private:
     int idForJob(const QString &job) const;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<JobTrackerPrivate> const d;
 };
 
