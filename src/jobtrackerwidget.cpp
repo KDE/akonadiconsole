@@ -77,10 +77,7 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 }
 
-JobTrackerWidget::~JobTrackerWidget()
-{
-    delete d;
-}
+JobTrackerWidget::~JobTrackerWidget() = default;
 
 void JobTrackerWidget::selectOnlyErrorChanged(bool state)
 {

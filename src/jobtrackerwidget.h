@@ -10,6 +10,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 class QModelIndex;
 class QFile;
 class JobTrackerWidget : public QWidget
@@ -32,7 +34,8 @@ private:
     void textFilterChanged(const QString &str);
     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
 
+private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 

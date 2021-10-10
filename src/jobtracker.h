@@ -14,6 +14,9 @@
 #include <QList>
 #include <QObject>
 #include <QPair>
+
+#include <memory>
+
 class JobInfo
 {
 public:
@@ -106,7 +109,8 @@ private:
     QVector<int> childJobs(int parentId) const;
     int idForJob(const QString &job) const;
 
+private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 

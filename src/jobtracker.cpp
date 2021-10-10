@@ -83,10 +83,7 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name), this, QDBusConnection::ExportAdaptors);
 }
 
-JobTracker::~JobTracker()
-{
-    delete d;
-}
+JobTracker::~JobTracker() = default;
 
 void JobTracker::jobCreated(const QString &session, const QString &jobName, const QString &parent, const QString &jobType, const QString &debugString)
 {

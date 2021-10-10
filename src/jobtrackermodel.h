@@ -11,6 +11,8 @@
 #include "libakonadiconsole_export.h"
 #include <QAbstractItemModel>
 
+#include <memory>
+
 class JobTracker;
 
 class LIBAKONADICONSOLE_EXPORT JobTrackerModel : public QAbstractItemModel
@@ -56,6 +58,6 @@ private Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 

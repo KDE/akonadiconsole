@@ -59,10 +59,7 @@ JobTrackerModel::JobTrackerModel(const char *name, QObject *parent)
     connect(&d->tracker, &JobTracker::updated, this, &JobTrackerModel::jobsUpdated);
 }
 
-JobTrackerModel::~JobTrackerModel()
-{
-    delete d;
-}
+JobTrackerModel::~JobTrackerModel() = default;
 
 JobTracker &JobTrackerModel::jobTracker()
 {
