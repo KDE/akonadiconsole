@@ -2,7 +2,6 @@
 include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
 add_subdirectory(icons)
-add_subdirectory(kconf_update)
 
 set(libakonadiconsole_tracker_SRCS
     jobtracker.cpp
