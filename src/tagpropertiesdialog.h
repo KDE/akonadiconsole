@@ -21,7 +21,7 @@ class TagPropertiesDialog : public QDialog
 public:
     explicit TagPropertiesDialog(QWidget *parent = nullptr);
     explicit TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *parent = nullptr);
-    virtual ~TagPropertiesDialog();
+    ~TagPropertiesDialog() override;
 
     Akonadi::Tag tag() const;
     bool changed() const;

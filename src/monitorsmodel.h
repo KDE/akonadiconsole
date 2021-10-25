@@ -24,7 +24,7 @@ public:
     enum Roles { SubscriberRole = Qt::UserRole };
 
     explicit MonitorsModel(QObject *parent = nullptr);
-    virtual ~MonitorsModel();
+    ~MonitorsModel() override;
 
     void setEnabled(bool enabled);
 

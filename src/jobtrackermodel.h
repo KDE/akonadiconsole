@@ -21,7 +21,7 @@ class LIBAKONADICONSOLE_EXPORT JobTrackerModel : public QAbstractItemModel
     Q_OBJECT
 public:
     explicit JobTrackerModel(const char *name, QObject *parent = nullptr);
-    virtual ~JobTrackerModel();
+    ~JobTrackerModel() override;
 
     JobTracker &jobTracker(); // for the unittest
 

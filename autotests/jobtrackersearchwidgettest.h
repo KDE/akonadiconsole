@@ -13,7 +13,7 @@ class JobTrackerSearchWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit JobTrackerSearchWidgetTest(QObject *parent = nullptr);
-    ~JobTrackerSearchWidgetTest();
+    ~JobTrackerSearchWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEmitSignal();

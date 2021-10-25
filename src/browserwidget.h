@@ -55,7 +55,7 @@ class BrowserWidget : public QWidget
 
 public:
     explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = nullptr);
-    ~BrowserWidget();
+    ~BrowserWidget() override;
 
 public Q_SLOTS:
     void dumpToXml();

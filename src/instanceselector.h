@@ -26,7 +26,7 @@ class LIBAKONADICONSOLE_EXPORT InstanceSelector : public QDialog
     Q_OBJECT
 public:
     explicit InstanceSelector(const QString &remoteHost, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
-    virtual ~InstanceSelector();
+    ~InstanceSelector() override;
 
 private Q_SLOTS:
     void slotAccept();

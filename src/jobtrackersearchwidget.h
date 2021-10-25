@@ -18,7 +18,7 @@ class LIBAKONADICONSOLE_EXPORT JobTrackerSearchWidget : public QWidget
     Q_OBJECT
 public:
     explicit JobTrackerSearchWidget(QWidget *parent = nullptr);
-    ~JobTrackerSearchWidget();
+    ~JobTrackerSearchWidget() override;
 
 Q_SIGNALS:
     void searchTextChanged(const QString &);

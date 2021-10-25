@@ -13,7 +13,7 @@ class JobTrackerFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit JobTrackerFilterProxyModel(QObject *parent = nullptr);
-    ~JobTrackerFilterProxyModel();
+    ~JobTrackerFilterProxyModel() override;
 
     void setSearchColumn(int column);
 

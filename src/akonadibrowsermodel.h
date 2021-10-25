@@ -18,7 +18,7 @@ class AkonadiBrowserModel : public EntityTreeModel
     Q_OBJECT
 public:
     explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = nullptr);
-    ~AkonadiBrowserModel();
+    ~AkonadiBrowserModel() override;
 
     enum ItemDisplayMode { GenericMode, MailMode, ContactsMode, CalendarMode };
 
@@ -52,7 +52,7 @@ class AkonadiBrowserSortModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit AkonadiBrowserSortModel(AkonadiBrowserModel *browserModel, QObject *parent = nullptr);
-    ~AkonadiBrowserSortModel();
+    ~AkonadiBrowserSortModel() override;
 
 protected:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;

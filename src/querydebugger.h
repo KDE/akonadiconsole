@@ -43,7 +43,7 @@ class QueryDebugger : public QWidget
 
 public:
     explicit QueryDebugger(QWidget *parent = nullptr);
-    virtual ~QueryDebugger();
+    ~QueryDebugger() override;
 
 private Q_SLOTS:
     void debuggerToggled(bool on);

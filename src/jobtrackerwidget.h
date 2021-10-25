@@ -22,7 +22,7 @@ class JobTrackerWidget : public QWidget
 
 public:
     explicit JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText);
-    ~JobTrackerWidget();
+    ~JobTrackerWidget() override;
 private Q_SLOTS:
     void contextMenu(const QPoint &pos);
     void slotSaveToFile();

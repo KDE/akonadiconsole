@@ -20,7 +20,7 @@ class DebugFilterModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit DebugFilterModel(QObject *parent = nullptr);
-    ~DebugFilterModel();
+    ~DebugFilterModel() override;
 
     void setSenderFilter(KPIM::KCheckComboBox *appFilter);
 

@@ -38,7 +38,7 @@ public:
         m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("GID") << QStringLiteral("MimeType");
     }
 
-    virtual ~GenericState()
+    ~GenericState() override
     {
     }
 
@@ -73,7 +73,7 @@ public:
         m_itemHeaders << QStringLiteral("Subject") << QStringLiteral("Sender") << QStringLiteral("Date");
     }
 
-    virtual ~MailState()
+    ~MailState() override
     {
     }
 
@@ -123,7 +123,7 @@ public:
         m_itemHeaders << QStringLiteral("Given Name") << QStringLiteral("Family Name") << QStringLiteral("Email");
     }
 
-    virtual ~ContactsState()
+    ~ContactsState() override
     {
     }
 
@@ -172,7 +172,7 @@ public:
                       << QStringLiteral("Type");
     }
 
-    virtual ~CalendarState()
+    ~CalendarState() override
     {
     }
 

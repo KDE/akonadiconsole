@@ -25,7 +25,7 @@ class MonitorsWidget : public QWidget
 
 public:
     explicit MonitorsWidget(QWidget *parent = nullptr);
-    virtual ~MonitorsWidget();
+    ~MonitorsWidget() override;
 
 private Q_SLOTS:
     void onSubscriberSelected(const QModelIndex &index);

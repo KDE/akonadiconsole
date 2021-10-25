@@ -95,7 +95,7 @@ private:
     class TransactionNode : public QueryNode
     {
     public:
-        ~TransactionNode()
+        ~TransactionNode() override
         {
             qDeleteAll(queries);
         }
@@ -108,7 +108,7 @@ private:
     class ConnectionNode : public Node
     {
     public:
-        ~ConnectionNode()
+        ~ConnectionNode() override
         {
             qDeleteAll(queries);
         }
@@ -125,7 +125,7 @@ public:
     {
     }
 
-    ~QueryTreeModel()
+    ~QueryTreeModel() override
     {
         qDeleteAll(mConnections);
     }

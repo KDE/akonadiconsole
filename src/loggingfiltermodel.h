@@ -20,7 +20,7 @@ class LoggingFilterModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit LoggingFilterModel(QObject *parent = nullptr);
-    ~LoggingFilterModel();
+    ~LoggingFilterModel() override;
 
     void setAppFilter(KPIM::KCheckComboBox *appFilter);
     void setCategoryFilter(KPIM::KCheckComboBox *categoryFilter);

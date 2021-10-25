@@ -20,7 +20,7 @@ class MainWidget : public QWidget
 
 public:
     explicit MainWidget(KXmlGuiWindow *parent = nullptr);
-    ~MainWidget();
+    ~MainWidget() override;
 
 private Q_SLOTS:
     void startServer();

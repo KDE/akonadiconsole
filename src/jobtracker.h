@@ -53,7 +53,7 @@ class LIBAKONADICONSOLE_EXPORT JobTracker : public QObject
 
 public:
     explicit JobTracker(const char *name, QObject *parent = nullptr);
-    ~JobTracker();
+    ~JobTracker() override;
 
     QStringList sessions() const;
 

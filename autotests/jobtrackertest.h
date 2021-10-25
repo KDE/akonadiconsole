@@ -15,7 +15,7 @@ class JobTrackerTest : public QObject
     Q_OBJECT
 public:
     explicit JobTrackerTest(QObject *parent = nullptr);
-    ~JobTrackerTest();
+    ~JobTrackerTest() override;
 private Q_SLOTS:
     void initTestCase();
     void shouldBeEmpty();

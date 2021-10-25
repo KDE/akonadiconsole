@@ -24,7 +24,7 @@ class Logging : public QWidget
 
 public:
     explicit Logging(QWidget *parent = nullptr);
-    ~Logging();
+    ~Logging() override;
 
     bool enabled() const;
 

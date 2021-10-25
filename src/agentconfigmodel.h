@@ -18,7 +18,7 @@ class AgentConfigModel : public QAbstractTableModel
     Q_OBJECT
 public:
     explicit AgentConfigModel(QObject *parent = nullptr);
-    ~AgentConfigModel();
+    ~AgentConfigModel() override;
     void setAgentInstance(const Akonadi::AgentInstance &instance);
 
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;

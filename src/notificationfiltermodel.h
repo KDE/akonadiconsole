@@ -27,7 +27,7 @@ class NotificationFilterModel : public QSortFilterProxyModel
 public:
     explicit NotificationFilterModel(QObject *parent = nullptr);
 
-    ~NotificationFilterModel();
+    ~NotificationFilterModel() override;
 
     void setTypeFilter(KPIM::KCheckComboBox *typeFilter);
 

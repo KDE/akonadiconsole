@@ -33,7 +33,7 @@ class SearchWidget : public QWidget
 
 public:
     explicit SearchWidget(QWidget *parent = nullptr);
-    ~SearchWidget();
+    ~SearchWidget() override;
 
 private Q_SLOTS:
     void search();
