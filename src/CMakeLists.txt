@@ -41,6 +41,42 @@ set(libakonadiconsole_SRCS
     querydebugger.cpp
     tagpropertiesdialog.cpp
     uistatesaver.cpp
+    monitorsmodel.h
+    notificationfiltermodel.h
+    collectionaclpage.h
+    utils.h
+    jobtrackermodel.h
+    metatypes.h
+    jobtrackersearchwidget.h
+    debugwidget.h
+    jobtracker.h
+    collectioninternalspage.h
+    mainwindow.h
+    browserwidget.h
+    akonadibrowsermodel.h
+    collectionattributespage.h
+    notificationmonitor.h
+    agentconfigmodel.h
+    monitorswidget.h
+    notificationmodel.h
+    mainwidget.h
+    dbconsole.h
+    tagpropertiesdialog.h
+    querydebugger.h
+    logging.h
+    uistatesaver.h
+    debugfiltermodel.h
+    loggingfiltermodel.h
+    dbbrowser.h
+    agentconfigdialog.h
+    jobtrackerwidget.h
+    connectionpage.h
+    jobtrackerfilterproxymodel.h
+    loggingmodel.h
+    agentwidget.h
+    dbaccess.h
+    debugmodel.h
+    instanceselector.h
     ${libakonadiconsole_tracker_SRCS}
 )
 
@@ -48,6 +84,7 @@ if (ENABLE_SEARCH)
     set(libakonadiconsole_SRCS
         ${libakonadiconsole_SRCS}
         searchwidget.cpp
+        searchwidget.h
     )
 endif()
 
