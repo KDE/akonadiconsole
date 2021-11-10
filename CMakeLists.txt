@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.18.80")
+set(PIM_VERSION "5.19.40")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
 # Needs C++17 because Akonadi uses it and we link
@@ -33,13 +33,13 @@ include(ECMQtDeclareLoggingCategory)
 
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta)
+set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
-set(RELEASE_SERVICE_VERSION "21.11.80")
+set(RELEASE_SERVICE_VERSION "22.03.40")
 
 set(KDEPIM_VERSION "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})")
 
