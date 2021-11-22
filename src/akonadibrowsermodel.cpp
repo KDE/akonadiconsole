@@ -26,7 +26,7 @@ public:
     QStringList m_collectionHeaders;
     QStringList m_itemHeaders;
 
-    virtual QVariant entityData(const Item &item, int column, int role) const = 0;
+    Q_REQUIRED_RESULT virtual QVariant entityData(const Item &item, int column, int role) const = 0;
 };
 
 class GenericState : public AkonadiBrowserModel::State
@@ -44,7 +44,7 @@ public:
 
     enum Columns { IdColumn = 0, RemoteIdColumn = 1, GIDColumn = 2, MimeTypeColumn = 3 };
 
-    QVariant entityData(const Item &item, int column, int role) const override
+    Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -77,7 +77,7 @@ public:
     {
     }
 
-    QVariant entityData(const Item &item, int column, int role) const override
+    Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -127,7 +127,7 @@ public:
     {
     }
 
-    QVariant entityData(const Item &item, int column, int role) const override
+    Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();
@@ -176,7 +176,7 @@ public:
     {
     }
 
-    QVariant entityData(const Item &item, int column, int role) const override
+    Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
             return QVariant();

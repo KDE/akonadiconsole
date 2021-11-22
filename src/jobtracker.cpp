@@ -48,7 +48,7 @@ public:
         QObject::connect(&timer, &QTimer::timeout, q, &JobTracker::signalUpdates);
     }
 
-    bool isSession(int id) const
+    Q_REQUIRED_RESULT bool isSession(int id) const
     {
         return id < -1;
     }

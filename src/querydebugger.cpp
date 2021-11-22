@@ -250,7 +250,7 @@ public:
         }
     }
 
-    int rowCount(const QModelIndex &parent) const override
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent) const override
     {
         if (!parent.isValid()) {
             return mConnections.count();
@@ -269,13 +269,13 @@ public:
         Q_UNREACHABLE();
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         Q_UNUSED(parent)
         return 5;
     }
 
-    QModelIndex parent(const QModelIndex &child) const override
+    Q_REQUIRED_RESULT QModelIndex parent(const QModelIndex &child) const override
     {
         if (!child.isValid() || !child.internalPointer()) {
             return QModelIndex();
@@ -298,7 +298,7 @@ public:
         }
     }
 
-    QModelIndex index(int row, int column, const QModelIndex &parent) const override
+    Q_REQUIRED_RESULT QModelIndex index(int row, int column, const QModelIndex &parent) const override
     {
         if (!parent.isValid()) {
             if (row < mConnections.count()) {
@@ -330,7 +330,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const override
+    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role) const override
     {
         if (orientation != Qt::Horizontal || role != Qt::DisplayRole) {
             return QVariant();
@@ -352,7 +352,7 @@ public:
         return QVariant();
     }
 
-    QVariant data(const QModelIndex &index, int role) const override
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override
     {
         if (!index.isValid()) {
             return QVariant();
@@ -419,7 +419,7 @@ public:
     }
 
 private:
-    QString fromMSecsSinceEpoch(qint64 msecs) const
+    Q_REQUIRED_RESULT QString fromMSecsSinceEpoch(qint64 msecs) const
     {
         return QDateTime::fromMSecsSinceEpoch(msecs).toString(QStringLiteral("dd.MM.yyyy HH:mm:ss.zzz"));
     }
@@ -515,7 +515,7 @@ public:
     enum SPECIAL_ROWS { TOTAL, NUM_SPECIAL_ROWS };
     enum COLUMNS { DurationColumn, CallsColumn, AvgDurationColumn, QueryColumn, NUM_COLUMNS };
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
+    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || section < 0 || section >= NUM_COLUMNS || (role != Qt::DisplayRole && role != Qt::ToolTipRole)) {
             return QVariant();
@@ -534,7 +534,7 @@ public:
         return QVariant();
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (role != Qt::DisplayRole && role != Qt::ToolTipRole) {
             return QVariant();
@@ -568,7 +568,7 @@ public:
         return QVariant();
     }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mQueries.size() + NUM_SPECIAL_ROWS;
@@ -577,7 +577,7 @@ public:
         }
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return NUM_COLUMNS;
