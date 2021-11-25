@@ -72,9 +72,7 @@ private:
     class Node
     {
     public:
-        virtual ~Node()
-        {
-        }
+        virtual ~Node() = default;
 
         Node *parent;
         RowType type;
@@ -278,13 +276,13 @@ public:
     Q_REQUIRED_RESULT QModelIndex parent(const QModelIndex &child) const override
     {
         if (!child.isValid() || !child.internalPointer()) {
-            return QModelIndex();
+            return {};
         }
 
         Node *childNode = reinterpret_cast<Node *>(child.internalPointer());
         // childNode is a Connection
         if (!childNode->parent) {
-            return QModelIndex();
+            return {};
         }
 
         // childNode is a query in transaction
@@ -304,7 +302,7 @@ public:
             if (row < mConnections.count()) {
                 return createIndex(row, column, mConnections.at(row));
             } else {
-                return QModelIndex();
+                return {};
             }
         }
 
@@ -314,17 +312,17 @@ public:
             if (row < static_cast<ConnectionNode *>(parentNode)->queries.count()) {
                 return createIndex(row, column, static_cast<ConnectionNode *>(parentNode)->queries.at(row));
             } else {
-                return QModelIndex();
+                return {};
             }
         case Transaction:
             if (row < static_cast<TransactionNode *>(parentNode)->queries.count()) {
                 return createIndex(row, column, static_cast<TransactionNode *>(parentNode)->queries.at(row));
             } else {
-                return QModelIndex();
+                return {};
             }
         case Query:
             // Query can never have children
-            return QModelIndex();
+            return {};
         }
 
         Q_UNREACHABLE();
@@ -333,7 +331,7 @@ public:
     Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role) const override
     {
         if (orientation != Qt::Horizontal || role != Qt::DisplayRole) {
-            return QVariant();
+            return {};
         }
 
         switch (section) {
@@ -349,13 +347,13 @@ public:
             return QStringLiteral("Error");
         }
 
-        return QVariant();
+        return {};
     }
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override
     {
         if (!index.isValid()) {
-            return QVariant();
+            return {};
         }
 
         Node *node = reinterpret_cast<Node *>(index.internalPointer());
@@ -427,7 +425,7 @@ private:
     QVariant connectionData(ConnectionNode *connection, int column, int role) const
     {
         if (role != Qt::DisplayRole) {
-            return QVariant();
+            return {};
         }
 
         switch (column) {
@@ -437,7 +435,7 @@ private:
             return fromMSecsSinceEpoch(connection->start);
         }
 
-        return QVariant();
+        return {};
     }
 
     QVariant transactionData(TransactionNode *transaction, int column, int role) const
@@ -493,7 +491,7 @@ private:
             return query->values;
         }
 
-        return QVariant();
+        return {};
     }
 
     QVector<ConnectionNode *> mConnections;
@@ -518,7 +516,7 @@ public:
     Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || section < 0 || section >= NUM_COLUMNS || (role != Qt::DisplayRole && role != Qt::ToolTipRole)) {
-            return QVariant();
+            return {};
         }
 
         if (section == QueryColumn) {
@@ -531,22 +529,22 @@ public:
             return QStringLiteral("Avg. Duration [ms]");
         }
 
-        return QVariant();
+        return {};
     }
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (role != Qt::DisplayRole && role != Qt::ToolTipRole) {
-            return QVariant();
+            return {};
         }
 
         const int row = index.row();
         if (row < 0 || row >= rowCount(index.parent())) {
-            return QVariant();
+            return {};
         }
         const int column = index.column();
         if (column < 0 || column >= NUM_COLUMNS) {
-            return QVariant();
+            return {};
         }
 
         const QueryInfo &info = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
@@ -565,7 +563,7 @@ public:
             return float(info.duration) / info.calls;
         }
 
-        return QVariant();
+        return {};
     }
 
     Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override

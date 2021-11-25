@@ -25,9 +25,7 @@ LoggingFilterModel::LoggingFilterModel(QObject *parent)
     connect(&mInvalidateTimer, &QTimer::timeout, this, &LoggingFilterModel::invalidate);
 }
 
-LoggingFilterModel::~LoggingFilterModel()
-{
-}
+LoggingFilterModel::~LoggingFilterModel() = default;
 
 void LoggingFilterModel::setAppFilter(KCheckComboBox *appFilter)
 {

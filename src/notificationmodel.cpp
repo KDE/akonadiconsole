@@ -57,7 +57,7 @@ QModelIndex NotificationModel::parent(const QModelIndex &child) const
 QVariant NotificationModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole || role == Qt::ToolTipRole) {
@@ -194,7 +194,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(m_data.at(index.row()));
     }
 
-    return QVariant();
+    return {};
 }
 
 QVariant NotificationModel::headerData(int section, Qt::Orientation orientation, int role) const

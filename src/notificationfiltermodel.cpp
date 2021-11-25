@@ -26,9 +26,7 @@ NotificationFilterModel::NotificationFilterModel(QObject *parent)
     connect(&mInvalidateTimer, &QTimer::timeout, this, &NotificationFilterModel::invalidateFilter);
 }
 
-NotificationFilterModel::~NotificationFilterModel()
-{
-}
+NotificationFilterModel::~NotificationFilterModel() = default;
 
 void NotificationFilterModel::setTypeFilter(KPIM::KCheckComboBox *typeFilter)
 {

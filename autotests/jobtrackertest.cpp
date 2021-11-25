@@ -29,9 +29,7 @@ JobTrackerTest::JobTrackerTest(QObject *parent)
 {
 }
 
-JobTrackerTest::~JobTrackerTest()
-{
-}
+JobTrackerTest::~JobTrackerTest() = default;
 
 void JobTrackerTest::initTestCase()
 {

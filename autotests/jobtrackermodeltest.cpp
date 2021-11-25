@@ -33,9 +33,7 @@ JobTrackerModelTest::JobTrackerModelTest(QObject *parent)
 {
 }
 
-JobTrackerModelTest::~JobTrackerModelTest()
-{
-}
+JobTrackerModelTest::~JobTrackerModelTest() = default;
 
 void JobTrackerModelTest::initTestCase()
 {

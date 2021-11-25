@@ -82,7 +82,7 @@ int AgentConfigModel::rowCount(const QModelIndex &parent) const
 QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= m_settings.size()) {
-        return QVariant();
+        return {};
     }
     QPair<QString, QVariant> setting = m_settings.at(index.row());
     if (role == Qt::DisplayRole || role == Qt::EditRole) {
@@ -98,7 +98,7 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
             return QLatin1String(setting.second.typeName());
         }
     }
-    return QVariant();
+    return {};
 }
 
 bool AgentConfigModel::setData(const QModelIndex &index, const QVariant &value, int role)

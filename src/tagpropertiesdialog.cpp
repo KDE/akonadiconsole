@@ -29,9 +29,7 @@ TagPropertiesDialog::TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *paren
     setupUi();
 }
 
-TagPropertiesDialog::~TagPropertiesDialog()
-{
-}
+TagPropertiesDialog::~TagPropertiesDialog() = default;
 
 Tag TagPropertiesDialog::tag() const
 {

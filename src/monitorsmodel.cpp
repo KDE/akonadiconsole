@@ -22,9 +22,7 @@ MonitorsModel::MonitorsModel(QObject *parent)
     QTimer::singleShot(0, this, &MonitorsModel::init);
 }
 
-MonitorsModel::~MonitorsModel()
-{
-}
+MonitorsModel::~MonitorsModel() = default;
 
 void MonitorsModel::init()
 {
@@ -100,13 +98,13 @@ QVariant MonitorsModel::headerData(int section, Qt::Orientation orientation, int
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 QVariant MonitorsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.column() != 0) {
-        return QVariant();
+        return {};
     }
     if ((int)index.internalId() == -1) {
         if (index.row() >= mSessions.count()) {
@@ -130,7 +128,7 @@ QVariant MonitorsModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 int MonitorsModel::columnCount(const QModelIndex &parent) const
@@ -161,7 +159,7 @@ QModelIndex MonitorsModel::parent(const QModelIndex &child) const
         return index(child.internalId(), 0, {});
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex MonitorsModel::index(int row, int column, const QModelIndex &parent) const

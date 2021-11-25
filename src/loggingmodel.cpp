@@ -17,9 +17,7 @@ LoggingModel::LoggingModel(QObject *parent)
 {
 }
 
-LoggingModel::~LoggingModel()
-{
-}
+LoggingModel::~LoggingModel() = default;
 
 QString LoggingModel::cacheString(const QString &str, QSet<QString> &cache, QStandardItemModel *model)
 {

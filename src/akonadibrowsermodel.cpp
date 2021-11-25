@@ -19,9 +19,7 @@ using IncidencePtr = QSharedPointer<KCalendarCore::Incidence>;
 class AkonadiBrowserModel::State
 {
 public:
-    virtual ~State()
-    {
-    }
+    virtual ~State() = default;
 
     QStringList m_collectionHeaders;
     QStringList m_itemHeaders;
@@ -38,16 +36,14 @@ public:
         m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("GID") << QStringLiteral("MimeType");
     }
 
-    ~GenericState() override
-    {
-    }
+    ~GenericState() override = default;
 
     enum Columns { IdColumn = 0, RemoteIdColumn = 1, GIDColumn = 2, MimeTypeColumn = 3 };
 
     Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
-            return QVariant();
+            return {};
         }
 
         switch (column) {
@@ -60,7 +56,7 @@ public:
         case MimeTypeColumn:
             return item.mimeType();
         }
-        return QVariant();
+        return {};
     }
 };
 
@@ -73,18 +69,16 @@ public:
         m_itemHeaders << QStringLiteral("Subject") << QStringLiteral("Sender") << QStringLiteral("Date");
     }
 
-    ~MailState() override
-    {
-    }
+    ~MailState() override = default;
 
     Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
-            return QVariant();
+            return {};
         }
 
         if (!item.hasPayload<KMime::Message::Ptr>()) {
-            return QVariant();
+            return {};
         }
         const auto mail = item.payload<KMime::Message::Ptr>();
 
@@ -110,7 +104,7 @@ public:
             }
         }
 
-        return QVariant();
+        return {};
     }
 };
 
@@ -123,18 +117,16 @@ public:
         m_itemHeaders << QStringLiteral("Given Name") << QStringLiteral("Family Name") << QStringLiteral("Email");
     }
 
-    ~ContactsState() override
-    {
-    }
+    ~ContactsState() override = default;
 
     Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
-            return QVariant();
+            return {};
         }
 
         if (!item.hasPayload<KContacts::Addressee>() && !item.hasPayload<KContacts::ContactGroup>()) {
-            return QVariant();
+            return {};
         }
 
         if (item.hasPayload<KContacts::Addressee>()) {
@@ -148,7 +140,7 @@ public:
             case 2:
                 return addr.preferredEmail();
             }
-            return QVariant();
+            return {};
         }
         if (item.hasPayload<KContacts::ContactGroup>()) {
             switch (column) {
@@ -156,9 +148,9 @@ public:
                 const auto group = item.payload<KContacts::ContactGroup>();
                 return group.name();
             }
-            return QVariant();
+            return {};
         }
-        return QVariant();
+        return {};
     }
 };
 
@@ -172,18 +164,16 @@ public:
                       << QStringLiteral("Type");
     }
 
-    ~CalendarState() override
-    {
-    }
+    ~CalendarState() override = default;
 
     Q_REQUIRED_RESULT QVariant entityData(const Item &item, int column, int role) const override
     {
         if (Qt::DisplayRole != role) {
-            return QVariant();
+            return {};
         }
 
         if (!item.hasPayload<IncidencePtr>()) {
-            return QVariant();
+            return {};
         }
         const auto incidence = item.payload<IncidencePtr>();
         // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
@@ -201,7 +191,7 @@ public:
         default:
             break;
         }
-        return QVariant();
+        return {};
     }
 };
 
@@ -258,7 +248,7 @@ int AkonadiBrowserModel::entityColumnCount(HeaderGroup headerGroup) const
 QVariant AkonadiBrowserModel::entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const
 {
     if (section < 0) {
-        return QVariant();
+        return {};
     }
 
     if (orientation == Qt::Vertical) {
@@ -268,14 +258,14 @@ QVariant AkonadiBrowserModel::entityHeaderData(int section, Qt::Orientation orie
     if (headerGroup == EntityTreeModel::CollectionTreeHeaders) {
         if (role == Qt::DisplayRole) {
             if (section >= m_currentState->m_collectionHeaders.size()) {
-                return QVariant();
+                return {};
             }
             return m_currentState->m_collectionHeaders.at(section);
         }
     } else if (headerGroup == EntityTreeModel::ItemListHeaders) {
         if (role == Qt::DisplayRole) {
             if (section >= m_currentState->m_itemHeaders.size()) {
-                return QVariant();
+                return {};
             }
             return m_currentState->m_itemHeaders.at(section);
         }
@@ -335,9 +325,7 @@ AkonadiBrowserSortModel::AkonadiBrowserSortModel(AkonadiBrowserModel *model, QOb
 {
 }
 
-AkonadiBrowserSortModel::~AkonadiBrowserSortModel()
-{
-}
+AkonadiBrowserSortModel::~AkonadiBrowserSortModel() = default;
 
 bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {

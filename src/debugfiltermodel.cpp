@@ -27,9 +27,7 @@ DebugFilterModel::DebugFilterModel(QObject *parent)
     connect(&mInvalidateTimer, &QTimer::timeout, this, &DebugFilterModel::invalidate);
 }
 
-DebugFilterModel::~DebugFilterModel()
-{
-}
+DebugFilterModel::~DebugFilterModel() = default;
 
 void DebugFilterModel::setSenderFilter(KCheckComboBox *senderFilter)
 {

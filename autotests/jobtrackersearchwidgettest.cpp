@@ -18,9 +18,7 @@ JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
 {
 }
 
-JobTrackerSearchWidgetTest::~JobTrackerSearchWidgetTest()
-{
-}
+JobTrackerSearchWidgetTest::~JobTrackerSearchWidgetTest() = default;
 
 void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
 {

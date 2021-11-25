@@ -18,9 +18,7 @@ DebugModel::DebugModel(QObject *parent)
 {
 }
 
-DebugModel::~DebugModel()
-{
-}
+DebugModel::~DebugModel() = default;
 
 QString DebugModel::displaySender(const QString &identifer) const
 {

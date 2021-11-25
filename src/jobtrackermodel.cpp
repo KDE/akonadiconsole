@@ -69,21 +69,21 @@ JobTracker &JobTrackerModel::jobTracker()
 QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (column < 0 || column >= NumColumns) {
-        return QModelIndex();
+        return {};
     }
     if (!parent.isValid()) { // session, at top level
         if (row < 0 || row >= d->tracker.sessions().size()) {
-            return QModelIndex();
+            return {};
         }
         return createIndex(row, column, d->tracker.idForSession(d->tracker.sessions().at(row)));
     }
     if (parent.column() != 0) {
-        return QModelIndex();
+        return {};
     }
     // job, i.e. non-toplevel
     const int jobCount = d->tracker.jobCount(parent.internalId());
     if (row < 0 || row >= jobCount) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(row, column, d->tracker.jobIdAt(row, parent.internalId()));
 }
@@ -91,19 +91,19 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &paren
 QModelIndex JobTrackerModel::parent(const QModelIndex &idx) const
 {
     if (!idx.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     const int parentid = d->tracker.parentId(idx.internalId());
     if (parentid == -1) {
-        return QModelIndex(); // top level session
+        return {}; // top level session
     }
 
     const int row = d->rowForParentId(parentid);
     if (row >= 0) {
         return createIndex(row, 0, parentid);
     } else {
-        return QModelIndex();
+        return {};
     }
 }
 
@@ -151,7 +151,7 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
         const int id = idx.internalId();
         if (role != Qt::DisplayRole && role != Qt::ForegroundRole && role != Qt::FontRole && role != Qt::ToolTipRole && role != FailedIdRole) {
             // Avoid the QHash lookup for all other roles
-            return QVariant();
+            return {};
         }
         const JobInfo info = d->tracker.info(id);
         if (role == Qt::DisplayRole) {
@@ -195,7 +195,7 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
             return info.state == JobInfo::Failed;
         }
     }
-    return QVariant();
+    return {};
 }
 
 QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -220,7 +220,7 @@ QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, i
             }
         }
     }
-    return QVariant();
+    return {};
 }
 
 void JobTrackerModel::resetTracker()

@@ -44,9 +44,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     connect(mSelectColumn, &QComboBox::currentIndexChanged, this, &JobTrackerSearchWidget::slotColumnChanged);
 }
 
-JobTrackerSearchWidget::~JobTrackerSearchWidget()
-{
-}
+JobTrackerSearchWidget::~JobTrackerSearchWidget() = default;
 
 void JobTrackerSearchWidget::slotColumnChanged(int index)
 {

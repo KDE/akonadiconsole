@@ -16,9 +16,7 @@ JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
     setDynamicSortFilter(true);
 }
 
-JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
-{
-}
+JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel() = default;
 
 bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {

@@ -228,7 +228,7 @@ QString JobTracker::sessionForId(int _id) const
     if (!d->sessions.isEmpty()) {
         return d->sessions.at(id);
     } else {
-        return QString();
+        return {};
     }
 }
 
