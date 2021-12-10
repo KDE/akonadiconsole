@@ -408,16 +408,16 @@ void AgentWidget::currentChanged()
         QString agentStatus;
         switch (instance.status()) {
         case AgentInstance::Idle:
-            agentStatus = i18nc("agent is in an idle state", "Idle");
+            agentStatus = QStringLiteral("Idle");
             break;
         case AgentInstance::Running:
-            agentStatus = i18nc("agent is running", "Running (%1%)", instance.progress());
+            agentStatus = QStringLiteral("Running (%1%)").arg(instance.progress());
             break;
         case AgentInstance::Broken:
-            agentStatus = i18nc("agent is broken somehow", "Broken");
+            agentStatus = QStringLiteral("Broken");
             break;
         case AgentInstance::NotConfigured:
-            agentStatus = i18nc("agent is not yet configured", "Not Configured");
+            agentStatus = QStringLiteral("Not Configured");
             break;
         }
         ui.statusLabel->setText(i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"", "%1, %2", onlineStatus, agentStatus));
