@@ -8,7 +8,7 @@
 #include "notificationfiltermodel.h"
 #include "notificationmodel.h"
 
-#include <KCheckComboBox>
+#include <Libkdepim/KCheckComboBox>
 #include <QStandardItemModel>
 #include <chrono>
 

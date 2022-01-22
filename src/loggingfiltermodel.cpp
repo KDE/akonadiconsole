@@ -8,7 +8,7 @@
 #include "akonadiconsole_debug.h"
 #include "loggingmodel.h"
 
-#include <KCheckComboBox>
+#include <Libkdepim/KCheckComboBox>
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(LoggingModel::Message)
 #endif

@@ -29,9 +29,9 @@
 #include <QTreeView>
 #include <QVBoxLayout>
 
-#include <KCheckComboBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <Libkdepim/KCheckComboBox>
 
 using KPIM::KCheckComboBox;
 

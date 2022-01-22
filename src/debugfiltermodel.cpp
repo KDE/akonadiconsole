@@ -8,7 +8,7 @@
 #include "akonadiconsole_debug.h"
 #include "debugmodel.h"
 
-#include <KCheckComboBox>
+#include <Libkdepim/KCheckComboBox>
 #include <chrono>
 
 using namespace std::chrono_literals;

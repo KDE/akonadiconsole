@@ -11,7 +11,7 @@
 #include "debugfiltermodel.h"
 #include "debugmodel.h"
 
-#include <KCheckComboBox>
+#include <Libkdepim/KCheckComboBox>
 
 #include <QHeaderView>
 #include <QLabel>

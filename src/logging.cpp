@@ -20,7 +20,7 @@
 #include <QStandardItemModel>
 #include <QTreeView>
 
-#include <KCheckComboBox>
+#include <Libkdepim/KCheckComboBox>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
