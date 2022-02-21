@@ -65,8 +65,8 @@
 #include <QVBoxLayout>
 
 #ifdef ENABLE_CONTENTVIEWS
-#include <Akonadi/Contact/ContactGroupViewer>
-#include <Akonadi/Contact/ContactViewer>
+#include <Akonadi/ContactGroupViewer>
+#include <Akonadi/ContactViewer>
 #include <CalendarSupport/IncidenceViewer>
 #include <MessageViewer/Viewer>
 #endif
