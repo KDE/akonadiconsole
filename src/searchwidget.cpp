@@ -17,8 +17,8 @@
 #include <Akonadi/ItemSearchJob>
 #include <Akonadi/SearchQuery>
 
-#include <AkonadiSearch/Core/searchstore.h>
-#include <AkonadiSearch/Xapian/xapiansearchstore.h>
+#include <Core/searchstore.h>
+#include <Xapian/xapiansearchstore.h>
 
 #include <KComboBox>
 #include <KConfigGroup>
