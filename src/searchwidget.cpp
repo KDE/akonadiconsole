@@ -95,6 +95,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     layout->addWidget(mVSplitter);
 
     const auto stores = Akonadi::Search::SearchStore::searchStores();
+    qDebug() << " stores " << stores.count();
     for (const auto &store : stores) {
         mStoreCombo->addItem(store->types().last(), QVariant::fromValue(store));
     }
