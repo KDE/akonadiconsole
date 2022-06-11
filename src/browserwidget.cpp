@@ -64,7 +64,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 
-#ifdef ENABLE_CONTENTVIEWS
+#if ENABLE_CONTENTVIEWS
 #include <Akonadi/ContactGroupViewer>
 #include <Akonadi/ContactViewer>
 #include <CalendarSupport/IncidenceViewer>
@@ -195,7 +195,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     connect(contentUi.saveButton, &QPushButton::clicked, this, &BrowserWidget::save);
     splitter3->addWidget(contentViewParent);
 
-#ifdef ENABLE_CONTENTVIEWS
+#if ENABLE_CONTENTVIEWS
     auto w = new QWidget;
     w->setLayout(new QVBoxLayout);
     w->layout()->addWidget(mContactView = new Akonadi::ContactViewer);
@@ -308,7 +308,7 @@ void BrowserWidget::contentViewChanged()
 void BrowserWidget::setItem(const Akonadi::Item &item)
 {
     mCurrentItem = item;
-#ifdef ENABLE_CONTENTVIEWS
+#if ENABLE_CONTENTVIEWS
     if (item.hasPayload<KContacts::Addressee>()) {
         mContactView->setItem(item);
         contentUi.stack->setCurrentWidget(mContactView->parentWidget());

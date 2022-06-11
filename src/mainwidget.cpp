@@ -13,7 +13,7 @@
 #include "dbbrowser.h"
 #include "dbconsole.h"
 #include "debugwidget.h"
-#ifdef ENABLE_SEARCH
+#if ENABLE_SEARCH
 #include "searchwidget.h"
 #endif
 #include "jobtrackerwidget.h"
@@ -56,7 +56,7 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, QStringLiteral("Enable tracking of Resource Schedulers")),
                       QStringLiteral("Resources Schedulers"));
     tabWidget->addTab(new NotificationMonitor(tabWidget), QStringLiteral("Notification Monitor"));
-#ifdef ENABLE_SEARCH
+#if ENABLE_SEARCH
     tabWidget->addTab(new SearchWidget(tabWidget), QStringLiteral("Item Search"));
 #endif
     tabWidget->addTab(new MonitorsWidget(tabWidget), QStringLiteral("Monitors"));

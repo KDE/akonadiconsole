@@ -1,2 +1,2 @@
-#cmakedefine ENABLE_SEARCH 1
-#cmakedefine ENABLE_CONTENTVIEWS 1
+#cmakedefine01 ENABLE_SEARCH
+#cmakedefine01 ENABLE_CONTENTVIEWS
