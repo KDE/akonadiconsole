@@ -8,6 +8,7 @@
 #include "akonadiconsole_debug.h"
 #include "jobtrackermodel.h"
 #include <QDebug>
+#include <QRegularExpression>
 
 JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -30,11 +31,11 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
             }
         }
     }
-    QRegExp reg = filterRegExp();
-    if (reg.isEmpty()) {
+    QRegularExpression reg = filterRegularExpression();
+    if (reg.pattern().isEmpty()) {
         return true;
     }
-    reg.setCaseSensitivity(Qt::CaseInsensitive);
+    reg.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
     if (mSearchColumn == -1) { // search in all columns
         const int colCount = sourceModel()->columnCount();
         for (int i = 0; i < colCount; i++) {
