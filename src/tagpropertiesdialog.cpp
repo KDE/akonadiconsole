@@ -6,7 +6,7 @@
  */
 
 #include "tagpropertiesdialog.h"
-#include "dbaccess.h"
+#include <Akonadi/DbAccess>
 
 #include <Akonadi/AttributeFactory>
 #include <QDialogButtonBox>

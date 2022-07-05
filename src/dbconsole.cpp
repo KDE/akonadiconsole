@@ -5,7 +5,7 @@
 */
 
 #include "dbconsole.h"
-#include "dbaccess.h"
+#include <Akonadi/DbAccess>
 
 #include <QAction>
 

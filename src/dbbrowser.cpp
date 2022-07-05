@@ -5,7 +5,7 @@
 */
 
 #include "dbbrowser.h"
-#include "dbaccess.h"
+#include <Akonadi/DbAccess>
 
 #include <QSqlTableModel>
 

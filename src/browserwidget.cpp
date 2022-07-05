@@ -11,8 +11,8 @@
 #include "collectionattributespage.h"
 #include "collectioninternalspage.h"
 #include "config-akonadiconsole.h"
-#include "dbaccess.h"
 #include "tagpropertiesdialog.h"
+#include <Akonadi/DbAccess>
 
 #include <Akonadi/AttributeFactory>
 #include <Akonadi/ChangeRecorder>

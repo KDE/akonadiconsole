@@ -21,7 +21,6 @@ set(libakonadiconsole_SRCS
     collectioninternalspage.cpp
     collectionaclpage.cpp
     connectionpage.cpp
-    dbaccess.cpp
     dbbrowser.cpp
     dbconsole.cpp
     debugfiltermodel.cpp
@@ -74,7 +73,6 @@ set(libakonadiconsole_SRCS
     jobtrackerfilterproxymodel.h
     loggingmodel.h
     agentwidget.h
-    dbaccess.h
     debugmodel.h
     instanceselector.h
     ${libakonadiconsole_tracker_SRCS}
