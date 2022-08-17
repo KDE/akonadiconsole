@@ -12,10 +12,14 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="7">
-    <widget class="QLineEdit" name="mFilterAccount"/>
+    <widget class="QLineEdit" name="mFilterAccount">
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="1" column="0" colspan="7">
-    <widget class="Akonadi::AgentInstanceWidget" name="instanceWidget" native="true">
+    <widget class="Akonadi::AgentInstanceWidget" name="instanceWidget">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -250,7 +254,7 @@
   <customwidget>
    <class>Akonadi::AgentInstanceWidget</class>
    <extends>QWidget</extends>
-   <header location="global">Akonadi/AgentInstanceWidget</header>
+   <header>Akonadi/AgentInstanceWidget</header>
   </customwidget>
  </customwidgets>
  <resources/>
