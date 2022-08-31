@@ -28,6 +28,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QVBoxLayout(this);
+    layout->setContentsMargins({});
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {

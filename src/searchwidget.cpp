@@ -41,14 +41,16 @@ SearchWidget::SearchWidget(QWidget *parent)
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 
     auto layout = new QVBoxLayout(this);
+    layout->setContentsMargins({});
 
     auto hbox = new QHBoxLayout;
-    hbox->addWidget(new QLabel(QStringLiteral("Search store:")), 0, {});
-    mStoreCombo = new KComboBox;
+
+    hbox->addWidget(new QLabel(QStringLiteral("Search store:"), this));
+    mStoreCombo = new KComboBox(this);
     mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
     hbox->addWidget(mStoreCombo);
     hbox->addStretch();
-    auto button = new QPushButton(QStringLiteral("Search"));
+    auto button = new QPushButton(QStringLiteral("Search"), this);
     hbox->addWidget(button);
     layout->addLayout(hbox);
 
@@ -56,7 +58,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mVSplitter->setObjectName(QStringLiteral("SearchVSplitter"));
     auto w = new QWidget;
     auto vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Search query:")));
+    vbox->addWidget(new QLabel(QStringLiteral("Search query:"), this));
     mQueryWidget = new QPlainTextEdit;
     vbox->addWidget(mQueryWidget);
     mVSplitter->addWidget(w);
@@ -65,8 +67,8 @@ SearchWidget::SearchWidget(QWidget *parent)
     mHSplitter->setObjectName(QStringLiteral("SearchHSplitter"));
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Results (Documents):")));
-    mDatabaseView = new QListView;
+    vbox->addWidget(new QLabel(QStringLiteral("Results (Documents):"), this));
+    mDatabaseView = new QListView(this);
     mDatabaseView->setEditTriggers(QListView::NoEditTriggers);
     mDocumentModel = new QStandardItemModel(this);
     mDatabaseView->setModel(mDocumentModel);
