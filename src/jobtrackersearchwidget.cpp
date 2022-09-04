@@ -13,24 +13,24 @@
 
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
+    , mSearchLineEdit(new QLineEdit(this))
+    , mSelectColumn(new QComboBox(this))
+    , mSelectOnlyError(new QCheckBox(QStringLiteral("Show Only Errors"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    mSearchLineEdit = new QLineEdit(this);
     mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
 
-    mSelectOnlyError = new QCheckBox(QStringLiteral("Show Only Errors"), this);
     mSelectOnlyError->setObjectName(QStringLiteral("selectonlyerror"));
     mainLayout->addWidget(mSelectOnlyError);
     connect(mSelectOnlyError, &QCheckBox::toggled, this, &JobTrackerSearchWidget::selectOnlyErrorChanged);
 
-    mSelectColumn = new QComboBox(this);
     mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
     mainLayout->addWidget(mSelectColumn);
     mSelectColumn->addItem(QStringLiteral("All Columns"), -1);

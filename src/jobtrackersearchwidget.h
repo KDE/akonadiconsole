@@ -29,8 +29,8 @@ private Q_SLOTS:
     void slotColumnChanged(int index);
 
 private:
-    QLineEdit *mSearchLineEdit = nullptr;
-    QComboBox *mSelectColumn = nullptr;
-    QCheckBox *mSelectOnlyError = nullptr;
+    QLineEdit *const mSearchLineEdit;
+    QComboBox *const mSelectColumn;
+    QCheckBox *const mSelectOnlyError;
 };
 

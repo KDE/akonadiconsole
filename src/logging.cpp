@@ -39,7 +39,7 @@ Logging::Logging(QWidget *parent)
     auto l = new QVBoxLayout(this);
     setLayout(l);
 
-    mEnabledCheckbox = new QCheckBox(QStringLiteral("Enable"));
+    mEnabledCheckbox = new QCheckBox(QStringLiteral("Enable"), this);
     connect(mEnabledCheckbox, &QCheckBox::toggled, this, [this](bool toggled) {
         Q_EMIT enabledChanged(toggled);
     });
@@ -48,10 +48,10 @@ Logging::Logging(QWidget *parent)
     auto h = new QHBoxLayout;
     l->addLayout(h);
 
-    h->addWidget(new QLabel(QStringLiteral("Programs:")));
+    h->addWidget(new QLabel(QStringLiteral("Programs:"), this));
     h->addWidget(mAppFilter = new KCheckComboBox());
     h->setStretchFactor(mAppFilter, 2);
-    h->addWidget(new QLabel(QStringLiteral("Types:")));
+    h->addWidget(new QLabel(QStringLiteral("Types:"), this));
     h->addWidget(mTypeFilter = new KCheckComboBox());
     h->setStretchFactor(mTypeFilter, 2);
     mTypeFilter->addItem(QStringLiteral("Debug"), QtDebugMsg);
@@ -85,7 +85,7 @@ Logging::Logging(QWidget *parent)
     h = new QHBoxLayout;
     l->addLayout(h);
 
-    auto btn = new QPushButton(QStringLiteral("Save to File..."));
+    auto btn = new QPushButton(QStringLiteral("Save to File..."), this);
     connect(btn, &QPushButton::clicked, this, &Logging::saveToFile);
     h->addWidget(btn);
     h->addStretch(1);

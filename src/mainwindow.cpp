@@ -20,8 +20,8 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
+    , mMain(new MainWidget(this))
 {
-    mMain = new MainWidget(this);
     setCentralWidget(mMain);
 
     KStandardAction::quit(qApp, &QApplication::quit, actionCollection());

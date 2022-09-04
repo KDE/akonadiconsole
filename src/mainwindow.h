@@ -24,6 +24,6 @@ protected:
     void closeEvent(QCloseEvent *event) override;
 
 private:
-    MainWidget *mMain;
+    MainWidget *const mMain;
 };
 

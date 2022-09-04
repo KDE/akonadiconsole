@@ -36,6 +36,6 @@ private Q_SLOTS:
 private:
     QTreeView *mTreeView = nullptr;
     QTreeView *mSubscriberView = nullptr;
-    MonitorsModel *mModel = nullptr;
+    MonitorsModel *const mModel;
 };
 

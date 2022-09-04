@@ -27,9 +27,8 @@ Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 
 MonitorsWidget::MonitorsWidget(QWidget *parent)
     : QWidget(parent)
+    , mModel(new MonitorsModel(this))
 {
-    mModel = new MonitorsModel(this);
-
     auto layout = new QHBoxLayout(this);
 
     mTreeView = new QTreeView(this);
