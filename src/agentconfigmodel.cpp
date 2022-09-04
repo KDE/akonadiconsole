@@ -12,7 +12,6 @@
 
 AgentConfigModel::AgentConfigModel(QObject *parent)
     : QAbstractTableModel(parent)
-    , m_interface(nullptr)
 {
 }
 

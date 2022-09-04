@@ -47,7 +47,7 @@ private:
     DebugFilterModel *mFilterModel = nullptr;
     QTableView *mDataView = nullptr;
     KPIM::KCheckComboBox *mSenderFilter = nullptr;
-    QString mIdentifier;
-    bool mShowAllConnections;
+    const QString mIdentifier;
+    bool mShowAllConnections = false;
 };
 

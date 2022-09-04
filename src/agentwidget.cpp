@@ -41,9 +41,9 @@ class TextDialog : public QDialog
 public:
     explicit TextDialog(QWidget *parent = nullptr)
         : QDialog(parent)
+        , mText(new QPlainTextEdit(this))
     {
         auto mainLayout = new QVBoxLayout(this);
-        mText = new QPlainTextEdit(this);
         mText->setReadOnly(true);
 
         auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
@@ -64,7 +64,7 @@ public:
     }
 
 private:
-    QPlainTextEdit *mText = nullptr;
+    QPlainTextEdit *const mText;
 };
 
 using namespace Akonadi;

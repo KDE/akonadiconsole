@@ -28,7 +28,6 @@ Q_DECLARE_METATYPE(DebugModel::Message)
 ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     : QWidget(parent)
     , mIdentifier(identifier)
-    , mShowAllConnections(false)
 {
     auto layout = new QVBoxLayout(this);
     auto h = new QHBoxLayout;

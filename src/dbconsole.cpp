@@ -81,7 +81,6 @@ DbConsoleTab *DbConsole::addTab()
 
 DbConsoleTab::DbConsoleTab(int index, QWidget *parent)
     : QWidget(parent)
-    , mQueryModel(nullptr)
     , mIndex(index)
 {
     ui.setupUi(this);
