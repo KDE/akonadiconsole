@@ -59,8 +59,6 @@
 #include <QFileDialog>
 #include <QMenu>
 #include <QSplitter>
-#include <QSqlError>
-#include <QSqlQuery>
 #include <QStandardItemModel>
 #include <QTimer>
 #include <QVBoxLayout>

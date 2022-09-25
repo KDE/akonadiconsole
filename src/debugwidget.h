@@ -10,7 +10,6 @@
 
 #include "debuginterface.h"
 
-#include <QHash>
 #include <QWidget>
 
 class KTextEdit;
