@@ -49,4 +49,3 @@ private:
     QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;
 };
-

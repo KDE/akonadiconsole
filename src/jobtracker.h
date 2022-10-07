@@ -114,4 +114,3 @@ private:
 private:
     std::unique_ptr<JobTrackerPrivate> const d;
 };
-

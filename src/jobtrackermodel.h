@@ -60,4 +60,3 @@ private Q_SLOTS:
 private:
     std::unique_ptr<JobTrackerModelPrivate> const d;
 };
-

@@ -50,4 +50,3 @@ private:
     const QString mIdentifier;
     bool mShowAllConnections = false;
 };
-

@@ -32,4 +32,3 @@ private:
     QSet<QString> mCheckedSenders;
     QTimer mInvalidateTimer;
 };
-

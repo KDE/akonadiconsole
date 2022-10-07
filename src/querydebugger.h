@@ -69,4 +69,3 @@ private:
     QueryDebuggerModel *mQueryList = nullptr;
     QueryTreeModel *mQueryTree = nullptr;
 };
-

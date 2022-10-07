@@ -60,4 +60,3 @@ private:
     QMenu *mSyncMenu, *mConfigMenu;
     Akonadi::AgentInstance mCloneSource;
 };
-

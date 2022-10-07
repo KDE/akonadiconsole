@@ -53,4 +53,3 @@ private:
     QTreeView *mView = nullptr;
     LoggingModel *mModel = nullptr;
 };
-

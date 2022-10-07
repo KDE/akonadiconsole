@@ -50,4 +50,3 @@ private:
     QSqlQueryModel *mQueryModel = nullptr;
     int mIndex;
 };
-

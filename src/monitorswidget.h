@@ -38,4 +38,3 @@ private:
     QTreeView *mSubscriberView = nullptr;
     MonitorsModel *const mModel;
 };
-

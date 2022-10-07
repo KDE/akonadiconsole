@@ -33,4 +33,3 @@ private:
     QComboBox *const mSelectColumn;
     QCheckBox *const mSelectOnlyError;
 };
-

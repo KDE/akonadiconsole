@@ -66,7 +66,8 @@ MonitorsWidget::~MonitorsWidget()
 }
 
 // Specialization of function template from utils.h
-template<> QString toString(const QSet<Akonadi::Monitor::Type> &set)
+template<>
+QString toString(const QSet<Akonadi::Monitor::Type> &set)
 {
     QStringList rv;
     for (const auto &v : set) {

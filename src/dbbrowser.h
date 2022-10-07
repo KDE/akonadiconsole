@@ -24,4 +24,3 @@ private:
     Ui::DbBrowser ui;
     QSqlTableModel *mTableModel = nullptr;
 };
-

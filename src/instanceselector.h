@@ -41,4 +41,3 @@ private:
     QString m_instance;
     MainWindow *mWindow = nullptr;
 };
-

@@ -27,4 +27,3 @@ private:
     AgentConfigModel *const m_model;
     Akonadi::AgentInstance m_instance;
 };
-

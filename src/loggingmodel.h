@@ -77,4 +77,3 @@ private:
     QSet<QString> mFileCache;
     QSet<QString> mFunctionCache;
 };
-

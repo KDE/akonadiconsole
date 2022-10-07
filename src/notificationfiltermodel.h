@@ -45,4 +45,3 @@ private:
     QSet<QString> mTypes;
     QTimer mInvalidateTimer;
 };
-

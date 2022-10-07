@@ -26,4 +26,3 @@ protected:
 private:
     MainWidget *const mMain;
 };
-

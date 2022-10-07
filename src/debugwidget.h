@@ -38,4 +38,3 @@ private:
     ConnectionPage *mConnectionPage = nullptr;
     org::freedesktop::Akonadi::DebugInterface *mDebugInterface = nullptr;
 };
-

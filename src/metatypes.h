@@ -12,4 +12,3 @@
 
 Q_DECLARE_METATYPE(QList<QByteArray>)
 Q_DECLARE_METATYPE(QList<long long>)
-

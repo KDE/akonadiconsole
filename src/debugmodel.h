@@ -59,4 +59,3 @@ private:
     QStandardItemModel *mSenderFilterModel = nullptr;
     QMap<QString, QString> mSenderCache;
 };
-

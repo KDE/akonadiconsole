@@ -36,4 +36,3 @@ private:
     QVector<QPair<QString, QVariant>> m_settings;
     QDBusInterface *m_interface = nullptr;
 };
-

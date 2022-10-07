@@ -12,7 +12,8 @@
 
 #include <akonadi/private/protocol_p.h>
 
-template<typename T> typename std::enable_if<std::is_integral<T>::value, QString>::type toString(T num)
+template<typename T>
+typename std::enable_if<std::is_integral<T>::value, QString>::type toString(T num)
 {
     return QString::number(num);
 }
@@ -50,7 +51,8 @@ inline QString toString(Akonadi::Tristate tristate)
     return {};
 }
 
-template<typename T, template<typename> class Container> QString toString(const Container<T> &set)
+template<typename T, template<typename> class Container>
+QString toString(const Container<T> &set)
 {
     QStringList rv;
     for (const auto &v : set) {
@@ -72,4 +74,3 @@ inline void appendRow(QStandardItem *parent, const QString &name, const QString 
     item->setToolTip(value);
     parent->appendRow({new QStandardItem(name), item});
 }
-

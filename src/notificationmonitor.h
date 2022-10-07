@@ -56,4 +56,3 @@ private:
     KPIM::KCheckComboBox *mTypeFilterCombo = nullptr;
     NotificationFilterModel *m_filterModel = nullptr;
 };
-

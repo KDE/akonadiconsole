@@ -24,7 +24,8 @@ class KXmlGuiWindow;
 
 class AkonadiBrowserModel;
 
-template<typename T> class KViewStateMaintainer;
+template<typename T>
+class KViewStateMaintainer;
 
 namespace Akonadi
 {
@@ -108,4 +109,3 @@ private:
     CalendarSupport::IncidenceViewer *mIncidenceView = nullptr;
     MessageViewer::Viewer *mMailView = nullptr;
 };
-

@@ -46,4 +46,3 @@ void saveState(QWidget *widget, KConfigGroup &config);
 void restoreState(QWidget *widget, const KConfigGroup &config);
 }
 }
-

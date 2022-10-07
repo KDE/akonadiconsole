@@ -39,4 +39,3 @@ private:
 private:
     std::unique_ptr<JobTrackerWidgetPrivate> const d;
 };
-

@@ -60,4 +60,3 @@ protected:
 private:
     AkonadiBrowserModel *const mBrowserModel;
 };
-

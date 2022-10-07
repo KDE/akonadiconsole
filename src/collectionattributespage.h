@@ -33,4 +33,3 @@ private:
     QSet<QString> mDeleted;
     QSet<QString> mChanged;
 };
-

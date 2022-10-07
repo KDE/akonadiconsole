@@ -38,4 +38,3 @@ private:
     QSet<QtMsgType> mCheckedTypes;
     QTimer mInvalidateTimer;
 };
-

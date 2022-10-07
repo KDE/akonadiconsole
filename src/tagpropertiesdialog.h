@@ -53,4 +53,3 @@ private:
     QSet<QString> mChangedRIDs;
     QSet<QString> mRemovedRIDs;
 };
-

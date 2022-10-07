@@ -56,4 +56,3 @@ private:
 
     Xapian::Database *mDatabase = nullptr;
 };
-

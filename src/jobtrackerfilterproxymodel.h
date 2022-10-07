@@ -26,4 +26,3 @@ private:
     int mSearchColumn = -1;
     bool mShowOnlyFailed = false;
 };
-
