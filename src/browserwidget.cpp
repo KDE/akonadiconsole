@@ -68,6 +68,7 @@
 #include <Akonadi/ContactViewer>
 #include <CalendarSupport/IncidenceViewer>
 #include <MessageViewer/Viewer>
+#include <kwidgetsaddons_version.h>
 #endif
 
 using namespace Akonadi;
@@ -615,14 +616,23 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
 
 void BrowserWidget::removeTagRequested()
 {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (KMessageBox::questionTwoActions(this,
+#else
     if (KMessageBox::questionYesNo(this,
-                                   QStringLiteral("Do you really want to remove selected tag?"),
-                                   QStringLiteral("Delete tag?"),
-                                   KStandardGuiItem::del(),
-                                   KStandardGuiItem::cancel(),
-                                   QString(),
-                                   KMessageBox::Dangerous)
+
+#endif
+                                        QStringLiteral("Do you really want to remove selected tag?"),
+                                        QStringLiteral("Delete tag?"),
+                                        KStandardGuiItem::del(),
+                                        KStandardGuiItem::cancel(),
+                                        QString(),
+                                        KMessageBox::Dangerous)
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        == KMessageBox::ButtonCode::SecondaryAction) {
+#else
         == KMessageBox::No) {
+#endif
         return;
     }
 
