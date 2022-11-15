@@ -5,7 +5,7 @@ project(akonadiconsole VERSION ${PIM_VERSION})
 # Needs C++17 because Akonadi uses it and we link
 # against its private API
 
-set(KF5_MIN_VERSION "5.99.0")
+set(KF5_MIN_VERSION "5.100.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
