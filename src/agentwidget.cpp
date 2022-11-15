@@ -35,7 +35,6 @@
 #include <QPushButton>
 #include <QResizeEvent>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 class TextDialog : public QDialog
 {
@@ -195,12 +194,7 @@ void AgentWidget::removeAgent()
 {
     const AgentInstance::List list = ui.instanceWidget->selectedAgentInstances();
     if (!list.isEmpty()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (KMessageBox::questionTwoActions(
-#else
-        if (KMessageBox::questionYesNo(
-
-#endif
                 this,
                 i18np("Do you really want to delete the selected agent instance?", "Do you really want to delete these %1 agent instances?", list.size()),
                 list.size() == 1 ? QStringLiteral("Agent Deletion") : QStringLiteral("Multiple Agent Deletion"),
@@ -208,11 +202,7 @@ void AgentWidget::removeAgent()
                 KStandardGuiItem::cancel(),
                 QString(),
                 KMessageBox::Dangerous)
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-            == KMessageBox::Yes) {
-#endif
             for (const AgentInstance &agent : list) {
                 AgentManager::self()->removeInstance(agent);
             }
