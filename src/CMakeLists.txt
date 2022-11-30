@@ -125,14 +125,14 @@ qt_wrap_ui(libakonadiconsole_SRCS
     )
 
 
+add_library(libakonadiconsole ${libakonadiconsole_SRCS})
 
-ecm_qt_declare_logging_category(libakonadiconsole_SRCS HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole
+ecm_qt_declare_logging_category(libakonadiconsole HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole
         OLD_CATEGORY_NAMES log_akonadiconsole
         DESCRIPTION "akonadiconsole (akonadiconsole)" EXPORT AKONADICONSOLE)
 
 
 
-add_library(libakonadiconsole ${libakonadiconsole_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libakonadiconsole PROPERTIES UNITY_BUILD ON)
 endif()
