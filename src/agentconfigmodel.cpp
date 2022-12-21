@@ -88,7 +88,11 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
         if (index.column() == 0) {
             return setting.first;
         } else if (index.column() == 1) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             if (setting.second.type() == QVariant::StringList) {
+#else
+            if (setting.second.metaType().id() == QMetaType::QStringList) {
+#endif
                 return setting.second.toStringList().join(QStringLiteral(", "));
             } else {
                 return setting.second;
