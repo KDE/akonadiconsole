@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2017-2023 Laurent Montel <montel@kde.org>
   SPDX-FileCopyrightText: 2017 David Faure <faure@kde.org>
 
   SPDX-License-Identifier: GPL-2.0-or-later
@@ -8,7 +8,7 @@
 #include "jobtrackermodeltest.h"
 #include "jobtracker.h"
 #include "jobtrackermodel.h"
-//#include "modeltest.h"
+// #include "modeltest.h"
 #include <QSignalSpy>
 #include <QTest>
 #include <akonadi/private/instance_p.h>
