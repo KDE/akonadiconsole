@@ -5,9 +5,9 @@ project(akonadiconsole VERSION ${PIM_VERSION})
 # Needs C++17 because Akonadi uses it and we link
 # against its private API
 
-set(KF5_MIN_VERSION "5.102.0")
+set(KF_MIN_VERSION "5.102.0")
 
-find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
 
@@ -63,25 +63,25 @@ set(KMIME_LIB_VERSION "5.22.40")
 
 
 # Find KF5 package
-find_package(KF5Completion ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5ConfigWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5ItemModels ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5WidgetsAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5XmlGui ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5Completion ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5ItemViews ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5KIO ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Completion ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5ItemModels ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5Completion ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5ItemViews ${KF_MIN_VERSION} REQUIRED)
+find_package(KF5KIO ${KF_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5CalendarCore ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED) # Because of KPIM::KCheckComboBox
 
