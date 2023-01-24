@@ -144,13 +144,13 @@ target_link_libraries(libakonadiconsole
     KF5::AkonadiWidgets
     KF5::AkonadiXml
     KF5::Mime
-    KF5::Contacts
-    KF5::CalendarCore
+    KF${KF_MAJOR_VERSION}::Contacts
+    KF${KF_MAJOR_VERSION}::CalendarCore
     Qt::Sql
-    KF5::Completion
-    KF5::ItemViews
-    KF5::TextWidgets
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::ItemViews
+    KF${KF_MAJOR_VERSION}::TextWidgets
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::Libkdepim
     )
 
@@ -188,9 +188,9 @@ add_executable(akonadiconsole ${akonadiconsole_SRCS})
 
 target_link_libraries(akonadiconsole
     libakonadiconsole
-    KF5::DBusAddons
-    KF5::CoreAddons
-    KF5::Crash
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::Crash
 )
 
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
