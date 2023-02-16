@@ -27,7 +27,7 @@ CollectionAttributePage::CollectionAttributePage(QWidget *parent)
 
 void CollectionAttributePage::load(const Collection &col)
 {
-    Attribute::List list = col.attributes();
+    const Attribute::List list = col.attributes();
     mModel = new QStandardItemModel(list.count(), 2);
     QStringList labels;
     labels << i18n("Attribute") << i18n("Value");
