@@ -6,6 +6,7 @@
 
 #include "jobtrackersearchwidget.h"
 
+#include <KLocalizedString>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QHBoxLayout>
@@ -15,7 +16,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
     , mSearchLineEdit(new QLineEdit(this))
     , mSelectColumn(new QComboBox(this))
-    , mSelectOnlyError(new QCheckBox(QStringLiteral("Show Only Errors"), this))
+    , mSelectOnlyError(new QCheckBox(i18n("Show Only Errors"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -23,7 +24,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
 
     mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
-    mSearchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
+    mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
 
@@ -33,14 +34,14 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
 
     mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
     mainLayout->addWidget(mSelectColumn);
-    mSelectColumn->addItem(QStringLiteral("All Columns"), -1);
-    mSelectColumn->addItem(QStringLiteral("Job ID"), 0);
-    mSelectColumn->addItem(QStringLiteral("Created"), 1);
-    mSelectColumn->addItem(QStringLiteral("Wait time"), 2);
-    mSelectColumn->addItem(QStringLiteral("Job duration"), 3);
-    mSelectColumn->addItem(QStringLiteral("Job Type"), 4);
-    mSelectColumn->addItem(QStringLiteral("State"), 5);
-    mSelectColumn->addItem(QStringLiteral("Info"), 6);
+    mSelectColumn->addItem(i18n("All Columns"), -1);
+    mSelectColumn->addItem(i18n("Job ID"), 0);
+    mSelectColumn->addItem(i18n("Created"), 1);
+    mSelectColumn->addItem(i18n("Wait time"), 2);
+    mSelectColumn->addItem(i18n("Job duration"), 3);
+    mSelectColumn->addItem(i18n("Job Type"), 4);
+    mSelectColumn->addItem(i18n("State"), 5);
+    mSelectColumn->addItem(i18n("Info"), 6);
     connect(mSelectColumn, &QComboBox::currentIndexChanged, this, &JobTrackerSearchWidget::slotColumnChanged);
 }
 

@@ -9,6 +9,8 @@
 #include "akonadiconsole_debug.h"
 #include <Akonadi/ServerManager>
 
+#include <KLocalizedString>
+
 #include <QMetaMethod>
 #include <akonadi/private/imapparser_p.h>
 #include <akonadi/private/protocol_p.h>
@@ -67,15 +69,15 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
         case TypeColumn:
             switch (msg.type()) {
             case ChangeNotification::Items:
-                return QStringLiteral("Items");
+                return i18n("Items");
             case ChangeNotification::Collection:
-                return QStringLiteral("Collection");
+                return i18n("Collection");
             case ChangeNotification::Tag:
-                return QStringLiteral("Tag");
+                return i18n("Tag");
             case ChangeNotification::Relation:
-                return QStringLiteral("Relation");
+                return i18n("Relation");
             case ChangeNotification::Subscription:
-                return QStringLiteral("Subscription");
+                return i18n("Subscription");
             }
             return QStringLiteral("Unknown");
         case OperationColumn:
@@ -83,81 +85,81 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             case ChangeNotification::Items:
                 switch (Protocol::cmdCast<Protocol::ItemChangeNotification>(msg.notification()).operation()) {
                 case Protocol::ItemChangeNotification::Add:
-                    return QStringLiteral("Add");
+                    return i18n("Add");
                 case Protocol::ItemChangeNotification::Modify:
-                    return QStringLiteral("Modify");
+                    return i18n("Modify");
                 case Protocol::ItemChangeNotification::Move:
-                    return QStringLiteral("Move");
+                    return i18n("Move");
                 case Protocol::ItemChangeNotification::Remove:
-                    return QStringLiteral("Remove");
+                    return i18n("Remove");
                 case Protocol::ItemChangeNotification::Link:
-                    return QStringLiteral("Link");
+                    return i18n("Link");
                 case Protocol::ItemChangeNotification::Unlink:
-                    return QStringLiteral("Unlink");
+                    return i18n("Unlink");
                 case Protocol::ItemChangeNotification::ModifyFlags:
-                    return QStringLiteral("ModifyFlags");
+                    return i18n("ModifyFlags");
                 case Protocol::ItemChangeNotification::ModifyTags:
-                    return QStringLiteral("ModifyTags");
+                    return i18n("ModifyTags");
                 case Protocol::ItemChangeNotification::ModifyRelations:
-                    return QStringLiteral("ModifyRelations");
+                    return i18n("ModifyRelations");
                 case Protocol::ItemChangeNotification::InvalidOp:
-                    return QStringLiteral("InvalidOp");
+                    return i18n("InvalidOp");
                 }
                 return {};
             case ChangeNotification::Collection:
                 switch (Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).operation()) {
                 case Protocol::CollectionChangeNotification::Add:
-                    return QStringLiteral("Add");
+                    return i18n("Add");
                 case Protocol::CollectionChangeNotification::Modify:
-                    return QStringLiteral("Modify");
+                    return i18n("Modify");
                 case Protocol::CollectionChangeNotification::Move:
-                    return QStringLiteral("Move");
+                    return i18n("Move");
                 case Protocol::CollectionChangeNotification::Remove:
-                    return QStringLiteral("Remove");
+                    return i18n("Remove");
                 case Protocol::CollectionChangeNotification::Subscribe:
-                    return QStringLiteral("Subscribe");
+                    return i18n("Subscribe");
                 case Protocol::CollectionChangeNotification::Unsubscribe:
-                    return QStringLiteral("Unsubscribe");
+                    return i18n("Unsubscribe");
                 case Protocol::CollectionChangeNotification::InvalidOp:
-                    return QStringLiteral("InvalidIp");
+                    return i18n("InvalidIp");
                 }
                 return {};
             case ChangeNotification::Tag:
                 switch (Protocol::cmdCast<Protocol::TagChangeNotification>(msg.notification()).operation()) {
                 case Protocol::TagChangeNotification::Add:
-                    return QStringLiteral("Add");
+                    return i18n("Add");
                 case Protocol::TagChangeNotification::Modify:
-                    return QStringLiteral("Modify");
+                    return i18n("Modify");
                 case Protocol::TagChangeNotification::Remove:
-                    return QStringLiteral("Remove");
+                    return i18n("Remove");
                 case Protocol::TagChangeNotification::InvalidOp:
-                    return QStringLiteral("InvalidOp");
+                    return i18n("InvalidOp");
                 }
                 return {};
             case ChangeNotification::Relation:
                 switch (Protocol::cmdCast<Protocol::RelationChangeNotification>(msg.notification()).operation()) {
                 case Protocol::RelationChangeNotification::Add:
-                    return QStringLiteral("Add");
+                    return i18n("Add");
                 case Protocol::RelationChangeNotification::Remove:
-                    return QStringLiteral("Remove");
+                    return i18n("Remove");
                 case Protocol::RelationChangeNotification::InvalidOp:
-                    return QStringLiteral("InvalidOp");
+                    return i18n("InvalidOp");
                 }
                 return {};
             case ChangeNotification::Subscription:
                 switch (Protocol::cmdCast<Protocol::SubscriptionChangeNotification>(msg.notification()).operation()) {
                 case Akonadi::Protocol::SubscriptionChangeNotification::Add:
-                    return QStringLiteral("Add");
+                    return i18n("Add");
                 case Akonadi::Protocol::SubscriptionChangeNotification::Modify:
-                    return QStringLiteral("Modify");
+                    return i18n("Modify");
                 case Akonadi::Protocol::SubscriptionChangeNotification::Remove:
-                    return QStringLiteral("Remove");
+                    return i18n("Remove");
                 case Akonadi::Protocol::SubscriptionChangeNotification::InvalidOp:
-                    return QStringLiteral("InvalidOp");
+                    return i18n("InvalidOp");
                 }
                 return {};
             default:
-                return QStringLiteral("Unknown");
+                return i18n("Unknown");
             }
         case IdsColumn:
             switch (msg.type()) {
@@ -201,17 +203,17 @@ QVariant NotificationModel::headerData(int section, Qt::Orientation orientation,
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
         switch (section) {
         case DateColumn:
-            return QStringLiteral("Date");
+            return i18n("Date");
         case TypeColumn:
-            return QStringLiteral("Type");
+            return i18n("Type");
         case OperationColumn:
-            return QStringLiteral("Operation");
+            return i18n("Operation");
         case IdsColumn:
-            return QStringLiteral("IDs");
+            return i18n("IDs");
         case SessionColumn:
-            return QStringLiteral("Session");
+            return i18n("Session");
         case ListenersColumn:
-            return QStringLiteral("Listeners");
+            return i18n("Listeners");
         }
     }
     return QAbstractItemModel::headerData(section, orientation, role);

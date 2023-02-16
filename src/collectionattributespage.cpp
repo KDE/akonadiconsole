@@ -6,6 +6,8 @@
 
 #include "collectionattributespage.h"
 
+#include <KLocalizedString>
+
 #include <Akonadi/AttributeFactory>
 #include <Akonadi/Collection>
 
@@ -16,7 +18,7 @@ using namespace Akonadi;
 CollectionAttributePage::CollectionAttributePage(QWidget *parent)
     : CollectionPropertiesPage(parent)
 {
-    setPageTitle(QStringLiteral("Attributes"));
+    setPageTitle(i18n("Attributes"));
     ui.setupUi(this);
 
     connect(ui.addButton, &QPushButton::clicked, this, &CollectionAttributePage::addAttribute);
@@ -28,7 +30,7 @@ void CollectionAttributePage::load(const Collection &col)
     Attribute::List list = col.attributes();
     mModel = new QStandardItemModel(list.count(), 2);
     QStringList labels;
-    labels << QStringLiteral("Attribute") << QStringLiteral("Value");
+    labels << i18n("Attribute") << i18n("Value");
     mModel->setHorizontalHeaderLabels(labels);
 
     for (int i = 0; i < list.count(); ++i) {

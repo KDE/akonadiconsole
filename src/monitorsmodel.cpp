@@ -9,6 +9,7 @@
 #include "akonadiconsole_debug.h"
 #include <Akonadi/Monitor>
 #include <Akonadi/Session>
+#include <KLocalizedString>
 
 #include <QTimer>
 
@@ -93,7 +94,7 @@ QVariant MonitorsModel::headerData(int section, Qt::Orientation orientation, int
     if (role == Qt::DisplayRole) {
         if (orientation == Qt::Horizontal) {
             if (section == 0) {
-                return QStringLiteral("Session/Subscriber");
+                return i18n("Session/Subscriber");
             }
         }
     }

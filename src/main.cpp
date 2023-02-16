@@ -16,6 +16,7 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
+#include <KLocalizedString>
 
 #include <QApplication>
 #include <QCommandLineOption>
@@ -36,16 +37,16 @@ int main(int argc, char **argv)
     migrate.migrate();
 #endif
     KAboutData aboutData(QStringLiteral("akonadiconsole"),
-                         QStringLiteral("Akonadi Console"),
+                         i18n("Akonadi Console"),
                          QStringLiteral(KDEPIM_VERSION),
-                         QStringLiteral("The Management and Debugging Console for Akonadi"),
+                         i18n("The Management and Debugging Console for Akonadi"),
                          KAboutLicense::GPL,
-                         QStringLiteral("(c) 2006-2022 the Akonadi developer"),
+                         i18n("(c) 2006-2022 the Akonadi developer"),
                          QString(),
                          QStringLiteral("https://community.kde.org/KDE_PIM/akonadi"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
-    aboutData.addAuthor(QStringLiteral("Tobias König"), QStringLiteral("Author"), QStringLiteral("tokoe@kde.org"));
-    aboutData.addAuthor(QStringLiteral("Volker Krause"), QStringLiteral("Author"), QStringLiteral("vkrause@kde.org"));
+    aboutData.addAuthor(QStringLiteral("Tobias König"), i18n("Author"), QStringLiteral("tokoe@kde.org"));
+    aboutData.addAuthor(QStringLiteral("Volker Krause"), i18n("Author"), QStringLiteral("vkrause@kde.org"));
     aboutData.setProductName(QByteArrayLiteral("Akonadi/akonadiconsole"));
     KAboutData::setApplicationData(aboutData);
 

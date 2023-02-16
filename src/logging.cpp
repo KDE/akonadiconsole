@@ -9,6 +9,8 @@
 #include "loggingfiltermodel.h"
 #include "loggingmodel.h"
 
+#include <KLocalizedString>
+
 #include <QCheckBox>
 #include <QDBusConnection>
 #include <QFileDialog>
@@ -39,7 +41,7 @@ Logging::Logging(QWidget *parent)
     auto l = new QVBoxLayout(this);
     setLayout(l);
 
-    mEnabledCheckbox = new QCheckBox(QStringLiteral("Enable"), this);
+    mEnabledCheckbox = new QCheckBox(i18n("Enable"), this);
     connect(mEnabledCheckbox, &QCheckBox::toggled, this, [this](bool toggled) {
         Q_EMIT enabledChanged(toggled);
     });
@@ -48,18 +50,18 @@ Logging::Logging(QWidget *parent)
     auto h = new QHBoxLayout;
     l->addLayout(h);
 
-    h->addWidget(new QLabel(QStringLiteral("Programs:"), this));
+    h->addWidget(new QLabel(i18n("Programs:"), this));
     h->addWidget(mAppFilter = new KCheckComboBox());
     h->setStretchFactor(mAppFilter, 2);
-    h->addWidget(new QLabel(QStringLiteral("Types:"), this));
+    h->addWidget(new QLabel(i18n("Types:"), this));
     h->addWidget(mTypeFilter = new KCheckComboBox());
     h->setStretchFactor(mTypeFilter, 2);
-    mTypeFilter->addItem(QStringLiteral("Debug"), QtDebugMsg);
-    mTypeFilter->addItem(QStringLiteral("Info"), QtInfoMsg);
-    mTypeFilter->addItem(QStringLiteral("Warning"), QtWarningMsg);
-    mTypeFilter->addItem(QStringLiteral("Critical"), QtCriticalMsg);
-    mTypeFilter->addItem(QStringLiteral("Fatal"), QtFatalMsg);
-    h->addWidget(new QLabel(QStringLiteral("Categories:")));
+    mTypeFilter->addItem(i18n("Debug"), QtDebugMsg);
+    mTypeFilter->addItem(i18n("Info"), QtInfoMsg);
+    mTypeFilter->addItem(i18n("Warning"), QtWarningMsg);
+    mTypeFilter->addItem(i18n("Critical"), QtCriticalMsg);
+    mTypeFilter->addItem(i18n("Fatal"), QtFatalMsg);
+    h->addWidget(new QLabel(i18n("Categories:")));
     h->addWidget(mCategoryFilter = new KCheckComboBox());
     h->setStretchFactor(mCategoryFilter, 2);
 
@@ -85,7 +87,7 @@ Logging::Logging(QWidget *parent)
     h = new QHBoxLayout;
     l->addLayout(h);
 
-    auto btn = new QPushButton(QStringLiteral("Save to File..."), this);
+    auto btn = new QPushButton(i18n("Save to File..."), this);
     connect(btn, &QPushButton::clicked, this, &Logging::saveToFile);
     h->addWidget(btn);
     h->addStretch(1);
@@ -124,14 +126,14 @@ void Logging::message(qint64 timestamp,
 
 void Logging::saveToFile()
 {
-    const auto filename = QFileDialog::getSaveFileName(this, QStringLiteral("Save to File..."));
+    const auto filename = QFileDialog::getSaveFileName(this, i18n("Save to File..."));
     if (filename.isEmpty()) {
         return;
     }
 
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-        QMessageBox::warning(this, QStringLiteral("Error"), QStringLiteral("Failed to open file: %1").arg(file.errorString()));
+        QMessageBox::warning(this, i18n("Error"), i18n("Failed to open file: %1", file.errorString()));
         return;
     }
 

@@ -8,6 +8,8 @@
 #include "tagpropertiesdialog.h"
 #include <Akonadi/DbAccess>
 
+#include <KLocalizedString>
+
 #include <Akonadi/AttributeFactory>
 #include <QDialogButtonBox>
 #include <QSqlError>
@@ -66,14 +68,14 @@ void TagPropertiesDialog::setupUi()
     mAttributesModel = new QStandardItemModel(attributes.size(), 2, this);
     connect(mAttributesModel, &QStandardItemModel::itemChanged, this, &TagPropertiesDialog::attributeChanged);
     QStringList labels;
-    labels << QStringLiteral("Attribute") << QStringLiteral("Value");
+    labels << i18n("Attribute") << i18n("Value");
     mAttributesModel->setHorizontalHeaderLabels(labels);
 
     mRemoteIdsModel = new QStandardItemModel(this);
     connect(mRemoteIdsModel, &QStandardItemModel::itemChanged, this, &TagPropertiesDialog::remoteIdChanged);
     mRemoteIdsModel->setColumnCount(2);
     labels.clear();
-    labels << QStringLiteral("Resource") << QStringLiteral("Remote ID");
+    labels << i18n("Resource") << i18n("Remote ID");
     mRemoteIdsModel->setHorizontalHeaderLabels(labels);
     ui.ridsView->setModel(mRemoteIdsModel);
 

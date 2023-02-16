@@ -14,6 +14,7 @@
 #include <Akonadi/ControlGui>
 
 #include <Akonadi/ServerManager>
+#include <KLocalizedString>
 #include <KTextEdit>
 
 #include <QCheckBox>
@@ -35,7 +36,7 @@ DebugWidget::DebugWidget(QWidget *parent)
         service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     }
     mDebugInterface = new DebugInterface(service, QStringLiteral("/debug"), QDBusConnection::sessionBus(), this);
-    auto cb = new QCheckBox(QStringLiteral("Enable debugger"), this);
+    auto cb = new QCheckBox(i18n("Enable debugger"), this);
     cb->setChecked(mDebugInterface->isValid() && mDebugInterface->tracer().value() == QLatin1String("dbus"));
     connect(cb, &QCheckBox::toggled, this, &DebugWidget::enableDebugger);
     layout->addWidget(cb);
@@ -44,7 +45,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     splitter->setObjectName(QStringLiteral("debugSplitter"));
     layout->addWidget(splitter);
 
-    mConnectionPage = new ConnectionPage(QStringLiteral("All"), splitter);
+    mConnectionPage = new ConnectionPage(i18n("All"), splitter);
     mConnectionPage->showAllConnections(true);
 
     mGeneralView = new KTextEdit(splitter);
@@ -59,11 +60,11 @@ DebugWidget::DebugWidget(QWidget *parent)
     auto buttonLayout = new QHBoxLayout;
     layout->addLayout(buttonLayout);
 
-    auto clearGeneralButton = new QPushButton(QStringLiteral("Clear Information View"), this);
-    auto clearFilteredButton = new QPushButton(QStringLiteral("Clear Filtered Messages"), this);
-    auto clearAllButton = new QPushButton(QStringLiteral("Clear All Messages"), this);
-    auto saveRichtextButton = new QPushButton(QStringLiteral("Save Filtered Messages ..."), this);
-    auto saveRichtextEverythingButton = new QPushButton(QStringLiteral("Save All Messages ..."), this);
+    auto clearGeneralButton = new QPushButton(i18n("Clear Information View"), this);
+    auto clearFilteredButton = new QPushButton(i18n("Clear Filtered Messages"), this);
+    auto clearAllButton = new QPushButton(i18n("Clear All Messages"), this);
+    auto saveRichtextButton = new QPushButton(i18n("Save Filtered Messages ..."), this);
+    auto saveRichtextEverythingButton = new QPushButton(i18n("Save All Messages ..."), this);
 
     buttonLayout->addWidget(clearFilteredButton);
     buttonLayout->addWidget(clearAllButton);

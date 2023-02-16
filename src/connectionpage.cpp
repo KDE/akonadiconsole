@@ -17,6 +17,7 @@
 #include <QLabel>
 #include <QTableView>
 
+#include <KLocalizedString>
 #include <QFontDatabase>
 #include <QVBoxLayout>
 
@@ -33,7 +34,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     auto h = new QHBoxLayout;
     layout->addLayout(h);
 
-    h->addWidget(new QLabel(QStringLiteral("Programs:")));
+    h->addWidget(new QLabel(i18n("Programs:")));
     h->addWidget(mSenderFilter = new KPIM::KCheckComboBox());
     h->setStretchFactor(mSenderFilter, 2);
 

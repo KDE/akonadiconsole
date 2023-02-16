@@ -13,6 +13,8 @@
 #include "jobtrackermodel.h"
 #include "jobtrackersearchwidget.h"
 
+#include <KLocalizedString>
+
 #include <Akonadi/ControlGui>
 
 #include <QApplication>
@@ -68,7 +70,7 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
     d->model->setEnabled(false); // since it can be slow, default to off
 
     auto layout2 = new QHBoxLayout;
-    auto button = new QPushButton(QStringLiteral("Save to file..."), this);
+    auto button = new QPushButton(i18n("Save to file..."), this);
     connect(button, &QAbstractButton::clicked, this, &JobTrackerWidget::slotSaveToFile);
     layout2->addWidget(button);
     layout2->addStretch(1);
@@ -100,12 +102,12 @@ void JobTrackerWidget::textFilterChanged(const QString &str)
 void JobTrackerWidget::contextMenu(const QPoint & /*pos*/)
 {
     QMenu menu;
-    menu.addAction(QStringLiteral("Clear View"), d->model, &JobTrackerModel::resetTracker);
+    menu.addAction(i18n("Clear View"), d->model, &JobTrackerModel::resetTracker);
     menu.addSeparator();
-    menu.addAction(QStringLiteral("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
+    menu.addAction(i18n("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
     menu.addSeparator();
-    menu.addAction(QStringLiteral("Collapse All"), this, &JobTrackerWidget::collapseAll);
-    menu.addAction(QStringLiteral("Expand All"), this, &JobTrackerWidget::expandAll);
+    menu.addAction(i18n("Collapse All"), this, &JobTrackerWidget::collapseAll);
+    menu.addAction(i18n("Expand All"), this, &JobTrackerWidget::expandAll);
 
     menu.exec(QCursor::pos());
 }

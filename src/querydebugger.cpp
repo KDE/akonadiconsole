@@ -11,6 +11,8 @@
 #include "ui_querydebugger.h"
 #include "ui_queryviewdialog.h"
 
+#include <KLocalizedString>
+
 #include <QAbstractListModel>
 #include <QDateTime>
 #include <QDialog>
@@ -336,15 +338,15 @@ public:
 
         switch (section) {
         case 0:
-            return QStringLiteral("Name / Query");
+            return i18n("Name / Query");
         case 1:
-            return QStringLiteral("Started");
+            return i18n("Started");
         case 2:
-            return QStringLiteral("Ended");
+            return i18n("Ended");
         case 3:
-            return QStringLiteral("Duration");
+            return i18n("Duration");
         case 4:
-            return QStringLiteral("Error");
+            return i18n("Error");
         }
 
         return {};
@@ -520,13 +522,13 @@ public:
         }
 
         if (section == QueryColumn) {
-            return QStringLiteral("Query");
+            return i18n("Query");
         } else if (section == DurationColumn) {
-            return QStringLiteral("Duration [ms]");
+            return i18n("Duration [ms]");
         } else if (section == CallsColumn) {
-            return QStringLiteral("Calls");
+            return i18n("Calls");
         } else if (section == AvgDurationColumn) {
-            return QStringLiteral("Avg. Duration [ms]");
+            return i18n("Avg. Duration [ms]");
         }
 
         return {};
@@ -648,7 +650,7 @@ public:
         }
         mUi->queryLbl->setText(q);
         if (!q.startsWith(QLatin1String("SELECT"))) {
-            mUi->resultsLabelLbl->setText(QStringLiteral("Affected Rows:"));
+            mUi->resultsLabelLbl->setText(i18n("Affected Rows:"));
         }
         mUi->resultsLbl->setText(QString::number(resultsCount));
 

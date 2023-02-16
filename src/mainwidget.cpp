@@ -29,6 +29,7 @@
 #include <Akonadi/ServerManager>
 
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <KXmlGuiWindow>
 #include <QAction>
 #include <QTabWidget>
@@ -44,41 +45,40 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     tabWidget->setObjectName(QStringLiteral("mainTab"));
     layout->addWidget(tabWidget);
 
-    tabWidget->addTab(new AgentWidget(tabWidget), QStringLiteral("Agents"));
+    tabWidget->addTab(new AgentWidget(tabWidget), i18n("Agents"));
     mBrowser = new BrowserWidget(parent, tabWidget);
-    tabWidget->addTab(mBrowser, QStringLiteral("Browser"));
-    tabWidget->addTab(new DebugWidget(tabWidget), QStringLiteral("Debugger"));
-    tabWidget->addTab(new Logging(tabWidget), QStringLiteral("Logging"));
-    tabWidget->addTab(new DbBrowser(tabWidget), QStringLiteral("DB Browser"));
-    tabWidget->addTab(new DbConsole(tabWidget), QStringLiteral("DB Console"));
-    tabWidget->addTab(new QueryDebugger(tabWidget), QStringLiteral("Query Debugger"));
-    tabWidget->addTab(new JobTrackerWidget("jobtracker", tabWidget, QStringLiteral("Enable job tracker")), QStringLiteral("Job Tracker"));
-    tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, QStringLiteral("Enable tracking of Resource Schedulers")),
-                      QStringLiteral("Resources Schedulers"));
-    tabWidget->addTab(new NotificationMonitor(tabWidget), QStringLiteral("Notification Monitor"));
+    tabWidget->addTab(mBrowser, i18n("Browser"));
+    tabWidget->addTab(new DebugWidget(tabWidget), i18n("Debugger"));
+    tabWidget->addTab(new Logging(tabWidget), i18n("Logging"));
+    tabWidget->addTab(new DbBrowser(tabWidget), i18n("DB Browser"));
+    tabWidget->addTab(new DbConsole(tabWidget), i18n("DB Console"));
+    tabWidget->addTab(new QueryDebugger(tabWidget), i18n("Query Debugger"));
+    tabWidget->addTab(new JobTrackerWidget("jobtracker", tabWidget, i18n("Enable job tracker")), i18n("Job Tracker"));
+    tabWidget->addTab(new JobTrackerWidget("resourcesJobtracker", tabWidget, i18n("Enable tracking of Resource Schedulers")), i18n("Resources Schedulers"));
+    tabWidget->addTab(new NotificationMonitor(tabWidget), i18n("Notification Monitor"));
 #if ENABLE_SEARCH
-    tabWidget->addTab(new SearchWidget(tabWidget), QStringLiteral("Item Search"));
+    tabWidget->addTab(new SearchWidget(tabWidget), i18n("Item Search"));
 #endif
-    tabWidget->addTab(new MonitorsWidget(tabWidget), QStringLiteral("Monitors"));
+    tabWidget->addTab(new MonitorsWidget(tabWidget), i18n("Monitors"));
 
     auto action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_akonadi2xml"));
-    action->setText(QStringLiteral("Dump to XML..."));
+    action->setText(i18n("Dump to XML..."));
     connect(action, &QAction::triggered, mBrowser, &BrowserWidget::dumpToXml);
 
     action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_clearcache"));
-    action->setText(QStringLiteral("Clear Akonadi Cache"));
+    action->setText(i18n("Clear Akonadi Cache"));
     connect(action, &QAction::triggered, mBrowser, &BrowserWidget::clearCache);
 
     action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_start"));
-    action->setText(QStringLiteral("Start Server"));
+    action->setText(i18n("Start Server"));
     connect(action, &QAction::triggered, this, &MainWidget::startServer);
 
     action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_stop"));
-    action->setText(QStringLiteral("Stop Server"));
+    action->setText(i18n("Stop Server"));
     connect(action, &QAction::triggered, this, &MainWidget::stopServer);
 
     action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_restart"));
-    action->setText(QStringLiteral("Restart Server"));
+    action->setText(i18n("Restart Server"));
     connect(action, &QAction::triggered, this, &MainWidget::restartServer);
 }
 

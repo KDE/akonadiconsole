@@ -6,6 +6,8 @@
 
 #include "debugmodel.h"
 
+#include <KLocalizedString>
+
 #include <QColor>
 #include <QStandardItemModel>
 
@@ -137,11 +139,11 @@ QVariant DebugModel::headerData(int section, Qt::Orientation orientation, int ro
 
     switch (section) {
     case SenderColumn:
-        return QStringLiteral("Sender");
+        return i18n("Sender");
     case DirectionColumn:
-        return QStringLiteral("Direction");
+        return i18n("Direction");
     case MessageColumn:
-        return QStringLiteral("Message");
+        return i18n("Message");
     }
     return {};
 }

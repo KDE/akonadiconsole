@@ -10,6 +10,7 @@
 #include "ui_instanceselector.h"
 
 #include "akonadiconsole_debug.h"
+#include <KLocalizedString>
 #include <QIcon>
 #include <akonadi/private/dbus_p.h>
 #include <akonadi/private/instance_p.h>
@@ -40,7 +41,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
     connect(buttonBox, &QDialogButtonBox::rejected, this, &InstanceSelector::slotReject);
     mainLayout->addWidget(buttonBox);
     okButton->setIcon(QIcon::fromTheme(QStringLiteral("network-connect")));
-    okButton->setText(QStringLiteral("Connect"));
+    okButton->setText(i18n("Connect"));
 
     const QStringList insts = instances();
     qCDebug(AKONADICONSOLE_LOG) << "Found running Akonadi instances:" << insts;
@@ -84,9 +85,9 @@ void InstanceSelector::slotAccept()
     Akonadi::Instance::setIdentifier(m_instance);
     auto mWindow = new MainWindow;
     if (!m_remoteHost.isEmpty()) {
-        mWindow->setWindowTitle(QStringLiteral("Remote Akonadi Console (%1)").arg(m_remoteHost));
+        mWindow->setWindowTitle(i18n("Remote Akonadi Console (%1)", m_remoteHost));
     } else if (!m_instance.isEmpty()) {
-        mWindow->setWindowTitle(QStringLiteral("Akonadi Console (Instance: %1)").arg(m_instance));
+        mWindow->setWindowTitle(i18n("Akonadi Console (Instance: %1)", m_instance));
     }
     mWindow->show();
 }

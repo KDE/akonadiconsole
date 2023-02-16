@@ -22,6 +22,7 @@
 
 #include <KComboBox>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <QPlainTextEdit>
@@ -45,12 +46,12 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     auto hbox = new QHBoxLayout;
 
-    hbox->addWidget(new QLabel(QStringLiteral("Search store:"), this));
+    hbox->addWidget(new QLabel(i18n("Search store:"), this));
     mStoreCombo = new KComboBox(this);
     mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
     hbox->addWidget(mStoreCombo);
     hbox->addStretch();
-    auto button = new QPushButton(QStringLiteral("Search"), this);
+    auto button = new QPushButton(i18n("Search"), this);
     hbox->addWidget(button);
     layout->addLayout(hbox);
 
@@ -58,7 +59,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mVSplitter->setObjectName(QStringLiteral("SearchVSplitter"));
     auto w = new QWidget;
     auto vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Search query:"), this));
+    vbox->addWidget(new QLabel(i18n("Search query:"), this));
     mQueryWidget = new QPlainTextEdit;
     vbox->addWidget(mQueryWidget);
     mVSplitter->addWidget(w);
@@ -67,7 +68,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mHSplitter->setObjectName(QStringLiteral("SearchHSplitter"));
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Results (Documents):"), this));
+    vbox->addWidget(new QLabel(i18n("Results (Documents):"), this));
     mDatabaseView = new QListView(this);
     mDatabaseView->setEditTriggers(QListView::NoEditTriggers);
     mDocumentModel = new QStandardItemModel(this);
@@ -77,7 +78,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Document:")));
+    vbox->addWidget(new QLabel(i18n("Document:")));
     mDocumentView = new QTreeView;
     mDocumentView->setEditTriggers(QTreeView::NoEditTriggers);
     mTermModel = new QStandardItemModel(this);
@@ -87,7 +88,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(QStringLiteral("Item:")));
+    vbox->addWidget(new QLabel(i18n("Item:")));
     mItemView = new QTextBrowser;
     vbox->addWidget(mItemView);
     mHSplitter->addWidget(w);
@@ -143,15 +144,13 @@ void SearchWidget::openStore(int idx)
 void SearchWidget::xapianError(const Xapian::Error &e)
 {
     qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << e.get_error_string();
-    QMessageBox::critical(this,
-                          QStringLiteral("Xapian error"),
-                          QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
+    QMessageBox::critical(this, i18n("Xapian error"), QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
 }
 
 void SearchWidget::search()
 {
     if (!mDatabase) {
-        QMessageBox::critical(this, QStringLiteral("Error"), QStringLiteral("No Xapian database is opened"));
+        QMessageBox::critical(this, i18n("Error"), i18n("No Xapian database is opened"));
         return;
     }
 
@@ -185,15 +184,15 @@ void SearchWidget::fetchItem(const QModelIndex &index)
 
         mTermModel->clear();
         mTermModel->setColumnCount(2);
-        mTermModel->setHorizontalHeaderLabels({QStringLiteral("Term/Value"), QStringLiteral("WDF/Slot")});
+        mTermModel->setHorizontalHeaderLabels({i18n("Term/Value"), i18n("WDF/Slot")});
 
-        auto termsRoot = new QStandardItem(QStringLiteral("Terms"));
+        auto termsRoot = new QStandardItem(i18n("Terms"));
         mTermModel->appendRow(termsRoot);
         for (auto it = doc.termlist_begin(), end = doc.termlist_end(); it != end; ++it) {
             termsRoot->appendRow({new QStandardItem(QString::fromStdString(*it)), new QStandardItem(QString::number(it.get_wdf()))});
         }
 
-        auto valuesRoot = new QStandardItem(QStringLiteral("Values"));
+        auto valuesRoot = new QStandardItem(i18n("Values"));
         mTermModel->appendRow(valuesRoot);
         const auto end = doc.values_end(); // Xapian 1.2 has different type for _begin() and _end() iters
         for (auto it = doc.values_begin(); it != end; ++it) {
@@ -214,7 +213,7 @@ void SearchWidget::itemFetched(KJob *job)
     mItemView->clear();
 
     if (job->error()) {
-        KMessageBox::error(this, QStringLiteral("Error on fetching item"));
+        KMessageBox::error(this, i18n("Error on fetching item"));
         return;
     }
 

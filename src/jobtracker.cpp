@@ -10,6 +10,7 @@
 #include "jobtracker.h"
 #include "akonadiconsole_debug.h"
 #include "jobtrackeradaptor.h"
+#include <KLocalizedString>
 #include <QString>
 #include <QStringList>
 #include <akonadi/private/instance_p.h>
@@ -22,15 +23,15 @@ QString JobInfo::stateAsString() const
 {
     switch (state) {
     case Initial:
-        return QStringLiteral("Waiting");
+        return i18n("Waiting");
     case Running:
-        return QStringLiteral("Running");
+        return i18n("Running");
     case Ended:
-        return QStringLiteral("Ended");
+        return i18n("Ended");
     case Failed:
-        return QStringLiteral("Failed: %1").arg(error);
+        return i18n("Failed: %1", error);
     default:
-        return QStringLiteral("Unknown state!");
+        return i18n("Unknown state!");
     }
 }
 

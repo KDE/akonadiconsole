@@ -10,6 +10,7 @@
 #include <QAction>
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <KStandardAction>
 #include <QIcon>
@@ -75,7 +76,7 @@ DbConsoleTab *DbConsole::addTab()
     ++mTabCounter;
     auto tab = new DbConsoleTab(mTabCounter, mTabWidget);
     connect(tab, &DbConsoleTab::saveQueries, this, &DbConsole::saveQueries);
-    mTabWidget->addTab(tab, QStringLiteral("Query #%1").arg(mTabCounter));
+    mTabWidget->addTab(tab, i18n("Query #%1", mTabCounter));
     return tab;
 }
 

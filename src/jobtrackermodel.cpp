@@ -10,6 +10,8 @@
 #include "jobtrackermodel.h"
 #include "jobtracker.h"
 
+#include <KLocalizedString>
+
 #include <QColor>
 #include <QFont>
 #include <QModelIndex>
@@ -204,19 +206,19 @@ QVariant JobTrackerModel::headerData(int section, Qt::Orientation orientation, i
         if (orientation == Qt::Horizontal) {
             switch (section) {
             case ColumnJobId:
-                return QStringLiteral("Job ID");
+                return i18n("Job ID");
             case ColumnCreated:
-                return QStringLiteral("Created");
+                return i18n("Created");
             case ColumnWaitTime:
-                return QStringLiteral("Wait time"); // duration  (time started - time created)
+                return i18n("Wait time"); // duration  (time started - time created)
             case ColumnJobDuration:
-                return QStringLiteral("Job duration"); // duration (time ended - time started)
+                return i18n("Job duration"); // duration (time ended - time started)
             case ColumnJobType:
-                return QStringLiteral("Job Type");
+                return i18n("Job Type");
             case ColumnState:
-                return QStringLiteral("State");
+                return i18n("State");
             case ColumnInfo:
-                return QStringLiteral("Info");
+                return i18n("Info");
             }
         }
     }

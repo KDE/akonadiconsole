@@ -6,6 +6,8 @@
 
 #include "loggingmodel.h"
 
+#include <KLocalizedString>
+
 #include <QDateTime>
 #include <QDir>
 #include <QStandardItemModel>
@@ -99,19 +101,19 @@ QVariant LoggingModel::headerData(int section, Qt::Orientation orientation, int 
 
     switch (section) {
     case TimeColumn:
-        return QStringLiteral("Time");
+        return i18n("Time");
     case AppColumn:
-        return QStringLiteral("Program");
+        return i18n("Program");
     case TypeColumn:
-        return QStringLiteral("Type");
+        return i18n("Type");
     case CategoryColumn:
-        return QStringLiteral("Category");
+        return i18n("Category");
     case FileColumn:
-        return QStringLiteral("File");
+        return i18n("File");
     case FunctionColumn:
-        return QStringLiteral("Function");
+        return i18n("Function");
     case MessageColumn:
-        return QStringLiteral("Message");
+        return i18n("Message");
     }
     return {};
 }
@@ -132,15 +134,15 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
         case TypeColumn:
             switch (message.type) {
             case QtDebugMsg:
-                return QStringLiteral("Debug");
+                return i18n("Debug");
             case QtInfoMsg:
-                return QStringLiteral("Info");
+                return i18n("Info");
             case QtWarningMsg:
-                return QStringLiteral("Warning");
+                return i18n("Warning");
             case QtCriticalMsg:
-                return QStringLiteral("Critical");
+                return i18n("Critical");
             case QtFatalMsg:
-                return QStringLiteral("Fatal");
+                return i18n("Fatal");
             }
             return {};
         case CategoryColumn:
@@ -149,7 +151,7 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
             if (!message.file.isEmpty()) {
                 const auto file = message.file.mid(message.file.lastIndexOf(QDir::separator()) + 1, -1);
                 if (message.line > 0) {
-                    return QStringLiteral("%1:%2").arg(file, QString::number(message.line));
+                    return i18n("%1:%2", file, QString::number(message.line));
                 } else {
                     return file;
                 }
@@ -165,7 +167,7 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
         case FileColumn:
             if (!message.file.isEmpty()) {
                 if (message.line > 0) {
-                    return QStringLiteral("%1:%2").arg(message.file, QString::number(message.line));
+                    return i18n("%1:%2", message.file, QString::number(message.line));
                 } else {
                     return message.file;
                 }

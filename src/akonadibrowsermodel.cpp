@@ -6,6 +6,7 @@
 
 #include "akonadibrowsermodel.h"
 
+#include <KLocalizedString>
 #include <KMime/KMimeMessage>
 
 #include <KContacts/Addressee>
@@ -65,8 +66,8 @@ class MailState : public AkonadiBrowserModel::State
 public:
     MailState()
     {
-        m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("Subject") << QStringLiteral("Sender") << QStringLiteral("Date");
+        m_collectionHeaders << i18n("Collection");
+        m_itemHeaders << i18n("Subject") << i18n("Sender") << i18n("Date");
     }
 
     ~MailState() override = default;

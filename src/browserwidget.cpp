@@ -50,6 +50,7 @@
 #include <KActionCollection>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KToggleAction>
 #include <KXmlGuiWindow>
@@ -173,10 +174,10 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     auto itemViewParent = new QWidget(this);
     itemUi.setupUi(itemViewParent);
 
-    itemUi.modelBox->addItem(QStringLiteral("Generic"));
-    itemUi.modelBox->addItem(QStringLiteral("Mail"));
-    itemUi.modelBox->addItem(QStringLiteral("Contacts"));
-    itemUi.modelBox->addItem(QStringLiteral("Calendar/Tasks"));
+    itemUi.modelBox->addItem(i18n("Generic"));
+    itemUi.modelBox->addItem(i18n("Mail"));
+    itemUi.modelBox->addItem(i18n("Contacts"));
+    itemUi.modelBox->addItem(i18n("Calendar/Tasks"));
     connect(itemUi.modelBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &BrowserWidget::modelChanged);
     QTimer::singleShot(0, this, &BrowserWidget::modelChanged);
 
@@ -236,7 +237,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     mStdActionManager->setFavoriteSelectionModel(favoritesView->selectionModel());
     mStdActionManager->createAllActions();
 
-    mCacheOnlyAction = new KToggleAction(QStringLiteral("Cache only retrieval"), xmlGuiWindow);
+    mCacheOnlyAction = new KToggleAction(i18n("Cache only retrieval"), xmlGuiWindow);
     mCacheOnlyAction->setChecked(true);
     xmlGuiWindow->actionCollection()->addAction(QStringLiteral("akonadiconsole_cacheonly"), mCacheOnlyAction);
     connect(mCacheOnlyAction, &KToggleAction::toggled, this, &BrowserWidget::updateItemFetchScope);
@@ -468,7 +469,7 @@ void BrowserWidget::save()
 void BrowserWidget::saveResult(KJob *job)
 {
     if (job->error()) {
-        KMessageBox::error(this, QStringLiteral("Failed to save changes: %1").arg(job->errorString()));
+        KMessageBox::error(this, i18n("Failed to save changes: %1", job->errorString()));
     } else {
         contentUi.saveButton->setEnabled(false);
     }
@@ -507,7 +508,7 @@ void BrowserWidget::dumpToXml()
     if (!root.isValid()) {
         return;
     }
-    const QString fileName = QFileDialog::getSaveFileName(this, QStringLiteral("Select XML file"), QString(), QStringLiteral("*.xml"));
+    const QString fileName = QFileDialog::getSaveFileName(this, i18n("Select XML file"), QString(), QStringLiteral("*.xml"));
     if (fileName.isEmpty()) {
         return;
     }
@@ -546,28 +547,28 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
     const QModelIndex index = mTagView->indexAt(pos);
     auto menu = new QMenu(this);
     connect(menu, &QMenu::aboutToHide, menu, &QMenu::deleteLater);
-    menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), QStringLiteral("&Add tag..."), this, &BrowserWidget::addTagRequested);
+    menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("&Add tag..."), this, &BrowserWidget::addTagRequested);
     if (index.isValid()) {
-        menu->addAction(QStringLiteral("Add &subtag..."), this, &BrowserWidget::addSubTagRequested);
+        menu->addAction(i18n("Add &subtag..."), this, &BrowserWidget::addSubTagRequested);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")),
-                        QStringLiteral("&Edit tag..."),
+                        i18n("&Edit tag..."),
                         this,
                         &BrowserWidget::editTagRequested,
                         QKeySequence(Qt::Key_Return));
         menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        QStringLiteral("&Delete tag..."),
+                        i18n("&Delete tag..."),
                         this,
                         &BrowserWidget::removeTagRequested,
                         QKeySequence::Delete);
 #else
         menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")),
-                        QStringLiteral("&Edit tag..."),
+                        i18n("&Edit tag..."),
                         QKeySequence(Qt::Key_Return),
                         this,
                         &BrowserWidget::editTagRequested);
         menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        QStringLiteral("&Delete tag..."),
+                        i18n("&Delete tag..."),
                         QKeySequence::Delete,
                         this,
                         &BrowserWidget::removeTagRequested);
@@ -630,8 +631,8 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
 void BrowserWidget::removeTagRequested()
 {
     if (KMessageBox::questionTwoActions(this,
-                                        QStringLiteral("Do you really want to remove selected tag?"),
-                                        QStringLiteral("Delete tag?"),
+                                        i18n("Do you really want to remove selected tag?"),
+                                        i18n("Delete tag?"),
                                         KStandardGuiItem::del(),
                                         KStandardGuiItem::cancel(),
                                         QString(),

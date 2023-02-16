@@ -5,14 +5,14 @@
 */
 
 #include "collectioninternalspage.h"
-
 #include <Akonadi/Collection>
+#include <KLocalizedString>
 using namespace Akonadi;
 
 CollectionInternalsPage::CollectionInternalsPage(QWidget *parent)
     : CollectionPropertiesPage(parent)
 {
-    setPageTitle(QStringLiteral("Internals"));
+    setPageTitle(i18n("Internals"));
     ui.setupUi(this);
 }
 
