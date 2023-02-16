@@ -2,9 +2,6 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 set(PIM_VERSION "5.22.40")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
-# Needs C++17 because Akonadi uses it and we link
-# against its private API
-
 set(KF_MIN_VERSION "5.103.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
