@@ -1,6 +1,8 @@
 
 include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
+add_definitions(-DTRANSLATION_DOMAIN=\"akonadiconsole\")
+
 add_subdirectory(icons)
 
 set(libakonadiconsole_tracker_SRCS
