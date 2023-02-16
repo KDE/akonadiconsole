@@ -7,13 +7,14 @@
 #include "collectionaclpage.h"
 
 #include <Akonadi/Collection>
+#include <KLocalizedString>
 
 using namespace Akonadi;
 
 CollectionAclPage::CollectionAclPage(QWidget *parent)
     : CollectionPropertiesPage(parent)
 {
-    setPageTitle(QStringLiteral("ACL"));
+    setPageTitle(i18n("ACL"));
     ui.setupUi(this);
 }
 
