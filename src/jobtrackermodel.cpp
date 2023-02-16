@@ -273,6 +273,6 @@ void JobTrackerModel::jobsUpdated(const QList<QPair<int, int>> &jobs)
                 parentIdx = createIndex(row, 0, parentId);
             }
         }
-        dataChanged(index(pos, 0, parentIdx), index(pos, 3, parentIdx));
+        Q_EMIT dataChanged(index(pos, 0, parentIdx), index(pos, 3, parentIdx));
     }
 }
