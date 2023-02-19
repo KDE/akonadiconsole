@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-17 17:26+0100\n"
+"PO-Revision-Date: 2023-02-19 00:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -122,7 +122,7 @@ msgstr ""
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "La clonación del agente ha fallado: %1."
 
 #: agentwidget.cpp:407
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "&Borrar etiqueta..."
 #: browserwidget.cpp:634
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "¿Realmente desea eliminar la etiqueta seleccionada?"
 
 #: browserwidget.cpp:635
 #, kde-format
@@ -575,7 +575,7 @@ msgstr "Borrar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
-#, kde-format
+#, fuzzy, kde-format
 msgid "Link"
 msgstr "Enlazar"
 
@@ -978,7 +978,7 @@ msgstr ""
 #: mainwidget.cpp:55
 #, kde-format
 msgid "Query Debugger"
-msgstr ""
+msgstr "Depurador de consultas"
 
 #: mainwidget.cpp:56
 #, kde-format
@@ -1003,12 +1003,12 @@ msgstr ""
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Notification Monitor"
-msgstr ""
+msgstr "Monitor de notificaciones"
 
 #: mainwidget.cpp:60
 #, kde-format
 msgid "Item Search"
-msgstr ""
+msgstr "Búsqueda de elementos"
 
 #: mainwidget.cpp:62
 #, kde-format
@@ -1023,7 +1023,7 @@ msgstr "Volcar a XML..."
 #: mainwidget.cpp:69
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr ""
+msgstr "Borrar la caché de Akonadi"
 
 #: mainwidget.cpp:73
 #, kde-format
@@ -1102,7 +1102,7 @@ msgstr "Recurso"
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "Tipos MIME del contenido"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
@@ -1273,7 +1273,7 @@ msgstr "Relación"
 #: notificationmodel.cpp:80
 #, kde-format
 msgid "Subscription"
-msgstr ""
+msgstr "Suscripción"
 
 #: notificationmodel.cpp:88 notificationmodel.cpp:112 notificationmodel.cpp:130
 #: notificationmodel.cpp:142 notificationmodel.cpp:152
@@ -1316,12 +1316,12 @@ msgstr ""
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
 msgid "Subscribe"
-msgstr ""
+msgstr "Suscribirse"
 
 #: notificationmodel.cpp:122 notificationmonitor.cpp:391
 #, kde-format
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Darse de baja"
 
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
@@ -1428,7 +1428,7 @@ msgstr ""
 #: notificationmonitor.cpp:242
 #, kde-format
 msgid "name"
-msgstr ""
+msgstr "nombre"
 
 #: notificationmonitor.cpp:244 notificationmonitor.cpp:299
 #: notificationmonitor.cpp:347
@@ -1676,7 +1676,7 @@ msgstr ""
 #: notificationmonitor.cpp:496
 #, kde-format
 msgid "Subscriptions"
-msgstr ""
+msgstr "Suscripciones"
 
 #: notificationmonitor.cpp:499
 #, kde-format
@@ -1927,7 +1927,7 @@ msgstr ""
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr ""
+msgstr "Consulta:"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)

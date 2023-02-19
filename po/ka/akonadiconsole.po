@@ -1,152 +1,156 @@
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the akonadiconsole package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-18 08:55+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: fr\n"
-"Language: fr\n"
+"PO-Revision-Date: 2023-02-18 06:59+0100\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Xavier Besnard"
+msgstr "Temuri Doghonadze"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "Temuri.doghonadze@gmail.com"
 
 #: agentconfigdialog.cpp:33
 #, kde-format
 msgid "Save Configuration"
-msgstr ""
+msgstr "კონფიგურაციი შენახვა"
 
 #. i18n: ectx: property (text), widget (QPushButton, refreshButton)
 #: agentconfigdialog.cpp:34 dbbrowser.ui:28
 #, kde-format
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "განახლება"
 
 #: agentconfigdialog.cpp:35
 #, kde-format
 msgid "Apply Configuration"
-msgstr ""
+msgstr "კონფიგურაციის გადატარება"
 
 #: agentconfigdialog.cpp:37
 #, kde-format
 msgid "Agent Configuration"
-msgstr ""
+msgstr "აგენტის მორგება"
 
 #: agentwidget.cpp:93
 #, kde-format
 msgid "Configure"
-msgstr "Configurer"
+msgstr "Ruqola-ის მორგება"
 
 #: agentwidget.cpp:94
 #, kde-format
 msgid "Configure Natively..."
-msgstr ""
+msgstr "ცნობილი სახით მორგება..."
 
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Remotely..."
-msgstr ""
+msgstr "დაშორებულად მორგება..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:101 agentwidget.ui:240
 #, kde-format
 msgid "Synchronize"
-msgstr ""
+msgstr "სინქრონიზაცია"
 
 #: agentwidget.cpp:102
 #, kde-format
 msgid "Synchronize All"
-msgstr ""
+msgstr "ყველას სინქრონიზაცია"
 
 #: agentwidget.cpp:103
 #, kde-format
 msgid "Synchronize Collection Tree"
-msgstr ""
+msgstr "კოლექციის ხის სინქრონიზაცია"
 
 #: agentwidget.cpp:104
 #, kde-format
 msgid "Synchronize Tags"
-msgstr ""
+msgstr "ჭდეების სინქრონიზაცია"
 
 #: agentwidget.cpp:110
 #, kde-format
 msgid "Synchronize Relations"
-msgstr ""
+msgstr "ურთიერთობების სინქრონიზაცია"
 
 #: agentwidget.cpp:199
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "მართლა გნებავთ აგენტის ამ გაშვებული ასლის წაშლა?"
+msgstr[1] "მართლა გნებავთ აგენტის %1 გაშვებული ასლის წაშლა?"
 
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Agent Deletion"
-msgstr ""
+msgstr "აგენტის წაშლა"
 
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr ""
+msgstr "მრავალი აგენტის წაშლა"
 
 #: agentwidget.cpp:270
 #, kde-format
 msgid "Resource Task List"
-msgstr ""
+msgstr "რესურსის ამოცანებს სია"
 
 #: agentwidget.cpp:294
 #, kde-format
 msgid "Change Notification Log"
-msgstr ""
+msgstr "შეტყობინებების ჟურნალის შეცვლა"
 
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "აგენტის კლონირების შეცდომა: %1."
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Online"
-msgstr "En ligne"
+msgstr "ონლაინ"
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Offline"
-msgstr "Hors ligne"
+msgstr "გათიშული"
 
 #: agentwidget.cpp:411
 #, kde-format
 msgid "Idle"
-msgstr "Inactif"
+msgstr "უმოქმედო"
 
 #: agentwidget.cpp:414
 #, kde-format
 msgid "Running (%1%)"
-msgstr ""
+msgstr "გაშვებულია (%1%)"
 
 #: agentwidget.cpp:417
 #, kde-format
 msgid "Broken"
-msgstr "Cassé"
+msgstr "გაფუჭებული"
 
 #: agentwidget.cpp:420
 #, kde-format
 msgid "Not Configured"
-msgstr ""
+msgstr "მორგებული არაა"
 
 #: agentwidget.cpp:423
 #, kde-format
@@ -158,92 +162,92 @@ msgstr "%1, %2"
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr ""
+msgstr "აგენტის დამატება..."
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Clone Agent"
-msgstr ""
+msgstr "აგენტის კლონირება"
 
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Abort Activity"
-msgstr ""
+msgstr "აქტივობის გაუქმება"
 
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Restart Agent"
-msgstr ""
+msgstr "აგენტის გადატვირთვა"
 
 #: agentwidget.cpp:448
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "ონლაინ/ფლაინის გადარტვა"
 
 #: agentwidget.cpp:449
 #, kde-format
 msgid "Show task list"
-msgstr ""
+msgstr "ამოცანების სიის ჩვენება"
 
 #: agentwidget.cpp:450
 #, kde-format
 msgid "Show change-notification log"
-msgstr ""
+msgstr "ცვლილებების ჟურნალის ჩვენება"
 
 #: agentwidget.cpp:452
 #, kde-format
 msgid "Remove Agent"
-msgstr ""
+msgstr "აგენტის წაშლა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
 #, kde-format
 msgid "Details"
-msgstr "Détails"
+msgstr "დეტალები"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
 #: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
 #, kde-format
 msgid "Identifier:"
-msgstr ""
+msgstr "იდენტიფიკატორი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: agentwidget.ui:69 tagpropertiesdialog.ui:65
 #, kde-format
 msgid "Type:"
-msgstr "Type :"
+msgstr "ტიპი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: agentwidget.ui:92
 #, kde-format
 msgid "Status:"
-msgstr "État :"
+msgstr "მდგომარეობა:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: agentwidget.ui:118
 #, kde-format
 msgid "Status Message:"
-msgstr ""
+msgstr "სტატუსის შეტყობინება:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr ""
+msgstr "შესაძლებლობები:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
 #, kde-format
 msgid "Mimetypes:"
-msgstr "Types « MIME » :"
+msgstr "MIME ტიპები:"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr "Ajouter..."
+msgstr "დამატება..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:94 notificationmodel.cpp:118
@@ -253,154 +257,154 @@ msgstr "Ajouter..."
 #: notificationmonitor.cpp:444 notificationmonitor.cpp:468
 #, kde-format
 msgid "Remove"
-msgstr "Supprimer"
+msgstr "წაშლა"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr ""
+msgstr "კონფიგურაცია.."
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
 #, kde-format
 msgid "Abort"
-msgstr "Annuler :"
+msgstr "შეწყვეტა"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
 #: agentwidget.ui:247
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"
-msgstr "Redémarrer"
+msgstr "გადატვირთვა"
 
 #: akonadibrowsermodel.cpp:69 notificationmodel.cpp:74
 #: notificationmonitor.cpp:403
 #, kde-format
 msgid "Collection"
-msgstr "Collection"
+msgstr "კოლექცია"
 
 #: akonadibrowsermodel.cpp:70
 #, kde-format
 msgid "Subject"
-msgstr "Sujet"
+msgstr "თემა"
 
 #: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
-msgstr "Expéditeur"
+msgstr "გამომგზავნი"
 
 #: akonadibrowsermodel.cpp:70 notificationmodel.cpp:206
 #, kde-format
 msgid "Date"
-msgstr "Date"
+msgstr "თარიღი"
 
 #. i18n: ectx: Menu (collection)
 #: akonadiconsoleui.rc:8
 #, kde-format
 msgid "&Collection"
-msgstr ""
+msgstr "&კოლექცია"
 
 #. i18n: ectx: Menu (item)
 #: akonadiconsoleui.rc:28
 #, kde-format
 msgid "&Item"
-msgstr "É&lément"
+msgstr "&ელემენტი"
 
 #. i18n: ectx: Menu (cache)
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr "&Cache"
+msgstr "&კეში"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
 #, kde-format
 msgid "&Server"
-msgstr "&Serveur"
+msgstr "&სერვერი"
 
 #: browserwidget.cpp:177
 #, kde-format
 msgid "Generic"
-msgstr "Générique"
+msgstr "ზოგადი"
 
 #: browserwidget.cpp:178
 #, kde-format
 msgid "Mail"
-msgstr "Courriel"
+msgstr "წერილი"
 
 #: browserwidget.cpp:179
 #, kde-format
 msgid "Contacts"
-msgstr "Contacts"
+msgstr "კონტაქტები"
 
 #: browserwidget.cpp:180
 #, kde-format
 msgid "Calendar/Tasks"
-msgstr ""
+msgstr "კალენდარი/ამოცანები"
 
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr ""
+msgstr "მხოლოდ კეშიდან მიღება"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr ""
+msgstr "ცვლილებების შენახვის შეცდომა: %1"
 
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr ""
+msgstr "XML ფაილის არჩევა"
 
 #: browserwidget.cpp:550
 #, kde-format
 msgid "&Add tag..."
-msgstr ""
+msgstr "&ჭდის დამატება..."
 
 #: browserwidget.cpp:552
 #, kde-format
 msgid "Add &subtag..."
-msgstr ""
+msgstr "&ქვეჭდის დამატება..."
 
 #: browserwidget.cpp:555 browserwidget.cpp:566
 #, kde-format
 msgid "&Edit tag..."
-msgstr ""
+msgstr "ჭდის ჩასწორება..."
 
 #: browserwidget.cpp:560 browserwidget.cpp:571
 #, kde-format
 msgid "&Delete tag..."
-msgstr ""
+msgstr "&ჭდის წაშლა..."
 
 #: browserwidget.cpp:634
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "მართლა გნებავთ მონიშნული ჭდის წაშლა?"
 
 #: browserwidget.cpp:635
 #, kde-format
 msgid "Delete tag?"
-msgstr ""
+msgstr "წავშალო ჭდე?"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
 #: browserwidget_contentview.ui:30
 #, kde-format
 msgid "&Save"
-msgstr "Enregi&strer"
+msgstr "&შენახვა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: browserwidget_contentview.ui:41
 #, kde-format
 msgid "Payload"
-msgstr "Données utiles"
+msgstr "შემცველობა"
 
 #. i18n: ectx: property (text), widget (QLabel, unsupportedType)
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr ""
+msgstr "მხარდაუჭერელი ტიპი"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -410,7 +414,7 @@ msgstr ""
 #: notificationmonitor.cpp:595 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
-msgstr "Attributs"
+msgstr "ატრიბუტები"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
@@ -418,7 +422,7 @@ msgstr "Attributs"
 #: tagpropertiesdialog.ui:82
 #, kde-format
 msgid "New Attribute"
-msgstr ""
+msgstr "ახალი ატრიბუტი"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
@@ -428,32 +432,32 @@ msgstr ""
 #: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
 #, kde-format
 msgid "&Add"
-msgstr "&Ajouter"
+msgstr "&დამატება"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: browserwidget_contentview.ui:130 collectionattributespage.ui:40
 #, kde-format
 msgid "&Delete"
-msgstr "&Supprimer"
+msgstr "&წაშლა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr ""
+msgstr "დაუმუშავებელი შემცველობა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr ""
+msgstr "შიდა"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
 #, kde-format
 msgid "Unique ID:"
-msgstr "ID Unique :"
+msgstr "უნიკალური ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, id)
 #. i18n: ectx: property (text), widget (QLabel, revision)
@@ -469,44 +473,44 @@ msgstr "0"
 #: browserwidget_contentview.ui:202
 #, kde-format
 msgid "Remote ID:"
-msgstr "ID Distant :"
+msgstr "დაშორებულის ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
 #, kde-format
 msgid "GID:"
-msgstr "GID :"
+msgstr "GID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: browserwidget_contentview.ui:236
 #, kde-format
 msgid "Revision:"
-msgstr "Révision :"
+msgstr "რევიზია:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: browserwidget_contentview.ui:260
 #, kde-format
 msgid "Size:"
-msgstr "Taille :"
+msgstr "Size:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr ""
+msgstr "ბოლო ცვლილების დრო:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
 #, kde-format
 msgid "Mimetype:"
-msgstr "Type « MIME » :"
+msgstr "Mimetype:"
 
 #. i18n: ectx: property (text), widget (QLabel, mimeType)
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr ""
+msgstr "არასწორი/არასწორი"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -515,21 +519,21 @@ msgstr ""
 #: browserwidget_contentview.ui:370 notificationmonitor.cpp:278
 #, kde-format
 msgid "Flags"
-msgstr "Drapeaux"
+msgstr "დროშები"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:83
 #: notificationmonitor.cpp:279 notificationmonitor.cpp:490
 #, kde-format
 msgid "Tags"
-msgstr "Étiquettes"
+msgstr "ჭდეები"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: browserwidget_itemview.ui:31
 #, kde-format
 msgctxt "model name"
 msgid "Model:"
-msgstr "Modèle :"
+msgstr "მოდელი:"
 
 #: collectionaclpage.cpp:17
 #, kde-format
@@ -540,14 +544,14 @@ msgstr "ACL"
 #: collectionaclpage.ui:17
 #, kde-format
 msgid "Item Access Rights"
-msgstr ""
+msgstr "ჩანაწერის წვდომის უფლებები"
 
 #. i18n: ectx: property (text), widget (QCheckBox, createItem)
 #. i18n: ectx: property (text), widget (QCheckBox, createCollection)
 #: collectionaclpage.ui:23 collectionaclpage.ui:67
 #, kde-format
 msgid "Create"
-msgstr "Créer"
+msgstr "შექმნა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
@@ -558,32 +562,32 @@ msgstr "Créer"
 #: notificationmonitor.cpp:465
 #, kde-format
 msgid "Modify"
-msgstr "Modifier"
+msgstr "ჩასწორება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
 #. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
 #: collectionaclpage.ui:37 collectionaclpage.ui:81
 #, kde-format
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "წაშლა"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
 #, kde-format
 msgid "Link"
-msgstr "Lien"
+msgstr "ბმული"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:98 notificationmonitor.cpp:182
 #, kde-format
 msgid "Unlink"
-msgstr "Couper le lien"
+msgstr "მოხსნა"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr ""
+msgstr "კოლექციაზე წვდომის უფლებები"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -597,132 +601,132 @@ msgstr ""
 #: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
-msgstr "Attribut"
+msgstr "ატრიბუტი"
 
 #: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
-msgstr "Valeur"
+msgstr "მნიშვნელობა"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr ""
+msgstr "არც კი იფიქროთ, აქ რამე შეცვალოთ!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
 #, kde-format
 msgid "Identification"
-msgstr ""
+msgstr "იდენტიფიკაცია"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr ""
+msgstr "დაშორებული იდენტიფიკატორი:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
 #, kde-format
 msgid "Owner:"
-msgstr "Propriétaire :"
+msgstr "მეპატრონე:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr ""
+msgstr "დაშორებული რევიზია:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
 #, kde-format
 msgid "Virtual:"
-msgstr "Virtuel :"
+msgstr "ვირტუალური:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
 #: collectioninternalspage.ui:106 collectioninternalspage.ui:115
 #, kde-format
 msgid "Content Types"
-msgstr ""
+msgstr "შემცველობის ტიპები"
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
 msgid "Programs:"
-msgstr "Programmes :"
+msgstr "პროგრამები:"
 
 #: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
-msgstr "Requête #%1"
+msgstr "#%1-დან გამოთხოვა"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr ""
+msgstr "მოთხოვნის შესრულება"
 
 #: debugmodel.cpp:144
 #, kde-format
 msgid "Direction"
-msgstr "Direction"
+msgstr "მიმართულება"
 
 #: debugmodel.cpp:146 loggingmodel.cpp:116
 #, kde-format
 msgid "Message"
-msgstr "Message"
+msgstr "შეტყობინება"
 
 #: debugwidget.cpp:39
 #, kde-format
 msgid "Enable debugger"
-msgstr ""
+msgstr "გამმართველის ჩართვა"
 
 #: debugwidget.cpp:48 notificationmonitor.cpp:575
 #, kde-format
 msgid "All"
-msgstr "Tous"
+msgstr "ყველა"
 
 #: debugwidget.cpp:63
 #, kde-format
 msgid "Clear Information View"
-msgstr ""
+msgstr "ინფორმაციის ხედის გასუფთავება"
 
 #: debugwidget.cpp:64
 #, kde-format
 msgid "Clear Filtered Messages"
-msgstr ""
+msgstr "გაფილტრული შეტყობინებების გასუფთავება"
 
 #: debugwidget.cpp:65
 #, kde-format
 msgid "Clear All Messages"
-msgstr ""
+msgstr "ყველა შეტყობინების გასუფთავება"
 
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "გაფილტრული შეტყობინებების შენახხვა..."
 
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr ""
+msgstr "ყველა შეტყობინების შენახვა..."
 
 #: instanceselector.cpp:44
 #, kde-format
 msgid "Connect"
-msgstr "Connecter"
+msgstr "დაკავშირება"
 
 #: instanceselector.cpp:88
 #, kde-format
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Akonadi-ის დაშორებული კონსოლი (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Akonadi-ის კონსოლი (გაშვებული ასლი: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -735,304 +739,304 @@ msgstr ""
 #: jobtracker.cpp:26
 #, kde-format
 msgid "Waiting"
-msgstr "En attente"
+msgstr "მოლოდინი"
 
 #: jobtracker.cpp:28
 #, kde-format
 msgid "Running"
-msgstr "En cours"
+msgstr "გაშვებულია"
 
 #: jobtracker.cpp:30 querydebugger.cpp:345
 #, kde-format
 msgid "Ended"
-msgstr "Terminé"
+msgstr "დასრულდა"
 
 #: jobtracker.cpp:32
 #, kde-format
 msgid "Failed: %1"
-msgstr "Échec : %1"
+msgstr "შეცდომა: %1"
 
 #: jobtracker.cpp:34
 #, kde-format
 msgid "Unknown state!"
-msgstr ""
+msgstr "უცნობი მდგომარეობა!"
 
 #: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:38
 #, kde-format
 msgid "Job ID"
-msgstr "Identifiant de la tâche"
+msgstr "დავალების ID"
 
 #: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:39
 #, kde-format
 msgid "Created"
-msgstr "Créé"
+msgstr "შეიქმნა"
 
 #: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:40
 #, kde-format
 msgid "Wait time"
-msgstr "Temps d'attente"
+msgstr "მოლოდინის დრო"
 
 #: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:41
 #, kde-format
 msgid "Job duration"
-msgstr ""
+msgstr "დავალების ხანგრძლივობა"
 
 #: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:42
 #, kde-format
 msgid "Job Type"
-msgstr "Type de tâche"
+msgstr "დავალების ტიპი"
 
 #: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:43
 #, kde-format
 msgid "State"
-msgstr "État"
+msgstr "მდგომარეობა"
 
 #: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:44 logging.cpp:60
 #: loggingmodel.cpp:139
 #, kde-format
 msgid "Info"
-msgstr "Info"
+msgstr "ინფორმაცია"
 
 #: jobtrackersearchwidget.cpp:19
 #, kde-format
 msgid "Show Only Errors"
-msgstr ""
+msgstr "მხოლოდ შეცდომების ჩვენება"
 
 #: jobtrackersearchwidget.cpp:27
 #, kde-format
 msgid "Search..."
-msgstr "Rechercher…"
+msgstr "ძებნა..."
 
 #: jobtrackersearchwidget.cpp:37
 #, kde-format
 msgid "All Columns"
-msgstr ""
+msgstr "ყველა სვეტი"
 
 #: jobtrackerwidget.cpp:73
 #, kde-format
 msgid "Save to file..."
-msgstr ""
+msgstr "ფაილში შენახვა..."
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
 #, kde-format
 msgid "Clear View"
-msgstr "Effacer une vue"
+msgstr "ხედის გასუფთავება"
 
 #: jobtrackerwidget.cpp:107
 #, kde-format
 msgid "Copy Info"
-msgstr "Copier les informations"
+msgstr "ინფორმაციის კოპირება"
 
 #: jobtrackerwidget.cpp:109
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "ყველას ჩაკეცვა"
 
 #: jobtrackerwidget.cpp:110
 #, kde-format
 msgid "Expand All"
-msgstr "Tout développer"
+msgstr "ყველას ამოკეცვა"
 
 #: logging.cpp:44
 #, kde-format
 msgid "Enable"
-msgstr "Activer"
+msgstr "ჩართვა"
 
 #: logging.cpp:56 notificationmonitor.cpp:62
 #, kde-format
 msgid "Types:"
-msgstr "Types :"
+msgstr "ტიპები:"
 
 #: logging.cpp:59 loggingmodel.cpp:137
 #, kde-format
 msgid "Debug"
-msgstr "Débogage"
+msgstr "პროგრამის შეცდომის პოვნა"
 
 #: logging.cpp:61 loggingmodel.cpp:141
 #, kde-format
 msgid "Warning"
-msgstr "Avertissement"
+msgstr "გაფრთხილება"
 
 #: logging.cpp:62 loggingmodel.cpp:143
 #, kde-format
 msgid "Critical"
-msgstr "Critique"
+msgstr "კრიტიკული"
 
 #: logging.cpp:63 loggingmodel.cpp:145
 #, kde-format
 msgid "Fatal"
-msgstr "Fatale"
+msgstr "ფატალური"
 
 #: logging.cpp:64
 #, kde-format
 msgid "Categories:"
-msgstr ""
+msgstr "კატეგორიები:"
 
 #: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:91
 #, kde-format
 msgid "Save to File..."
-msgstr ""
+msgstr "ფაილში შენახვა..."
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
 #, kde-format
 msgid "Error"
-msgstr "Erreur"
+msgstr "შეცდომა"
 
 #: logging.cpp:136 notificationmonitor.cpp:608
 #, kde-format
 msgid "Failed to open file: %1"
-msgstr ""
+msgstr "ფაილის გახსნის შეცდომა: %1"
 
 #: loggingmodel.cpp:104
 #, kde-format
 msgid "Time"
-msgstr "Heure"
+msgstr "დრო"
 
 #: loggingmodel.cpp:106
 #, kde-format
 msgid "Program"
-msgstr "Programme"
+msgstr "პროგრამა"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:208 notificationmonitor.cpp:141
 #: notificationmonitor.cpp:254
 #, kde-format
 msgid "Type"
-msgstr "Type"
+msgstr "ტიპი"
 
 #: loggingmodel.cpp:110
 #, kde-format
 msgid "Category"
-msgstr "Catégorie"
+msgstr "კატეგორია"
 
 #: loggingmodel.cpp:112
 #, kde-format
 msgid "File"
-msgstr "Fichier"
+msgstr "ფაილი"
 
 #: loggingmodel.cpp:114
 #, kde-format
 msgid "Function"
-msgstr "Fonction"
+msgstr "ფუნქცია"
 
 #: loggingmodel.cpp:154 loggingmodel.cpp:170
 #, kde-format
 msgid "%1:%2"
-msgstr "%1 : %2"
+msgstr "%1:%2"
 
 #: main.cpp:40
 #, kde-format
 msgid "Akonadi Console"
-msgstr ""
+msgstr "Akonadi-ის კონსოლი"
 
 #: main.cpp:42
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr ""
+msgstr "Akonadi-ის მართვისა და გამართვის კონსოლი"
 
 #: main.cpp:44
 #, kde-format
 msgid "(c) 2006-2022 the Akonadi developer"
-msgstr ""
+msgstr "(c) 2006-2022 Akonadi-ის პროგრამისტები"
 
 #: main.cpp:48 main.cpp:49
 #, kde-format
 msgid "Author"
-msgstr "Auteur"
+msgstr "ავტორი"
 
 #: mainwidget.cpp:48
 #, kde-format
 msgid "Agents"
-msgstr "Agents"
+msgstr "აგენტები"
 
 #: mainwidget.cpp:50
 #, kde-format
 msgid "Browser"
-msgstr "Navigateur"
+msgstr "Browser-ი"
 
 #: mainwidget.cpp:51
 #, kde-format
 msgid "Debugger"
-msgstr "Débogueur"
+msgstr "გამმართველი"
 
 #: mainwidget.cpp:52
 #, kde-format
 msgid "Logging"
-msgstr "Connexion en cours"
+msgstr "ჩაწერა"
 
 #: mainwidget.cpp:53
 #, kde-format
 msgid "DB Browser"
-msgstr "Navigateur de bases de données"
+msgstr "DB-ის ბრაუზერი"
 
 #: mainwidget.cpp:54
 #, kde-format
 msgid "DB Console"
-msgstr ""
+msgstr "DB-ის კონსოლი"
 
 #: mainwidget.cpp:55
 #, kde-format
 msgid "Query Debugger"
-msgstr ""
+msgstr "მოთხოვნის გამმართველი"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Enable job tracker"
-msgstr ""
+msgstr "დავალების ტრეკინგის ჩართვა"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Job Tracker"
-msgstr ""
+msgstr "დავალების ტრეკერი"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "რესურსის მგეგმავების ტრეკინგის ჩართვა"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Resources Schedulers"
-msgstr ""
+msgstr "რესურსების მგეგმავები"
 
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Notification Monitor"
-msgstr ""
+msgstr "შეტყობინებების მონიტორი"
 
 #: mainwidget.cpp:60
 #, kde-format
 msgid "Item Search"
-msgstr ""
+msgstr "ობიექტის ძებნა"
 
 #: mainwidget.cpp:62
 #, kde-format
 msgid "Monitors"
-msgstr "Écrans"
+msgstr "მონიტორინგი"
 
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr ""
+msgstr "XML-ში ჩაყრა..."
 
 #: mainwidget.cpp:69
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr ""
+msgstr "Akonadi-ის კეშის გასუფთავება"
 
 #: mainwidget.cpp:73
 #, kde-format
 msgid "Start Server"
-msgstr ""
+msgstr "სერვერის გაშვება"
 
 #: mainwidget.cpp:77
 #, kde-format
 msgid "Stop Server"
-msgstr ""
+msgstr "სერვერის გაჩერება"
 
 #: mainwidget.cpp:81
 #, kde-format
 msgid "Restart Server"
-msgstr ""
+msgstr "სერვერის გადატვირთვა"
 
 #: mainwindow.cpp:33
 #, kde-format
@@ -1047,61 +1051,61 @@ msgstr ""
 #: monitorsmodel.cpp:97
 #, kde-format
 msgid "Session/Subscriber"
-msgstr ""
+msgstr "სესია/გამომწერი"
 
 #: monitorswidget.cpp:77 notificationmodel.cpp:72 notificationmonitor.cpp:228
 #: notificationmonitor.cpp:484
 #, kde-format
 msgid "Items"
-msgstr "Éléments"
+msgstr "ჩანაწერები"
 
 #: monitorswidget.cpp:80 notificationmonitor.cpp:487
 #, kde-format
 msgid "Collections"
-msgstr ""
+msgstr "კოლექციები"
 
 #: monitorswidget.cpp:86 notificationmonitor.cpp:289
 #: notificationmonitor.cpp:493
 #, kde-format
 msgid "Relations"
-msgstr "Relations"
+msgstr "კავშირები"
 
 #: monitorswidget.cpp:89
 #, kde-format
 msgid "Subscribers"
-msgstr ""
+msgstr "გამომწერები"
 
 #: monitorswidget.cpp:92
 #, kde-format
 msgid "Notification"
-msgstr ""
+msgstr "გაფრთხილება"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:566
 #, kde-format
 msgid "List Filter"
-msgstr ""
+msgstr "სიის გაფილტვრა"
 
 #: monitorswidget.cpp:102 notificationmonitor.cpp:567
 #, kde-format
 msgid "Include Statistics"
-msgstr ""
+msgstr "სტატისტიკის ჩათვლით"
 
 #: monitorswidget.cpp:103 notificationmonitor.cpp:199
 #: notificationmonitor.cpp:398 notificationmonitor.cpp:451
 #: notificationmonitor.cpp:568 tagpropertiesdialog.cpp:78
 #, kde-format
 msgid "Resource"
-msgstr "Ressource"
+msgstr "რესურსი"
 
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "შემცველობის MIME ტიპები"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "წინაპრის მიღება"
 
 #: monitorswidget.cpp:109
 #, kde-format
@@ -1112,32 +1116,32 @@ msgstr ""
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "მხოლოდ ID-ის გამოთხოვა"
 
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "მიღების შეცდომის იგნორი"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
 #, kde-format
 msgid "Values"
-msgstr "Valeurs"
+msgstr "მნიშვნელობები"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "_თვისებები"
 
 #: monitorswidget.cpp:138 notificationmonitor.cpp:475
 #, kde-format
 msgid "Subscriber"
-msgstr ""
+msgstr "გამომწერი"
 
 #: monitorswidget.cpp:139
 #, kde-format
 msgid "Session ID"
-msgstr ""
+msgstr "სესიის ID"
 
 #: monitorswidget.cpp:140
 #, kde-format
@@ -1172,7 +1176,7 @@ msgstr ""
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr ""
+msgstr "იგნორირებული სესიები:"
 
 #: monitorswidget.cpp:147
 #, kde-format
@@ -1182,7 +1186,7 @@ msgstr ""
 #: monitorswidget.cpp:148
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "ექსკლუზიურია:"
 
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
@@ -1197,17 +1201,17 @@ msgstr ""
 #: monitorswidget.cpp:153
 #, kde-format
 msgid "Full Paryload"
-msgstr ""
+msgstr "სრული დატვირთვა"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
 msgid "All Attributes"
-msgstr ""
+msgstr "ყველა ატრიბუტი"
 
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Cache only"
-msgstr ""
+msgstr "მხოლოდ კეში"
 
 #: monitorswidget.cpp:157
 #, kde-format
@@ -1217,17 +1221,17 @@ msgstr ""
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "MTime-ის გამოთხოვა"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr "Rechercher un  «GID »"
+msgstr "GID-ის გამოთხოვა"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr ""
+msgstr "გამოთხოვის შეცდომების იგნორი"
 
 #: monitorswidget.cpp:162
 #, kde-format
@@ -1237,12 +1241,12 @@ msgstr ""
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr "Rechercher un  «GID »"
+msgstr "RID-ს გამოთხოვა"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch Tags"
-msgstr ""
+msgstr "ჭდეების გამოთხოვა"
 
 #: monitorswidget.cpp:167
 #, kde-format
@@ -1257,17 +1261,17 @@ msgstr ""
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
 msgid "Tag"
-msgstr "Étiquette"
+msgstr "ჭდე"
 
 #: notificationmodel.cpp:78 notificationmonitor.cpp:423
 #, kde-format
 msgid "Relation"
-msgstr "Relation"
+msgstr "ფარდობითობა"
 
 #: notificationmodel.cpp:80
 #, kde-format
 msgid "Subscription"
-msgstr ""
+msgstr "გამოწერა"
 
 #: notificationmodel.cpp:88 notificationmodel.cpp:112 notificationmodel.cpp:130
 #: notificationmodel.cpp:142 notificationmodel.cpp:152
@@ -1276,13 +1280,13 @@ msgstr ""
 #: notificationmonitor.cpp:462
 #, kde-format
 msgid "Add"
-msgstr "Ajouter"
+msgstr "დამატება"
 
 #: notificationmodel.cpp:92 notificationmodel.cpp:116
 #: notificationmonitor.cpp:173 notificationmonitor.cpp:382
 #, kde-format
 msgid "Move"
-msgstr "Déplacer"
+msgstr "გადატანა"
 
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
@@ -1305,17 +1309,17 @@ msgstr ""
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr "InvalidOp"
+msgstr ""
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
 msgid "Subscribe"
-msgstr "S'abonner"
+msgstr "ხელმოწერა"
 
 #: notificationmodel.cpp:122 notificationmonitor.cpp:391
 #, kde-format
 msgid "Unsubscribe"
-msgstr ""
+msgstr "გამოწერის გაუქმება"
 
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
@@ -1325,24 +1329,24 @@ msgstr ""
 #: notificationmodel.cpp:162
 #, kde-format
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr "უცნობი"
 
 #: notificationmodel.cpp:210 notificationmonitor.cpp:198
 #: notificationmonitor.cpp:397 notificationmonitor.cpp:422
 #: notificationmonitor.cpp:450 notificationmonitor.cpp:474
 #, kde-format
 msgid "Operation"
-msgstr "Opération"
+msgstr "ოეპრაცია"
 
 #: notificationmodel.cpp:212
 #, kde-format
 msgid "IDs"
-msgstr "Identifiants"
+msgstr "ID-ები"
 
 #: notificationmodel.cpp:214
 #, kde-format
 msgid "Session"
-msgstr "Session"
+msgstr "სესია"
 
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
@@ -1357,7 +1361,7 @@ msgstr ""
 #: notificationmonitor.cpp:140
 #, kde-format
 msgid "Timestamp"
-msgstr "Horodatage"
+msgstr "დროის შტამპი"
 
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
@@ -1377,37 +1381,37 @@ msgstr ""
 #: notificationmonitor.cpp:203
 #, kde-format
 msgid "Item Parts"
-msgstr ""
+msgstr "ელემენტის ნაწილები"
 
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Added Flags"
-msgstr ""
+msgstr "დამატებული ალმები"
 
 #: notificationmonitor.cpp:205
 #, kde-format
 msgid "Removed Flags"
-msgstr ""
+msgstr "წაშლილი ალმები"
 
 #: notificationmonitor.cpp:206
 #, kde-format
 msgid "Added Tags"
-msgstr ""
+msgstr "დამატებული ჭდეებ"
 
 #: notificationmonitor.cpp:207
 #, kde-format
 msgid "Removed Tags"
-msgstr ""
+msgstr "წაშლილი ჭდეები"
 
 #: notificationmonitor.cpp:217
 #, kde-format
 msgid "Removed Relations"
-msgstr ""
+msgstr "წაშლილი ურთიერთობები"
 
 #: notificationmonitor.cpp:226
 #, kde-format
 msgid "Must retrieve"
-msgstr ""
+msgstr "უნდა მიიღოს"
 
 #: notificationmonitor.cpp:240
 #, kde-format
@@ -1417,18 +1421,18 @@ msgstr "id"
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr "ID distant"
+msgstr "remoteId"
 
 #: notificationmonitor.cpp:242
 #, kde-format
 msgid "name"
-msgstr "nom"
+msgstr "სახელი"
 
 #: notificationmonitor.cpp:244 notificationmonitor.cpp:299
 #: notificationmonitor.cpp:347
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "წინაპარი"
 
 #: notificationmonitor.cpp:251 notificationmonitor.cpp:333
 #, kde-format
@@ -1438,7 +1442,7 @@ msgstr "ID"
 #: notificationmonitor.cpp:252 notificationmonitor.cpp:334
 #, kde-format
 msgid "Parent ID"
-msgstr "ID Parent"
+msgstr "მშობლის ID-ები"
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:274
 #, kde-format
@@ -1449,38 +1453,38 @@ msgstr "GID"
 #: notificationmonitor.cpp:429 tagpropertiesdialog.cpp:78
 #, kde-format
 msgid "Remote ID"
-msgstr "ID Distant"
+msgstr "დაშორებულის ID"
 
 #: notificationmonitor.cpp:270
 #, kde-format
 msgid "Revision"
-msgstr "Révision"
+msgstr "რევიზია"
 
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr "ID Parent"
+msgstr "მშობლისID"
 
 #: notificationmonitor.cpp:272
 #, kde-format
 msgid "RemoteID"
-msgstr "ID distant"
+msgstr "დაშორებულისID"
 
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr "RemoteRev"
+msgstr "დაშორებულირევზია"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
 #, kde-format
 msgid "Size"
-msgstr "Taille"
+msgstr "ზომა"
 
 #: notificationmonitor.cpp:276
 #, kde-format
 msgid "MimeType"
-msgstr "Type « MIME »"
+msgstr "MimeType"
 
 #: notificationmonitor.cpp:277
 #, kde-format
@@ -1495,112 +1499,112 @@ msgstr "VRefs"
 #: notificationmonitor.cpp:305
 #, kde-format
 msgid "Parts"
-msgstr "Parties"
+msgstr "ნაწილებ"
 
 #: notificationmonitor.cpp:312
 #, kde-format
 msgid "External"
-msgstr "Externe"
+msgstr "გარე"
 
 #: notificationmonitor.cpp:315
 #, kde-format
 msgid "Internal"
-msgstr "Interne"
+msgstr "შიდა"
 
 #: notificationmonitor.cpp:318
 #, kde-format
 msgid "Foreign"
-msgstr "Étranger"
+msgstr "უცხო"
 
 #: notificationmonitor.cpp:322
 #, kde-format
 msgid "Storage Type"
-msgstr ""
+msgstr "საცავის ტიპი"
 
 #: notificationmonitor.cpp:323
 #, kde-format
 msgid "Version"
-msgstr "Version"
+msgstr "ვერსია"
 
 #: notificationmonitor.cpp:324
 #, kde-format
 msgid "Data"
-msgstr "Données"
+msgstr "მონაცემები"
 
 #: notificationmonitor.cpp:335
 #, kde-format
 msgid "Name"
-msgstr "Nom"
+msgstr "სახელი"
 
 #: notificationmonitor.cpp:336
 #, kde-format
 msgid "Mime Types"
-msgstr ""
+msgstr "Mime ტიპები"
 
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Remote Revision"
-msgstr ""
+msgstr "დაშორებული რევიზია"
 
 #: notificationmonitor.cpp:339
 #, kde-format
 msgid "Statistics"
-msgstr ""
+msgstr "სტატისტიკა"
 
 #: notificationmonitor.cpp:341
 #, kde-format
 msgid "Count"
-msgstr "Compte"
+msgstr "რაოდენობა"
 
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "უხილავი"
 
 #: notificationmonitor.cpp:345
 #, kde-format
 msgid "Search Query"
-msgstr ""
+msgstr "საძებნი სტრიქონი"
 
 #: notificationmonitor.cpp:346
 #, kde-format
 msgid "Search Collections"
-msgstr ""
+msgstr "კოლექციების ძებნა"
 
 #: notificationmonitor.cpp:353
 #, kde-format
 msgid "Cache Policy"
-msgstr ""
+msgstr "ქეშის პოლიტიკა"
 
 #: notificationmonitor.cpp:355
 #, kde-format
 msgid "Inherit"
-msgstr "Hériter"
+msgstr "მემკვიდრეობით"
 
 #: notificationmonitor.cpp:356
 #, kde-format
 msgid "Check Interval"
-msgstr ""
+msgstr "შემოწმების ინტერვალი"
 
 #: notificationmonitor.cpp:357
 #, kde-format
 msgid "Cache Timeout"
-msgstr ""
+msgstr "კეშის მოლოდინის ვადა"
 
 #: notificationmonitor.cpp:358
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "სინქრონიზაცია საჭიროებისამებრ"
 
 #: notificationmonitor.cpp:359
 #, kde-format
 msgid "Local Parts"
-msgstr ""
+msgstr "ლოკალური ნაწილები"
 
 #: notificationmonitor.cpp:364 notificationmonitor.cpp:557
 #, kde-format
 msgid "Enabled"
-msgstr "Activé"
+msgstr "აქტიური"
 
 #: notificationmonitor.cpp:365
 #, kde-format
@@ -1610,17 +1614,17 @@ msgstr ""
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr "SyncPref"
+msgstr ""
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr "IndexPref"
+msgstr ""
 
 #: notificationmonitor.cpp:368
 #, kde-format
 msgid "Virtual"
-msgstr "Virtuel"
+msgstr "ვირტუალური"
 
 #: notificationmonitor.cpp:400
 #, kde-format
@@ -1630,12 +1634,12 @@ msgstr ""
 #: notificationmonitor.cpp:402
 #, kde-format
 msgid "Changed Parts"
-msgstr ""
+msgstr "შეცვლილი ნაწილები"
 
 #: notificationmonitor.cpp:425
 #, kde-format
 msgid "Left ID"
-msgstr "ID Gauche"
+msgstr "მარცხენა ID"
 
 #: notificationmonitor.cpp:426
 #, kde-format
@@ -1645,7 +1649,7 @@ msgstr ""
 #: notificationmonitor.cpp:427
 #, kde-format
 msgid "Right ID"
-msgstr "ID Droite"
+msgstr "მარჯვენა ID"
 
 #: notificationmonitor.cpp:428
 #, kde-format
@@ -1670,17 +1674,17 @@ msgstr ""
 #: notificationmonitor.cpp:496
 #, kde-format
 msgid "Subscriptions"
-msgstr ""
+msgstr "გამოწერები"
 
 #: notificationmonitor.cpp:499
 #, kde-format
 msgid "Changes"
-msgstr "Modifications"
+msgstr "ცვლილებები"
 
 #: notificationmonitor.cpp:502
 #, kde-format
 msgid "No Type"
-msgstr "Aucun type"
+msgstr "ტიპის გარეშე"
 
 #: notificationmonitor.cpp:506
 #, kde-format
@@ -1710,7 +1714,7 @@ msgstr ""
 #: notificationmonitor.cpp:511
 #, kde-format
 msgid "Exclusive"
-msgstr "Exclusif"
+msgstr "ექსკლუზიური"
 
 #: notificationmonitor.cpp:515
 #, kde-format
@@ -1745,7 +1749,7 @@ msgstr ""
 #: notificationmonitor.cpp:530
 #, kde-format
 msgid "Cache Only"
-msgstr ""
+msgstr "მხოლოდ კეში"
 
 #: notificationmonitor.cpp:531
 #, kde-format
@@ -1755,17 +1759,17 @@ msgstr ""
 #: notificationmonitor.cpp:532
 #, kde-format
 msgid "Full Payload"
-msgstr ""
+msgstr "სრული დატვირთვა"
 
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "ზომის გამოთხოვა"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "MTime-ის გამოთხოვა"
 
 #: notificationmonitor.cpp:536
 #, kde-format
@@ -1775,12 +1779,12 @@ msgstr ""
 #: notificationmonitor.cpp:537
 #, kde-format
 msgid "Ignore Errors"
-msgstr ""
+msgstr "შეცდომების იგნორირება"
 
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "ალმების გამოთხოვა"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
@@ -1800,37 +1804,37 @@ msgstr ""
 #: notificationmonitor.cpp:551
 #, kde-format
 msgid "No Filter"
-msgstr "Aucun filtre"
+msgstr "ფილტრის გარეშე"
 
 #: notificationmonitor.cpp:554
 #, kde-format
 msgid "Display"
-msgstr "Affichage"
+msgstr "ეკრანი"
 
 #: notificationmonitor.cpp:560
 #, kde-format
 msgid "Index"
-msgstr "Indice"
+msgstr "ინდექსი"
 
 #: notificationmonitor.cpp:563
 #, kde-format
 msgid "Sync"
-msgstr "Synchroniser"
+msgstr "სინქრონიზაცია"
 
 #: notificationmonitor.cpp:569
 #, kde-format
 msgid "Content Mime Types"
-msgstr ""
+msgstr "შემცველობის Mime ტიპები"
 
 #: notificationmonitor.cpp:578
 #, kde-format
 msgid "Parent"
-msgstr "Parent"
+msgstr "მშობელი"
 
 #: notificationmonitor.cpp:581
 #, kde-format
 msgid "None"
-msgstr "Aucun"
+msgstr "არაფერი"
 
 #: notificationmonitor.cpp:585
 #, kde-format
@@ -1855,17 +1859,17 @@ msgstr ""
 #: querydebugger.cpp:343
 #, kde-format
 msgid "Started"
-msgstr "Démarré"
+msgstr "გაეშვა"
 
 #: querydebugger.cpp:347
 #, kde-format
 msgid "Duration"
-msgstr "Durée"
+msgstr "ხანგრძლივობა"
 
 #: querydebugger.cpp:525
 #, kde-format
 msgid "Query"
-msgstr "Requête"
+msgstr "მოთხოვნა"
 
 #: querydebugger.cpp:527
 #, kde-format
@@ -1875,7 +1879,7 @@ msgstr ""
 #: querydebugger.cpp:529
 #, kde-format
 msgid "Calls"
-msgstr "Appels"
+msgstr "ზარები"
 
 #: querydebugger.cpp:531
 #, kde-format
@@ -1897,79 +1901,79 @@ msgstr ""
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "მოთხოვნების მიმდევრობა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "მოთხოვნების ხე"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
 #, kde-format
 msgid "Save To File"
-msgstr ""
+msgstr "ფაილის სახის შენახვა"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr ""
+msgstr "მოთხოვნის ხედი"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr "Requête :"
+msgstr "მოთხოვნა:"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "ტექსტური ჭდე"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60
 #, kde-format
 msgid "Results:"
-msgstr "Résultats :"
+msgstr "შედეგები:"
 
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr ""
+msgstr "საძებნი საცავი:"
 
 #: searchwidget.cpp:54
 #, kde-format
 msgid "Search"
-msgstr "Rechercher"
+msgstr "ძებნა"
 
 #: searchwidget.cpp:62
 #, kde-format
 msgid "Search query:"
-msgstr ""
+msgstr "საძებნი სტრიქონი:"
 
 #: searchwidget.cpp:71
 #, kde-format
 msgid "Results (Documents):"
-msgstr ""
+msgstr "შედეგები (დოკუმენტები):"
 
 #: searchwidget.cpp:81
 #, kde-format
 msgid "Document:"
-msgstr "Document :"
+msgstr "დოკუმენტი:"
 
 #: searchwidget.cpp:91
 #, kde-format
 msgid "Item:"
-msgstr "Élément :"
+msgstr "ელემენტი:"
 
 #: searchwidget.cpp:147
 #, kde-format
 msgid "Xapian error"
-msgstr ""
+msgstr "Xapian-ის შეცდომა"
 
 #: searchwidget.cpp:153
 #, kde-format
@@ -1979,44 +1983,44 @@ msgstr ""
 #: searchwidget.cpp:187
 #, kde-format
 msgid "Term/Value"
-msgstr ""
+msgstr "წესი/მნიშვნელობა"
 
 #: searchwidget.cpp:187
 #, kde-format
 msgid "WDF/Slot"
-msgstr "WDF / Créneau"
+msgstr "WDF/Slot"
 
 #: searchwidget.cpp:189
 #, kde-format
 msgid "Terms"
-msgstr "Termes"
+msgstr "პირობები"
 
 #: searchwidget.cpp:216
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "გამოთხოვილი ელემენტის შეცდომა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
 #, kde-format
 msgid "General"
-msgstr "Général"
+msgstr "მთავარი"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "მშობლის ჭდის ID:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
 #: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
 #, kde-format
 msgid "&Remove"
-msgstr "Supp&rimer"
+msgstr "&წაშლა"
 
 #. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr ""
+msgstr "დაშორებული იდენტიფიკატორები"

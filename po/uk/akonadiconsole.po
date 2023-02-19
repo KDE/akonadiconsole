@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-17 23:31+0200\n"
+"PO-Revision-Date: 2023-02-18 15:38+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -726,7 +726,7 @@ msgstr "З'єднатися"
 #: instanceselector.cpp:88
 #, kde-format
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Віддалена консоль Akonadi (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
@@ -740,6 +740,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"У поточному сеансі D-Bus запущено декілька екземплярів Akonadi. Будь ласка, "
+"виберіть екземпляр, з яким ви хочете встановити з'єднання."
 
 #: jobtracker.cpp:26
 #, kde-format
@@ -926,17 +928,17 @@ msgstr "Функція"
 #: loggingmodel.cpp:154 loggingmodel.cpp:170
 #, kde-format
 msgid "%1:%2"
-msgstr ""
+msgstr "%1:%2"
 
 #: main.cpp:40
 #, kde-format
 msgid "Akonadi Console"
-msgstr ""
+msgstr "Консоль Akonadi"
 
 #: main.cpp:42
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr ""
+msgstr "Консоль керування і діагностики для Akonadi"
 
 #: main.cpp:44
 #, kde-format
@@ -971,22 +973,22 @@ msgstr "Журналювання"
 #: mainwidget.cpp:53
 #, kde-format
 msgid "DB Browser"
-msgstr ""
+msgstr "Навігатор БД"
 
 #: mainwidget.cpp:54
 #, kde-format
 msgid "DB Console"
-msgstr ""
+msgstr "Консоль БД"
 
 #: mainwidget.cpp:55
 #, kde-format
 msgid "Query Debugger"
-msgstr ""
+msgstr "Засіб діагностики запитів"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Enable job tracker"
-msgstr ""
+msgstr "Увімкнути стеження за завданнями"
 
 #: mainwidget.cpp:56
 #, kde-format
@@ -1021,7 +1023,7 @@ msgstr "Монітори"
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr ""
+msgstr "Створити дамп у XML…"
 
 #: mainwidget.cpp:69
 #, kde-format
@@ -1052,11 +1054,16 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Консоль Akonadi є суто інструментом для розробників. За її допомогою ви "
+"можете переглядати і змінювати структури внутрішніх даних Akonadi. Вносити "
+"за її допомогою зміни варто, лише якщо ви добре усвідомлюєте наслідки. Якщо "
+"ж це не так, ви можете пошкодити або втрати дані для керування особистими "
+"відомостями.<br/><b>Будьте обережні!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
 msgid "Session/Subscriber"
-msgstr ""
+msgstr "Сеанс/Підписник"
 
 #: monitorswidget.cpp:77 notificationmodel.cpp:72 notificationmonitor.cpp:228
 #: notificationmonitor.cpp:484
@@ -1078,7 +1085,7 @@ msgstr "Зв'язки"
 #: monitorswidget.cpp:89
 #, kde-format
 msgid "Subscribers"
-msgstr ""
+msgstr "Підписники"
 
 #: monitorswidget.cpp:92
 #, kde-format
@@ -1088,12 +1095,12 @@ msgstr "Сповіщення"
 #: monitorswidget.cpp:101 notificationmonitor.cpp:566
 #, kde-format
 msgid "List Filter"
-msgstr ""
+msgstr "Фільтр списку"
 
 #: monitorswidget.cpp:102 notificationmonitor.cpp:567
 #, kde-format
 msgid "Include Statistics"
-msgstr ""
+msgstr "Включити статистику"
 
 #: monitorswidget.cpp:103 notificationmonitor.cpp:199
 #: notificationmonitor.cpp:398 notificationmonitor.cpp:451
@@ -1105,28 +1112,28 @@ msgstr "Ресурс"
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "Типи MIME даних"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "Отримання попередника"
 
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Область отримання попередника"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "Отримати лише ідентифікатор"
 
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "Ігнорувати помилку отримання"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
 #, kde-format
@@ -1141,7 +1148,7 @@ msgstr "Властивості"
 #: monitorswidget.cpp:138 notificationmonitor.cpp:475
 #, kde-format
 msgid "Subscriber"
-msgstr ""
+msgstr "Підписник"
 
 #: monitorswidget.cpp:139
 #, kde-format
@@ -1151,27 +1158,27 @@ msgstr "Ідентифікатор сеансу"
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Collections:"
-msgstr ""
+msgstr "Збірки зі спостереженням:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Items:"
-msgstr ""
+msgstr "Записи зі спостереженням:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Tags:"
-msgstr ""
+msgstr "Мітки зі спостереженням:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Types:"
-msgstr ""
+msgstr "Типи зі спостереженням:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr ""
+msgstr "Типи MIME зі спостереженням:"
 
 #: monitorswidget.cpp:145
 #, kde-format
@@ -1181,87 +1188,87 @@ msgstr "Ресурси, що контролюються:"
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr ""
+msgstr "Ігноровані сеанси:"
 
 #: monitorswidget.cpp:147
 #, kde-format
 msgid "All Monitored:"
-msgstr ""
+msgstr "Усі зі спостереженням:"
 
 #: monitorswidget.cpp:148
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "Є виключним:"
 
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Область отримання записів"
 
 #: monitorswidget.cpp:152
 #, kde-format
 msgid "Payload Parts"
-msgstr ""
+msgstr "Частини вмісту"
 
 #: monitorswidget.cpp:153
 #, kde-format
 msgid "Full Paryload"
-msgstr ""
+msgstr "Увесь вміст"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
 msgid "All Attributes"
-msgstr ""
+msgstr "Усі атрибути"
 
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Cache only"
-msgstr ""
+msgstr "Лише кеш"
 
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "Перевіряти лише на кешовані частини вмісту"
 
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "Отримати mtime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr ""
+msgstr "Отримати GID"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr ""
+msgstr "Ігнорувати помилки отримання"
 
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Отримати зміни з моменту часу"
 
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr ""
+msgstr "Отримати RID"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch Tags"
-msgstr ""
+msgstr "Отримати мітки"
 
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Область отримання збірок"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Область отримання міток"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
@@ -1296,17 +1303,17 @@ msgstr "Пересунути"
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "ModifyFlags"
 
 #: notificationmodel.cpp:102 notificationmonitor.cpp:188
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "ModifyTags"
 
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr ""
+msgstr "ModifyRelations"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1314,7 +1321,7 @@ msgstr ""
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr ""
+msgstr "InvalidOp"
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
@@ -1329,7 +1336,7 @@ msgstr "Скасувати підписку"
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "InvalidIp"
 
 #: notificationmodel.cpp:162
 #, kde-format
@@ -1356,12 +1363,12 @@ msgstr "Сеанс"
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "Listeners"
 
 #: notificationmonitor.cpp:57
 #, kde-format
 msgid "Enable notification monitor"
-msgstr ""
+msgstr "Увімкнути спостереження за сповіщеннями"
 
 #: notificationmonitor.cpp:140
 #, kde-format
@@ -1371,12 +1378,12 @@ msgstr "Часова позначка"
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
 msgid "Parent Collection"
-msgstr ""
+msgstr "Батьківська збірка"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "Батьк. збір. призн."
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
@@ -1426,7 +1433,7 @@ msgstr "ід."
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "remoteId"
 
 #: notificationmonitor.cpp:242
 #, kde-format
@@ -1437,7 +1444,7 @@ msgstr "назва"
 #: notificationmonitor.cpp:347
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Попередник"
 
 #: notificationmonitor.cpp:251 notificationmonitor.cpp:333
 #, kde-format
@@ -1447,7 +1454,7 @@ msgstr "Ід."
 #: notificationmonitor.cpp:252 notificationmonitor.cpp:334
 #, kde-format
 msgid "Parent ID"
-msgstr ""
+msgstr "Батьк. ід."
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:274
 #, kde-format
@@ -1574,7 +1581,7 @@ msgstr "Черга пошуку"
 #: notificationmonitor.cpp:346
 #, kde-format
 msgid "Search Collections"
-msgstr ""
+msgstr "Пошук збірок"
 
 #: notificationmonitor.cpp:353
 #, kde-format
@@ -1594,12 +1601,12 @@ msgstr "Інтервал перевірки"
 #: notificationmonitor.cpp:357
 #, kde-format
 msgid "Cache Timeout"
-msgstr ""
+msgstr "Час очікування на кешування"
 
 #: notificationmonitor.cpp:358
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "Синхронізація на вимогу"
 
 #: notificationmonitor.cpp:359
 #, kde-format
@@ -1614,17 +1621,17 @@ msgstr "Увімкнено"
 #: notificationmonitor.cpp:365
 #, kde-format
 msgid "DisplayPref"
-msgstr ""
+msgstr "DisplayPref"
 
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr ""
+msgstr "SyncPref"
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr ""
+msgstr "IndexPref"
 
 #: notificationmonitor.cpp:368
 #, kde-format
@@ -1634,47 +1641,47 @@ msgstr "Віртуальний"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Батьківська збірка призначення"
 
 #: notificationmonitor.cpp:402
 #, kde-format
 msgid "Changed Parts"
-msgstr ""
+msgstr "Змінені частини"
 
 #: notificationmonitor.cpp:425
 #, kde-format
 msgid "Left ID"
-msgstr ""
+msgstr "Лівий ід."
 
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr ""
+msgstr "Лівий тип MIME"
 
 #: notificationmonitor.cpp:427
 #, kde-format
 msgid "Right ID"
-msgstr ""
+msgstr "Правий ід."
 
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr ""
+msgstr "Правий тип MIME"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Monitored Collections"
-msgstr ""
+msgstr "Збірки зі спостереженням"
 
 #: notificationmonitor.cpp:477
 #, kde-format
 msgid "Monitored Items"
-msgstr ""
+msgstr "Записи зі спостереженням"
 
 #: notificationmonitor.cpp:478
 #, kde-format
 msgid "Monitored Tags"
-msgstr ""
+msgstr "Мітки зі спостереженням"
 
 #: notificationmonitor.cpp:496
 #, kde-format
@@ -1684,22 +1691,22 @@ msgstr "Підписки"
 #: notificationmonitor.cpp:499
 #, kde-format
 msgid "Changes"
-msgstr ""
+msgstr "Зміни"
 
 #: notificationmonitor.cpp:502
 #, kde-format
 msgid "No Type"
-msgstr ""
+msgstr "Немає типу"
 
 #: notificationmonitor.cpp:506
 #, kde-format
 msgid "Monitored Types"
-msgstr ""
+msgstr "Типи зі спостереженням"
 
 #: notificationmonitor.cpp:507
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr ""
+msgstr "Типи MIME зі спостереженням"
 
 #: notificationmonitor.cpp:508
 #, kde-format
@@ -1709,7 +1716,7 @@ msgstr "Ресурси, що контролюються"
 #: notificationmonitor.cpp:509
 #, kde-format
 msgid "Ignored Sessions"
-msgstr ""
+msgstr "Ігноровані сеанси"
 
 #: notificationmonitor.cpp:510
 #, kde-format
@@ -1729,82 +1736,82 @@ msgstr "Запитані частини"
 #: notificationmonitor.cpp:516
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "Змінено з моменту часу"
 
 #: notificationmonitor.cpp:520
 #, kde-format
 msgid "No Ancestor"
-msgstr ""
+msgstr "Немає попередника "
 
 #: notificationmonitor.cpp:523
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "Батьк. Попередник"
 
 #: notificationmonitor.cpp:526
 #, kde-format
 msgid "All Ancestors"
-msgstr ""
+msgstr "Усі попередники"
 
 #: notificationmonitor.cpp:529
 #, kde-format
 msgid "Ancestor Depth"
-msgstr ""
+msgstr "Глибина попередників"
 
 #: notificationmonitor.cpp:530
 #, kde-format
 msgid "Cache Only"
-msgstr ""
+msgstr "Лише кеш"
 
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "Перевіряти лише на кешовані частини вмісту"
 
 #: notificationmonitor.cpp:532
 #, kde-format
 msgid "Full Payload"
-msgstr ""
+msgstr "Весь вміст"
 
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "Отримати розмір"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "Отримати MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Отримати віддалену модифікацію"
 
 #: notificationmonitor.cpp:537
 #, kde-format
 msgid "Ignore Errors"
-msgstr ""
+msgstr "Ігнорувати помилки"
 
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "Отримати прапорці"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "Отримати RemoteID"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "Отримати зв'язки"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "Отримати VRef"
 
 #: notificationmonitor.cpp:551
 #, kde-format
@@ -1844,12 +1851,12 @@ msgstr "Немає"
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Лише ідентифікатор отримання попередника"
 
 #: notificationmonitor.cpp:586
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "Атрибути попередника"
 
 #: notificationmonitor.cpp:594
 #, kde-format
@@ -1900,7 +1907,7 @@ msgstr "Стосується рядків:"
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Увімкнути діагностику запитів (уповільнить роботу сервера!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
@@ -1948,7 +1955,7 @@ msgstr "Результати:"
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr ""
+msgstr "Сховище пошуку:"
 
 #: searchwidget.cpp:54
 #, kde-format
@@ -1993,7 +2000,7 @@ msgstr "Термін/Значення"
 #: searchwidget.cpp:187
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/Слот"
 
 #: searchwidget.cpp:189
 #, kde-format
@@ -2015,7 +2022,7 @@ msgstr "Загальне"
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "Ід. батьк. мітки:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
