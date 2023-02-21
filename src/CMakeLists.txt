@@ -145,7 +145,7 @@ target_link_libraries(libakonadiconsole
     KF5::AkonadiPrivate
     KF5::AkonadiWidgets
     KF5::AkonadiXml
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     KF${KF_MAJOR_VERSION}::Contacts
     KF${KF_MAJOR_VERSION}::CalendarCore
     Qt::Sql
