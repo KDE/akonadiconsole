@@ -1,16 +1,16 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
+#
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2023.
 # Martin Srebotnjak <miles@filmsi.net>, 2023.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-19 11:53+0100\n"
-"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"PO-Revision-Date: 2023-02-21 21:27+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -618,9 +618,9 @@ msgstr "Vrednost"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
-#, fuzzy, kde-format
+#, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr "Niti pomišljajte si česarkoli spremeniti tukaj!"
+msgstr "Ne pomišljajte si česarkoli spremeniti tukaj!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
@@ -1233,9 +1233,9 @@ msgid "Check for Cached Payloads Parts Only"
 msgstr "Preverite samo dele predpomnjenih obremenitev"
 
 #: monitorswidget.cpp:159
-#, fuzzy, kde-format
+#, kde-format
 msgid "Fetch mtime"
-msgstr "Pridobi mčas"
+msgstr "Pridobi mtime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
@@ -1383,7 +1383,7 @@ msgid "Parent Collection"
 msgstr "Nadrejena zbirka"
 
 #: notificationmonitor.cpp:201
-#, fuzzy, kde-format
+#, kde-format
 msgid "Parent Dest Col"
 msgstr "Ciljni stolpec nadrejenega"
 
@@ -1423,19 +1423,19 @@ msgid "Removed Relations"
 msgstr "Odstranjene relacije"
 
 #: notificationmonitor.cpp:226
-#, fuzzy, kde-format
+#, kde-format
 msgid "Must retrieve"
-msgstr "Pridobitev obvezna"
+msgstr "Obvezna pridobitev"
 
 #: notificationmonitor.cpp:240
-#, fuzzy, kde-format
+#, kde-format
 msgid "id"
 msgstr "id"
 
 #: notificationmonitor.cpp:241
-#, fuzzy, kde-format
+#, kde-format
 msgid "remoteId"
-msgstr "oddaljeniid"
+msgstr "oddaljeniId"
 
 #: notificationmonitor.cpp:242
 #, kde-format
@@ -1475,17 +1475,17 @@ msgid "Revision"
 msgstr "Revizija"
 
 #: notificationmonitor.cpp:271
-#, fuzzy, kde-format
+#, kde-format
 msgid "ParentID"
 msgstr "NadrejeniID"
 
 #: notificationmonitor.cpp:272
-#, fuzzy, kde-format
+#, kde-format
 msgid "RemoteID"
 msgstr "OddaljeniID"
 
 #: notificationmonitor.cpp:273
-#, fuzzy, kde-format
+#, kde-format
 msgid "RemoteRev"
 msgstr "OddaljeniRev"
 
@@ -1501,12 +1501,12 @@ msgid "MimeType"
 msgstr "Vrsta MIME"
 
 #: notificationmonitor.cpp:277
-#, fuzzy, kde-format
+#, kde-format
 msgid "MTime"
-msgstr "MČas"
+msgstr "MTime"
 
 #: notificationmonitor.cpp:288
-#, fuzzy, kde-format
+#, kde-format
 msgid "VRefs"
 msgstr "VSklici"
 
@@ -1641,7 +1641,7 @@ msgid "Virtual"
 msgstr "Navidezni"
 
 #: notificationmonitor.cpp:400
-#, fuzzy, kde-format
+#, kde-format
 msgid "Parent Dest Collection"
 msgstr "Ciljna zbirka nadrejenega"
 
@@ -1781,9 +1781,9 @@ msgid "Fetch Size"
 msgstr "Velikost pridobivanja"
 
 #: notificationmonitor.cpp:535
-#, fuzzy, kde-format
+#, kde-format
 msgid "Fetch MTime"
-msgstr "Pridobi MČas"
+msgstr "Pridobi MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
@@ -2022,7 +2022,7 @@ msgstr "Splošno"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
-#, fuzzy, kde-format
+#, kde-format
 msgid "Parent Tag Id:"
 msgstr "Id oznake nadrejenega:"
 
