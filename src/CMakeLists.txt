@@ -153,20 +153,20 @@ target_link_libraries(libakonadiconsole
     KF${KF_MAJOR_VERSION}::ItemViews
     KF${KF_MAJOR_VERSION}::TextWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     )
 
 if (ENABLE_SEARCH)
     target_link_libraries(libakonadiconsole
-        KF5::AkonadiSearchCore
-        KF5::AkonadiSearchXapian
+        KPim${KF_MAJOR_VERSION}::AkonadiSearchCore
+        KPim${KF_MAJOR_VERSION}::AkonadiSearchXapian
     )
 endif()
 
 if (ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
         KF5::AkonadiContact
-        KF5::CalendarSupport
+        KPim${KF_MAJOR_VERSION}::CalendarSupport
         KF5::MessageViewer
     )
 endif()
