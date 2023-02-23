@@ -165,7 +165,7 @@ endif()
 
 if (ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
-        KF5::AkonadiContact
+        KPim${KF_MAJOR_VERSION}::AkonadiContact
         KPim${KF_MAJOR_VERSION}::CalendarSupport
         KF5::MessageViewer
     )
