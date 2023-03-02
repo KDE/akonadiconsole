@@ -141,10 +141,10 @@ endif()
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
 
 target_link_libraries(libakonadiconsole
-    KF5::AkonadiCore
-    KF5::AkonadiPrivate
-    KF5::AkonadiWidgets
-    KF5::AkonadiXml
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiPrivate
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiXml
     KPim${KF_MAJOR_VERSION}::Mime
     KF${KF_MAJOR_VERSION}::Contacts
     KF${KF_MAJOR_VERSION}::CalendarCore
@@ -167,7 +167,7 @@ if (ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
         KPim${KF_MAJOR_VERSION}::AkonadiContact
         KPim${KF_MAJOR_VERSION}::CalendarSupport
-        KF5::MessageViewer
+        KPim${KF_MAJOR_VERSION}::MessageViewer
     )
 endif()
 
