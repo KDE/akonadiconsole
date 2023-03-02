@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-20 07:36+0100\n"
+"PO-Revision-Date: 2023-02-28 14:25+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -178,7 +178,7 @@ msgstr "Redémarrer un agent"
 #: agentwidget.cpp:448
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "Basculer entre les modes En ligne / Hors ligne"
 
 #: agentwidget.cpp:449
 #, kde-format
@@ -687,7 +687,7 @@ msgstr "Tous"
 #: debugwidget.cpp:63
 #, kde-format
 msgid "Clear Information View"
-msgstr ""
+msgstr "Effacer l'affichage des informations"
 
 #: debugwidget.cpp:64
 #, kde-format
@@ -977,7 +977,7 @@ msgstr "Débogueur de requêtes"
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Enable job tracker"
-msgstr ""
+msgstr "Activer le moniteur de tâches"
 
 #: mainwidget.cpp:56
 #, kde-format
@@ -1012,7 +1012,7 @@ msgstr "Écrans"
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr ""
+msgstr "Extraire dans un format « XML »"
 
 #: mainwidget.cpp:69
 #, kde-format
@@ -1096,7 +1096,7 @@ msgstr "Ressource"
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "Types « MIME » des contenus"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
@@ -1142,7 +1142,7 @@ msgstr "ID de session"
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Collections:"
-msgstr ""
+msgstr "Collections supervisées :"
 
 #: monitorswidget.cpp:141
 #, kde-format
@@ -1162,7 +1162,7 @@ msgstr "Types supervisés :"
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr ""
+msgstr "Types « MIME » supervisés :"
 
 #: monitorswidget.cpp:145
 #, kde-format
@@ -1187,7 +1187,7 @@ msgstr "Est exclusif :"
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Portée de la recherche d'éléments"
 
 #: monitorswidget.cpp:152
 #, kde-format
@@ -1232,7 +1232,7 @@ msgstr ""
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Rechercher des modifications depuis"
 
 #: monitorswidget.cpp:163
 #, kde-format
@@ -1247,7 +1247,7 @@ msgstr "Rechercher des étiquettes"
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Portée de la recherche de collections"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
@@ -1297,7 +1297,7 @@ msgstr "Modifier des étiquettes"
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr ""
+msgstr "Modifier les relations"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1625,7 +1625,7 @@ msgstr "Virtuel"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Collection destinataire du parent"
 
 #: notificationmonitor.cpp:402
 #, kde-format
@@ -1640,7 +1640,7 @@ msgstr "ID Gauche"
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr ""
+msgstr "Type « MIME » à gauche"
 
 #: notificationmonitor.cpp:427
 #, kde-format
@@ -1650,12 +1650,12 @@ msgstr "ID Droite"
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr ""
+msgstr "Type « MIME » à droite"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Monitored Collections"
-msgstr ""
+msgstr "Collections supervisées"
 
 #: notificationmonitor.cpp:477
 #, kde-format
@@ -1790,7 +1790,7 @@ msgstr "Rechercher un RemoteID"
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "Rechercher des relations"
 
 #: notificationmonitor.cpp:543
 #, kde-format
@@ -1845,7 +1845,7 @@ msgstr "Attributs d'ascendants"
 #: notificationmonitor.cpp:594
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "Rechercher tous les attributs^"
 
 #: querydebugger.cpp:341
 #, kde-format
