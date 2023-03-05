@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-28 14:25+0100\n"
+"PO-Revision-Date: 2023-03-04 19:25+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,8 +90,9 @@ msgstr "Synchroniser les relations"
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] ""
+msgstr[0] "Voulez-vous vraiment supprimer l'instance sélectionnée d'agent  ?"
 msgstr[1] ""
+"Voulez-vous vraiment supprimer les %1 instances sélectionnées d'agent ?"
 
 #: agentwidget.cpp:200
 #, kde-format
@@ -101,7 +102,7 @@ msgstr "Agent de suppression"
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr ""
+msgstr "Suppression de plusieurs agents"
 
 #: agentwidget.cpp:270
 #, kde-format
@@ -111,12 +112,12 @@ msgstr "Liste des ressources de tâches"
 #: agentwidget.cpp:294
 #, kde-format
 msgid "Change Notification Log"
-msgstr ""
+msgstr "Journal des notifications de modifications"
 
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "Échec de l'agent de clonage : %1."
 
 #: agentwidget.cpp:407
 #, kde-format
@@ -188,7 +189,7 @@ msgstr "Afficher la liste des tâches"
 #: agentwidget.cpp:450
 #, kde-format
 msgid "Show change-notification log"
-msgstr ""
+msgstr "Afficher le journal des notifications de modifications"
 
 #: agentwidget.cpp:452
 #, kde-format
@@ -342,12 +343,12 @@ msgstr "Agenda / Tâches"
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr ""
+msgstr "Récupération du cache uniquement"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr ""
+msgstr "Impossible d'enregistrer les modifications : %1"
 
 #: browserwidget.cpp:511
 #, kde-format
@@ -377,7 +378,7 @@ msgstr "&Supprimer une étiquette ..."
 #: browserwidget.cpp:634
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "Voulez-vous vraiment supprimer l'étiquette sélectionnée ?"
 
 #: browserwidget.cpp:635
 #, kde-format
@@ -494,7 +495,7 @@ msgstr "Taille :"
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr ""
+msgstr "Heure de la dernière modification :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
@@ -583,7 +584,7 @@ msgstr "Couper le lien"
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr ""
+msgstr "Droits d'accès aux collections"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -593,6 +594,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>Remarque : </b>Ces valeurs sont fournies par le moteur correspondant et "
+"ne sont pas destinées à être modifiées par vous. Veuillez néanmoins être "
+"averti que si quelque chose ne fonctionne plus lors de leurs modifications !"
 
 #: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -609,7 +613,7 @@ msgstr "Valeur"
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr ""
+msgstr "Veuillez éviter de modifier quoi que ce soit ici !"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
@@ -692,7 +696,7 @@ msgstr "Effacer l'affichage des informations"
 #: debugwidget.cpp:64
 #, kde-format
 msgid "Clear Filtered Messages"
-msgstr ""
+msgstr "Effacer les messages filtrés"
 
 #: debugwidget.cpp:65
 #, kde-format
@@ -702,7 +706,7 @@ msgstr "Effacer tous les messages"
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "Enregistrer les messages filtrés..."
 
 #: debugwidget.cpp:67
 #, kde-format
@@ -717,12 +721,12 @@ msgstr "Connecter"
 #: instanceselector.cpp:88
 #, kde-format
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Console distante pour Akonadi (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Console pour Akonadi (Instance : %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -731,6 +735,9 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"Il y a plusieurs instances de Akonadi en cours d’exécution dans la session "
+"« D-Bus ». Veuillez sélectionner l’instance à laquelle vous souhaitez vous "
+"connecter."
 
 #: jobtracker.cpp:26
 #, kde-format
@@ -881,7 +888,7 @@ msgstr "Erreur"
 #: logging.cpp:136 notificationmonitor.cpp:608
 #, kde-format
 msgid "Failed to open file: %1"
-msgstr ""
+msgstr "Impossible d'ouvrir le fichier : %1"
 
 #: loggingmodel.cpp:104
 #, kde-format
@@ -927,12 +934,12 @@ msgstr "Console de Akonadi"
 #: main.cpp:42
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr ""
+msgstr "La console de gestion et de débogage pour Akonadi"
 
 #: main.cpp:44
 #, kde-format
 msgid "(c) 2006-2022 the Akonadi developer"
-msgstr ""
+msgstr "(c) 2006-2022 L'équipe de développement de Akonadi"
 
 #: main.cpp:48 main.cpp:49
 #, kde-format
@@ -987,7 +994,7 @@ msgstr "Moniteur de tâches"
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "Activer le suivi des planificateurs de ressources"
 
 #: mainwidget.cpp:57
 #, kde-format
@@ -1043,6 +1050,12 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>La console pour Akonadi est uniquement un outil de développement. Elle "
+"vous permet d'afficher et de modifier les structures de données internes de "
+"Akonadi. Vous ne devriez pas modifier les données ici, sauf si vous savez ce "
+"que vous faites. Dans le cas contraire, vous risqueriez d’endommager ou de "
+"perdre vos données de gestion de vos informations personnelles. <br/"
+"><b>Veuillez le faire à vos risques et périls ! </b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
@@ -1101,12 +1114,12 @@ msgstr "Types « MIME » des contenus"
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "Récupération des prédécesseurs"
 
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Portée pour l’extraction des prédécesseurs"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
@@ -1117,7 +1130,7 @@ msgstr "Rechercher uniquement un ID"
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "Ignorer l’erreur de récupération"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
 #, kde-format
@@ -1212,7 +1225,7 @@ msgstr "Uniquement en cache"
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "Vérifier uniquement les parties en cache de charge utile"
 
 #: monitorswidget.cpp:159
 #, kde-format
@@ -1227,7 +1240,7 @@ msgstr "Rechercher un  «GID »"
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr ""
+msgstr "Ignorer les erreurs de récupération"
 
 #: monitorswidget.cpp:162
 #, kde-format
@@ -1252,7 +1265,7 @@ msgstr "Portée de la recherche de collections"
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Portée pour l’extraction des étiquettes"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
@@ -1352,7 +1365,7 @@ msgstr "Auditoire"
 #: notificationmonitor.cpp:57
 #, kde-format
 msgid "Enable notification monitor"
-msgstr ""
+msgstr "Activer le superviseur de notifications"
 
 #: notificationmonitor.cpp:140
 #, kde-format
@@ -1750,7 +1763,7 @@ msgstr "Uniquement en cache"
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "Vérifier uniquement les parties en cache de charge utile"
 
 #: notificationmonitor.cpp:532
 #, kde-format
@@ -1770,7 +1783,7 @@ msgstr "Rechercher le paramètre « mtime »"
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Récupérer la révision distante"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -1835,7 +1848,7 @@ msgstr "Aucun"
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Identification de recherche pour le prédécesseur uniquement"
 
 #: notificationmonitor.cpp:586
 #, kde-format
@@ -1891,7 +1904,7 @@ msgstr "Lignes affectées :"
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Activer le débogage des demandes (Ralentit le serveur !)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
@@ -1974,7 +1987,7 @@ msgstr "Erreur « Xapian »"
 #: searchwidget.cpp:153
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "Aucune base de données « Xapian » n'est ouverte."
 
 #: searchwidget.cpp:187
 #, kde-format
@@ -1994,7 +2007,7 @@ msgstr "Termes"
 #: searchwidget.cpp:216
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "Erreur de récupération d'un élément"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
