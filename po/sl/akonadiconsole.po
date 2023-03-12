@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-21 21:27+0100\n"
+"PO-Revision-Date: 2023-03-12 08:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -447,9 +447,9 @@ msgstr "Izbriši"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: browserwidget_contentview.ui:138
-#, fuzzy, kde-format
+#, kde-format
 msgid "Raw Payload"
-msgstr "Neobdelana/surova obremenitev"
+msgstr "Surova obremenitev"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
@@ -1621,19 +1621,19 @@ msgid "Enabled"
 msgstr "Omogočeno"
 
 #: notificationmonitor.cpp:365
-#, fuzzy, kde-format
+#, kde-format
 msgid "DisplayPref"
-msgstr "PrikazNast"
+msgstr "PrikazPrednostn"
 
 #: notificationmonitor.cpp:366
-#, fuzzy, kde-format
+#, kde-format
 msgid "SyncPref"
-msgstr "UsklNast"
+msgstr "UsklPrednost"
 
 #: notificationmonitor.cpp:367
-#, fuzzy, kde-format
+#, kde-format
 msgid "IndexPref"
-msgstr "IndeksNast"
+msgstr "IndeksPrednost"
 
 #: notificationmonitor.cpp:368
 #, kde-format
@@ -1811,7 +1811,7 @@ msgid "Fetch Relations"
 msgstr "Dobavi relacije"
 
 #: notificationmonitor.cpp:543
-#, fuzzy, kde-format
+#, kde-format
 msgid "Fetch VRefs"
 msgstr "Pridobi VRefs"
 
@@ -2000,9 +2000,9 @@ msgid "Term/Value"
 msgstr "Pogoj/vrednost"
 
 #: searchwidget.cpp:187
-#, fuzzy, kde-format
+#, kde-format
 msgid "WDF/Slot"
-msgstr "WDF/reža"
+msgstr "WDF/Reža"
 
 #: searchwidget.cpp:189
 #, kde-format
