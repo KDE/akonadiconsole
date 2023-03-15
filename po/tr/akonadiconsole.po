@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:47+0000\n"
-"PO-Revision-Date: 2023-02-17 19:10+0300\n"
+"PO-Revision-Date: 2023-03-14 14:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -938,10 +938,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadi için Yönetim ve Hata Ayıklama Konsolu"
 
 #: main.cpp:44
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2022 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr "(c) 2006-2022 Akonadi geliştiricileri"
+msgstr "(c) 2006-2023 Akonadi geliştiricileri"
 
 #: main.cpp:48 main.cpp:49
 #, kde-format
