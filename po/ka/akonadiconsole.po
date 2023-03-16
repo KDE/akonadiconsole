@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-14 00:47+0000\n"
-"PO-Revision-Date: 2023-02-18 06:59+0100\n"
+"PO-Revision-Date: 2023-03-15 06:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -934,10 +934,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadi-ის მართვისა და გამართვის კონსოლი"
 
 #: main.cpp:44
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2022 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr "(c) 2006-2022 Akonadi-ის პროგრამისტები"
+msgstr "(c) 2006-2023 Akonadi-ის პროგრამისტები"
 
 #: main.cpp:48 main.cpp:49
 #, kde-format
@@ -1705,7 +1704,7 @@ msgstr ""
 #: notificationmonitor.cpp:509
 #, kde-format
 msgid "Ignored Sessions"
-msgstr ""
+msgstr "იგნორირებული სესიები"
 
 #: notificationmonitor.cpp:510
 #, kde-format
@@ -1720,7 +1719,7 @@ msgstr "ექსკლუზიური"
 #: notificationmonitor.cpp:515
 #, kde-format
 msgid "Requested Parts"
-msgstr ""
+msgstr "მოთხოვნილი ნაწილები"
 
 #: notificationmonitor.cpp:516
 #, kde-format
@@ -1730,17 +1729,17 @@ msgstr ""
 #: notificationmonitor.cpp:520
 #, kde-format
 msgid "No Ancestor"
-msgstr ""
+msgstr "არა წინაპრის გარეშე"
 
 #: notificationmonitor.cpp:523
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "მშობელი წინაპარი"
 
 #: notificationmonitor.cpp:526
 #, kde-format
 msgid "All Ancestors"
-msgstr ""
+msgstr "ყველა წინაპარი"
 
 #: notificationmonitor.cpp:529
 #, kde-format
@@ -1845,17 +1844,17 @@ msgstr ""
 #: notificationmonitor.cpp:586
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "წინაპარი ატრიბუტები"
 
 #: notificationmonitor.cpp:594
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "ყველა ატრიბუტის გამოთხოვა"
 
 #: querydebugger.cpp:341
 #, kde-format
 msgid "Name / Query"
-msgstr ""
+msgstr "სახელი / მოთხოვნა"
 
 #: querydebugger.cpp:343
 #, kde-format
@@ -1875,7 +1874,7 @@ msgstr "მოთხოვნა"
 #: querydebugger.cpp:527
 #, kde-format
 msgid "Duration [ms]"
-msgstr ""
+msgstr "ხანგრძლივობა [მწმ]"
 
 #: querydebugger.cpp:529
 #, kde-format
@@ -1885,12 +1884,12 @@ msgstr "ზარები"
 #: querydebugger.cpp:531
 #, kde-format
 msgid "Avg. Duration [ms]"
-msgstr ""
+msgstr "საშ. ხანგრძლივობა [მწმ]"
 
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr ""
+msgstr "შეცვლილი მწკრივები:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
@@ -1979,7 +1978,7 @@ msgstr "Xapian-ის შეცდომა"
 #: searchwidget.cpp:153
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "Xapian-ის ბაზა გახსნილი არაა"
 
 #: searchwidget.cpp:187
 #, kde-format
