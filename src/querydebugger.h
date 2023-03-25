@@ -61,8 +61,6 @@ private Q_SLOTS:
     void saveTreeToFile();
 
 private:
-    QString variantToString(const QVariant &val);
-
     QScopedPointer<Ui::QueryDebugger> mUi;
     OrgFreedesktopAkonadiStorageDebuggerInterface *mDebugger = nullptr;
 
