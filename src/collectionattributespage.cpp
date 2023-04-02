@@ -23,12 +23,18 @@ CollectionAttributePage::CollectionAttributePage(QWidget *parent)
 
     connect(ui.addButton, &QPushButton::clicked, this, &CollectionAttributePage::addAttribute);
     connect(ui.deleteButton, &QPushButton::clicked, this, &CollectionAttributePage::delAttribute);
+    connect(ui.attrName, &QLineEdit::textChanged, this, [this](const QString &str) {
+        ui.addButton->setEnabled(!str.trimmed().isEmpty());
+    });
+    ui.addButton->setEnabled(false);
+    ui.deleteButton->setEnabled(false);
 }
 
 void CollectionAttributePage::load(const Collection &col)
 {
     const Attribute::List list = col.attributes();
     mModel = new QStandardItemModel(list.count(), 2);
+
     QStringList labels;
     labels << i18n("Attribute") << i18n("Value");
     mModel->setHorizontalHeaderLabels(labels);
@@ -45,6 +51,9 @@ void CollectionAttributePage::load(const Collection &col)
     }
     ui.attrView->setModel(mModel);
     connect(mModel, &QStandardItemModel::itemChanged, this, &CollectionAttributePage::attributeChanged);
+    connect(ui.attrView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
+        ui.deleteButton->setEnabled(ui.attrView->selectionModel()->selectedRows().count() > 0);
+    });
 }
 
 void CollectionAttributePage::save(Collection &col)
