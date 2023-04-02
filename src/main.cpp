@@ -36,6 +36,7 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QStringLiteral("akonadiconsoleui.rc"));
     migrate.migrate();
 #endif
+    KLocalizedString::setApplicationDomain("akonadiconsole");
     KAboutData aboutData(QStringLiteral("akonadiconsole"),
                          i18n("Akonadi Console"),
                          QStringLiteral(KDEPIM_VERSION),
