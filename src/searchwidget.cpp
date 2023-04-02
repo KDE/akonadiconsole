@@ -160,6 +160,9 @@ void SearchWidget::search()
         auto it = mDatabase->postlist_begin(q);
         const auto end = mDatabase->postlist_end(q);
 
+        if (it == end) {
+            QMessageBox::information(this, i18n("Search"), i18n("No element found."));
+        }
         for (; it != end; ++it) {
             auto item = new QStandardItem(QString::number(*it));
             item->setData(*it, Qt::UserRole);
