@@ -19,10 +19,8 @@ public:
     explicit AgentConfigDialog(QWidget *parent = nullptr);
     void setAgentInstance(const Akonadi::AgentInstance &instance);
 
-private Q_SLOTS:
-    void reconfigure();
-
 private:
+    void reconfigure();
     Ui::AgentConfigDialog ui;
     AgentConfigModel *const m_model;
     Akonadi::AgentInstance m_instance;

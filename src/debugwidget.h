@@ -23,7 +23,7 @@ class DebugWidget : public QWidget
 public:
     explicit DebugWidget(QWidget *parent = nullptr);
 
-private Q_SLOTS:
+private:
     void signalEmitted(const QString &, const QString &);
     void warningEmitted(const QString &, const QString &);
     void errorEmitted(const QString &, const QString &);
@@ -32,8 +32,6 @@ private Q_SLOTS:
 
     void saveRichText();
     void saveEverythingRichText();
-
-private:
     KTextEdit *mGeneralView = nullptr;
     ConnectionPage *mConnectionPage = nullptr;
     org::freedesktop::Akonadi::DebugInterface *mDebugInterface = nullptr;

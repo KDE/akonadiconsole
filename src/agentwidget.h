@@ -57,6 +57,7 @@ private Q_SLOTS:
 private:
     void slotSearchAgentType(const QString &str);
     Ui::AgentWidget ui;
-    QMenu *mSyncMenu, *mConfigMenu;
+    QMenu *mSyncMenu = nullptr;
+    QMenu *mConfigMenu = nullptr;
     Akonadi::AgentInstance mCloneSource;
 };

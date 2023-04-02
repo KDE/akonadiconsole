@@ -16,11 +16,9 @@ class DbBrowser : public QWidget
 public:
     explicit DbBrowser(QWidget *parent = nullptr);
 
-private Q_SLOTS:
+private:
     void refreshClicked();
     void onSortIndicatorChanged(int column, Qt::SortOrder order);
-
-private:
     Ui::DbBrowser ui;
     QSqlTableModel *mTableModel = nullptr;
 };

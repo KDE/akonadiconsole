@@ -22,12 +22,10 @@ public:
     void load(const Akonadi::Collection &col) override;
     void save(Akonadi::Collection &col) override;
 
-private Q_SLOTS:
+private:
     void addAttribute();
     void delAttribute();
     void attributeChanged(QStandardItem *item);
-
-private:
     Ui::CollectionAttributesPage ui;
     QStandardItemModel *mModel = nullptr;
     QSet<QString> mDeleted;

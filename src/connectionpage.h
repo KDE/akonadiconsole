@@ -36,11 +36,9 @@ public Q_SLOTS:
     void clear();
     void clearFiltered();
 
-private Q_SLOTS:
+private:
     void connectionDataInput(const QString &, const QString &);
     void connectionDataOutput(const QString &, const QString &);
-
-private:
     QString toHtml(QAbstractItemModel *model) const;
 
     DebugModel *mModel = nullptr;

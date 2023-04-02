@@ -25,10 +25,8 @@ Q_SIGNALS:
     void columnChanged(int col);
     void selectOnlyErrorChanged(bool state);
 
-private Q_SLOTS:
-    void slotColumnChanged(int index);
-
 private:
+    void slotColumnChanged(int index);
     QLineEdit *const mSearchLineEdit;
     QComboBox *const mSelectColumn;
     QCheckBox *const mSelectOnlyError;

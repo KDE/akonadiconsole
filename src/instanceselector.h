@@ -28,14 +28,12 @@ public:
     explicit InstanceSelector(const QString &remoteHost, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
     ~InstanceSelector() override;
 
-private Q_SLOTS:
-    void slotAccept();
-    void slotReject();
-
 private:
     static QStringList instances();
 
 private:
+    void slotAccept();
+    void slotReject();
     QScopedPointer<Ui::InstanceSelector> ui;
     const QString m_remoteHost;
     QString m_instance;
