@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2023-03-14 20:47+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -600,12 +600,12 @@ msgstr ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
 msgstr "Attribute"
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
 msgstr "Value"
@@ -927,22 +927,22 @@ msgstr "Function"
 msgid "%1:%2"
 msgstr "%1:%2"
 
-#: main.cpp:40
+#: main.cpp:41
 #, kde-format
 msgid "Akonadi Console"
 msgstr "Akonadi Console"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr "The Management and Debugging Console for Akonadi"
 
-#: main.cpp:44
+#: main.cpp:45
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr "(c) 2006-2023 the Akonadi developer"
 
-#: main.cpp:48 main.cpp:49
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Author"
 msgstr "Author"
@@ -1132,7 +1132,7 @@ msgstr "Fetch ID Only"
 msgid "Ignore Retrieval Error"
 msgstr "Ignore Retrieval Error"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
 msgid "Values"
 msgstr "Values"
@@ -1954,7 +1954,7 @@ msgstr "Results:"
 msgid "Search store:"
 msgstr "Search store:"
 
-#: searchwidget.cpp:54
+#: searchwidget.cpp:54 searchwidget.cpp:164
 #, kde-format
 msgid "Search"
 msgstr "Search"
@@ -1989,22 +1989,27 @@ msgstr "Xapian error"
 msgid "No Xapian database is opened"
 msgstr "No Xapian database is opened"
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:164
+#, kde-format
+msgid "No element found."
+msgstr ""
+
+#: searchwidget.cpp:190
 #, kde-format
 msgid "Term/Value"
 msgstr "Term/Value"
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:190
 #, kde-format
 msgid "WDF/Slot"
 msgstr "WDF/Slot"
 
-#: searchwidget.cpp:189
+#: searchwidget.cpp:192
 #, kde-format
 msgid "Terms"
 msgstr "Terms"
 
-#: searchwidget.cpp:216
+#: searchwidget.cpp:219
 #, kde-format
 msgid "Error on fetching item"
 msgstr "Error on fetching item"

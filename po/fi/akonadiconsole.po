@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2023-02-21 16:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -599,12 +599,12 @@ msgstr ""
 "<b>Huom!</b> Arvot tarjoaa vastaava taustajärjestelmä eikä käyttäjän ole "
 "tarkoitus muuttaa niitä, joten varo – jokin voi särkyä muutettaessa!"
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
 msgstr "Määrite"
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
 msgstr "Arvo"
@@ -926,23 +926,23 @@ msgstr "Funktio"
 msgid "%1:%2"
 msgstr "%1:%2"
 
-#: main.cpp:40
+#: main.cpp:41
 #, kde-format
 msgid "Akonadi Console"
 msgstr "Akonadi-konsoli"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadin hallinta- ja virheenpaikannuskonsoli"
 
-#: main.cpp:44
+#: main.cpp:45
 #, fuzzy, kde-format
 #| msgid "(c) 2006-2022 the Akonadi developer"
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr "© 2006–2022 Akonadin kehittäjä"
 
-#: main.cpp:48 main.cpp:49
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Author"
 msgstr "Tekijä"
@@ -1127,7 +1127,7 @@ msgstr "Nouda vain tunniste"
 msgid "Ignore Retrieval Error"
 msgstr "Sivuuta noutovirhe"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
 msgid "Values"
 msgstr "Arvot"
@@ -1949,7 +1949,7 @@ msgstr "Tulokset"
 msgid "Search store:"
 msgstr ""
 
-#: searchwidget.cpp:54
+#: searchwidget.cpp:54 searchwidget.cpp:164
 #, kde-format
 msgid "Search"
 msgstr "Etsi"
@@ -1984,22 +1984,27 @@ msgstr "Xapian-virhe"
 msgid "No Xapian database is opened"
 msgstr "Xapian-tietokantaa ei ole avattu"
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:164
+#, kde-format
+msgid "No element found."
+msgstr ""
+
+#: searchwidget.cpp:190
 #, kde-format
 msgid "Term/Value"
 msgstr ""
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:190
 #, kde-format
 msgid "WDF/Slot"
 msgstr ""
 
-#: searchwidget.cpp:189
+#: searchwidget.cpp:192
 #, kde-format
 msgid "Terms"
 msgstr ""
 
-#: searchwidget.cpp:216
+#: searchwidget.cpp:219
 #, kde-format
 msgid "Error on fetching item"
 msgstr ""

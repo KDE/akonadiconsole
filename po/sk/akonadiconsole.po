@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:47+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2023-03-12 08:58+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -596,12 +596,12 @@ msgid ""
 "changing them nevertheless!"
 msgstr ""
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
 msgstr "Atribút"
 
-#: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
 msgstr "Hodnota"
@@ -921,22 +921,22 @@ msgstr "Funkcia"
 msgid "%1:%2"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:41
 #, kde-format
 msgid "Akonadi Console"
 msgstr "Konzola Akonadi"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:45
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr ""
 
-#: main.cpp:48 main.cpp:49
+#: main.cpp:49 main.cpp:50
 #, fuzzy, kde-format
 msgid "Author"
 msgstr "Autor"
@@ -1121,7 +1121,7 @@ msgstr ""
 msgid "Ignore Retrieval Error"
 msgstr ""
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:195
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
 msgid "Values"
 msgstr "Hodnoty"
@@ -1943,7 +1943,7 @@ msgstr "Výsledky:"
 msgid "Search store:"
 msgstr ""
 
-#: searchwidget.cpp:54
+#: searchwidget.cpp:54 searchwidget.cpp:164
 #, fuzzy, kde-format
 msgid "Search"
 msgstr "Hľadať"
@@ -1978,22 +1978,27 @@ msgstr ""
 msgid "No Xapian database is opened"
 msgstr ""
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:164
+#, kde-format
+msgid "No element found."
+msgstr ""
+
+#: searchwidget.cpp:190
 #, kde-format
 msgid "Term/Value"
 msgstr ""
 
-#: searchwidget.cpp:187
+#: searchwidget.cpp:190
 #, kde-format
 msgid "WDF/Slot"
 msgstr ""
 
-#: searchwidget.cpp:189
+#: searchwidget.cpp:192
 #, fuzzy, kde-format
 msgid "Terms"
 msgstr "%1 Podmienky: %2"
 
-#: searchwidget.cpp:216
+#: searchwidget.cpp:219
 #, kde-format
 msgid "Error on fetching item"
 msgstr ""
