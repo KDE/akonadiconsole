@@ -198,12 +198,12 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 #if ENABLE_CONTENTVIEWS
     auto w = new QWidget;
     w->setLayout(new QVBoxLayout);
-    w->layout()->addWidget(mContactView = new Akonadi::ContactViewer);
+    w->layout()->addWidget(mContactView = new ContactEditor::ContactViewer);
     contentUi.stack->addWidget(w);
 
     w = new QWidget;
     w->setLayout(new QVBoxLayout);
-    w->layout()->addWidget(mContactGroupView = new Akonadi::ContactGroupViewer);
+    w->layout()->addWidget(mContactGroupView = new ContactEditor::ContactGroupViewer);
     contentUi.stack->addWidget(w);
 
     w = new QWidget;

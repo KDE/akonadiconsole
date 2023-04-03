@@ -36,6 +36,9 @@ class StandardActionManager;
 class Monitor;
 class TagModel;
 class StatisticsProxyModel;
+}
+namespace ContactEditor
+{
 class ContactViewer;
 class ContactGroupViewer;
 }
@@ -104,8 +107,8 @@ private:
     QTreeView *mTagView = nullptr;
     Akonadi::TagModel *mTagModel = nullptr;
 
-    Akonadi::ContactViewer *mContactView = nullptr;
-    Akonadi::ContactGroupViewer *mContactGroupView = nullptr;
+    ContactEditor::ContactViewer *mContactView = nullptr;
+    ContactEditor::ContactGroupViewer *mContactGroupView = nullptr;
     CalendarSupport::IncidenceViewer *mIncidenceView = nullptr;
     MessageViewer::Viewer *mMailView = nullptr;
 };
