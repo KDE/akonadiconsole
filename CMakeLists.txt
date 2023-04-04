@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 set(PIM_VERSION "5.23.40")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
-set(KF_MIN_VERSION "5.105.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -50,7 +50,7 @@ set(AKONADIMIME_LIB_VERSION "5.23.40")
 set(AKONADI_VERSION "5.23.40")
 set(AKONADI_SEARCH_VERSION "5.23.40")
 
-set(QT_REQUIRED_VERSION "5.15.2")
+set(QT_REQUIRED_VERSION "6.4.0")
 if (QT_MAJOR_VERSION STREQUAL "6")
     set(QT_REQUIRED_VERSION "6.4.0")
     set(KF_MIN_VERSION "5.240.0")
@@ -58,42 +58,42 @@ if (QT_MAJOR_VERSION STREQUAL "6")
 else()
     set(KF_MAJOR_VERSION "5")
 endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql Test)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql Test)
 set(MESSAGELIB_LIB_VERSION "5.23.40")
 set(LIBKDEPIM_LIB_VERSION "5.23.40")
 set(KMIME_LIB_VERSION "5.23.40")
 
 
-# Find KF5 package
-find_package(KF${KF_MAJOR_VERSION}Completion ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Config ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}ItemModels ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Crash ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Completion ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}ItemViews ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} REQUIRED)
+# Find KF6 package
+find_package(KF6Completion ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6ItemModels ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6Completion ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6ItemViews ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
-find_package(KPim${KF_MAJOR_VERSION}Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED) # Because of KPIM::KCheckComboBox
+find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
+find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KPim6Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED) # Because of KPIM::KCheckComboBox
 
 if (NOT WIN32)
-    find_package(KPim${KF_MAJOR_VERSION}AkonadiContact ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
-    find_package(KPim${KF_MAJOR_VERSION}ContactEditor ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
-    find_package(KPim${KF_MAJOR_VERSION}CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
-    find_package(KPim${KF_MAJOR_VERSION}MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
-    find_package(KPim${KF_MAJOR_VERSION}AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
-    set_package_properties(KPim${KF_MAJOR_VERSION}AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE REQUIRED PURPOSE "Provides search capabilities in KMail and Akonadi")
+    find_package(KPim6AkonadiContact ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
+    find_package(KPim6ContactEditor ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
+    find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
+    find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
+    find_package(KPim6AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
+    set_package_properties(KPim6AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE REQUIRED PURPOSE "Provides search capabilities in KMail and Akonadi")
     find_package(Xapian CONFIG)
     set_package_properties(Xapian PROPERTIES
         DESCRIPTION "The Xapian search engine library"
@@ -108,7 +108,7 @@ endif()
 # From akonadi's CMakeLists.txt. Needed to fix:
 # FAILED: src/CMakeFiles/libakonadiconsole.dir/browserwidget.cpp.obj
 # ...
-# Z:\CraftRoot\include\KF5\AkonadiCore/item.h(596): error C2039:
+# Z:\CraftRoot\include\KF6\AkonadiCore/item.h(596): error C2039:
 # "auto_ptr" ist kein Member von "std".
 if (MSVC)
     # This sets the __cplusplus macro to a real value based on the version of C++ specified by

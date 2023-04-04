@@ -141,34 +141,34 @@ endif()
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
 
 target_link_libraries(libakonadiconsole
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KPim${KF_MAJOR_VERSION}::AkonadiPrivate
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KPim${KF_MAJOR_VERSION}::AkonadiXml
-    KPim${KF_MAJOR_VERSION}::Mime
-    KF${KF_MAJOR_VERSION}::Contacts
-    KF${KF_MAJOR_VERSION}::CalendarCore
+    KPim6::AkonadiCore
+    KPim6::AkonadiPrivate
+    KPim6::AkonadiWidgets
+    KPim6::AkonadiXml
+    KPim6::Mime
+    KF6::Contacts
+    KF6::CalendarCore
     Qt::Sql
-    KF${KF_MAJOR_VERSION}::Completion
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::TextWidgets
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::Libkdepim
+    KF6::Completion
+    KF6::ItemViews
+    KF6::TextWidgets
+    KF6::XmlGui
+    KPim6::Libkdepim
     )
 
 if (ENABLE_SEARCH)
     target_link_libraries(libakonadiconsole
-        KPim${KF_MAJOR_VERSION}::AkonadiSearchCore
-        KPim${KF_MAJOR_VERSION}::AkonadiSearchXapian
+        KPim6::AkonadiSearchCore
+        KPim6::AkonadiSearchXapian
     )
 endif()
 
 if (ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
-        KPim${KF_MAJOR_VERSION}::AkonadiContact
-        KPim${KF_MAJOR_VERSION}::ContactEditor
-        KPim${KF_MAJOR_VERSION}::CalendarSupport
-        KPim${KF_MAJOR_VERSION}::MessageViewer
+        KPim6::AkonadiContact
+        KPim6::ContactEditor
+        KPim6::CalendarSupport
+        KPim6::MessageViewer
     )
 endif()
 
@@ -191,9 +191,9 @@ add_executable(akonadiconsole ${akonadiconsole_SRCS})
 
 target_link_libraries(akonadiconsole
     libakonadiconsole
-    KF${KF_MAJOR_VERSION}::DBusAddons
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::Crash
+    KF6::DBusAddons
+    KF6::CoreAddons
+    KF6::Crash
 )
 
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
