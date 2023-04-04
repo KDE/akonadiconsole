@@ -55,7 +55,7 @@ private:
     QString cacheString(const QString &str, QMap<QString, QString> &cache, QStandardItemModel *model = nullptr);
     QString displaySender(const QString &identifer) const;
 
-    QVector<Message> mMessages;
+    QList<Message> mMessages;
     QStandardItemModel *mSenderFilterModel = nullptr;
     QMap<QString, QString> mSenderCache;
 };

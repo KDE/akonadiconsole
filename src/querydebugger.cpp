@@ -102,7 +102,7 @@ private:
 
         enum TransactionType { Begin, Commit, Rollback };
         TransactionType transactionType;
-        QVector<QueryNode *> queries;
+        QList<QueryNode *> queries;
     };
 
     class ConnectionNode : public Node
@@ -114,7 +114,7 @@ private:
         }
 
         QString name;
-        QVector<Node *> queries; // FIXME: Why can' I use QVector<Query*> here??
+        QList<Node *> queries; // FIXME: Why can' I use QList<Query*> here??
     };
 
 public:
@@ -496,7 +496,7 @@ private:
         return {};
     }
 
-    QVector<ConnectionNode *> mConnections;
+    QList<ConnectionNode *> mConnections;
     QHash<qint64, ConnectionNode *> mConnectionById;
 };
 
@@ -588,7 +588,7 @@ public:
 
     void addQuery(const QString &query, uint duration)
     {
-        QVector<QueryInfo>::iterator it = std::lower_bound(mQueries.begin(), mQueries.end(), query);
+        QList<QueryInfo>::iterator it = std::lower_bound(mQueries.begin(), mQueries.end(), query);
 
         const int row = std::distance(mQueries.begin(), it) + NUM_SPECIAL_ROWS;
 
@@ -622,7 +622,7 @@ public:
     }
 
 private:
-    QVector<QueryInfo> mQueries;
+    QList<QueryInfo> mQueries;
     QueryInfo mSpecialRows[NUM_SPECIAL_ROWS];
 };
 
@@ -682,7 +682,7 @@ QueryDebugger::QueryDebugger(QWidget *parent)
 {
     qDBusRegisterMetaType<QList<QList<QVariant>>>();
     qDBusRegisterMetaType<DbConnection>();
-    qDBusRegisterMetaType<QVector<DbConnection>>();
+    qDBusRegisterMetaType<QList<DbConnection>>();
 
     QString service = QStringLiteral("org.freedesktop.Akonadi");
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
@@ -735,7 +735,7 @@ void QueryDebugger::debuggerToggled(bool on)
     if (on) {
         mQueryTree->clear();
 
-        const QVector<DbConnection> conns = mDebugger->connections();
+        const QList<DbConnection> conns = mDebugger->connections();
         for (const auto &con : conns) {
             mQueryTree->addConnection(con.id, con.name, con.start);
             if (con.transactionStart > 0) {

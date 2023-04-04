@@ -69,7 +69,7 @@ public:
 private:
     static QString cacheString(const QString &str, QSet<QString> &cache, QStandardItemModel *model = nullptr);
 
-    QVector<Message> mMessages;
+    QList<Message> mMessages;
     QStandardItemModel *mAppFilterModel = nullptr;
     QSet<QString> mAppCache;
     QStandardItemModel *mCategoryFilterModel = nullptr;

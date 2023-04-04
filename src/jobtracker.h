@@ -108,7 +108,7 @@ public Q_SLOTS:
     void signalUpdates(); // public for the unittest
 
 private:
-    QVector<int> childJobs(int parentId) const;
+    QList<int> childJobs(int parentId) const;
     int idForJob(const QString &job) const;
 
 private:

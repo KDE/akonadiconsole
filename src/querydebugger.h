@@ -32,7 +32,7 @@ struct DbConnection {
 };
 
 Q_DECLARE_METATYPE(DbConnection)
-Q_DECLARE_METATYPE(QVector<DbConnection>)
+Q_DECLARE_METATYPE(QList<DbConnection>)
 
 QDBusArgument &operator<<(QDBusArgument &arg, const DbConnection &con);
 const QDBusArgument &operator>>(const QDBusArgument &arg, DbConnection &con);

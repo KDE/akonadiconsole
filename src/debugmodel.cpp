@@ -73,7 +73,7 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
     beginRemoveRows(parent, row, row + count - 1);
     mMessages.remove(row, count);
 
-    QVector<QString> toDelete;
+    QList<QString> toDelete;
 
     // find elements that needs to be deleted.
     for (const auto &identifer : mSenderCache.keys()) {

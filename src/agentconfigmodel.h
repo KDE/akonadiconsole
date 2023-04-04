@@ -9,7 +9,7 @@
 #include <Akonadi/AgentInstance>
 
 #include <QAbstractItemModel>
-#include <QVector>
+#include <QList>
 
 class QDBusInterface;
 
@@ -33,6 +33,6 @@ public Q_SLOTS:
     void writeConfig();
 
 private:
-    QVector<QPair<QString, QVariant>> m_settings;
+    QList<QPair<QString, QVariant>> m_settings;
     QDBusInterface *m_interface = nullptr;
 };

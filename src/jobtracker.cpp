@@ -63,7 +63,7 @@ public:
 
     QStringList sessions;
     QHash<QString, int> nameToId;
-    QHash<int, QVector<int>> childJobs;
+    QHash<int, QList<int>> childJobs;
     QHash<int, JobInfo> infoList;
     int lastId;
     QTimer timer;
@@ -124,7 +124,7 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     }
 
     assert(parentId != -1);
-    QVector<int> &kids = d->childJobs[parentId];
+    QList<int> &kids = d->childJobs[parentId];
     const int pos = kids.size();
 
     Q_EMIT aboutToAdd(pos, parentId);
@@ -193,7 +193,7 @@ QStringList JobTracker::sessions() const
     return d->sessions;
 }
 
-QVector<int> JobTracker::childJobs(int parentId) const
+QList<int> JobTracker::childJobs(int parentId) const
 {
     return d->childJobs.value(parentId);
 }
@@ -244,7 +244,7 @@ int JobTracker::parentId(int id) const
 
 int JobTracker::rowForJob(int id, int parentId) const
 {
-    const QVector<int> children = childJobs(parentId);
+    const QList<int> children = childJobs(parentId);
     // Simple version:
     // return children.indexOf(id);
     // But we can do faster since the vector is sorted

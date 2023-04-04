@@ -46,6 +46,6 @@ private Q_SLOTS:
 
 private:
     QList<QByteArray> mSessions;
-    QHash<QByteArray /* session */, QVector<Akonadi::NotificationSubscriber>> mData;
+    QHash<QByteArray /* session */, QList<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;
 };

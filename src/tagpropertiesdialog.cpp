@@ -289,7 +289,7 @@ void TagPropertiesDialog::slotAccept()
     }
     if (queryOK && mTag.isValid() && !mChangedRIDs.isEmpty()) {
         QMap<QString, qint64> resourceNameToIdMap;
-        QVector<qint64> existingResourceRecords;
+        QList<qint64> existingResourceRecords;
         {
             QSqlQuery query(DbAccess::database());
             QString queryStr = QStringLiteral("SELECT id, name FROM ResourceTable WHERE ");

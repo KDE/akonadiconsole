@@ -51,9 +51,9 @@ int main(int argc, char **argv)
 
     KDBusService service;
 
-    qRegisterMetaType<QVector<QByteArray>>();
-    qDBusRegisterMetaType<QVector<qint64>>();
-    qDBusRegisterMetaType<QVector<QByteArray>>();
+    qRegisterMetaType<QList<QByteArray>>();
+    qDBusRegisterMetaType<QList<qint64>>();
+    qDBusRegisterMetaType<QList<QByteArray>>();
 
     if (parser.isSet(remoteOption)) {
         const QString akonadiAddr = QStringLiteral("tcp:host=%1,port=31415").arg(parser.value(QStringLiteral("remote")));
