@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-02-21 16:00+0200\n"
+"PO-Revision-Date: 2023-03-30 10:02+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1956,7 +1956,7 @@ msgstr "Etsi"
 #: searchwidget.cpp:62
 #, kde-format
 msgid "Search query:"
-msgstr ""
+msgstr "Hakukysely:"
 
 #: searchwidget.cpp:71
 #, kde-format
@@ -1986,7 +1986,7 @@ msgstr "Xapian-tietokantaa ei ole avattu"
 #: searchwidget.cpp:187
 #, kde-format
 msgid "Term/Value"
-msgstr ""
+msgstr "Hakusana/arvo"
 
 #: searchwidget.cpp:187
 #, kde-format
@@ -1996,7 +1996,7 @@ msgstr ""
 #: searchwidget.cpp:189
 #, kde-format
 msgid "Terms"
-msgstr ""
+msgstr "Hakusanat"
 
 #: searchwidget.cpp:216
 #, kde-format
@@ -2007,7 +2007,7 @@ msgstr ""
 #: tagpropertiesdialog.ui:21
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Perusasetukset"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
