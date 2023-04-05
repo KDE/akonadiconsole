@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-14 09:57+0100\n"
+"PO-Revision-Date: 2023-04-03 11:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1995,7 +1995,7 @@ msgstr "No hi ha cap base de dades Xapian oberta"
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "No s'ha trobat cap element."
 
 #: searchwidget.cpp:190
 #, kde-format

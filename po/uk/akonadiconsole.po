@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-14 08:27+0200\n"
+"PO-Revision-Date: 2023-04-03 14:07+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -1995,7 +1995,7 @@ msgstr "Не відкрито жодної бази даних Xapian"
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "Елемент не знайдено."
 
 #: searchwidget.cpp:190
 #, kde-format
