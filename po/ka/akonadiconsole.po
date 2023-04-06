@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-04-03 06:07+0200\n"
+"PO-Revision-Date: 2023-04-05 06:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -597,6 +597,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>შენიშვნა:</b>ეს მნიშვნელობები წარმოდგენილია შესაბამისი უკანაბოლოს მიერ და "
+"არაა განკუთვნილი, რომ თქვენს მიერ შეიცვალოს, ასე რომ, თუ რამეს გააფუჭებთ, "
+"ჩვენ უკვე გაგაფრთხილეთ!"
 
 #: collectionattributespage.cpp:33 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -735,6 +738,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"მიმდინარე D-Bus-ს სესიაში Akonadi-ის ერთზე მეტი ასლია გაშვებული. აირჩიეთ "
+"ასლი, რომელსაც გნებავთ, მიუერთდეთ."
 
 #: jobtracker.cpp:26
 #, kde-format
@@ -1047,6 +1052,11 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Akonadi-ის კონსოლი პროგრამისტებისთვისაა განკუთვნილი. ის საშუალებას "
+"გაძლევთ, Akonadi-ის შიდა მონაცემების სტრუქტურა ნახოთ და შეცვალოთ. აქ "
+"ცვლილებები მხოლოდ მაშინ შეიტანეთ, როცა ზუსტად იცით, რას აკეთებთ. წინააღმდეგ "
+"შემთხვევაში გაქვთ შანსი, თქვენი პერსონალური ინფორმაციის მართვის მონაცემები "
+"დააზიანოთ ან დაკარგოთ.<br/><b>ჩვენ გაგაფრთხილეთ!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
