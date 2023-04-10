@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-23 12:03+0100\n"
+"PO-Revision-Date: 2023-04-09 22:20+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1385,27 +1385,27 @@ msgstr ""
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Added Flags"
-msgstr ""
+msgstr "Flags (Bandieras) Addite"
 
 #: notificationmonitor.cpp:205
 #, kde-format
 msgid "Removed Flags"
-msgstr ""
+msgstr "Flags (bandieras) Removite"
 
 #: notificationmonitor.cpp:206
 #, kde-format
 msgid "Added Tags"
-msgstr ""
+msgstr "Schedas addite"
 
 #: notificationmonitor.cpp:207
 #, kde-format
 msgid "Removed Tags"
-msgstr ""
+msgstr "Schedas removite"
 
 #: notificationmonitor.cpp:217
 #, kde-format
 msgid "Removed Relations"
-msgstr ""
+msgstr "Relationes removite"
 
 #: notificationmonitor.cpp:226
 #, kde-format
@@ -1420,7 +1420,7 @@ msgstr "id"
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "idremote"
 
 #: notificationmonitor.cpp:242
 #, kde-format
@@ -1462,12 +1462,12 @@ msgstr "Revision"
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "IDGenitor"
 
 #: notificationmonitor.cpp:272
 #, kde-format
 msgid "RemoteID"
-msgstr ""
+msgstr "IDRemote"
 
 #: notificationmonitor.cpp:273
 #, kde-format
@@ -1543,7 +1543,7 @@ msgstr "Typos Mime"
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Remote Revision"
-msgstr ""
+msgstr "Revision Remote"
 
 #: notificationmonitor.cpp:339
 #, kde-format
@@ -1558,7 +1558,7 @@ msgstr "Computo"
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "Non vidite"
 
 #: notificationmonitor.cpp:345
 #, kde-format
@@ -1962,7 +1962,7 @@ msgstr ""
 #: searchwidget.cpp:81
 #, kde-format
 msgid "Document:"
-msgstr ""
+msgstr "Documento:"
 
 #: searchwidget.cpp:91
 #, kde-format
