@@ -108,7 +108,7 @@ if (MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
 endif()
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.105.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.240.0)
 
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
