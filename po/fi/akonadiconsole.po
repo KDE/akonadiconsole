@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-17 00:58+0000\n"
-"PO-Revision-Date: 2023-03-30 10:02+0300\n"
+"PO-Revision-Date: 2023-04-14 17:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -234,7 +234,7 @@ msgstr "Tilaviesti:"
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr ""
+msgstr "Kyvyt:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
@@ -994,12 +994,12 @@ msgstr "Tehtävänseuranta"
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "Käytä resurssiajastimien jäljitystä"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Resources Schedulers"
-msgstr ""
+msgstr "Resurssiajastukset"
 
 #: mainwidget.cpp:58
 #, kde-format
@@ -1050,6 +1050,11 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Akonadi-konsoli on puhtaasti kehitystyökalu. Sillä voi katsella ja "
+"muuttaa Akonadin sisäisiä tietorakenteita. Muuta tietoja tässä vain jos "
+"varmasti tiedät mitä teet, muuten vaarana on henkilökohtaisten "
+"tiedonhallintatietojesi vioittuminen tai menettäminen.<br/><b>Käytä omalla "
+"vastuulla!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
@@ -1224,7 +1229,7 @@ msgstr "Tarkista vain välimuistissa olevat kuorman osat"
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "Nouda MTime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
@@ -1239,7 +1244,7 @@ msgstr "Sivuuta noutovirheet"
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Nouda muutokset alkaen"
 
 #: monitorswidget.cpp:163
 #, kde-format
@@ -1254,7 +1259,7 @@ msgstr "Nouda luokitukset"
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Kokoelmanoudon ala"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
@@ -1354,7 +1359,7 @@ msgstr "Istunto"
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "Kuuntelijat"
 
 #: notificationmonitor.cpp:57
 #, kde-format
@@ -1369,12 +1374,12 @@ msgstr "Aikaleima"
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
 msgid "Parent Collection"
-msgstr ""
+msgstr "Emokokoelma"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "Emon kohdesarake"
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
@@ -1424,7 +1429,7 @@ msgstr "id"
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "etätunniste"
 
 #: notificationmonitor.cpp:242
 #, kde-format
@@ -1445,7 +1450,7 @@ msgstr "Tunniste"
 #: notificationmonitor.cpp:252 notificationmonitor.cpp:334
 #, kde-format
 msgid "Parent ID"
-msgstr ""
+msgstr "Emon tunniste"
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:274
 #, kde-format
@@ -1466,17 +1471,17 @@ msgstr "Julkaisu"
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "EmonTunniste"
 
 #: notificationmonitor.cpp:272
 #, kde-format
 msgid "RemoteID"
-msgstr ""
+msgstr "Etätunniste"
 
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "Etäversio"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
@@ -1492,7 +1497,7 @@ msgstr "MIME-tyyppi"
 #: notificationmonitor.cpp:277
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "MTime"
 
 #: notificationmonitor.cpp:288
 #, kde-format
@@ -1502,7 +1507,7 @@ msgstr ""
 #: notificationmonitor.cpp:305
 #, kde-format
 msgid "Parts"
-msgstr ""
+msgstr "Osat"
 
 #: notificationmonitor.cpp:312
 #, kde-format
@@ -1517,7 +1522,7 @@ msgstr "Sisäinen"
 #: notificationmonitor.cpp:318
 #, kde-format
 msgid "Foreign"
-msgstr ""
+msgstr "Vieras"
 
 #: notificationmonitor.cpp:322
 #, kde-format
@@ -1557,12 +1562,12 @@ msgstr "Tilastot"
 #: notificationmonitor.cpp:341
 #, kde-format
 msgid "Count"
-msgstr ""
+msgstr "Määrä"
 
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "Ei nähty"
 
 #: notificationmonitor.cpp:345
 #, kde-format
@@ -1772,12 +1777,12 @@ msgstr "Noutokoko"
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "Nouda MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Nouda etäversio"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -1832,7 +1837,7 @@ msgstr "Sisällön MIME-tyypit"
 #: notificationmonitor.cpp:578
 #, kde-format
 msgid "Parent"
-msgstr ""
+msgstr "Emo"
 
 #: notificationmonitor.cpp:581
 #, kde-format
@@ -1892,25 +1897,25 @@ msgstr "Keskikesto [ms]"
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr ""
+msgstr "Vaikutuksenalaiset rivit:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Käytä kyselyjen virheenpaikannusta (hidastaa palvelinta!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "Kyselysekvenssi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "Kyselypuu"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
@@ -2001,7 +2006,7 @@ msgstr "Hakusanat"
 #: searchwidget.cpp:216
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "Virhe noudettaessa tietuetta"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
