@@ -12,7 +12,7 @@
 #include "collectioninternalspage.h"
 #include "config-akonadiconsole.h"
 #include "tagpropertiesdialog.h"
-#include <Akonadi/ClearCacheJob>
+#include <Akonadi/ClearCacheFoldersJob>
 #include <Akonadi/DbAccess>
 
 #include <Akonadi/AttributeFactory>
@@ -526,8 +526,7 @@ void BrowserWidget::dumpToXmlResult(KJob *job)
 
 void BrowserWidget::clearCache()
 {
-    Akonadi::ClearCacheJob *job = new Akonadi::ClearCacheJob(this);
-    job->setCollection(currentCollection());
+    auto job = new Akonadi::ClearCacheFoldersJob(currentCollection(), this);
     job->setParentWidget(this);
     job->start();
 }
