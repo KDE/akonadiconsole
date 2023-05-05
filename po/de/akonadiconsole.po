@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-12 15:58+0100\n"
+"POT-Creation-Date: 2023-05-03 00:49+0000\n"
+"PO-Revision-Date: 2023-04-30 14:15+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -95,8 +95,8 @@ msgstr ""
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Möchten Sie die ausgewählte Agent-Instanz wirklich löschen?"
+msgstr[1] "Möchten Sie diese %1 Agent-Instanzen wirklich löschen?"
 
 #: agentwidget.cpp:200
 #, kde-format
@@ -359,32 +359,32 @@ msgstr ""
 msgid "Select XML file"
 msgstr "XML-Datei auswählen"
 
-#: browserwidget.cpp:550
+#: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
 msgstr "Stichwort &hinzufügen ..."
 
-#: browserwidget.cpp:552
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr ""
 
-#: browserwidget.cpp:555 browserwidget.cpp:566
+#: browserwidget.cpp:554 browserwidget.cpp:565
 #, kde-format
 msgid "&Edit tag..."
 msgstr "Stichwort &bearbeiten ..."
 
-#: browserwidget.cpp:560 browserwidget.cpp:571
+#: browserwidget.cpp:559 browserwidget.cpp:570
 #, kde-format
 msgid "&Delete tag..."
 msgstr "Stichwort &löschen ..."
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:633
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr ""
 
-#: browserwidget.cpp:635
+#: browserwidget.cpp:634
 #, kde-format
 msgid "Delete tag?"
 msgstr "Stichwort löschen?"

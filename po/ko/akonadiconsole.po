@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-05-03 00:49+0000\n"
 "PO-Revision-Date: 2023-04-21 23:24+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -356,32 +356,32 @@ msgstr "변경 사항을 저장할 수 없음: %1"
 msgid "Select XML file"
 msgstr "XML 파일 선택"
 
-#: browserwidget.cpp:550
+#: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
 msgstr "태그 추가(&A)..."
 
-#: browserwidget.cpp:552
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "하위 태그 추가(&A)..."
 
-#: browserwidget.cpp:555 browserwidget.cpp:566
+#: browserwidget.cpp:554 browserwidget.cpp:565
 #, kde-format
 msgid "&Edit tag..."
 msgstr "태그 편집(&E)..."
 
-#: browserwidget.cpp:560 browserwidget.cpp:571
+#: browserwidget.cpp:559 browserwidget.cpp:570
 #, kde-format
 msgid "&Delete tag..."
 msgstr "태그 삭제(&D)..."
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:633
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "선택한 태그를 삭제하시겠습니까?"
 
-#: browserwidget.cpp:635
+#: browserwidget.cpp:634
 #, kde-format
 msgid "Delete tag?"
 msgstr "태그 삭제?"
