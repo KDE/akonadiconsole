@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-03 00:49+0000\n"
-"PO-Revision-Date: 2023-04-30 14:15+0200\n"
+"PO-Revision-Date: 2023-05-05 19:58+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -452,7 +452,7 @@ msgstr ""
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr ""
+msgstr "Interna"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
@@ -644,7 +644,7 @@ msgstr ""
 #: collectioninternalspage.ui:88
 #, kde-format
 msgid "Virtual:"
-msgstr ""
+msgstr "Virtuell:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
@@ -661,7 +661,7 @@ msgstr "Programme:"
 #: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
-msgstr ""
+msgstr "Abfrage #%1"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
@@ -682,7 +682,7 @@ msgstr "Nachricht"
 #: debugwidget.cpp:39
 #, kde-format
 msgid "Enable debugger"
-msgstr ""
+msgstr "Debugger aktivieren"
 
 #: debugwidget.cpp:48 notificationmonitor.cpp:575
 #, kde-format
@@ -775,7 +775,7 @@ msgstr "Erstellt"
 #: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:40
 #, kde-format
 msgid "Wait time"
-msgstr ""
+msgstr "Wartezeit"
 
 #: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:41
 #, kde-format
@@ -935,10 +935,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr ""
 
 #: main.cpp:45
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2022 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr "Copyright 2006-2022 the Akonadi developer"
+msgstr "Copyright 2006-2023 the Akonadi developer"
 
 #: main.cpp:49 main.cpp:50
 #, kde-format
@@ -988,7 +987,7 @@ msgstr ""
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Job Tracker"
-msgstr ""
+msgstr "Aufgabenüberwachung"
 
 #: mainwidget.cpp:57
 #, kde-format
