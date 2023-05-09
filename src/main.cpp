@@ -8,7 +8,6 @@
 
 #include "akonadiconsole-version.h"
 #include "instanceselector.h"
-#include <kcoreaddons_version.h>
 
 #include <KAboutData>
 #include <KCrash>
