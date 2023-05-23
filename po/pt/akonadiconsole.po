@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-03 00:49+0000\n"
-"PO-Revision-Date: 2023-04-03 09:44+0100\n"
+"PO-Revision-Date: 2023-05-22 22:22+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -317,7 +317,7 @@ msgstr "&Item"
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr "&Cache"
+msgstr "'&Cache'"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
@@ -827,7 +827,7 @@ msgstr "Gravar num ficheiro..."
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
 #, kde-format
 msgid "Clear View"
-msgstr "Limpar a Área"
+msgstr "Limpar a Janela"
 
 #: jobtrackerwidget.cpp:107
 #, kde-format
