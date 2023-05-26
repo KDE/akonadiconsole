@@ -582,6 +582,7 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
 void BrowserWidget::addTagRequested()
 {
     auto dlg = new TagPropertiesDialog(this);
+    dlg->setWindowTitle(i18n("Add Tag"));
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::createTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -596,6 +597,7 @@ void BrowserWidget::addSubTagRequested()
     tag.setParent(parentTag);
 
     auto dlg = new TagPropertiesDialog(tag, this);
+    dlg->setWindowTitle(i18n("Add Subtag"));
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::createTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -606,6 +608,7 @@ void BrowserWidget::editTagRequested()
     auto action = qobject_cast<QAction *>(sender());
     const auto tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     auto dlg = new TagPropertiesDialog(tag, this);
+    dlg->setWindowTitle(i18n("Modify Tag"));
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
@@ -622,6 +625,7 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
     Q_ASSERT(tag.isValid());
 
     auto dlg = new TagPropertiesDialog(tag, this);
+    dlg->setWindowTitle(i18n("Modify Tag"));
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
     connect(dlg, &TagPropertiesDialog::rejected, dlg, &TagPropertiesDialog::deleteLater);
     dlg->show();
