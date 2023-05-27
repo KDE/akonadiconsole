@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
 "PO-Revision-Date: 2023-04-03 14:07+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -380,12 +380,30 @@ msgstr "З&мінити мітку…"
 msgid "&Delete tag..."
 msgstr "Ви&лучити мітку…"
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, fuzzy, kde-format
+#| msgid "Added Tags"
+msgid "Add Tag"
+msgstr "Додані мітки"
+
+#: browserwidget.cpp:600
+#, fuzzy, kde-format
+#| msgid "Add &subtag..."
+msgid "Add Subtag"
+msgstr "Додати п&ідмітку…"
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, fuzzy, kde-format
+#| msgid "ModifyTags"
+msgid "Modify Tag"
+msgstr "ModifyTags"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Ви справді хочете вилучити позначену мітку?"
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "Вилучити мітку?"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
 "PO-Revision-Date: 2023-03-15 06:16+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -378,12 +378,30 @@ msgstr "ჭდის ჩასწორება..."
 msgid "&Delete tag..."
 msgstr "&ჭდის წაშლა..."
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, fuzzy, kde-format
+#| msgid "Added Tags"
+msgid "Add Tag"
+msgstr "დამატებული ჭდეებ"
+
+#: browserwidget.cpp:600
+#, fuzzy, kde-format
+#| msgid "Add &subtag..."
+msgid "Add Subtag"
+msgstr "&ქვეჭდის დამატება..."
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, fuzzy, kde-format
+#| msgid "Modify"
+msgid "Modify Tag"
+msgstr "ჩასწორება"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "მართლა გნებავთ მონიშნული ჭდის წაშლა?"
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "წავშალო ჭდე?"
