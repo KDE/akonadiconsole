@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-04-03 13:35+0300\n"
+"PO-Revision-Date: 2023-05-27 22:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -378,22 +378,19 @@ msgid "&Delete tag..."
 msgstr "Etiketi &sil..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "Eklenen Etiketler"
+msgstr "Etiket Ekle"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "&Alt etiket ekle..."
+msgstr "Alt Etiket Ekle"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgid "Modify Tag"
-msgstr "Etiketleri Değiştir"
+msgstr "Etiketi Değiştir"
 
 #: browserwidget.cpp:637
 #, kde-format
