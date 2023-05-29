@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
 "PO-Revision-Date: 2023-02-17 00:58+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -379,12 +379,27 @@ msgstr ""
 msgid "&Delete tag..."
 msgstr ""
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, kde-format
+msgid "Add Tag"
+msgstr ""
+
+#: browserwidget.cpp:600
+#, kde-format
+msgid "Add Subtag"
+msgstr ""
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, kde-format
+msgid "Modify Tag"
+msgstr ""
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr ""
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr ""

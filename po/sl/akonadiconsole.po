@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
-"PO-Revision-Date: 2023-04-03 08:59+0200\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"PO-Revision-Date: 2023-05-27 07:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -382,12 +382,27 @@ msgstr "Uredi oznako ..."
 msgid "&Delete tag..."
 msgstr "Izbriši oznako ..."
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, kde-format
+msgid "Add Tag"
+msgstr "Dodaj oznako"
+
+#: browserwidget.cpp:600
+#, kde-format
+msgid "Add Subtag"
+msgstr "Dodaj podoznako"
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, kde-format
+msgid "Modify Tag"
+msgstr "Spremeni oznako"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Ali zares želite izbrisati izbrano oznako?"
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "Želite izbrisati oznako?"

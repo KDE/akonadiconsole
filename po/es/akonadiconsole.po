@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
-"PO-Revision-Date: 2023-04-04 03:33+0200\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"PO-Revision-Date: 2023-05-27 03:49+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.80\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -380,12 +380,27 @@ msgstr "&Editar etiqueta..."
 msgid "&Delete tag..."
 msgstr "&Borrar etiqueta..."
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, kde-format
+msgid "Add Tag"
+msgstr "Añadir etiqueta"
+
+#: browserwidget.cpp:600
+#, kde-format
+msgid "Add Subtag"
+msgstr "Añadir subetiqueta"
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, kde-format
+msgid "Modify Tag"
+msgstr "Modificar etiqueta"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "¿Realmente desea eliminar la etiqueta seleccionada?"
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "¿Borrar etiqueta?"

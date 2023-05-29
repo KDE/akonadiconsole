@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
-"PO-Revision-Date: 2023-04-03 13:35+0300\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"PO-Revision-Date: 2023-05-27 22:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -377,12 +377,27 @@ msgstr "Etiketi &düzenle..."
 msgid "&Delete tag..."
 msgstr "Etiketi &sil..."
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, kde-format
+msgid "Add Tag"
+msgstr "Etiket Ekle"
+
+#: browserwidget.cpp:600
+#, kde-format
+msgid "Add Subtag"
+msgstr "Alt Etiket Ekle"
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, kde-format
+msgid "Modify Tag"
+msgstr "Etiketi Değiştir"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Seçili etiketi silmeyi istediğinize gerçekten emin misiniz?"
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "Etiket silinsin mi?"

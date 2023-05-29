@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-03 00:49+0000\n"
+"POT-Creation-Date: 2023-05-27 00:48+0000\n"
 "PO-Revision-Date: 2023-03-12 08:58+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -376,12 +376,29 @@ msgstr "Upraviť značku..."
 msgid "&Delete tag..."
 msgstr "Odstrániť značku..."
 
-#: browserwidget.cpp:633
+#: browserwidget.cpp:585
+#, fuzzy, kde-format
+msgid "Add Tag"
+msgstr "Pridané štítky: "
+
+#: browserwidget.cpp:600
+#, fuzzy, kde-format
+#| msgid "&Add tag..."
+msgid "Add Subtag"
+msgstr "Pridať značku..."
+
+#: browserwidget.cpp:611 browserwidget.cpp:628
+#, fuzzy, kde-format
+#| msgid "Modify"
+msgid "Modify Tag"
+msgstr "Zmeniť"
+
+#: browserwidget.cpp:637
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr ""
 
-#: browserwidget.cpp:634
+#: browserwidget.cpp:638
 #, kde-format
 msgid "Delete tag?"
 msgstr "Odstrániť značku?"
