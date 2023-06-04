@@ -1,11 +1,11 @@
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
+# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-04-04 16:39+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-05-28 15:26+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -376,22 +376,19 @@ msgid "&Delete tag..."
 msgstr "&Supprimer une étiquette ..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "Étiquettes ajoutées"
+msgstr "Ajouter une étiquette"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "Ajouter une &sous-étiquette"
+msgstr "Ajouter une sous-étiquette"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgid "Modify Tag"
-msgstr "Modifier des étiquettes"
+msgstr "Modifier une étiquette"
 
 #: browserwidget.cpp:637
 #, kde-format
@@ -753,8 +750,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
-"Il y a plusieurs instances de Akonadi en cours d’exécution dans la session "
-"« D-Bus ». Veuillez sélectionner l’instance à laquelle vous souhaitez vous "
+"Il y a plusieurs instances de Akonadi en cours d'exécution dans la session "
+"« D-Bus ». Veuillez sélectionner l'instance à laquelle vous souhaitez vous "
 "connecter."
 
 #: jobtracker.cpp:26
@@ -1071,7 +1068,7 @@ msgstr ""
 "<p>La console pour Akonadi est uniquement un outil de développement. Elle "
 "vous permet d'afficher et de modifier les structures de données internes de "
 "Akonadi. Vous ne devriez pas modifier les données ici, sauf si vous savez ce "
-"que vous faites. Dans le cas contraire, vous risqueriez d’endommager ou de "
+"que vous faites. Dans le cas contraire, vous risqueriez d'endommager ou de "
 "perdre vos données de gestion de vos informations personnelles. <br/"
 "><b>Veuillez le faire à vos risques et périls ! </b></p>"
 
@@ -1137,7 +1134,7 @@ msgstr "Récupération des prédécesseurs"
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr "Portée pour l’extraction des prédécesseurs"
+msgstr "Portée pour l'extraction des prédécesseurs"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
@@ -1148,7 +1145,7 @@ msgstr "Rechercher uniquement un ID"
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr "Ignorer l’erreur de récupération"
+msgstr "Ignorer l'erreur de récupération"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
@@ -1283,7 +1280,7 @@ msgstr "Portée de la recherche de collections"
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr "Portée pour l’extraction des étiquettes"
+msgstr "Portée pour l'extraction des étiquettes"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format

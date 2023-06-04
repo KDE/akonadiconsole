@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-03-15 06:16+0100\n"
+"PO-Revision-Date: 2023-05-29 06:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -379,20 +379,17 @@ msgid "&Delete tag..."
 msgstr "&ჭდის წაშლა..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "დამატებული ჭდეებ"
+msgstr "ჭდის დამატება"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "&ქვეჭდის დამატება..."
+msgstr "ქვეჭდის დამატება"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "Modify"
+#, kde-format
 msgid "Modify Tag"
 msgstr "ჩასწორება"
 
@@ -615,6 +612,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>შენიშვნა:</b>ეს მნიშვნელობები წარმოდგენილია შესაბამისი უკანაბოლოს მიერ და "
+"არაა განკუთვნილი, რომ თქვენს მიერ შეიცვალოს, ასე რომ, თუ რამეს გააფუჭებთ, "
+"ჩვენ უკვე გაგაფრთხილეთ!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -753,6 +753,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"მიმდინარე D-Bus-ს სესიაში Akonadi-ის ერთზე მეტი ასლია გაშვებული. აირჩიეთ "
+"ასლი, რომელსაც გნებავთ, მიუერთდეთ."
 
 #: jobtracker.cpp:26
 #, kde-format
@@ -1065,6 +1067,11 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Akonadi-ის კონსოლი პროგრამისტებისთვისაა განკუთვნილი. ის საშუალებას "
+"გაძლევთ, Akonadi-ის შიდა მონაცემების სტრუქტურა ნახოთ და შეცვალოთ. აქ "
+"ცვლილებები მხოლოდ მაშინ შეიტანეთ, როცა ზუსტად იცით, რას აკეთებთ. წინააღმდეგ "
+"შემთხვევაში გაქვთ შანსი, თქვენი პერსონალური ინფორმაციის მართვის მონაცემები "
+"დააზიანოთ ან დაკარგოთ.<br/><b>ჩვენ გაგაფრთხილეთ!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
@@ -1128,7 +1135,7 @@ msgstr "წინაპრის მიღება"
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "წინაპრის გამოთხოვის ფარგლები"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
@@ -1164,32 +1171,32 @@ msgstr "სესიის ID"
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Collections:"
-msgstr ""
+msgstr "კონტროლირებადი კოლექციები:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Items:"
-msgstr ""
+msgstr "კონტროლირებადი ობიექტები:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Tags:"
-msgstr ""
+msgstr "კონტროლირებადი ჭდეები:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Types:"
-msgstr ""
+msgstr "კონტროლირებადი ტიპები:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr ""
+msgstr "კონტროლირებადი MIME ტიპები:"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "Monitored Resources:"
-msgstr ""
+msgstr "კონტროლირებადი რესურსები:"
 
 #: monitorswidget.cpp:146
 #, kde-format
@@ -1199,7 +1206,7 @@ msgstr "იგნორირებული სესიები:"
 #: monitorswidget.cpp:147
 #, kde-format
 msgid "All Monitored:"
-msgstr ""
+msgstr "ყველა კონტროლირებადი:"
 
 #: monitorswidget.cpp:148
 #, kde-format
@@ -1209,12 +1216,12 @@ msgstr "ექსკლუზიურია:"
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "ობიექტის გამოთხოვის ფარგლები"
 
 #: monitorswidget.cpp:152
 #, kde-format
 msgid "Payload Parts"
-msgstr ""
+msgstr "ჩასატვირთი მონაცემების ნაწილები"
 
 #: monitorswidget.cpp:153
 #, kde-format
@@ -1234,7 +1241,7 @@ msgstr "მხოლოდ კეში"
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "მხოლოდ დაკეშილი შემცველობის ნაწილების შემოწმება"
 
 #: monitorswidget.cpp:159
 #, kde-format
@@ -1254,7 +1261,7 @@ msgstr "გამოთხოვის შეცდომების იგნ�
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "გამოსათხოვი მოვლენების საწყისი დრო"
 
 #: monitorswidget.cpp:163
 #, kde-format
@@ -1269,12 +1276,12 @@ msgstr "ჭდეების გამოთხოვა"
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "კოლექციის გამოთხოვის ფარგლები"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "ჭდის გამოთხოვის ფარგლები"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
@@ -1309,17 +1316,17 @@ msgstr "გადატანა"
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "ModifyFlags"
 
 #: notificationmodel.cpp:102 notificationmonitor.cpp:188
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "ModifyTags"
 
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr ""
+msgstr "ModifyRelations"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1327,7 +1334,7 @@ msgstr ""
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr ""
+msgstr "InvalidOp"
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
@@ -1342,7 +1349,7 @@ msgstr "გამოწერის გაუქმება"
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "InvalidIp"
 
 #: notificationmodel.cpp:162
 #, kde-format
@@ -1369,12 +1376,12 @@ msgstr "სესია"
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "მომსმენები"
 
 #: notificationmonitor.cpp:57
 #, kde-format
 msgid "Enable notification monitor"
-msgstr ""
+msgstr "შეტყობინებების მონიტორის ჩართვა"
 
 #: notificationmonitor.cpp:140
 #, kde-format
@@ -1384,17 +1391,17 @@ msgstr "დროის შტამპი"
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
 msgid "Parent Collection"
-msgstr ""
+msgstr "მშობელი კოლექცია"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "მშობ. სამიზნ. კოლ"
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
 msgid "Destination Resource"
-msgstr ""
+msgstr "სამიზნე რესურსი"
 
 #: notificationmonitor.cpp:203
 #, kde-format
@@ -1627,17 +1634,17 @@ msgstr "აქტიური"
 #: notificationmonitor.cpp:365
 #, kde-format
 msgid "DisplayPref"
-msgstr ""
+msgstr "DisplayPref"
 
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr ""
+msgstr "SyncPref"
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr ""
+msgstr "IndexPref"
 
 #: notificationmonitor.cpp:368
 #, kde-format
@@ -1647,7 +1654,7 @@ msgstr "ვირტუალური"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "მშობელი სამიზნე კოლექცია"
 
 #: notificationmonitor.cpp:402
 #, kde-format
@@ -1662,7 +1669,7 @@ msgstr "მარცხენა ID"
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr ""
+msgstr "მარცხენა MimeType"
 
 #: notificationmonitor.cpp:427
 #, kde-format
@@ -1672,22 +1679,22 @@ msgstr "მარჯვენა ID"
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr ""
+msgstr "მარჯვენა MimeType"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Monitored Collections"
-msgstr ""
+msgstr "კონტროლირებადი კოლექციები"
 
 #: notificationmonitor.cpp:477
 #, kde-format
 msgid "Monitored Items"
-msgstr ""
+msgstr "კონტროლირებადი ობიექტები"
 
 #: notificationmonitor.cpp:478
 #, kde-format
 msgid "Monitored Tags"
-msgstr ""
+msgstr "კონტროლირებადი ჭდეები"
 
 #: notificationmonitor.cpp:496
 #, kde-format
@@ -1707,17 +1714,17 @@ msgstr "ტიპის გარეშე"
 #: notificationmonitor.cpp:506
 #, kde-format
 msgid "Monitored Types"
-msgstr ""
+msgstr "კონტროლირებადი ტიპები"
 
 #: notificationmonitor.cpp:507
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr ""
+msgstr "კონტროლირებადი MIME ტიპები"
 
 #: notificationmonitor.cpp:508
 #, kde-format
 msgid "Monitored Resources"
-msgstr ""
+msgstr "კონტროლირებადი რესურსები"
 
 #: notificationmonitor.cpp:509
 #, kde-format
@@ -1727,7 +1734,7 @@ msgstr "იგნორირებული სესიები"
 #: notificationmonitor.cpp:510
 #, kde-format
 msgid "All Monitored"
-msgstr ""
+msgstr "ყველა კონტროლირებადი"
 
 #: notificationmonitor.cpp:511
 #, kde-format
@@ -1742,7 +1749,7 @@ msgstr "მოთხოვნილი ნაწილები"
 #: notificationmonitor.cpp:516
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "ცვლილების დროიდან"
 
 #: notificationmonitor.cpp:520
 #, kde-format
@@ -1762,7 +1769,7 @@ msgstr "ყველა წინაპარი"
 #: notificationmonitor.cpp:529
 #, kde-format
 msgid "Ancestor Depth"
-msgstr ""
+msgstr "წინაპრის სიღრმე"
 
 #: notificationmonitor.cpp:530
 #, kde-format
@@ -1772,7 +1779,7 @@ msgstr "მხოლოდ კეში"
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "მხოლოდ დაკეშილი შემცველობის ნაწილების შემოწმება"
 
 #: notificationmonitor.cpp:532
 #, kde-format
@@ -1792,7 +1799,7 @@ msgstr "MTime-ის გამოთხოვა"
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "დაშორებული რევიზიის გამოთხოვა"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -1807,17 +1814,17 @@ msgstr "ალმების გამოთხოვა"
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "RemoteID-ის გამოთხოვა"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "ურთიერთობების გამოთხოვა"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "VRef-ების გამოთხოვა"
 
 #: notificationmonitor.cpp:551
 #, kde-format
@@ -1857,7 +1864,7 @@ msgstr "არაფერი"
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "მხოლოდ წინაპრის ID-ის გამოთხოვა"
 
 #: notificationmonitor.cpp:586
 #, kde-format
@@ -1913,7 +1920,7 @@ msgstr "შეცვლილი მწკრივები:"
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "მოთხოვნების გამართვის ჩართვა (ანელებს სერვერს!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
@@ -2001,7 +2008,7 @@ msgstr "Xapian-ის ბაზა გახსნილი არაა"
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "ელემენტი ვერ მოიძებნა."
 
 #: searchwidget.cpp:190
 #, kde-format
