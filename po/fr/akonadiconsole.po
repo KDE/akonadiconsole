@@ -750,8 +750,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
-"Il y a plusieurs instances de Akonadi en cours d’exécution dans la session "
-"« D-Bus ». Veuillez sélectionner l’instance à laquelle vous souhaitez vous "
+"Il y a plusieurs instances de Akonadi en cours d'exécution dans la session "
+"« D-Bus ». Veuillez sélectionner l'instance à laquelle vous souhaitez vous "
 "connecter."
 
 #: jobtracker.cpp:26
@@ -1068,7 +1068,7 @@ msgstr ""
 "<p>La console pour Akonadi est uniquement un outil de développement. Elle "
 "vous permet d'afficher et de modifier les structures de données internes de "
 "Akonadi. Vous ne devriez pas modifier les données ici, sauf si vous savez ce "
-"que vous faites. Dans le cas contraire, vous risqueriez d’endommager ou de "
+"que vous faites. Dans le cas contraire, vous risqueriez d'endommager ou de "
 "perdre vos données de gestion de vos informations personnelles. <br/"
 "><b>Veuillez le faire à vos risques et périls ! </b></p>"
 
@@ -1134,7 +1134,7 @@ msgstr "Récupération des prédécesseurs"
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr "Portée pour l’extraction des prédécesseurs"
+msgstr "Portée pour l'extraction des prédécesseurs"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
@@ -1145,7 +1145,7 @@ msgstr "Rechercher uniquement un ID"
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr "Ignorer l’erreur de récupération"
+msgstr "Ignorer l'erreur de récupération"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
@@ -1280,7 +1280,7 @@ msgstr "Portée de la recherche de collections"
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr "Portée pour l’extraction des étiquettes"
+msgstr "Portée pour l'extraction des étiquettes"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
