@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-04-04 14:11+0200\n"
+"PO-Revision-Date: 2023-05-31 11:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -379,22 +379,19 @@ msgid "&Delete tag..."
 msgstr "O&dstranit značku..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "Přidané značky"
+msgstr "Přidat značku"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "Přid&at značku..."
+msgstr "Přidat podznačku"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "Modify"
+#, kde-format
 msgid "Modify Tag"
-msgstr "Změnit"
+msgstr "Upravit značku"
 
 #: browserwidget.cpp:637
 #, kde-format
