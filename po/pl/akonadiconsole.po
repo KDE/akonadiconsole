@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-04-10 11:34+0200\n"
+"PO-Revision-Date: 2023-06-10 10:03+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -380,20 +380,17 @@ msgid "&Delete tag..."
 msgstr "&Usuń znacznik..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "Dodano znaczniki"
+msgstr "Dodaj znacznik"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "Dodaj &podznacznik..."
+msgstr "Dodaj podznacznik"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgid "Modify Tag"
 msgstr "Zmień znaczniki"
 
