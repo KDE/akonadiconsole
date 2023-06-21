@@ -226,3 +226,5 @@ void SearchWidget::itemFetched(KJob *job)
         mItemView->setPlainText(QString::fromUtf8(item.payloadData()));
     }
 }
+
+#include "moc_searchwidget.cpp"

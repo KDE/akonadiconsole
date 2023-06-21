@@ -171,3 +171,5 @@ void JobTrackerModelTest::shouldHandleDuplicateJob()
 }
 
 QTEST_GUILESS_MAIN(JobTrackerModelTest)
+
+#include "moc_jobtrackermodeltest.cpp"

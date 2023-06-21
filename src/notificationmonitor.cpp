@@ -634,3 +634,5 @@ void NotificationMonitor::saveToFile()
     QJsonDocument saveDoc(json);
     file.write(saveDoc.toJson());
 }
+
+#include "moc_notificationmonitor.cpp"

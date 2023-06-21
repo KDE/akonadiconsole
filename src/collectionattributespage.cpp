@@ -110,3 +110,5 @@ void CollectionAttributePage::attributeChanged(QStandardItem *item)
     mDeleted.remove(attr);
     mChanged.insert(attr);
 }
+
+#include "moc_collectionattributespage.cpp"

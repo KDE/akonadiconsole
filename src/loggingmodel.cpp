@@ -184,3 +184,5 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
 
     return {};
 }
+
+#include "moc_loggingmodel.cpp"

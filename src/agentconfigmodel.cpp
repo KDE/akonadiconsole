@@ -138,3 +138,5 @@ void AgentConfigModel::writeConfig()
 {
     m_interface->call(QStringLiteral("save"));
 }
+
+#include "moc_agentconfigmodel.cpp"

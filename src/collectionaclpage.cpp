@@ -60,3 +60,5 @@ void CollectionAclPage::save(Collection &col)
     }
     col.setRights(rights);
 }
+
+#include "moc_collectionaclpage.cpp"

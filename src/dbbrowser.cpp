@@ -49,3 +49,5 @@ void DbBrowser::onSortIndicatorChanged(int column, Qt::SortOrder order)
 {
     mTableModel->sort(column, order);
 }
+
+#include "moc_dbbrowser.cpp"

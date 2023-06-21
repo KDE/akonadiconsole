@@ -114,3 +114,5 @@ void ConnectionPage::clearFiltered()
 {
     mFilterModel->removeRows(0, mFilterModel->rowCount());
 }
+
+#include "moc_connectionpage.cpp"

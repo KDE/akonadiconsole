@@ -132,3 +132,5 @@ void DebugWidget::saveEverythingRichText()
     file.write(mConnectionPage->toHtml().toUtf8());
     file.close();
 }
+
+#include "moc_debugwidget.cpp"

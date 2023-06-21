@@ -84,3 +84,5 @@ void JobTrackerSearchWidgetTest::shouldEmitSelectOnlyErrorChanged()
 }
 
 QTEST_MAIN(JobTrackerSearchWidgetTest)
+
+#include "moc_jobtrackersearchwidgettest.cpp"

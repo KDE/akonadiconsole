@@ -51,3 +51,5 @@ void AgentConfigDialog::reconfigure()
 {
     m_instance.reconfigure();
 }
+
+#include "moc_agentconfigdialog.cpp"

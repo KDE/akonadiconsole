@@ -54,3 +54,5 @@ void JobTrackerSearchWidget::slotColumnChanged(int index)
         Q_EMIT columnChanged(var.toInt());
     }
 }
+
+#include "moc_jobtrackersearchwidget.cpp"

@@ -115,3 +115,5 @@ QStringList InstanceSelector::instances()
     }
     return insts;
 }
+
+#include "moc_instanceselector.cpp"

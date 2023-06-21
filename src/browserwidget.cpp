@@ -655,3 +655,5 @@ void BrowserWidget::modifyTag()
         new TagModifyJob(dlg->tag(), this);
     }
 }
+
+#include "moc_browserwidget.cpp"

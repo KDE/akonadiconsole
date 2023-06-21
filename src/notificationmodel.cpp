@@ -245,3 +245,5 @@ void NotificationModel::setEnabled(bool enable)
         m_monitor = nullptr;
     }
 }
+
+#include "moc_notificationmodel.cpp"

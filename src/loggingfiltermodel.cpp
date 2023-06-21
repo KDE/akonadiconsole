@@ -87,3 +87,5 @@ bool LoggingFilterModel::filterAcceptsRow(int source_row, const QModelIndex &) c
     const auto msg = sourceModel()->data(source_idx, LoggingModel::MessageRole).value<LoggingModel::Message>();
     return mCheckedApps.contains(msg.app) && mCheckedCategories.contains(msg.category) && mCheckedTypes.contains(msg.type);
 }
+
+#include "moc_loggingfiltermodel.cpp"

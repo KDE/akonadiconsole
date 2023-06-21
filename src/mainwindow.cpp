@@ -51,3 +51,5 @@ void MainWindow::closeEvent(QCloseEvent *event)
     KSharedConfig::openConfig()->sync();
     KXmlGuiWindow::closeEvent(event);
 }
+
+#include "moc_mainwindow.cpp"

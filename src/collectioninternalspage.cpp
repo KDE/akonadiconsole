@@ -33,3 +33,5 @@ void CollectionInternalsPage::save(Akonadi::Collection &col)
     col.setContentMimeTypes(ui.contentTypes->items());
     col.setVirtual(ui.virtCheck->isChecked());
 }
+
+#include "moc_collectioninternalspage.cpp"

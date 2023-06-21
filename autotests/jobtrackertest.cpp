@@ -129,3 +129,5 @@ void JobTrackerTest::shouldHandleJobEnd()
 }
 
 QTEST_GUILESS_MAIN(JobTrackerTest)
+
+#include "moc_jobtrackertest.cpp"

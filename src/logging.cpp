@@ -150,3 +150,5 @@ void Logging::saveToFile()
         stream << msg.message << "\n";
     }
 }
+
+#include "moc_logging.cpp"

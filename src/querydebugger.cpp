@@ -793,3 +793,5 @@ void QueryDebugger::saveTreeToFile()
 }
 
 #include "querydebugger.moc"
+
+#include "moc_querydebugger.cpp"

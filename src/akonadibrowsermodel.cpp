@@ -367,3 +367,5 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
 
     return QSortFilterProxyModel::lessThan(left, right);
 }
+
+#include "moc_akonadibrowsermodel.cpp"

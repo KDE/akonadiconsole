@@ -369,3 +369,5 @@ void TagPropertiesDialog::slotAccept()
 
     QDialog::accept();
 }
+
+#include "moc_tagpropertiesdialog.cpp"

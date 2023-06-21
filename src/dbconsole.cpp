@@ -138,3 +138,5 @@ void DbConsoleTab::copyCell()
     QString text = index.data(Qt::DisplayRole).toString();
     QApplication::clipboard()->setText(text);
 }
+
+#include "moc_dbconsole.cpp"

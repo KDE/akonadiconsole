@@ -75,3 +75,5 @@ void JobTrackerFilterProxyModel::setSearchColumn(int column)
         invalidateFilter();
     }
 }
+
+#include "moc_jobtrackerfilterproxymodel.cpp"

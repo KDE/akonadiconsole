@@ -173,3 +173,5 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex &index)
 
     mSubscriberView->expandAll();
 }
+
+#include "moc_monitorswidget.cpp"

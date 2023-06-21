@@ -82,3 +82,5 @@ void NotificationFilterModel::slotRowsInserted(const QModelIndex &source_parent,
         }
     }
 }
+
+#include "moc_notificationfiltermodel.cpp"

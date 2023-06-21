@@ -101,3 +101,5 @@ void MainWidget::restartServer()
 {
     Akonadi::ControlGui::restart(this);
 }
+
+#include "moc_mainwidget.cpp"

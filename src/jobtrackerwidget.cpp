@@ -173,3 +173,5 @@ void JobTrackerWidget::writeRows(const QModelIndex &parent, QFile &file, int ind
         writeRows(index, file, indentLevel + 1);
     }
 }
+
+#include "moc_jobtrackerwidget.cpp"

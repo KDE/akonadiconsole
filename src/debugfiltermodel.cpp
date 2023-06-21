@@ -55,3 +55,5 @@ bool DebugFilterModel::filterAcceptsRow(int source_row, const QModelIndex &) con
     const auto msg = sourceModel()->data(source_idx, DebugModel::MessageRole).value<DebugModel::Message>();
     return mCheckedSenders.contains(msg.sender);
 }
+
+#include "moc_debugfiltermodel.cpp"
