@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-05-22 14:00\n"
+"PO-Revision-Date: 2023-06-17 04:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -377,22 +377,19 @@ msgid "&Delete tag..."
 msgstr "删除标签(&D)"
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgid "Add Tag"
-msgstr "添加标签(&A)"
+msgstr ""
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "添加子标签(&s)"
+msgstr ""
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgid "Modify Tag"
-msgstr "修改标签"
+msgstr ""
 
 #: browserwidget.cpp:637
 #, kde-format
