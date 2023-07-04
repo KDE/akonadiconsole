@@ -165,8 +165,7 @@ endif()
 
 if (ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
-        KPim6::AkonadiContact
-        KPim6::ContactEditor
+        KPim6::AkonadiContactWidgets
         KPim6::CalendarSupport
         KPim6::MessageViewer
     )
