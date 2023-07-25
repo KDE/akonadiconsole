@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-06-12 00:08+0200\n"
+"PO-Revision-Date: 2023-07-13 22:56+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -106,7 +106,7 @@ msgstr ""
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr ""
+msgstr "Löschen mehrerer Agenten"
 
 #: agentwidget.cpp:270
 #, kde-format
@@ -163,12 +163,12 @@ msgstr "%1, %2"
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr ""
+msgstr "Agenten hinzufügen ..."
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Clone Agent"
-msgstr ""
+msgstr "Agenten klonen"
 
 #: agentwidget.cpp:443
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "Aktivitäten abbrechen"
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Restart Agent"
-msgstr ""
+msgstr "Agenten neu starten"
 
 #: agentwidget.cpp:448
 #, kde-format
@@ -198,7 +198,7 @@ msgstr ""
 #: agentwidget.cpp:452
 #, kde-format
 msgid "Remove Agent"
-msgstr ""
+msgstr "Agenten entfernen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
@@ -367,7 +367,7 @@ msgstr "Stichwort &hinzufügen ..."
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr ""
+msgstr "&Unterstichwort hinzufügen ..."
 
 #: browserwidget.cpp:554 browserwidget.cpp:565
 #, kde-format
@@ -380,22 +380,19 @@ msgid "&Delete tag..."
 msgstr "Stichwort &löschen ..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgid "Add Tag"
-msgstr "Stichwort &hinzufügen ..."
+msgstr "Stichwort hinzufügen"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "Stichwort &hinzufügen ..."
+msgstr "Unterstichwort hinzufügen"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "Modify"
+#, kde-format
 msgid "Modify Tag"
-msgstr "Ändern"
+msgstr "Stichwort ändern"
 
 #: browserwidget.cpp:637
 #, kde-format
