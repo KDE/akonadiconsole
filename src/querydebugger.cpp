@@ -61,7 +61,7 @@ struct QueryInfo {
     }
 };
 
-Q_DECLARE_TYPEINFO(QueryInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(QueryInfo, Q_RELOCATABLE_TYPE);
 
 class QueryTreeModel : public QAbstractItemModel
 {
