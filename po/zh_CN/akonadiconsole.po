@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-07-23 12:28\n"
+"PO-Revision-Date: 2023-07-30 07:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -961,7 +961,7 @@ msgstr "作者"
 #: mainwidget.cpp:48
 #, kde-format
 msgid "Agents"
-msgstr "代理人"
+msgstr "代理"
 
 #: mainwidget.cpp:50
 #, kde-format
@@ -1134,7 +1134,7 @@ msgstr ""
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "仅获取ID"
 
 #: monitorswidget.cpp:116
 #, kde-format
@@ -1961,12 +1961,12 @@ msgstr ""
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr ""
+msgstr "搜索于:"
 
 #: searchwidget.cpp:54 searchwidget.cpp:164
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: searchwidget.cpp:62
 #, kde-format
