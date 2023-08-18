@@ -15,5 +15,4 @@ Dependencies:
     'pim/kimap' : '@latest-kf6'
     'pim/kmime' : '@latest-kf6'
     'pim/libkdepim' : '@latest-kf6'
-    'pim/libkleo' : '@latest-kf6'
     'pim/messagelib' : '@latest-kf6'
