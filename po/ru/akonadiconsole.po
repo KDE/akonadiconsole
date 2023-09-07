@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the akonadiconsole package.
 #
 # Alexander Yavorsky <kekcuha@gmail.com>, 2023.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-03-12 17:04+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2023-09-04 17:57+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -381,22 +382,19 @@ msgid "&Delete tag..."
 msgstr "&Удалить метку..."
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgid "Add Tag"
-msgstr "Добавленные метки"
+msgstr "Добавить метку"
 
 #: browserwidget.cpp:600
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgid "Add Subtag"
-msgstr "Добавить &вложенную метку…"
+msgstr "Добавить вложенную метку"
 
 #: browserwidget.cpp:611 browserwidget.cpp:628
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgid "Modify Tag"
-msgstr "ModifyTags"
+msgstr "Изменить метку"
 
 #: browserwidget.cpp:637
 #, kde-format
@@ -959,10 +957,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Управление Akonadi и консоль отладки"
 
 #: main.cpp:45
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2022 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr "(c) 2006-2022 разработчик Akonadi"
+msgstr "© Разработчик Akonadi, 2006—2023"
 
 #: main.cpp:49 main.cpp:50
 #, kde-format
@@ -1132,7 +1129,7 @@ msgstr "Ресурс"
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr "Типы Mime данных"
+msgstr "Типы MIME данных"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
@@ -1571,7 +1568,7 @@ msgstr "Имя"
 #: notificationmonitor.cpp:336
 #, kde-format
 msgid "Mime Types"
-msgstr "Типы Mime"
+msgstr "Типы MIME"
 
 #: notificationmonitor.cpp:338
 #, kde-format
@@ -1676,7 +1673,7 @@ msgstr "Левый идентификатор"
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr "Левый тип Mime"
+msgstr "Левый тип MIME"
 
 #: notificationmonitor.cpp:427
 #, kde-format
@@ -1686,7 +1683,7 @@ msgstr "Правый идентификатор"
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr "Правый тип Mime"
+msgstr "Правый тип MIME"
 
 #: notificationmonitor.cpp:476
 #, kde-format
@@ -1726,7 +1723,7 @@ msgstr "Отслеживаемые типы"
 #: notificationmonitor.cpp:507
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr "Отслеживаемые типы Mime"
+msgstr "Отслеживаемые типы MIME"
 
 #: notificationmonitor.cpp:508
 #, kde-format
@@ -1856,7 +1853,7 @@ msgstr "Синхронизация"
 #: notificationmonitor.cpp:569
 #, kde-format
 msgid "Content Mime Types"
-msgstr "Типы содержимого Mime"
+msgstr "Типы MIME содержимого"
 
 #: notificationmonitor.cpp:578
 #, kde-format
@@ -2015,7 +2012,7 @@ msgstr "Не открыта ни одна база данных Xapian"
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "Элементы не найдены."
 
 #: searchwidget.cpp:190
 #, kde-format
