@@ -34,7 +34,7 @@ AgentConfigDialog::AgentConfigDialog(QWidget *parent)
     KGuiItem::assign(user2Button, KGuiItem(i18n("Refresh")));
     buttonBox->button(QDialogButtonBox::Apply)->setText(i18n("Apply Configuration"));
 
-    setWindowTitle(i18n("Agent Configuration"));
+    setWindowTitle(i18nc("@title:window", "Agent Configuration"));
 
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &AgentConfigDialog::reconfigure);
     connect(user1Button, &QPushButton::clicked, m_model, &AgentConfigModel::writeConfig);

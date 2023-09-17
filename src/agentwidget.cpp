@@ -267,7 +267,7 @@ void AgentWidget::showTaskList()
     }
 
     QPointer<TextDialog> dlg = new TextDialog(this);
-    dlg->setWindowTitle(i18n("Resource Task List"));
+    dlg->setWindowTitle(i18nc("@title:window", "Resource Task List"));
     dlg->setText(txt);
     dlg->exec();
     delete dlg;
@@ -291,7 +291,7 @@ void AgentWidget::showChangeNotifications()
     }
 
     QPointer<TextDialog> dlg = new TextDialog(this);
-    dlg->setWindowTitle(i18n("Change Notification Log"));
+    dlg->setWindowTitle(i18nc("@title:window", "Change Notification Log"));
     dlg->setText(txt);
 
     dlg->exec();

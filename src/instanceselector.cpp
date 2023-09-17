@@ -85,9 +85,9 @@ void InstanceSelector::slotAccept()
     Akonadi::Instance::setIdentifier(m_instance);
     auto mWindow = new MainWindow;
     if (!m_remoteHost.isEmpty()) {
-        mWindow->setWindowTitle(i18n("Remote Akonadi Console (%1)", m_remoteHost));
+        mWindow->setWindowTitle(i18nc("@title:window", "Remote Akonadi Console (%1)", m_remoteHost));
     } else if (!m_instance.isEmpty()) {
-        mWindow->setWindowTitle(i18n("Akonadi Console (Instance: %1)", m_instance));
+        mWindow->setWindowTitle(i18nc("@title:window", "Akonadi Console (Instance: %1)", m_instance));
     }
     mWindow->show();
 }
