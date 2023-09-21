@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-02-17 00:58+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -46,6 +46,7 @@ msgstr ""
 
 #: agentconfigdialog.cpp:37
 #, kde-format
+msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr ""
 
@@ -110,11 +111,13 @@ msgstr ""
 
 #: agentwidget.cpp:270
 #, kde-format
+msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr ""
 
 #: agentwidget.cpp:294
 #, kde-format
+msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr ""
 
@@ -369,37 +372,40 @@ msgstr ""
 msgid "Add &subtag..."
 msgstr ""
 
-#: browserwidget.cpp:554 browserwidget.cpp:565
+#: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
 msgstr ""
 
-#: browserwidget.cpp:559 browserwidget.cpp:570
+#: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
 msgstr ""
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:572
 #, kde-format
+msgctxt "@title:window"
 msgid "Add Tag"
 msgstr ""
 
-#: browserwidget.cpp:600
+#: browserwidget.cpp:587
 #, kde-format
+msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr ""
 
-#: browserwidget.cpp:611 browserwidget.cpp:628
+#: browserwidget.cpp:598 browserwidget.cpp:615
 #, kde-format
+msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr ""
 
-#: browserwidget.cpp:637
+#: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr ""
 
-#: browserwidget.cpp:638
+#: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
 msgstr ""
@@ -736,11 +742,13 @@ msgstr ""
 
 #: instanceselector.cpp:88
 #, kde-format
+msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr ""
 
 #: instanceselector.cpp:90
 #, kde-format
+msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr ""
 
@@ -939,22 +947,22 @@ msgstr ""
 msgid "%1:%2"
 msgstr ""
 
-#: main.cpp:41
+#: main.cpp:27
 #, kde-format
 msgid "Akonadi Console"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr ""
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:35 main.cpp:36
 #, kde-format
 msgid "Author"
 msgstr ""

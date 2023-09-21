@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-04-14 17:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,9 @@ msgid "Apply Configuration"
 msgstr "Ota määritys käyttöön"
 
 #: agentconfigdialog.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Agent Configuration"
+msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Agentin määritys"
 
@@ -107,12 +109,16 @@ msgid "Multiple Agent Deletion"
 msgstr "Usean agentin poistaminen"
 
 #: agentwidget.cpp:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resource Task List"
+msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Resurssin tehtäväluettelo"
 
 #: agentwidget.cpp:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Notification Log"
+msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Muutosilmoitusloki"
 
@@ -367,40 +373,43 @@ msgstr "&Lisää luokitus…"
 msgid "Add &subtag..."
 msgstr "Lisää &aliluokitus…"
 
-#: browserwidget.cpp:554 browserwidget.cpp:565
+#: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
 msgstr "&Muokkaa luokitusta…"
 
-#: browserwidget.cpp:559 browserwidget.cpp:570
+#: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
 msgstr "&Poista luokitus…"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:572
 #, fuzzy, kde-format
 #| msgid "Added Tags"
+msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Lisätyt luokitukset"
 
-#: browserwidget.cpp:600
+#: browserwidget.cpp:587
 #, fuzzy, kde-format
 #| msgid "Add &subtag..."
+msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Lisää &aliluokitus…"
 
-#: browserwidget.cpp:611 browserwidget.cpp:628
+#: browserwidget.cpp:598 browserwidget.cpp:615
 #, fuzzy, kde-format
 #| msgid "Modify"
+msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Muuta"
 
-#: browserwidget.cpp:637
+#: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Haluatko varmasti poistaa valitun luokituksen?"
 
-#: browserwidget.cpp:638
+#: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
 msgstr "Poistetaanko luokitus?"
@@ -738,12 +747,16 @@ msgid "Connect"
 msgstr "Yhdistä"
 
 #: instanceselector.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remote Akonadi Console (%1)"
+msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Akonadi-etäkonsoli (%1)"
 
 #: instanceselector.cpp:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Akonadi Console (Instance: %1)"
+msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Akonadi-konsoli (instanssi: %1)"
 
@@ -944,22 +957,22 @@ msgstr "Funktio"
 msgid "%1:%2"
 msgstr "%1:%2"
 
-#: main.cpp:41
+#: main.cpp:27
 #, kde-format
 msgid "Akonadi Console"
 msgstr "Akonadi-konsoli"
 
-#: main.cpp:43
+#: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadin hallinta- ja virheenpaikannuskonsoli"
 
-#: main.cpp:45
+#: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr "© 2006–2023 Akonadin kehittäjä"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:35 main.cpp:36
 #, kde-format
 msgid "Author"
 msgstr "Tekijä"

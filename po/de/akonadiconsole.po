@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-07-13 22:56+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -46,9 +46,11 @@ msgid "Apply Configuration"
 msgstr "Einstellungen anwenden"
 
 #: agentconfigdialog.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Configuration"
+msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr ""
+msgstr "Einstellungen speichern"
 
 #: agentwidget.cpp:93
 #, kde-format
@@ -109,14 +111,18 @@ msgid "Multiple Agent Deletion"
 msgstr "Löschen mehrerer Agenten"
 
 #: agentwidget.cpp:270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Resource"
+msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr ""
+msgstr "Ressource"
 
 #: agentwidget.cpp:294
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Notification"
+msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr ""
+msgstr "Benachrichtigung"
 
 #: agentwidget.cpp:344
 #, kde-format
@@ -369,37 +375,43 @@ msgstr "Stichwort &hinzufügen ..."
 msgid "Add &subtag..."
 msgstr "&Unterstichwort hinzufügen ..."
 
-#: browserwidget.cpp:554 browserwidget.cpp:565
+#: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
 msgstr "Stichwort &bearbeiten ..."
 
-#: browserwidget.cpp:559 browserwidget.cpp:570
+#: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
 msgstr "Stichwort &löschen ..."
 
-#: browserwidget.cpp:585
-#, kde-format
+#: browserwidget.cpp:572
+#, fuzzy, kde-format
+#| msgid "Add Tag"
+msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Stichwort hinzufügen"
 
-#: browserwidget.cpp:600
-#, kde-format
+#: browserwidget.cpp:587
+#, fuzzy, kde-format
+#| msgid "Add Subtag"
+msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Unterstichwort hinzufügen"
 
-#: browserwidget.cpp:611 browserwidget.cpp:628
-#, kde-format
+#: browserwidget.cpp:598 browserwidget.cpp:615
+#, fuzzy, kde-format
+#| msgid "Modify Tag"
+msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Stichwort ändern"
 
-#: browserwidget.cpp:637
+#: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr ""
 
-#: browserwidget.cpp:638
+#: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
 msgstr "Stichwort löschen?"
@@ -735,14 +747,18 @@ msgid "Connect"
 msgstr "Verbinden"
 
 #: instanceselector.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Akonadi Console"
+msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Akonadi-Konsole"
 
 #: instanceselector.cpp:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Akonadi Console"
+msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Akonadi-Konsole"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -939,22 +955,22 @@ msgstr "Funktion"
 msgid "%1:%2"
 msgstr "%1:%2"
 
-#: main.cpp:41
+#: main.cpp:27
 #, kde-format
 msgid "Akonadi Console"
 msgstr "Akonadi-Konsole"
 
-#: main.cpp:43
+#: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
 msgstr "Copyright 2006-2023 the Akonadi developer"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:35 main.cpp:36
 #, kde-format
 msgid "Author"
 msgstr "Autor"
