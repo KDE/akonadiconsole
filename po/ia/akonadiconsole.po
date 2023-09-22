@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-07-06 11:55+0200\n"
+"PO-Revision-Date: 2023-09-21 10:16+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -44,8 +44,7 @@ msgid "Apply Configuration"
 msgstr "Applica configuration"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Configuration de agente"
@@ -109,15 +108,13 @@ msgid "Multiple Agent Deletion"
 msgstr "Deletion multiple de agente"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Lista de Carga de Ressource"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Cambia Log (Regitro) de Notification"
@@ -384,22 +381,19 @@ msgid "&Delete tag..."
 msgstr "&Dele etiquetta..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Adde etiquetta"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Adde subetiquetta"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Modifica Etiquetta"
@@ -745,15 +739,13 @@ msgid "Connect"
 msgstr "Connecte"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Console de Akonadi Remote (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Console de Akonadi (instantia: %1)"

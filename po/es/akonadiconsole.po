@@ -2,7 +2,7 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, %Y.
+# SPDX-FileCopyrightText: 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Automatically generated, 2023.
 # Eloy Cuadra <ecuadra@eloihr.net>, 2023.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-05-27 03:49+0200\n"
+"PO-Revision-Date: 2023-09-21 14:38+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,8 +47,7 @@ msgid "Apply Configuration"
 msgstr "Aplicar la configuración"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Configuración del agente"
@@ -112,15 +111,13 @@ msgid "Multiple Agent Deletion"
 msgstr "Borrado de agente múltiple"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Lista de tareas de recursos"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Registro de notificaciones de cambios"
@@ -387,22 +384,19 @@ msgid "&Delete tag..."
 msgstr "&Borrar etiqueta..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Añadir etiqueta"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Añadir subetiqueta"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Modificar etiqueta"
@@ -627,8 +621,8 @@ msgid ""
 "changing them nevertheless!"
 msgstr ""
 "<b>Nota: </b>Estos valores los proporciona el motor correspondiente y no "
-"están pensados para que usted los modifique, ¡así que tenga cuidado si algo "
-"deja de funcionar al cambiarlos!"
+"están pensados para se puedan modificar, por lo que debería tener cuidado si "
+"algo deja de funcionar al cambiarlos."
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -751,15 +745,13 @@ msgid "Connect"
 msgstr "Conectar"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Consola remota de Akonadi (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Consola de Akonadi (instancia: %1)"

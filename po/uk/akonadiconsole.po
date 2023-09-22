@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-05-27 09:02+0300\n"
+"PO-Revision-Date: 2023-09-21 13:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -45,8 +45,7 @@ msgid "Apply Configuration"
 msgstr "Застосувати налаштування"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Налаштування агента"
@@ -112,15 +111,13 @@ msgid "Multiple Agent Deletion"
 msgstr "Вилучення декількох агентів"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Список завдань ресурсу"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Журнал сповіщень про зміни"
@@ -387,25 +384,22 @@ msgid "&Delete tag..."
 msgstr "Ви&лучити мітку…"
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "Додати мітку"
+msgstr "Додавання мітки"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Додати підмітку"
+msgstr "Додавання підмітки"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Змінити мітку"
+msgstr "Зміна мітки"
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -751,15 +745,13 @@ msgid "Connect"
 msgstr "З'єднатися"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Віддалена консоль Akonadi (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Консоль Akonadi (Екземпляр: %1)"

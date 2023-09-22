@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-05-27 11:27+0200\n"
+"PO-Revision-Date: 2023-09-21 15:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,8 +47,7 @@ msgid "Apply Configuration"
 msgstr "Aplica la configuració"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Configuració de l'agent"
@@ -112,18 +111,16 @@ msgid "Multiple Agent Deletion"
 msgstr "Supressió múltiple d'agents"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Recurs llista de tasques"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr "Canvia el registre de notificacions"
+msgstr "Canvi de registre de notificacions"
 
 #: agentwidget.cpp:344
 #, kde-format
@@ -387,25 +384,22 @@ msgid "&Delete tag..."
 msgstr "&Suprimeix l'etiqueta..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "Afegeix una etiqueta"
+msgstr "Addició d'etiqueta"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Afegeix una subetiqueta"
+msgstr "Addició de subetiqueta"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Modifica l'etiqueta"
+msgstr "Modificació d'etiqueta"
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -751,15 +745,13 @@ msgid "Connect"
 msgstr "Connecta"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Consola remota de l'Akonadi (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Consola de l'Akonadi: %1 (Instància: %1)"
