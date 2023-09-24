@@ -150,7 +150,7 @@ void MonitorsWidget::onSubscriberSelected(const QModelIndex &index)
     auto ifsItem = new QStandardItem(i18n("Item Fetch Scope"));
     const auto ifs = subscriber.itemFetchScope();
     appendRow(ifsItem, i18n("Payload Parts"), toString(ifs.payloadParts()));
-    appendRow(ifsItem, i18n("Full Paryload"), toString(ifs.fullPayload()));
+    appendRow(ifsItem, i18n("Full Payload"), toString(ifs.fullPayload()));
     appendRow(ifsItem, i18n("Attributes"), toString(ifs.attributes()));
     appendRow(ifsItem, i18n("All Attributes"), toString(ifs.allAttributes()));
     appendRow(ifsItem, i18n("Cache only"), toString(ifs.cacheOnly()));
