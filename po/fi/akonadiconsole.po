@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-04-14 17:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1237,10 +1237,10 @@ msgstr ""
 msgid "Payload Parts"
 msgstr "Kuorman osat"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
-msgstr "Koko kuorma"
+msgid "Full Payload"
+msgstr "Täyskuorma"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
@@ -1795,11 +1795,6 @@ msgstr "Vain välimuisti"
 msgid "Check Cached Payload Parts Only"
 msgstr ""
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Täyskuorma"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2068,3 +2063,6 @@ msgstr "&Poista"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Etätunnisteet"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Koko kuorma"

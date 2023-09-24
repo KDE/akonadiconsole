@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-08-04 13:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1237,9 +1237,9 @@ msgstr "Objekthämtningens omfattning"
 msgid "Payload Parts"
 msgstr "Nyttolastdelar"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "Hela nyttolasten"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1795,11 +1795,6 @@ msgstr "Bara i cache"
 msgid "Check Cached Payload Parts Only"
 msgstr "Kontrollera bara nyttolastdelar i cache"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Hela nyttolasten"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2068,3 +2063,6 @@ msgstr "&Ta bort"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Fjärridentifierare"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Hela nyttolasten"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-05-27 22:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1230,9 +1230,9 @@ msgstr "Öge Getirim Kapsamı"
 msgid "Payload Parts"
 msgstr "Yük Kısımları"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "Tüm Yük"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1788,11 +1788,6 @@ msgstr "Yalnızca Önbellek"
 msgid "Check Cached Payload Parts Only"
 msgstr "Yalnızca Önbelleklenmiş Yük Kısımlarını Denetle"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Tüm Yük"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2061,3 +2056,6 @@ msgstr "&Kaldır"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Uzak Tanımlayıcılar"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Tüm Yük"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-08-08 00:02+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1235,9 +1235,9 @@ msgstr "항목 가져오기 범위"
 msgid "Payload Parts"
 msgstr "페이로드 부분"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "전체 페이로드"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1793,11 +1793,6 @@ msgstr "캐시만"
 msgid "Check Cached Payload Parts Only"
 msgstr "캐시된 페이로드 부분만 검사"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "전체 페이로드"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2066,3 +2061,6 @@ msgstr "삭제(&R)"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "원격 식별자"
+
+#~ msgid "Full Paryload"
+#~ msgstr "전체 페이로드"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-22 06:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1231,9 +1231,9 @@ msgstr "ობიექტის გამოთხოვის ფარგლ�
 msgid "Payload Parts"
 msgstr "ჩასატვირთი მონაცემების ნაწილები"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "სრული დატვირთვა"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1789,11 +1789,6 @@ msgstr "მხოლოდ კეში"
 msgid "Check Cached Payload Parts Only"
 msgstr "მხოლოდ დაკეშილი შემცველობის ნაწილების შემოწმება"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "სრული დატვირთვა"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2062,3 +2057,6 @@ msgstr "&წაშლა"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "დაშორებული იდენტიფიკატორები"
+
+#~ msgid "Full Paryload"
+#~ msgstr "სრული დატვირთვა"

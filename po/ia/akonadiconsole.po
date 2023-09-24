@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-21 10:16+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1220,10 +1220,10 @@ msgstr ""
 msgid "Payload Parts"
 msgstr "Partes de Carga Utile"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
-msgstr "Carga utile plen"
+msgid "Full Payload"
+msgstr "Cargo utile plen"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
@@ -1778,11 +1778,6 @@ msgstr "Solmente in cache"
 msgid "Check Cached Payload Parts Only"
 msgstr ""
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Cargo utile plen"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2051,3 +2046,6 @@ msgstr "&Remove"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identificatores remote"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Carga utile plen"

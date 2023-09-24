@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-21 15:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1235,9 +1235,9 @@ msgstr "Obseg pridobivanja postavke"
 msgid "Payload Parts"
 msgstr "Deli obremenitve"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "Polna obremenitev"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1793,11 +1793,6 @@ msgstr "Samo predpomnilnik"
 msgid "Check Cached Payload Parts Only"
 msgstr "Preveri samo dele predpomnjenih obremenitev"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Polna obremenitev"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2066,3 +2061,6 @@ msgstr "&Odstrani"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Oddaljeni določilniki"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Polna obremenitev"

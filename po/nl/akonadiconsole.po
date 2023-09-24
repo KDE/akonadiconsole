@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-21 10:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1230,9 +1230,9 @@ msgstr "Bereik van ophalen van item"
 msgid "Payload Parts"
 msgstr "Onderdelen van inhoud"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr "Volledige inhoud"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1788,11 +1788,6 @@ msgstr "Alleen cache"
 msgid "Check Cached Payload Parts Only"
 msgstr "Alleen controleren op onderdelen van inhoud in de cache"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Volledige inhoud"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2061,3 +2056,6 @@ msgstr "Ve&rwijderen"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identifiers op afstand"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Volledige inhoud"

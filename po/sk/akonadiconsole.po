@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-03-12 08:58+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1225,9 +1225,9 @@ msgstr ""
 msgid "Payload Parts"
 msgstr ""
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
+msgid "Full Payload"
 msgstr ""
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
@@ -1781,11 +1781,6 @@ msgstr ""
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
-
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
 msgstr ""
 
 #: notificationmonitor.cpp:534

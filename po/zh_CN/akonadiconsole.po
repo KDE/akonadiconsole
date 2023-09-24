@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-16 10:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1232,10 +1232,10 @@ msgstr "项目获取范围"
 msgid "Payload Parts"
 msgstr "有效载荷部分"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
-msgstr "全副加载"
+msgid "Full Payload"
+msgstr "全额有效载荷"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
@@ -1790,11 +1790,6 @@ msgstr "仅缓存"
 msgid "Check Cached Payload Parts Only"
 msgstr "只检查缓存的有效载荷部件"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "全额有效载荷"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2063,3 +2058,6 @@ msgstr ""
 #, kde-format
 msgid "Remote Identifiers"
 msgstr ""
+
+#~ msgid "Full Paryload"
+#~ msgstr "全副加载"

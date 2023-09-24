@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-24 01:44+0000\n"
 "PO-Revision-Date: 2023-09-04 17:57+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -1243,10 +1243,10 @@ msgstr "Область получения объекта"
 msgid "Payload Parts"
 msgstr "Части данных нагрузки"
 
-#: monitorswidget.cpp:153
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
-msgid "Full Paryload"
-msgstr "Все данные нагрузки"
+msgid "Full Payload"
+msgstr "Полная нагрузка"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
@@ -1801,11 +1801,6 @@ msgstr "Только кэш"
 msgid "Check Cached Payload Parts Only"
 msgstr "Проверять только кэшированные части данных нагрузки"
 
-#: notificationmonitor.cpp:532
-#, kde-format
-msgid "Full Payload"
-msgstr "Полная нагрузка"
-
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
@@ -2074,3 +2069,6 @@ msgstr "&Удалить"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Удалить идентификаторы"
+
+#~ msgid "Full Paryload"
+#~ msgstr "Все данные нагрузки"
