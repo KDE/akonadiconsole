@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-24 01:44+0000\n"
-"PO-Revision-Date: 2023-06-10 10:03+0200\n"
+"PO-Revision-Date: 2023-09-24 08:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,8 +45,7 @@ msgid "Apply Configuration"
 msgstr "Zastosuj ustawienia"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Ustawienia usługi"
@@ -111,15 +110,13 @@ msgid "Multiple Agent Deletion"
 msgstr "Wielokrotne usuwanie usługi"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Lista zadań zasobu"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Dziennik powiadomień o zmianie"
@@ -386,25 +383,22 @@ msgid "&Delete tag..."
 msgstr "&Usuń znacznik..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Dodaj znacznik"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Dodaj podznacznik"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Zmień znaczniki"
+msgstr "Zmień znacznik"
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -750,15 +744,13 @@ msgid "Connect"
 msgstr "Połącz"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Zdalna konsola Akonadi (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Konsola Akonadi (Wystąpienie: %1)"

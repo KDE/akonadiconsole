@@ -1,158 +1,159 @@
-# Copyright (C) YEAR This file is copyright:
+# translation of akonadiconsole.pot to esperanto
+# Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the akonadiconsole package.
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
-# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-24 01:44+0000\n"
-"PO-Revision-Date: 2023-05-27 22:54+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2023-09-24 19:32+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Emir SARI"
+msgstr "Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "emir_sar@icloud.com"
+msgstr "okellogg@users.sourceforge.net"
 
 #: agentconfigdialog.cpp:33
 #, kde-format
 msgid "Save Configuration"
-msgstr "Yapılandırmayı Kaydet"
+msgstr "Konservi Agordon"
 
 #. i18n: ectx: property (text), widget (QPushButton, refreshButton)
 #: agentconfigdialog.cpp:34 dbbrowser.ui:28
 #, kde-format
 msgid "Refresh"
-msgstr "Yenile"
+msgstr "Refreŝigi"
 
 #: agentconfigdialog.cpp:35
 #, kde-format
 msgid "Apply Configuration"
-msgstr "Yapılandırmayı Uygula"
+msgstr "Apliki Agordon"
 
 #: agentconfigdialog.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr "Aracı Yapılandırması"
+msgstr "Agenta Agordo"
 
 #: agentwidget.cpp:93
 #, kde-format
 msgid "Configure"
-msgstr "Yapılandır"
+msgstr "Agordi"
 
 #: agentwidget.cpp:94
 #, kde-format
 msgid "Configure Natively..."
-msgstr "Yerel Olarak Yapılandır..."
+msgstr "Agordi Denaske..."
 
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Remotely..."
-msgstr "Uzaktan Yapılandır..."
+msgstr "Agordi Fore..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:101 agentwidget.ui:240
 #, kde-format
 msgid "Synchronize"
-msgstr "Eşzamanla"
+msgstr "Sinkronigi"
 
 #: agentwidget.cpp:102
 #, kde-format
 msgid "Synchronize All"
-msgstr "Tümünü Eşzamanla"
+msgstr "Sinkronigi Ĉiuj"
 
 #: agentwidget.cpp:103
 #, kde-format
 msgid "Synchronize Collection Tree"
-msgstr "Koleksiyon Ağacını Eşzamanla"
+msgstr "Sinkronigi Kolektan Arbon"
 
 #: agentwidget.cpp:104
 #, kde-format
 msgid "Synchronize Tags"
-msgstr "Etiketleri Eşzamanla"
+msgstr "Sinkronigi Etikedojn"
 
 #: agentwidget.cpp:110
 #, kde-format
 msgid "Synchronize Relations"
-msgstr "İlişkileri Eşzamanla"
+msgstr "Sinkronigi Rilatojn"
 
 #: agentwidget.cpp:199
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] "Seçili aracı örneğini silmeyi gerçekten istiyor musunuz?"
-msgstr[1] "Bu %1 aracı örneğini silmeyi gerçekten istiyor musunuz?"
+msgstr[0] "Ĉu vi vere volas forigi la elektitan agent-instancon?"
+msgstr[1] "Ĉu vi vere volas forigi ĉi %1 agent-instancojn?"
 
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Agent Deletion"
-msgstr "Aracı Silme"
+msgstr "Forigo de Agento"
 
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr "Çoklu Aracı Silme"
+msgstr "Multobla Agentforigo"
 
 #: agentwidget.cpp:270
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr "Özkaynak Görev Listesi"
+msgstr "Listo de Taskoj de Rimedoj"
 
 #: agentwidget.cpp:294
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr "Değişiklik Bildirim Günlüğü"
+msgstr "Ŝanĝosciiga Protokolo"
 
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr "Aracıyı klonlama başarısız: %1."
+msgstr "Klonado de agento malsukcesis: %1."
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Online"
-msgstr "Çevrimiçi"
+msgstr "Enreta"
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Offline"
-msgstr "Çevrimdışı"
+msgstr "Senreta"
 
 #: agentwidget.cpp:411
 #, kde-format
 msgid "Idle"
-msgstr "Boşta"
+msgstr "Senlabora"
 
 #: agentwidget.cpp:414
 #, kde-format
 msgid "Running (%1%)"
-msgstr "Çalışıyor (%​%1)"
+msgstr "Rulanta (%1%)"
 
 #: agentwidget.cpp:417
 #, kde-format
 msgid "Broken"
-msgstr "Bozuk"
+msgstr "Rompita"
 
 #: agentwidget.cpp:420
 #, kde-format
 msgid "Not Configured"
-msgstr "Yapılandırılmamış"
+msgstr "Ne Agordita"
 
 #: agentwidget.cpp:423
 #, kde-format
@@ -164,92 +165,92 @@ msgstr "%1, %2"
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr "Aracı Ekle..."
+msgstr "Aldoni agenton..."
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Clone Agent"
-msgstr "Aracıyı Klonla"
+msgstr "Kloni Agenton"
 
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Abort Activity"
-msgstr "Etkinliği İptal Et"
+msgstr "Ĉesi Agadon"
 
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Restart Agent"
-msgstr "Aracıyı Yeniden Başlat"
+msgstr "Rekomenci Agenton"
 
 #: agentwidget.cpp:448
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr "Çevrimiçi/Çevrimdışı Yap"
+msgstr "Baskuligi Interrete/Senrete"
 
 #: agentwidget.cpp:449
 #, kde-format
 msgid "Show task list"
-msgstr "Görev listesini göster"
+msgstr "Montri taskoliston"
 
 #: agentwidget.cpp:450
 #, kde-format
 msgid "Show change-notification log"
-msgstr "Değişiklik bildirim günlüğünü göster"
+msgstr "Montri protokolon pri ŝanĝaj sciigoj"
 
 #: agentwidget.cpp:452
 #, kde-format
 msgid "Remove Agent"
-msgstr "Aracıyı Kaldır"
+msgstr "Forigi Agenton"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
 #, kde-format
 msgid "Details"
-msgstr "Ayrıntılar"
+msgstr "Detaloj"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
 #: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
 #, kde-format
 msgid "Identifier:"
-msgstr "Tanımlayıcı:"
+msgstr "Identigilo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: agentwidget.ui:69 tagpropertiesdialog.ui:65
 #, kde-format
 msgid "Type:"
-msgstr "Tür:"
+msgstr "Tipo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: agentwidget.ui:92
 #, kde-format
 msgid "Status:"
-msgstr "Durum:"
+msgstr "Statuso:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: agentwidget.ui:118
 #, kde-format
 msgid "Status Message:"
-msgstr "Durum İletisi:"
+msgstr "Statusa Mesaĝo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr "Yetenekler:"
+msgstr "Kapabloj:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
 #, kde-format
 msgid "Mimetypes:"
-msgstr "MIME Türleri:"
+msgstr "Mimetipoj:"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr "Ekle..."
+msgstr "Aldoni..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:94 notificationmodel.cpp:118
@@ -259,172 +260,172 @@ msgstr "Ekle..."
 #: notificationmonitor.cpp:444 notificationmonitor.cpp:468
 #, kde-format
 msgid "Remove"
-msgstr "Kaldır"
+msgstr "Forigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr "Yapılandır..."
+msgstr "Agordi..."
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
 #, kde-format
 msgid "Abort"
-msgstr "İptal Et"
+msgstr "Ĉesi"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
 #: agentwidget.ui:247
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"
-msgstr "Yeniden Başlat"
+msgstr "Rekomenci"
 
 #: akonadibrowsermodel.cpp:69 notificationmodel.cpp:74
 #: notificationmonitor.cpp:403
 #, kde-format
 msgid "Collection"
-msgstr "Koleksiyon"
+msgstr "Kolekto"
 
 #: akonadibrowsermodel.cpp:70
 #, kde-format
 msgid "Subject"
-msgstr "Konu"
+msgstr "Subjekto"
 
 #: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
-msgstr "Gönderen"
+msgstr "Sendanto"
 
 #: akonadibrowsermodel.cpp:70 notificationmodel.cpp:206
 #, kde-format
 msgid "Date"
-msgstr "Tarih"
+msgstr "Dato"
 
 #. i18n: ectx: Menu (collection)
 #: akonadiconsoleui.rc:8
 #, kde-format
 msgid "&Collection"
-msgstr "&Koleksiyon"
+msgstr "&Kolekto"
 
 #. i18n: ectx: Menu (item)
 #: akonadiconsoleui.rc:28
 #, kde-format
 msgid "&Item"
-msgstr "&Öge"
+msgstr "&Ero"
 
 #. i18n: ectx: Menu (cache)
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr "Ö&nbellek"
+msgstr "&Kaŝmemoro"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
 #, kde-format
 msgid "&Server"
-msgstr "&Sunucu"
+msgstr "&Servilo"
 
 #: browserwidget.cpp:177
 #, kde-format
 msgid "Generic"
-msgstr "Temel"
+msgstr "Ĝenerala"
 
 #: browserwidget.cpp:178
 #, kde-format
 msgid "Mail"
-msgstr "Posta"
+msgstr "Poŝto"
 
 #: browserwidget.cpp:179
 #, kde-format
 msgid "Contacts"
-msgstr "Kişiler"
+msgstr "Kontaktoj"
 
 #: browserwidget.cpp:180
 #, kde-format
 msgid "Calendar/Tasks"
-msgstr "Takvim/Görevler"
+msgstr "Kalendaro/Taskoj"
 
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr "Yalnızca önbellekli alım"
+msgstr "Kaŝmemorigi nur akiron"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr "Değişiklikler kaydedilemedi: %1"
+msgstr "Malsukcesis konservi ŝanĝojn: %1"
 
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr "XML dosyası seç"
+msgstr "Elekti XML-dosieron"
 
 #: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
-msgstr "&Etiket ekle..."
+msgstr "&Aldoni etikedon..."
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr "&Alt etiket ekle..."
+msgstr "Aldoni &subetikedon..."
 
 #: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
-msgstr "Etiketi &düzenle..."
+msgstr "R&edakti etikedon..."
 
 #: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
-msgstr "Etiketi &sil..."
+msgstr "&Forigi etikedon..."
 
 #: browserwidget.cpp:572
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "Etiket Ekle"
+msgstr "Aldoni Etikedon"
 
 #: browserwidget.cpp:587
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Alt Etiket Ekle"
+msgstr "Aldoni Subetikedon"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Etiketi Değiştir"
+msgstr "Modifi etikedon"
 
 #: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr "Seçili etiketi silmeyi istediğinize gerçekten emin misiniz?"
+msgstr "Ĉu vi vere volas forigi elektitan etikedon?"
 
 #: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
-msgstr "Etiket silinsin mi?"
+msgstr "Ĉu forigi etikedon?"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
 #: browserwidget_contentview.ui:30
 #, kde-format
 msgid "&Save"
-msgstr "&Kaydet"
+msgstr "&Konservi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: browserwidget_contentview.ui:41
 #, kde-format
 msgid "Payload"
-msgstr "Yük"
+msgstr "Utilŝargaĵo"
 
 #. i18n: ectx: property (text), widget (QLabel, unsupportedType)
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr "Desteklenmeyen Tür"
+msgstr "Nesubtenata Tipo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -434,7 +435,7 @@ msgstr "Desteklenmeyen Tür"
 #: notificationmonitor.cpp:595 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
-msgstr "Öznitelikler"
+msgstr "Atributoj"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
@@ -442,7 +443,7 @@ msgstr "Öznitelikler"
 #: tagpropertiesdialog.ui:82
 #, kde-format
 msgid "New Attribute"
-msgstr "Yeni Öznitelik"
+msgstr "Nova Atributo"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
@@ -452,32 +453,32 @@ msgstr "Yeni Öznitelik"
 #: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
 #, kde-format
 msgid "&Add"
-msgstr "&Ekle"
+msgstr "&Aldoni"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: browserwidget_contentview.ui:130 collectionattributespage.ui:40
 #, kde-format
 msgid "&Delete"
-msgstr "&Sil"
+msgstr "&Forigi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr "Ham Yük"
+msgstr "Kruda Ŝargaĵo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr "İç Parçalar"
+msgstr "Internaloj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
 #, kde-format
 msgid "Unique ID:"
-msgstr "Benzersiz Kimlik:"
+msgstr "Unika ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, id)
 #. i18n: ectx: property (text), widget (QLabel, revision)
@@ -493,7 +494,7 @@ msgstr "0"
 #: browserwidget_contentview.ui:202
 #, kde-format
 msgid "Remote ID:"
-msgstr "Uzak Kimlik:"
+msgstr "Fora ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -506,31 +507,31 @@ msgstr "GID:"
 #: browserwidget_contentview.ui:236
 #, kde-format
 msgid "Revision:"
-msgstr "Revizyon:"
+msgstr "Revizio:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: browserwidget_contentview.ui:260
 #, kde-format
 msgid "Size:"
-msgstr "Boyut:"
+msgstr "Grandeco:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr "Son değiştirilme zamanı:"
+msgstr "Lasta modifa tempo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
 #, kde-format
 msgid "Mimetype:"
-msgstr "MIME türü:"
+msgstr "Mimetipo:"
 
 #. i18n: ectx: property (text), widget (QLabel, mimeType)
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr "geçersiz/geçersiz"
+msgstr "nevalida/nevalida"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -539,21 +540,21 @@ msgstr "geçersiz/geçersiz"
 #: browserwidget_contentview.ui:370 notificationmonitor.cpp:278
 #, kde-format
 msgid "Flags"
-msgstr "Bayraklar"
+msgstr "Flagoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:83
 #: notificationmonitor.cpp:279 notificationmonitor.cpp:490
 #, kde-format
 msgid "Tags"
-msgstr "Etiketler"
+msgstr "Etikedoj"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: browserwidget_itemview.ui:31
 #, kde-format
 msgctxt "model name"
 msgid "Model:"
-msgstr "Model:"
+msgstr "Modelo:"
 
 #: collectionaclpage.cpp:17
 #, kde-format
@@ -564,14 +565,14 @@ msgstr "ACL"
 #: collectionaclpage.ui:17
 #, kde-format
 msgid "Item Access Rights"
-msgstr "Öge Erişim Hakları"
+msgstr "Ero-Alirrajtoj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, createItem)
 #. i18n: ectx: property (text), widget (QCheckBox, createCollection)
 #: collectionaclpage.ui:23 collectionaclpage.ui:67
 #, kde-format
 msgid "Create"
-msgstr "Oluştur"
+msgstr "Krei"
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
@@ -582,32 +583,32 @@ msgstr "Oluştur"
 #: notificationmonitor.cpp:465
 #, kde-format
 msgid "Modify"
-msgstr "Değiştir"
+msgstr "Modifi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
 #. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
 #: collectionaclpage.ui:37 collectionaclpage.ui:81
 #, kde-format
 msgid "Delete"
-msgstr "Sil"
+msgstr "Forigi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
 #, kde-format
 msgid "Link"
-msgstr "Bağlantıla"
+msgstr "Ligo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:98 notificationmonitor.cpp:182
 #, kde-format
 msgid "Unlink"
-msgstr "Bağlantıyı Kaldır"
+msgstr "Malligi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr "Koleksiyon Erişim Haklar"
+msgstr "Kolekto-Alirrajtoj"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -617,141 +618,141 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
-"<b>Not: </b>Bu değerler, ilgili arka uç tarafından sağlanır ve sizin "
-"tarafınızdan değiştirilmesi için verilmemiştir. Bu nedenle, değiştirdikten "
-"sonra bir şeyler ters giderse bilginiz olsun!"
+"<b>Noto: </b>Ĉi tiuj valoroj estas provizitaj de la responda backend kaj ne "
+"estas intencitaj por esti ŝanĝitaj de vi, do estu avertita se io rompiĝas "
+"dum ŝanĝado de ili tamen!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
-msgstr "Öznitelik"
+msgstr "Atributo"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
-msgstr "Değer"
+msgstr "Valoro"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr "Buradaki bir şeyi değiştirmeyi düşünmeyin bile!"
+msgstr "Eĉ ne pensu pri ŝanĝi ion ĉi tie!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
 #, kde-format
 msgid "Identification"
-msgstr "Tanımlama"
+msgstr "Identigo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr "Uzak tanımlayıcı:"
+msgstr "Fora identigilo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
 #, kde-format
 msgid "Owner:"
-msgstr "Sahip:"
+msgstr "Posedanto:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr "Uzak Revizyon:"
+msgstr "Fora Revizio:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
 #, kde-format
 msgid "Virtual:"
-msgstr "Sanal:"
+msgstr "Virtuala:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
 #: collectioninternalspage.ui:106 collectioninternalspage.ui:115
 #, kde-format
 msgid "Content Types"
-msgstr "İçerik Türleri"
+msgstr "Enhavaj Tipoj"
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
 msgid "Programs:"
-msgstr "Programlar:"
+msgstr "Programoj:"
 
 #: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
-msgstr "%1. Sorgu"
+msgstr "Demando #%1"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr "Sorguyu yürüt"
+msgstr "Efektivigi demandon"
 
 #: debugmodel.cpp:144
 #, kde-format
 msgid "Direction"
-msgstr "Yön"
+msgstr "Direkto"
 
 #: debugmodel.cpp:146 loggingmodel.cpp:116
 #, kde-format
 msgid "Message"
-msgstr "İleti"
+msgstr "Mesaĝo"
 
 #: debugwidget.cpp:39
 #, kde-format
 msgid "Enable debugger"
-msgstr "Hata ayıklayıcıyı etkinleştir"
+msgstr "Ebligi erarserĉilon"
 
 #: debugwidget.cpp:48 notificationmonitor.cpp:575
 #, kde-format
 msgid "All"
-msgstr "Tümü"
+msgstr "Ĉiuj"
 
 #: debugwidget.cpp:63
 #, kde-format
 msgid "Clear Information View"
-msgstr "Bilgi Görünümünü Temizle"
+msgstr "Klara Informo-Vido"
 
 #: debugwidget.cpp:64
 #, kde-format
 msgid "Clear Filtered Messages"
-msgstr "Süzülen İletileri Temizle"
+msgstr "Forigi Filtritajn Mesaĝojn"
 
 #: debugwidget.cpp:65
 #, kde-format
 msgid "Clear All Messages"
-msgstr "Tüm İletileri Temizle"
+msgstr "Forigi Ĉiuj Mesaĝoj"
 
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr "Süzülen İletileri Kaydet..."
+msgstr "Konservi Filtritajn Mesaĝojn..."
 
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr "Tüm İletileri Kaydet..."
+msgstr "Konservi ĉiujn mesaĝojn..."
 
 #: instanceselector.cpp:44
 #, kde-format
 msgid "Connect"
-msgstr "Bağlan"
+msgstr "Konekti"
 
 #: instanceselector.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr "Uzak Akonadi Konsolu (%1)"
+msgstr "Fora Akonadi-Konzolo (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr "Akonadi Konsolu (Örnek: %1)"
+msgstr "Akonadi-Konzolo (Okazaĵo: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -760,190 +761,190 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
-"Geçerli D-Bus oturumunda birden çok Akonadi örneği çalışıyor. Bağlanmak "
-"istediğiniz örneği seçin."
+"Estas pluraj okazoj de Akonadi funkcianta en la nuna D-Bus-sesio. Bonvolu "
+"elekti la ekzemplon al kiu vi volas konektiĝi."
 
 #: jobtracker.cpp:26
 #, kde-format
 msgid "Waiting"
-msgstr "Bekleniyor"
+msgstr "Atendante"
 
 #: jobtracker.cpp:28
 #, kde-format
 msgid "Running"
-msgstr "Çalışıyor"
+msgstr "Kurante"
 
 #: jobtracker.cpp:30 querydebugger.cpp:345
 #, kde-format
 msgid "Ended"
-msgstr "Bitti"
+msgstr "Finis"
 
 #: jobtracker.cpp:32
 #, kde-format
 msgid "Failed: %1"
-msgstr "Başarısız: %1"
+msgstr "Malsukcesis: %1"
 
 #: jobtracker.cpp:34
 #, kde-format
 msgid "Unknown state!"
-msgstr "Bilinmeyen durum!"
+msgstr "Nekonata stato!"
 
 #: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:38
 #, kde-format
 msgid "Job ID"
-msgstr "İş Kimliği"
+msgstr "ID de laboro"
 
 #: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:39
 #, kde-format
 msgid "Created"
-msgstr "Oluşturulma"
+msgstr "Kreita"
 
 #: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:40
 #, kde-format
 msgid "Wait time"
-msgstr "Bekleme süresi"
+msgstr "Atendotempo"
 
 #: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:41
 #, kde-format
 msgid "Job duration"
-msgstr "İş süresi"
+msgstr "Labordaŭro"
 
 #: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:42
 #, kde-format
 msgid "Job Type"
-msgstr "İş Türü"
+msgstr "Tipo de laboro"
 
 #: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:43
 #, kde-format
 msgid "State"
-msgstr "Durum"
+msgstr "Stato"
 
 #: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:44 logging.cpp:60
 #: loggingmodel.cpp:139
 #, kde-format
 msgid "Info"
-msgstr "Bilgi"
+msgstr "Info"
 
 #: jobtrackersearchwidget.cpp:19
 #, kde-format
 msgid "Show Only Errors"
-msgstr "Yalnızca Hataları Göster"
+msgstr "Montri Nur Erarojn"
 
 #: jobtrackersearchwidget.cpp:27
 #, kde-format
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Serĉi..."
 
 #: jobtrackersearchwidget.cpp:37
 #, kde-format
 msgid "All Columns"
-msgstr "Tüm Sütunlar"
+msgstr "Ĉiuj Kolumnoj"
 
 #: jobtrackerwidget.cpp:73
 #, kde-format
 msgid "Save to file..."
-msgstr "Dosyaya kaydet..."
+msgstr "Konservi al dosiero..."
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
 #, kde-format
 msgid "Clear View"
-msgstr "Görünümü Temizle"
+msgstr "Klara Vido"
 
 #: jobtrackerwidget.cpp:107
 #, kde-format
 msgid "Copy Info"
-msgstr "Bilgiyi Kopyala"
+msgstr "Kopii Informon"
 
 #: jobtrackerwidget.cpp:109
 #, kde-format
 msgid "Collapse All"
-msgstr "Tümünü Daralt"
+msgstr "Malvastigi Ĉion"
 
 #: jobtrackerwidget.cpp:110
 #, kde-format
 msgid "Expand All"
-msgstr "Tümünü Genişlet"
+msgstr "Vastigi Ĉion"
 
 #: logging.cpp:44
 #, kde-format
 msgid "Enable"
-msgstr "Etkinleştir"
+msgstr "Ebligi"
 
 #: logging.cpp:56 notificationmonitor.cpp:62
 #, kde-format
 msgid "Types:"
-msgstr "Türler:"
+msgstr "Tipoj:"
 
 #: logging.cpp:59 loggingmodel.cpp:137
 #, kde-format
 msgid "Debug"
-msgstr "Hata Ayıkla"
+msgstr "Sencimigi"
 
 #: logging.cpp:61 loggingmodel.cpp:141
 #, kde-format
 msgid "Warning"
-msgstr "Uyarı"
+msgstr "Averto"
 
 #: logging.cpp:62 loggingmodel.cpp:143
 #, kde-format
 msgid "Critical"
-msgstr "Kritik"
+msgstr "Kritikaj"
 
 #: logging.cpp:63 loggingmodel.cpp:145
 #, kde-format
 msgid "Fatal"
-msgstr "Onulmaz"
+msgstr "Fatala"
 
 #: logging.cpp:64
 #, kde-format
 msgid "Categories:"
-msgstr "Kategoriler:"
+msgstr "Kategorioj:"
 
 #: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:91
 #, kde-format
 msgid "Save to File..."
-msgstr "Dosyaya Kaydet..."
+msgstr "Konservi al Dosiero..."
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
 #, kde-format
 msgid "Error"
-msgstr "Hata"
+msgstr "Eraro"
 
 #: logging.cpp:136 notificationmonitor.cpp:608
 #, kde-format
 msgid "Failed to open file: %1"
-msgstr "Dosya açılamadı: %1"
+msgstr "Malsukcesis malfermi dosieron: %1"
 
 #: loggingmodel.cpp:104
 #, kde-format
 msgid "Time"
-msgstr "Zaman"
+msgstr "Tempo"
 
 #: loggingmodel.cpp:106
 #, kde-format
 msgid "Program"
-msgstr "Program"
+msgstr "Programo"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:208 notificationmonitor.cpp:141
 #: notificationmonitor.cpp:254
 #, kde-format
 msgid "Type"
-msgstr "Tür"
+msgstr "Tipo"
 
 #: loggingmodel.cpp:110
 #, kde-format
 msgid "Category"
-msgstr "Kategori"
+msgstr "Kategorio"
 
 #: loggingmodel.cpp:112
 #, kde-format
 msgid "File"
-msgstr "Dosya"
+msgstr "Dosiero"
 
 #: loggingmodel.cpp:114
 #, kde-format
 msgid "Function"
-msgstr "İşlev"
+msgstr "Funkcio"
 
 #: loggingmodel.cpp:154 loggingmodel.cpp:170
 #, kde-format
@@ -953,117 +954,117 @@ msgstr "%1:%2"
 #: main.cpp:27
 #, kde-format
 msgid "Akonadi Console"
-msgstr "Akonadi Konsolu"
+msgstr "Akonadi Konzolo"
 
 #: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr "Akonadi için Yönetim ve Hata Ayıklama Konsolu"
+msgstr "La Administrado kaj Sencimiga Konzolo por Akonadi"
 
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr "(c) 2006-2023 Akonadi geliştiricileri"
+msgstr "(c) 2006-2023 la Akonadi-programisto"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
 msgid "Author"
-msgstr "Yazar"
+msgstr "Aŭtoro"
 
 #: mainwidget.cpp:48
 #, kde-format
 msgid "Agents"
-msgstr "Aracılar"
+msgstr "Agentoj"
 
 #: mainwidget.cpp:50
 #, kde-format
 msgid "Browser"
-msgstr "Tarayıcı"
+msgstr "Retumilo"
 
 #: mainwidget.cpp:51
 #, kde-format
 msgid "Debugger"
-msgstr "Hata Ayıklayıcı"
+msgstr "Erarserĉilo"
 
 #: mainwidget.cpp:52
 #, kde-format
 msgid "Logging"
-msgstr "Günlükleme"
+msgstr "Enhavo"
 
 #: mainwidget.cpp:53
 #, kde-format
 msgid "DB Browser"
-msgstr "DB Tarayıcısı"
+msgstr "DB Foliumilo"
 
 #: mainwidget.cpp:54
 #, kde-format
 msgid "DB Console"
-msgstr "DB Konsolu"
+msgstr "DB Konzolo"
 
 #: mainwidget.cpp:55
 #, kde-format
 msgid "Query Debugger"
-msgstr "Sorgu Hata Ayıklayıcısı"
+msgstr "Pridemandi Erarserĉilon"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Enable job tracker"
-msgstr "İş izleyiciyi etkinleştir"
+msgstr "Ebligi laborspurilon"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Job Tracker"
-msgstr "İş İzleyici"
+msgstr "Job Tracker"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr "Özkaynak Zamanlayıcı'ların izlenmesini etkinleştir"
+msgstr "Ebligi spuradon de Rimedaj Planiloj"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Resources Schedulers"
-msgstr "Özkaynak Zamanlayıcılar"
+msgstr "Rimedoj Programistoj"
 
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Notification Monitor"
-msgstr "Bildirim Monitörü"
+msgstr "Sciiga Monitoro"
 
 #: mainwidget.cpp:60
 #, kde-format
 msgid "Item Search"
-msgstr "Öge Arama"
+msgstr "Item Serĉo"
 
 #: mainwidget.cpp:62
 #, kde-format
 msgid "Monitors"
-msgstr "Monitörler"
+msgstr "Monitoroj"
 
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr "XML'ye Dök..."
+msgstr "Elĵeti al XML..."
 
 #: mainwidget.cpp:69
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr "Akonadi Önbelleğini Temizle"
+msgstr "Forigi Akonadi-Kaŝmemoron"
 
 #: mainwidget.cpp:73
 #, kde-format
 msgid "Start Server"
-msgstr "Sunucuyu Başlat"
+msgstr "Komenci Servilon"
 
 #: mainwidget.cpp:77
 #, kde-format
 msgid "Stop Server"
-msgstr "Sunucuyu Durdur"
+msgstr "Halti Servilon"
 
 #: mainwidget.cpp:81
 #, kde-format
 msgid "Restart Server"
-msgstr "Sunucuyu Yeniden Başlat"
+msgstr "Rekomenci Servilon"
 
 #: mainwindow.cpp:33
 #, kde-format
@@ -1074,236 +1075,235 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
-"<p>Akonadi Konsolu, tümüyle bir geliştirme aracıdır. Akonadi'nin iç veri "
-"yapılarını görüntülemenize ve değiştirmenize izin verir. Buradaki veriyi, "
-"yalnızca ne yaptığınızı biliyorsanız değiştirmelisiniz, yoksa kişisel bilgi "
-"yönetimi verinizi kaybetme riskiyle karşı karşıya kalabilirsiniz.<br/><b>Ne "
-"yaptığınızı biliyorsanız kullanın!</b></p>"
+"<p>Akonadi Konzolo estas nur evoluilo. Ĝi permesas vin vidi kaj ŝanĝi "
+"internajn datumstrukturojn de Akonadi. Vi devus ŝanĝi datumojn ĉi tie nur se "
+"vi scias, kion vi faras, alie vi riskas damaĝi aŭ perdi viajn personajn "
+"informajn administradajn datumojn.<br/><b>Uzu laŭ via propra risko!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
 msgid "Session/Subscriber"
-msgstr "Oturum/Abone"
+msgstr "Seanco/Abonanto"
 
 #: monitorswidget.cpp:77 notificationmodel.cpp:72 notificationmonitor.cpp:228
 #: notificationmonitor.cpp:484
 #, kde-format
 msgid "Items"
-msgstr "Ögeler"
+msgstr "Eroj"
 
 #: monitorswidget.cpp:80 notificationmonitor.cpp:487
 #, kde-format
 msgid "Collections"
-msgstr "Koleksiyonlar"
+msgstr "Kolektoj"
 
 #: monitorswidget.cpp:86 notificationmonitor.cpp:289
 #: notificationmonitor.cpp:493
 #, kde-format
 msgid "Relations"
-msgstr "İlişkiler"
+msgstr "Rilatoj"
 
 #: monitorswidget.cpp:89
 #, kde-format
 msgid "Subscribers"
-msgstr "Aboneler"
+msgstr "Abonantoj"
 
 #: monitorswidget.cpp:92
 #, kde-format
 msgid "Notification"
-msgstr "Bildirim"
+msgstr "Sciigo"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:566
 #, kde-format
 msgid "List Filter"
-msgstr "Liste Süzgeci"
+msgstr "Listo Filtrilo"
 
 #: monitorswidget.cpp:102 notificationmonitor.cpp:567
 #, kde-format
 msgid "Include Statistics"
-msgstr "İstatistikleri İçer"
+msgstr "Inkluzivi Statistikojn"
 
 #: monitorswidget.cpp:103 notificationmonitor.cpp:199
 #: notificationmonitor.cpp:398 notificationmonitor.cpp:451
 #: notificationmonitor.cpp:568 tagpropertiesdialog.cpp:78
 #, kde-format
 msgid "Resource"
-msgstr "Özkaynak"
+msgstr "Rimedo"
 
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr "İçerik MIME Türleri"
+msgstr "Enhavaj MimeTipoj"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr "Ata Alımı"
+msgstr "Rehavigo de Prapatro"
 
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr "Ata Getirim Kapsamı"
+msgstr "Praulo Fetch Scope"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr "Yalnızca Kimliği Getir"
+msgstr "Akiri nur ID"
 
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr "Alım Hatasını Yok Say"
+msgstr "Ignori Ricev-Eraron"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
 msgid "Values"
-msgstr "Değerler"
+msgstr "Valoroj"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133
 #, kde-format
 msgid "Properties"
-msgstr "Özellikler"
+msgstr "Proprecoj"
 
 #: monitorswidget.cpp:138 notificationmonitor.cpp:475
 #, kde-format
 msgid "Subscriber"
-msgstr "Aboneler"
+msgstr "Abonanto"
 
 #: monitorswidget.cpp:139
 #, kde-format
 msgid "Session ID"
-msgstr "Oturum Kimliği"
+msgstr "ID de seanco"
 
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Collections:"
-msgstr "İzlenen Koleksiyonlar:"
+msgstr "Monitoritaj Kolektoj:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Items:"
-msgstr "İzlenen Ögeler:"
+msgstr "Monitoritaj Eroj:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Tags:"
-msgstr "İzlenen Etiketler:"
+msgstr "Monitoritaj Etikedoj:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Types:"
-msgstr "İzlenen Türler:"
+msgstr "Monitoritaj Tipoj:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr "İzlenen MIME Türleri:"
+msgstr "Monitoritaj Mimo-Tipoj:"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "Monitored Resources:"
-msgstr "İzlenen Özkaynaklar:"
+msgstr "Monitoritaj Rimedoj:"
 
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr "Yok Sayılan Oturumlar:"
+msgstr "Ignoritaj Seancoj:"
 
 #: monitorswidget.cpp:147
 #, kde-format
 msgid "All Monitored:"
-msgstr "Tüm İzlenenler:"
+msgstr "Ĉiuj Monitoritaj:"
 
 #: monitorswidget.cpp:148
 #, kde-format
 msgid "Is Exclusive:"
-msgstr "Özel:"
+msgstr "Estas Ekskluziva:"
 
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr "Öge Getirim Kapsamı"
+msgstr "Item Fetch Scope"
 
 #: monitorswidget.cpp:152
 #, kde-format
 msgid "Payload Parts"
-msgstr "Yük Kısımları"
+msgstr "Utilŝargaj Partoj"
 
 #: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
 msgid "Full Payload"
-msgstr "Tüm Yük"
+msgstr "Plena Utilŝargaĵo"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
 msgid "All Attributes"
-msgstr "Tüm Özkaynaklar"
+msgstr "Ĉiuj Atributoj"
 
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Cache only"
-msgstr "Yalnızca özkaynak"
+msgstr "Nur kaŝmemoro"
 
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr "Yalnızca Önbelleklenmiş Yük Kısımları için Denetle"
+msgstr "Kontroli Nur pri Kaŝmemorigitaj Utilŝargeroj"
 
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr "mtime Getir"
+msgstr "Preni mtime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr "GID Getir"
+msgstr "Preni GID"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr "Alım Hatalarını Yok Say"
+msgstr "Ignori Ricev-Erarojn"
 
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr "Şundan Bu Yana Olan Değişiklikleri Getir"
+msgstr "Preni Ŝanĝon Ekde"
 
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr "RID Getir"
+msgstr "Preni RID"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch Tags"
-msgstr "Etiketleri Getir"
+msgstr "Preni Etikedojn"
 
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr "Koleksiyon Getirim Kapsamı"
+msgstr "Kolekto Fetch Scope"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr "Etiket Getirim Kapsamı"
+msgstr "Tag Fetch Scope"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
 msgid "Tag"
-msgstr "Etiket"
+msgstr "Etikedo"
 
 #: notificationmodel.cpp:78 notificationmonitor.cpp:423
 #, kde-format
 msgid "Relation"
-msgstr "İlişki"
+msgstr "Rilato"
 
 #: notificationmodel.cpp:80
 #, kde-format
 msgid "Subscription"
-msgstr "Abonelik"
+msgstr "Abono"
 
 #: notificationmodel.cpp:88 notificationmodel.cpp:112 notificationmodel.cpp:130
 #: notificationmodel.cpp:142 notificationmodel.cpp:152
@@ -1312,28 +1312,28 @@ msgstr "Abonelik"
 #: notificationmonitor.cpp:462
 #, kde-format
 msgid "Add"
-msgstr "Ekle"
+msgstr "Aldoni"
 
 #: notificationmodel.cpp:92 notificationmodel.cpp:116
 #: notificationmonitor.cpp:173 notificationmonitor.cpp:382
 #, kde-format
 msgid "Move"
-msgstr "Taşı"
+msgstr "Movi"
 
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
 msgid "ModifyFlags"
-msgstr "Bayrakları Değiştir"
+msgstr "ModifiFlagojn"
 
 #: notificationmodel.cpp:102 notificationmonitor.cpp:188
 #, kde-format
 msgid "ModifyTags"
-msgstr "Etiketleri Değiştir"
+msgstr "Modifi Etikedojn"
 
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr "İlişkileri Değiştir"
+msgstr "Modifi Rilatojn"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1341,140 +1341,140 @@ msgstr "İlişkileri Değiştir"
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr "Geçersiz İşlem"
+msgstr "NevalidaOp"
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
 msgid "Subscribe"
-msgstr "Abone Ol"
+msgstr "Aboni"
 
 #: notificationmodel.cpp:122 notificationmonitor.cpp:391
 #, kde-format
 msgid "Unsubscribe"
-msgstr "Abonelikten Çık"
+msgstr "Malaboni"
 
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr "Geçersiz IP"
+msgstr "NevalidaIp"
 
 #: notificationmodel.cpp:162
 #, kde-format
 msgid "Unknown"
-msgstr "Bilinmiyor"
+msgstr "Nekonata"
 
 #: notificationmodel.cpp:210 notificationmonitor.cpp:198
 #: notificationmonitor.cpp:397 notificationmonitor.cpp:422
 #: notificationmonitor.cpp:450 notificationmonitor.cpp:474
 #, kde-format
 msgid "Operation"
-msgstr "İşlem"
+msgstr "Operacio"
 
 #: notificationmodel.cpp:212
 #, kde-format
 msgid "IDs"
-msgstr "Kimlikler"
+msgstr "identigiloj"
 
 #: notificationmodel.cpp:214
 #, kde-format
 msgid "Session"
-msgstr "Oturum"
+msgstr "Seanco"
 
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr "Dinleyenler"
+msgstr "Aŭskultantoj"
 
 #: notificationmonitor.cpp:57
 #, kde-format
 msgid "Enable notification monitor"
-msgstr "Bildirim monitörünü etkinleştir"
+msgstr "Ebligi sciigan monitoron"
 
 #: notificationmonitor.cpp:140
 #, kde-format
 msgid "Timestamp"
-msgstr "Zaman Damgası"
+msgstr "Tempostampo"
 
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
 msgid "Parent Collection"
-msgstr "Üst Koleksiyon"
+msgstr "Gepatra Kolekto"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr "Üst Hedef Sütunu"
+msgstr "Gepatro Dest Col"
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
 msgid "Destination Resource"
-msgstr "Hedef Özkaynak"
+msgstr "Cela Rimedo"
 
 #: notificationmonitor.cpp:203
 #, kde-format
 msgid "Item Parts"
-msgstr "Öge Kısımları"
+msgstr "Item Partoj"
 
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Added Flags"
-msgstr "Eklenen Bayraklar"
+msgstr "Aldonitaj Flagoj"
 
 #: notificationmonitor.cpp:205
 #, kde-format
 msgid "Removed Flags"
-msgstr "Kaldırılan Bayraklar"
+msgstr "Forigitaj Flagoj"
 
 #: notificationmonitor.cpp:206
 #, kde-format
 msgid "Added Tags"
-msgstr "Eklenen Etiketler"
+msgstr "Aldonitaj Etikedoj"
 
 #: notificationmonitor.cpp:207
 #, kde-format
 msgid "Removed Tags"
-msgstr "Kaldırılan Etiketler"
+msgstr "Forigitaj Etikedoj"
 
 #: notificationmonitor.cpp:217
 #, kde-format
 msgid "Removed Relations"
-msgstr "Kaldırılan İlişkiler"
+msgstr "Forigitaj Rilatoj"
 
 #: notificationmonitor.cpp:226
 #, kde-format
 msgid "Must retrieve"
-msgstr "Almalı"
+msgstr "Devas retrovi"
 
 #: notificationmonitor.cpp:240
 #, kde-format
 msgid "id"
-msgstr "kimlik"
+msgstr "id"
 
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr "uzak kimlik"
+msgstr "remoteId"
 
 #: notificationmonitor.cpp:242
 #, kde-format
 msgid "name"
-msgstr "ad"
+msgstr "nomo"
 
 #: notificationmonitor.cpp:244 notificationmonitor.cpp:299
 #: notificationmonitor.cpp:347
 #, kde-format
 msgid "Ancestor"
-msgstr "Ata"
+msgstr "Prapatro"
 
 #: notificationmonitor.cpp:251 notificationmonitor.cpp:333
 #, kde-format
 msgid "ID"
-msgstr "Kimlik"
+msgstr "ID"
 
 #: notificationmonitor.cpp:252 notificationmonitor.cpp:334
 #, kde-format
 msgid "Parent ID"
-msgstr "Üst Kimlik"
+msgstr "Gepatra ID"
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:274
 #, kde-format
@@ -1485,574 +1485,574 @@ msgstr "GID"
 #: notificationmonitor.cpp:429 tagpropertiesdialog.cpp:78
 #, kde-format
 msgid "Remote ID"
-msgstr "Uzak Kimlik"
+msgstr "Fora ID"
 
 #: notificationmonitor.cpp:270
 #, kde-format
 msgid "Revision"
-msgstr "Revizyon"
+msgstr "Revizio"
 
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr "Üst Kimlik"
+msgstr "ParentID"
 
 #: notificationmonitor.cpp:272
 #, kde-format
 msgid "RemoteID"
-msgstr "Uzak Kimlik"
+msgstr "RemoteID"
 
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr "Uzak Revizyon"
+msgstr "RemoteRev"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
 #, kde-format
 msgid "Size"
-msgstr "Boyut"
+msgstr "Grandeco"
 
 #: notificationmonitor.cpp:276
 #, kde-format
 msgid "MimeType"
-msgstr "MIME Türü"
+msgstr "MimeType"
 
 #: notificationmonitor.cpp:277
 #, kde-format
 msgid "MTime"
-msgstr "Değiştirilme Zamanı"
+msgstr "MTime"
 
 #: notificationmonitor.cpp:288
 #, kde-format
 msgid "VRefs"
-msgstr "Sanal Başvurular"
+msgstr "VRefs"
 
 #: notificationmonitor.cpp:305
 #, kde-format
 msgid "Parts"
-msgstr "Kısımlar"
+msgstr "Partoj"
 
 #: notificationmonitor.cpp:312
 #, kde-format
 msgid "External"
-msgstr "Dış"
+msgstr "Ekstera"
 
 #: notificationmonitor.cpp:315
 #, kde-format
 msgid "Internal"
-msgstr "İç"
+msgstr "Interna"
 
 #: notificationmonitor.cpp:318
 #, kde-format
 msgid "Foreign"
-msgstr "Yabancı"
+msgstr "Fremda"
 
 #: notificationmonitor.cpp:322
 #, kde-format
 msgid "Storage Type"
-msgstr "Depolama Türü"
+msgstr "Konserveja Tipo"
 
 #: notificationmonitor.cpp:323
 #, kde-format
 msgid "Version"
-msgstr "Sürüm"
+msgstr "Versio"
 
 #: notificationmonitor.cpp:324
 #, kde-format
 msgid "Data"
-msgstr "Veri"
+msgstr "Datumoj"
 
 #: notificationmonitor.cpp:335
 #, kde-format
 msgid "Name"
-msgstr "Ad"
+msgstr "Nomo"
 
 #: notificationmonitor.cpp:336
 #, kde-format
 msgid "Mime Types"
-msgstr "MIME Türleri"
+msgstr "Mimaj Tipoj"
 
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Remote Revision"
-msgstr "Uzak Revizyon"
+msgstr "Fora Revizio"
 
 #: notificationmonitor.cpp:339
 #, kde-format
 msgid "Statistics"
-msgstr "İstatistikler"
+msgstr "Statistiko"
 
 #: notificationmonitor.cpp:341
 #, kde-format
 msgid "Count"
-msgstr "Sayım"
+msgstr "grafo"
 
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr "Görülmemiş"
+msgstr "Nevidite"
 
 #: notificationmonitor.cpp:345
 #, kde-format
 msgid "Search Query"
-msgstr "Sorgu Ara"
+msgstr "Serĉa Demando"
 
 #: notificationmonitor.cpp:346
 #, kde-format
 msgid "Search Collections"
-msgstr "Koleksiyonları Ara"
+msgstr "Serĉkolektoj"
 
 #: notificationmonitor.cpp:353
 #, kde-format
 msgid "Cache Policy"
-msgstr "Önbellek Politikası"
+msgstr "Kaŝmemorpolitiko"
 
 #: notificationmonitor.cpp:355
 #, kde-format
 msgid "Inherit"
-msgstr "Devral"
+msgstr "Heredi"
 
 #: notificationmonitor.cpp:356
 #, kde-format
 msgid "Check Interval"
-msgstr "Aralığı Denetle"
+msgstr "Kontrola Intervalo"
 
 #: notificationmonitor.cpp:357
 #, kde-format
 msgid "Cache Timeout"
-msgstr "Önbellek Zaman Aşımı"
+msgstr "Cache Timeout"
 
 #: notificationmonitor.cpp:358
 #, kde-format
 msgid "Sync on Demand"
-msgstr "İstenildiğinde Eşzamanla"
+msgstr "Sinkronigi laŭ postulo"
 
 #: notificationmonitor.cpp:359
 #, kde-format
 msgid "Local Parts"
-msgstr "Yerel Kısımlar"
+msgstr "Lokaj Partoj"
 
 #: notificationmonitor.cpp:364 notificationmonitor.cpp:557
 #, kde-format
 msgid "Enabled"
-msgstr "Etkin"
+msgstr "Ebligita"
 
 #: notificationmonitor.cpp:365
 #, kde-format
 msgid "DisplayPref"
-msgstr "GörüntülemeTercihi"
+msgstr "MontriPref"
 
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr "EşzamanlamaTercihi"
+msgstr "SyncPref"
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr "İndekslemeTercihi"
+msgstr "IndeksoPref"
 
 #: notificationmonitor.cpp:368
 #, kde-format
 msgid "Virtual"
-msgstr "Sanal"
+msgstr "Virtuala"
 
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr "Üst Hedef Koleksiyonu"
+msgstr "Parent Dest Kolekto"
 
 #: notificationmonitor.cpp:402
 #, kde-format
 msgid "Changed Parts"
-msgstr "Değiştirilen Kısımlar"
+msgstr "Ŝanĝitaj Partoj"
 
 #: notificationmonitor.cpp:425
 #, kde-format
 msgid "Left ID"
-msgstr "Sol Kimlik"
+msgstr "Maldekstra ID"
 
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr "Sol MIME Türü"
+msgstr "Maldekstre MimeType"
 
 #: notificationmonitor.cpp:427
 #, kde-format
 msgid "Right ID"
-msgstr "Sağ Kimlik"
+msgstr "Ĝusta ID"
 
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr "Sağ MIME Türü"
+msgstr "Ĝuste MimeType"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Monitored Collections"
-msgstr "İzlenen Koleksiyonlar"
+msgstr "Monitoritaj Kolektoj"
 
 #: notificationmonitor.cpp:477
 #, kde-format
 msgid "Monitored Items"
-msgstr "İzlenen Ögeler"
+msgstr "Monitoritaj Eroj"
 
 #: notificationmonitor.cpp:478
 #, kde-format
 msgid "Monitored Tags"
-msgstr "İzlenen Etiketler"
+msgstr "Monitoritaj Etikedoj"
 
 #: notificationmonitor.cpp:496
 #, kde-format
 msgid "Subscriptions"
-msgstr "Abonelikler"
+msgstr "Abonoj"
 
 #: notificationmonitor.cpp:499
 #, kde-format
 msgid "Changes"
-msgstr "Değişiklikler"
+msgstr "Ŝanĝoj"
 
 #: notificationmonitor.cpp:502
 #, kde-format
 msgid "No Type"
-msgstr "Tür Yok"
+msgstr "Neniu Tipo"
 
 #: notificationmonitor.cpp:506
 #, kde-format
 msgid "Monitored Types"
-msgstr "İzlenen Türler"
+msgstr "Monitoritaj Tipoj"
 
 #: notificationmonitor.cpp:507
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr "İzlenen MIME Türleri"
+msgstr "Monitoritaj Mime-Tipoj"
 
 #: notificationmonitor.cpp:508
 #, kde-format
 msgid "Monitored Resources"
-msgstr "İzlenen Özkaynaklar"
+msgstr "Monitoritaj Rimedoj"
 
 #: notificationmonitor.cpp:509
 #, kde-format
 msgid "Ignored Sessions"
-msgstr "Yok Sayılan Oturumlar"
+msgstr "Ignoritaj Seancoj"
 
 #: notificationmonitor.cpp:510
 #, kde-format
 msgid "All Monitored"
-msgstr "Tüm İzlenenler"
+msgstr "Ĉiuj Monitoritaj"
 
 #: notificationmonitor.cpp:511
 #, kde-format
 msgid "Exclusive"
-msgstr "Özel"
+msgstr "Ekskluziva"
 
 #: notificationmonitor.cpp:515
 #, kde-format
 msgid "Requested Parts"
-msgstr "İstenen Kısımlar"
+msgstr "Petitaj Partoj"
 
 #: notificationmonitor.cpp:516
 #, kde-format
 msgid "Changed Since"
-msgstr "Şu Zamandan Bu Yana Değiştirilmiş"
+msgstr "Ŝanĝita Ekde"
 
 #: notificationmonitor.cpp:520
 #, kde-format
 msgid "No Ancestor"
-msgstr "Atası Yok"
+msgstr "Neniu Praulo"
 
 #: notificationmonitor.cpp:523
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr "Üst Ata"
+msgstr "Gepatro Prapatro"
 
 #: notificationmonitor.cpp:526
 #, kde-format
 msgid "All Ancestors"
-msgstr "Tüm Atalar"
+msgstr "Ĉiuj Prapatroj"
 
 #: notificationmonitor.cpp:529
 #, kde-format
 msgid "Ancestor Depth"
-msgstr "Ata Derinliği"
+msgstr "Prapatro Profundo"
 
 #: notificationmonitor.cpp:530
 #, kde-format
 msgid "Cache Only"
-msgstr "Yalnızca Önbellek"
+msgstr "Nur kaŝmemoro"
 
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr "Yalnızca Önbelleklenmiş Yük Kısımlarını Denetle"
+msgstr "Kontroli Nur pri Kaŝmemorigitaj Utilŝargeroj"
 
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr "Boyutu Getir"
+msgstr "Preni Grandecon"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr "Değiştirilme Zamanını Getir"
+msgstr "Preni MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr "Uzak Revizyonu Getir"
+msgstr "Preni Foran Revizion"
 
 #: notificationmonitor.cpp:537
 #, kde-format
 msgid "Ignore Errors"
-msgstr "Hataları Yok Say"
+msgstr "Ignori Erarojn"
 
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr "Bayrakları Getir"
+msgstr "Preni Flagojn"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr "Uzak Kimliği Getir"
+msgstr "Preni RemoteID"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr "İlişkileri Getir"
+msgstr "Preni Rilatojn"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr "Sanal Başvuruları Getir"
+msgstr "Preni VRefs"
 
 #: notificationmonitor.cpp:551
 #, kde-format
 msgid "No Filter"
-msgstr "Süzgeç Yok"
+msgstr "Neniu filtrilo"
 
 #: notificationmonitor.cpp:554
 #, kde-format
 msgid "Display"
-msgstr "Görüntüle"
+msgstr "Montri"
 
 #: notificationmonitor.cpp:560
 #, kde-format
 msgid "Index"
-msgstr "İndeksle"
+msgstr "Indekso"
 
 #: notificationmonitor.cpp:563
 #, kde-format
 msgid "Sync"
-msgstr "Eşzamanla"
+msgstr "Sinkronigi"
 
 #: notificationmonitor.cpp:569
 #, kde-format
 msgid "Content Mime Types"
-msgstr "İçerik MIME Türleri"
+msgstr "Enhavaj Mimaj Tipoj"
 
 #: notificationmonitor.cpp:578
 #, kde-format
 msgid "Parent"
-msgstr "Üst Öge"
+msgstr "Gepatro"
 
 #: notificationmonitor.cpp:581
 #, kde-format
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Neniu"
 
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr "Yalnızca Ata Kimlik Getir"
+msgstr "Praulo Fetch Nur ID"
 
 #: notificationmonitor.cpp:586
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr "Ata Öznitelikler"
+msgstr "Prapatro-Atributoj"
 
 #: notificationmonitor.cpp:594
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr "Tüm Öznitelikleri Getir"
+msgstr "Preni Ĉiujn Atributojn"
 
 #: querydebugger.cpp:341
 #, kde-format
 msgid "Name / Query"
-msgstr "Ad/Sorgu"
+msgstr "Nomo / Demando"
 
 #: querydebugger.cpp:343
 #, kde-format
 msgid "Started"
-msgstr "Başlangıç"
+msgstr "Komencis"
 
 #: querydebugger.cpp:347
 #, kde-format
 msgid "Duration"
-msgstr "Süre"
+msgstr "Daŭro"
 
 #: querydebugger.cpp:525
 #, kde-format
 msgid "Query"
-msgstr "Sorgu"
+msgstr "Demando"
 
 #: querydebugger.cpp:527
 #, kde-format
 msgid "Duration [ms]"
-msgstr "Süre [ms]"
+msgstr "Daŭro [ms]"
 
 #: querydebugger.cpp:529
 #, kde-format
 msgid "Calls"
-msgstr "Çağrılar"
+msgstr "Vokoj"
 
 #: querydebugger.cpp:531
 #, kde-format
 msgid "Avg. Duration [ms]"
-msgstr "Ortalama Süre [ms]"
+msgstr "Avg. Daŭro [ms]"
 
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr "Etkilenen Satırlar:"
+msgstr "Trafitaj Vicoj:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr "Sorgu hata ayıklamasını etkinleştir (sunucuyu yavaşlatır!)"
+msgstr "Ebligi demandan sencimigon (malrapidigas servilon!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr "Sorgu Sıralaması"
+msgstr "Demanda Sekvenco"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr "Sorgu Ağacı"
+msgstr "Demanda Arbo"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
 #, kde-format
 msgid "Save To File"
-msgstr "Dosyaya Kaydet"
+msgstr "Konservi al Dosiero"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr "Sorgu Görünümü"
+msgstr "Demanda Vido"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr "Sorgu:"
+msgstr "Demando:"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
 #, kde-format
 msgid "TextLabel"
-msgstr "MetinEtiketi"
+msgstr "TextLabel"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60
 #, kde-format
 msgid "Results:"
-msgstr "Sonuçlar:"
+msgstr "Rezulto:"
 
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr "Depoyu ara:"
+msgstr "Serĉa konservejo:"
 
 #: searchwidget.cpp:54 searchwidget.cpp:164
 #, kde-format
 msgid "Search"
-msgstr "Ara"
+msgstr "Serĉi"
 
 #: searchwidget.cpp:62
 #, kde-format
 msgid "Search query:"
-msgstr "Arama sorgusu:"
+msgstr "Serĉdemando:"
 
 #: searchwidget.cpp:71
 #, kde-format
 msgid "Results (Documents):"
-msgstr "Sonuçlar (Belgeler):"
+msgstr "Rezultoj (Dokumentoj):"
 
 #: searchwidget.cpp:81
 #, kde-format
 msgid "Document:"
-msgstr "Belge:"
+msgstr "Dokumento:"
 
 #: searchwidget.cpp:91
 #, kde-format
 msgid "Item:"
-msgstr "Öge:"
+msgstr "Ero:"
 
 #: searchwidget.cpp:147
 #, kde-format
 msgid "Xapian error"
-msgstr "Xapian hatası"
+msgstr "Xapia eraro"
 
 #: searchwidget.cpp:153
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr "Bir Xapian veritabanı açık değil"
+msgstr "Neniu Xapian datumbazo estas malfermita"
 
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr "Öge bulunamadı."
+msgstr "Neniu elemento trovita."
 
 #: searchwidget.cpp:190
 #, kde-format
 msgid "Term/Value"
-msgstr "Terim/Değer"
+msgstr "Termino/Valoro"
 
 #: searchwidget.cpp:190
 #, kde-format
 msgid "WDF/Slot"
-msgstr "WDF/Yuva"
+msgstr "WDF/Slot"
 
 #: searchwidget.cpp:192
 #, kde-format
 msgid "Terms"
-msgstr "Terimler"
+msgstr "Kondiĉoj"
 
 #: searchwidget.cpp:219
 #, kde-format
 msgid "Error on fetching item"
-msgstr "Öge getirilirken hata"
+msgstr "Eraro dum alporto de objekto"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
 #, kde-format
 msgid "General"
-msgstr "Genel"
+msgstr "Ĝenerala"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr "Üst Etiket Kimliği:"
+msgstr "Gepa Etikedo Id:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
 #: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
 #, kde-format
 msgid "&Remove"
-msgstr "&Kaldır"
+msgstr "Fo&rigi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr "Uzak Tanımlayıcılar"
+msgstr "Foraj Identigiloj"
