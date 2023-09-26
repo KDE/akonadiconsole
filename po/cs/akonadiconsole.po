@@ -44,11 +44,10 @@ msgid "Apply Configuration"
 msgstr ""
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr "Uložit nastavení"
+msgstr ""
 
 #: agentwidget.cpp:93
 #, kde-format
@@ -110,18 +109,16 @@ msgid "Multiple Agent Deletion"
 msgstr "Smazání více agentů"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr "Zdroj"
+msgstr ""
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Notification"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr "Upozornění"
+msgstr ""
 
 #: agentwidget.cpp:344
 #, kde-format
@@ -385,25 +382,22 @@ msgid "&Delete tag..."
 msgstr "O&dstranit značku..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "Add Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Přidat značku"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add Subtag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Přidat podznačku"
+msgstr ""
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify Tag"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Upravit značku"
+msgstr ""
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -746,18 +740,16 @@ msgid "Connect"
 msgstr "Připojit se"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Akonadi Console"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr "Konzole Akonadi"
+msgstr ""
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr "Konzole Akonadi"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
