@@ -23,8 +23,8 @@ public:
     explicit TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *parent = nullptr);
     ~TagPropertiesDialog() override;
 
-    Q_REQUIRED_RESULT Akonadi::Tag tag() const;
-    Q_REQUIRED_RESULT bool changed() const;
+    [[nodiscard]] Akonadi::Tag tag() const;
+    [[nodiscard]] bool changed() const;
 
 protected:
     void slotAccept();

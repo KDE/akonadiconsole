@@ -29,7 +29,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT int rowForParentId(int parentid) const
+    [[nodiscard]] int rowForParentId(int parentid) const
     {
         const int grandparentid = tracker.parentId(parentid);
         int row = -1;

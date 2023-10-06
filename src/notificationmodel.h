@@ -47,7 +47,7 @@ public:
 
     Akonadi::Protocol::ChangeNotificationPtr notification(const QModelIndex &index) const;
 
-    Q_REQUIRED_RESULT bool isEnabled() const
+    [[nodiscard]] bool isEnabled() const
     {
         return m_monitor;
     }
