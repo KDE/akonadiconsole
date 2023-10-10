@@ -361,7 +361,7 @@ msgstr "No s'han pogut guardar els canvis: %1"
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr "Seleccioneu un fitxer XML"
+msgstr "Seleccioneu un fitxer en XML"
 
 #: browserwidget.cpp:549
 #, kde-format
