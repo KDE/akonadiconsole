@@ -111,8 +111,8 @@ ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
-configure_file(akonadiconsole-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/akonadiconsole-version.h @ONLY)
-configure_file(config-akonadiconsole.h.cmake ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
+configure_file(akonadiconsole-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/akonadiconsole-version.h @ONLY)
+configure_file(config-akonadiconsole.h.in ${CMAKE_BINARY_DIR}/config-akonadiconsole.h)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
