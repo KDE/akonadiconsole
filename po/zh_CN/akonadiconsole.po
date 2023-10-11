@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-24 01:44+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/akonadiconsole/akonadiconsole.pot\n"
-"X-Crowdin-File-ID: 41775\n"
+"X-Crowdin-File: /kf6-trunk/messages/akonadiconsole/akonadiconsole.pot\n"
+"X-Crowdin-File-ID: 45233\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,8 +44,7 @@ msgid "Apply Configuration"
 msgstr "应用配置"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "代理配置"
@@ -108,15 +107,13 @@ msgid "Multiple Agent Deletion"
 msgstr "删除多项代理"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "资源任务列表"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "更改通知日志"
@@ -383,25 +380,22 @@ msgid "&Delete tag..."
 msgstr "删除标签(&D)"
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "添加标签(&A)"
+msgstr ""
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "添加子标签(&s)"
+msgstr ""
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "ModifyTags"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "修改标签"
+msgstr ""
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -746,15 +740,13 @@ msgid "Connect"
 msgstr "连接"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "远程 Akonadi 控制台 (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console (Instance: %1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
 msgstr "Akonadi 控制台 (实例：%1)"
@@ -2058,6 +2050,3 @@ msgstr ""
 #, kde-format
 msgid "Remote Identifiers"
 msgstr ""
-
-#~ msgid "Full Paryload"
-#~ msgstr "全副加载"
