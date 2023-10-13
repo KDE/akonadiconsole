@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-05-28 15:26+0200\n"
+"PO-Revision-Date: 2023-10-11 16:50+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -343,7 +343,7 @@ msgstr "Agenda / Tâches"
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr "Récupération du cache uniquement"
+msgstr "Extraction du cache uniquement"
 
 #: browserwidget.cpp:472
 #, kde-format
@@ -726,7 +726,7 @@ msgstr "Enregistrer les messages filtrés..."
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr "Enregistrer tous les messages ..."
+msgstr "Enregistrer tous les messages..."
 
 #: instanceselector.cpp:44
 #, kde-format
@@ -1129,7 +1129,7 @@ msgstr "Types « MIME » des contenus"
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr "Récupération des prédécesseurs"
+msgstr "Extraction des prédécesseurs"
 
 #: monitorswidget.cpp:109
 #, kde-format
@@ -1145,7 +1145,7 @@ msgstr "Rechercher uniquement un ID"
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr "Ignorer l'erreur de récupération"
+msgstr "Ignorer l'erreur d'extraction"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
 #, kde-format
@@ -1250,12 +1250,12 @@ msgstr "Rechercher le paramètre « mtime »"
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr "Rechercher un  «GID »"
+msgstr "Rechercher un « GID »"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr "Ignorer les erreurs de récupération"
+msgstr "Ignorer les erreurs d'extraction"
 
 #: monitorswidget.cpp:162
 #, kde-format
@@ -1265,7 +1265,7 @@ msgstr "Rechercher des modifications depuis"
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr "Rechercher un  «GID »"
+msgstr "Rechercher un « GID »"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
@@ -1798,7 +1798,7 @@ msgstr "Rechercher le paramètre « mtime »"
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr "Récupérer la révision distante"
+msgstr "Rechercher la révision distante"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -2027,7 +2027,7 @@ msgstr "Termes"
 #: searchwidget.cpp:219
 #, kde-format
 msgid "Error on fetching item"
-msgstr "Erreur de récupération d'un élément"
+msgstr "Erreur d'extraction d'un élément"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
