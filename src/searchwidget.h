@@ -43,6 +43,7 @@ private Q_SLOTS:
 
 private:
     void xapianError(const Xapian::Error &e);
+    void closeDataBase();
 
     KComboBox *mStoreCombo = nullptr;
     QTextBrowser *mItemView = nullptr;

@@ -118,6 +118,15 @@ SearchWidget::~SearchWidget()
     KConfigGroup config(KSharedConfig::openConfig(), "SearchWidget");
     config.writeEntry("query", mQueryWidget->toPlainText());
     config.sync();
+    closeDataBase();
+}
+
+void SearchWidget::closeDataBase()
+{
+    if (mDatabase) {
+        mDatabase->close();
+        delete mDatabase;
+    }
 }
 
 void SearchWidget::openStore(int idx)
@@ -126,10 +135,7 @@ void SearchWidget::openStore(int idx)
     auto xapianStore = store.objectCast<Akonadi::Search::XapianSearchStore>();
     Q_ASSERT(xapianStore);
 
-    if (mDatabase) {
-        mDatabase->close();
-        delete mDatabase;
-    }
+    closeDataBase();
 
     try {
         qCDebug(AKONADICONSOLE_LOG) << "Opening store" << xapianStore->dbPath();
