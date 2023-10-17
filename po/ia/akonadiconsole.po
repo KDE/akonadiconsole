@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# giovanni <g.sora@tiscali.it>, 2023.
+# SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-07-06 11:55+0200\n"
+"PO-Revision-Date: 2023-10-16 11:50+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -611,6 +611,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>Nota:</b>Iste valores es fornite per le retro-admiistration corrspondente "
+"e non es intendite per esser cambiate per te, assi que tu es avisate si "
+"alcun cosa se rumpe quando los cambia nonobstante!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -749,6 +752,8 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"Il ha multiple instantias de Akondi executante in le actual session de D-"
+"Bus. Pro favor tu selige le instantia al qual tu vole connecter."
 
 #: jobtracker.cpp:26
 #, kde-format
@@ -1005,12 +1010,12 @@ msgstr "Traciator de carga"
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "Habilita traciar de Planificatores de Ressources"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Resources Schedulers"
-msgstr ""
+msgstr "Planificators de Resource"
 
 #: mainwidget.cpp:58
 #, kde-format
@@ -1061,6 +1066,11 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Akonadi Console es solmente un instrumento de disveloppanemto. Il te "
+"permitte vide e cambiar structuras de datos interne de Akonadi.  Tu deberea "
+"solmente cambiar datos hic si tu sape lo que tu es facente, alteremente tu "
+"risca damnificar o perder tu datos de gestion de information personal.<br/> "
+"<b>Usa a tu proprie risco!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
@@ -1124,13 +1134,13 @@ msgstr "Recuperation de Ancestre"
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Ancestor Fetch Scope (scopo de cerca de ancestre)"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "Trova solmnte ID"
 
 #: monitorswidget.cpp:116
 #, kde-format
@@ -1205,7 +1215,7 @@ msgstr "Es Exclusive"
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Item Fetch Scope (scopo de cerca de elemento)"
 
 #: monitorswidget.cpp:152
 #, kde-format
@@ -1230,17 +1240,17 @@ msgstr "Solmente in cache"
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "Verifica solmente per partes de carga utile ponite in cache"
 
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "Trova mtime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr ""
+msgstr "Trova GID"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
@@ -1250,27 +1260,27 @@ msgstr "Ignora Errores de Recuperation"
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Cerca modifica da"
 
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr ""
+msgstr "Trova RID"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch Tags"
-msgstr ""
+msgstr "Trova etiquettas"
 
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Collection Fetch Scope (Scopo de cerca de collection)"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Tag Fetch Scope (Scopo de cerca de etiquetta)"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
 #, kde-format
@@ -1305,17 +1315,17 @@ msgstr "Move"
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "ModifyFlags(Modifica Bandieras)"
 
 #: notificationmodel.cpp:102 notificationmonitor.cpp:188
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "ModifyTags (ModificaEtiquetta)"
 
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr ""
+msgstr "ModifyRelations (ModificaRelationes)"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1323,7 +1333,7 @@ msgstr ""
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr ""
+msgstr "InvalidOp(OpInvalide)"
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
 #, kde-format
@@ -1338,7 +1348,7 @@ msgstr "De-subscribe"
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "InvalidIp(IpInvalide)"
 
 #: notificationmodel.cpp:162
 #, kde-format
@@ -1487,7 +1497,7 @@ msgstr "IDRemote"
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "RemoteRev"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
@@ -1503,12 +1513,12 @@ msgstr "Typo Mime"
 #: notificationmonitor.cpp:277
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "MTime"
 
 #: notificationmonitor.cpp:288
 #, kde-format
 msgid "VRefs"
-msgstr ""
+msgstr "VRefs"
 
 #: notificationmonitor.cpp:305
 #, kde-format
@@ -1608,7 +1618,7 @@ msgstr "Tempore limite de cache"
 #: notificationmonitor.cpp:358
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "Syc sur demanda"
 
 #: notificationmonitor.cpp:359
 #, kde-format
@@ -1623,17 +1633,17 @@ msgstr "Habilitate"
 #: notificationmonitor.cpp:365
 #, kde-format
 msgid "DisplayPref"
-msgstr ""
+msgstr "DisplayPref"
 
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr ""
+msgstr "SyncPref"
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr ""
+msgstr "IndexPref"
 
 #: notificationmonitor.cpp:368
 #, kde-format
@@ -1643,7 +1653,7 @@ msgstr "Virtual"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Collection de Des de Genitor"
 
 #: notificationmonitor.cpp:402
 #, kde-format
@@ -1768,7 +1778,7 @@ msgstr "Solmente in cache"
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "Verifica solmente per partes de carga utile ponite in cache"
 
 #: notificationmonitor.cpp:532
 #, kde-format
@@ -1778,17 +1788,17 @@ msgstr "Cargo utile plen"
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "Trova Grandor"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "Trova MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Trova Revision Remote"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -1798,22 +1808,22 @@ msgstr "Ignora errores"
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "Trova Flags (bandieras)"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "Trova IDRemote"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "Trova Relationes"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "Trova Vrefs"
 
 #: notificationmonitor.cpp:551
 #, kde-format
@@ -1853,7 +1863,7 @@ msgstr "Necun"
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Solmente trova ID de Ancestre"
 
 #: notificationmonitor.cpp:586
 #, kde-format
@@ -1863,7 +1873,7 @@ msgstr "Attributos de Ancestres"
 #: notificationmonitor.cpp:594
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "Trova omne attributos"
 
 #: querydebugger.cpp:341
 #, kde-format
@@ -1909,19 +1919,19 @@ msgstr "Rangos Influentiate:"
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Habilita debug de query (il relenta le servitor!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "Sequentia de Query"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "Arbore de Query"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
@@ -1933,7 +1943,7 @@ msgstr "Salveguarda a File"
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr ""
+msgstr "Vista de Query"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
@@ -1957,7 +1967,7 @@ msgstr "Resultatos:"
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr ""
+msgstr "Magazin de cerca:"
 
 #: searchwidget.cpp:54 searchwidget.cpp:164
 #, kde-format
@@ -1972,7 +1982,7 @@ msgstr "Requesta a cercar:"
 #: searchwidget.cpp:71
 #, kde-format
 msgid "Results (Documents):"
-msgstr ""
+msgstr "Resultatos (Documentos):"
 
 #: searchwidget.cpp:81
 #, kde-format
@@ -1987,17 +1997,17 @@ msgstr "Elemento:"
 #: searchwidget.cpp:147
 #, kde-format
 msgid "Xapian error"
-msgstr ""
+msgstr "Error de Xapian"
 
 #: searchwidget.cpp:153
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "Nulle base de datos de Xapian es aperite"
 
 #: searchwidget.cpp:164
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "Necun elemento trovate"
 
 #: searchwidget.cpp:190
 #, kde-format
@@ -2007,7 +2017,7 @@ msgstr "Termin/Valor"
 #: searchwidget.cpp:190
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/Slot"
 
 #: searchwidget.cpp:192
 #, kde-format
