@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:44+0000\n"
+"POT-Creation-Date: 2023-10-17 01:39+0000\n"
 "PO-Revision-Date: 2023-10-08 22:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -902,7 +902,7 @@ msgstr "분류:"
 msgid "Save to File..."
 msgstr "파일로 저장..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
 #, kde-format
 msgid "Error"
 msgstr "오류"
@@ -1152,7 +1152,7 @@ msgstr "ID만 가져오기"
 msgid "Ignore Retrieval Error"
 msgstr "가져오기 오류 무시"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
 #, kde-format
 msgid "Values"
 msgstr "값"
@@ -1969,7 +1969,7 @@ msgstr "결과:"
 msgid "Search store:"
 msgstr "검색 저장소:"
 
-#: searchwidget.cpp:54 searchwidget.cpp:164
+#: searchwidget.cpp:54 searchwidget.cpp:170
 #, kde-format
 msgid "Search"
 msgstr "검색"
@@ -1994,37 +1994,37 @@ msgstr "문서:"
 msgid "Item:"
 msgstr "항목:"
 
-#: searchwidget.cpp:147
+#: searchwidget.cpp:153
 #, kde-format
 msgid "Xapian error"
 msgstr "Xapian 오류"
 
-#: searchwidget.cpp:153
+#: searchwidget.cpp:159
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Xapian 데이터베이스를 열지 않았음"
 
-#: searchwidget.cpp:164
+#: searchwidget.cpp:170
 #, kde-format
 msgid "No element found."
 msgstr "원소를 찾을 수 없습니다."
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "Term/Value"
 msgstr "용어/값"
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
 msgstr "WDF/슬롯"
 
-#: searchwidget.cpp:192
+#: searchwidget.cpp:198
 #, kde-format
 msgid "Terms"
 msgstr "용어"
 
-#: searchwidget.cpp:219
+#: searchwidget.cpp:225
 #, kde-format
 msgid "Error on fetching item"
 msgstr "항목을 가져오는 중 오류 발생"

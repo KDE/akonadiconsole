@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:44+0000\n"
+"POT-Creation-Date: 2023-10-17 01:39+0000\n"
 "PO-Revision-Date: 2023-05-27 13:06+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -912,7 +912,7 @@ msgstr "Categories:"
 msgid "Save to File..."
 msgstr "Save to File..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
 #, kde-format
 msgid "Error"
 msgstr "Error"
@@ -1163,7 +1163,7 @@ msgstr "Fetch ID Only"
 msgid "Ignore Retrieval Error"
 msgstr "Ignore Retrieval Error"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
 #, kde-format
 msgid "Values"
 msgstr "Values"
@@ -1980,7 +1980,7 @@ msgstr "Results:"
 msgid "Search store:"
 msgstr "Search store:"
 
-#: searchwidget.cpp:54 searchwidget.cpp:164
+#: searchwidget.cpp:54 searchwidget.cpp:170
 #, kde-format
 msgid "Search"
 msgstr "Search"
@@ -2005,37 +2005,37 @@ msgstr "Document:"
 msgid "Item:"
 msgstr "Item:"
 
-#: searchwidget.cpp:147
+#: searchwidget.cpp:153
 #, kde-format
 msgid "Xapian error"
 msgstr "Xapian error"
 
-#: searchwidget.cpp:153
+#: searchwidget.cpp:159
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "No Xapian database is opened"
 
-#: searchwidget.cpp:164
+#: searchwidget.cpp:170
 #, kde-format
 msgid "No element found."
 msgstr "No element found."
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "Term/Value"
 msgstr "Term/Value"
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
 msgstr "WDF/Slot"
 
-#: searchwidget.cpp:192
+#: searchwidget.cpp:198
 #, kde-format
 msgid "Terms"
 msgstr "Terms"
 
-#: searchwidget.cpp:219
+#: searchwidget.cpp:225
 #, kde-format
 msgid "Error on fetching item"
 msgstr "Error on fetching item"

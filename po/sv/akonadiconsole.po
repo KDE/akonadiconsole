@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:44+0000\n"
+"POT-Creation-Date: 2023-10-17 01:39+0000\n"
 "PO-Revision-Date: 2023-08-04 13:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -912,7 +912,7 @@ msgstr "Kategorier:"
 msgid "Save to File..."
 msgstr "Spara till fil..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
 #, kde-format
 msgid "Error"
 msgstr "Fel"
@@ -1162,7 +1162,7 @@ msgstr "Hämta bara identifierare"
 msgid "Ignore Retrieval Error"
 msgstr "Ignorera hämtningsfel"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
 #, kde-format
 msgid "Values"
 msgstr "Värden"
@@ -1979,7 +1979,7 @@ msgstr "Resultat:"
 msgid "Search store:"
 msgstr "Sök butik:"
 
-#: searchwidget.cpp:54 searchwidget.cpp:164
+#: searchwidget.cpp:54 searchwidget.cpp:170
 #, kde-format
 msgid "Search"
 msgstr "Sök"
@@ -2004,37 +2004,37 @@ msgstr "Dokument:"
 msgid "Item:"
 msgstr "Objekt:"
 
-#: searchwidget.cpp:147
+#: searchwidget.cpp:153
 #, kde-format
 msgid "Xapian error"
 msgstr "Xapian-fel"
 
-#: searchwidget.cpp:153
+#: searchwidget.cpp:159
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "ingen Xapian-databas är öppnad"
 
-#: searchwidget.cpp:164
+#: searchwidget.cpp:170
 #, kde-format
 msgid "No element found."
 msgstr "Inget element hittades."
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "Term/Value"
 msgstr "Term/Värde"
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
 msgstr "WDF/Slot"
 
-#: searchwidget.cpp:192
+#: searchwidget.cpp:198
 #, kde-format
 msgid "Terms"
 msgstr "Termer"
 
-#: searchwidget.cpp:219
+#: searchwidget.cpp:225
 #, kde-format
 msgid "Error on fetching item"
 msgstr "Fel när objekt skulle hämtas"

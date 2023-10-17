@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-24 01:44+0000\n"
+"POT-Creation-Date: 2023-10-17 01:39+0000\n"
 "PO-Revision-Date: 2023-10-11 16:50+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -903,7 +903,7 @@ msgstr "Catégories :"
 msgid "Save to File..."
 msgstr "Enregistrer dans un fichier..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:153
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
 #, kde-format
 msgid "Error"
 msgstr "Erreur"
@@ -1155,7 +1155,7 @@ msgstr "Rechercher uniquement un ID"
 msgid "Ignore Retrieval Error"
 msgstr "Ignorer l'erreur d'extraction"
 
-#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:198
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
 #, kde-format
 msgid "Values"
 msgstr "Valeurs"
@@ -1972,7 +1972,7 @@ msgstr "Résultats :"
 msgid "Search store:"
 msgstr "Boutique de recherche :"
 
-#: searchwidget.cpp:54 searchwidget.cpp:164
+#: searchwidget.cpp:54 searchwidget.cpp:170
 #, kde-format
 msgid "Search"
 msgstr "Rechercher"
@@ -1997,37 +1997,37 @@ msgstr "Document :"
 msgid "Item:"
 msgstr "Élément :"
 
-#: searchwidget.cpp:147
+#: searchwidget.cpp:153
 #, kde-format
 msgid "Xapian error"
 msgstr "Erreur « Xapian »"
 
-#: searchwidget.cpp:153
+#: searchwidget.cpp:159
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Aucune base de données « Xapian » n'est ouverte."
 
-#: searchwidget.cpp:164
+#: searchwidget.cpp:170
 #, kde-format
 msgid "No element found."
 msgstr "Aucun élément trouvé."
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "Term/Value"
 msgstr "Terme / Valeur"
 
-#: searchwidget.cpp:190
+#: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
 msgstr "WDF / Créneau"
 
-#: searchwidget.cpp:192
+#: searchwidget.cpp:198
 #, kde-format
 msgid "Terms"
 msgstr "Termes"
 
-#: searchwidget.cpp:219
+#: searchwidget.cpp:225
 #, kde-format
 msgid "Error on fetching item"
 msgstr "Erreur d'extraction d'un élément"
