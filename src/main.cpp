@@ -22,7 +22,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("akonadiconsole");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("akonadiconsole"));
     KAboutData aboutData(QStringLiteral("akonadiconsole"),
                          i18n("Akonadi Console"),
                          QStringLiteral(KDEPIM_VERSION),
