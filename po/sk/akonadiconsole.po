@@ -1,18 +1,19 @@
 # translation of akonadiconsole.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2023.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:39+0000\n"
-"PO-Revision-Date: 2023-03-12 08:58+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2023-11-04 08:35+0100\n"
+"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -28,7 +29,7 @@ msgstr "wizzardsk@gmail.com"
 #: agentconfigdialog.cpp:33
 #, kde-format
 msgid "Save Configuration"
-msgstr ""
+msgstr "Uložiť nastavenie"
 
 #. i18n: ectx: property (text), widget (QPushButton, refreshButton)
 #: agentconfigdialog.cpp:34 dbbrowser.ui:28
@@ -39,14 +40,13 @@ msgstr "Obnoviť"
 #: agentconfigdialog.cpp:35
 #, kde-format
 msgid "Apply Configuration"
-msgstr ""
+msgstr "Použiť nastavenie"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Not Configured"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr "Nenastavené"
+msgstr "Nastavenie agenta"
 
 #: agentwidget.cpp:93
 #, kde-format
@@ -56,12 +56,12 @@ msgstr "Nastaviť"
 #: agentwidget.cpp:94
 #, kde-format
 msgid "Configure Natively..."
-msgstr ""
+msgstr "Nastaviť natívne..."
 
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Remotely..."
-msgstr ""
+msgstr "Nastaviť vzdialene..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:101 agentwidget.ui:240
@@ -72,22 +72,22 @@ msgstr "Synchronizovať"
 #: agentwidget.cpp:102
 #, kde-format
 msgid "Synchronize All"
-msgstr ""
+msgstr "Synchronizovať všetko"
 
 #: agentwidget.cpp:103
 #, kde-format
 msgid "Synchronize Collection Tree"
-msgstr ""
+msgstr "Synchronizovať strom kolekcií"
 
 #: agentwidget.cpp:104
 #, kde-format
 msgid "Synchronize Tags"
-msgstr ""
+msgstr "Synchronizovať značky"
 
 #: agentwidget.cpp:110
 #, kde-format
 msgid "Synchronize Relations"
-msgstr ""
+msgstr "Synchronizovať vzťahy"
 
 #: agentwidget.cpp:199
 #, kde-format
@@ -100,30 +100,29 @@ msgstr[2] "Naozaj chcete vymazať týchto %1 inštancií agenta?"
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Agent Deletion"
-msgstr ""
+msgstr "Vymazanie agenta"
 
 #: agentwidget.cpp:200
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr ""
+msgstr "Vymazanie viacerých agentov"
 
 #: agentwidget.cpp:270
-#, fuzzy, kde-format
-#| msgid "Resource"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr "Zdroj"
+msgstr "Zoznam úloh zdrojov"
 
 #: agentwidget.cpp:294
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr "Upozornenie"
+msgstr "Záznam oznámení zmien"
 
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "Klonovanie agenta zlyhalo: %1."
 
 #: agentwidget.cpp:407
 #, kde-format
@@ -141,9 +140,9 @@ msgid "Idle"
 msgstr "Nečinný"
 
 #: agentwidget.cpp:414
-#, fuzzy, kde-format
+#, kde-format
 msgid "Running (%1%)"
-msgstr "Beží"
+msgstr "Bežiaci (%1%)"
 
 #: agentwidget.cpp:417
 #, kde-format
@@ -160,47 +159,47 @@ msgstr "Nenastavené"
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr ""
+msgstr "Pridať agenta..."
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Clone Agent"
-msgstr ""
+msgstr "Klonovať agenta"
 
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Abort Activity"
-msgstr ""
+msgstr "Prerušiť aktivitu"
 
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Restart Agent"
-msgstr ""
+msgstr "Reštartovať agenta"
 
 #: agentwidget.cpp:448
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "Prepnúť Online/Offline"
 
 #: agentwidget.cpp:449
 #, kde-format
 msgid "Show task list"
-msgstr ""
+msgstr "Zobraziť zoznam úloh"
 
 #: agentwidget.cpp:450
 #, kde-format
 msgid "Show change-notification log"
-msgstr ""
+msgstr "Zobraziť záznam oznámení zmien"
 
 #: agentwidget.cpp:452
 #, kde-format
 msgid "Remove Agent"
-msgstr ""
+msgstr "Odstrániť agenta"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
@@ -344,22 +343,22 @@ msgstr "Kontakty"
 #: browserwidget.cpp:180
 #, kde-format
 msgid "Calendar/Tasks"
-msgstr ""
+msgstr "Kalendár/Úlohy"
 
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr ""
+msgstr "Uložiť do vyrovnávacej pamäte iba získavanie"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr ""
+msgstr "Zlyhalo uloženie zmien: %1"
 
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr ""
+msgstr "Vybrať XML súbor"
 
 #: browserwidget.cpp:549
 #, kde-format
@@ -369,7 +368,7 @@ msgstr "Pridať značku..."
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr ""
+msgstr "Pridať podznačku..."
 
 #: browserwidget.cpp:553
 #, kde-format
@@ -382,34 +381,32 @@ msgid "&Delete tag..."
 msgstr "Odstrániť značku..."
 
 #: browserwidget.cpp:572
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "Pridané štítky: "
+msgstr "Pridať značku"
 
 #: browserwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "&Add tag..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Pridať značku..."
+msgstr "Pridať podznačku"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
-#, fuzzy, kde-format
-#| msgid "Modify"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Zmeniť"
+msgstr "Zmeniť značku"
 
 #: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "Naozaj chcete odstrániť vybranú značku?"
 
 #: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
-msgstr "Odstrániť značku?"
+msgstr "Vymazať značku?"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
 #: browserwidget_contentview.ui:30
@@ -421,13 +418,13 @@ msgstr "&Uložiť"
 #: browserwidget_contentview.ui:41
 #, kde-format
 msgid "Payload"
-msgstr ""
+msgstr "Dátový obsah"
 
 #. i18n: ectx: property (text), widget (QLabel, unsupportedType)
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr ""
+msgstr "Nepodporovaný typ"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -468,7 +465,7 @@ msgstr "Vymazať"
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr ""
+msgstr "Nespracovaný dátový obsah"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
@@ -490,7 +487,7 @@ msgstr "Unikátne ID:"
 #: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
 #, kde-format
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: browserwidget_contentview.ui:202
@@ -533,7 +530,7 @@ msgstr "Typ MIME:"
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr ""
+msgstr "neplatné/neplatné"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -567,7 +564,7 @@ msgstr "ACL"
 #: collectionaclpage.ui:17
 #, kde-format
 msgid "Item Access Rights"
-msgstr ""
+msgstr "Prístupové práva položky"
 
 #. i18n: ectx: property (text), widget (QCheckBox, createItem)
 #. i18n: ectx: property (text), widget (QCheckBox, createCollection)
@@ -598,19 +595,19 @@ msgstr "Vymazať"
 #: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
 #, kde-format
 msgid "Link"
-msgstr "Odkaz"
+msgstr "Prepojiť"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:98 notificationmonitor.cpp:182
 #, kde-format
 msgid "Unlink"
-msgstr ""
+msgstr "Zrušiť prepojenie"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr ""
+msgstr "Prístupové práva kolekcie"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -620,6 +617,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>Poznámka: </b>Tieto hodnoty sú poskytované príslušným podporným programom "
+"a nie sú určené na to, aby ste ich menili vy, preto varujeme, ak sa pri ich "
+"zmene napriek tomu niečo pokazí!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
@@ -636,7 +636,7 @@ msgstr "Hodnota"
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr ""
+msgstr "Ani nepomýšľajte na to, že by ste tu niečo menili!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
@@ -648,7 +648,7 @@ msgstr "Identifikácia"
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr ""
+msgstr "Vzdialený identifikátor:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
@@ -660,7 +660,7 @@ msgstr "Vlastník:"
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr ""
+msgstr "Vzdialená revízia:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
@@ -673,7 +673,7 @@ msgstr "Virtuálne:"
 #: collectioninternalspage.ui:106 collectioninternalspage.ui:115
 #, kde-format
 msgid "Content Types"
-msgstr ""
+msgstr "Typy obsahu"
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
@@ -681,15 +681,15 @@ msgid "Programs:"
 msgstr "Programy:"
 
 #: dbconsole.cpp:79
-#, fuzzy, kde-format
+#, kde-format
 msgid "Query #%1"
-msgstr "Otázka"
+msgstr "Dopyt #%1"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr ""
+msgstr "Vykonať dopyt"
 
 #: debugmodel.cpp:144
 #, kde-format
@@ -702,58 +702,56 @@ msgid "Message"
 msgstr "Správa"
 
 #: debugwidget.cpp:39
-#, fuzzy, kde-format
+#, kde-format
 msgid "Enable debugger"
-msgstr "Povoliť debu&gger"
+msgstr "Povoliť ladenie"
 
 #: debugwidget.cpp:48 notificationmonitor.cpp:575
-#, fuzzy, kde-format
+#, kde-format
 msgid "All"
 msgstr "Všetko"
 
 #: debugwidget.cpp:63
 #, kde-format
 msgid "Clear Information View"
-msgstr ""
+msgstr "Vymazať informačné zobrazenie"
 
 #: debugwidget.cpp:64
 #, kde-format
 msgid "Clear Filtered Messages"
-msgstr ""
+msgstr "Vymazať filtrované správy"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "Clear All Messages"
-msgstr "Vyčistiť všetky správy"
+msgstr "Vymazať všetky správy"
 
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "Uložiť filtrované správy ..."
 
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr ""
+msgstr "Uložiť všetky správy ..."
 
 #: instanceselector.cpp:44
-#, fuzzy, kde-format
+#, kde-format
 msgid "Connect"
 msgstr "Pripojiť"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Akonadi Console"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr "Konzola Akonadi"
+msgstr "Vzdialená konzola Akonadi (%1)"
 
 #: instanceselector.cpp:90
-#, fuzzy, kde-format
-#| msgid "Akonadi Console"
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr "Konzola Akonadi"
+msgstr "Konzola Akonadi (Inštancia: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -762,51 +760,53 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"V aktuálnom sedení D-Bus je spustených viacero inštancií Akonadi. Prosím, "
+"vyberte inštanciu, ku ktorej sa chcete pripojiť."
 
 #: jobtracker.cpp:26
-#, fuzzy, kde-format
+#, kde-format
 msgid "Waiting"
-msgstr "Čakanie"
+msgstr "Čakajúce"
 
 #: jobtracker.cpp:28
-#, fuzzy, kde-format
+#, kde-format
 msgid "Running"
-msgstr "Beží"
+msgstr "Bežiace"
 
 #: jobtracker.cpp:30 querydebugger.cpp:345
 #, kde-format
 msgid "Ended"
-msgstr ""
+msgstr "Ukončené"
 
 #: jobtracker.cpp:32
-#, fuzzy, kde-format
+#, kde-format
 msgid "Failed: %1"
-msgstr "Zlyhalo."
+msgstr "Zlyhalo: %1"
 
 #: jobtracker.cpp:34
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unknown state!"
-msgstr "neznámy stav"
+msgstr "Neznámy stav!"
 
 #: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:38
-#, fuzzy, kde-format
+#, kde-format
 msgid "Job ID"
 msgstr "ID úlohy"
 
 #: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:39
-#, fuzzy, kde-format
+#, kde-format
 msgid "Created"
 msgstr "Vytvorené"
 
 #: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:40
 #, kde-format
 msgid "Wait time"
-msgstr ""
+msgstr "Doba čakania"
 
 #: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:41
 #, kde-format
 msgid "Job duration"
-msgstr ""
+msgstr "Trvanie úlohy"
 
 #: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:42
 #, kde-format
@@ -814,23 +814,23 @@ msgid "Job Type"
 msgstr "Typ úlohy"
 
 #: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "State"
 msgstr "Stav"
 
 #: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:44 logging.cpp:60
 #: loggingmodel.cpp:139
-#, fuzzy, kde-format
+#, kde-format
 msgid "Info"
 msgstr "Info"
 
 #: jobtrackersearchwidget.cpp:19
 #, kde-format
 msgid "Show Only Errors"
-msgstr ""
+msgstr "Zobraziť len chyby"
 
 #: jobtrackersearchwidget.cpp:27
-#, fuzzy, kde-format
+#, kde-format
 msgid "Search..."
 msgstr "Hľadať..."
 
@@ -845,14 +845,14 @@ msgid "Save to file..."
 msgstr "Uložiť do súboru..."
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
-#, fuzzy, kde-format
+#, kde-format
 msgid "Clear View"
-msgstr "Vyčistiť pohľad"
+msgstr "Vymazať zobrazenie"
 
 #: jobtrackerwidget.cpp:107
 #, kde-format
 msgid "Copy Info"
-msgstr ""
+msgstr "Informácie o kópii"
 
 #: jobtrackerwidget.cpp:109
 #, kde-format
@@ -865,34 +865,34 @@ msgid "Expand All"
 msgstr "Rozbaliť všetko"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
+#, kde-format
 msgid "Enable"
 msgstr "Povoliť"
 
 #: logging.cpp:56 notificationmonitor.cpp:62
-#, fuzzy, kde-format
+#, kde-format
 msgid "Types:"
-msgstr "Typy"
+msgstr "Typy:"
 
 #: logging.cpp:59 loggingmodel.cpp:137
-#, fuzzy, kde-format
+#, kde-format
 msgid "Debug"
-msgstr "Ladenie"
+msgstr "Ladiť"
 
 #: logging.cpp:61 loggingmodel.cpp:141
-#, fuzzy, kde-format
+#, kde-format
 msgid "Warning"
-msgstr "Upozornenie"
+msgstr "Varovanie"
 
 #: logging.cpp:62 loggingmodel.cpp:143
-#, fuzzy, kde-format
+#, kde-format
 msgid "Critical"
 msgstr "Kritické"
 
 #: logging.cpp:63 loggingmodel.cpp:145
 #, kde-format
 msgid "Fatal"
-msgstr ""
+msgstr "Fatálne"
 
 #: logging.cpp:64
 #, kde-format
@@ -905,7 +905,7 @@ msgid "Save to File..."
 msgstr "Uložiť do súboru..."
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
-#, fuzzy, kde-format
+#, kde-format
 msgid "Error"
 msgstr "Chyba"
 
@@ -926,7 +926,7 @@ msgstr "Program"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:208 notificationmonitor.cpp:141
 #: notificationmonitor.cpp:254
-#, fuzzy, kde-format
+#, kde-format
 msgid "Type"
 msgstr "Typ"
 
@@ -941,14 +941,14 @@ msgid "File"
 msgstr "Súbor"
 
 #: loggingmodel.cpp:114
-#, fuzzy, kde-format
+#, kde-format
 msgid "Function"
 msgstr "Funkcia"
 
 #: loggingmodel.cpp:154 loggingmodel.cpp:170
 #, kde-format
 msgid "%1:%2"
-msgstr ""
+msgstr "%1:%2"
 
 #: main.cpp:27
 #, kde-format
@@ -958,22 +958,22 @@ msgstr "Konzola Akonadi"
 #: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr ""
+msgstr "Konzola na správu a ladenie pre Akonadi"
 
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2023 the Akonadi developer"
-msgstr ""
+msgstr "(c) 2006-2023 Vývojár Akonadi"
 
 #: main.cpp:35 main.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Author"
 msgstr "Autor"
 
 #: mainwidget.cpp:48
 #, kde-format
 msgid "Agents"
-msgstr ""
+msgstr "Agenti"
 
 #: mainwidget.cpp:50
 #, kde-format
@@ -981,34 +981,34 @@ msgid "Browser"
 msgstr "Prehliadač"
 
 #: mainwidget.cpp:51
-#, fuzzy, kde-format
+#, kde-format
 msgid "Debugger"
-msgstr "Debugger"
+msgstr "Ladiaci program"
 
 #: mainwidget.cpp:52
-#, fuzzy, kde-format
+#, kde-format
 msgid "Logging"
 msgstr "Záznam"
 
 #: mainwidget.cpp:53
 #, kde-format
 msgid "DB Browser"
-msgstr ""
+msgstr "Prehliadač DB"
 
 #: mainwidget.cpp:54
 #, kde-format
 msgid "DB Console"
-msgstr ""
+msgstr "Konzola DB"
 
 #: mainwidget.cpp:55
 #, kde-format
 msgid "Query Debugger"
-msgstr ""
+msgstr "Ladenie dopytu"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Enable job tracker"
-msgstr ""
+msgstr "Povoliť sledovanie úloh"
 
 #: mainwidget.cpp:56
 #, kde-format
@@ -1018,22 +1018,22 @@ msgstr "Sledovanie úloh"
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "Povoliť sledovanie plánovačov zdrojov"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Resources Schedulers"
-msgstr ""
+msgstr "Plánovači zdrojov"
 
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Notification Monitor"
-msgstr ""
+msgstr "Monitor upozornení"
 
 #: mainwidget.cpp:60
 #, kde-format
 msgid "Item Search"
-msgstr ""
+msgstr "Hľadanie položiek"
 
 #: mainwidget.cpp:62
 #, kde-format
@@ -1043,12 +1043,12 @@ msgstr "Monitory"
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr ""
+msgstr "Výpis do XML..."
 
 #: mainwidget.cpp:69
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr ""
+msgstr "Vymazať vyrovnávaciu pamäť Akonadi"
 
 #: mainwidget.cpp:73
 #, kde-format
@@ -1063,7 +1063,7 @@ msgstr "Zastaviť server"
 #: mainwidget.cpp:81
 #, kde-format
 msgid "Restart Server"
-msgstr ""
+msgstr "Reštartovať server"
 
 #: mainwindow.cpp:33
 #, kde-format
@@ -1074,11 +1074,15 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Konzola Akonadi je výlučne vývojársky nástroj. Umožňuje zobrazovať a "
+"meniť interné dátové štruktúry Akonadi. Dáta by ste tu mali meniť len vtedy, "
+"ak viete, čo robíte, inak riskujete poškodenie alebo stratu dát správy "
+"osobných informácií.<br/><b>Používate na vlastné riziko!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
 msgid "Session/Subscriber"
-msgstr ""
+msgstr "Sedenie/Odberateľ"
 
 #: monitorswidget.cpp:77 notificationmodel.cpp:72 notificationmonitor.cpp:228
 #: notificationmonitor.cpp:484
@@ -1087,7 +1091,7 @@ msgid "Items"
 msgstr "Položky"
 
 #: monitorswidget.cpp:80 notificationmonitor.cpp:487
-#, fuzzy, kde-format
+#, kde-format
 msgid "Collections"
 msgstr "Kolekcie"
 
@@ -1100,22 +1104,22 @@ msgstr "Vzťahy"
 #: monitorswidget.cpp:89
 #, kde-format
 msgid "Subscribers"
-msgstr ""
+msgstr "Odberatelia"
 
 #: monitorswidget.cpp:92
-#, fuzzy, kde-format
+#, kde-format
 msgid "Notification"
 msgstr "Upozornenie"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:566
 #, kde-format
 msgid "List Filter"
-msgstr ""
+msgstr "Filter zoznamov"
 
 #: monitorswidget.cpp:102 notificationmonitor.cpp:567
 #, kde-format
 msgid "Include Statistics"
-msgstr ""
+msgstr "Zahrnúť štatistiky"
 
 #: monitorswidget.cpp:103 notificationmonitor.cpp:199
 #: notificationmonitor.cpp:398 notificationmonitor.cpp:451
@@ -1127,28 +1131,28 @@ msgstr "Zdroj"
 #: monitorswidget.cpp:104
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "Typy MIME obsahu"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "Získavanie predkov"
 
 #: monitorswidget.cpp:109
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Rozsah sťahovania predkov"
 
 #: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
 #: notificationmonitor.cpp:592
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "Stiahnuť iba ID"
 
 #: monitorswidget.cpp:116
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "Ignorovať chybu získavania"
 
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
 #, kde-format
@@ -1163,7 +1167,7 @@ msgstr "Vlastnosti"
 #: monitorswidget.cpp:138 notificationmonitor.cpp:475
 #, kde-format
 msgid "Subscriber"
-msgstr ""
+msgstr "Odberateľ"
 
 #: monitorswidget.cpp:139
 #, kde-format
@@ -1173,120 +1177,120 @@ msgstr "ID sedenia"
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Collections:"
-msgstr ""
+msgstr "Sledované kolekcie:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Items:"
-msgstr ""
+msgstr "Sledované položky:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Tags:"
-msgstr ""
+msgstr "Sledované značky:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Types:"
-msgstr ""
+msgstr "Sledované typy:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr ""
+msgstr "Sledované typy MIME:"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "Monitored Resources:"
-msgstr ""
+msgstr "Sledované zdroje:"
 
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr ""
+msgstr "Ignorované sedenia:"
 
 #: monitorswidget.cpp:147
 #, kde-format
 msgid "All Monitored:"
-msgstr ""
+msgstr "Všetko sledované:"
 
 #: monitorswidget.cpp:148
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "Je exkluzívne:"
 
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Rozsah sťahovania položiek"
 
 #: monitorswidget.cpp:152
 #, kde-format
 msgid "Payload Parts"
-msgstr ""
+msgstr "Časti dátových obsahov"
 
 #: monitorswidget.cpp:153 notificationmonitor.cpp:532
 #, kde-format
 msgid "Full Payload"
-msgstr ""
+msgstr "Úplný dátový obsah"
 
 #: monitorswidget.cpp:155 notificationmonitor.cpp:533
 #, kde-format
 msgid "All Attributes"
-msgstr ""
+msgstr "Všetky atribúty"
 
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Cache only"
-msgstr ""
+msgstr "Len vyrovnávacia pamäť"
 
 #: monitorswidget.cpp:157
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "Kontrolovať iba na časti dátových obsahov vo vyrovnávacej pamäti"
 
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "Stiahnuť mtime"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
 msgid "Fetch GID"
-msgstr ""
+msgstr "Stiahnuť GID"
 
 #: monitorswidget.cpp:161 notificationmonitor.cpp:587
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr ""
+msgstr "Ignorovať chyby získavania"
 
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Získať zmeny od"
 
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr ""
+msgstr "Stiahnuť RID"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch Tags"
-msgstr ""
+msgstr "Stiahnuť značky"
 
 #: monitorswidget.cpp:167
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Rozsah sťahovania kolekcií"
 
 #: monitorswidget.cpp:170 notificationmonitor.cpp:590
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Rozsah sťahovania značiek"
 
 #: notificationmodel.cpp:76 notificationmonitor.cpp:452
-#, fuzzy, kde-format
+#, kde-format
 msgid "Tag"
 msgstr "Značka"
 
@@ -1298,37 +1302,37 @@ msgstr "Vzťah"
 #: notificationmodel.cpp:80
 #, kde-format
 msgid "Subscription"
-msgstr "Prihlásenie"
+msgstr "Odber"
 
 #: notificationmodel.cpp:88 notificationmodel.cpp:112 notificationmodel.cpp:130
 #: notificationmodel.cpp:142 notificationmodel.cpp:152
 #: notificationmonitor.cpp:167 notificationmonitor.cpp:376
 #: notificationmonitor.cpp:413 notificationmonitor.cpp:438
 #: notificationmonitor.cpp:462
-#, fuzzy, kde-format
+#, kde-format
 msgid "Add"
 msgstr "Pridať"
 
 #: notificationmodel.cpp:92 notificationmodel.cpp:116
 #: notificationmonitor.cpp:173 notificationmonitor.cpp:382
-#, fuzzy, kde-format
+#, kde-format
 msgid "Move"
 msgstr "Presunúť"
 
 #: notificationmodel.cpp:100 notificationmonitor.cpp:185
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "Zmeniť príznaky"
 
 #: notificationmodel.cpp:102 notificationmonitor.cpp:188
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "Zmeniť značky"
 
 #: notificationmodel.cpp:104 notificationmonitor.cpp:191
 #, kde-format
 msgid "ModifyRelations"
-msgstr ""
+msgstr "Zmeniť vzťahy"
 
 #: notificationmodel.cpp:106 notificationmodel.cpp:136
 #: notificationmodel.cpp:146 notificationmodel.cpp:158
@@ -1336,25 +1340,25 @@ msgstr ""
 #: notificationmonitor.cpp:447 notificationmonitor.cpp:471
 #, kde-format
 msgid "InvalidOp"
-msgstr ""
+msgstr "Neplatná operácia"
 
 #: notificationmodel.cpp:120 notificationmonitor.cpp:388
-#, fuzzy, kde-format
+#, kde-format
 msgid "Subscribe"
 msgstr "Prihlásiť sa"
 
 #: notificationmodel.cpp:122 notificationmonitor.cpp:391
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unsubscribe"
-msgstr "Odhlásiť"
+msgstr "Odhlásiť sa"
 
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "Neplatná Ip"
 
 #: notificationmodel.cpp:162
-#, fuzzy, kde-format
+#, kde-format
 msgid "Unknown"
 msgstr "Neznáme"
 
@@ -1368,7 +1372,7 @@ msgstr "Operácia"
 #: notificationmodel.cpp:212
 #, kde-format
 msgid "IDs"
-msgstr ""
+msgstr "ID"
 
 #: notificationmodel.cpp:214
 #, kde-format
@@ -1378,67 +1382,67 @@ msgstr "Sedenie"
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "Poslucháči"
 
 #: notificationmonitor.cpp:57
 #, kde-format
 msgid "Enable notification monitor"
-msgstr ""
+msgstr "Povoliť monitor upozornení"
 
 #: notificationmonitor.cpp:140
-#, fuzzy, kde-format
+#, kde-format
 msgid "Timestamp"
-msgstr "Časové razítko"
+msgstr "Časová značka"
 
 #: notificationmonitor.cpp:200 notificationmonitor.cpp:399
 #, kde-format
 msgid "Parent Collection"
-msgstr ""
+msgstr "Nadradená kolekcia"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "Nadradený cieľový stĺpec"
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
 msgid "Destination Resource"
-msgstr ""
+msgstr "Cieľový zdroj"
 
 #: notificationmonitor.cpp:203
 #, kde-format
 msgid "Item Parts"
-msgstr ""
+msgstr "Časti položiek"
 
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Added Flags"
-msgstr ""
+msgstr "Pridané príznaky"
 
 #: notificationmonitor.cpp:205
 #, kde-format
 msgid "Removed Flags"
-msgstr ""
+msgstr "Odstránené príznaky"
 
 #: notificationmonitor.cpp:206
-#, fuzzy, kde-format
+#, kde-format
 msgid "Added Tags"
-msgstr "Pridané štítky: "
+msgstr "Pridané značky"
 
 #: notificationmonitor.cpp:207
 #, kde-format
 msgid "Removed Tags"
-msgstr ""
+msgstr "Odstránené značky"
 
 #: notificationmonitor.cpp:217
 #, kde-format
 msgid "Removed Relations"
-msgstr ""
+msgstr "Odstránené vzťahy"
 
 #: notificationmonitor.cpp:226
 #, kde-format
 msgid "Must retrieve"
-msgstr ""
+msgstr "Musí sa získať"
 
 #: notificationmonitor.cpp:240
 #, kde-format
@@ -1448,10 +1452,10 @@ msgstr "id"
 #: notificationmonitor.cpp:241
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "vzdialené Id"
 
 #: notificationmonitor.cpp:242
-#, fuzzy, kde-format
+#, kde-format
 msgid "name"
 msgstr "názov"
 
@@ -1459,7 +1463,7 @@ msgstr "názov"
 #: notificationmonitor.cpp:347
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Predok"
 
 #: notificationmonitor.cpp:251 notificationmonitor.cpp:333
 #, kde-format
@@ -1483,45 +1487,45 @@ msgid "Remote ID"
 msgstr "Vzdialené ID"
 
 #: notificationmonitor.cpp:270
-#, fuzzy, kde-format
+#, kde-format
 msgid "Revision"
 msgstr "Revízia"
 
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "Nadradené ID"
 
 #: notificationmonitor.cpp:272
 #, kde-format
 msgid "RemoteID"
-msgstr ""
+msgstr "Vzdialené ID"
 
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "Vzdialená revízia"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
-#, fuzzy, kde-format
+#, kde-format
 msgid "Size"
 msgstr "Veľkosť"
 
 #: notificationmonitor.cpp:276
-#, fuzzy, kde-format
+#, kde-format
 msgid "MimeType"
 msgstr "Typ MIME"
 
 #: notificationmonitor.cpp:277
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "MTime"
 
 #: notificationmonitor.cpp:288
 #, kde-format
 msgid "VRefs"
-msgstr ""
+msgstr "VRefs"
 
 #: notificationmonitor.cpp:305
 #, kde-format
@@ -1529,14 +1533,14 @@ msgid "Parts"
 msgstr "Časti"
 
 #: notificationmonitor.cpp:312
-#, fuzzy, kde-format
+#, kde-format
 msgid "External"
 msgstr "Externé"
 
 #: notificationmonitor.cpp:315
-#, fuzzy, kde-format
+#, kde-format
 msgid "Internal"
-msgstr "Interný"
+msgstr "Interné"
 
 #: notificationmonitor.cpp:318
 #, kde-format
@@ -1546,20 +1550,20 @@ msgstr "Zahraničné"
 #: notificationmonitor.cpp:322
 #, kde-format
 msgid "Storage Type"
-msgstr ""
+msgstr "Typ úložiska"
 
 #: notificationmonitor.cpp:323
-#, fuzzy, kde-format
+#, kde-format
 msgid "Version"
 msgstr "Verzia"
 
 #: notificationmonitor.cpp:324
-#, fuzzy, kde-format
+#, kde-format
 msgid "Data"
 msgstr "Dáta"
 
 #: notificationmonitor.cpp:335
-#, fuzzy, kde-format
+#, kde-format
 msgid "Name"
 msgstr "Názov"
 
@@ -1571,10 +1575,10 @@ msgstr "Typy MIME"
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Remote Revision"
-msgstr ""
+msgstr "Vzdialená revízia"
 
 #: notificationmonitor.cpp:339
-#, fuzzy, kde-format
+#, kde-format
 msgid "Statistics"
 msgstr "Štatistika"
 
@@ -1586,67 +1590,67 @@ msgstr "Počet"
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "Nevidené"
 
 #: notificationmonitor.cpp:345
 #, kde-format
 msgid "Search Query"
-msgstr "Hľadaný dopyt"
+msgstr "Vyhľadávací dopyt"
 
 #: notificationmonitor.cpp:346
 #, kde-format
 msgid "Search Collections"
-msgstr ""
+msgstr "Vyhľadávanie v kolekciách"
 
 #: notificationmonitor.cpp:353
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cache Policy"
-msgstr "&Politika vyrovnávacej pamäti"
+msgstr "Politika vyrovnávacej pamäti"
 
 #: notificationmonitor.cpp:355
 #, kde-format
 msgid "Inherit"
-msgstr ""
+msgstr "Zdediť"
 
 #: notificationmonitor.cpp:356
-#, fuzzy, kde-format
+#, kde-format
 msgid "Check Interval"
-msgstr "Interval kontroly:"
+msgstr "Interval kontroly"
 
 #: notificationmonitor.cpp:357
 #, kde-format
 msgid "Cache Timeout"
-msgstr ""
+msgstr "Časový limit vyrovnávacej pamäte"
 
 #: notificationmonitor.cpp:358
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "Synchronizácia na požiadanie"
 
 #: notificationmonitor.cpp:359
 #, kde-format
 msgid "Local Parts"
-msgstr ""
+msgstr "Lokálne časti"
 
 #: notificationmonitor.cpp:364 notificationmonitor.cpp:557
-#, fuzzy, kde-format
+#, kde-format
 msgid "Enabled"
 msgstr "Povolené"
 
 #: notificationmonitor.cpp:365
 #, kde-format
 msgid "DisplayPref"
-msgstr ""
+msgstr "Preferencie zobrazenia"
 
 #: notificationmonitor.cpp:366
 #, kde-format
 msgid "SyncPref"
-msgstr ""
+msgstr "Predvoľby synchronizácie"
 
 #: notificationmonitor.cpp:367
 #, kde-format
 msgid "IndexPref"
-msgstr ""
+msgstr "Predvoľby indexovania"
 
 #: notificationmonitor.cpp:368
 #, kde-format
@@ -1656,47 +1660,47 @@ msgstr "Virtuálny"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Nadradená cieľová kolekcia"
 
 #: notificationmonitor.cpp:402
 #, kde-format
 msgid "Changed Parts"
-msgstr ""
+msgstr "Zmenené časti"
 
 #: notificationmonitor.cpp:425
 #, kde-format
 msgid "Left ID"
-msgstr ""
+msgstr "Ľavé ID"
 
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr ""
+msgstr "Ľavý typ MIME"
 
 #: notificationmonitor.cpp:427
 #, kde-format
 msgid "Right ID"
-msgstr ""
+msgstr "Pravé ID"
 
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr ""
+msgstr "Pravý typ MIME"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Monitored Collections"
-msgstr ""
+msgstr "Sledované kolekcie"
 
 #: notificationmonitor.cpp:477
 #, kde-format
 msgid "Monitored Items"
-msgstr ""
+msgstr "Sledované položky"
 
 #: notificationmonitor.cpp:478
 #, kde-format
 msgid "Monitored Tags"
-msgstr ""
+msgstr "Sledované značky"
 
 #: notificationmonitor.cpp:496
 #, kde-format
@@ -1711,117 +1715,117 @@ msgstr "Zmeny"
 #: notificationmonitor.cpp:502
 #, kde-format
 msgid "No Type"
-msgstr ""
+msgstr "Žiadny typ"
 
 #: notificationmonitor.cpp:506
 #, kde-format
 msgid "Monitored Types"
-msgstr ""
+msgstr "Sledované typy"
 
 #: notificationmonitor.cpp:507
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr ""
+msgstr "Sledované typy MIME"
 
 #: notificationmonitor.cpp:508
 #, kde-format
 msgid "Monitored Resources"
-msgstr ""
+msgstr "Sledované zdroje"
 
 #: notificationmonitor.cpp:509
 #, kde-format
 msgid "Ignored Sessions"
-msgstr ""
+msgstr "Ignorované sedenia"
 
 #: notificationmonitor.cpp:510
 #, kde-format
 msgid "All Monitored"
-msgstr ""
+msgstr "Všetko sledované"
 
 #: notificationmonitor.cpp:511
 #, kde-format
 msgid "Exclusive"
-msgstr ""
+msgstr "Exkluzívne"
 
 #: notificationmonitor.cpp:515
 #, kde-format
 msgid "Requested Parts"
-msgstr ""
+msgstr "Požadované časti"
 
 #: notificationmonitor.cpp:516
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "Zmenené od"
 
 #: notificationmonitor.cpp:520
 #, kde-format
 msgid "No Ancestor"
-msgstr ""
+msgstr "Žiadny predok"
 
 #: notificationmonitor.cpp:523
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "Nadradený predok"
 
 #: notificationmonitor.cpp:526
 #, kde-format
 msgid "All Ancestors"
-msgstr ""
+msgstr "Všetci predkovia"
 
 #: notificationmonitor.cpp:529
 #, kde-format
 msgid "Ancestor Depth"
-msgstr ""
+msgstr "Hĺbka predkov"
 
 #: notificationmonitor.cpp:530
 #, kde-format
 msgid "Cache Only"
-msgstr ""
+msgstr "Len vyrovnávacia pamäť"
 
 #: notificationmonitor.cpp:531
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "Kontrolovať iba časti dátových obsahov vo vyrovnávacej pamäti"
 
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "Stiahnuť veľkosť"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "Stiahnuť MTime"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Stiahnuť vzdialenú revíziu"
 
 #: notificationmonitor.cpp:537
 #, kde-format
 msgid "Ignore Errors"
-msgstr ""
+msgstr "Ignorovať chyby"
 
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "Stiahnuť príznaky"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "Stiahnuť vzdialené ID"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "Stiahnuť vzťahy"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "Stiahnuť VRefs"
 
 #: notificationmonitor.cpp:551
 #, kde-format
@@ -1829,9 +1833,9 @@ msgid "No Filter"
 msgstr "Bez filtra"
 
 #: notificationmonitor.cpp:554
-#, fuzzy, kde-format
+#, kde-format
 msgid "Display"
-msgstr "Obrazovka"
+msgstr "Zobrazenie"
 
 #: notificationmonitor.cpp:560
 #, kde-format
@@ -1839,97 +1843,97 @@ msgid "Index"
 msgstr "Index"
 
 #: notificationmonitor.cpp:563
-#, fuzzy, kde-format
+#, kde-format
 msgid "Sync"
 msgstr "Synchronizovať"
 
 #: notificationmonitor.cpp:569
 #, kde-format
 msgid "Content Mime Types"
-msgstr ""
+msgstr "Typy MIME obsahu"
 
 #: notificationmonitor.cpp:578
 #, kde-format
 msgid "Parent"
-msgstr "Rodič"
+msgstr "Nadradené"
 
 #: notificationmonitor.cpp:581
-#, fuzzy, kde-format
+#, kde-format
 msgid "None"
 msgstr "Žiadne"
 
 #: notificationmonitor.cpp:585
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Iba ID sťahovania predkov"
 
 #: notificationmonitor.cpp:586
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "Atribúty predkov"
 
 #: notificationmonitor.cpp:594
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "Stiahnuť všetky atribúty"
 
 #: querydebugger.cpp:341
 #, kde-format
 msgid "Name / Query"
-msgstr ""
+msgstr "Názov / Dopyt"
 
 #: querydebugger.cpp:343
-#, fuzzy, kde-format
+#, kde-format
 msgid "Started"
 msgstr "Spustené"
 
 #: querydebugger.cpp:347
-#, fuzzy, kde-format
+#, kde-format
 msgid "Duration"
 msgstr "Trvanie"
 
 #: querydebugger.cpp:525
-#, fuzzy, kde-format
+#, kde-format
 msgid "Query"
-msgstr "Otázka"
+msgstr "Dopyt"
 
 #: querydebugger.cpp:527
 #, kde-format
 msgid "Duration [ms]"
-msgstr ""
+msgstr "Trvanie [ms]"
 
 #: querydebugger.cpp:529
-#, fuzzy, kde-format
+#, kde-format
 msgid "Calls"
 msgstr "Volania"
 
 #: querydebugger.cpp:531
 #, kde-format
 msgid "Avg. Duration [ms]"
-msgstr ""
+msgstr "Priemerné trvanie [ms]"
 
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr ""
+msgstr "Ovplyvnené riadky:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Povoliť ladenie dopytov (spomaľuje server!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "Sekvencia dopytov"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "Strom dopytov"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
@@ -1941,20 +1945,20 @@ msgstr "Uložiť do súboru"
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr ""
+msgstr "Zobrazenie dopytov"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr "Otázka:"
+msgstr "Dopyt:"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
-#, fuzzy, kde-format
+#, kde-format
 msgid "TextLabel"
-msgstr "TextLabel"
+msgstr "Textové označenie"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60
@@ -1965,27 +1969,27 @@ msgstr "Výsledky:"
 #: searchwidget.cpp:49
 #, kde-format
 msgid "Search store:"
-msgstr ""
+msgstr "Vyhľadávacie úložisko:"
 
 #: searchwidget.cpp:54 searchwidget.cpp:170
-#, fuzzy, kde-format
+#, kde-format
 msgid "Search"
 msgstr "Hľadať"
 
 #: searchwidget.cpp:62
-#, fuzzy, kde-format
+#, kde-format
 msgid "Search query:"
-msgstr "Hľadaný dopyt"
+msgstr "Vyhľadávací dopyt:"
 
 #: searchwidget.cpp:71
 #, kde-format
 msgid "Results (Documents):"
-msgstr ""
+msgstr "Výsledky (Dokumenty):"
 
 #: searchwidget.cpp:81
-#, fuzzy, kde-format
+#, kde-format
 msgid "Document:"
-msgstr "Dokument"
+msgstr "Dokument:"
 
 #: searchwidget.cpp:91
 #, kde-format
@@ -1995,41 +1999,41 @@ msgstr "Položka:"
 #: searchwidget.cpp:153
 #, kde-format
 msgid "Xapian error"
-msgstr ""
+msgstr "Chyba Xapian"
 
 #: searchwidget.cpp:159
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "Nie je otvorená žiadna databáza Xapian"
 
 #: searchwidget.cpp:170
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "Nenašiel sa žiadny prvok."
 
 #: searchwidget.cpp:196
 #, kde-format
 msgid "Term/Value"
-msgstr ""
+msgstr "Termín/Hodnota"
 
 #: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/Slot"
 
 #: searchwidget.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "Terms"
-msgstr "%1 Podmienky: %2"
+msgstr "Termíny"
 
 #: searchwidget.cpp:225
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "Chyba pri sťahovaní položky"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
-#, fuzzy, kde-format
+#, kde-format
 msgid "General"
 msgstr "Všeobecné"
 
@@ -2037,17 +2041,17 @@ msgstr "Všeobecné"
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "Id nadradenej značky:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
 #: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Remove"
-msgstr "O&dstrániť"
+msgstr "Odst&rániť"
 
 #. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr ""
+msgstr "Vzdialené identifikátory"
