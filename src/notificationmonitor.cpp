@@ -95,7 +95,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
 
     onNotificationSelected({});
 
-    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("NotificationMonitor"));
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("NotificationMonitor"));
     m_treeView->header()->restoreState(config.readEntry<QByteArray>("tv", QByteArray()));
     m_ntfView->header()->restoreState(config.readEntry<QByteArray>("ntfView", QByteArray()));
     m_splitter->restoreState(config.readEntry<QByteArray>("splitter", QByteArray()));
@@ -105,7 +105,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
 
 NotificationMonitor::~NotificationMonitor()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("NotificationMonitor"));
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("NotificationMonitor"));
     config.writeEntry("tv", m_treeView->header()->saveState());
     config.writeEntry("ntfView", m_ntfView->header()->saveState());
     config.writeEntry("splitter", m_splitter->saveState());

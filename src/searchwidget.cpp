@@ -109,13 +109,13 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     openStore(0);
 
-    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("SearchWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SearchWidget"));
     mQueryWidget->setPlainText(config.readEntry("query"));
 }
 
 SearchWidget::~SearchWidget()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("SearchWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SearchWidget"));
     config.writeEntry("query", mQueryWidget->toPlainText());
     config.sync();
     closeDataBase();

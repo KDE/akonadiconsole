@@ -41,7 +41,7 @@ DbConsole::DbConsole(QWidget *parent)
     mTabWidget->setCornerWidget(addTabButton, Qt::TopRightCorner);
 
     auto config = KSharedConfig::openConfig();
-    auto group = config->group(QLatin1String("DBConsole"));
+    auto group = config->group(QStringLiteral("DBConsole"));
     QStringList queries;
     const QString queryText = group.readEntry("queryText");
     if (!queryText.isEmpty()) {
@@ -68,7 +68,7 @@ void DbConsole::saveQueries()
         auto tab = qobject_cast<DbConsoleTab *>(mTabWidget->widget(i));
         queries << tab->query();
     }
-    KSharedConfig::openConfig()->group(QLatin1String("DBConsole")).writeEntry("queryTexts", queries);
+    KSharedConfig::openConfig()->group(QStringLiteral("DBConsole")).writeEntry("queryTexts", queries);
 }
 
 DbConsoleTab *DbConsole::addTab()
