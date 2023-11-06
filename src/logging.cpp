@@ -95,13 +95,13 @@ Logging::Logging(QWidget *parent)
     new LoggerAdaptor(this);
     QDBusConnection::sessionBus().registerObject(DBUS_PATH, this, QDBusConnection::ExportAdaptors);
 
-    KConfigGroup config(KSharedConfig::openConfig(), "Logging");
+    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("Logging"));
     mView->header()->restoreState(config.readEntry<QByteArray>("view", QByteArray()));
 }
 
 Logging::~Logging()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "Logging");
+    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("Logging"));
     config.writeEntry("view", mView->header()->saveState());
 }
 

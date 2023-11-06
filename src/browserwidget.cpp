@@ -159,7 +159,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     itemFilter->addMimeTypeExclusionFilter(Collection::mimeType());
     itemFilter->setHeaderGroup(EntityTreeModel::ItemListHeaders);
 
-    const KConfigGroup group = KSharedConfig::openConfig()->group("FavoriteCollectionsModel");
+    const KConfigGroup group = KSharedConfig::openConfig()->group(QLatin1String("FavoriteCollectionsModel"));
     connect(mBrowserModel, &AkonadiBrowserModel::columnsChanged, itemFilter, &EntityMimeTypeFilterModel::invalidate);
     auto sortModel = new AkonadiBrowserSortModel(mBrowserModel, this);
     sortModel->setDynamicSortFilter(true);
@@ -242,7 +242,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     xmlGuiWindow->actionCollection()->addAction(QStringLiteral("akonadiconsole_cacheonly"), mCacheOnlyAction);
     connect(mCacheOnlyAction, &KToggleAction::toggled, this, &BrowserWidget::updateItemFetchScope);
 
-    m_stateMaintainer = new KViewStateMaintainer<ETMViewStateSaver>(KSharedConfig::openConfig()->group("CollectionViewState"), this);
+    m_stateMaintainer = new KViewStateMaintainer<ETMViewStateSaver>(KSharedConfig::openConfig()->group(QLatin1String("CollectionViewState")), this);
     m_stateMaintainer->setView(mCollectionView);
 
     m_stateMaintainer->restoreState();

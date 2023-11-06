@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     KStandardAction::quit(qApp, &QApplication::quit, actionCollection());
 
     setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, QStringLiteral("akonadiconsoleui.rc"));
-    AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), "UiState"));
+    AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), QLatin1String("UiState")));
     KMessageBox::information(this,
                              i18n("<p>Akonadi Console is purely a development tool. "
                                   "It allows you to view and change internal data structures of Akonadi. "
@@ -46,7 +46,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "UiState");
+    KConfigGroup config(KSharedConfig::openConfig(), QLatin1String("UiState"));
     AkonadiConsole::UiStateSaver::saveState(this, config);
     KSharedConfig::openConfig()->sync();
     KXmlGuiWindow::closeEvent(event);
