@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-# Vit Pelcak <vit@pelcak.org>, 2023.
+# SPDX-FileCopyrightText: 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:39+0000\n"
-"PO-Revision-Date: 2023-05-31 11:36+0200\n"
+"PO-Revision-Date: 2023-11-10 16:10+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,7 +47,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr ""
+msgstr "Nastavení agenta"
 
 #: agentwidget.cpp:93
 #, kde-format
@@ -391,13 +391,13 @@ msgstr "Přidat značku"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr ""
+msgstr "Přidat podznačku"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr ""
+msgstr "Upravit značku"
 
 #: browserwidget.cpp:624
 #, kde-format
@@ -743,13 +743,13 @@ msgstr "Připojit se"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Vzdálená konzole Akonadi (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Konzole Akonadi (Instance: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -1950,7 +1950,7 @@ msgstr "Dotaz:"
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
 #, kde-format
 msgid "TextLabel"
-msgstr "Textový štítek"
+msgstr "Textový popisek"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60

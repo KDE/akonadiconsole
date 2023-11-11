@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-17 01:39+0000\n"
-"PO-Revision-Date: 2023-11-07 21:26+0100\n"
+"PO-Revision-Date: 2023-11-11 01:10+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -1153,7 +1153,7 @@ msgstr ""
 #: monitorswidget.cpp:130 notificationmonitor.cpp:133
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Propiedaes"
 
 #: monitorswidget.cpp:138 notificationmonitor.cpp:475
 #, kde-format
