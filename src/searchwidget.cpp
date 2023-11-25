@@ -48,7 +48,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     hbox->addWidget(new QLabel(i18n("Search store:"), this));
     mStoreCombo = new KComboBox(this);
-    mStoreCombo->setObjectName(QStringLiteral("SearchStoreCombo"));
+    mStoreCombo->setObjectName(QLatin1StringView("SearchStoreCombo"));
     hbox->addWidget(mStoreCombo);
     hbox->addStretch();
     auto button = new QPushButton(i18n("Search"), this);
@@ -56,7 +56,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     layout->addLayout(hbox);
 
     mVSplitter = new QSplitter(Qt::Vertical);
-    mVSplitter->setObjectName(QStringLiteral("SearchVSplitter"));
+    mVSplitter->setObjectName(QLatin1StringView("SearchVSplitter"));
     auto w = new QWidget;
     auto vbox = new QVBoxLayout(w);
     vbox->addWidget(new QLabel(i18n("Search query:"), this));
@@ -65,7 +65,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mVSplitter->addWidget(w);
 
     mHSplitter = new QSplitter(Qt::Horizontal);
-    mHSplitter->setObjectName(QStringLiteral("SearchHSplitter"));
+    mHSplitter->setObjectName(QLatin1StringView("SearchHSplitter"));
     w = new QWidget;
     vbox = new QVBoxLayout(w);
     vbox->addWidget(new QLabel(i18n("Results (Documents):"), this));

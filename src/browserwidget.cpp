@@ -86,14 +86,14 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     auto layout = new QVBoxLayout(this);
 
     auto splitter = new QSplitter(Qt::Horizontal, this);
-    splitter->setObjectName(QStringLiteral("collectionSplitter"));
+    splitter->setObjectName(QLatin1StringView("collectionSplitter"));
     layout->addWidget(splitter);
 
     auto splitter2 = new QSplitter(Qt::Vertical, this);
-    splitter2->setObjectName(QStringLiteral("ffvSplitter"));
+    splitter2->setObjectName(QLatin1StringView("ffvSplitter"));
 
     mCollectionView = new Akonadi::EntityTreeView(xmlGuiWindow, this);
-    mCollectionView->setObjectName(QStringLiteral("CollectionView"));
+    mCollectionView->setObjectName(QLatin1StringView("CollectionView"));
     mCollectionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     splitter2->addWidget(mCollectionView);
 
@@ -104,7 +104,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     splitter->addWidget(splitter2);
 
     auto tagRecorder = new ChangeRecorder(this);
-    tagRecorder->setObjectName(QStringLiteral("tagRecorder"));
+    tagRecorder->setObjectName(QLatin1StringView("tagRecorder"));
     tagRecorder->setTypeMonitored(Monitor::Tags);
     tagRecorder->setChangeRecordingEnabled(false);
     mTagView = new QTreeView(this);
@@ -120,7 +120,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 
     // monitor collection changes
     mBrowserMonitor = new ChangeRecorder(this);
-    mBrowserMonitor->setObjectName(QStringLiteral("collectionMonitor"));
+    mBrowserMonitor->setObjectName(QLatin1StringView("collectionMonitor"));
     mBrowserMonitor->setSession(session);
     mBrowserMonitor->setCollectionMonitored(Collection::root());
     mBrowserMonitor->fetchCollection(true);
@@ -168,7 +168,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     favoritesView->setModel(favoritesModel);
 
     auto splitter3 = new QSplitter(Qt::Vertical, this);
-    splitter3->setObjectName(QStringLiteral("itemSplitter"));
+    splitter3->setObjectName(QLatin1StringView("itemSplitter"));
     splitter->addWidget(splitter3);
 
     auto itemViewParent = new QWidget(this);
@@ -396,7 +396,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
         mMonitor->deleteLater(); // might be the one calling us
     }
     mMonitor = new Monitor(this);
-    mMonitor->setObjectName(QStringLiteral("itemMonitor"));
+    mMonitor->setObjectName(QLatin1StringView("itemMonitor"));
     mMonitor->setItemMonitored(item);
     mMonitor->itemFetchScope().fetchFullPayload();
     mMonitor->itemFetchScope().fetchAllAttributes();

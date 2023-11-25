@@ -42,7 +42,7 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     auto layout = new QVBoxLayout(this);
 
     auto tabWidget = new QTabWidget(this);
-    tabWidget->setObjectName(QStringLiteral("mainTab"));
+    tabWidget->setObjectName(QLatin1StringView("mainTab"));
     layout->addWidget(tabWidget);
 
     tabWidget->addTab(new AgentWidget(tabWidget), i18n("Agents"));

@@ -19,20 +19,20 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     , mSelectOnlyError(new QCheckBox(i18n("Show Only Errors"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
+    mSearchLineEdit->setObjectName(QLatin1StringView("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
 
-    mSelectOnlyError->setObjectName(QStringLiteral("selectonlyerror"));
+    mSelectOnlyError->setObjectName(QLatin1StringView("selectonlyerror"));
     mainLayout->addWidget(mSelectOnlyError);
     connect(mSelectOnlyError, &QCheckBox::toggled, this, &JobTrackerSearchWidget::selectOnlyErrorChanged);
 
-    mSelectColumn->setObjectName(QStringLiteral("selectcolumn"));
+    mSelectColumn->setObjectName(QLatin1StringView("selectcolumn"));
     mainLayout->addWidget(mSelectColumn);
     mSelectColumn->addItem(i18n("All Columns"), -1);
     mSelectColumn->addItem(i18n("Job ID"), 0);

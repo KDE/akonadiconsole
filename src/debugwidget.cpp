@@ -42,7 +42,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     layout->addWidget(cb);
 
     auto splitter = new QSplitter(Qt::Vertical, this);
-    splitter->setObjectName(QStringLiteral("debugSplitter"));
+    splitter->setObjectName(QLatin1StringView("debugSplitter"));
     layout->addWidget(splitter);
 
     mConnectionPage = new ConnectionPage(i18n("All"), splitter);

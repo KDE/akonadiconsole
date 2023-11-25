@@ -237,7 +237,7 @@ void NotificationModel::setEnabled(bool enable)
 {
     if (enable) {
         m_monitor = new Akonadi::Monitor(this);
-        m_monitor->setObjectName(QStringLiteral("notificationMonitor"));
+        m_monitor->setObjectName(QLatin1StringView("notificationMonitor"));
         m_monitor->setTypeMonitored(Akonadi::Monitor::Notifications);
         connect(m_monitor, &Akonadi::Monitor::debugNotification, this, &NotificationModel::slotNotify);
     } else if (m_monitor) {
