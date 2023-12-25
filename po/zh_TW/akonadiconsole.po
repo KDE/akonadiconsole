@@ -1,0 +1,2055 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the akonadiconsole package.
+#
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadiconsole\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-17 01:39+0000\n"
+"PO-Revision-Date: 2023-12-25 01:38+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kisaragi Hiu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mail@kisaragi-hiu.com"
+
+#: agentconfigdialog.cpp:33
+#, kde-format
+msgid "Save Configuration"
+msgstr "儲存設定"
+
+#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
+#: agentconfigdialog.cpp:34 dbbrowser.ui:28
+#, kde-format
+msgid "Refresh"
+msgstr "重新整理"
+
+#: agentconfigdialog.cpp:35
+#, kde-format
+msgid "Apply Configuration"
+msgstr "套用設定"
+
+#: agentconfigdialog.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Agent Configuration"
+msgstr "代理程式設定"
+
+#: agentwidget.cpp:93
+#, kde-format
+msgid "Configure"
+msgstr "設定"
+
+#: agentwidget.cpp:94
+#, kde-format
+msgid "Configure Natively..."
+msgstr "設定原生..."
+
+#: agentwidget.cpp:95
+#, kde-format
+msgid "Configure Remotely..."
+msgstr "設定遠端..."
+
+#. i18n: ectx: property (text), widget (QPushButton, syncButton)
+#: agentwidget.cpp:101 agentwidget.ui:240
+#, kde-format
+msgid "Synchronize"
+msgstr "同步"
+
+#: agentwidget.cpp:102
+#, kde-format
+msgid "Synchronize All"
+msgstr "同步全部"
+
+#: agentwidget.cpp:103
+#, kde-format
+msgid "Synchronize Collection Tree"
+msgstr "同步收藏樹"
+
+#: agentwidget.cpp:104
+#, kde-format
+msgid "Synchronize Tags"
+msgstr "同步標籤"
+
+#: agentwidget.cpp:110
+#, kde-format
+msgid "Synchronize Relations"
+msgstr "同步關係"
+
+#: agentwidget.cpp:199
+#, kde-format
+msgid "Do you really want to delete the selected agent instance?"
+msgid_plural "Do you really want to delete these %1 agent instances?"
+msgstr[0] "您確定要刪除這 %1 個代理程式實體嗎？"
+
+#: agentwidget.cpp:200
+#, kde-format
+msgid "Agent Deletion"
+msgstr "代理程式刪除"
+
+#: agentwidget.cpp:200
+#, kde-format
+msgid "Multiple Agent Deletion"
+msgstr "多重代理程式刪除"
+
+#: agentwidget.cpp:270
+#, kde-format
+msgctxt "@title:window"
+msgid "Resource Task List"
+msgstr "資源工作列表"
+
+#: agentwidget.cpp:294
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Notification Log"
+msgstr "變更通知紀錄"
+
+#: agentwidget.cpp:344
+#, kde-format
+msgid "Cloning agent failed: %1."
+msgstr "建立代理程式複本失敗：%1。"
+
+#: agentwidget.cpp:407
+#, kde-format
+msgid "Online"
+msgstr "上線"
+
+#: agentwidget.cpp:407
+#, kde-format
+msgid "Offline"
+msgstr "離線"
+
+#: agentwidget.cpp:411
+#, kde-format
+msgid "Idle"
+msgstr "閒置"
+
+#: agentwidget.cpp:414
+#, kde-format
+msgid "Running (%1%)"
+msgstr "執行中 (%1%)"
+
+#: agentwidget.cpp:417
+#, kde-format
+msgid "Broken"
+msgstr "毀損"
+
+#: agentwidget.cpp:420
+#, kde-format
+msgid "Not Configured"
+msgstr "未設定"
+
+#: agentwidget.cpp:423
+#, kde-format
+msgctxt ""
+"Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
+msgid "%1, %2"
+msgstr "%1，%2"
+
+#: agentwidget.cpp:439
+#, kde-format
+msgid "Add Agent..."
+msgstr "新增代理程式..."
+
+#: agentwidget.cpp:440
+#, kde-format
+msgid "Clone Agent"
+msgstr "建立代理程式複本"
+
+#: agentwidget.cpp:443
+#, kde-format
+msgid "Abort Activity"
+msgstr "中止活動"
+
+#: agentwidget.cpp:445
+#, kde-format
+msgid "Restart Agent"
+msgstr "重新啟動代理程式"
+
+#: agentwidget.cpp:448
+#, kde-format
+msgid "Toggle Online/Offline"
+msgstr "切換上線/離線"
+
+#: agentwidget.cpp:449
+#, kde-format
+msgid "Show task list"
+msgstr "顯示工作列表"
+
+#: agentwidget.cpp:450
+#, kde-format
+msgid "Show change-notification log"
+msgstr "顯示變更通知紀錄"
+
+#: agentwidget.cpp:452
+#, kde-format
+msgid "Remove Agent"
+msgstr "移除代理程式"
+
+#. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
+#: agentwidget.ui:37
+#, kde-format
+msgid "Details"
+msgstr "詳細資料"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
+#: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
+#, kde-format
+msgid "Identifier:"
+msgstr "識別子："
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: agentwidget.ui:69 tagpropertiesdialog.ui:65
+#, kde-format
+msgid "Type:"
+msgstr "類型："
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: agentwidget.ui:92
+#, kde-format
+msgid "Status:"
+msgstr "狀態："
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: agentwidget.ui:118
+#, kde-format
+msgid "Status Message:"
+msgstr "狀態訊息："
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: agentwidget.ui:144
+#, kde-format
+msgid "Capabilities:"
+msgstr "功能："
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: agentwidget.ui:170
+#, kde-format
+msgid "Mimetypes:"
+msgstr "MIME 類型："
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: agentwidget.ui:212
+#, kde-format
+msgid "Add..."
+msgstr "新增..."
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: agentwidget.ui:219 notificationmodel.cpp:94 notificationmodel.cpp:118
+#: notificationmodel.cpp:134 notificationmodel.cpp:144
+#: notificationmodel.cpp:156 notificationmonitor.cpp:176
+#: notificationmonitor.cpp:385 notificationmonitor.cpp:416
+#: notificationmonitor.cpp:444 notificationmonitor.cpp:468
+#, kde-format
+msgid "Remove"
+msgstr "移除"
+
+#. i18n: ectx: property (text), widget (QPushButton, configButton)
+#: agentwidget.ui:226
+#, kde-format
+msgid "Configure..."
+msgstr "設定..."
+
+#. i18n: ectx: property (text), widget (QPushButton, abortButton)
+#: agentwidget.ui:233
+#, kde-format
+msgid "Abort"
+msgstr "中止"
+
+#. i18n: ectx: property (text), widget (QPushButton, restartButton)
+#: agentwidget.ui:247
+#, kde-format
+msgctxt "restart the agent"
+msgid "Restart"
+msgstr "重新啟動"
+
+#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:74
+#: notificationmonitor.cpp:403
+#, kde-format
+msgid "Collection"
+msgstr "收藏"
+
+#: akonadibrowsermodel.cpp:70
+#, kde-format
+msgid "Subject"
+msgstr "主旨"
+
+#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#, kde-format
+msgid "Sender"
+msgstr "寄件者"
+
+#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:206
+#, kde-format
+msgid "Date"
+msgstr "日期"
+
+#. i18n: ectx: Menu (collection)
+#: akonadiconsoleui.rc:8
+#, kde-format
+msgid "&Collection"
+msgstr "收藏(&C)"
+
+#. i18n: ectx: Menu (item)
+#: akonadiconsoleui.rc:28
+#, kde-format
+msgid "&Item"
+msgstr "項目(&I)"
+
+#. i18n: ectx: Menu (cache)
+#: akonadiconsoleui.rc:36
+#, kde-format
+msgid "&Cache"
+msgstr "快取(&C)"
+
+#. i18n: ectx: Menu (server)
+#: akonadiconsoleui.rc:39
+#, kde-format
+msgid "&Server"
+msgstr "伺服器(&S)"
+
+#: browserwidget.cpp:177
+#, kde-format
+msgid "Generic"
+msgstr "一般"
+
+#: browserwidget.cpp:178
+#, kde-format
+msgid "Mail"
+msgstr "郵件"
+
+#: browserwidget.cpp:179
+#, kde-format
+msgid "Contacts"
+msgstr "聯絡人"
+
+#: browserwidget.cpp:180
+#, kde-format
+msgid "Calendar/Tasks"
+msgstr "行事曆/工作項目"
+
+#: browserwidget.cpp:240
+#, fuzzy, kde-format
+msgid "Cache only retrieval"
+msgstr "僅快取取得"
+
+#: browserwidget.cpp:472
+#, kde-format
+msgid "Failed to save changes: %1"
+msgstr "儲存變更失敗：%1"
+
+#: browserwidget.cpp:511
+#, kde-format
+msgid "Select XML file"
+msgstr "選擇 XML 檔案"
+
+#: browserwidget.cpp:549
+#, kde-format
+msgid "&Add tag..."
+msgstr "新增標籤(&A)..."
+
+#: browserwidget.cpp:551
+#, kde-format
+msgid "Add &subtag..."
+msgstr "新增子標籤(&S)..."
+
+#: browserwidget.cpp:553
+#, kde-format
+msgid "&Edit tag..."
+msgstr "編輯標籤(&E)..."
+
+#: browserwidget.cpp:558
+#, kde-format
+msgid "&Delete tag..."
+msgstr "刪除標籤(&D)..."
+
+#: browserwidget.cpp:572
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Tag"
+msgstr "新增標籤"
+
+#: browserwidget.cpp:587
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Subtag"
+msgstr "新增子標籤"
+
+#: browserwidget.cpp:598 browserwidget.cpp:615
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Tag"
+msgstr "修改標籤"
+
+#: browserwidget.cpp:624
+#, kde-format
+msgid "Do you really want to remove selected tag?"
+msgstr "您確定要移除所選的標籤嗎？"
+
+#: browserwidget.cpp:625
+#, kde-format
+msgid "Delete tag?"
+msgstr "刪除標籤？"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveButton)
+#: browserwidget_contentview.ui:30
+#, kde-format
+msgid "&Save"
+msgstr "儲存(&S)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: browserwidget_contentview.ui:41
+#, kde-format
+msgid "Payload"
+msgstr "負載 (payload)"
+
+#. i18n: ectx: property (text), widget (QLabel, unsupportedType)
+#: browserwidget_contentview.ui:81
+#, kde-format
+msgid "Unsupported Type"
+msgstr "不支援的類型"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
+#: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
+#: monitorswidget.cpp:114 monitorswidget.cpp:121 monitorswidget.cpp:154
+#: notificationmonitor.cpp:261 notificationmonitor.cpp:570
+#: notificationmonitor.cpp:595 tagpropertiesdialog.ui:76
+#, kde-format
+msgid "Attributes"
+msgstr "屬性"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
+#: browserwidget_contentview.ui:116 collectionattributespage.ui:23
+#: tagpropertiesdialog.ui:82
+#, kde-format
+msgid "New Attribute"
+msgstr "新增屬性"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, addAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, addRIDButton)
+#: browserwidget_contentview.ui:123 collectionattributespage.ui:30
+#: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
+#, kde-format
+msgid "&Add"
+msgstr "新增(&A)"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: browserwidget_contentview.ui:130 collectionattributespage.ui:40
+#, kde-format
+msgid "&Delete"
+msgstr "刪除(&D)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: browserwidget_contentview.ui:138
+#, kde-format
+msgid "Raw Payload"
+msgstr "原始負載"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
+#, kde-format
+msgid "Internals"
+msgstr "內部"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:178
+#, kde-format
+msgid "Unique ID:"
+msgstr "唯一代碼："
+
+#. i18n: ectx: property (text), widget (QLabel, id)
+#. i18n: ectx: property (text), widget (QLabel, revision)
+#. i18n: ectx: property (text), widget (QLabel, size)
+#. i18n: ectx: property (text), widget (QLabel, modificationtime)
+#: browserwidget_contentview.ui:191 browserwidget_contentview.ui:249
+#: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: browserwidget_contentview.ui:202
+#, kde-format
+msgid "Remote ID:"
+msgstr "遠端 ID："
+
+#. i18n: ectx: property (text), widget (QLabel, label_gid)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
+#, kde-format
+msgid "GID:"
+msgstr "GID："
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: browserwidget_contentview.ui:236
+#, kde-format
+msgid "Revision:"
+msgstr "修訂版："
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: browserwidget_contentview.ui:260
+#, kde-format
+msgid "Size:"
+msgstr "大小："
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: browserwidget_contentview.ui:284
+#, kde-format
+msgid "Last modification time:"
+msgstr "最後變更時間："
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: browserwidget_contentview.ui:308
+#, kde-format
+msgid "Mimetype:"
+msgstr "MIME 類型："
+
+#. i18n: ectx: property (text), widget (QLabel, mimeType)
+#: browserwidget_contentview.ui:321
+#, kde-format
+msgid "invalid/invalid"
+msgstr "無效/無效"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (KEditListWidget, flags)
+#. i18n: ectx: property (title), widget (KEditListWidget, tags)
+#: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:278
+#, kde-format
+msgid "Flags"
+msgstr "旗標"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:83
+#: notificationmonitor.cpp:279 notificationmonitor.cpp:490
+#, kde-format
+msgid "Tags"
+msgstr "標籤"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: browserwidget_itemview.ui:31
+#, kde-format
+msgctxt "model name"
+msgid "Model:"
+msgstr "型號："
+
+#: collectionaclpage.cpp:17
+#, kde-format
+msgid "ACL"
+msgstr "存取控制清單"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectionaclpage.ui:17
+#, kde-format
+msgid "Item Access Rights"
+msgstr "項目存取權"
+
+#. i18n: ectx: property (text), widget (QCheckBox, createItem)
+#. i18n: ectx: property (text), widget (QCheckBox, createCollection)
+#: collectionaclpage.ui:23 collectionaclpage.ui:67
+#, kde-format
+msgid "Create"
+msgstr "建立"
+
+#. i18n: ectx: property (text), widget (QCheckBox, changeItem)
+#. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
+#: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:90
+#: notificationmodel.cpp:114 notificationmodel.cpp:132
+#: notificationmodel.cpp:154 notificationmonitor.cpp:170
+#: notificationmonitor.cpp:379 notificationmonitor.cpp:441
+#: notificationmonitor.cpp:465
+#, kde-format
+msgid "Modify"
+msgstr "修改"
+
+#. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
+#. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
+#: collectionaclpage.ui:37 collectionaclpage.ui:81
+#, kde-format
+msgid "Delete"
+msgstr "刪除"
+
+#. i18n: ectx: property (text), widget (QCheckBox, linkItem)
+#: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
+#, kde-format
+msgid "Link"
+msgstr "連結"
+
+#. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
+#: collectionaclpage.ui:51 notificationmodel.cpp:98 notificationmonitor.cpp:182
+#, kde-format
+msgid "Unlink"
+msgstr "取消連結"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: collectionaclpage.ui:61
+#, kde-format
+msgid "Collection Access Rights"
+msgstr "收藏存取權"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: collectionaclpage.ui:91
+#, kde-format
+msgid ""
+"<b>Note: </b>These values are provided by the corresponding backend and are "
+"not intended to be changed by you, so be warned if something breaks when "
+"changing them nevertheless!"
+msgstr ""
+"<b>注意：</b>這些數值是相對應的後端所提供的，並非設計為給您變更的，所以警告您"
+"如果還是變更它們的話很有可能會有東西出問題！"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
+#, kde-format
+msgid "Attribute"
+msgstr "屬性"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
+#, kde-format
+msgid "Value"
+msgstr "數值"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
+#, kde-format
+msgid "Do not even think about changing anything in here!"
+msgstr "請不要變更這裡的任何東西！"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectioninternalspage.ui:28
+#, kde-format
+msgid "Identification"
+msgstr "識別"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: collectioninternalspage.ui:48
+#, kde-format
+msgid "Remote identifier:"
+msgstr "遠端識別子："
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: collectioninternalspage.ui:61
+#, kde-format
+msgid "Owner:"
+msgstr "擁有者："
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: collectioninternalspage.ui:75
+#, kde-format
+msgid "Remote Revision:"
+msgstr "遠端修訂版："
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:88
+#, kde-format
+msgid "Virtual:"
+msgstr "虛擬："
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
+#: collectioninternalspage.ui:106 collectioninternalspage.ui:115
+#, kde-format
+msgid "Content Types"
+msgstr "內容類型"
+
+#: connectionpage.cpp:37 logging.cpp:53
+#, kde-format
+msgid "Programs:"
+msgstr "程式："
+
+#: dbconsole.cpp:79
+#, kde-format
+msgid "Query #%1"
+msgstr "查詢 #%1"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
+#: dbconsoletab.ui:87
+#, kde-format
+msgid "Execute query"
+msgstr "執行查詢"
+
+#: debugmodel.cpp:144
+#, kde-format
+msgid "Direction"
+msgstr "方向"
+
+#: debugmodel.cpp:146 loggingmodel.cpp:116
+#, kde-format
+msgid "Message"
+msgstr "訊息"
+
+#: debugwidget.cpp:39
+#, kde-format
+msgid "Enable debugger"
+msgstr "啟用除錯器"
+
+#: debugwidget.cpp:48 notificationmonitor.cpp:575
+#, kde-format
+msgid "All"
+msgstr "全部"
+
+#: debugwidget.cpp:63
+#, kde-format
+msgid "Clear Information View"
+msgstr "清除資源檢視"
+
+#: debugwidget.cpp:64
+#, kde-format
+msgid "Clear Filtered Messages"
+msgstr "清除已過濾的訊息"
+
+#: debugwidget.cpp:65
+#, kde-format
+msgid "Clear All Messages"
+msgstr "清除所有訊息"
+
+#: debugwidget.cpp:66
+#, kde-format
+msgid "Save Filtered Messages ..."
+msgstr "儲存已過濾的訊息 ..."
+
+#: debugwidget.cpp:67
+#, kde-format
+msgid "Save All Messages ..."
+msgstr "儲存所有訊息 ..."
+
+#: instanceselector.cpp:44
+#, kde-format
+msgid "Connect"
+msgstr "連線"
+
+#: instanceselector.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Remote Akonadi Console (%1)"
+msgstr "遠端 Akonadi 控制台 (%1)"
+
+#: instanceselector.cpp:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Console (Instance: %1)"
+msgstr "Akonadi 控制台（實體：%1）"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: instanceselector.ui:20
+#, kde-format
+msgid ""
+"There are multiple instances of Akonadi running in the current D-Bus "
+"session. Please select the instance you want to connect to."
+msgstr ""
+"目前的 D-Bus 工作階段有多個 Akonadi 實體正在執行中。請選擇您要連線到哪個實"
+"體。"
+
+#: jobtracker.cpp:26
+#, kde-format
+msgid "Waiting"
+msgstr "等待中"
+
+#: jobtracker.cpp:28
+#, kde-format
+msgid "Running"
+msgstr "執行中"
+
+#: jobtracker.cpp:30 querydebugger.cpp:345
+#, kde-format
+msgid "Ended"
+msgstr "已結束"
+
+#: jobtracker.cpp:32
+#, kde-format
+msgid "Failed: %1"
+msgstr "已失敗：%1"
+
+#: jobtracker.cpp:34
+#, kde-format
+msgid "Unknown state!"
+msgstr "未知狀態！"
+
+#: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:38
+#, kde-format
+msgid "Job ID"
+msgstr "工作代碼"
+
+#: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:39
+#, kde-format
+msgid "Created"
+msgstr "已建立"
+
+#: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:40
+#, kde-format
+msgid "Wait time"
+msgstr "等待時間"
+
+#: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:41
+#, kde-format
+msgid "Job duration"
+msgstr "工作時長"
+
+#: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:42
+#, kde-format
+msgid "Job Type"
+msgstr "工作型態"
+
+#: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:43
+#, kde-format
+msgid "State"
+msgstr "狀態"
+
+#: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:44 logging.cpp:60
+#: loggingmodel.cpp:139
+#, kde-format
+msgid "Info"
+msgstr "資訊"
+
+#: jobtrackersearchwidget.cpp:19
+#, kde-format
+msgid "Show Only Errors"
+msgstr "只顯示錯誤"
+
+#: jobtrackersearchwidget.cpp:27
+#, kde-format
+msgid "Search..."
+msgstr "搜尋…"
+
+#: jobtrackersearchwidget.cpp:37
+#, kde-format
+msgid "All Columns"
+msgstr "所有欄位"
+
+#: jobtrackerwidget.cpp:73
+#, kde-format
+msgid "Save to file..."
+msgstr "儲存到檔案..."
+
+#: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
+#, kde-format
+msgid "Clear View"
+msgstr "清除檢視"
+
+#: jobtrackerwidget.cpp:107
+#, kde-format
+msgid "Copy Info"
+msgstr "複製資訊"
+
+#: jobtrackerwidget.cpp:109
+#, kde-format
+msgid "Collapse All"
+msgstr "全部收起"
+
+#: jobtrackerwidget.cpp:110
+#, kde-format
+msgid "Expand All"
+msgstr "全部展開"
+
+#: logging.cpp:44
+#, kde-format
+msgid "Enable"
+msgstr "啟用"
+
+#: logging.cpp:56 notificationmonitor.cpp:62
+#, kde-format
+msgid "Types:"
+msgstr "類型："
+
+#: logging.cpp:59 loggingmodel.cpp:137
+#, kde-format
+msgid "Debug"
+msgstr "除錯"
+
+#: logging.cpp:61 loggingmodel.cpp:141
+#, kde-format
+msgid "Warning"
+msgstr "警告"
+
+#: logging.cpp:62 loggingmodel.cpp:143
+#, kde-format
+msgid "Critical"
+msgstr "嚴重"
+
+#: logging.cpp:63 loggingmodel.cpp:145
+#, kde-format
+msgid "Fatal"
+msgstr "嚴重錯誤"
+
+#: logging.cpp:64
+#, kde-format
+msgid "Categories:"
+msgstr "分類："
+
+#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:91
+#, kde-format
+msgid "Save to File..."
+msgstr "儲存到檔案..."
+
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
+#, kde-format
+msgid "Error"
+msgstr "錯誤"
+
+#: logging.cpp:136 notificationmonitor.cpp:608
+#, kde-format
+msgid "Failed to open file: %1"
+msgstr "開啟檔案失敗：%1"
+
+#: loggingmodel.cpp:104
+#, kde-format
+msgid "Time"
+msgstr "時間"
+
+#: loggingmodel.cpp:106
+#, kde-format
+msgid "Program"
+msgstr "程式"
+
+#: loggingmodel.cpp:108 notificationmodel.cpp:208 notificationmonitor.cpp:141
+#: notificationmonitor.cpp:254
+#, kde-format
+msgid "Type"
+msgstr "類型"
+
+#: loggingmodel.cpp:110
+#, kde-format
+msgid "Category"
+msgstr "分類"
+
+#: loggingmodel.cpp:112
+#, kde-format
+msgid "File"
+msgstr "檔案"
+
+#: loggingmodel.cpp:114
+#, kde-format
+msgid "Function"
+msgstr "函式"
+
+#: loggingmodel.cpp:154 loggingmodel.cpp:170
+#, kde-format
+msgid "%1:%2"
+msgstr "%1：%2"
+
+#: main.cpp:27
+#, kde-format
+msgid "Akonadi Console"
+msgstr "Akonadi 控制台"
+
+#: main.cpp:29
+#, kde-format
+msgid "The Management and Debugging Console for Akonadi"
+msgstr "Akonadi 用的管理與除錯控制台"
+
+#: main.cpp:31
+#, kde-format
+msgid "(c) 2006-2023 the Akonadi developer"
+msgstr "(c) 2006-2023 Akonadi 開發團隊"
+
+#: main.cpp:35 main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "作者"
+
+#: mainwidget.cpp:48
+#, kde-format
+msgid "Agents"
+msgstr "代理程式"
+
+#: mainwidget.cpp:50
+#, kde-format
+msgid "Browser"
+msgstr "瀏覽器"
+
+#: mainwidget.cpp:51
+#, kde-format
+msgid "Debugger"
+msgstr "除錯器"
+
+#: mainwidget.cpp:52
+#, kde-format
+msgid "Logging"
+msgstr "紀錄"
+
+#: mainwidget.cpp:53
+#, kde-format
+msgid "DB Browser"
+msgstr "DB 瀏覽器"
+
+#: mainwidget.cpp:54
+#, kde-format
+msgid "DB Console"
+msgstr "DB 控制台"
+
+#: mainwidget.cpp:55
+#, kde-format
+msgid "Query Debugger"
+msgstr "查詢除錯器"
+
+#: mainwidget.cpp:56
+#, kde-format
+msgid "Enable job tracker"
+msgstr "啟用工作追蹤器"
+
+#: mainwidget.cpp:56
+#, kde-format
+msgid "Job Tracker"
+msgstr "工作追蹤器"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Enable tracking of Resource Schedulers"
+msgstr "啟用資源排程器的追蹤"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Resources Schedulers"
+msgstr "資源排程器"
+
+#: mainwidget.cpp:58
+#, kde-format
+msgid "Notification Monitor"
+msgstr "通知監控"
+
+#: mainwidget.cpp:60
+#, kde-format
+msgid "Item Search"
+msgstr "項目搜尋"
+
+#: mainwidget.cpp:62
+#, kde-format
+msgid "Monitors"
+msgstr "監控"
+
+#: mainwidget.cpp:65
+#, kde-format
+msgid "Dump to XML..."
+msgstr "傾印到 XML..."
+
+#: mainwidget.cpp:69
+#, kde-format
+msgid "Clear Akonadi Cache"
+msgstr "清除 Akonadi 快取"
+
+#: mainwidget.cpp:73
+#, kde-format
+msgid "Start Server"
+msgstr "啟動伺服器"
+
+#: mainwidget.cpp:77
+#, kde-format
+msgid "Stop Server"
+msgstr "停止伺服器"
+
+#: mainwidget.cpp:81
+#, kde-format
+msgid "Restart Server"
+msgstr "重新啟動伺服器"
+
+#: mainwindow.cpp:33
+#, kde-format
+msgid ""
+"<p>Akonadi Console is purely a development tool. It allows you to view and "
+"change internal data structures of Akonadi. You should only change data in "
+"here if you know what you are doing, otherwise you risk damaging or losing "
+"your personal information management data.<br/><b>Use at your own risk!</b></"
+"p>"
+msgstr ""
+"<p>Akonadi 控制台完全是一個開發用的工具。它讓您可以檢視並變更 Akonadi 的內部"
+"資料結構。您只有在您了解自己在做什麼的時候才應該在此變更資料，否則您很有可能"
+"會損壞或喪失您的 PIM 個人資料管理系統的所有資料。<br/><b>請了解風險之後再使"
+"用！</b></p>"
+
+#: monitorsmodel.cpp:97
+#, kde-format
+msgid "Session/Subscriber"
+msgstr "工作階段/訂閱者"
+
+#: monitorswidget.cpp:77 notificationmodel.cpp:72 notificationmonitor.cpp:228
+#: notificationmonitor.cpp:484
+#, kde-format
+msgid "Items"
+msgstr "項目"
+
+#: monitorswidget.cpp:80 notificationmonitor.cpp:487
+#, kde-format
+msgid "Collections"
+msgstr "收藏"
+
+#: monitorswidget.cpp:86 notificationmonitor.cpp:289
+#: notificationmonitor.cpp:493
+#, kde-format
+msgid "Relations"
+msgstr "關係"
+
+#: monitorswidget.cpp:89
+#, kde-format
+msgid "Subscribers"
+msgstr "訂閱者"
+
+#: monitorswidget.cpp:92
+#, kde-format
+msgid "Notification"
+msgstr "通知"
+
+#: monitorswidget.cpp:101 notificationmonitor.cpp:566
+#, kde-format
+msgid "List Filter"
+msgstr "列出過濾器"
+
+#: monitorswidget.cpp:102 notificationmonitor.cpp:567
+#, kde-format
+msgid "Include Statistics"
+msgstr "包含統計資料"
+
+#: monitorswidget.cpp:103 notificationmonitor.cpp:199
+#: notificationmonitor.cpp:398 notificationmonitor.cpp:451
+#: notificationmonitor.cpp:568 tagpropertiesdialog.cpp:78
+#, kde-format
+msgid "Resource"
+msgstr "資源"
+
+#: monitorswidget.cpp:104
+#, kde-format
+msgid "Content MimeTypes"
+msgstr "內容 MIME 類型"
+
+#: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
+#, fuzzy, kde-format
+msgid "Ancestor Retrieval"
+msgstr "祖先取得"
+
+#: monitorswidget.cpp:109
+#, kde-format
+msgid "Ancestor Fetch Scope"
+msgstr "祖先抓取範圍"
+
+#: monitorswidget.cpp:115 monitorswidget.cpp:122 notificationmonitor.cpp:571
+#: notificationmonitor.cpp:592
+#, kde-format
+msgid "Fetch ID Only"
+msgstr "僅抓取 ID"
+
+#: monitorswidget.cpp:116
+#, kde-format
+msgid "Ignore Retrieval Error"
+msgstr "忽略取得時的錯誤"
+
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133 searchwidget.cpp:204
+#, kde-format
+msgid "Values"
+msgstr "數值"
+
+#: monitorswidget.cpp:130 notificationmonitor.cpp:133
+#, kde-format
+msgid "Properties"
+msgstr "內容"
+
+#: monitorswidget.cpp:138 notificationmonitor.cpp:475
+#, kde-format
+msgid "Subscriber"
+msgstr "訂閱者"
+
+#: monitorswidget.cpp:139
+#, kde-format
+msgid "Session ID"
+msgstr "工作階段 ID"
+
+#: monitorswidget.cpp:140
+#, kde-format
+msgid "Monitored Collections:"
+msgstr "監控中收藏："
+
+#: monitorswidget.cpp:141
+#, kde-format
+msgid "Monitored Items:"
+msgstr "監控中項目："
+
+#: monitorswidget.cpp:142
+#, kde-format
+msgid "Monitored Tags:"
+msgstr "監控中標籤："
+
+#: monitorswidget.cpp:143
+#, kde-format
+msgid "Monitored Types:"
+msgstr "監控中類型："
+
+#: monitorswidget.cpp:144
+#, kde-format
+msgid "Monitored Mime Types:"
+msgstr "監控中 MIME 類型："
+
+#: monitorswidget.cpp:145
+#, kde-format
+msgid "Monitored Resources:"
+msgstr "監控中資源："
+
+#: monitorswidget.cpp:146
+#, kde-format
+msgid "Ignored Sessions:"
+msgstr "忽略的工作階段："
+
+#: monitorswidget.cpp:147
+#, kde-format
+msgid "All Monitored:"
+msgstr "所有監控中："
+
+#: monitorswidget.cpp:148
+#, kde-format
+msgid "Is Exclusive:"
+msgstr ""
+
+#: monitorswidget.cpp:150 notificationmonitor.cpp:513
+#, kde-format
+msgid "Item Fetch Scope"
+msgstr ""
+
+#: monitorswidget.cpp:152
+#, kde-format
+msgid "Payload Parts"
+msgstr "負載部分"
+
+#: monitorswidget.cpp:153 notificationmonitor.cpp:532
+#, kde-format
+msgid "Full Payload"
+msgstr "完整負載"
+
+#: monitorswidget.cpp:155 notificationmonitor.cpp:533
+#, kde-format
+msgid "All Attributes"
+msgstr "所有屬性"
+
+#: monitorswidget.cpp:156
+#, kde-format
+msgid "Cache only"
+msgstr "僅快取"
+
+#: monitorswidget.cpp:157
+#, kde-format
+msgid "Check for Cached Payloads Parts Only"
+msgstr "只為已快取的負載部分檢查"
+
+#: monitorswidget.cpp:159
+#, kde-format
+msgid "Fetch mtime"
+msgstr ""
+
+#: monitorswidget.cpp:160 notificationmonitor.cpp:540
+#, kde-format
+msgid "Fetch GID"
+msgstr "抓取 GID"
+
+#: monitorswidget.cpp:161 notificationmonitor.cpp:587
+#, kde-format
+msgid "Ignore Retrieval Errors"
+msgstr "忽略取得時的錯誤"
+
+#: monitorswidget.cpp:162
+#, kde-format
+msgid "Fetch Change Since"
+msgstr ""
+
+#: monitorswidget.cpp:163
+#, kde-format
+msgid "Fetch RID"
+msgstr ""
+
+#: monitorswidget.cpp:164 notificationmonitor.cpp:541
+#, kde-format
+msgid "Fetch Tags"
+msgstr "抓取標籤"
+
+#: monitorswidget.cpp:167
+#, kde-format
+msgid "Collection Fetch Scope"
+msgstr "收藏抓取範圍"
+
+#: monitorswidget.cpp:170 notificationmonitor.cpp:590
+#, kde-format
+msgid "Tag Fetch Scope"
+msgstr "標籤抓取範圍"
+
+#: notificationmodel.cpp:76 notificationmonitor.cpp:452
+#, kde-format
+msgid "Tag"
+msgstr "標籤"
+
+#: notificationmodel.cpp:78 notificationmonitor.cpp:423
+#, kde-format
+msgid "Relation"
+msgstr "關係"
+
+#: notificationmodel.cpp:80
+#, kde-format
+msgid "Subscription"
+msgstr "訂閱"
+
+#: notificationmodel.cpp:88 notificationmodel.cpp:112 notificationmodel.cpp:130
+#: notificationmodel.cpp:142 notificationmodel.cpp:152
+#: notificationmonitor.cpp:167 notificationmonitor.cpp:376
+#: notificationmonitor.cpp:413 notificationmonitor.cpp:438
+#: notificationmonitor.cpp:462
+#, kde-format
+msgid "Add"
+msgstr "新增"
+
+#: notificationmodel.cpp:92 notificationmodel.cpp:116
+#: notificationmonitor.cpp:173 notificationmonitor.cpp:382
+#, kde-format
+msgid "Move"
+msgstr "移動"
+
+#: notificationmodel.cpp:100 notificationmonitor.cpp:185
+#, kde-format
+msgid "ModifyFlags"
+msgstr "修改旗標"
+
+#: notificationmodel.cpp:102 notificationmonitor.cpp:188
+#, kde-format
+msgid "ModifyTags"
+msgstr "修改標籤"
+
+#: notificationmodel.cpp:104 notificationmonitor.cpp:191
+#, kde-format
+msgid "ModifyRelations"
+msgstr "修改關係"
+
+#: notificationmodel.cpp:106 notificationmodel.cpp:136
+#: notificationmodel.cpp:146 notificationmodel.cpp:158
+#: notificationmonitor.cpp:194 notificationmonitor.cpp:419
+#: notificationmonitor.cpp:447 notificationmonitor.cpp:471
+#, kde-format
+msgid "InvalidOp"
+msgstr "無效的操作"
+
+#: notificationmodel.cpp:120 notificationmonitor.cpp:388
+#, kde-format
+msgid "Subscribe"
+msgstr "訂閱"
+
+#: notificationmodel.cpp:122 notificationmonitor.cpp:391
+#, kde-format
+msgid "Unsubscribe"
+msgstr "取消訂閱"
+
+#: notificationmodel.cpp:124 notificationmonitor.cpp:394
+#, kde-format
+msgid "InvalidIp"
+msgstr ""
+
+#: notificationmodel.cpp:162
+#, kde-format
+msgid "Unknown"
+msgstr "未知"
+
+#: notificationmodel.cpp:210 notificationmonitor.cpp:198
+#: notificationmonitor.cpp:397 notificationmonitor.cpp:422
+#: notificationmonitor.cpp:450 notificationmonitor.cpp:474
+#, kde-format
+msgid "Operation"
+msgstr "操作"
+
+#: notificationmodel.cpp:212
+#, kde-format
+msgid "IDs"
+msgstr "ID"
+
+#: notificationmodel.cpp:214
+#, kde-format
+msgid "Session"
+msgstr "工作階段"
+
+#: notificationmodel.cpp:216 notificationmonitor.cpp:142
+#, kde-format
+msgid "Listeners"
+msgstr ""
+
+#: notificationmonitor.cpp:57
+#, kde-format
+msgid "Enable notification monitor"
+msgstr "啟用通知監控"
+
+#: notificationmonitor.cpp:140
+#, kde-format
+msgid "Timestamp"
+msgstr "時間戳記"
+
+#: notificationmonitor.cpp:200 notificationmonitor.cpp:399
+#, kde-format
+msgid "Parent Collection"
+msgstr "親收藏"
+
+#: notificationmonitor.cpp:201
+#, kde-format
+msgid "Parent Dest Col"
+msgstr ""
+
+#: notificationmonitor.cpp:202 notificationmonitor.cpp:401
+#, kde-format
+msgid "Destination Resource"
+msgstr "目的地資源"
+
+#: notificationmonitor.cpp:203
+#, kde-format
+msgid "Item Parts"
+msgstr "項目部分"
+
+#: notificationmonitor.cpp:204
+#, kde-format
+msgid "Added Flags"
+msgstr "已新增旗標"
+
+#: notificationmonitor.cpp:205
+#, kde-format
+msgid "Removed Flags"
+msgstr "已移除的旗標"
+
+#: notificationmonitor.cpp:206
+#, kde-format
+msgid "Added Tags"
+msgstr "已新增標籤"
+
+#: notificationmonitor.cpp:207
+#, kde-format
+msgid "Removed Tags"
+msgstr "已移除的標籤"
+
+#: notificationmonitor.cpp:217
+#, kde-format
+msgid "Removed Relations"
+msgstr "已移除的關係"
+
+#: notificationmonitor.cpp:226
+#, kde-format
+msgid "Must retrieve"
+msgstr "必須取得"
+
+#: notificationmonitor.cpp:240
+#, kde-format
+msgid "id"
+msgstr "id"
+
+#: notificationmonitor.cpp:241
+#, kde-format
+msgid "remoteId"
+msgstr "遠端 ID"
+
+#: notificationmonitor.cpp:242
+#, kde-format
+msgid "name"
+msgstr "名稱"
+
+#: notificationmonitor.cpp:244 notificationmonitor.cpp:299
+#: notificationmonitor.cpp:347
+#, kde-format
+msgid "Ancestor"
+msgstr "祖先"
+
+#: notificationmonitor.cpp:251 notificationmonitor.cpp:333
+#, kde-format
+msgid "ID"
+msgstr "ID"
+
+#: notificationmonitor.cpp:252 notificationmonitor.cpp:334
+#, kde-format
+msgid "Parent ID"
+msgstr ""
+
+#: notificationmonitor.cpp:253 notificationmonitor.cpp:274
+#, kde-format
+msgid "GID"
+msgstr "GID"
+
+#: notificationmonitor.cpp:255 notificationmonitor.cpp:337
+#: notificationmonitor.cpp:429 tagpropertiesdialog.cpp:78
+#, kde-format
+msgid "Remote ID"
+msgstr "遠端 ID"
+
+#: notificationmonitor.cpp:270
+#, kde-format
+msgid "Revision"
+msgstr "修訂版"
+
+#: notificationmonitor.cpp:271
+#, kde-format
+msgid "ParentID"
+msgstr ""
+
+#: notificationmonitor.cpp:272
+#, kde-format
+msgid "RemoteID"
+msgstr "遠端 ID"
+
+#: notificationmonitor.cpp:273
+#, kde-format
+msgid "RemoteRev"
+msgstr ""
+
+#: notificationmonitor.cpp:275 notificationmonitor.cpp:321
+#: notificationmonitor.cpp:343
+#, kde-format
+msgid "Size"
+msgstr "大小"
+
+#: notificationmonitor.cpp:276
+#, kde-format
+msgid "MimeType"
+msgstr "MIME 類型"
+
+#: notificationmonitor.cpp:277
+#, kde-format
+msgid "MTime"
+msgstr ""
+
+#: notificationmonitor.cpp:288
+#, kde-format
+msgid "VRefs"
+msgstr ""
+
+#: notificationmonitor.cpp:305
+#, kde-format
+msgid "Parts"
+msgstr "部分"
+
+#: notificationmonitor.cpp:312
+#, kde-format
+msgid "External"
+msgstr "外部"
+
+#: notificationmonitor.cpp:315
+#, kde-format
+msgid "Internal"
+msgstr "內部"
+
+#: notificationmonitor.cpp:318
+#, kde-format
+msgid "Foreign"
+msgstr "外來"
+
+#: notificationmonitor.cpp:322
+#, kde-format
+msgid "Storage Type"
+msgstr "儲存類型"
+
+#: notificationmonitor.cpp:323
+#, kde-format
+msgid "Version"
+msgstr "版本"
+
+#: notificationmonitor.cpp:324
+#, kde-format
+msgid "Data"
+msgstr "資料"
+
+#: notificationmonitor.cpp:335
+#, kde-format
+msgid "Name"
+msgstr "名稱"
+
+#: notificationmonitor.cpp:336
+#, kde-format
+msgid "Mime Types"
+msgstr "MIME 類型"
+
+#: notificationmonitor.cpp:338
+#, kde-format
+msgid "Remote Revision"
+msgstr "遠端修訂版"
+
+#: notificationmonitor.cpp:339
+#, kde-format
+msgid "Statistics"
+msgstr "統計資料"
+
+#: notificationmonitor.cpp:341
+#, kde-format
+msgid "Count"
+msgstr "計數"
+
+#: notificationmonitor.cpp:342
+#, kde-format
+msgid "Unseen"
+msgstr ""
+
+#: notificationmonitor.cpp:345
+#, kde-format
+msgid "Search Query"
+msgstr "搜尋內容"
+
+#: notificationmonitor.cpp:346
+#, kde-format
+msgid "Search Collections"
+msgstr "搜尋收藏"
+
+#: notificationmonitor.cpp:353
+#, kde-format
+msgid "Cache Policy"
+msgstr "快取策略"
+
+#: notificationmonitor.cpp:355
+#, kde-format
+msgid "Inherit"
+msgstr "繼承"
+
+#: notificationmonitor.cpp:356
+#, kde-format
+msgid "Check Interval"
+msgstr "檢查間隔"
+
+#: notificationmonitor.cpp:357
+#, kde-format
+msgid "Cache Timeout"
+msgstr "快取逾時"
+
+#: notificationmonitor.cpp:358
+#, kde-format
+msgid "Sync on Demand"
+msgstr "要求時同步"
+
+#: notificationmonitor.cpp:359
+#, kde-format
+msgid "Local Parts"
+msgstr "本地部分"
+
+#: notificationmonitor.cpp:364 notificationmonitor.cpp:557
+#, kde-format
+msgid "Enabled"
+msgstr "已啟用"
+
+#: notificationmonitor.cpp:365
+#, kde-format
+msgid "DisplayPref"
+msgstr "顯示設定"
+
+#: notificationmonitor.cpp:366
+#, kde-format
+msgid "SyncPref"
+msgstr "同步設定"
+
+#: notificationmonitor.cpp:367
+#, kde-format
+msgid "IndexPref"
+msgstr "索引設定"
+
+#: notificationmonitor.cpp:368
+#, kde-format
+msgid "Virtual"
+msgstr "虛擬"
+
+#: notificationmonitor.cpp:400
+#, kde-format
+msgid "Parent Dest Collection"
+msgstr ""
+
+#: notificationmonitor.cpp:402
+#, kde-format
+msgid "Changed Parts"
+msgstr "變更的部分"
+
+#: notificationmonitor.cpp:425
+#, kde-format
+msgid "Left ID"
+msgstr ""
+
+#: notificationmonitor.cpp:426
+#, kde-format
+msgid "Left MimeType"
+msgstr ""
+
+#: notificationmonitor.cpp:427
+#, kde-format
+msgid "Right ID"
+msgstr ""
+
+#: notificationmonitor.cpp:428
+#, kde-format
+msgid "Right MimeType"
+msgstr ""
+
+#: notificationmonitor.cpp:476
+#, kde-format
+msgid "Monitored Collections"
+msgstr "監控中收藏"
+
+#: notificationmonitor.cpp:477
+#, kde-format
+msgid "Monitored Items"
+msgstr "監控中項目"
+
+#: notificationmonitor.cpp:478
+#, kde-format
+msgid "Monitored Tags"
+msgstr "監控中標籤"
+
+#: notificationmonitor.cpp:496
+#, kde-format
+msgid "Subscriptions"
+msgstr "訂閱"
+
+#: notificationmonitor.cpp:499
+#, kde-format
+msgid "Changes"
+msgstr "變更"
+
+#: notificationmonitor.cpp:502
+#, kde-format
+msgid "No Type"
+msgstr "無類型"
+
+#: notificationmonitor.cpp:506
+#, kde-format
+msgid "Monitored Types"
+msgstr "監控中類型"
+
+#: notificationmonitor.cpp:507
+#, kde-format
+msgid "Monitored Mime Types"
+msgstr "監控中 MIME 類型"
+
+#: notificationmonitor.cpp:508
+#, kde-format
+msgid "Monitored Resources"
+msgstr "監控中資源"
+
+#: notificationmonitor.cpp:509
+#, kde-format
+msgid "Ignored Sessions"
+msgstr "忽略的工作階段"
+
+#: notificationmonitor.cpp:510
+#, kde-format
+msgid "All Monitored"
+msgstr "所有已監控"
+
+#: notificationmonitor.cpp:511
+#, kde-format
+msgid "Exclusive"
+msgstr ""
+
+#: notificationmonitor.cpp:515
+#, kde-format
+msgid "Requested Parts"
+msgstr ""
+
+#: notificationmonitor.cpp:516
+#, kde-format
+msgid "Changed Since"
+msgstr ""
+
+#: notificationmonitor.cpp:520
+#, kde-format
+msgid "No Ancestor"
+msgstr "無祖先"
+
+#: notificationmonitor.cpp:523
+#, kde-format
+msgid "Parent  Ancestor"
+msgstr ""
+
+#: notificationmonitor.cpp:526
+#, kde-format
+msgid "All Ancestors"
+msgstr "所有祖先"
+
+#: notificationmonitor.cpp:529
+#, kde-format
+msgid "Ancestor Depth"
+msgstr "祖先深度"
+
+#: notificationmonitor.cpp:530
+#, kde-format
+msgid "Cache Only"
+msgstr "僅快取"
+
+#: notificationmonitor.cpp:531
+#, kde-format
+msgid "Check Cached Payload Parts Only"
+msgstr "只檢查已快取的負載部分"
+
+#: notificationmonitor.cpp:534
+#, kde-format
+msgid "Fetch Size"
+msgstr ""
+
+#: notificationmonitor.cpp:535
+#, kde-format
+msgid "Fetch MTime"
+msgstr ""
+
+#: notificationmonitor.cpp:536
+#, kde-format
+msgid "Fetch Remote Revision"
+msgstr ""
+
+#: notificationmonitor.cpp:537
+#, kde-format
+msgid "Ignore Errors"
+msgstr "忽略錯誤"
+
+#: notificationmonitor.cpp:538
+#, kde-format
+msgid "Fetch Flags"
+msgstr ""
+
+#: notificationmonitor.cpp:539 notificationmonitor.cpp:593
+#, kde-format
+msgid "Fetch RemoteID"
+msgstr ""
+
+#: notificationmonitor.cpp:542
+#, kde-format
+msgid "Fetch Relations"
+msgstr ""
+
+#: notificationmonitor.cpp:543
+#, kde-format
+msgid "Fetch VRefs"
+msgstr ""
+
+#: notificationmonitor.cpp:551
+#, kde-format
+msgid "No Filter"
+msgstr "沒有過濾器"
+
+#: notificationmonitor.cpp:554
+#, kde-format
+msgid "Display"
+msgstr "顯示"
+
+#: notificationmonitor.cpp:560
+#, kde-format
+msgid "Index"
+msgstr "索引"
+
+#: notificationmonitor.cpp:563
+#, kde-format
+msgid "Sync"
+msgstr "同步"
+
+#: notificationmonitor.cpp:569
+#, kde-format
+msgid "Content Mime Types"
+msgstr "內容 MIME 類型"
+
+#: notificationmonitor.cpp:578
+#, kde-format
+msgid "Parent"
+msgstr ""
+
+#: notificationmonitor.cpp:581
+#, kde-format
+msgid "None"
+msgstr "無"
+
+#: notificationmonitor.cpp:585
+#, kde-format
+msgid "Ancestor Fetch ID Only"
+msgstr "祖先僅抓取 ID"
+
+#: notificationmonitor.cpp:586
+#, kde-format
+msgid "Ancestor Attributes"
+msgstr "祖先屬性"
+
+#: notificationmonitor.cpp:594
+#, kde-format
+msgid "Fetch All Attributes"
+msgstr "抓取所有屬性"
+
+#: querydebugger.cpp:341
+#, kde-format
+msgid "Name / Query"
+msgstr "名稱 / 查詢"
+
+#: querydebugger.cpp:343
+#, kde-format
+msgid "Started"
+msgstr "已開始"
+
+#: querydebugger.cpp:347
+#, kde-format
+msgid "Duration"
+msgstr "時長"
+
+#: querydebugger.cpp:525
+#, kde-format
+msgid "Query"
+msgstr "查詢"
+
+#: querydebugger.cpp:527
+#, kde-format
+msgid "Duration [ms]"
+msgstr "時長 [ms]"
+
+#: querydebugger.cpp:529
+#, kde-format
+msgid "Calls"
+msgstr "呼叫"
+
+#: querydebugger.cpp:531
+#, kde-format
+msgid "Avg. Duration [ms]"
+msgstr "平均時長 [ms]"
+
+#: querydebugger.cpp:653
+#, kde-format
+msgid "Affected Rows:"
+msgstr "受影響的列："
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
+#: querydebugger.ui:17
+#, kde-format
+msgid "Enable query debugging (slows down server!)"
+msgstr "啟用查詢除錯（會讓伺服器變慢！）"
+
+#. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
+#: querydebugger.ui:28
+#, kde-format
+msgid "Query Sequence"
+msgstr "查詢序列"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
+#: querydebugger.ui:48
+#, kde-format
+msgid "Query Tree"
+msgstr "查詢樹狀"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
+#: querydebugger.ui:72
+#, kde-format
+msgid "Save To File"
+msgstr "儲存到檔案"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
+#: queryviewdialog.ui:14
+#, kde-format
+msgid "Query View"
+msgstr "查詢檢視"
+
+#. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
+#: queryviewdialog.ui:28
+#, kde-format
+msgid "Query:"
+msgstr "查詢："
+
+#. i18n: ectx: property (text), widget (QLabel, queryLbl)
+#. i18n: ectx: property (text), widget (QLabel, resultsLbl)
+#: queryviewdialog.ui:41 queryviewdialog.ui:67
+#, kde-format
+msgid "TextLabel"
+msgstr "文字標籤"
+
+#. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
+#: queryviewdialog.ui:60
+#, kde-format
+msgid "Results:"
+msgstr "結果："
+
+#: searchwidget.cpp:49
+#, kde-format
+msgid "Search store:"
+msgstr "搜尋儲存："
+
+#: searchwidget.cpp:54 searchwidget.cpp:170
+#, kde-format
+msgid "Search"
+msgstr "搜尋"
+
+#: searchwidget.cpp:62
+#, kde-format
+msgid "Search query:"
+msgstr "搜尋內容："
+
+#: searchwidget.cpp:71
+#, kde-format
+msgid "Results (Documents):"
+msgstr "結果（文件）："
+
+#: searchwidget.cpp:81
+#, kde-format
+msgid "Document:"
+msgstr "文件："
+
+#: searchwidget.cpp:91
+#, kde-format
+msgid "Item:"
+msgstr "項目："
+
+#: searchwidget.cpp:153
+#, kde-format
+msgid "Xapian error"
+msgstr "Xapian 錯誤"
+
+#: searchwidget.cpp:159
+#, kde-format
+msgid "No Xapian database is opened"
+msgstr "沒有開啟 Xapian 資料庫"
+
+#: searchwidget.cpp:170
+#, kde-format
+msgid "No element found."
+msgstr "沒有找到元素。"
+
+#: searchwidget.cpp:196
+#, kde-format
+msgid "Term/Value"
+msgstr "字詞/數值"
+
+#: searchwidget.cpp:196
+#, kde-format
+msgid "WDF/Slot"
+msgstr ""
+
+#: searchwidget.cpp:198
+#, kde-format
+msgid "Terms"
+msgstr "字詞"
+
+#: searchwidget.cpp:225
+#, kde-format
+msgid "Error on fetching item"
+msgstr "取得項目時錯誤"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: tagpropertiesdialog.ui:21
+#, kde-format
+msgid "General"
+msgstr "一般"
+
+#. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
+#: tagpropertiesdialog.ui:51
+#, kde-format
+msgid "Parent Tag Id:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
+#: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
+#, kde-format
+msgid "&Remove"
+msgstr "移除(&R)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
+#: tagpropertiesdialog.ui:107
+#, kde-format
+msgid "Remote Identifiers"
+msgstr "遠端識別子"
