@@ -108,7 +108,7 @@ if (MSVC)
 endif()
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.6.0 KF 5.246.0)
+ecm_set_disabled_deprecation_versions(QT 6.6.0 KF 5.247.0)
 
 
 include_directories(${akonadiconsole_SOURCE_DIR} ${akonadiconsole_BINARY_DIR} ${XAPIAN_INCLUDE_DIR})
