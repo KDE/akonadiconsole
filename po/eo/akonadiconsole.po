@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-17 01:39+0000\n"
-"PO-Revision-Date: 2023-09-24 19:32+0100\n"
+"POT-Creation-Date: 2024-01-04 01:34+0000\n"
+"PO-Revision-Date: 2024-01-03 15:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -962,8 +962,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "La Administrado kaj Sencimiga Konzolo por Akonadi"
 
 #: main.cpp:31
-#, kde-format
-msgid "(c) 2006-2023 the Akonadi developer"
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2023 the Akonadi developer"
+msgid "(c) 2006-2024 the Akonadi developer"
 msgstr "(c) 2006-2023 la Akonadi-programisto"
 
 #: main.cpp:35 main.cpp:36
@@ -1586,7 +1587,7 @@ msgstr "Statistiko"
 #: notificationmonitor.cpp:341
 #, kde-format
 msgid "Count"
-msgstr "grafo"
+msgstr "Nombro"
 
 #: notificationmonitor.cpp:342
 #, kde-format
