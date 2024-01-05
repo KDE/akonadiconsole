@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2023-09-22 06:31+0200\n"
+"PO-Revision-Date: 2024-01-04 03:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -962,10 +962,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadi-ის მართვისა და გამართვის კონსოლი"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2023 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "(c) 2006-2023 Akonadi-ის პროგრამისტები"
+msgstr "(c) 2006-2024 Akonadi-ის პროგრამისტები"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
