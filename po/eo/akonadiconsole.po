@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2024-01-04 09:36+0100\n"
+"PO-Revision-Date: 2024-01-05 21:07+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -989,7 +989,7 @@ msgstr "Erarserĉilo"
 #: mainwidget.cpp:52
 #, kde-format
 msgid "Logging"
-msgstr "Enhavo"
+msgstr "Protokolado"
 
 #: mainwidget.cpp:53
 #, kde-format
