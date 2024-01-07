@@ -1,18 +1,18 @@
-# SPDX-FileCopyrightText: 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2023-10-11 16:50+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@kde.org>\n"
-"Language-Team: fr\n"
+"PO-Revision-Date: 2024-01-05 11:19+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -960,10 +960,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "La console de gestion et de débogage pour Akonadi"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2023 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "(c) 2006-2023 L'équipe de développement de Akonadi"
+msgstr "(c) 2006 - 2024 L'équipe de développement de Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
