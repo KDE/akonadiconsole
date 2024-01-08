@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2023-09-24 08:01+0200\n"
+"PO-Revision-Date: 2024-01-07 11:58+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -963,10 +963,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Konsola do zarządzania i diagnozowania Akonadi"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2023 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "(c) 2006-2023 Programiści Akonadi"
+msgstr "(c) 2006-2024 Programiści Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
