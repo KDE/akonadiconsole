@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2023-12-25 01:38+0900\n"
+"PO-Revision-Date: 2024-01-15 00:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -345,9 +345,9 @@ msgid "Calendar/Tasks"
 msgstr "行事曆/工作項目"
 
 #: browserwidget.cpp:240
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cache only retrieval"
-msgstr "僅快取取得"
+msgstr "僅暫存取得動作"
 
 #: browserwidget.cpp:472
 #, kde-format
@@ -959,10 +959,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadi 用的管理與除錯控制台"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2023 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "(c) 2006-2023 Akonadi 開發團隊"
+msgstr "(c) 2006-2024 Akonadi 開發團隊"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
@@ -1133,7 +1132,7 @@ msgid "Content MimeTypes"
 msgstr "內容 MIME 類型"
 
 #: monitorswidget.cpp:105 monitorswidget.cpp:158 notificationmonitor.cpp:584
-#, fuzzy, kde-format
+#, kde-format
 msgid "Ancestor Retrieval"
 msgstr "祖先取得"
 
@@ -1216,12 +1215,12 @@ msgstr "所有監控中："
 #: monitorswidget.cpp:148
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "是排除式的："
 
 #: monitorswidget.cpp:150 notificationmonitor.cpp:513
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "項目抓取範圍"
 
 #: monitorswidget.cpp:152
 #, kde-format
@@ -1251,7 +1250,7 @@ msgstr "只為已快取的負載部分檢查"
 #: monitorswidget.cpp:159
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "抓取變更時間"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:540
 #, kde-format
@@ -1266,12 +1265,12 @@ msgstr "忽略取得時的錯誤"
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "抓取何時以後的變更"
 
 #: monitorswidget.cpp:163
 #, kde-format
 msgid "Fetch RID"
-msgstr ""
+msgstr "抓取 RID"
 
 #: monitorswidget.cpp:164 notificationmonitor.cpp:541
 #, kde-format
@@ -1794,12 +1793,12 @@ msgstr ""
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "抓取變更時間"
 
 #: notificationmonitor.cpp:536
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "抓取遠端修訂版"
 
 #: notificationmonitor.cpp:537
 #, kde-format
@@ -1809,22 +1808,22 @@ msgstr "忽略錯誤"
 #: notificationmonitor.cpp:538
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "抓取旗標"
 
 #: notificationmonitor.cpp:539 notificationmonitor.cpp:593
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "抓取遠端 ID"
 
 #: notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch Relations"
-msgstr ""
+msgstr "抓取關係"
 
 #: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "抓取 VRef"
 
 #: notificationmonitor.cpp:551
 #, kde-format
@@ -1854,7 +1853,7 @@ msgstr "內容 MIME 類型"
 #: notificationmonitor.cpp:578
 #, kde-format
 msgid "Parent"
-msgstr ""
+msgstr "親"
 
 #: notificationmonitor.cpp:581
 #, kde-format
@@ -2040,7 +2039,7 @@ msgstr "一般"
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "親標籤 ID："
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
