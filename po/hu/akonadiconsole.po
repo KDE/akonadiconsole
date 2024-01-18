@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2024-01-15 21:50+0100\n"
+"PO-Revision-Date: 2024-01-17 11:05+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -111,145 +111,145 @@ msgstr "Többszörös ügynöktörlés"
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr ""
+msgstr "Erőforrás feladatlista"
 
 #: agentwidget.cpp:294
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr ""
+msgstr "Változásértesítési napló"
 
 #: agentwidget.cpp:344
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "Ügynök klónozása sikertelen: %1"
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: agentwidget.cpp:407
 #, kde-format
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 #: agentwidget.cpp:411
 #, kde-format
 msgid "Idle"
-msgstr ""
+msgstr "Inaktív"
 
 #: agentwidget.cpp:414
 #, kde-format
 msgid "Running (%1%)"
-msgstr ""
+msgstr "Fut (%1%)"
 
 #: agentwidget.cpp:417
 #, kde-format
 msgid "Broken"
-msgstr ""
+msgstr "Törött"
 
 #: agentwidget.cpp:420
 #, kde-format
 msgid "Not Configured"
-msgstr ""
+msgstr "Nincs beállítva"
 
 #: agentwidget.cpp:423
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr ""
+msgstr "Ügynök hozzáadása…"
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Clone Agent"
-msgstr ""
+msgstr "Ügynök klónozása"
 
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Abort Activity"
-msgstr ""
+msgstr "Tevékenység megszakítása"
 
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Restart Agent"
-msgstr ""
+msgstr "Ügynök újraindítása"
 
 #: agentwidget.cpp:448
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "Online/offline kapcsolása"
 
 #: agentwidget.cpp:449
 #, kde-format
 msgid "Show task list"
-msgstr ""
+msgstr "Feladatlista megjelenítése"
 
 #: agentwidget.cpp:450
 #, kde-format
 msgid "Show change-notification log"
-msgstr ""
+msgstr "Változásértesítési napló megjelenítése"
 
 #: agentwidget.cpp:452
 #, kde-format
 msgid "Remove Agent"
-msgstr ""
+msgstr "Ügynök eltávolítása"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Részletek"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
 #: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
 #, kde-format
 msgid "Identifier:"
-msgstr ""
+msgstr "Azonosító:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: agentwidget.ui:69 tagpropertiesdialog.ui:65
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "Típus:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: agentwidget.ui:92
 #, kde-format
 msgid "Status:"
-msgstr ""
+msgstr "Állapot:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: agentwidget.ui:118
 #, kde-format
 msgid "Status Message:"
-msgstr ""
+msgstr "Állapotüzenet:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr ""
+msgstr "Képességek:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
 #, kde-format
 msgid "Mimetypes:"
-msgstr ""
+msgstr "MIME-típusok:"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Hozzáadás…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:94 notificationmodel.cpp:118
@@ -259,172 +259,172 @@ msgstr ""
 #: notificationmonitor.cpp:444 notificationmonitor.cpp:468
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr ""
+msgstr "Beállítás…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
 #, kde-format
 msgid "Abort"
-msgstr ""
+msgstr "Megszakítás"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
 #: agentwidget.ui:247
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"
-msgstr ""
+msgstr "Újraindítás"
 
 #: akonadibrowsermodel.cpp:69 notificationmodel.cpp:74
 #: notificationmonitor.cpp:403
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Gyűjtemény"
 
 #: akonadibrowsermodel.cpp:70
 #, kde-format
 msgid "Subject"
-msgstr ""
+msgstr "Tárgy"
 
 #: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
-msgstr ""
+msgstr "Feladó"
 
 #: akonadibrowsermodel.cpp:70 notificationmodel.cpp:206
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Dátum"
 
 #. i18n: ectx: Menu (collection)
 #: akonadiconsoleui.rc:8
 #, kde-format
 msgid "&Collection"
-msgstr ""
+msgstr "&Gyűjtemény"
 
 #. i18n: ectx: Menu (item)
 #: akonadiconsoleui.rc:28
 #, kde-format
 msgid "&Item"
-msgstr ""
+msgstr "&Elem"
 
 #. i18n: ectx: Menu (cache)
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr ""
+msgstr "G&yorsítótár"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
 #, kde-format
 msgid "&Server"
-msgstr ""
+msgstr "&Kiszolgáló"
 
 #: browserwidget.cpp:177
 #, kde-format
 msgid "Generic"
-msgstr ""
+msgstr "Általános"
 
 #: browserwidget.cpp:178
 #, kde-format
 msgid "Mail"
-msgstr ""
+msgstr "Levelezés"
 
 #: browserwidget.cpp:179
 #, kde-format
 msgid "Contacts"
-msgstr ""
+msgstr "Névjegyek"
 
 #: browserwidget.cpp:180
 #, kde-format
 msgid "Calendar/Tasks"
-msgstr ""
+msgstr "Naptár/Feladatok"
 
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr ""
+msgstr "Csak a gyorsítótárból történő lekérdezés"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr ""
+msgstr "A módosítások mentése sikertelen: %1"
 
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr ""
+msgstr "XML-fájl kiválasztása"
 
 #: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
-msgstr ""
+msgstr "Címke hozzá&adása…"
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr ""
+msgstr "A&lcímke hozzáadása…"
 
 #: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
-msgstr ""
+msgstr "Címke sz&erkesztése…"
 
 #: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
-msgstr ""
+msgstr "Címke &törlése…"
 
 #: browserwidget.cpp:572
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr ""
+msgstr "Címke hozzáadása"
 
 #: browserwidget.cpp:587
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr ""
+msgstr "Alcímke hozzáadása"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr ""
+msgstr "Címke módosítása"
 
 #: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "Biztosan törölni szeretné a kijelölt címkét?"
 
 #: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
-msgstr ""
+msgstr "Törli a címkét?"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
 #: browserwidget_contentview.ui:30
 #, kde-format
 msgid "&Save"
-msgstr ""
+msgstr "Menté&s"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: browserwidget_contentview.ui:41
 #, kde-format
 msgid "Payload"
-msgstr ""
+msgstr "Hasznos adat"
 
 #. i18n: ectx: property (text), widget (QLabel, unsupportedType)
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr ""
+msgstr "Nem támogatott típus"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -434,7 +434,7 @@ msgstr ""
 #: notificationmonitor.cpp:595 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
-msgstr ""
+msgstr "Attribútumok"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
@@ -442,7 +442,7 @@ msgstr ""
 #: tagpropertiesdialog.ui:82
 #, kde-format
 msgid "New Attribute"
-msgstr ""
+msgstr "Új attribútum"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
@@ -452,32 +452,32 @@ msgstr ""
 #: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
 #, kde-format
 msgid "&Add"
-msgstr ""
+msgstr "Hozzá&adás"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: browserwidget_contentview.ui:130 collectionattributespage.ui:40
 #, kde-format
 msgid "&Delete"
-msgstr ""
+msgstr "&Törlés"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr ""
+msgstr "Nyers hasznos adat"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr ""
+msgstr "Belsők"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
 #, kde-format
 msgid "Unique ID:"
-msgstr ""
+msgstr "Egyedi azonosító:"
 
 #. i18n: ectx: property (text), widget (QLabel, id)
 #. i18n: ectx: property (text), widget (QLabel, revision)
@@ -487,50 +487,50 @@ msgstr ""
 #: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
 #, kde-format
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: browserwidget_contentview.ui:202
 #, kde-format
 msgid "Remote ID:"
-msgstr ""
+msgstr "Távoli azonosító:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
 #, kde-format
 msgid "GID:"
-msgstr ""
+msgstr "GID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: browserwidget_contentview.ui:236
 #, kde-format
 msgid "Revision:"
-msgstr ""
+msgstr "Verzió:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: browserwidget_contentview.ui:260
 #, kde-format
 msgid "Size:"
-msgstr ""
+msgstr "Méret:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr ""
+msgstr "Utolsó módosítás ideje:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
 #, kde-format
 msgid "Mimetype:"
-msgstr ""
+msgstr "MIME-típus:"
 
 #. i18n: ectx: property (text), widget (QLabel, mimeType)
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr ""
+msgstr "érvénytelen/érvénytelen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -539,39 +539,39 @@ msgstr ""
 #: browserwidget_contentview.ui:370 notificationmonitor.cpp:278
 #, kde-format
 msgid "Flags"
-msgstr ""
+msgstr "Jelzők"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:83
 #: notificationmonitor.cpp:279 notificationmonitor.cpp:490
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Címkék"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: browserwidget_itemview.ui:31
 #, kde-format
 msgctxt "model name"
 msgid "Model:"
-msgstr ""
+msgstr "Modell:"
 
 #: collectionaclpage.cpp:17
 #, kde-format
 msgid "ACL"
-msgstr ""
+msgstr "ACL"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectionaclpage.ui:17
 #, kde-format
 msgid "Item Access Rights"
-msgstr ""
+msgstr "Elemhozzáférési jogosultságok"
 
 #. i18n: ectx: property (text), widget (QCheckBox, createItem)
 #. i18n: ectx: property (text), widget (QCheckBox, createCollection)
 #: collectionaclpage.ui:23 collectionaclpage.ui:67
 #, kde-format
 msgid "Create"
-msgstr ""
+msgstr "Létrehozás"
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
@@ -582,32 +582,32 @@ msgstr ""
 #: notificationmonitor.cpp:465
 #, kde-format
 msgid "Modify"
-msgstr ""
+msgstr "Módosítás"
 
 #. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
 #. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
 #: collectionaclpage.ui:37 collectionaclpage.ui:81
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:96 notificationmonitor.cpp:179
 #, kde-format
 msgid "Link"
-msgstr ""
+msgstr "Linkelés"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:98 notificationmonitor.cpp:182
 #, kde-format
 msgid "Unlink"
-msgstr ""
+msgstr "Szétbontás"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr ""
+msgstr "Gyűjtemény hozzáférési jogosultságok"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -617,138 +617,141 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>Megjegyzés: </b>Ezeket az értékeket a megfelelő háttérprogram biztosítja, "
+"és nem arra szolgálnak, hogy megváltoztassa ezeket, ezért figyeleljen arra, "
+"hogy valami eltörhet, ha ennek ellenére megváltoztatja azokat."
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Attribute"
-msgstr ""
+msgstr "Attribútum"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:71
 #, kde-format
 msgid "Value"
-msgstr ""
+msgstr "Érték"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr ""
+msgstr "Eszébe ne jusson bármit megváltoztatni itt!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
 #, kde-format
 msgid "Identification"
-msgstr ""
+msgstr "Azonosítás"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr ""
+msgstr "Távoli azonosító:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
 #, kde-format
 msgid "Owner:"
-msgstr ""
+msgstr "Tulajdonos:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr ""
+msgstr "Távoli verzió:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
 #, kde-format
 msgid "Virtual:"
-msgstr ""
+msgstr "Virtuális:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
 #: collectioninternalspage.ui:106 collectioninternalspage.ui:115
 #, kde-format
 msgid "Content Types"
-msgstr ""
+msgstr "Tartalomtípusok"
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
 msgid "Programs:"
-msgstr ""
+msgstr "Programok:"
 
 #: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
-msgstr ""
+msgstr "Lekérdezés #%1"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr ""
+msgstr "Lekérdezés végrehajtása"
 
 #: debugmodel.cpp:144
 #, kde-format
 msgid "Direction"
-msgstr ""
+msgstr "Irány"
 
 #: debugmodel.cpp:146 loggingmodel.cpp:116
 #, kde-format
 msgid "Message"
-msgstr ""
+msgstr "Üzenet"
 
 #: debugwidget.cpp:39
 #, kde-format
 msgid "Enable debugger"
-msgstr ""
+msgstr "Hibakereső bekapcsolása"
 
 #: debugwidget.cpp:48 notificationmonitor.cpp:575
 #, kde-format
 msgid "All"
-msgstr ""
+msgstr "Összes"
 
 #: debugwidget.cpp:63
 #, kde-format
 msgid "Clear Information View"
-msgstr ""
+msgstr "Információs nézet törlése"
 
 #: debugwidget.cpp:64
 #, kde-format
 msgid "Clear Filtered Messages"
-msgstr ""
+msgstr "Szűrt üzenetek törlése"
 
 #: debugwidget.cpp:65
 #, kde-format
 msgid "Clear All Messages"
-msgstr ""
+msgstr "Összes üzenet törlése"
 
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "Szűrt üzenetek mentése…"
 
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr ""
+msgstr "Összes üzenet mentése…"
 
 #: instanceselector.cpp:44
 #, kde-format
 msgid "Connect"
-msgstr ""
+msgstr "Kapcsolódás"
 
 #: instanceselector.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Távoli Akonadi konzol (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Akonadi konzol (példány: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -761,7 +764,7 @@ msgstr ""
 #: jobtracker.cpp:26
 #, kde-format
 msgid "Waiting"
-msgstr ""
+msgstr "Várakozás"
 
 #: jobtracker.cpp:28
 #, kde-format
