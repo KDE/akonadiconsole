@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2023-12-25 01:38+0900\n"
+"PO-Revision-Date: 2024-01-21 00:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1354,7 +1354,7 @@ msgstr "取消訂閱"
 #: notificationmodel.cpp:124 notificationmonitor.cpp:394
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "無效 IP"
 
 #: notificationmodel.cpp:162
 #, kde-format
@@ -1381,7 +1381,7 @@ msgstr "工作階段"
 #: notificationmodel.cpp:216 notificationmonitor.cpp:142
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "監聽者"
 
 #: notificationmonitor.cpp:57
 #, kde-format
@@ -1401,7 +1401,7 @@ msgstr "親收藏"
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "親目標收藏"
 
 #: notificationmonitor.cpp:202 notificationmonitor.cpp:401
 #, kde-format
@@ -1472,7 +1472,7 @@ msgstr "ID"
 #: notificationmonitor.cpp:252 notificationmonitor.cpp:334
 #, kde-format
 msgid "Parent ID"
-msgstr ""
+msgstr "親 ID"
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:274
 #, kde-format
@@ -1493,7 +1493,7 @@ msgstr "修訂版"
 #: notificationmonitor.cpp:271
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "親 ID"
 
 #: notificationmonitor.cpp:272
 #, kde-format
@@ -1503,7 +1503,7 @@ msgstr "遠端 ID"
 #: notificationmonitor.cpp:273
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "遠端修訂版"
 
 #: notificationmonitor.cpp:275 notificationmonitor.cpp:321
 #: notificationmonitor.cpp:343
@@ -1519,12 +1519,12 @@ msgstr "MIME 類型"
 #: notificationmonitor.cpp:277
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "變更時間"
 
 #: notificationmonitor.cpp:288
 #, kde-format
 msgid "VRefs"
-msgstr ""
+msgstr "虛擬參照"
 
 #: notificationmonitor.cpp:305
 #, kde-format
@@ -1589,7 +1589,7 @@ msgstr "計數"
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "未讀"
 
 #: notificationmonitor.cpp:345
 #, kde-format
@@ -1659,7 +1659,7 @@ msgstr "虛擬"
 #: notificationmonitor.cpp:400
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "親目標收藏"
 
 #: notificationmonitor.cpp:402
 #, kde-format
@@ -1669,22 +1669,22 @@ msgstr "變更的部分"
 #: notificationmonitor.cpp:425
 #, kde-format
 msgid "Left ID"
-msgstr ""
+msgstr "左方 ID"
 
 #: notificationmonitor.cpp:426
 #, kde-format
 msgid "Left MimeType"
-msgstr ""
+msgstr "左方 MIME 類型"
 
 #: notificationmonitor.cpp:427
 #, kde-format
 msgid "Right ID"
-msgstr ""
+msgstr "右方 ID"
 
 #: notificationmonitor.cpp:428
 #, kde-format
 msgid "Right MimeType"
-msgstr ""
+msgstr "右方 MIME 類型"
 
 #: notificationmonitor.cpp:476
 #, kde-format
@@ -1744,17 +1744,17 @@ msgstr "所有已監控"
 #: notificationmonitor.cpp:511
 #, kde-format
 msgid "Exclusive"
-msgstr ""
+msgstr "排除式"
 
 #: notificationmonitor.cpp:515
 #, kde-format
 msgid "Requested Parts"
-msgstr ""
+msgstr "要求的部分"
 
 #: notificationmonitor.cpp:516
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "從何時以來更新"
 
 #: notificationmonitor.cpp:520
 #, kde-format
@@ -1764,7 +1764,7 @@ msgstr "無祖先"
 #: notificationmonitor.cpp:523
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "親祖先"
 
 #: notificationmonitor.cpp:526
 #, kde-format
@@ -1789,7 +1789,7 @@ msgstr "只檢查已快取的負載部分"
 #: notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "抓取大小"
 
 #: notificationmonitor.cpp:535
 #, kde-format
@@ -2018,7 +2018,7 @@ msgstr "字詞/數值"
 #: searchwidget.cpp:196
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/槽"
 
 #: searchwidget.cpp:198
 #, kde-format
