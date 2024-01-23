@@ -92,7 +92,6 @@ msgstr ""
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
 msgstr[0] ""
-msgstr[1] ""
 
 #: agentwidget.cpp:200
 #, kde-format
