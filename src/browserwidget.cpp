@@ -318,7 +318,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     } else if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         mIncidenceView->setItem(item);
         contentUi.stack->setCurrentWidget(mIncidenceView->parentWidget());
-    } else if (item.mimeType() == QLatin1String("message/rfc822") || item.mimeType() == QLatin1String("message/news")) {
+    } else if (item.mimeType() == QLatin1StringView("message/rfc822") || item.mimeType() == QLatin1String("message/news")) {
         mMailView->setMessageItem(item, MimeTreeParser::Force);
         contentUi.stack->setCurrentWidget(mMailView->parentWidget());
     } else
@@ -375,7 +375,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     QStringList tags;
     const auto itemTags = item.tags();
     for (const Tag &tag : itemTags) {
-        tags << QLatin1String(tag.gid());
+        tags << QLatin1StringView(tag.gid());
     }
     contentUi.tags->setItems(tags);
 

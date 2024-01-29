@@ -93,7 +93,7 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
             break;
         }
     }
-    return rv.join(QLatin1String(", "));
+    return rv.join(QLatin1StringView(", "));
 }
 
 void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs)

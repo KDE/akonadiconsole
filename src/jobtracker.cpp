@@ -81,7 +81,7 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     new JobTrackerAdaptor(this);
     const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
-    QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name), this, QDBusConnection::ExportAdaptors);
+    QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1StringView(name), this, QDBusConnection::ExportAdaptors);
 }
 
 JobTracker::~JobTracker() = default;

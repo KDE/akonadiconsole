@@ -81,18 +81,18 @@ void TagPropertiesDialog::setupUi()
 
     if (mTag.isValid()) {
         ui.idLabel->setText(QString::number(mTag.id()));
-        ui.typeEdit->setText(QLatin1String(mTag.type()));
-        ui.gidEdit->setText(QLatin1String(mTag.gid()));
+        ui.typeEdit->setText(QLatin1StringView(mTag.type()));
+        ui.gidEdit->setText(QLatin1StringView(mTag.gid()));
         ui.parentIdLabel->setText(QString::number(mTag.parent().id()));
 
         for (int i = 0; i < attributes.count(); ++i) {
             QModelIndex index = mAttributesModel->index(i, 0);
             Q_ASSERT(index.isValid());
-            mAttributesModel->setData(index, QLatin1String(attributes[i]->type()));
+            mAttributesModel->setData(index, QLatin1StringView(attributes[i]->type()));
             mAttributesModel->item(i, 0)->setEditable(false);
             index = mAttributesModel->index(i, 1);
             Q_ASSERT(index.isValid());
-            mAttributesModel->setData(index, QLatin1String(attributes[i]->serialized()));
+            mAttributesModel->setData(index, QLatin1StringView(attributes[i]->serialized()));
             mAttributesModel->item(i, 1)->setEditable(true);
         }
 
@@ -275,7 +275,7 @@ void TagPropertiesDialog::slotAccept()
         for (int i = 0; i < mRemovedRIDs.count(); ++i) {
             conds << QStringLiteral("name = ?");
         }
-        queryStr += conds.join(QLatin1String(" OR ")) + QLatin1Char(')');
+        queryStr += conds.join(QLatin1StringView(" OR ")) + QLatin1Char(')');
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
         for (const QString &removedRid : std::as_const(mRemovedRIDs)) {
@@ -297,7 +297,7 @@ void TagPropertiesDialog::slotAccept()
             for (int i = 0; i < mChangedRIDs.count(); ++i) {
                 conds << QStringLiteral("name = ?");
             }
-            queryStr += conds.join(QLatin1String(" OR "));
+            queryStr += conds.join(QLatin1StringView(" OR "));
             query.prepare(queryStr);
             for (const QString &res : std::as_const(mChangedRIDs)) {
                 query.addBindValue(res);

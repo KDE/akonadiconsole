@@ -379,7 +379,7 @@ public:
     {
         if (idx.isValid()) {
             QTextStream stream(&file);
-            stream << QStringLiteral("  |").repeated(depth) << QLatin1String("- ");
+            stream << QStringLiteral("  |").repeated(depth) << QLatin1StringView("- ");
 
             Node *node = reinterpret_cast<Node *>(idx.internalPointer());
             switch (node->type) {
@@ -552,7 +552,7 @@ public:
         const QueryInfo &info = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
 
         if (role == Qt::ToolTipRole) {
-            return QString(QLatin1String("<qt>") + info.query + QLatin1String("</qt>"));
+            return QString(QLatin1StringView("<qt>") + info.query + QLatin1String("</qt>"));
         }
 
         if (column == QueryColumn) {
@@ -649,7 +649,7 @@ public:
             q.replace(pos, 1, values.value(QStringLiteral(":%1").arg(i)).toString());
         }
         mUi->queryLbl->setText(q);
-        if (!q.startsWith(QLatin1String("SELECT"))) {
+        if (!q.startsWith(QLatin1StringView("SELECT"))) {
             mUi->resultsLabelLbl->setText(i18n("Affected Rows:"));
         }
         mUi->resultsLbl->setText(QString::number(resultsCount));

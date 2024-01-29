@@ -58,7 +58,7 @@ QString toString(const Container<T> &set)
     for (const auto &v : set) {
         rv << toString(v);
     }
-    return rv.join(QLatin1String(", "));
+    return rv.join(QLatin1StringView(", "));
 }
 
 inline void appendRow(QStandardItemModel *model, const QString &name, const QString &value)

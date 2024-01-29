@@ -380,7 +380,7 @@ void AgentWidget::cloneAgent(KJob *job)
         if (signature.startsWith("Introspect")) { // D-Bus stuff // krazy:exclude=strings
             continue;
         }
-        const QString methodName = QLatin1String(signature.left(signature.indexOf('(')));
+        const QString methodName = QLatin1StringView(signature.left(signature.indexOf('(')));
         const QDBusMessage reply = sourceIface.call(methodName);
         if (reply.arguments().count() != 1) {
             qCritical() << "call to method" << signature << "failed: " << reply.arguments() << reply.errorMessage();
@@ -422,8 +422,8 @@ void AgentWidget::currentChanged()
         }
         ui.statusLabel->setText(i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"", "%1, %2", onlineStatus, agentStatus));
         ui.statusMessageLabel->setText(instance.statusMessage());
-        ui.capabilitiesLabel->setText(instance.type().capabilities().join(QLatin1String(", ")));
-        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QLatin1String(", ")));
+        ui.capabilitiesLabel->setText(instance.type().capabilities().join(QLatin1StringView(", ")));
+        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QLatin1StringView(", ")));
     } else {
         ui.identifierLabel->setText(QString());
         ui.typeLabel->setText(QString());

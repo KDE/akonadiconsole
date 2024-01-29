@@ -94,7 +94,7 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
                 return setting.second;
             }
         } else if (index.column() == 2) {
-            return QLatin1String(setting.second.typeName());
+            return QLatin1StringView(setting.second.typeName());
         }
     }
     return {};
