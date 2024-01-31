@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-# Tommi Nieminen <translator@legisign.org>, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:48+0000\n"
-"PO-Revision-Date: 2023-04-14 17:23+0300\n"
+"PO-Revision-Date: 2024-01-29 17:39+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -93,8 +93,8 @@ msgstr "Tahdista suhteet"
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] "Haluatko varmasti poistaa valitun agentti-instanssin?"
-msgstr[1] "Haluatko varmasti poistaa nämä %1 agentti-instanssia?"
+msgstr[0] "Haluatko varmasti poistaa valitun agentti-ilmentymän?"
+msgstr[1] "Haluatko varmasti poistaa nämä %1 agentti-ilmentymää?"
 
 #: agentwidget.cpp:200
 #, kde-format
@@ -745,7 +745,7 @@ msgstr "Akonadi-etäkonsoli (%1)"
 #: instanceselector.cpp:90
 #, kde-format
 msgid "Akonadi Console (Instance: %1)"
-msgstr "Akonadi-konsoli (instanssi: %1)"
+msgstr "Akonadi-konsoli (ilmentymä: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
