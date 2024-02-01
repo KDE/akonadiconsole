@@ -552,7 +552,7 @@ public:
         const QueryInfo &info = (row < NUM_SPECIAL_ROWS) ? mSpecialRows[row] : mQueries.at(row - NUM_SPECIAL_ROWS);
 
         if (role == Qt::ToolTipRole) {
-            return QString(QLatin1StringView("<qt>") + info.query + QLatin1String("</qt>"));
+            return QString(QLatin1StringView("<qt>") + info.query + QLatin1StringView("</qt>"));
         }
 
         if (column == QueryColumn) {
