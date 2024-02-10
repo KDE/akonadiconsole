@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2024-01-04 16:14+0300\n"
+"PO-Revision-Date: 2024-02-09 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1018,7 +1018,7 @@ msgstr "İş İzleyici"
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr "Özkaynak Zamanlayıcı'ların izlenmesini etkinleştir"
+msgstr "Özkaynak Zamanlayıcı’ların izlenmesini etkinleştir"
 
 #: mainwidget.cpp:57
 #, kde-format
@@ -1043,7 +1043,7 @@ msgstr "Monitörler"
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr "XML'ye Dök..."
+msgstr "XML’ye Dök..."
 
 #: mainwidget.cpp:69
 #, kde-format
@@ -1074,7 +1074,7 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
-"<p>Akonadi Konsolu, tümüyle bir geliştirme aracıdır. Akonadi'nin iç veri "
+"<p>Akonadi Konsolu, tümüyle bir geliştirme aracıdır. Akonadi’nin iç veri "
 "yapılarını görüntülemenize ve değiştirmenize izin verir. Buradaki veriyi, "
 "yalnızca ne yaptığınızı biliyorsanız değiştirmelisiniz, yoksa kişisel bilgi "
 "yönetimi verinizi kaybetme riskiyle karşı karşıya kalabilirsiniz.<br/><b>Ne "
