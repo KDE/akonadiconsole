@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-04 01:34+0000\n"
-"PO-Revision-Date: 2024-02-09 17:45+0300\n"
+"PO-Revision-Date: 2024-03-13 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -57,12 +57,12 @@ msgstr "Yapılandır"
 #: agentwidget.cpp:94
 #, kde-format
 msgid "Configure Natively..."
-msgstr "Yerel Olarak Yapılandır..."
+msgstr "Yerel Olarak Yapılandır…"
 
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Remotely..."
-msgstr "Uzaktan Yapılandır..."
+msgstr "Uzaktan Yapılandır…"
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:101 agentwidget.ui:240
@@ -164,7 +164,7 @@ msgstr "%1, %2"
 #: agentwidget.cpp:439
 #, kde-format
 msgid "Add Agent..."
-msgstr "Aracı Ekle..."
+msgstr "Aracı Ekle…"
 
 #: agentwidget.cpp:440
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "MIME Türleri:"
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:94 notificationmodel.cpp:118
@@ -265,7 +265,7 @@ msgstr "Kaldır"
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr "Yapılandır..."
+msgstr "Yapılandır…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
@@ -363,22 +363,22 @@ msgstr "XML dosyası seç"
 #: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
-msgstr "&Etiket ekle..."
+msgstr "&Etiket Ekle…"
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr "&Alt etiket ekle..."
+msgstr "&Alt Etiket Ekle…"
 
 #: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
-msgstr "Etiketi &düzenle..."
+msgstr "Etiketi &Düzenle…"
 
 #: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
-msgstr "Etiketi &sil..."
+msgstr "Etiketi &Sil…"
 
 #: browserwidget.cpp:572
 #, kde-format
@@ -729,12 +729,12 @@ msgstr "Tüm İletileri Temizle"
 #: debugwidget.cpp:66
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr "Süzülen İletileri Kaydet..."
+msgstr "Süzülen İletileri Kaydet…"
 
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save All Messages ..."
-msgstr "Tüm İletileri Kaydet..."
+msgstr "Tüm İletileri Kaydet…"
 
 #: instanceselector.cpp:44
 #, kde-format
@@ -832,7 +832,7 @@ msgstr "Yalnızca Hataları Göster"
 #: jobtrackersearchwidget.cpp:27
 #, kde-format
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Ara…"
 
 #: jobtrackersearchwidget.cpp:37
 #, kde-format
@@ -842,7 +842,7 @@ msgstr "Tüm Sütunlar"
 #: jobtrackerwidget.cpp:73
 #, kde-format
 msgid "Save to file..."
-msgstr "Dosyaya kaydet..."
+msgstr "Dosyaya Kaydet…"
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:117
 #, kde-format
@@ -902,7 +902,7 @@ msgstr "Kategoriler:"
 #: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:91
 #, kde-format
 msgid "Save to File..."
-msgstr "Dosyaya Kaydet..."
+msgstr "Dosyaya Kaydet…"
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:159
 #, kde-format
@@ -963,7 +963,7 @@ msgstr "Akonadi için Yönetim ve Hata Ayıklama Konsolu"
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "(c) 2006-2024 Akonadi geliştiricileri"
+msgstr "(c) 2006–2024 Akonadi geliştiricileri"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
@@ -1043,7 +1043,7 @@ msgstr "Monitörler"
 #: mainwidget.cpp:65
 #, kde-format
 msgid "Dump to XML..."
-msgstr "XML’ye Dök..."
+msgstr "XML’ye Dök…"
 
 #: mainwidget.cpp:69
 #, kde-format
