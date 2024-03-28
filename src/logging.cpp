@@ -140,7 +140,7 @@ void Logging::saveToFile()
     QTextStream stream(&file);
     for (int row = 0, cnt = mModel->rowCount(); row < cnt; ++row) {
         const auto msg = mModel->data(mModel->index(row, 0), LoggingModel::MessageRole).value<LoggingModel::Message>();
-        stream << "[" << QDateTime::fromMSecsSinceEpoch(msg.timestamp, Qt::UTC).toString(Qt::ISODateWithMs) << "] " << msg.app << " ";
+        stream << "[" << QDateTime::fromMSecsSinceEpoch(msg.timestamp, QTimeZone::UTC).toString(Qt::ISODateWithMs) << "] " << msg.app << " ";
         if (!msg.category.isEmpty()) {
             stream << msg.category << " ";
         }
