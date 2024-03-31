@@ -33,7 +33,8 @@ protected:
     void resizeEvent(QResizeEvent *event) override;
 
     bool eventFilter(QObject *obj, QEvent *event) override;
-private Q_SLOTS:
+
+private:
     void addAgent();
     void removeAgent();
     void configureAgent();

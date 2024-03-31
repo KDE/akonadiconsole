@@ -55,10 +55,10 @@ public:
     explicit JobTracker(const char *name, QObject *parent = nullptr);
     ~JobTracker() override;
 
-    QStringList sessions() const;
+    [[nodiscard]] QStringList sessions() const;
 
-    int idForSession(const QString &session) const;
-    QString sessionForId(int id) const;
+    [[nodiscard]] int idForSession(const QString &session) const;
+    [[nodiscard]] QString sessionForId(int id) const;
 
     JobInfo info(int id) const;
 
@@ -78,7 +78,7 @@ public:
 
     int rowForJob(int id, int parentId) const;
 
-    bool isEnabled() const;
+    [[nodiscard]] bool isEnabled() const;
 
     void clear();
 

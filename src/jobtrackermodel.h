@@ -46,11 +46,9 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &, int role = Qt::DisplayRole) const override;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
-    bool isEnabled() const;
-
-public Q_SLOTS:
-    void resetTracker();
+    [[nodiscard]] bool isEnabled() const;
     void setEnabled(bool);
+    void resetTracker();
 
 private Q_SLOTS:
     void jobAboutToBeAdded(int pos, int parentId);

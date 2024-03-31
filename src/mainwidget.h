@@ -22,11 +22,9 @@ public:
     explicit MainWidget(KXmlGuiWindow *parent = nullptr);
     ~MainWidget() override;
 
-private Q_SLOTS:
+private:
     void startServer();
     void stopServer();
     void restartServer();
-
-private:
     BrowserWidget *mBrowser = nullptr;
 };

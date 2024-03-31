@@ -28,10 +28,8 @@ public:
     explicit NotificationMonitor(QWidget *parent);
     ~NotificationMonitor() override;
 
-private Q_SLOTS:
-    void contextMenu(const QPoint &pos);
-
 private:
+    void contextMenu(const QPoint &pos);
     void onNotificationSelected(const QModelIndex &index);
 
     void populateItemNtfTree(QStandardItemModel *model, const Akonadi::Protocol::ItemChangeNotification &ntf);

@@ -35,13 +35,11 @@ public:
     explicit SearchWidget(QWidget *parent = nullptr);
     ~SearchWidget() override;
 
-private Q_SLOTS:
+private:
     void search();
     void openStore(int idx);
     void fetchItem(const QModelIndex &);
     void itemFetched(KJob *);
-
-private:
     void xapianError(const Xapian::Error &e);
     void closeDataBase();
 

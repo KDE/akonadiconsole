@@ -29,7 +29,7 @@ public:
 protected:
     void slotAccept();
 
-private Q_SLOTS:
+private:
     void addAttributeClicked();
     void deleteAttributeClicked();
     void attributeChanged(QStandardItem *item);

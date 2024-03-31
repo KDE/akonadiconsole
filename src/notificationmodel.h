@@ -56,10 +56,8 @@ public Q_SLOTS:
     void clear();
     void setEnabled(bool enable);
 
-private Q_SLOTS:
-    void slotNotify(const Akonadi::ChangeNotification &msg);
-
 private:
+    void slotNotify(const Akonadi::ChangeNotification &msg);
     QList<Akonadi::ChangeNotification> m_data;
 
     Akonadi::Monitor *m_monitor = nullptr;

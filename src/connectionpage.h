@@ -29,8 +29,8 @@ public:
 
     void showAllConnections(bool);
 
-    QString toHtml() const;
-    QString toHtmlFiltered() const;
+    [[nodiscard]] QString toHtml() const;
+    [[nodiscard]] QString toHtmlFiltered() const;
 
 public Q_SLOTS:
     void clear();

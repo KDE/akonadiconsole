@@ -65,7 +65,7 @@ public Q_SLOTS:
     void dumpToXml();
     void clearCache();
 
-private Q_SLOTS:
+private:
     void currentChanged(const QModelIndex &index);
     void itemFetchDone(KJob *job);
     void modelChanged();

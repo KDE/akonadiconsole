@@ -27,13 +27,11 @@ public:
     explicit MonitorsWidget(QWidget *parent = nullptr);
     ~MonitorsWidget() override;
 
-private Q_SLOTS:
+private:
     void onSubscriberSelected(const QModelIndex &index);
 
     void populateTagFetchScope(QStandardItem *parent, const Akonadi::TagFetchScope &tfs);
     void populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs);
-
-private:
     QTreeView *mTreeView = nullptr;
     QTreeView *mSubscriberView = nullptr;
     MonitorsModel *const mModel;

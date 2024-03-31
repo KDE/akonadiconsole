@@ -35,16 +35,12 @@ public:
     QModelIndex parent(const QModelIndex &child) const override;
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
-private Q_SLOTS:
-    void init();
-
+private:
     void slotSubscriberAdded(const Akonadi::NotificationSubscriber &subscriber);
     void slotSubscriberChanged(const Akonadi::NotificationSubscriber &subscriber);
     void slotSubscriberRemoved(const Akonadi::NotificationSubscriber &subscriber);
-
+    void init();
     QModelIndex indexForSession(const QByteArray &sesion);
-
-private:
     QList<QByteArray> mSessions;
     QHash<QByteArray /* session */, QList<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;

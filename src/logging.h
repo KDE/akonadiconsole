@@ -42,10 +42,8 @@ public:
 Q_SIGNALS:
     void enabledChanged(bool enabled);
 
-private Q_SLOTS:
-    void saveToFile();
-
 private:
+    void saveToFile();
     QCheckBox *mEnabledCheckbox = nullptr;
     KPIM::KCheckComboBox *mAppFilter = nullptr;
     KPIM::KCheckComboBox *mTypeFilter = nullptr;
