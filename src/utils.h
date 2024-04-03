@@ -7,6 +7,8 @@
 #pragma once
 
 #include <QDateTime>
+using namespace Qt::Literals::StringLiterals;
+
 #include <QStandardItem>
 #include <QStringList>
 
@@ -58,7 +60,7 @@ QString toString(const Container<T> &set)
     for (const auto &v : set) {
         rv << toString(v);
     }
-    return rv.join(QLatin1StringView(", "));
+    return rv.join(", "_L1);
 }
 
 inline void appendRow(QStandardItemModel *model, const QString &name, const QString &value)

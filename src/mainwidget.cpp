@@ -7,6 +7,7 @@
 */
 
 #include "mainwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "agentwidget.h"
 #include "config-akonadiconsole.h"
@@ -42,7 +43,7 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
     auto layout = new QVBoxLayout(this);
 
     auto tabWidget = new QTabWidget(this);
-    tabWidget->setObjectName(QLatin1StringView("mainTab"));
+    tabWidget->setObjectName("mainTab"_L1);
     layout->addWidget(tabWidget);
 
     tabWidget->addTab(new AgentWidget(tabWidget), i18n("Agents"));

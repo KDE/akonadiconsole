@@ -6,6 +6,8 @@
  */
 
 #include "tagpropertiesdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/DbAccess>
 
 #include <KLocalizedString>
@@ -275,7 +277,7 @@ void TagPropertiesDialog::slotAccept()
         for (int i = 0; i < mRemovedRIDs.count(); ++i) {
             conds << QStringLiteral("name = ?");
         }
-        queryStr += conds.join(QLatin1StringView(" OR ")) + QLatin1Char(')');
+        queryStr += conds.join(" OR "_L1) + QLatin1Char(')');
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
         for (const QString &removedRid : std::as_const(mRemovedRIDs)) {
@@ -297,7 +299,7 @@ void TagPropertiesDialog::slotAccept()
             for (int i = 0; i < mChangedRIDs.count(); ++i) {
                 conds << QStringLiteral("name = ?");
             }
-            queryStr += conds.join(QLatin1StringView(" OR "));
+            queryStr += conds.join(" OR "_L1);
             query.prepare(queryStr);
             for (const QString &res : std::as_const(mChangedRIDs)) {
                 query.addBindValue(res);

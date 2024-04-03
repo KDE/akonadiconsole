@@ -7,6 +7,7 @@
 */
 
 #include "agentwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
@@ -422,8 +423,8 @@ void AgentWidget::currentChanged()
         }
         ui.statusLabel->setText(i18nc("Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\"", "%1, %2", onlineStatus, agentStatus));
         ui.statusMessageLabel->setText(instance.statusMessage());
-        ui.capabilitiesLabel->setText(instance.type().capabilities().join(QLatin1StringView(", ")));
-        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(QLatin1StringView(", ")));
+        ui.capabilitiesLabel->setText(instance.type().capabilities().join(", "_L1));
+        ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(", "_L1));
     } else {
         ui.identifierLabel->setText(QString());
         ui.typeLabel->setText(QString());

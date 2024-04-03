@@ -72,7 +72,7 @@
 #endif
 
 using namespace Akonadi;
-
+using namespace Qt::Literals::StringLiterals;
 AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAttributePageFactory, CollectionAttributePage)
 AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionInternalsPageFactory, CollectionInternalsPage)
 AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAclPageFactory, CollectionAclPage)
@@ -86,14 +86,14 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     auto layout = new QVBoxLayout(this);
 
     auto splitter = new QSplitter(Qt::Horizontal, this);
-    splitter->setObjectName(QLatin1StringView("collectionSplitter"));
+    splitter->setObjectName("collectionSplitter"_L1);
     layout->addWidget(splitter);
 
     auto splitter2 = new QSplitter(Qt::Vertical, this);
-    splitter2->setObjectName(QLatin1StringView("ffvSplitter"));
+    splitter2->setObjectName("ffvSplitter"_L1);
 
     mCollectionView = new Akonadi::EntityTreeView(xmlGuiWindow, this);
-    mCollectionView->setObjectName(QLatin1StringView("CollectionView"));
+    mCollectionView->setObjectName("CollectionView"_L1);
     mCollectionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     splitter2->addWidget(mCollectionView);
 
@@ -104,7 +104,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     splitter->addWidget(splitter2);
 
     auto tagRecorder = new ChangeRecorder(this);
-    tagRecorder->setObjectName(QLatin1StringView("tagRecorder"));
+    tagRecorder->setObjectName("tagRecorder"_L1);
     tagRecorder->setTypeMonitored(Monitor::Tags);
     tagRecorder->setChangeRecordingEnabled(false);
     mTagView = new QTreeView(this);
@@ -120,7 +120,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 
     // monitor collection changes
     mBrowserMonitor = new ChangeRecorder(this);
-    mBrowserMonitor->setObjectName(QLatin1StringView("collectionMonitor"));
+    mBrowserMonitor->setObjectName("collectionMonitor"_L1);
     mBrowserMonitor->setSession(session);
     mBrowserMonitor->setCollectionMonitored(Collection::root());
     mBrowserMonitor->fetchCollection(true);
@@ -168,7 +168,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     favoritesView->setModel(favoritesModel);
 
     auto splitter3 = new QSplitter(Qt::Vertical, this);
-    splitter3->setObjectName(QLatin1StringView("itemSplitter"));
+    splitter3->setObjectName("itemSplitter"_L1);
     splitter->addWidget(splitter3);
 
     auto itemViewParent = new QWidget(this);
@@ -318,7 +318,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     } else if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         mIncidenceView->setItem(item);
         contentUi.stack->setCurrentWidget(mIncidenceView->parentWidget());
-    } else if (item.mimeType() == QLatin1StringView("message/rfc822") || item.mimeType() == QLatin1StringView("message/news")) {
+    } else if (item.mimeType() == "message/rfc822"_L1 || item.mimeType() == "message/news"_L1) {
         mMailView->setMessageItem(item, MimeTreeParser::Force);
         contentUi.stack->setCurrentWidget(mMailView->parentWidget());
     } else
@@ -396,7 +396,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
         mMonitor->deleteLater(); // might be the one calling us
     }
     mMonitor = new Monitor(this);
-    mMonitor->setObjectName(QLatin1StringView("itemMonitor"));
+    mMonitor->setObjectName("itemMonitor"_L1);
     mMonitor->setItemMonitored(item);
     mMonitor->itemFetchScope().fetchFullPayload();
     mMonitor->itemFetchScope().fetchAllAttributes();

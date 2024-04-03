@@ -6,6 +6,8 @@
  */
 
 #include "monitorswidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "monitorsmodel.h"
 #include "utils.h"
 
@@ -93,7 +95,7 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
             break;
         }
     }
-    return rv.join(QLatin1StringView(", "));
+    return rv.join(", "_L1);
 }
 
 void MonitorsWidget::populateCollectionFetchScope(QStandardItem *parent, const Akonadi::CollectionFetchScope &cfs)

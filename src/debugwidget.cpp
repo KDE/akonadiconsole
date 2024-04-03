@@ -7,6 +7,7 @@
 */
 
 #include "debugwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "connectionpage.h"
 #include "tracernotificationinterface.h"
@@ -37,12 +38,12 @@ DebugWidget::DebugWidget(QWidget *parent)
     }
     mDebugInterface = new DebugInterface(service, QStringLiteral("/debug"), QDBusConnection::sessionBus(), this);
     auto cb = new QCheckBox(i18n("Enable debugger"), this);
-    cb->setChecked(mDebugInterface->isValid() && mDebugInterface->tracer().value() == QLatin1StringView("dbus"));
+    cb->setChecked(mDebugInterface->isValid() && mDebugInterface->tracer().value() == "dbus"_L1);
     connect(cb, &QCheckBox::toggled, this, &DebugWidget::enableDebugger);
     layout->addWidget(cb);
 
     auto splitter = new QSplitter(Qt::Vertical, this);
-    splitter->setObjectName(QLatin1StringView("debugSplitter"));
+    splitter->setObjectName("debugSplitter"_L1);
     layout->addWidget(splitter);
 
     mConnectionPage = new ConnectionPage(i18n("All"), splitter);

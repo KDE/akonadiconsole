@@ -5,6 +5,7 @@
 */
 
 #include "notificationmodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "akonadiconsole_debug.h"
 #include <Akonadi/ServerManager>
@@ -169,7 +170,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 for (const auto &item : items) {
                     rv.push_back(QString::number(item.id()));
                 }
-                return rv.join(QLatin1StringView(", "));
+                return rv.join(", "_L1);
             }
             case ChangeNotification::Collection:
                 return Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).collection().id();
@@ -188,7 +189,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             for (const auto &l : listeners) {
                 rv.push_back(QString::fromUtf8(l));
             }
-            return rv.join(QLatin1StringView(", "));
+            return rv.join(", "_L1);
         }
         }
     } else if (role == NotificationRole) {
@@ -237,7 +238,7 @@ void NotificationModel::setEnabled(bool enable)
 {
     if (enable) {
         m_monitor = new Akonadi::Monitor(this);
-        m_monitor->setObjectName(QLatin1StringView("notificationMonitor"));
+        m_monitor->setObjectName("notificationMonitor"_L1);
         m_monitor->setTypeMonitored(Akonadi::Monitor::Notifications);
         connect(m_monitor, &Akonadi::Monitor::debugNotification, this, &NotificationModel::slotNotify);
     } else if (m_monitor) {
