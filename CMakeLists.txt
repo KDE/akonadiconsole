@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.0.80")
+set(PIM_VERSION "6.0.90")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
 set(KF_MIN_VERSION "6.0.0")
@@ -34,7 +34,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta)
+set(KDEPIM_DEV_VERSION rc)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
