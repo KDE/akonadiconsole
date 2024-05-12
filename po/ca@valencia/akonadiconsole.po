@@ -60,12 +60,12 @@ msgstr "Configura"
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Natively..."
-msgstr "Configura nativament..."
+msgstr "Configura nativament…"
 
 #: agentwidget.cpp:96
 #, kde-format
 msgid "Configure Remotely..."
-msgstr "Configura remotament..."
+msgstr "Configura remotament…"
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:102 agentwidget.ui:240
@@ -103,12 +103,12 @@ msgstr[1] "Segur que voleu suprimir estes %1 instància de l'agent?"
 #: agentwidget.cpp:201
 #, kde-format
 msgid "Agent Deletion"
-msgstr "Supressió de l'agent"
+msgstr "Suprimiu l'agent"
 
 #: agentwidget.cpp:201
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr "Supressió múltiple d'agents"
+msgstr "Suprimiu múltiples agents"
 
 #: agentwidget.cpp:271
 #, kde-format
@@ -167,7 +167,7 @@ msgstr "%1, %2"
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Add Agent..."
-msgstr "Afig un agent..."
+msgstr "Afig un agent…"
 
 #: agentwidget.cpp:441
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Tipus MIME:"
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr "Afig..."
+msgstr "Afig…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:95 notificationmodel.cpp:119
@@ -268,7 +268,7 @@ msgstr "Elimina"
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr "Configura..."
+msgstr "Configura…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
@@ -366,22 +366,22 @@ msgstr "Seleccioneu un fitxer en XML"
 #: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
-msgstr "Afi&g una etiqueta..."
+msgstr "Afi&g una etiqueta…"
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr "Afig una &subetiqueta..."
+msgstr "Afig una &subetiqueta…"
 
 #: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
-msgstr "&Edita una etiqueta..."
+msgstr "&Edita una etiqueta…"
 
 #: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
-msgstr "Sup&rimix l'etiqueta..."
+msgstr "Sup&rimix l'etiqueta…"
 
 #: browserwidget.cpp:572
 #, kde-format
@@ -732,12 +732,12 @@ msgstr "Neteja tots els missatges"
 #: debugwidget.cpp:67
 #, kde-format
 msgid "Save Filtered Messages ..."
-msgstr "Guarda els missatges filtrats..."
+msgstr "Guarda els missatges filtrats…"
 
 #: debugwidget.cpp:68
 #, kde-format
 msgid "Save All Messages ..."
-msgstr "Guarda tots els missatges..."
+msgstr "Guarda tots els missatges…"
 
 #: instanceselector.cpp:44
 #, kde-format
@@ -835,7 +835,7 @@ msgstr "Mostra només els errors"
 #: jobtrackersearchwidget.cpp:28
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: jobtrackersearchwidget.cpp:38
 #, kde-format
@@ -845,7 +845,7 @@ msgstr "Totes les columnes"
 #: jobtrackerwidget.cpp:73
 #, kde-format
 msgid "Save to file..."
-msgstr "Guarda a un fitxer..."
+msgstr "Guarda a un fitxer…"
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:119
 #, kde-format
@@ -905,7 +905,7 @@ msgstr "Categories:"
 #: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
 #, kde-format
 msgid "Save to File..."
-msgstr "Guarda a un fitxer..."
+msgstr "Guarda a un fitxer…"
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
 #, kde-format
@@ -1046,7 +1046,7 @@ msgstr "Monitors"
 #: mainwidget.cpp:66
 #, kde-format
 msgid "Dump to XML..."
-msgstr "Bolcat a XML..."
+msgstr "Bolcat a XML…"
 
 #: mainwidget.cpp:70
 #, kde-format
