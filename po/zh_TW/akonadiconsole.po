@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2024-01-21 00:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -28,13 +28,16 @@ msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
 #: agentconfigdialog.cpp:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Configuration"
+msgctxt "@action:button"
 msgid "Save Configuration"
 msgstr "儲存設定"
 
-#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
-#: agentconfigdialog.cpp:34 dbbrowser.ui:28
-#, kde-format
+#: agentconfigdialog.cpp:34
+#, fuzzy, kde-format
+#| msgid "Refresh"
+msgctxt "@action:button"
 msgid "Refresh"
 msgstr "重新整理"
 
@@ -677,6 +680,12 @@ msgstr "內容類型"
 #, kde-format
 msgid "Programs:"
 msgstr "程式："
+
+#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
+#: dbbrowser.ui:28
+#, kde-format
+msgid "Refresh"
+msgstr "重新整理"
 
 #: dbconsole.cpp:79
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2024-03-14 23:23+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -29,12 +29,13 @@ msgstr "alministradores@softastur.org"
 
 #: agentconfigdialog.cpp:33
 #, kde-format
+msgctxt "@action:button"
 msgid "Save Configuration"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
-#: agentconfigdialog.cpp:34 dbbrowser.ui:28
+#: agentconfigdialog.cpp:34
 #, kde-format
+msgctxt "@action:button"
 msgid "Refresh"
 msgstr ""
 
@@ -675,6 +676,12 @@ msgstr ""
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
 msgid "Programs:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
+#: dbbrowser.ui:28
+#, kde-format
+msgid "Refresh"
 msgstr ""
 
 #: dbconsole.cpp:79
