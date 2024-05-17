@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: agentconfigdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
-msgstr "Uložit nastavení"
+msgstr ""
 
 #: agentconfigdialog.cpp:34
-#, fuzzy, kde-format
-#| msgid "Refresh"
+#, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
 msgstr "Obnovit"

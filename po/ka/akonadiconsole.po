@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-01-04 03:57+0100\n"
+"PO-Revision-Date: 2024-05-16 07:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -29,15 +29,13 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: agentconfigdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
 msgstr "კონფიგურაციი შენახვა"
 
 #: agentconfigdialog.cpp:34
-#, fuzzy, kde-format
-#| msgid "Refresh"
+#, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
 msgstr "განახლება"

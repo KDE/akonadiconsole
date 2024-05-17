@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:38+0000\n"
-"PO-Revision-Date: 2024-01-04 07:01+0100\n"
+"PO-Revision-Date: 2024-05-16 09:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -31,15 +31,13 @@ msgid "Your emails"
 msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
 
 #: agentconfigdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
-msgstr "Shrani prilagoditev"
+msgstr "Shrani konfiguracijo"
 
 #: agentconfigdialog.cpp:34
-#, fuzzy, kde-format
-#| msgid "Refresh"
+#, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
 msgstr "Osveži"
