@@ -47,7 +47,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     auto hbox = new QHBoxLayout;
 
-    hbox->addWidget(new QLabel(i18n("Search store:"), this));
+    hbox->addWidget(new QLabel(i18nc("@label:textbox", "Search store:"), this));
     mStoreCombo = new KComboBox(this);
     mStoreCombo->setObjectName("SearchStoreCombo"_L1);
     hbox->addWidget(mStoreCombo);
@@ -60,7 +60,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mVSplitter->setObjectName("SearchVSplitter"_L1);
     auto w = new QWidget;
     auto vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(i18n("Search query:"), this));
+    vbox->addWidget(new QLabel(i18nc("@label:textbox", "Search query:"), this));
     mQueryWidget = new QPlainTextEdit;
     vbox->addWidget(mQueryWidget);
     mVSplitter->addWidget(w);
@@ -69,7 +69,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mHSplitter->setObjectName("SearchHSplitter"_L1);
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(i18n("Results (Documents):"), this));
+    vbox->addWidget(new QLabel(i18nc("@label:textbox", "Results (Documents):"), this));
     mDatabaseView = new QListView(this);
     mDatabaseView->setEditTriggers(QListView::NoEditTriggers);
     mDocumentModel = new QStandardItemModel(this);
@@ -79,7 +79,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(i18n("Document:")));
+    vbox->addWidget(new QLabel(i18nc("@label:textbox", "Document:")));
     mDocumentView = new QTreeView;
     mDocumentView->setEditTriggers(QTreeView::NoEditTriggers);
     mTermModel = new QStandardItemModel(this);
@@ -89,7 +89,7 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     w = new QWidget;
     vbox = new QVBoxLayout(w);
-    vbox->addWidget(new QLabel(i18n("Item:")));
+    vbox->addWidget(new QLabel(i18nc("@label:textbox", "Item:")));
     mItemView = new QTextBrowser;
     vbox->addWidget(mItemView);
     mHSplitter->addWidget(w);

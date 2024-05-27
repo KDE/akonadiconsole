@@ -50,10 +50,10 @@ Logging::Logging(QWidget *parent)
     auto h = new QHBoxLayout;
     l->addLayout(h);
 
-    h->addWidget(new QLabel(i18n("Programs:"), this));
+    h->addWidget(new QLabel(i18nc("@label:textbox", "Programs:"), this));
     h->addWidget(mAppFilter = new KCheckComboBox());
     h->setStretchFactor(mAppFilter, 2);
-    h->addWidget(new QLabel(i18n("Types:"), this));
+    h->addWidget(new QLabel(i18nc("@label:textbox", "Types:"), this));
     h->addWidget(mTypeFilter = new KCheckComboBox());
     h->setStretchFactor(mTypeFilter, 2);
     mTypeFilter->addItem(i18n("Debug"), QtDebugMsg);
@@ -61,7 +61,7 @@ Logging::Logging(QWidget *parent)
     mTypeFilter->addItem(i18n("Warning"), QtWarningMsg);
     mTypeFilter->addItem(i18n("Critical"), QtCriticalMsg);
     mTypeFilter->addItem(i18n("Fatal"), QtFatalMsg);
-    h->addWidget(new QLabel(i18n("Categories:")));
+    h->addWidget(new QLabel(i18nc("@label:textbox", "Categories:")));
     h->addWidget(mCategoryFilter = new KCheckComboBox());
     h->setStretchFactor(mCategoryFilter, 2);
 

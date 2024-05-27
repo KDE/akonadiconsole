@@ -61,7 +61,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     connect(enableCB, &QCheckBox::toggled, m_model, &NotificationModel::setEnabled);
     hLayout->addWidget(enableCB);
 
-    hLayout->addWidget(new QLabel(i18n("Types:"), this));
+    hLayout->addWidget(new QLabel(i18nc("@label:textbox", "Types:"), this));
     hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
     hLayout->addStretch();
     mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);

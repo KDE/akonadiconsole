@@ -34,7 +34,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
     auto h = new QHBoxLayout;
     layout->addLayout(h);
 
-    h->addWidget(new QLabel(i18n("Programs:")));
+    h->addWidget(new QLabel(i18nc("@label:textbox", "Programs:")));
     h->addWidget(mSenderFilter = new KPIM::KCheckComboBox());
     h->setStretchFactor(mSenderFilter, 2);
 
