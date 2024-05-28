@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-17 08:59+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -675,7 +675,9 @@ msgid "Content Types"
 msgstr "Types de contenu"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Programs:"
+msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Programmes :"
 
@@ -876,7 +878,9 @@ msgid "Enable"
 msgstr "Activer"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Types:"
+msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Types :"
 
@@ -901,7 +905,9 @@ msgid "Fatal"
 msgstr "Fatale"
 
 #: logging.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories:"
+msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Catégories :"
 
@@ -1975,7 +1981,9 @@ msgid "Results:"
 msgstr "Résultats :"
 
 #: searchwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search store:"
+msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Boutique de recherche :"
 
@@ -1985,22 +1993,30 @@ msgid "Search"
 msgstr "Rechercher"
 
 #: searchwidget.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search query:"
+msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Requête de recherche :"
 
 #: searchwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Results (Documents):"
+msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "Résultats (Documents) :"
 
 #: searchwidget.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Document:"
+msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Document :"
 
 #: searchwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Item:"
+msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "Élément :"
 

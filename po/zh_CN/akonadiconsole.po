@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -675,7 +675,9 @@ msgid "Content Types"
 msgstr "内容类型"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Programs:"
+msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "程序："
 
@@ -873,7 +875,9 @@ msgid "Enable"
 msgstr "启用"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Types:"
+msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "类型："
 
@@ -898,7 +902,9 @@ msgid "Fatal"
 msgstr "严重的"
 
 #: logging.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories:"
+msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "分类："
 
@@ -1969,7 +1975,9 @@ msgid "Results:"
 msgstr ""
 
 #: searchwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search store:"
+msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "搜索于:"
 
@@ -1979,24 +1987,30 @@ msgid "Search"
 msgstr "搜索"
 
 #: searchwidget.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search store:"
+msgctxt "@label:textbox"
 msgid "Search query:"
-msgstr ""
+msgstr "搜索于:"
 
 #: searchwidget.cpp:72
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr ""
 
 #: searchwidget.cpp:82
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Document:"
 msgstr ""
 
 #: searchwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Item"
+msgctxt "@label:textbox"
 msgid "Item:"
-msgstr ""
+msgstr "项目(&I)"
 
 #: searchwidget.cpp:154
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-02-17 00:58+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -677,6 +677,7 @@ msgstr ""
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr ""
 
@@ -875,6 +876,7 @@ msgstr ""
 
 #: logging.cpp:56 notificationmonitor.cpp:64
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Types:"
 msgstr ""
 
@@ -900,6 +902,7 @@ msgstr ""
 
 #: logging.cpp:64
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr ""
 
@@ -1968,6 +1971,7 @@ msgstr ""
 
 #: searchwidget.cpp:50
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr ""
 
@@ -1978,21 +1982,25 @@ msgstr ""
 
 #: searchwidget.cpp:63
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr ""
 
 #: searchwidget.cpp:72
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr ""
 
 #: searchwidget.cpp:82
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Document:"
 msgstr ""
 
 #: searchwidget.cpp:92
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Item:"
 msgstr ""
 

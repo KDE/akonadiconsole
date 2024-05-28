@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-16 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -677,7 +677,9 @@ msgid "Content Types"
 msgstr "Tartalomtípusok"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Programs:"
+msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Programok:"
 
@@ -877,7 +879,9 @@ msgid "Enable"
 msgstr "Bekapcsolás"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Types:"
+msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Típusok:"
 
@@ -902,7 +906,9 @@ msgid "Fatal"
 msgstr "Végzetes"
 
 #: logging.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories:"
+msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategóriák:"
 
@@ -1974,7 +1980,9 @@ msgid "Results:"
 msgstr "Eredmények:"
 
 #: searchwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search store:"
+msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Keresés tárolása:"
 
@@ -1984,22 +1992,30 @@ msgid "Search"
 msgstr "Keresés"
 
 #: searchwidget.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search query:"
+msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Keresési kifejezés:"
 
 #: searchwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Results (Documents):"
+msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "Eredmények (dokumentumok):"
 
 #: searchwidget.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Document:"
+msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Dokumentum:"
 
 #: searchwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Item:"
+msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "Elem:"
 

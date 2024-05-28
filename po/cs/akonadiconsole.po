@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-01-19 15:46+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -675,7 +675,9 @@ msgid "Content Types"
 msgstr ""
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Programs:"
+msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Programy:"
 
@@ -873,7 +875,9 @@ msgid "Enable"
 msgstr "Povolit"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Types:"
+msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Typy:"
 
@@ -898,7 +902,9 @@ msgid "Fatal"
 msgstr ""
 
 #: logging.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Categories:"
+msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategorie:"
 
@@ -1966,9 +1972,11 @@ msgid "Results:"
 msgstr "Výsledky:"
 
 #: searchwidget.cpp:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search query:"
+msgctxt "@label:textbox"
 msgid "Search store:"
-msgstr ""
+msgstr "Dotaz pro vyhledávání:"
 
 #: searchwidget.cpp:55 searchwidget.cpp:171
 #, kde-format
@@ -1976,22 +1984,30 @@ msgid "Search"
 msgstr "Hledat"
 
 #: searchwidget.cpp:63
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search query:"
+msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Dotaz pro vyhledávání:"
 
 #: searchwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Document:"
+msgctxt "@label:textbox"
 msgid "Results (Documents):"
-msgstr ""
+msgstr "Dokument:"
 
 #: searchwidget.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Document:"
+msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Dokument:"
 
 #: searchwidget.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Item:"
+msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "Položka:"
 
