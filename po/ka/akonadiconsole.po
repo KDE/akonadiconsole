@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 07:45+0200\n"
+"PO-Revision-Date: 2024-05-28 05:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -678,8 +678,7 @@ msgid "Content Types"
 msgstr "შემცველობის ტიპები"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "პროგრამები:"
@@ -880,8 +879,7 @@ msgid "Enable"
 msgstr "ჩართვა"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "ტიპები:"
@@ -907,8 +905,7 @@ msgid "Fatal"
 msgstr "ფატალური"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "კატეგორიები:"
@@ -1982,8 +1979,7 @@ msgid "Results:"
 msgstr "შედეგები:"
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "საძებნი საცავი:"
@@ -1994,29 +1990,25 @@ msgid "Search"
 msgstr "ძებნა"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "საძებნი სტრიქონი:"
 
 #: searchwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Results (Documents):"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "შედეგები (დოკუმენტები):"
 
 #: searchwidget.cpp:82
-#, fuzzy, kde-format
-#| msgid "Document:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "დოკუმენტი:"
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Item:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "ელემენტი:"

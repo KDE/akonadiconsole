@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 09:25+0200\n"
+"PO-Revision-Date: 2024-05-28 09:47+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -677,8 +677,7 @@ msgid "Content Types"
 msgstr "Typen inhoud"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Programma's:"
@@ -879,8 +878,7 @@ msgid "Enable"
 msgstr "Inschakelen"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Typen:"
@@ -906,8 +904,7 @@ msgid "Fatal"
 msgstr "Fataal"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Categorieën:"
@@ -1981,8 +1978,7 @@ msgid "Results:"
 msgstr "Resultaten:"
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Opslag van zoeken:"
@@ -1993,29 +1989,25 @@ msgid "Search"
 msgstr "Zoeken"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Zoekopdracht:"
 
 #: searchwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Results (Documents):"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "Resultaten (Documenten):"
 
 #: searchwidget.cpp:82
-#, fuzzy, kde-format
-#| msgid "Document:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Document:"
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Item:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "Item:"

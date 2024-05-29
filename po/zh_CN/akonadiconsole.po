@@ -675,8 +675,7 @@ msgid "Content Types"
 msgstr "内容类型"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "程序："
@@ -875,8 +874,7 @@ msgid "Enable"
 msgstr "启用"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "类型："
@@ -902,8 +900,7 @@ msgid "Fatal"
 msgstr "严重的"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "分类："
@@ -1975,8 +1972,7 @@ msgid "Results:"
 msgstr ""
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "搜索于:"
@@ -1987,11 +1983,10 @@ msgid "Search"
 msgstr "搜索"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
-msgstr "搜索于:"
+msgstr ""
 
 #: searchwidget.cpp:72
 #, kde-format
@@ -2006,11 +2001,10 @@ msgid "Document:"
 msgstr ""
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "&Item"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
-msgstr "项目(&I)"
+msgstr ""
 
 #: searchwidget.cpp:154
 #, kde-format
