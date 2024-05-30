@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"PO-Revision-Date: 2024-05-29 22:04+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -678,8 +678,7 @@ msgid "Content Types"
 msgstr "Enhavaj Tipoj"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Programoj:"
@@ -880,8 +879,7 @@ msgid "Enable"
 msgstr "Ebligi"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Tipoj:"
@@ -907,8 +905,7 @@ msgid "Fatal"
 msgstr "Fatala"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategorioj:"
@@ -1981,8 +1978,7 @@ msgid "Results:"
 msgstr "Rezulto:"
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Serĉa konservejo:"
@@ -1993,29 +1989,25 @@ msgid "Search"
 msgstr "Serĉi"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Serĉdemando:"
 
 #: searchwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Results (Documents):"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "Rezultoj (Dokumentoj):"
 
 #: searchwidget.cpp:82
-#, fuzzy, kde-format
-#| msgid "Document:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Dokumento:"
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Item:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "Ero:"
