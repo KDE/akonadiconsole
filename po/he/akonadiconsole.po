@@ -1,0 +1,2075 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadiconsole package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadiconsole\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"PO-Revision-Date: 2024-06-07 06:56+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Lokalize 24.02.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
+
+#: agentconfigdialog.cpp:33
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Configuration"
+msgstr "שמירת ההגדרות"
+
+#: agentconfigdialog.cpp:34
+#, kde-format
+msgctxt "@action:button"
+msgid "Refresh"
+msgstr "רענון"
+
+#: agentconfigdialog.cpp:35
+#, kde-format
+msgid "Apply Configuration"
+msgstr "החלת ההגדרות"
+
+#: agentconfigdialog.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Agent Configuration"
+msgstr "הגדרת הסוכן"
+
+#: agentwidget.cpp:94
+#, kde-format
+msgid "Configure"
+msgstr "הגדרה"
+
+#: agentwidget.cpp:95
+#, kde-format
+msgid "Configure Natively..."
+msgstr "הגדרה מקומית…"
+
+#: agentwidget.cpp:96
+#, kde-format
+msgid "Configure Remotely..."
+msgstr "הגדרה מרחוק…"
+
+#. i18n: ectx: property (text), widget (QPushButton, syncButton)
+#: agentwidget.cpp:102 agentwidget.ui:240
+#, kde-format
+msgid "Synchronize"
+msgstr "סנכרון"
+
+#: agentwidget.cpp:103
+#, kde-format
+msgid "Synchronize All"
+msgstr "סנכרון של הכול"
+
+#: agentwidget.cpp:104
+#, kde-format
+msgid "Synchronize Collection Tree"
+msgstr "סנכרון עץ האוסף"
+
+#: agentwidget.cpp:105
+#, kde-format
+msgid "Synchronize Tags"
+msgstr "סנכרון תגיות"
+
+#: agentwidget.cpp:111
+#, kde-format
+msgid "Synchronize Relations"
+msgstr "סנכרון יחסים"
+
+#: agentwidget.cpp:200
+#, kde-format
+msgid "Do you really want to delete the selected agent instance?"
+msgid_plural "Do you really want to delete these %1 agent instances?"
+msgstr[0] "למחוק את מופע הסוכן הנבחר?"
+msgstr[1] "למחוק את שני מופעי הסוכנים האלה?"
+msgstr[2] "למחוק את %1 מופעי הסוכנים האלה?"
+msgstr[3] "למחוק את %1 מופעי הסוכנים האלה?"
+
+#: agentwidget.cpp:201
+#, kde-format
+msgid "Agent Deletion"
+msgstr "מחיקת סוכן"
+
+#: agentwidget.cpp:201
+#, kde-format
+msgid "Multiple Agent Deletion"
+msgstr "מחיקת מספר סוכנים"
+
+#: agentwidget.cpp:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Resource Task List"
+msgstr "רשימת משימות משאבים"
+
+#: agentwidget.cpp:295
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Notification Log"
+msgstr "החלפת יומן התראות"
+
+#: agentwidget.cpp:345
+#, kde-format
+msgid "Cloning agent failed: %1."
+msgstr "שכפול סוכן נכשל: %1."
+
+#: agentwidget.cpp:408
+#, kde-format
+msgid "Online"
+msgstr "מקוון"
+
+#: agentwidget.cpp:408
+#, kde-format
+msgid "Offline"
+msgstr "מנותק"
+
+#: agentwidget.cpp:412
+#, kde-format
+msgid "Idle"
+msgstr "בהמתנה"
+
+#: agentwidget.cpp:415
+#, kde-format
+msgid "Running (%1%)"
+msgstr "פעיל (%1%)"
+
+#: agentwidget.cpp:418
+#, kde-format
+msgid "Broken"
+msgstr "פגום"
+
+#: agentwidget.cpp:421
+#, kde-format
+msgid "Not Configured"
+msgstr "לא מוגדר"
+
+#: agentwidget.cpp:424
+#, kde-format
+msgctxt ""
+"Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: agentwidget.cpp:440
+#, kde-format
+msgid "Add Agent..."
+msgstr "הוספת סוכן…"
+
+#: agentwidget.cpp:441
+#, kde-format
+msgid "Clone Agent"
+msgstr "שכפול סוכן"
+
+#: agentwidget.cpp:444
+#, kde-format
+msgid "Abort Activity"
+msgstr "ביטול גורף של הפעילות"
+
+#: agentwidget.cpp:446
+#, kde-format
+msgid "Restart Agent"
+msgstr "הפעלת הסוכן מחדש"
+
+#: agentwidget.cpp:449
+#, kde-format
+msgid "Toggle Online/Offline"
+msgstr "החלפה בין מקוון/ניתוק"
+
+#: agentwidget.cpp:450
+#, kde-format
+msgid "Show task list"
+msgstr "הצגת רשימת משימות"
+
+#: agentwidget.cpp:451
+#, kde-format
+msgid "Show change-notification log"
+msgstr "הצגת יומן התראות שינוי"
+
+#: agentwidget.cpp:453
+#, kde-format
+msgid "Remove Agent"
+msgstr "הסרת סוכן"
+
+#. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
+#: agentwidget.ui:37
+#, kde-format
+msgid "Details"
+msgstr "פרטים"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
+#: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
+#, kde-format
+msgid "Identifier:"
+msgstr "מזהה:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: agentwidget.ui:69 tagpropertiesdialog.ui:65
+#, kde-format
+msgid "Type:"
+msgstr "סוג:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: agentwidget.ui:92
+#, kde-format
+msgid "Status:"
+msgstr "מצב:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: agentwidget.ui:118
+#, kde-format
+msgid "Status Message:"
+msgstr "הודעת מצב:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: agentwidget.ui:144
+#, kde-format
+msgid "Capabilities:"
+msgstr "יכולות:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: agentwidget.ui:170
+#, kde-format
+msgid "Mimetypes:"
+msgstr "סוגי תוכן:"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: agentwidget.ui:212
+#, kde-format
+msgid "Add..."
+msgstr "הוספה…"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: agentwidget.ui:219 notificationmodel.cpp:95 notificationmodel.cpp:119
+#: notificationmodel.cpp:135 notificationmodel.cpp:145
+#: notificationmodel.cpp:157 notificationmonitor.cpp:178
+#: notificationmonitor.cpp:387 notificationmonitor.cpp:418
+#: notificationmonitor.cpp:446 notificationmonitor.cpp:470
+#, kde-format
+msgid "Remove"
+msgstr "הסרה"
+
+#. i18n: ectx: property (text), widget (QPushButton, configButton)
+#: agentwidget.ui:226
+#, kde-format
+msgid "Configure..."
+msgstr "הגדרה…"
+
+#. i18n: ectx: property (text), widget (QPushButton, abortButton)
+#: agentwidget.ui:233
+#, kde-format
+msgid "Abort"
+msgstr "ביטול גורף"
+
+#. i18n: ectx: property (text), widget (QPushButton, restartButton)
+#: agentwidget.ui:247
+#, kde-format
+msgctxt "restart the agent"
+msgid "Restart"
+msgstr "הפעלה מחדש"
+
+#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
+#: notificationmonitor.cpp:405
+#, kde-format
+msgid "Collection"
+msgstr "אוסף"
+
+#: akonadibrowsermodel.cpp:70
+#, kde-format
+msgid "Subject"
+msgstr "נושא"
+
+#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#, kde-format
+msgid "Sender"
+msgstr "מוען"
+
+#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:207
+#, kde-format
+msgid "Date"
+msgstr "תאריך"
+
+#. i18n: ectx: Menu (collection)
+#: akonadiconsoleui.rc:8
+#, kde-format
+msgid "&Collection"
+msgstr "&אוסף"
+
+#. i18n: ectx: Menu (item)
+#: akonadiconsoleui.rc:28
+#, kde-format
+msgid "&Item"
+msgstr "&פריט"
+
+#. i18n: ectx: Menu (cache)
+#: akonadiconsoleui.rc:36
+#, kde-format
+msgid "&Cache"
+msgstr "מ&טמון"
+
+#. i18n: ectx: Menu (server)
+#: akonadiconsoleui.rc:39
+#, kde-format
+msgid "&Server"
+msgstr "&שרת"
+
+#: browserwidget.cpp:177
+#, kde-format
+msgid "Generic"
+msgstr "כללי"
+
+#: browserwidget.cpp:178
+#, kde-format
+msgid "Mail"
+msgstr "דוא״ל"
+
+#: browserwidget.cpp:179
+#, kde-format
+msgid "Contacts"
+msgstr "אנשי קשר"
+
+#: browserwidget.cpp:180
+#, kde-format
+msgid "Calendar/Tasks"
+msgstr "לוח שנה/משימות"
+
+#: browserwidget.cpp:240
+#, kde-format
+msgid "Cache only retrieval"
+msgstr "משיכה מהמטמון בלבד"
+
+#: browserwidget.cpp:472
+#, kde-format
+msgid "Failed to save changes: %1"
+msgstr "שמירת השינויים נכשלה: %1"
+
+#: browserwidget.cpp:511
+#, kde-format
+msgid "Select XML file"
+msgstr "בחירת קובץ XML"
+
+#: browserwidget.cpp:549
+#, kde-format
+msgid "&Add tag..."
+msgstr "הוס&פת תגית…"
+
+#: browserwidget.cpp:551
+#, kde-format
+msgid "Add &subtag..."
+msgstr "הוספת &תת־תגית…"
+
+#: browserwidget.cpp:553
+#, kde-format
+msgid "&Edit tag..."
+msgstr "&עריכת תגית…"
+
+#: browserwidget.cpp:558
+#, kde-format
+msgid "&Delete tag..."
+msgstr "מ&חיקת תגית…"
+
+#: browserwidget.cpp:572
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Tag"
+msgstr "הוספת תגית"
+
+#: browserwidget.cpp:587
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Subtag"
+msgstr "הוספת תת־תגית"
+
+#: browserwidget.cpp:598 browserwidget.cpp:615
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Tag"
+msgstr "שינוי תגית"
+
+#: browserwidget.cpp:624
+#, kde-format
+msgid "Do you really want to remove selected tag?"
+msgstr "להסיר את התגית הנבחרת?"
+
+#: browserwidget.cpp:625
+#, kde-format
+msgid "Delete tag?"
+msgstr "למחוק את התגית?"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveButton)
+#: browserwidget_contentview.ui:30
+#, kde-format
+msgid "&Save"
+msgstr "&שמירה"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: browserwidget_contentview.ui:41
+#, kde-format
+msgid "Payload"
+msgstr "מטען"
+
+#. i18n: ectx: property (text), widget (QLabel, unsupportedType)
+#: browserwidget_contentview.ui:81
+#, kde-format
+msgid "Unsupported Type"
+msgstr "סוג לא נתמך"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
+#: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
+#: monitorswidget.cpp:116 monitorswidget.cpp:123 monitorswidget.cpp:156
+#: notificationmonitor.cpp:263 notificationmonitor.cpp:572
+#: notificationmonitor.cpp:597 tagpropertiesdialog.ui:76
+#, kde-format
+msgid "Attributes"
+msgstr "מאפיינים"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
+#: browserwidget_contentview.ui:116 collectionattributespage.ui:23
+#: tagpropertiesdialog.ui:82
+#, kde-format
+msgid "New Attribute"
+msgstr "מאפיין חדש"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, addAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, addRIDButton)
+#: browserwidget_contentview.ui:123 collectionattributespage.ui:30
+#: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
+#, kde-format
+msgid "&Add"
+msgstr "הו&ספה"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: browserwidget_contentview.ui:130 collectionattributespage.ui:40
+#, kde-format
+msgid "&Delete"
+msgstr "מ&חיקה"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: browserwidget_contentview.ui:138
+#, kde-format
+msgid "Raw Payload"
+msgstr "מטען גולמי"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
+#, kde-format
+msgid "Internals"
+msgstr "פנימיים"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:178
+#, kde-format
+msgid "Unique ID:"
+msgstr "מזהה ייחודי:"
+
+#. i18n: ectx: property (text), widget (QLabel, id)
+#. i18n: ectx: property (text), widget (QLabel, revision)
+#. i18n: ectx: property (text), widget (QLabel, size)
+#. i18n: ectx: property (text), widget (QLabel, modificationtime)
+#: browserwidget_contentview.ui:191 browserwidget_contentview.ui:249
+#: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: browserwidget_contentview.ui:202
+#, kde-format
+msgid "Remote ID:"
+msgstr "מזהה מרוחק:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_gid)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
+#, kde-format
+msgid "GID:"
+msgstr "מזהה קבוצה:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: browserwidget_contentview.ui:236
+#, kde-format
+msgid "Revision:"
+msgstr "מהדורה:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: browserwidget_contentview.ui:260
+#, kde-format
+msgid "Size:"
+msgstr "גודל:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: browserwidget_contentview.ui:284
+#, kde-format
+msgid "Last modification time:"
+msgstr "מועד השינוי האחרון:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: browserwidget_contentview.ui:308
+#, kde-format
+msgid "Mimetype:"
+msgstr "סוג תוכן:"
+
+#. i18n: ectx: property (text), widget (QLabel, mimeType)
+#: browserwidget_contentview.ui:321
+#, kde-format
+msgid "invalid/invalid"
+msgstr "שגוי/שגוי"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (KEditListWidget, flags)
+#. i18n: ectx: property (title), widget (KEditListWidget, tags)
+#: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:280
+#, kde-format
+msgid "Flags"
+msgstr "דגלונים"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:85
+#: notificationmonitor.cpp:281 notificationmonitor.cpp:492
+#, kde-format
+msgid "Tags"
+msgstr "תגיות"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: browserwidget_itemview.ui:31
+#, kde-format
+msgctxt "model name"
+msgid "Model:"
+msgstr "דגם:"
+
+#: collectionaclpage.cpp:17
+#, kde-format
+msgid "ACL"
+msgstr "רשימת בקרת גישה"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectionaclpage.ui:17
+#, kde-format
+msgid "Item Access Rights"
+msgstr "זכויות גישה לפריט"
+
+#. i18n: ectx: property (text), widget (QCheckBox, createItem)
+#. i18n: ectx: property (text), widget (QCheckBox, createCollection)
+#: collectionaclpage.ui:23 collectionaclpage.ui:67
+#, kde-format
+msgid "Create"
+msgstr "יצירה"
+
+#. i18n: ectx: property (text), widget (QCheckBox, changeItem)
+#. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
+#: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:91
+#: notificationmodel.cpp:115 notificationmodel.cpp:133
+#: notificationmodel.cpp:155 notificationmonitor.cpp:172
+#: notificationmonitor.cpp:381 notificationmonitor.cpp:443
+#: notificationmonitor.cpp:467
+#, kde-format
+msgid "Modify"
+msgstr "שינוי"
+
+#. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
+#. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
+#: collectionaclpage.ui:37 collectionaclpage.ui:81
+#, kde-format
+msgid "Delete"
+msgstr "מחיקה"
+
+#. i18n: ectx: property (text), widget (QCheckBox, linkItem)
+#: collectionaclpage.ui:44 notificationmodel.cpp:97 notificationmonitor.cpp:181
+#, kde-format
+msgid "Link"
+msgstr "קישור"
+
+#. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
+#: collectionaclpage.ui:51 notificationmodel.cpp:99 notificationmonitor.cpp:184
+#, kde-format
+msgid "Unlink"
+msgstr "ניתוק"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: collectionaclpage.ui:61
+#, kde-format
+msgid "Collection Access Rights"
+msgstr "זכויות גישה לאוסף"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: collectionaclpage.ui:91
+#, kde-format
+msgid ""
+"<b>Note: </b>These values are provided by the corresponding backend and are "
+"not intended to be changed by you, so be warned if something breaks when "
+"changing them nevertheless!"
+msgstr ""
+"<b>לתשומת ליבך: </b>הערכים האלו מסופקים על ידי המנגנון המתאים ואינם מיועדים "
+"לשינוי על ידיך, לכן מוטב לשים לב אם משהו נפגע עקב עריכת שינויים בהם על כל "
+"אופן!"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
+#, kde-format
+msgid "Attribute"
+msgstr "מאפיין"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
+#, kde-format
+msgid "Value"
+msgstr "ערך"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
+#, kde-format
+msgid "Do not even think about changing anything in here!"
+msgstr "רצוי מאוד אפילו לא לחשוב על לשנות כאן משהו!"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectioninternalspage.ui:28
+#, kde-format
+msgid "Identification"
+msgstr "זיהוי"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: collectioninternalspage.ui:48
+#, kde-format
+msgid "Remote identifier:"
+msgstr "זיהוי מרוחק:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: collectioninternalspage.ui:61
+#, kde-format
+msgid "Owner:"
+msgstr "בעלות:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: collectioninternalspage.ui:75
+#, kde-format
+msgid "Remote Revision:"
+msgstr "מהדורה מרוחקת:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:88
+#, kde-format
+msgid "Virtual:"
+msgstr "וירטואלי:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
+#: collectioninternalspage.ui:106 collectioninternalspage.ui:115
+#, kde-format
+msgid "Content Types"
+msgstr "סוגי תוכן"
+
+#: connectionpage.cpp:37 logging.cpp:53
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Programs:"
+msgstr "תוכניות:"
+
+#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
+#: dbbrowser.ui:28
+#, kde-format
+msgid "Refresh"
+msgstr "רענון"
+
+#: dbconsole.cpp:79
+#, kde-format
+msgid "Query #%1"
+msgstr "שאילתה מס׳ %1"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
+#: dbconsoletab.ui:87
+#, kde-format
+msgid "Execute query"
+msgstr "הרצת שאילתה"
+
+#: debugmodel.cpp:144
+#, kde-format
+msgid "Direction"
+msgstr "כיוון"
+
+#: debugmodel.cpp:146 loggingmodel.cpp:116
+#, kde-format
+msgid "Message"
+msgstr "הודעה"
+
+#: debugwidget.cpp:40
+#, kde-format
+msgid "Enable debugger"
+msgstr "הפעלת מנפה שגיאות"
+
+#: debugwidget.cpp:49 notificationmonitor.cpp:577
+#, kde-format
+msgid "All"
+msgstr "הכול"
+
+#: debugwidget.cpp:64
+#, kde-format
+msgid "Clear Information View"
+msgstr "פינוי תצוגת פרטים"
+
+#: debugwidget.cpp:65
+#, kde-format
+msgid "Clear Filtered Messages"
+msgstr "פינוי הודעות מסוננות"
+
+#: debugwidget.cpp:66
+#, kde-format
+msgid "Clear All Messages"
+msgstr "פינוי כל ההודעות"
+
+#: debugwidget.cpp:67
+#, kde-format
+msgid "Save Filtered Messages ..."
+msgstr "שמירת הודעות מסוננות…"
+
+#: debugwidget.cpp:68
+#, kde-format
+msgid "Save All Messages ..."
+msgstr "שמירה של כל ההודעות…"
+
+#: instanceselector.cpp:44
+#, kde-format
+msgid "Connect"
+msgstr "התחברות"
+
+#: instanceselector.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Remote Akonadi Console (%1)"
+msgstr "מסוף Akonadi מרוחק (%1)"
+
+#: instanceselector.cpp:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Console (Instance: %1)"
+msgstr "מסוף Akonadi (מופע: %1)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: instanceselector.ui:20
+#, kde-format
+msgid ""
+"There are multiple instances of Akonadi running in the current D-Bus "
+"session. Please select the instance you want to connect to."
+msgstr ""
+"יש מספר עותקים פעילים של Akonadi בהפעלת ה־D-Bus הנוכחית. נא לבחור את העותק "
+"אליו להתחבר."
+
+#: jobtracker.cpp:26
+#, kde-format
+msgid "Waiting"
+msgstr "בהמתנה"
+
+#: jobtracker.cpp:28
+#, kde-format
+msgid "Running"
+msgstr "בהרצה"
+
+#: jobtracker.cpp:30 querydebugger.cpp:345
+#, kde-format
+msgid "Ended"
+msgstr "הסתיים"
+
+#: jobtracker.cpp:32
+#, kde-format
+msgid "Failed: %1"
+msgstr "נכשל: %1"
+
+#: jobtracker.cpp:34
+#, kde-format
+msgid "Unknown state!"
+msgstr "מצב לא ידוע!"
+
+#: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:39
+#, kde-format
+msgid "Job ID"
+msgstr "מזהה משימה"
+
+#: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:40
+#, kde-format
+msgid "Created"
+msgstr "נוצר"
+
+#: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:41
+#, kde-format
+msgid "Wait time"
+msgstr "זמן המתנה"
+
+#: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:42
+#, kde-format
+msgid "Job duration"
+msgstr "משך משימה"
+
+#: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:43
+#, kde-format
+msgid "Job Type"
+msgstr "סוג משימה"
+
+#: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:44
+#, kde-format
+msgid "State"
+msgstr "מצב"
+
+#: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:45 logging.cpp:60
+#: loggingmodel.cpp:139
+#, kde-format
+msgid "Info"
+msgstr "פרטים"
+
+#: jobtrackersearchwidget.cpp:20
+#, kde-format
+msgid "Show Only Errors"
+msgstr "הצגת שגיאות בלבד"
+
+#: jobtrackersearchwidget.cpp:28
+#, kde-format
+msgid "Search..."
+msgstr "חיפוש…"
+
+#: jobtrackersearchwidget.cpp:38
+#, kde-format
+msgid "All Columns"
+msgstr "כל העמודות"
+
+#: jobtrackerwidget.cpp:73
+#, kde-format
+msgid "Save to file..."
+msgstr "שמירה לקובץ…"
+
+#: jobtrackerwidget.cpp:105 notificationmonitor.cpp:119
+#, kde-format
+msgid "Clear View"
+msgstr "פינוי התצוגה"
+
+#: jobtrackerwidget.cpp:107
+#, kde-format
+msgid "Copy Info"
+msgstr "העתקת פרטים"
+
+#: jobtrackerwidget.cpp:109
+#, kde-format
+msgid "Collapse All"
+msgstr "צמצום של הכול"
+
+#: jobtrackerwidget.cpp:110
+#, kde-format
+msgid "Expand All"
+msgstr "הרחבה של הכול"
+
+#: logging.cpp:44
+#, kde-format
+msgid "Enable"
+msgstr "הפעלה"
+
+#: logging.cpp:56 notificationmonitor.cpp:64
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Types:"
+msgstr "סוגים:"
+
+#: logging.cpp:59 loggingmodel.cpp:137
+#, kde-format
+msgid "Debug"
+msgstr "ניפוי שגיאות"
+
+#: logging.cpp:61 loggingmodel.cpp:141
+#, kde-format
+msgid "Warning"
+msgstr "אזהרה"
+
+#: logging.cpp:62 loggingmodel.cpp:143
+#, kde-format
+msgid "Critical"
+msgstr "משמעותי"
+
+#: logging.cpp:63 loggingmodel.cpp:145
+#, kde-format
+msgid "Fatal"
+msgstr "חמוּר"
+
+#: logging.cpp:64
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Categories:"
+msgstr "קטגוריות:"
+
+#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#, kde-format
+msgid "Save to File..."
+msgstr "שמירה לקובץ…"
+
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
+#, kde-format
+msgid "Error"
+msgstr "שגיאה"
+
+#: logging.cpp:136 notificationmonitor.cpp:610
+#, kde-format
+msgid "Failed to open file: %1"
+msgstr "פתיחת הקובץ נכשלה: %1"
+
+#: loggingmodel.cpp:104
+#, kde-format
+msgid "Time"
+msgstr "זמן"
+
+#: loggingmodel.cpp:106
+#, kde-format
+msgid "Program"
+msgstr "תוכנית"
+
+#: loggingmodel.cpp:108 notificationmodel.cpp:209 notificationmonitor.cpp:143
+#: notificationmonitor.cpp:256
+#, kde-format
+msgid "Type"
+msgstr "סוג"
+
+#: loggingmodel.cpp:110
+#, kde-format
+msgid "Category"
+msgstr "קטגוריה"
+
+#: loggingmodel.cpp:112
+#, kde-format
+msgid "File"
+msgstr "קובץ"
+
+#: loggingmodel.cpp:114
+#, kde-format
+msgid "Function"
+msgstr "פונקציה"
+
+#: loggingmodel.cpp:154 loggingmodel.cpp:170
+#, kde-format
+msgid "%1:%2"
+msgstr "%1:%2"
+
+#: main.cpp:27
+#, kde-format
+msgid "Akonadi Console"
+msgstr "מסוף Akonadi"
+
+#: main.cpp:29
+#, kde-format
+msgid "The Management and Debugging Console for Akonadi"
+msgstr "מסוף הניהול וניפוי השגיאות ל־Akonadi"
+
+#: main.cpp:31
+#, kde-format
+msgid "(c) 2006-2024 the Akonadi developer"
+msgstr "(c) 2006‏-2024 מפתח Akonadi"
+
+#: main.cpp:35 main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "יוצר"
+
+#: mainwidget.cpp:49
+#, kde-format
+msgid "Agents"
+msgstr "סוכנים"
+
+#: mainwidget.cpp:51
+#, kde-format
+msgid "Browser"
+msgstr "דפדפן"
+
+#: mainwidget.cpp:52
+#, kde-format
+msgid "Debugger"
+msgstr "מנפה שגיאות"
+
+#: mainwidget.cpp:53
+#, kde-format
+msgid "Logging"
+msgstr "תיעוד"
+
+#: mainwidget.cpp:54
+#, kde-format
+msgid "DB Browser"
+msgstr "דפדפן מסד נתונים"
+
+#: mainwidget.cpp:55
+#, kde-format
+msgid "DB Console"
+msgstr "מסוף מסד נתונים"
+
+#: mainwidget.cpp:56
+#, kde-format
+msgid "Query Debugger"
+msgstr "מנפה שגיאות בשאילתות"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Enable job tracker"
+msgstr "הפעלת עוקב משימות"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Job Tracker"
+msgstr "עוקב משימות"
+
+#: mainwidget.cpp:58
+#, kde-format
+msgid "Enable tracking of Resource Schedulers"
+msgstr "הפעלת מעקב מתזמני משאבים"
+
+#: mainwidget.cpp:58
+#, kde-format
+msgid "Resources Schedulers"
+msgstr "מתזמני משאבים"
+
+#: mainwidget.cpp:59
+#, kde-format
+msgid "Notification Monitor"
+msgstr "צג התראות"
+
+#: mainwidget.cpp:61
+#, kde-format
+msgid "Item Search"
+msgstr "חיפוש פריטים"
+
+#: mainwidget.cpp:63
+#, kde-format
+msgid "Monitors"
+msgstr "צגים"
+
+#: mainwidget.cpp:66
+#, kde-format
+msgid "Dump to XML..."
+msgstr "הטלה ל־XML…"
+
+#: mainwidget.cpp:70
+#, kde-format
+msgid "Clear Akonadi Cache"
+msgstr "פינוי המטמון של Akonadi"
+
+#: mainwidget.cpp:74
+#, kde-format
+msgid "Start Server"
+msgstr "הפעלת שרת"
+
+#: mainwidget.cpp:78
+#, kde-format
+msgid "Stop Server"
+msgstr "עצירת שרת"
+
+#: mainwidget.cpp:82
+#, kde-format
+msgid "Restart Server"
+msgstr "הפעלת שרת מחדש"
+
+#: mainwindow.cpp:33
+#, kde-format
+msgid ""
+"<p>Akonadi Console is purely a development tool. It allows you to view and "
+"change internal data structures of Akonadi. You should only change data in "
+"here if you know what you are doing, otherwise you risk damaging or losing "
+"your personal information management data.<br/><b>Use at your own risk!</b></"
+"p>"
+msgstr ""
+"<p>מסוף Akonadi הוא כלי פיתוח גרידא. הוא מאפשר לך לצפות ולשנות את המבנה "
+"הפנימי של הנתונים של Akonadi. כדאי מאוד להבין היטב מה המטרה לפני עריכת "
+"שינויים בנתונים, אחרת נשקפת סכנה לפגיעה או אובדן של נתונים במנהל המידע האישי "
+"שלך.<br/><b>על אחריותך בלבד!</b></p>"
+
+#: monitorsmodel.cpp:97
+#, kde-format
+msgid "Session/Subscriber"
+msgstr "הפעלה/מנוי"
+
+#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:230
+#: notificationmonitor.cpp:486
+#, kde-format
+msgid "Items"
+msgstr "פריטים"
+
+#: monitorswidget.cpp:82 notificationmonitor.cpp:489
+#, kde-format
+msgid "Collections"
+msgstr "אוספים"
+
+#: monitorswidget.cpp:88 notificationmonitor.cpp:291
+#: notificationmonitor.cpp:495
+#, kde-format
+msgid "Relations"
+msgstr "יחסים"
+
+#: monitorswidget.cpp:91
+#, kde-format
+msgid "Subscribers"
+msgstr "מנויים"
+
+#: monitorswidget.cpp:94
+#, kde-format
+msgid "Notification"
+msgstr "התראה"
+
+#: monitorswidget.cpp:103 notificationmonitor.cpp:568
+#, kde-format
+msgid "List Filter"
+msgstr "מסנן רשימה"
+
+#: monitorswidget.cpp:104 notificationmonitor.cpp:569
+#, kde-format
+msgid "Include Statistics"
+msgstr "כולל סטטיסטיקה"
+
+#: monitorswidget.cpp:105 notificationmonitor.cpp:201
+#: notificationmonitor.cpp:400 notificationmonitor.cpp:453
+#: notificationmonitor.cpp:570 tagpropertiesdialog.cpp:80
+#, kde-format
+msgid "Resource"
+msgstr "משאב"
+
+#: monitorswidget.cpp:106
+#, kde-format
+msgid "Content MimeTypes"
+msgstr "סוג התוכן"
+
+#: monitorswidget.cpp:107 monitorswidget.cpp:160 notificationmonitor.cpp:586
+#, kde-format
+msgid "Ancestor Retrieval"
+msgstr "משיכת אבות קדומים"
+
+#: monitorswidget.cpp:111
+#, kde-format
+msgid "Ancestor Fetch Scope"
+msgstr "היקף משיכת אבות קדומים"
+
+#: monitorswidget.cpp:117 monitorswidget.cpp:124 notificationmonitor.cpp:573
+#: notificationmonitor.cpp:594
+#, kde-format
+msgid "Fetch ID Only"
+msgstr "משיכת המזהה בלבד"
+
+#: monitorswidget.cpp:118
+#, kde-format
+msgid "Ignore Retrieval Error"
+msgstr "התעלמות משגיאות משיכה"
+
+#: monitorswidget.cpp:132 notificationmonitor.cpp:135 searchwidget.cpp:205
+#, kde-format
+msgid "Values"
+msgstr "ערכים"
+
+#: monitorswidget.cpp:132 notificationmonitor.cpp:135
+#, kde-format
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: monitorswidget.cpp:140 notificationmonitor.cpp:477
+#, kde-format
+msgid "Subscriber"
+msgstr "מנוי"
+
+#: monitorswidget.cpp:141
+#, kde-format
+msgid "Session ID"
+msgstr "מזהה הפעלה"
+
+#: monitorswidget.cpp:142
+#, kde-format
+msgid "Monitored Collections:"
+msgstr "אוספים במעקב:"
+
+#: monitorswidget.cpp:143
+#, kde-format
+msgid "Monitored Items:"
+msgstr "פריטים במעקב:"
+
+#: monitorswidget.cpp:144
+#, kde-format
+msgid "Monitored Tags:"
+msgstr "תגיות במעקב:"
+
+#: monitorswidget.cpp:145
+#, kde-format
+msgid "Monitored Types:"
+msgstr "סוגים במעקב:"
+
+#: monitorswidget.cpp:146
+#, kde-format
+msgid "Monitored Mime Types:"
+msgstr "סוגי תוכן במעקב:"
+
+#: monitorswidget.cpp:147
+#, kde-format
+msgid "Monitored Resources:"
+msgstr "משאבים במעקב:"
+
+#: monitorswidget.cpp:148
+#, kde-format
+msgid "Ignored Sessions:"
+msgstr "הפעלות בהתעלמות:"
+
+#: monitorswidget.cpp:149
+#, kde-format
+msgid "All Monitored:"
+msgstr "כל הנעקבים:"
+
+#: monitorswidget.cpp:150
+#, kde-format
+msgid "Is Exclusive:"
+msgstr "האם בלעדי:"
+
+#: monitorswidget.cpp:152 notificationmonitor.cpp:515
+#, kde-format
+msgid "Item Fetch Scope"
+msgstr "היקף משיכת פריטים"
+
+#: monitorswidget.cpp:154
+#, kde-format
+msgid "Payload Parts"
+msgstr "חלקי מטען"
+
+#: monitorswidget.cpp:155 notificationmonitor.cpp:534
+#, kde-format
+msgid "Full Payload"
+msgstr "מטען מלא"
+
+#: monitorswidget.cpp:157 notificationmonitor.cpp:535
+#, kde-format
+msgid "All Attributes"
+msgstr "על המאפיינים"
+
+#: monitorswidget.cpp:158
+#, kde-format
+msgid "Cache only"
+msgstr "מטמון בלבד"
+
+#: monitorswidget.cpp:159
+#, kde-format
+msgid "Check for Cached Payloads Parts Only"
+msgstr "בדיקה של חלקי המטענים במטמון בלבד"
+
+#: monitorswidget.cpp:161
+#, kde-format
+msgid "Fetch mtime"
+msgstr "משיכת מועד שינוי"
+
+#: monitorswidget.cpp:162 notificationmonitor.cpp:542
+#, kde-format
+msgid "Fetch GID"
+msgstr "משיכת מזהה קבוצה"
+
+#: monitorswidget.cpp:163 notificationmonitor.cpp:589
+#, kde-format
+msgid "Ignore Retrieval Errors"
+msgstr "התעלמות משגיאות משיכה"
+
+#: monitorswidget.cpp:164
+#, kde-format
+msgid "Fetch Change Since"
+msgstr "המשיכה השתנתה מאז"
+
+#: monitorswidget.cpp:165
+#, kde-format
+msgid "Fetch RID"
+msgstr "משיכת מזהה מרוחק"
+
+#: monitorswidget.cpp:166 notificationmonitor.cpp:543
+#, kde-format
+msgid "Fetch Tags"
+msgstr "משיכת תגיות"
+
+#: monitorswidget.cpp:169
+#, kde-format
+msgid "Collection Fetch Scope"
+msgstr "היקף משיכת אוספים"
+
+#: monitorswidget.cpp:172 notificationmonitor.cpp:592
+#, kde-format
+msgid "Tag Fetch Scope"
+msgstr "היקף משיכת תגיות"
+
+#: notificationmodel.cpp:77 notificationmonitor.cpp:454
+#, kde-format
+msgid "Tag"
+msgstr "תגית"
+
+#: notificationmodel.cpp:79 notificationmonitor.cpp:425
+#, kde-format
+msgid "Relation"
+msgstr "יחס"
+
+#: notificationmodel.cpp:81
+#, kde-format
+msgid "Subscription"
+msgstr "מינוי"
+
+#: notificationmodel.cpp:89 notificationmodel.cpp:113 notificationmodel.cpp:131
+#: notificationmodel.cpp:143 notificationmodel.cpp:153
+#: notificationmonitor.cpp:169 notificationmonitor.cpp:378
+#: notificationmonitor.cpp:415 notificationmonitor.cpp:440
+#: notificationmonitor.cpp:464
+#, kde-format
+msgid "Add"
+msgstr "הוספה"
+
+#: notificationmodel.cpp:93 notificationmodel.cpp:117
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:384
+#, kde-format
+msgid "Move"
+msgstr "העברה"
+
+#: notificationmodel.cpp:101 notificationmonitor.cpp:187
+#, kde-format
+msgid "ModifyFlags"
+msgstr "שינוי דגלונים"
+
+#: notificationmodel.cpp:103 notificationmonitor.cpp:190
+#, kde-format
+msgid "ModifyTags"
+msgstr "שינוי תגיות"
+
+#: notificationmodel.cpp:105 notificationmonitor.cpp:193
+#, kde-format
+msgid "ModifyRelations"
+msgstr "שינוי יחסים"
+
+#: notificationmodel.cpp:107 notificationmodel.cpp:137
+#: notificationmodel.cpp:147 notificationmodel.cpp:159
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:421
+#: notificationmonitor.cpp:449 notificationmonitor.cpp:473
+#, kde-format
+msgid "InvalidOp"
+msgstr "פעולה שגויה"
+
+#: notificationmodel.cpp:121 notificationmonitor.cpp:390
+#, kde-format
+msgid "Subscribe"
+msgstr "רישום"
+
+#: notificationmodel.cpp:123 notificationmonitor.cpp:393
+#, kde-format
+msgid "Unsubscribe"
+msgstr "גריעה"
+
+#: notificationmodel.cpp:125 notificationmonitor.cpp:396
+#, kde-format
+msgid "InvalidIp"
+msgstr "IP שגוי"
+
+#: notificationmodel.cpp:163
+#, kde-format
+msgid "Unknown"
+msgstr "לא ידוע"
+
+#: notificationmodel.cpp:211 notificationmonitor.cpp:200
+#: notificationmonitor.cpp:399 notificationmonitor.cpp:424
+#: notificationmonitor.cpp:452 notificationmonitor.cpp:476
+#, kde-format
+msgid "Operation"
+msgstr "פעולה"
+
+#: notificationmodel.cpp:213
+#, kde-format
+msgid "IDs"
+msgstr "מזהים"
+
+#: notificationmodel.cpp:215
+#, kde-format
+msgid "Session"
+msgstr "הפעלה"
+
+#: notificationmodel.cpp:217 notificationmonitor.cpp:144
+#, kde-format
+msgid "Listeners"
+msgstr "מאזינים"
+
+#: notificationmonitor.cpp:59
+#, kde-format
+msgid "Enable notification monitor"
+msgstr "הפעלת מעקב התראות"
+
+#: notificationmonitor.cpp:142
+#, kde-format
+msgid "Timestamp"
+msgstr "חותמת זמן"
+
+#: notificationmonitor.cpp:202 notificationmonitor.cpp:401
+#, kde-format
+msgid "Parent Collection"
+msgstr "אוסף הורדה"
+
+#: notificationmonitor.cpp:203
+#, kde-format
+msgid "Parent Dest Col"
+msgstr "עמודת יעד הורה"
+
+#: notificationmonitor.cpp:204 notificationmonitor.cpp:403
+#, kde-format
+msgid "Destination Resource"
+msgstr "משאב יעד"
+
+#: notificationmonitor.cpp:205
+#, kde-format
+msgid "Item Parts"
+msgstr "חלקי פריט"
+
+#: notificationmonitor.cpp:206
+#, kde-format
+msgid "Added Flags"
+msgstr "דגלונים שנוספו"
+
+#: notificationmonitor.cpp:207
+#, kde-format
+msgid "Removed Flags"
+msgstr "דגלונים שהוסרו"
+
+#: notificationmonitor.cpp:208
+#, kde-format
+msgid "Added Tags"
+msgstr "תגיות שנוספו"
+
+#: notificationmonitor.cpp:209
+#, kde-format
+msgid "Removed Tags"
+msgstr "תגיות שהוסרו"
+
+#: notificationmonitor.cpp:219
+#, kde-format
+msgid "Removed Relations"
+msgstr "יחסים שהוסרו"
+
+#: notificationmonitor.cpp:228
+#, kde-format
+msgid "Must retrieve"
+msgstr "חובה למשוך"
+
+#: notificationmonitor.cpp:242
+#, kde-format
+msgid "id"
+msgstr "מזהה"
+
+#: notificationmonitor.cpp:243
+#, kde-format
+msgid "remoteId"
+msgstr "מזהה מרוחק"
+
+#: notificationmonitor.cpp:244
+#, kde-format
+msgid "name"
+msgstr "שם"
+
+#: notificationmonitor.cpp:246 notificationmonitor.cpp:301
+#: notificationmonitor.cpp:349
+#, kde-format
+msgid "Ancestor"
+msgstr "אב קדום"
+
+#: notificationmonitor.cpp:253 notificationmonitor.cpp:335
+#, kde-format
+msgid "ID"
+msgstr "מזהה"
+
+#: notificationmonitor.cpp:254 notificationmonitor.cpp:336
+#, kde-format
+msgid "Parent ID"
+msgstr "מזהה הורה"
+
+#: notificationmonitor.cpp:255 notificationmonitor.cpp:276
+#, kde-format
+msgid "GID"
+msgstr "מזהה קבוצה"
+
+#: notificationmonitor.cpp:257 notificationmonitor.cpp:339
+#: notificationmonitor.cpp:431 tagpropertiesdialog.cpp:80
+#, kde-format
+msgid "Remote ID"
+msgstr "מזהה מרוחק"
+
+#: notificationmonitor.cpp:272
+#, kde-format
+msgid "Revision"
+msgstr "מהדורה"
+
+#: notificationmonitor.cpp:273
+#, kde-format
+msgid "ParentID"
+msgstr "מזהה הורה"
+
+#: notificationmonitor.cpp:274
+#, kde-format
+msgid "RemoteID"
+msgstr "מזהה מרוחק"
+
+#: notificationmonitor.cpp:275
+#, kde-format
+msgid "RemoteRev"
+msgstr "מהדורה מרוחקת"
+
+#: notificationmonitor.cpp:277 notificationmonitor.cpp:323
+#: notificationmonitor.cpp:345
+#, kde-format
+msgid "Size"
+msgstr "גודל"
+
+#: notificationmonitor.cpp:278
+#, kde-format
+msgid "MimeType"
+msgstr "סוג תוכן"
+
+#: notificationmonitor.cpp:279
+#, kde-format
+msgid "MTime"
+msgstr "זמן שינוי"
+
+#: notificationmonitor.cpp:290
+#, kde-format
+msgid "VRefs"
+msgstr "הפניות וירטואליות"
+
+#: notificationmonitor.cpp:307
+#, kde-format
+msgid "Parts"
+msgstr "חלקים"
+
+#: notificationmonitor.cpp:314
+#, kde-format
+msgid "External"
+msgstr "חיצוני"
+
+#: notificationmonitor.cpp:317
+#, kde-format
+msgid "Internal"
+msgstr "פנימי"
+
+#: notificationmonitor.cpp:320
+#, kde-format
+msgid "Foreign"
+msgstr "זר"
+
+#: notificationmonitor.cpp:324
+#, kde-format
+msgid "Storage Type"
+msgstr "סוג אחסון"
+
+#: notificationmonitor.cpp:325
+#, kde-format
+msgid "Version"
+msgstr "גרסה"
+
+#: notificationmonitor.cpp:326
+#, kde-format
+msgid "Data"
+msgstr "נתונים"
+
+#: notificationmonitor.cpp:337
+#, kde-format
+msgid "Name"
+msgstr "שם"
+
+#: notificationmonitor.cpp:338
+#, kde-format
+msgid "Mime Types"
+msgstr "סוגי תוכן"
+
+#: notificationmonitor.cpp:340
+#, kde-format
+msgid "Remote Revision"
+msgstr "מהדורה מרוחקת"
+
+#: notificationmonitor.cpp:341
+#, kde-format
+msgid "Statistics"
+msgstr "סטטיסטיקה"
+
+#: notificationmonitor.cpp:343
+#, kde-format
+msgid "Count"
+msgstr "כמות"
+
+#: notificationmonitor.cpp:344
+#, kde-format
+msgid "Unseen"
+msgstr "לא נצפה"
+
+#: notificationmonitor.cpp:347
+#, kde-format
+msgid "Search Query"
+msgstr "שאילתת חיפוש"
+
+#: notificationmonitor.cpp:348
+#, kde-format
+msgid "Search Collections"
+msgstr "חיפוש באוספים"
+
+#: notificationmonitor.cpp:355
+#, kde-format
+msgid "Cache Policy"
+msgstr "מדיניות מטמון"
+
+#: notificationmonitor.cpp:357
+#, kde-format
+msgid "Inherit"
+msgstr "ירושה"
+
+#: notificationmonitor.cpp:358
+#, kde-format
+msgid "Check Interval"
+msgstr "הפרש בין בדיקות"
+
+#: notificationmonitor.cpp:359
+#, kde-format
+msgid "Cache Timeout"
+msgstr "הזמן המתנה למטמון"
+
+#: notificationmonitor.cpp:360
+#, kde-format
+msgid "Sync on Demand"
+msgstr "סנכרון לפי דרישה"
+
+#: notificationmonitor.cpp:361
+#, kde-format
+msgid "Local Parts"
+msgstr "חלקים מקומיים"
+
+#: notificationmonitor.cpp:366 notificationmonitor.cpp:559
+#, kde-format
+msgid "Enabled"
+msgstr "מופעל"
+
+#: notificationmonitor.cpp:367
+#, kde-format
+msgid "DisplayPref"
+msgstr "העדפות תצוגה"
+
+#: notificationmonitor.cpp:368
+#, kde-format
+msgid "SyncPref"
+msgstr "העדפות סנכרון"
+
+#: notificationmonitor.cpp:369
+#, kde-format
+msgid "IndexPref"
+msgstr "העדפות מפתח"
+
+#: notificationmonitor.cpp:370
+#, kde-format
+msgid "Virtual"
+msgstr "וירטואלי"
+
+#: notificationmonitor.cpp:402
+#, kde-format
+msgid "Parent Dest Collection"
+msgstr "אוסף יעד הורה"
+
+#: notificationmonitor.cpp:404
+#, kde-format
+msgid "Changed Parts"
+msgstr "חלקים שהשתנו"
+
+#: notificationmonitor.cpp:427
+#, kde-format
+msgid "Left ID"
+msgstr "מזהה שמאלי"
+
+#: notificationmonitor.cpp:428
+#, kde-format
+msgid "Left MimeType"
+msgstr "סוג תוכן שמאלי"
+
+#: notificationmonitor.cpp:429
+#, kde-format
+msgid "Right ID"
+msgstr "מזהה ימני"
+
+#: notificationmonitor.cpp:430
+#, kde-format
+msgid "Right MimeType"
+msgstr "סוג תוכן ימני"
+
+#: notificationmonitor.cpp:478
+#, kde-format
+msgid "Monitored Collections"
+msgstr "אוספים במעקב"
+
+#: notificationmonitor.cpp:479
+#, kde-format
+msgid "Monitored Items"
+msgstr "פריטים במעקב"
+
+#: notificationmonitor.cpp:480
+#, kde-format
+msgid "Monitored Tags"
+msgstr "תגיות במעקב"
+
+#: notificationmonitor.cpp:498
+#, kde-format
+msgid "Subscriptions"
+msgstr "מינויים"
+
+#: notificationmonitor.cpp:501
+#, kde-format
+msgid "Changes"
+msgstr "שינויים"
+
+#: notificationmonitor.cpp:504
+#, kde-format
+msgid "No Type"
+msgstr "אין סוג"
+
+#: notificationmonitor.cpp:508
+#, kde-format
+msgid "Monitored Types"
+msgstr "סוגים במעקב"
+
+#: notificationmonitor.cpp:509
+#, kde-format
+msgid "Monitored Mime Types"
+msgstr "סוגי תוכן במעקב"
+
+#: notificationmonitor.cpp:510
+#, kde-format
+msgid "Monitored Resources"
+msgstr "משאבים במעקב"
+
+#: notificationmonitor.cpp:511
+#, kde-format
+msgid "Ignored Sessions"
+msgstr "הפעלות בהתעלמות"
+
+#: notificationmonitor.cpp:512
+#, kde-format
+msgid "All Monitored"
+msgstr "כל הנעקבים"
+
+#: notificationmonitor.cpp:513
+#, kde-format
+msgid "Exclusive"
+msgstr "בלעדי"
+
+#: notificationmonitor.cpp:517
+#, kde-format
+msgid "Requested Parts"
+msgstr "חלקים מבוקשים"
+
+#: notificationmonitor.cpp:518
+#, kde-format
+msgid "Changed Since"
+msgstr "השתנו מאז"
+
+#: notificationmonitor.cpp:522
+#, kde-format
+msgid "No Ancestor"
+msgstr "אין אב קדום"
+
+#: notificationmonitor.cpp:525
+#, kde-format
+msgid "Parent  Ancestor"
+msgstr "הורה  אב קדום"
+
+#: notificationmonitor.cpp:528
+#, kde-format
+msgid "All Ancestors"
+msgstr "כל האבות הקדומים"
+
+#: notificationmonitor.cpp:531
+#, kde-format
+msgid "Ancestor Depth"
+msgstr "עומק אבות קדומים"
+
+#: notificationmonitor.cpp:532
+#, kde-format
+msgid "Cache Only"
+msgstr "מטמון בלבד"
+
+#: notificationmonitor.cpp:533
+#, kde-format
+msgid "Check Cached Payload Parts Only"
+msgstr "לבדוק את חלקי המטען מהמטמון בלבד"
+
+#: notificationmonitor.cpp:536
+#, kde-format
+msgid "Fetch Size"
+msgstr "גודל משיכה"
+
+#: notificationmonitor.cpp:537
+#, kde-format
+msgid "Fetch MTime"
+msgstr "זמן שינוי משיכה"
+
+#: notificationmonitor.cpp:538
+#, kde-format
+msgid "Fetch Remote Revision"
+msgstr "משיכת מהדורה מרוחקת"
+
+#: notificationmonitor.cpp:539
+#, kde-format
+msgid "Ignore Errors"
+msgstr "התעלמות משגיאות"
+
+#: notificationmonitor.cpp:540
+#, kde-format
+msgid "Fetch Flags"
+msgstr "דגלוני משיכה"
+
+#: notificationmonitor.cpp:541 notificationmonitor.cpp:595
+#, kde-format
+msgid "Fetch RemoteID"
+msgstr "מזהה משיכה מרוחק"
+
+#: notificationmonitor.cpp:544
+#, kde-format
+msgid "Fetch Relations"
+msgstr "יחסי משיכה"
+
+#: notificationmonitor.cpp:545
+#, kde-format
+msgid "Fetch VRefs"
+msgstr "הפניות משיכה וירטואליות"
+
+#: notificationmonitor.cpp:553
+#, kde-format
+msgid "No Filter"
+msgstr "ללא מסנן"
+
+#: notificationmonitor.cpp:556
+#, kde-format
+msgid "Display"
+msgstr "הצגה"
+
+#: notificationmonitor.cpp:562
+#, kde-format
+msgid "Index"
+msgstr "מפתח"
+
+#: notificationmonitor.cpp:565
+#, kde-format
+msgid "Sync"
+msgstr "סנכרון"
+
+#: notificationmonitor.cpp:571
+#, kde-format
+msgid "Content Mime Types"
+msgstr "סוגי תוכן של התוכן"
+
+#: notificationmonitor.cpp:580
+#, kde-format
+msgid "Parent"
+msgstr "הורה"
+
+#: notificationmonitor.cpp:583
+#, kde-format
+msgid "None"
+msgstr "ללא"
+
+#: notificationmonitor.cpp:587
+#, kde-format
+msgid "Ancestor Fetch ID Only"
+msgstr "משיכת מזהים של אבות קדומים בלבד"
+
+#: notificationmonitor.cpp:588
+#, kde-format
+msgid "Ancestor Attributes"
+msgstr "מאפייני אבות קדומים"
+
+#: notificationmonitor.cpp:596
+#, kde-format
+msgid "Fetch All Attributes"
+msgstr "משיכת כל המאפיינים"
+
+#: querydebugger.cpp:341
+#, kde-format
+msgid "Name / Query"
+msgstr "שם / שאילתה"
+
+#: querydebugger.cpp:343
+#, kde-format
+msgid "Started"
+msgstr "החל"
+
+#: querydebugger.cpp:347
+#, kde-format
+msgid "Duration"
+msgstr "משך"
+
+#: querydebugger.cpp:525
+#, kde-format
+msgid "Query"
+msgstr "שאילתה"
+
+#: querydebugger.cpp:527
+#, kde-format
+msgid "Duration [ms]"
+msgstr "משך [מ״ש]"
+
+#: querydebugger.cpp:529
+#, kde-format
+msgid "Calls"
+msgstr "קריאות"
+
+#: querydebugger.cpp:531
+#, kde-format
+msgid "Avg. Duration [ms]"
+msgstr "משך ממוצע [מ״ש]"
+
+#: querydebugger.cpp:653
+#, kde-format
+msgid "Affected Rows:"
+msgstr "שורות מושפעות:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
+#: querydebugger.ui:17
+#, kde-format
+msgid "Enable query debugging (slows down server!)"
+msgstr "הפעלת ניפוי שגיאות של שאילתות (מאט את השרת!)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
+#: querydebugger.ui:28
+#, kde-format
+msgid "Query Sequence"
+msgstr "רצף שאילתות"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
+#: querydebugger.ui:48
+#, kde-format
+msgid "Query Tree"
+msgstr "עץ שאילתות"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
+#: querydebugger.ui:72
+#, kde-format
+msgid "Save To File"
+msgstr "שמירה לקובץ"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
+#: queryviewdialog.ui:14
+#, kde-format
+msgid "Query View"
+msgstr "תצוגת שאילתה"
+
+#. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
+#: queryviewdialog.ui:28
+#, kde-format
+msgid "Query:"
+msgstr "שאילתה:"
+
+#. i18n: ectx: property (text), widget (QLabel, queryLbl)
+#. i18n: ectx: property (text), widget (QLabel, resultsLbl)
+#: queryviewdialog.ui:41 queryviewdialog.ui:67
+#, kde-format
+msgid "TextLabel"
+msgstr "תווית טקסט"
+
+#. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
+#: queryviewdialog.ui:60
+#, kde-format
+msgid "Results:"
+msgstr "תוצאות:"
+
+#: searchwidget.cpp:50
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Search store:"
+msgstr "אחסון חיפוש:"
+
+#: searchwidget.cpp:55 searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "חיפוש"
+
+#: searchwidget.cpp:63
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Search query:"
+msgstr "שאילתת חיפוש:"
+
+#: searchwidget.cpp:72
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Results (Documents):"
+msgstr "תוצאות (מסמכים):"
+
+#: searchwidget.cpp:82
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Document:"
+msgstr "מסמך:"
+
+#: searchwidget.cpp:92
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Item:"
+msgstr "פריט:"
+
+#: searchwidget.cpp:154
+#, kde-format
+msgid "Xapian error"
+msgstr "שגיאת Xapian"
+
+#: searchwidget.cpp:160
+#, kde-format
+msgid "No Xapian database is opened"
+msgstr "אין מסד נתונים פתוח עם Xapian"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "No element found."
+msgstr "לא נמצא רכיב."
+
+#: searchwidget.cpp:197
+#, kde-format
+msgid "Term/Value"
+msgstr "מונח/ערך"
+
+#: searchwidget.cpp:197
+#, kde-format
+msgid "WDF/Slot"
+msgstr "תדירות במסמך/מקום"
+
+#: searchwidget.cpp:199
+#, kde-format
+msgid "Terms"
+msgstr "מונחים"
+
+#: searchwidget.cpp:226
+#, kde-format
+msgid "Error on fetching item"
+msgstr "שגיאה במשיכת פריט"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: tagpropertiesdialog.ui:21
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
+#: tagpropertiesdialog.ui:51
+#, kde-format
+msgid "Parent Tag Id:"
+msgstr "מזהה תגית הורה:"
+
+#. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
+#: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
+#, kde-format
+msgid "&Remove"
+msgstr "ה&סרה"
+
+#. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
+#: tagpropertiesdialog.ui:107
+#, kde-format
+msgid "Remote Identifiers"
+msgstr "מזהים מרוחקים"
