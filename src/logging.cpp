@@ -87,7 +87,7 @@ Logging::Logging(QWidget *parent)
     h = new QHBoxLayout;
     l->addLayout(h);
 
-    auto btn = new QPushButton(i18n("Save to File..."), this);
+    auto btn = new QPushButton(i18nc("@action:button", "Save to File..."), this);
     connect(btn, &QPushButton::clicked, this, &Logging::saveToFile);
     h->addWidget(btn);
     h->addStretch(1);

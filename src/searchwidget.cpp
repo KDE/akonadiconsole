@@ -52,7 +52,7 @@ SearchWidget::SearchWidget(QWidget *parent)
     mStoreCombo->setObjectName("SearchStoreCombo"_L1);
     hbox->addWidget(mStoreCombo);
     hbox->addStretch();
-    auto button = new QPushButton(i18n("Search"), this);
+    auto button = new QPushButton(i18nc("@action:button", "Search"), this);
     hbox->addWidget(button);
     layout->addLayout(hbox);
 

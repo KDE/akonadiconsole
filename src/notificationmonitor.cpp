@@ -90,7 +90,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     auto h = new QHBoxLayout;
     layout->addLayout(h);
 
-    auto btn = new QPushButton(i18n("Save to File..."));
+    auto btn = new QPushButton(i18nc("@action:button", "Save to File..."));
     connect(btn, &QPushButton::clicked, this, &NotificationMonitor::saveToFile);
     h->addWidget(btn);
     h->addStretch(1);

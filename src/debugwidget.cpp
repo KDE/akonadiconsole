@@ -61,11 +61,11 @@ DebugWidget::DebugWidget(QWidget *parent)
     auto buttonLayout = new QHBoxLayout;
     layout->addLayout(buttonLayout);
 
-    auto clearGeneralButton = new QPushButton(i18n("Clear Information View"), this);
-    auto clearFilteredButton = new QPushButton(i18n("Clear Filtered Messages"), this);
-    auto clearAllButton = new QPushButton(i18n("Clear All Messages"), this);
-    auto saveRichtextButton = new QPushButton(i18n("Save Filtered Messages ..."), this);
-    auto saveRichtextEverythingButton = new QPushButton(i18n("Save All Messages ..."), this);
+    auto clearGeneralButton = new QPushButton(i18nc("@action:button", "Clear Information View"), this);
+    auto clearFilteredButton = new QPushButton(i18nc("@action:button", "Clear Filtered Messages"), this);
+    auto clearAllButton = new QPushButton(i18nc("@action:button", "Clear All Messages"), this);
+    auto saveRichtextButton = new QPushButton(i18nc("@action:button", "Save Filtered Messages ..."), this);
+    auto saveRichtextEverythingButton = new QPushButton(i18nc("@action:button", "Save All Messages ..."), this);
 
     buttonLayout->addWidget(clearFilteredButton);
     buttonLayout->addWidget(clearAllButton);
