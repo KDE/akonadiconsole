@@ -7,7 +7,7 @@
 #include "akonadibrowsermodel.h"
 
 #include <KLocalizedString>
-#include <KMime/KMimeMessage>
+#include <KMime/Message>
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
