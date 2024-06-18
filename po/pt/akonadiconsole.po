@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2023-05-27 17:12+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -732,27 +732,37 @@ msgid "All"
 msgstr "Tudo"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Limpar a Área de Informações"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Limpar as Mensagens Filtradas"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Limpar Todas as Mensagens"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Gravar as Mensagens Filtradas ..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Gravar Todas as Mensagens ..."
 
@@ -862,7 +872,9 @@ msgid "All Columns"
 msgstr "Todas as Colunas"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Gravar num ficheiro..."
 
@@ -925,7 +937,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Categorias:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "Gravar num Ficheiro..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "Gravar num Ficheiro..."
@@ -2001,8 +2020,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Procurar no armazenamento:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Procurar"
 
@@ -2043,6 +2064,11 @@ msgstr "Erro do Xapian"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Não está aberta nenhuma base de dados do Xapian"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Procurar"
 
 #: searchwidget.cpp:171
 #, kde-format

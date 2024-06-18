@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-01-04 10:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -727,27 +727,37 @@ msgid "All"
 msgstr "Dena"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Garbitu informazio-ikuspegia"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Garbitu iragazitako mezuak"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Garbitu mezu guztiak"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Gorde iragazitako mezuak ..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Gorde mezu guztiak ..."
 
@@ -855,7 +865,9 @@ msgid "All Columns"
 msgstr "Zutabe guztiak"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Gorde fitxategian..."
 
@@ -918,7 +930,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategoriak:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "Gorde fitxategian..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "Gorde fitxategian..."
@@ -1992,8 +2011,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Bilaketa biltegiratu:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Bilatu"
 
@@ -2034,6 +2055,11 @@ msgstr "«Xapian» errorea"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Ez dago irekita «Xapian» datu-baserik"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Bilatu"
 
 #: searchwidget.cpp:171
 #, kde-format

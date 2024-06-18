@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-06-07 06:56+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -723,27 +723,37 @@ msgid "All"
 msgstr "הכול"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "פינוי תצוגת פרטים"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "פינוי הודעות מסוננות"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "פינוי כל ההודעות"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "שמירת הודעות מסוננות…"
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "שמירה של כל ההודעות…"
 
@@ -851,7 +861,9 @@ msgid "All Columns"
 msgstr "כל העמודות"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "שמירה לקובץ…"
 
@@ -912,7 +924,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "קטגוריות:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "שמירה לקובץ…"
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "שמירה לקובץ…"
@@ -1985,8 +2004,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "אחסון חיפוש:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "חיפוש"
 
@@ -2023,6 +2044,11 @@ msgstr "שגיאת Xapian"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "אין מסד נתונים פתוח עם Xapian"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "חיפוש"
 
 #: searchwidget.cpp:171
 #, kde-format

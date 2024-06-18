@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2023-11-04 08:35+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -723,27 +723,37 @@ msgid "All"
 msgstr "Všetko"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Vymazať informačné zobrazenie"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Vymazať filtrované správy"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Vymazať všetky správy"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Uložiť filtrované správy ..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Uložiť všetky správy ..."
 
@@ -851,7 +861,9 @@ msgid "All Columns"
 msgstr "Všetky stĺpce"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Uložiť do súboru..."
 
@@ -914,7 +926,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategórie:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "Uložiť do súboru..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "Uložiť do súboru..."
@@ -1989,8 +2008,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Vyhľadávacie úložisko:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Hľadať"
 
@@ -2031,6 +2052,11 @@ msgstr "Chyba Xapian"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Nie je otvorená žiadna databáza Xapian"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Hľadať"
 
 #: searchwidget.cpp:171
 #, kde-format

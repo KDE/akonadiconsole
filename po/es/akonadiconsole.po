@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-05-28 17:11+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -723,27 +723,37 @@ msgid "All"
 msgstr "Todo"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Borrar vista de información"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Borrar los mensajes filtrados"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Borrar todos los mensajes"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Guardar los mensajes filtrados..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Guardar todos los mensajes..."
 
@@ -851,7 +861,9 @@ msgid "All Columns"
 msgstr "Todas las columnas"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Guardar en archivo..."
 
@@ -912,7 +924,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Categorías:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "Guardar en archivo..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "Guardar en archivo..."
@@ -1986,8 +2005,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Reserva de búsqueda:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Buscar"
 
@@ -2024,6 +2045,11 @@ msgstr "Error de Xapian"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "No hay ninguna base de datos Xapian abierta"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Buscar"
 
 #: searchwidget.cpp:171
 #, kde-format

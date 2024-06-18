@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-05-30 03:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -718,27 +718,37 @@ msgid "All"
 msgstr "全部"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "清除資源檢視"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "清除已過濾的訊息"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "清除所有訊息"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "儲存已過濾的訊息 ..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "儲存所有訊息 ..."
 
@@ -846,7 +856,9 @@ msgid "All Columns"
 msgstr "所有欄位"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "儲存到檔案..."
 
@@ -907,7 +919,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "分類："
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "儲存到檔案..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "儲存到檔案..."
@@ -1980,8 +1999,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "搜尋儲存："
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "搜尋"
 
@@ -2018,6 +2039,11 @@ msgstr "Xapian 錯誤"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "沒有開啟 Xapian 資料庫"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "搜尋"
 
 #: searchwidget.cpp:171
 #, kde-format

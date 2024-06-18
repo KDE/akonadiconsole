@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-05-28 16:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -720,27 +720,37 @@ msgid "All"
 msgstr "Tümü"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Bilgi Görünümünü Temizle"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Süzülen İletileri Temizle"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Tüm İletileri Temizle"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Süzülen İletileri Kaydet…"
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Tüm İletileri Kaydet…"
 
@@ -848,7 +858,9 @@ msgid "All Columns"
 msgstr "Tüm Sütunlar"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Dosyaya Kaydet…"
 
@@ -909,7 +921,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Kategoriler:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "Dosyaya Kaydet…"
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "Dosyaya Kaydet…"
@@ -1983,8 +2002,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "Depoyu ara:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Ara"
 
@@ -2021,6 +2042,11 @@ msgstr "Xapian hatası"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Bir Xapian veritabanı açık değil"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Ara"
 
 #: searchwidget.cpp:171
 #, kde-format

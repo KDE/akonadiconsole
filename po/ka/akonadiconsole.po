@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:39+0000\n"
 "PO-Revision-Date: 2024-05-28 05:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -721,27 +721,37 @@ msgid "All"
 msgstr "ყველა"
 
 #: debugwidget.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Information View"
+msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "ინფორმაციის ხედის გასუფთავება"
 
 #: debugwidget.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear Filtered Messages"
+msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "გაფილტრული შეტყობინებების გასუფთავება"
 
 #: debugwidget.cpp:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear All Messages"
+msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "ყველა შეტყობინების გასუფთავება"
 
 #: debugwidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Filtered Messages ..."
+msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "გაფილტრული შეტყობინებების შენახხვა..."
 
 #: debugwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save All Messages ..."
+msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "ყველა შეტყობინების შენახვა..."
 
@@ -849,7 +859,9 @@ msgid "All Columns"
 msgstr "ყველა სვეტი"
 
 #: jobtrackerwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save to file..."
+msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "ფაილში შენახვა..."
 
@@ -910,7 +922,14 @@ msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "კატეგორიები:"
 
-#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#: logging.cpp:90 notificationmonitor.cpp:93
+#, fuzzy, kde-format
+#| msgid "Save to File..."
+msgctxt "@action:button"
+msgid "Save to File..."
+msgstr "ფაილში შენახვა..."
+
+#: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
 msgstr "ფაილში შენახვა..."
@@ -1984,8 +2003,10 @@ msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "საძებნი საცავი:"
 
-#: searchwidget.cpp:55 searchwidget.cpp:171
-#, kde-format
+#: searchwidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "ძებნა"
 
@@ -2022,6 +2043,11 @@ msgstr "Xapian-ის შეცდომა"
 #, kde-format
 msgid "No Xapian database is opened"
 msgstr "Xapian-ის ბაზა გახსნილი არაა"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "ძებნა"
 
 #: searchwidget.cpp:171
 #, kde-format
