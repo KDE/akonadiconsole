@@ -718,36 +718,31 @@ msgid "All"
 msgstr "全部"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Information View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "清除信息视图"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Filtered Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "清除已过滤的消息"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "清除所有消息"
 
 #: debugwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Save Filtered Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "保存过滤消息"
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Save All Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "保存所有消息"
@@ -854,8 +849,7 @@ msgid "All Columns"
 msgstr "全部列"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "保存到文件"
@@ -918,8 +912,7 @@ msgid "Categories:"
 msgstr "分类："
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "保存到文件"
@@ -1997,8 +1990,7 @@ msgid "Search store:"
 msgstr "搜索于:"
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "搜索"

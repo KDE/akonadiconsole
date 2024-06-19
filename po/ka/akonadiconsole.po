@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:39+0000\n"
-"PO-Revision-Date: 2024-05-28 05:51+0200\n"
+"PO-Revision-Date: 2024-06-18 05:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -721,36 +721,31 @@ msgid "All"
 msgstr "ყველა"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Information View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "ინფორმაციის ხედის გასუფთავება"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Filtered Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "გაფილტრული შეტყობინებების გასუფთავება"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "ყველა შეტყობინების გასუფთავება"
 
 #: debugwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Save Filtered Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
-msgstr "გაფილტრული შეტყობინებების შენახხვა..."
+msgstr "გაფილტრული შეტყობინებების შენახვა..."
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Save All Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "ყველა შეტყობინების შენახვა..."
@@ -859,8 +854,7 @@ msgid "All Columns"
 msgstr "ყველა სვეტი"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "ფაილში შენახვა..."
@@ -923,8 +917,7 @@ msgid "Categories:"
 msgstr "კატეგორიები:"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "ფაილში შენახვა..."
@@ -2004,8 +1997,7 @@ msgid "Search store:"
 msgstr "საძებნი საცავი:"
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "ძებნა"

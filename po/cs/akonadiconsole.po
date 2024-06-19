@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:39+0000\n"
-"PO-Revision-Date: 2024-05-29 11:47+0200\n"
+"PO-Revision-Date: 2024-06-18 15:56+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -718,22 +718,19 @@ msgid "All"
 msgstr "Vše"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
-msgstr "Vyčistit pohled"
+msgstr "Vymazat pohled na informace"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
-msgstr "Vymazat všechny zprávy"
+msgstr "Vymazat filtrované zprávy"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Vymazat všechny zprávy"
@@ -742,14 +739,13 @@ msgstr "Vymazat všechny zprávy"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "Uložit filtrované zprávy ..."
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
-msgstr "Vymazat všechny zprávy"
+msgstr "Uložit všechny zprávy ..."
 
 #: instanceselector.cpp:44
 #, kde-format
@@ -853,8 +849,7 @@ msgid "All Columns"
 msgstr "Všechny sloupce"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Uložit do souboru..."
@@ -917,8 +912,7 @@ msgid "Categories:"
 msgstr "Kategorie:"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "Uložit do souboru..."
@@ -1993,8 +1987,7 @@ msgid "Search store:"
 msgstr ""
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Hledat"
