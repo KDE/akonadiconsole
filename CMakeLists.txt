@@ -82,7 +82,7 @@ find_package(KPim6Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED) # Because of KPIM::KCheckComboBox
 
-if (NOT WIN32)
+if(NOT WIN32)
     find_package(KPim6AkonadiContactWidgets ${AKONADI_CONTACT_VERSION} CONFIG REQUIRED)
     find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
     find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
@@ -93,7 +93,7 @@ if (NOT WIN32)
         DESCRIPTION "The Xapian search engine library"
         URL "https://xapian.org"
         TYPE REQUIRED
-    )
+   )
 
     set(ENABLE_SEARCH TRUE)
     set(ENABLE_CONTENTVIEWS TRUE)
@@ -104,7 +104,7 @@ endif()
 # ...
 # Z:\CraftRoot\include\KF6\AkonadiCore/item.h(596): error C2039:
 # "auto_ptr" ist kein Member von "std".
-if (MSVC)
+if(MSVC)
     # This sets the __cplusplus macro to a real value based on the version of C++ specified by
     # the /std switch. Without it MSVC keeps reporting C++98, so feature detection doesn't work.
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
@@ -120,7 +120,7 @@ configure_file(config-akonadiconsole.h.in ${CMAKE_BINARY_DIR}/config-akonadicons
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()

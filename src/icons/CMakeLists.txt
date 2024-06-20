@@ -1,1 +1,1 @@
-ecm_install_icons( ICONS 128-apps-akonadiconsole.png  16-apps-akonadiconsole.png  22-apps-akonadiconsole.png  256-apps-akonadiconsole.png  32-apps-akonadiconsole.png  48-apps-akonadiconsole.png  64-apps-akonadiconsole.png DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor )
+ecm_install_icons( ICONS 128-apps-akonadiconsole.png  16-apps-akonadiconsole.png  22-apps-akonadiconsole.png  256-apps-akonadiconsole.png  32-apps-akonadiconsole.png  48-apps-akonadiconsole.png  64-apps-akonadiconsole.png DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor)

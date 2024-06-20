@@ -11,7 +11,7 @@ set(libakonadiconsole_tracker_SRCS
     jobtrackermodel.cpp
     jobtrackerfilterproxymodel.cpp
     jobtrackersearchwidget.cpp
-    )
+   )
 
 set(libakonadiconsole_SRCS
     agentwidget.cpp
@@ -80,12 +80,12 @@ set(libakonadiconsole_SRCS
     ${libakonadiconsole_tracker_SRCS}
 )
 
-if (ENABLE_SEARCH)
+if(ENABLE_SEARCH)
     set(libakonadiconsole_SRCS
         ${libakonadiconsole_SRCS}
         searchwidget.cpp
         searchwidget.h
-    )
+   )
 endif()
 
 qt_generate_dbus_interface(jobtracker.h org.freedesktop.Akonadi.JobTracker.xml)
@@ -94,13 +94,13 @@ qt_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.a
 
 qt_add_dbus_interfaces(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.TracerNotification.xml
-    )
+   )
 # Use intalled interface once we can depend on Akoandi 1.1
 set_source_files_properties(org.freedesktop.Akonadi.DebugInterface.xml PROPERTIES CLASSNAME DebugInterface)
 qt_add_dbus_interface(libakonadiconsole_SRCS
     org.freedesktop.Akonadi.DebugInterface.xml
     debuginterface
-    )
+   )
 
 set_source_files_properties(${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     PROPERTIES INCLUDE querydebugger.h
@@ -108,7 +108,7 @@ set_source_files_properties(${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akona
 qt_add_dbus_interface(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     storagedebuggerinterface
-    )
+   )
 
 qt_wrap_ui(libakonadiconsole_SRCS
     agentwidget.ui
@@ -124,7 +124,7 @@ qt_wrap_ui(libakonadiconsole_SRCS
     tagpropertiesdialog.ui
     querydebugger.ui
     queryviewdialog.ui
-    )
+   )
 
 
 add_library(libakonadiconsole ${libakonadiconsole_SRCS})
@@ -135,7 +135,7 @@ ecm_qt_declare_logging_category(libakonadiconsole HEADER akonadiconsole_debug.h 
 
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libakonadiconsole PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
@@ -154,34 +154,34 @@ target_link_libraries(libakonadiconsole
     KF6::TextWidgets
     KF6::XmlGui
     KPim6::Libkdepim
-    )
+   )
 
-if (ENABLE_SEARCH)
+if(ENABLE_SEARCH)
     target_link_libraries(libakonadiconsole
         KPim6::AkonadiSearchCore
         KPim6::AkonadiSearchXapian
-    )
+   )
 endif()
 
-if (ENABLE_CONTENTVIEWS)
+if(ENABLE_CONTENTVIEWS)
     target_link_libraries(libakonadiconsole
         KPim6::AkonadiContactWidgets
         KPim6::CalendarSupport
         KPim6::MessageViewer
-    )
+   )
 endif()
 
 set_target_properties(libakonadiconsole
     PROPERTIES OUTPUT_NAME akonadiconsole
     VERSION ${KDEPIM_LIB_VERSION}
     SOVERSION ${KDEPIM_LIB_SOVERSION}
-    )
+   )
 
 
 set(akonadiconsole_SRCS
     main.cpp
     akonadiconsole.qrc
-    )
+   )
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-akonadiconsole.png")
 ecm_add_app_icon(akonadiconsole_SRCS ICONS ${ICONS_SRCS})
