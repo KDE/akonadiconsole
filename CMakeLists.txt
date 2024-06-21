@@ -93,7 +93,7 @@ if(NOT WIN32)
         DESCRIPTION "The Xapian search engine library"
         URL "https://xapian.org"
         TYPE REQUIRED
-   )
+    )
 
     set(ENABLE_SEARCH TRUE)
     set(ENABLE_CONTENTVIEWS TRUE)

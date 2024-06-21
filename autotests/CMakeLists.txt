@@ -15,7 +15,7 @@ macro(add_unittest _source)
         KF6::ItemViews
         KF6::Completion
         libakonadiconsole
-       )
+        )
 endmacro()
 
 add_unittest(jobtrackertest.cpp)
