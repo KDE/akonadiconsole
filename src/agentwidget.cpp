@@ -108,12 +108,6 @@ AgentWidget::AgentWidget(QWidget *parent)
             agent.synchronizeTags();
         }
     });
-    mSyncMenu->addAction(i18n("Synchronize Relations"), this, [this]() {
-        const auto list = ui.instanceWidget->selectedAgentInstances();
-        for (auto agent : list) {
-            agent.synchronizeRelations();
-        }
-    });
     mSyncMenu->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ui.syncButton->setMenu(mSyncMenu);
     ui.syncButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));

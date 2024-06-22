@@ -152,9 +152,6 @@ void NotificationMonitor::populateNtfModel(const QModelIndex &index)
     case Akonadi::ChangeNotification::Tag:
         populateTagNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::TagChangeNotification>(ntf.notification()));
         break;
-    case Akonadi::ChangeNotification::Relation:
-        populateRelationNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::RelationChangeNotification>(ntf.notification()));
-        break;
     case Akonadi::ChangeNotification::Subscription:
         populateSubscriptionNtfTree(model, Akonadi::Protocol::cmdCast<Akonadi::Protocol::SubscriptionChangeNotification>(ntf.notification()));
         break;
@@ -189,9 +186,6 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     case Akonadi::Protocol::ItemChangeNotification::ModifyTags:
         operation = i18n("ModifyTags");
         break;
-    case Akonadi::Protocol::ItemChangeNotification::ModifyRelations:
-        operation = i18n("ModifyRelations");
-        break;
     case Akonadi::Protocol::ItemChangeNotification::InvalidOp:
         operation = i18n("InvalidOp");
         break;
@@ -207,24 +201,6 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     appendRow(model, i18n("Removed Flags"), toString(ntf.removedFlags()));
     appendRow(model, i18n("Added Tags"), toString(ntf.addedTags()));
     appendRow(model, i18n("Removed Tags"), toString(ntf.removedTags()));
-    auto relationsItem = new QStandardItem(QStringLiteral("Added Relations"));
-    const auto addedRelations = ntf.addedRelations();
-    for (const auto &addedRelation : addedRelations) {
-        auto item = new QStandardItem(
-            QStringLiteral("%lld-%lld %s").arg(QString::number(addedRelation.leftId), QString::number(addedRelation.rightId), addedRelation.type));
-        relationsItem->appendRow(item);
-    }
-    model->appendRow(relationsItem);
-
-    relationsItem = new QStandardItem(i18n("Removed Relations"));
-    const auto removedRelations = ntf.removedRelations();
-    for (const auto &removedRelation : removedRelations) {
-        auto item = new QStandardItem(
-            QStringLiteral("%lld-%lld %s").arg(QString::number(removedRelation.leftId), QString::number(removedRelation.rightId), removedRelation.type));
-        relationsItem->appendRow(item);
-    }
-    model->appendRow(relationsItem);
-
     appendRow(model, i18n("Must retrieve"), toString(ntf.mustRetrieve()));
 
     auto itemsItem = new QStandardItem(i18n("Items"));
@@ -288,14 +264,6 @@ void NotificationMonitor::populateItemTree(QStandardItem *parent, const Akonadi:
     parent->appendRow(tagItem);
 
     appendRow(parent, i18n("VRefs"), toString(item.virtualReferences()));
-    auto relationItem = new QStandardItem(i18n("Relations"));
-    const auto relations = item.relations();
-    for (const auto &relation : relations) {
-        auto item = new QStandardItem(
-            QStringLiteral("%lld-%lld %s").arg(QString::number(relation.left()), QString::number(relation.right()), QString::fromUtf8(relation.type())));
-        relationItem->appendRow(item);
-    }
-    parent->appendRow(relationItem);
 
     const auto ancestors = item.ancestors();
     auto i = new QStandardItem(i18n("Ancestor"));
@@ -407,31 +375,6 @@ void NotificationMonitor::populateCollectionNtfTree(QStandardItemModel *model, c
     model->appendRow(item);
 }
 
-void NotificationMonitor::populateRelationNtfTree(QStandardItemModel *model, const Akonadi::Protocol::RelationChangeNotification &ntf)
-{
-    QString operation;
-    switch (ntf.operation()) {
-    case Akonadi::Protocol::RelationChangeNotification::Add:
-        operation = i18n("Add");
-        break;
-    case Akonadi::Protocol::RelationChangeNotification::Remove:
-        operation = i18n("Remove");
-        break;
-    case Akonadi::Protocol::RelationChangeNotification::InvalidOp:
-        operation = i18n("InvalidOp");
-        break;
-    }
-    appendRow(model, i18n("Operation"), operation);
-    auto item = new QStandardItem(i18n("Relation"));
-    const auto rel = ntf.relation();
-    appendRow(item, i18n("Left ID"), QString::number(rel.left()));
-    appendRow(item, i18n("Left MimeType"), QString::fromUtf8(rel.leftMimeType()));
-    appendRow(item, i18n("Right ID"), QString::number(rel.right()));
-    appendRow(item, i18n("Right MimeType"), QString::fromUtf8(rel.rightMimeType()));
-    appendRow(item, i18n("Remote ID"), QString::fromUtf8(rel.remoteId()));
-    model->appendRow(item);
-}
-
 void NotificationMonitor::populateTagNtfTree(QStandardItemModel *model, const Akonadi::Protocol::TagChangeNotification &ntf)
 {
     QString operation;
@@ -491,9 +434,6 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
         case Akonadi::Protocol::ModifySubscriptionCommand::TagChanges:
             types.push_back(i18n("Tags"));
             break;
-        case Akonadi::Protocol::ModifySubscriptionCommand::RelationChanges:
-            types.push_back(i18n("Relations"));
-            break;
         case Akonadi::Protocol::ModifySubscriptionCommand::SubscriptionChanges:
             types.push_back(i18n("Subscriptions"));
             break;
@@ -541,7 +481,6 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, i18n("Fetch RemoteID"), toString(ifs.fetchRemoteId()));
     appendRow(item, i18n("Fetch GID"), toString(ifs.fetchGID()));
     appendRow(item, i18n("Fetch Tags"), toString(ifs.fetchTags()));
-    appendRow(item, i18n("Fetch Relations"), toString(ifs.fetchRelations()));
     appendRow(item, i18n("Fetch VRefs"), toString(ifs.fetchVirtualReferences()));
     model->appendRow(item);
 

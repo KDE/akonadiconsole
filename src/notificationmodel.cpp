@@ -75,8 +75,6 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 return i18n("Collection");
             case ChangeNotification::Tag:
                 return i18n("Tag");
-            case ChangeNotification::Relation:
-                return i18n("Relation");
             case ChangeNotification::Subscription:
                 return i18n("Subscription");
             }
@@ -101,8 +99,6 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                     return i18n("ModifyFlags");
                 case Protocol::ItemChangeNotification::ModifyTags:
                     return i18n("ModifyTags");
-                case Protocol::ItemChangeNotification::ModifyRelations:
-                    return i18n("ModifyRelations");
                 case Protocol::ItemChangeNotification::InvalidOp:
                     return i18n("InvalidOp");
                 }
@@ -137,16 +133,6 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                     return i18n("InvalidOp");
                 }
                 return {};
-            case ChangeNotification::Relation:
-                switch (Protocol::cmdCast<Protocol::RelationChangeNotification>(msg.notification()).operation()) {
-                case Protocol::RelationChangeNotification::Add:
-                    return i18n("Add");
-                case Protocol::RelationChangeNotification::Remove:
-                    return i18n("Remove");
-                case Protocol::RelationChangeNotification::InvalidOp:
-                    return i18n("InvalidOp");
-                }
-                return {};
             case ChangeNotification::Subscription:
                 switch (Protocol::cmdCast<Protocol::SubscriptionChangeNotification>(msg.notification()).operation()) {
                 case Akonadi::Protocol::SubscriptionChangeNotification::Add:
@@ -176,7 +162,6 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
                 return Protocol::cmdCast<Protocol::CollectionChangeNotification>(msg.notification()).collection().id();
             case ChangeNotification::Tag:
                 return Protocol::cmdCast<Protocol::TagChangeNotification>(msg.notification()).tag().id();
-            case ChangeNotification::Relation:
             case ChangeNotification::Subscription:
                 return {};
             }

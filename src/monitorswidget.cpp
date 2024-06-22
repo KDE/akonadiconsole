@@ -84,9 +84,6 @@ QString toString(const QSet<Akonadi::Monitor::Type> &set)
         case Akonadi::Monitor::Tags:
             rv << i18n("Tags");
             break;
-        case Akonadi::Monitor::Relations:
-            rv << i18n("Relations");
-            break;
         case Akonadi::Monitor::Subscribers:
             rv << i18n("Subscribers");
             break;

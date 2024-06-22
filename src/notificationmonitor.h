@@ -35,7 +35,6 @@ private:
     void populateItemNtfTree(QStandardItemModel *model, const Akonadi::Protocol::ItemChangeNotification &ntf);
     void populateCollectionNtfTree(QStandardItemModel *mddel, const Akonadi::Protocol::CollectionChangeNotification &ntf);
     void populateTagNtfTree(QStandardItemModel *model, const Akonadi::Protocol::TagChangeNotification &ntf);
-    void populateRelationNtfTree(QStandardItemModel *model, const Akonadi::Protocol::RelationChangeNotification &ntf);
     void populateSubscriptionNtfTree(QStandardItemModel *model, const Akonadi::Protocol::SubscriptionChangeNotification &ntf);
 
     void populateItemTree(QStandardItem *parent, const Akonadi::Protocol::FetchItemsResponse &item);
