@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:39+0000\n"
+"POT-Creation-Date: 2024-06-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-29 08:59+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -83,12 +83,7 @@ msgstr "Synchroniser l'arborescence des collections"
 msgid "Synchronize Tags"
 msgstr "Synchroniser les étiquettes"
 
-#: agentwidget.cpp:111
-#, kde-format
-msgid "Synchronize Relations"
-msgstr "Synchroniser les relations"
-
-#: agentwidget.cpp:200
+#: agentwidget.cpp:194
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
@@ -96,106 +91,106 @@ msgstr[0] "Voulez-vous vraiment supprimer l'instance sélectionnée d'agent  ?"
 msgstr[1] ""
 "Voulez-vous vraiment supprimer les %1 instances sélectionnées d'agent ?"
 
-#: agentwidget.cpp:201
+#: agentwidget.cpp:195
 #, kde-format
 msgid "Agent Deletion"
 msgstr "Agent de suppression"
 
-#: agentwidget.cpp:201
+#: agentwidget.cpp:195
 #, kde-format
 msgid "Multiple Agent Deletion"
 msgstr "Suppression de plusieurs agents"
 
-#: agentwidget.cpp:271
+#: agentwidget.cpp:265
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Liste des ressources de tâches"
 
-#: agentwidget.cpp:295
+#: agentwidget.cpp:289
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Journal des notifications de modifications"
 
-#: agentwidget.cpp:345
+#: agentwidget.cpp:339
 #, kde-format
 msgid "Cloning agent failed: %1."
 msgstr "Échec de l'agent de clonage : %1."
 
-#: agentwidget.cpp:408
+#: agentwidget.cpp:402
 #, kde-format
 msgid "Online"
 msgstr "En ligne"
 
-#: agentwidget.cpp:408
+#: agentwidget.cpp:402
 #, kde-format
 msgid "Offline"
 msgstr "Hors ligne"
 
-#: agentwidget.cpp:412
+#: agentwidget.cpp:406
 #, kde-format
 msgid "Idle"
 msgstr "Inactif"
 
-#: agentwidget.cpp:415
+#: agentwidget.cpp:409
 #, kde-format
 msgid "Running (%1%)"
 msgstr "En cours d'exécution (%1 %)"
 
-#: agentwidget.cpp:418
+#: agentwidget.cpp:412
 #, kde-format
 msgid "Broken"
 msgstr "Cassé"
 
-#: agentwidget.cpp:421
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Not Configured"
 msgstr "Non configuré"
 
-#: agentwidget.cpp:424
+#: agentwidget.cpp:418
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:440
+#: agentwidget.cpp:434
 #, kde-format
 msgid "Add Agent..."
 msgstr "Ajouter un agent..."
 
-#: agentwidget.cpp:441
+#: agentwidget.cpp:435
 #, kde-format
 msgid "Clone Agent"
 msgstr "Agent de clonage"
 
-#: agentwidget.cpp:444
+#: agentwidget.cpp:438
 #, kde-format
 msgid "Abort Activity"
 msgstr "Annuler une activité"
 
-#: agentwidget.cpp:446
+#: agentwidget.cpp:440
 #, kde-format
 msgid "Restart Agent"
 msgstr "Redémarrer un agent"
 
-#: agentwidget.cpp:449
+#: agentwidget.cpp:443
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Basculer entre les modes En ligne / Hors ligne"
 
-#: agentwidget.cpp:450
+#: agentwidget.cpp:444
 #, kde-format
 msgid "Show task list"
 msgstr "Afficher la liste des tâches"
 
-#: agentwidget.cpp:451
+#: agentwidget.cpp:445
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Afficher le journal des notifications de modifications"
 
-#: agentwidget.cpp:453
+#: agentwidget.cpp:447
 #, kde-format
 msgid "Remove Agent"
 msgstr "Supprimer un agent"
@@ -251,11 +246,10 @@ msgid "Add..."
 msgstr "Ajouter..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: agentwidget.ui:219 notificationmodel.cpp:95 notificationmodel.cpp:119
-#: notificationmodel.cpp:135 notificationmodel.cpp:145
-#: notificationmodel.cpp:157 notificationmonitor.cpp:178
-#: notificationmonitor.cpp:387 notificationmonitor.cpp:418
-#: notificationmonitor.cpp:446 notificationmonitor.cpp:470
+#: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
+#: notificationmodel.cpp:131 notificationmodel.cpp:143
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:355
+#: notificationmonitor.cpp:389 notificationmonitor.cpp:413
 #, kde-format
 msgid "Remove"
 msgstr "Supprimer"
@@ -280,7 +274,7 @@ msgid "Restart"
 msgstr "Redémarrer"
 
 #: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
-#: notificationmonitor.cpp:405
+#: notificationmonitor.cpp:373
 #, kde-format
 msgid "Collection"
 msgstr "Collection"
@@ -295,7 +289,7 @@ msgstr "Sujet"
 msgid "Sender"
 msgstr "Expéditeur"
 
-#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:207
+#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Date"
@@ -428,9 +422,9 @@ msgstr "Type non pris en charge"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
-#: monitorswidget.cpp:116 monitorswidget.cpp:123 monitorswidget.cpp:156
-#: notificationmonitor.cpp:263 notificationmonitor.cpp:572
-#: notificationmonitor.cpp:597 tagpropertiesdialog.ui:76
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 monitorswidget.cpp:153
+#: notificationmonitor.cpp:239 notificationmonitor.cpp:511
+#: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "Attributs"
@@ -535,14 +529,14 @@ msgstr "non valable / non valable"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:280
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
 #, kde-format
 msgid "Flags"
 msgstr "Drapeaux"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:85
-#: notificationmonitor.cpp:281 notificationmonitor.cpp:492
+#: notificationmonitor.cpp:257 notificationmonitor.cpp:435
 #, kde-format
 msgid "Tags"
 msgstr "Étiquettes"
@@ -574,11 +568,11 @@ msgstr "Créer"
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
-#: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:91
-#: notificationmodel.cpp:115 notificationmodel.cpp:133
-#: notificationmodel.cpp:155 notificationmonitor.cpp:172
-#: notificationmonitor.cpp:381 notificationmonitor.cpp:443
-#: notificationmonitor.cpp:467
+#: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
+#: notificationmodel.cpp:111 notificationmodel.cpp:129
+#: notificationmodel.cpp:141 notificationmonitor.cpp:169
+#: notificationmonitor.cpp:349 notificationmonitor.cpp:386
+#: notificationmonitor.cpp:410
 #, kde-format
 msgid "Modify"
 msgstr "Modifier"
@@ -591,13 +585,13 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
-#: collectionaclpage.ui:44 notificationmodel.cpp:97 notificationmonitor.cpp:181
+#: collectionaclpage.ui:44 notificationmodel.cpp:95 notificationmonitor.cpp:178
 #, kde-format
 msgid "Link"
 msgstr "Lien"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
-#: collectionaclpage.ui:51 notificationmodel.cpp:99 notificationmonitor.cpp:184
+#: collectionaclpage.ui:51 notificationmodel.cpp:97 notificationmonitor.cpp:181
 #, kde-format
 msgid "Unlink"
 msgstr "Couper le lien"
@@ -712,7 +706,7 @@ msgstr "Message"
 msgid "Enable debugger"
 msgstr "Activer le débogueur"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:577
+#: debugwidget.cpp:49 notificationmonitor.cpp:516
 #, kde-format
 msgid "All"
 msgstr "Tous"
@@ -937,7 +931,7 @@ msgstr "Enregistrer dans un fichier..."
 msgid "Error"
 msgstr "Erreur"
 
-#: logging.cpp:136 notificationmonitor.cpp:610
+#: logging.cpp:136 notificationmonitor.cpp:549
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "Impossible d'ouvrir le fichier : %1"
@@ -952,8 +946,8 @@ msgstr "Heure"
 msgid "Program"
 msgstr "Programme"
 
-#: loggingmodel.cpp:108 notificationmodel.cpp:209 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:256
+#: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
+#: notificationmonitor.cpp:232
 #, kde-format
 msgid "Type"
 msgstr "Type"
@@ -1114,302 +1108,284 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "Session / Abonné"
 
-#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:230
-#: notificationmonitor.cpp:486
+#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:206
+#: notificationmonitor.cpp:429
 #, kde-format
 msgid "Items"
 msgstr "Éléments"
 
-#: monitorswidget.cpp:82 notificationmonitor.cpp:489
+#: monitorswidget.cpp:82 notificationmonitor.cpp:432
 #, kde-format
 msgid "Collections"
 msgstr "Collections"
 
-#: monitorswidget.cpp:88 notificationmonitor.cpp:291
-#: notificationmonitor.cpp:495
-#, kde-format
-msgid "Relations"
-msgstr "Relations"
-
-#: monitorswidget.cpp:91
+#: monitorswidget.cpp:88
 #, kde-format
 msgid "Subscribers"
 msgstr "Abonnés"
 
-#: monitorswidget.cpp:94
+#: monitorswidget.cpp:91
 #, kde-format
 msgid "Notification"
 msgstr "Notification"
 
-#: monitorswidget.cpp:103 notificationmonitor.cpp:568
+#: monitorswidget.cpp:100 notificationmonitor.cpp:507
 #, kde-format
 msgid "List Filter"
 msgstr "Filtre de listes"
 
-#: monitorswidget.cpp:104 notificationmonitor.cpp:569
+#: monitorswidget.cpp:101 notificationmonitor.cpp:508
 #, kde-format
 msgid "Include Statistics"
 msgstr "Inclure les statistiques"
 
-#: monitorswidget.cpp:105 notificationmonitor.cpp:201
-#: notificationmonitor.cpp:400 notificationmonitor.cpp:453
-#: notificationmonitor.cpp:570 tagpropertiesdialog.cpp:80
+#: monitorswidget.cpp:102 notificationmonitor.cpp:195
+#: notificationmonitor.cpp:368 notificationmonitor.cpp:396
+#: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "Ressource"
 
-#: monitorswidget.cpp:106
+#: monitorswidget.cpp:103
 #, kde-format
 msgid "Content MimeTypes"
 msgstr "Types « MIME » des contenus"
 
-#: monitorswidget.cpp:107 monitorswidget.cpp:160 notificationmonitor.cpp:586
+#: monitorswidget.cpp:104 monitorswidget.cpp:157 notificationmonitor.cpp:525
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "Extraction des prédécesseurs"
 
-#: monitorswidget.cpp:111
+#: monitorswidget.cpp:108
 #, kde-format
 msgid "Ancestor Fetch Scope"
 msgstr "Portée pour l'extraction des prédécesseurs"
 
-#: monitorswidget.cpp:117 monitorswidget.cpp:124 notificationmonitor.cpp:573
-#: notificationmonitor.cpp:594
+#: monitorswidget.cpp:114 monitorswidget.cpp:121 notificationmonitor.cpp:512
+#: notificationmonitor.cpp:533
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "Rechercher uniquement un ID"
 
-#: monitorswidget.cpp:118
+#: monitorswidget.cpp:115
 #, kde-format
 msgid "Ignore Retrieval Error"
 msgstr "Ignorer l'erreur d'extraction"
 
-#: monitorswidget.cpp:132 notificationmonitor.cpp:135 searchwidget.cpp:205
+#: monitorswidget.cpp:129 notificationmonitor.cpp:135 searchwidget.cpp:205
 #, kde-format
 msgid "Values"
 msgstr "Valeurs"
 
-#: monitorswidget.cpp:132 notificationmonitor.cpp:135
+#: monitorswidget.cpp:129 notificationmonitor.cpp:135
 #, kde-format
 msgid "Properties"
 msgstr "Propriétés"
 
-#: monitorswidget.cpp:140 notificationmonitor.cpp:477
+#: monitorswidget.cpp:137 notificationmonitor.cpp:420
 #, kde-format
 msgid "Subscriber"
 msgstr "Abonné"
 
-#: monitorswidget.cpp:141
+#: monitorswidget.cpp:138
 #, kde-format
 msgid "Session ID"
 msgstr "ID de session"
 
-#: monitorswidget.cpp:142
+#: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Collections:"
 msgstr "Collections supervisées :"
 
-#: monitorswidget.cpp:143
+#: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Items:"
 msgstr "Éléments supervisés :"
 
-#: monitorswidget.cpp:144
+#: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Tags:"
 msgstr "Étiquettes supervisées: "
 
-#: monitorswidget.cpp:145
+#: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Types:"
 msgstr "Types supervisés :"
 
-#: monitorswidget.cpp:146
+#: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Mime Types:"
 msgstr "Types « MIME » supervisés :"
 
-#: monitorswidget.cpp:147
+#: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Resources:"
 msgstr "Ressources supervisées :"
 
-#: monitorswidget.cpp:148
+#: monitorswidget.cpp:145
 #, kde-format
 msgid "Ignored Sessions:"
 msgstr "Sessions ignorées :"
 
-#: monitorswidget.cpp:149
+#: monitorswidget.cpp:146
 #, kde-format
 msgid "All Monitored:"
 msgstr "Tous supervisés :"
 
-#: monitorswidget.cpp:150
+#: monitorswidget.cpp:147
 #, kde-format
 msgid "Is Exclusive:"
 msgstr "Est exclusif :"
 
-#: monitorswidget.cpp:152 notificationmonitor.cpp:515
+#: monitorswidget.cpp:149 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "Portée de la recherche d'éléments"
 
-#: monitorswidget.cpp:154
+#: monitorswidget.cpp:151
 #, kde-format
 msgid "Payload Parts"
 msgstr "Parties de charge utile"
 
-#: monitorswidget.cpp:155 notificationmonitor.cpp:534
+#: monitorswidget.cpp:152 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
 msgstr "Charge utile totale"
 
-#: monitorswidget.cpp:157 notificationmonitor.cpp:535
+#: monitorswidget.cpp:154 notificationmonitor.cpp:475
 #, kde-format
 msgid "All Attributes"
 msgstr "Tous les attributs"
 
-#: monitorswidget.cpp:158
+#: monitorswidget.cpp:155
 #, kde-format
 msgid "Cache only"
 msgstr "Uniquement en cache"
 
-#: monitorswidget.cpp:159
+#: monitorswidget.cpp:156
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
 msgstr "Vérifier uniquement les parties en cache de charge utile"
 
-#: monitorswidget.cpp:161
+#: monitorswidget.cpp:158
 #, kde-format
 msgid "Fetch mtime"
 msgstr "Rechercher le paramètre « mtime »"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:542
+#: monitorswidget.cpp:159 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
 msgstr "Rechercher un « GID »"
 
-#: monitorswidget.cpp:163 notificationmonitor.cpp:589
+#: monitorswidget.cpp:160 notificationmonitor.cpp:528
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "Ignorer les erreurs d'extraction"
 
-#: monitorswidget.cpp:164
+#: monitorswidget.cpp:161
 #, kde-format
 msgid "Fetch Change Since"
 msgstr "Rechercher des modifications depuis"
 
-#: monitorswidget.cpp:165
+#: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch RID"
 msgstr "Rechercher un « GID »"
 
-#: monitorswidget.cpp:166 notificationmonitor.cpp:543
+#: monitorswidget.cpp:163 notificationmonitor.cpp:483
 #, kde-format
 msgid "Fetch Tags"
 msgstr "Rechercher des étiquettes"
 
-#: monitorswidget.cpp:169
+#: monitorswidget.cpp:166
 #, kde-format
 msgid "Collection Fetch Scope"
 msgstr "Portée de la recherche de collections"
 
-#: monitorswidget.cpp:172 notificationmonitor.cpp:592
+#: monitorswidget.cpp:169 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "Portée pour l'extraction des étiquettes"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:454
+#: notificationmodel.cpp:77 notificationmonitor.cpp:397
 #, kde-format
 msgid "Tag"
 msgstr "Étiquette"
 
-#: notificationmodel.cpp:79 notificationmonitor.cpp:425
-#, kde-format
-msgid "Relation"
-msgstr "Relation"
-
-#: notificationmodel.cpp:81
+#: notificationmodel.cpp:79
 #, kde-format
 msgid "Subscription"
 msgstr "Abonnement"
 
-#: notificationmodel.cpp:89 notificationmodel.cpp:113 notificationmodel.cpp:131
-#: notificationmodel.cpp:143 notificationmodel.cpp:153
-#: notificationmonitor.cpp:169 notificationmonitor.cpp:378
-#: notificationmonitor.cpp:415 notificationmonitor.cpp:440
-#: notificationmonitor.cpp:464
+#: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
+#: notificationmodel.cpp:139 notificationmonitor.cpp:166
+#: notificationmonitor.cpp:346 notificationmonitor.cpp:383
+#: notificationmonitor.cpp:407
 #, kde-format
 msgid "Add"
 msgstr "Ajouter"
 
-#: notificationmodel.cpp:93 notificationmodel.cpp:117
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:384
+#: notificationmodel.cpp:91 notificationmodel.cpp:113
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:352
 #, kde-format
 msgid "Move"
 msgstr "Déplacer"
 
-#: notificationmodel.cpp:101 notificationmonitor.cpp:187
+#: notificationmodel.cpp:99 notificationmonitor.cpp:184
 #, kde-format
 msgid "ModifyFlags"
 msgstr "Modifier des drapeaux"
 
-#: notificationmodel.cpp:103 notificationmonitor.cpp:190
+#: notificationmodel.cpp:101 notificationmonitor.cpp:187
 #, kde-format
 msgid "ModifyTags"
 msgstr "Modifier des étiquettes"
 
-#: notificationmodel.cpp:105 notificationmonitor.cpp:193
-#, kde-format
-msgid "ModifyRelations"
-msgstr "Modifier les relations"
-
-#: notificationmodel.cpp:107 notificationmodel.cpp:137
-#: notificationmodel.cpp:147 notificationmodel.cpp:159
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:421
-#: notificationmonitor.cpp:449 notificationmonitor.cpp:473
+#: notificationmodel.cpp:103 notificationmodel.cpp:133
+#: notificationmodel.cpp:145 notificationmonitor.cpp:190
+#: notificationmonitor.cpp:392 notificationmonitor.cpp:416
 #, kde-format
 msgid "InvalidOp"
 msgstr "InvalidOp"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:390
+#: notificationmodel.cpp:117 notificationmonitor.cpp:358
 #, kde-format
 msgid "Subscribe"
 msgstr "S'abonner"
 
-#: notificationmodel.cpp:123 notificationmonitor.cpp:393
+#: notificationmodel.cpp:119 notificationmonitor.cpp:361
 #, kde-format
 msgid "Unsubscribe"
 msgstr "Se désinscrire"
 
-#: notificationmodel.cpp:125 notificationmonitor.cpp:396
+#: notificationmodel.cpp:121 notificationmonitor.cpp:364
 #, kde-format
 msgid "InvalidIp"
 msgstr "IP non valable"
 
-#: notificationmodel.cpp:163
+#: notificationmodel.cpp:149
 #, kde-format
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: notificationmodel.cpp:211 notificationmonitor.cpp:200
-#: notificationmonitor.cpp:399 notificationmonitor.cpp:424
-#: notificationmonitor.cpp:452 notificationmonitor.cpp:476
+#: notificationmodel.cpp:196 notificationmonitor.cpp:194
+#: notificationmonitor.cpp:367 notificationmonitor.cpp:395
+#: notificationmonitor.cpp:419
 #, kde-format
 msgid "Operation"
 msgstr "Opération"
 
-#: notificationmodel.cpp:213
+#: notificationmodel.cpp:198
 #, kde-format
 msgid "IDs"
 msgstr "Identifiants"
 
-#: notificationmodel.cpp:215
+#: notificationmodel.cpp:200
 #, kde-format
 msgid "Session"
 msgstr "Session"
 
-#: notificationmodel.cpp:217 notificationmonitor.cpp:144
+#: notificationmodel.cpp:202 notificationmonitor.cpp:144
 #, kde-format
 msgid "Listeners"
 msgstr "Auditoire"
@@ -1424,485 +1400,455 @@ msgstr "Activer le superviseur de notifications"
 msgid "Timestamp"
 msgstr "Horodatage"
 
-#: notificationmonitor.cpp:202 notificationmonitor.cpp:401
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:369
 #, kde-format
 msgid "Parent Collection"
 msgstr "Collection parente"
 
-#: notificationmonitor.cpp:203
+#: notificationmonitor.cpp:197
 #, kde-format
 msgid "Parent Dest Col"
 msgstr "Colonne parente destinataire"
 
-#: notificationmonitor.cpp:204 notificationmonitor.cpp:403
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:371
 #, kde-format
 msgid "Destination Resource"
 msgstr "Ressource de destination"
 
-#: notificationmonitor.cpp:205
+#: notificationmonitor.cpp:199
 #, kde-format
 msgid "Item Parts"
 msgstr "Parties d'élément"
 
-#: notificationmonitor.cpp:206
+#: notificationmonitor.cpp:200
 #, kde-format
 msgid "Added Flags"
 msgstr "Drapeaux ajoutés"
 
-#: notificationmonitor.cpp:207
+#: notificationmonitor.cpp:201
 #, kde-format
 msgid "Removed Flags"
 msgstr "Drapeaux supprimés"
 
-#: notificationmonitor.cpp:208
+#: notificationmonitor.cpp:202
 #, kde-format
 msgid "Added Tags"
 msgstr "Étiquettes ajoutées"
 
-#: notificationmonitor.cpp:209
+#: notificationmonitor.cpp:203
 #, kde-format
 msgid "Removed Tags"
 msgstr "Étiquettes supprimées"
 
-#: notificationmonitor.cpp:219
-#, kde-format
-msgid "Removed Relations"
-msgstr "Relations supprimées"
-
-#: notificationmonitor.cpp:228
+#: notificationmonitor.cpp:204
 #, kde-format
 msgid "Must retrieve"
 msgstr "Doit retrouver"
 
-#: notificationmonitor.cpp:242
+#: notificationmonitor.cpp:218
 #, kde-format
 msgid "id"
 msgstr "id"
 
-#: notificationmonitor.cpp:243
+#: notificationmonitor.cpp:219
 #, kde-format
 msgid "remoteId"
 msgstr "ID distant"
 
-#: notificationmonitor.cpp:244
+#: notificationmonitor.cpp:220
 #, kde-format
 msgid "name"
 msgstr "nom"
 
-#: notificationmonitor.cpp:246 notificationmonitor.cpp:301
-#: notificationmonitor.cpp:349
+#: notificationmonitor.cpp:222 notificationmonitor.cpp:269
+#: notificationmonitor.cpp:317
 #, kde-format
 msgid "Ancestor"
 msgstr "Ascendant"
 
-#: notificationmonitor.cpp:253 notificationmonitor.cpp:335
+#: notificationmonitor.cpp:229 notificationmonitor.cpp:303
 #, kde-format
 msgid "ID"
 msgstr "ID"
 
-#: notificationmonitor.cpp:254 notificationmonitor.cpp:336
+#: notificationmonitor.cpp:230 notificationmonitor.cpp:304
 #, kde-format
 msgid "Parent ID"
 msgstr "ID Parent"
 
-#: notificationmonitor.cpp:255 notificationmonitor.cpp:276
+#: notificationmonitor.cpp:231 notificationmonitor.cpp:252
 #, kde-format
 msgid "GID"
 msgstr "GID"
 
-#: notificationmonitor.cpp:257 notificationmonitor.cpp:339
-#: notificationmonitor.cpp:431 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:233 notificationmonitor.cpp:307
+#: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "ID Distant"
 
-#: notificationmonitor.cpp:272
+#: notificationmonitor.cpp:248
 #, kde-format
 msgid "Revision"
 msgstr "Révision"
 
-#: notificationmonitor.cpp:273
+#: notificationmonitor.cpp:249
 #, kde-format
 msgid "ParentID"
 msgstr "ID Parent"
 
-#: notificationmonitor.cpp:274
+#: notificationmonitor.cpp:250
 #, kde-format
 msgid "RemoteID"
 msgstr "ID distant"
 
-#: notificationmonitor.cpp:275
+#: notificationmonitor.cpp:251
 #, kde-format
 msgid "RemoteRev"
 msgstr "RemoteRev"
 
-#: notificationmonitor.cpp:277 notificationmonitor.cpp:323
-#: notificationmonitor.cpp:345
+#: notificationmonitor.cpp:253 notificationmonitor.cpp:291
+#: notificationmonitor.cpp:313
 #, kde-format
 msgid "Size"
 msgstr "Taille"
 
-#: notificationmonitor.cpp:278
+#: notificationmonitor.cpp:254
 #, kde-format
 msgid "MimeType"
 msgstr "Type « MIME »"
 
-#: notificationmonitor.cpp:279
+#: notificationmonitor.cpp:255
 #, kde-format
 msgid "MTime"
 msgstr "MTime"
 
-#: notificationmonitor.cpp:290
+#: notificationmonitor.cpp:266
 #, kde-format
 msgid "VRefs"
 msgstr "VRefs"
 
-#: notificationmonitor.cpp:307
+#: notificationmonitor.cpp:275
 #, kde-format
 msgid "Parts"
 msgstr "Parties"
 
-#: notificationmonitor.cpp:314
+#: notificationmonitor.cpp:282
 #, kde-format
 msgid "External"
 msgstr "Externe"
 
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:285
 #, kde-format
 msgid "Internal"
 msgstr "Interne"
 
-#: notificationmonitor.cpp:320
+#: notificationmonitor.cpp:288
 #, kde-format
 msgid "Foreign"
 msgstr "Étranger"
 
-#: notificationmonitor.cpp:324
+#: notificationmonitor.cpp:292
 #, kde-format
 msgid "Storage Type"
 msgstr "Type d'enregistrement"
 
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:293
 #, kde-format
 msgid "Version"
 msgstr "Version"
 
-#: notificationmonitor.cpp:326
+#: notificationmonitor.cpp:294
 #, kde-format
 msgid "Data"
 msgstr "Données"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:305
 #, kde-format
 msgid "Name"
 msgstr "Nom"
 
-#: notificationmonitor.cpp:338
+#: notificationmonitor.cpp:306
 #, kde-format
 msgid "Mime Types"
 msgstr "Types « MIME »"
 
-#: notificationmonitor.cpp:340
+#: notificationmonitor.cpp:308
 #, kde-format
 msgid "Remote Revision"
 msgstr "Révision distante"
 
-#: notificationmonitor.cpp:341
+#: notificationmonitor.cpp:309
 #, kde-format
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: notificationmonitor.cpp:343
+#: notificationmonitor.cpp:311
 #, kde-format
 msgid "Count"
 msgstr "Compte"
 
-#: notificationmonitor.cpp:344
+#: notificationmonitor.cpp:312
 #, kde-format
 msgid "Unseen"
 msgstr "Non regardé"
 
-#: notificationmonitor.cpp:347
+#: notificationmonitor.cpp:315
 #, kde-format
 msgid "Search Query"
 msgstr "Requête de recherche"
 
-#: notificationmonitor.cpp:348
+#: notificationmonitor.cpp:316
 #, kde-format
 msgid "Search Collections"
 msgstr "Rechercher des collections"
 
-#: notificationmonitor.cpp:355
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Cache Policy"
 msgstr "Stratégie de cache"
 
-#: notificationmonitor.cpp:357
+#: notificationmonitor.cpp:325
 #, kde-format
 msgid "Inherit"
 msgstr "Hériter"
 
-#: notificationmonitor.cpp:358
+#: notificationmonitor.cpp:326
 #, kde-format
 msgid "Check Interval"
 msgstr "Vérifier un intervalle"
 
-#: notificationmonitor.cpp:359
+#: notificationmonitor.cpp:327
 #, kde-format
 msgid "Cache Timeout"
 msgstr "Délai imparti pour le cache"
 
-#: notificationmonitor.cpp:360
+#: notificationmonitor.cpp:328
 #, kde-format
 msgid "Sync on Demand"
 msgstr "Synchroniser à la demande"
 
-#: notificationmonitor.cpp:361
+#: notificationmonitor.cpp:329
 #, kde-format
 msgid "Local Parts"
 msgstr "Parties locales"
 
-#: notificationmonitor.cpp:366 notificationmonitor.cpp:559
+#: notificationmonitor.cpp:334 notificationmonitor.cpp:498
 #, kde-format
 msgid "Enabled"
 msgstr "Activé"
 
-#: notificationmonitor.cpp:367
+#: notificationmonitor.cpp:335
 #, kde-format
 msgid "DisplayPref"
 msgstr "DisplayPref"
 
-#: notificationmonitor.cpp:368
+#: notificationmonitor.cpp:336
 #, kde-format
 msgid "SyncPref"
 msgstr "SyncPref"
 
-#: notificationmonitor.cpp:369
+#: notificationmonitor.cpp:337
 #, kde-format
 msgid "IndexPref"
 msgstr "IndexPref"
 
-#: notificationmonitor.cpp:370
+#: notificationmonitor.cpp:338
 #, kde-format
 msgid "Virtual"
 msgstr "Virtuel"
 
-#: notificationmonitor.cpp:402
+#: notificationmonitor.cpp:370
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "Collection destinataire du parent"
 
-#: notificationmonitor.cpp:404
+#: notificationmonitor.cpp:372
 #, kde-format
 msgid "Changed Parts"
 msgstr "Parties modifiées"
 
-#: notificationmonitor.cpp:427
-#, kde-format
-msgid "Left ID"
-msgstr "ID Gauche"
-
-#: notificationmonitor.cpp:428
-#, kde-format
-msgid "Left MimeType"
-msgstr "Type « MIME » à gauche"
-
-#: notificationmonitor.cpp:429
-#, kde-format
-msgid "Right ID"
-msgstr "ID Droite"
-
-#: notificationmonitor.cpp:430
-#, kde-format
-msgid "Right MimeType"
-msgstr "Type « MIME » à droite"
-
-#: notificationmonitor.cpp:478
+#: notificationmonitor.cpp:421
 #, kde-format
 msgid "Monitored Collections"
 msgstr "Collections supervisées"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:422
 #, kde-format
 msgid "Monitored Items"
 msgstr "Éléments supervisés"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:423
 #, kde-format
 msgid "Monitored Tags"
 msgstr "Drapeaux supervisés"
 
-#: notificationmonitor.cpp:498
+#: notificationmonitor.cpp:438
 #, kde-format
 msgid "Subscriptions"
 msgstr "Abonnements"
 
-#: notificationmonitor.cpp:501
+#: notificationmonitor.cpp:441
 #, kde-format
 msgid "Changes"
 msgstr "Modifications"
 
-#: notificationmonitor.cpp:504
+#: notificationmonitor.cpp:444
 #, kde-format
 msgid "No Type"
 msgstr "Aucun type"
 
-#: notificationmonitor.cpp:508
+#: notificationmonitor.cpp:448
 #, kde-format
 msgid "Monitored Types"
 msgstr "Types supervisés "
 
-#: notificationmonitor.cpp:509
+#: notificationmonitor.cpp:449
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "Types « MIME » supervisés "
 
-#: notificationmonitor.cpp:510
+#: notificationmonitor.cpp:450
 #, kde-format
 msgid "Monitored Resources"
 msgstr "Ressources supervisées"
 
-#: notificationmonitor.cpp:511
+#: notificationmonitor.cpp:451
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "Sessions ignorées"
 
-#: notificationmonitor.cpp:512
+#: notificationmonitor.cpp:452
 #, kde-format
 msgid "All Monitored"
 msgstr "Tous supervisés"
 
-#: notificationmonitor.cpp:513
+#: notificationmonitor.cpp:453
 #, kde-format
 msgid "Exclusive"
 msgstr "Exclusif"
 
-#: notificationmonitor.cpp:517
+#: notificationmonitor.cpp:457
 #, kde-format
 msgid "Requested Parts"
 msgstr "Parties demandées"
 
-#: notificationmonitor.cpp:518
+#: notificationmonitor.cpp:458
 #, kde-format
 msgid "Changed Since"
 msgstr "Modifié depuis"
 
-#: notificationmonitor.cpp:522
+#: notificationmonitor.cpp:462
 #, kde-format
 msgid "No Ancestor"
 msgstr "Aucun ascendant"
 
-#: notificationmonitor.cpp:525
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "Ascendant parent"
 
-#: notificationmonitor.cpp:528
+#: notificationmonitor.cpp:468
 #, kde-format
 msgid "All Ancestors"
 msgstr "Tous les ascendants"
 
-#: notificationmonitor.cpp:531
+#: notificationmonitor.cpp:471
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "Profondeurs pour les ascendants"
 
-#: notificationmonitor.cpp:532
+#: notificationmonitor.cpp:472
 #, kde-format
 msgid "Cache Only"
 msgstr "Uniquement en cache"
 
-#: notificationmonitor.cpp:533
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "Vérifier uniquement les parties en cache de charge utile"
 
-#: notificationmonitor.cpp:536
+#: notificationmonitor.cpp:476
 #, kde-format
 msgid "Fetch Size"
 msgstr "Taille de recherche"
 
-#: notificationmonitor.cpp:537
+#: notificationmonitor.cpp:477
 #, kde-format
 msgid "Fetch MTime"
 msgstr "Rechercher le paramètre « mtime »"
 
-#: notificationmonitor.cpp:538
+#: notificationmonitor.cpp:478
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "Rechercher la révision distante"
 
-#: notificationmonitor.cpp:539
+#: notificationmonitor.cpp:479
 #, kde-format
 msgid "Ignore Errors"
 msgstr "Ignorer les erreurs"
 
-#: notificationmonitor.cpp:540
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Fetch Flags"
 msgstr "Drapeaux de recherche"
 
-#: notificationmonitor.cpp:541 notificationmonitor.cpp:595
+#: notificationmonitor.cpp:481 notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "Rechercher un RemoteID"
 
-#: notificationmonitor.cpp:544
-#, kde-format
-msgid "Fetch Relations"
-msgstr "Rechercher des relations"
-
-#: notificationmonitor.cpp:545
+#: notificationmonitor.cpp:484
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "Rechercher avec le paramètre « VRefs »"
 
-#: notificationmonitor.cpp:553
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "No Filter"
 msgstr "Aucun filtre"
 
-#: notificationmonitor.cpp:556
+#: notificationmonitor.cpp:495
 #, kde-format
 msgid "Display"
 msgstr "Affichage"
 
-#: notificationmonitor.cpp:562
+#: notificationmonitor.cpp:501
 #, kde-format
 msgid "Index"
 msgstr "Indice"
 
-#: notificationmonitor.cpp:565
+#: notificationmonitor.cpp:504
 #, kde-format
 msgid "Sync"
 msgstr "Synchroniser"
 
-#: notificationmonitor.cpp:571
+#: notificationmonitor.cpp:510
 #, kde-format
 msgid "Content Mime Types"
 msgstr "Type « MIME » du contenu"
 
-#: notificationmonitor.cpp:580
+#: notificationmonitor.cpp:519
 #, kde-format
 msgid "Parent"
 msgstr "Parent"
 
-#: notificationmonitor.cpp:583
+#: notificationmonitor.cpp:522
 #, kde-format
 msgid "None"
 msgstr "Aucun"
 
-#: notificationmonitor.cpp:587
+#: notificationmonitor.cpp:526
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "Identification de recherche pour le prédécesseur uniquement"
 
-#: notificationmonitor.cpp:588
+#: notificationmonitor.cpp:527
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "Attributs d'ascendants"
 
-#: notificationmonitor.cpp:596
+#: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "Rechercher tous les attributs^"
@@ -2097,6 +2043,36 @@ msgstr "Supp&rimer"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identifiants distants"
+
+#~ msgid "Synchronize Relations"
+#~ msgstr "Synchroniser les relations"
+
+#~ msgid "Relations"
+#~ msgstr "Relations"
+
+#~ msgid "Relation"
+#~ msgstr "Relation"
+
+#~ msgid "ModifyRelations"
+#~ msgstr "Modifier les relations"
+
+#~ msgid "Removed Relations"
+#~ msgstr "Relations supprimées"
+
+#~ msgid "Left ID"
+#~ msgstr "ID Gauche"
+
+#~ msgid "Left MimeType"
+#~ msgstr "Type « MIME » à gauche"
+
+#~ msgid "Right ID"
+#~ msgstr "ID Droite"
+
+#~ msgid "Right MimeType"
+#~ msgstr "Type « MIME » à droite"
+
+#~ msgid "Fetch Relations"
+#~ msgstr "Rechercher des relations"
 
 #~ msgid "Full Paryload"
 #~ msgstr "Charge utile totale"
