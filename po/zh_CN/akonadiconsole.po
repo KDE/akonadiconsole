@@ -2029,30 +2029,3 @@ msgstr ""
 #, kde-format
 msgid "Remote Identifiers"
 msgstr ""
-
-#~ msgid "Synchronize Relations"
-#~ msgstr "同步关系"
-
-#~ msgid "Relations"
-#~ msgstr "关系"
-
-#~ msgid "Relation"
-#~ msgstr "关系"
-
-#~ msgid "ModifyRelations"
-#~ msgstr "修改关系"
-
-#~ msgid "Left ID"
-#~ msgstr "左 ID"
-
-#~ msgid "Left MimeType"
-#~ msgstr "左 MIME 类型"
-
-#~ msgid "Right ID"
-#~ msgstr "右 ID"
-
-#~ msgid "Right MimeType"
-#~ msgstr "右 MIME 类型"
-
-#~ msgid "Fetch Relations"
-#~ msgstr "获取关系"
