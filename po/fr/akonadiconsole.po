@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-29 08:59+0200\n"
+"PO-Revision-Date: 2024-06-26 13:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -712,36 +712,31 @@ msgid "All"
 msgstr "Tous"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Information View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Effacer l'affichage des informations"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Filtered Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Effacer les messages filtrés"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Effacer tous les messages"
 
 #: debugwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Save Filtered Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Enregistrer les messages filtrés..."
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Save All Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Enregistrer tous les messages..."
@@ -851,8 +846,7 @@ msgid "All Columns"
 msgstr "Toutes les colonnes"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Enregistrer dans un fichier…"
@@ -915,8 +909,7 @@ msgid "Categories:"
 msgstr "Catégories :"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "Enregistrer dans un fichier..."
@@ -1949,8 +1942,7 @@ msgid "Search store:"
 msgstr "Rechercher une boutique :"
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Rechercher"
