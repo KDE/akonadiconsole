@@ -1,0 +1,2058 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadiconsole package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadiconsole\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"PO-Revision-Date: 2024-06-28 21:01+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Минчо Кондарев"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Вашите имейли"
+
+#: agentconfigdialog.cpp:33
+#, kde-format
+msgid "Save Configuration"
+msgstr "Запазване на конфигурацията"
+
+#. i18n: ectx: property (text), widget (QPushButton, refreshButton)
+#: agentconfigdialog.cpp:34 dbbrowser.ui:28
+#, kde-format
+msgid "Refresh"
+msgstr "Обновяване"
+
+#: agentconfigdialog.cpp:35
+#, kde-format
+msgid "Apply Configuration"
+msgstr "Прилагане на конфигурация"
+
+#: agentconfigdialog.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Agent Configuration"
+msgstr "Конфигурация на агент"
+
+#: agentwidget.cpp:94
+#, kde-format
+msgid "Configure"
+msgstr "Настройки"
+
+#: agentwidget.cpp:95
+#, kde-format
+msgid "Configure Natively..."
+msgstr "Конфигуриране нативно..."
+
+#: agentwidget.cpp:96
+#, kde-format
+msgid "Configure Remotely..."
+msgstr "Конфигуриране отдалечено..."
+
+#. i18n: ectx: property (text), widget (QPushButton, syncButton)
+#: agentwidget.cpp:102 agentwidget.ui:240
+#, kde-format
+msgid "Synchronize"
+msgstr "Синхронизация"
+
+#: agentwidget.cpp:103
+#, kde-format
+msgid "Synchronize All"
+msgstr "Синхронизиране на всички"
+
+#: agentwidget.cpp:104
+#, kde-format
+msgid "Synchronize Collection Tree"
+msgstr "Синхронизиране на дървото на колекцията"
+
+#: agentwidget.cpp:105
+#, kde-format
+msgid "Synchronize Tags"
+msgstr "Синхронизиране на етикети"
+
+#: agentwidget.cpp:111
+#, kde-format
+msgid "Synchronize Relations"
+msgstr "Синхронизиране на връзки"
+
+#: agentwidget.cpp:200
+#, kde-format
+msgid "Do you really want to delete the selected agent instance?"
+msgid_plural "Do you really want to delete these %1 agent instances?"
+msgstr[0] "Наистина ли искате да изтриете избрания екземпляр на агент?"
+msgstr[1] "Наистина ли искате да изтриете тези %1 екземпляри на агент?"
+
+#: agentwidget.cpp:201
+#, kde-format
+msgid "Agent Deletion"
+msgstr "Изтриване на агент"
+
+#: agentwidget.cpp:201
+#, kde-format
+msgid "Multiple Agent Deletion"
+msgstr "Изтриване на множество агенти"
+
+#: agentwidget.cpp:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Resource Task List"
+msgstr "Списък със задачи за ресурси"
+
+#: agentwidget.cpp:295
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Notification Log"
+msgstr "Регистър на известията за промяна"
+
+#: agentwidget.cpp:345
+#, kde-format
+msgid "Cloning agent failed: %1."
+msgstr "Агентът за клониране е неуспешен: %1."
+
+#: agentwidget.cpp:408
+#, kde-format
+msgid "Online"
+msgstr "На линия"
+
+#: agentwidget.cpp:408
+#, kde-format
+msgid "Offline"
+msgstr "Изключен"
+
+#: agentwidget.cpp:412
+#, kde-format
+msgid "Idle"
+msgstr "Неактивен"
+
+#: agentwidget.cpp:415
+#, kde-format
+msgid "Running (%1%)"
+msgstr "Изпълнение (%1%)"
+
+#: agentwidget.cpp:418
+#, kde-format
+msgid "Broken"
+msgstr "Повреден"
+
+#: agentwidget.cpp:421
+#, kde-format
+msgid "Not Configured"
+msgstr "Не е конфигуриран"
+
+#: agentwidget.cpp:424
+#, kde-format
+msgctxt ""
+"Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: agentwidget.cpp:440
+#, kde-format
+msgid "Add Agent..."
+msgstr "Добавяне на агент..."
+
+#: agentwidget.cpp:441
+#, kde-format
+msgid "Clone Agent"
+msgstr "Клониране на агент"
+
+#: agentwidget.cpp:444
+#, kde-format
+msgid "Abort Activity"
+msgstr "Прекъсване на дейността"
+
+#: agentwidget.cpp:446
+#, kde-format
+msgid "Restart Agent"
+msgstr "Рестартиране на агента"
+
+#: agentwidget.cpp:449
+#, kde-format
+msgid "Toggle Online/Offline"
+msgstr "Превключване онлайн/офлайн"
+
+#: agentwidget.cpp:450
+#, kde-format
+msgid "Show task list"
+msgstr "Показване на списък със задачи"
+
+#: agentwidget.cpp:451
+#, kde-format
+msgid "Show change-notification log"
+msgstr "Показване на регистъра на известията за промяна"
+
+#: agentwidget.cpp:453
+#, kde-format
+msgid "Remove Agent"
+msgstr "Премахване на агент"
+
+#. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
+#: agentwidget.ui:37
+#, kde-format
+msgid "Details"
+msgstr "Подробности"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
+#: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
+#, kde-format
+msgid "Identifier:"
+msgstr "Идентификатор:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: agentwidget.ui:69 tagpropertiesdialog.ui:65
+#, kde-format
+msgid "Type:"
+msgstr "Вид:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: agentwidget.ui:92
+#, kde-format
+msgid "Status:"
+msgstr "Състояние:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: agentwidget.ui:118
+#, kde-format
+msgid "Status Message:"
+msgstr "Съобщение за състояние:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: agentwidget.ui:144
+#, kde-format
+msgid "Capabilities:"
+msgstr "Възможности:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: agentwidget.ui:170
+#, kde-format
+msgid "Mimetypes:"
+msgstr "MIME типове:"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: agentwidget.ui:212
+#, kde-format
+msgid "Add..."
+msgstr "Добавяне..."
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: agentwidget.ui:219 notificationmodel.cpp:95 notificationmodel.cpp:119
+#: notificationmodel.cpp:135 notificationmodel.cpp:145
+#: notificationmodel.cpp:157 notificationmonitor.cpp:178
+#: notificationmonitor.cpp:387 notificationmonitor.cpp:418
+#: notificationmonitor.cpp:446 notificationmonitor.cpp:470
+#, kde-format
+msgid "Remove"
+msgstr "Премахване"
+
+#. i18n: ectx: property (text), widget (QPushButton, configButton)
+#: agentwidget.ui:226
+#, kde-format
+msgid "Configure..."
+msgstr "Настройки..."
+
+#. i18n: ectx: property (text), widget (QPushButton, abortButton)
+#: agentwidget.ui:233
+#, kde-format
+msgid "Abort"
+msgstr "Прекъсване"
+
+#. i18n: ectx: property (text), widget (QPushButton, restartButton)
+#: agentwidget.ui:247
+#, kde-format
+msgctxt "restart the agent"
+msgid "Restart"
+msgstr "Рестартиране"
+
+#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
+#: notificationmonitor.cpp:405
+#, kde-format
+msgid "Collection"
+msgstr "Колекция"
+
+#: akonadibrowsermodel.cpp:70
+#, kde-format
+msgid "Subject"
+msgstr "Тема"
+
+#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#, kde-format
+msgid "Sender"
+msgstr "Подател"
+
+#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:207
+#, kde-format
+msgid "Date"
+msgstr "Дата"
+
+#. i18n: ectx: Menu (collection)
+#: akonadiconsoleui.rc:8
+#, kde-format
+msgid "&Collection"
+msgstr "&Колекция"
+
+#. i18n: ectx: Menu (item)
+#: akonadiconsoleui.rc:28
+#, kde-format
+msgid "&Item"
+msgstr "&Елемент"
+
+#. i18n: ectx: Menu (cache)
+#: akonadiconsoleui.rc:36
+#, kde-format
+msgid "&Cache"
+msgstr "&Кеш"
+
+#. i18n: ectx: Menu (server)
+#: akonadiconsoleui.rc:39
+#, kde-format
+msgid "&Server"
+msgstr "&Сървър"
+
+#: browserwidget.cpp:177
+#, kde-format
+msgid "Generic"
+msgstr "Общи"
+
+#: browserwidget.cpp:178
+#, kde-format
+msgid "Mail"
+msgstr "Поща"
+
+#: browserwidget.cpp:179
+#, kde-format
+msgid "Contacts"
+msgstr "Контакти"
+
+#: browserwidget.cpp:180
+#, kde-format
+msgid "Calendar/Tasks"
+msgstr "Календар/Задачи"
+
+#: browserwidget.cpp:240
+#, kde-format
+msgid "Cache only retrieval"
+msgstr "Извличане само на кеша"
+
+#: browserwidget.cpp:472
+#, kde-format
+msgid "Failed to save changes: %1"
+msgstr "Неуспешно запазване на промените: %1"
+
+#: browserwidget.cpp:511
+#, kde-format
+msgid "Select XML file"
+msgstr "Изберете XML файл"
+
+#: browserwidget.cpp:549
+#, kde-format
+msgid "&Add tag..."
+msgstr "&Добавяне на етикет..."
+
+#: browserwidget.cpp:551
+#, kde-format
+msgid "Add &subtag..."
+msgstr "Добавяне на &подетикет..."
+
+#: browserwidget.cpp:553
+#, kde-format
+msgid "&Edit tag..."
+msgstr "&Редактиране на етикет..."
+
+#: browserwidget.cpp:558
+#, kde-format
+msgid "&Delete tag..."
+msgstr "&Изтриване на маркер..."
+
+#: browserwidget.cpp:572
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Tag"
+msgstr "Добавяне на етикет"
+
+#: browserwidget.cpp:587
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Subtag"
+msgstr "Добавяне на подетикет"
+
+#: browserwidget.cpp:598 browserwidget.cpp:615
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Tag"
+msgstr "Промяна на етикета"
+
+#: browserwidget.cpp:624
+#, kde-format
+msgid "Do you really want to remove selected tag?"
+msgstr "Наистина ли искате да премахнете избрания етикет?"
+
+#: browserwidget.cpp:625
+#, kde-format
+msgid "Delete tag?"
+msgstr "Изтриване на маркер?"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveButton)
+#: browserwidget_contentview.ui:30
+#, kde-format
+msgid "&Save"
+msgstr "&Запис"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: browserwidget_contentview.ui:41
+#, kde-format
+msgid "Payload"
+msgstr "Данни"
+
+#. i18n: ectx: property (text), widget (QLabel, unsupportedType)
+#: browserwidget_contentview.ui:81
+#, kde-format
+msgid "Unsupported Type"
+msgstr "Неподдържан тип"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
+#: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
+#: monitorswidget.cpp:116 monitorswidget.cpp:123 monitorswidget.cpp:156
+#: notificationmonitor.cpp:263 notificationmonitor.cpp:572
+#: notificationmonitor.cpp:597 tagpropertiesdialog.ui:76
+#, kde-format
+msgid "Attributes"
+msgstr "Атрибути"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
+#: browserwidget_contentview.ui:116 collectionattributespage.ui:23
+#: tagpropertiesdialog.ui:82
+#, kde-format
+msgid "New Attribute"
+msgstr "Нов атрибут"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, addAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, addRIDButton)
+#: browserwidget_contentview.ui:123 collectionattributespage.ui:30
+#: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
+#, kde-format
+msgid "&Add"
+msgstr "&Добавяне"
+
+#. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: browserwidget_contentview.ui:130 collectionattributespage.ui:40
+#, kde-format
+msgid "&Delete"
+msgstr "Изтрива&не"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: browserwidget_contentview.ui:138
+#, kde-format
+msgid "Raw Payload"
+msgstr "Raw натоварване"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
+#, kde-format
+msgid "Internals"
+msgstr "Вътрешни"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:178
+#, kde-format
+msgid "Unique ID:"
+msgstr "Уникален ID:"
+
+#. i18n: ectx: property (text), widget (QLabel, id)
+#. i18n: ectx: property (text), widget (QLabel, revision)
+#. i18n: ectx: property (text), widget (QLabel, size)
+#. i18n: ectx: property (text), widget (QLabel, modificationtime)
+#: browserwidget_contentview.ui:191 browserwidget_contentview.ui:249
+#: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: browserwidget_contentview.ui:202
+#, kde-format
+msgid "Remote ID:"
+msgstr "Дистанционен ID:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_gid)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
+#, kde-format
+msgid "GID:"
+msgstr "GID:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: browserwidget_contentview.ui:236
+#, kde-format
+msgid "Revision:"
+msgstr "Ревизия:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: browserwidget_contentview.ui:260
+#, kde-format
+msgid "Size:"
+msgstr "Големина:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: browserwidget_contentview.ui:284
+#, kde-format
+msgid "Last modification time:"
+msgstr "Време на последна промяна:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: browserwidget_contentview.ui:308
+#, kde-format
+msgid "Mimetype:"
+msgstr "Mimetype:"
+
+#. i18n: ectx: property (text), widget (QLabel, mimeType)
+#: browserwidget_contentview.ui:321
+#, kde-format
+msgid "invalid/invalid"
+msgstr "невалиден/невалиден"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (KEditListWidget, flags)
+#. i18n: ectx: property (title), widget (KEditListWidget, tags)
+#: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:280
+#, kde-format
+msgid "Flags"
+msgstr "Флагове"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:85
+#: notificationmonitor.cpp:281 notificationmonitor.cpp:492
+#, kde-format
+msgid "Tags"
+msgstr "Етикети"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: browserwidget_itemview.ui:31
+#, kde-format
+msgctxt "model name"
+msgid "Model:"
+msgstr "Модел:"
+
+#: collectionaclpage.cpp:17
+#, kde-format
+msgid "ACL"
+msgstr "ACL"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectionaclpage.ui:17
+#, kde-format
+msgid "Item Access Rights"
+msgstr "Права за достъп до елемент"
+
+#. i18n: ectx: property (text), widget (QCheckBox, createItem)
+#. i18n: ectx: property (text), widget (QCheckBox, createCollection)
+#: collectionaclpage.ui:23 collectionaclpage.ui:67
+#, kde-format
+msgid "Create"
+msgstr "Създаване"
+
+#. i18n: ectx: property (text), widget (QCheckBox, changeItem)
+#. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
+#: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:91
+#: notificationmodel.cpp:115 notificationmodel.cpp:133
+#: notificationmodel.cpp:155 notificationmonitor.cpp:172
+#: notificationmonitor.cpp:381 notificationmonitor.cpp:443
+#: notificationmonitor.cpp:467
+#, kde-format
+msgid "Modify"
+msgstr "Промяна"
+
+#. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
+#. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
+#: collectionaclpage.ui:37 collectionaclpage.ui:81
+#, kde-format
+msgid "Delete"
+msgstr "Изтриване"
+
+#. i18n: ectx: property (text), widget (QCheckBox, linkItem)
+#: collectionaclpage.ui:44 notificationmodel.cpp:97 notificationmonitor.cpp:181
+#, kde-format
+msgid "Link"
+msgstr "Връзка"
+
+#. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
+#: collectionaclpage.ui:51 notificationmodel.cpp:99 notificationmonitor.cpp:184
+#, kde-format
+msgid "Unlink"
+msgstr "Прекратяване на връзката"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: collectionaclpage.ui:61
+#, kde-format
+msgid "Collection Access Rights"
+msgstr "Права за достъп до колекцията"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: collectionaclpage.ui:91
+#, kde-format
+msgid ""
+"<b>Note: </b>These values are provided by the corresponding backend and are "
+"not intended to be changed by you, so be warned if something breaks when "
+"changing them nevertheless!"
+msgstr ""
+"<b>Забележка: </b>Тези стойности се предоставят от съответния бекенд и не са "
+"предназначени да бъдат променяни от вас, така че сте предупредени, ако "
+"въпреки това нещо се повреди, когато ги променяте!"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
+#, kde-format
+msgid "Attribute"
+msgstr "Атрибут"
+
+#: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
+#, kde-format
+msgid "Value"
+msgstr "Стойност"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
+#, kde-format
+msgid "Do not even think about changing anything in here!"
+msgstr "Дори не си и помисляйте да променяте нещо тук!"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: collectioninternalspage.ui:28
+#, kde-format
+msgid "Identification"
+msgstr "Идентификация"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: collectioninternalspage.ui:48
+#, kde-format
+msgid "Remote identifier:"
+msgstr "Дистанционен идентификатор:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: collectioninternalspage.ui:61
+#, kde-format
+msgid "Owner:"
+msgstr "Собственик:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: collectioninternalspage.ui:75
+#, kde-format
+msgid "Remote Revision:"
+msgstr "Дистанционна ревизия:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: collectioninternalspage.ui:88
+#, kde-format
+msgid "Virtual:"
+msgstr "Виртуален:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
+#: collectioninternalspage.ui:106 collectioninternalspage.ui:115
+#, kde-format
+msgid "Content Types"
+msgstr "Типове съдържание"
+
+#: connectionpage.cpp:37 logging.cpp:53
+#, kde-format
+msgid "Programs:"
+msgstr "Програми:"
+
+#: dbconsole.cpp:79
+#, kde-format
+msgid "Query #%1"
+msgstr "Заявка #%1"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
+#: dbconsoletab.ui:87
+#, kde-format
+msgid "Execute query"
+msgstr "Изпълнение на заявка"
+
+#: debugmodel.cpp:144
+#, kde-format
+msgid "Direction"
+msgstr "Посока"
+
+#: debugmodel.cpp:146 loggingmodel.cpp:116
+#, kde-format
+msgid "Message"
+msgstr "Съобщение"
+
+#: debugwidget.cpp:40
+#, kde-format
+msgid "Enable debugger"
+msgstr "Активиране на програмата за отстраняване на грешки"
+
+#: debugwidget.cpp:49 notificationmonitor.cpp:577
+#, kde-format
+msgid "All"
+msgstr "Всички"
+
+#: debugwidget.cpp:64
+#, kde-format
+msgid "Clear Information View"
+msgstr "Изчистване на информацията"
+
+#: debugwidget.cpp:65
+#, kde-format
+msgid "Clear Filtered Messages"
+msgstr "Изчистване на филтрираните съобщения"
+
+#: debugwidget.cpp:66
+#, kde-format
+msgid "Clear All Messages"
+msgstr "Изчистване на всички съобщения"
+
+#: debugwidget.cpp:67
+#, kde-format
+msgid "Save Filtered Messages ..."
+msgstr "Запазване на филтрираните съобщения..."
+
+#: debugwidget.cpp:68
+#, kde-format
+msgid "Save All Messages ..."
+msgstr "Запазване на всички съобщения..."
+
+#: instanceselector.cpp:44
+#, kde-format
+msgid "Connect"
+msgstr "Свързване"
+
+#: instanceselector.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Remote Akonadi Console (%1)"
+msgstr "Отдалечена конзола на Akonadi (%1)"
+
+#: instanceselector.cpp:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Console (Instance: %1)"
+msgstr "Konsole Akonadi (Екземпляр: %1)"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: instanceselector.ui:20
+#, kde-format
+msgid ""
+"There are multiple instances of Akonadi running in the current D-Bus "
+"session. Please select the instance you want to connect to."
+msgstr ""
+"Има множество екземпляри на Akonadi, работещи в текущата D-Bus сесия. Моля, "
+"изберете екземпляра, към който искате да се свържете."
+
+#: jobtracker.cpp:26
+#, kde-format
+msgid "Waiting"
+msgstr "Изчакване"
+
+#: jobtracker.cpp:28
+#, kde-format
+msgid "Running"
+msgstr "Изпълнение"
+
+#: jobtracker.cpp:30 querydebugger.cpp:345
+#, kde-format
+msgid "Ended"
+msgstr "Приключи"
+
+#: jobtracker.cpp:32
+#, kde-format
+msgid "Failed: %1"
+msgstr "Неуспешно: %1"
+
+#: jobtracker.cpp:34
+#, kde-format
+msgid "Unknown state!"
+msgstr "Непознато състояние!"
+
+#: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:39
+#, kde-format
+msgid "Job ID"
+msgstr "ID на заданието"
+
+#: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:40
+#, kde-format
+msgid "Created"
+msgstr "Създаден"
+
+#: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:41
+#, kde-format
+msgid "Wait time"
+msgstr "Време за изчакване"
+
+#: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:42
+#, kde-format
+msgid "Job duration"
+msgstr "Продължителност на заданието"
+
+#: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:43
+#, kde-format
+msgid "Job Type"
+msgstr "Вид на заданието"
+
+#: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:44
+#, kde-format
+msgid "State"
+msgstr "Състояние"
+
+#: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:45 logging.cpp:60
+#: loggingmodel.cpp:139
+#, kde-format
+msgid "Info"
+msgstr "Информация"
+
+#: jobtrackersearchwidget.cpp:20
+#, kde-format
+msgid "Show Only Errors"
+msgstr "Показване само на грешки"
+
+#: jobtrackersearchwidget.cpp:28
+#, kde-format
+msgid "Search..."
+msgstr "Търсене..."
+
+#: jobtrackersearchwidget.cpp:38
+#, kde-format
+msgid "All Columns"
+msgstr "Всички колони"
+
+#: jobtrackerwidget.cpp:73
+#, kde-format
+msgid "Save to file..."
+msgstr "Запис във файл..."
+
+#: jobtrackerwidget.cpp:105 notificationmonitor.cpp:119
+#, kde-format
+msgid "Clear View"
+msgstr "Ясен изглед"
+
+#: jobtrackerwidget.cpp:107
+#, kde-format
+msgid "Copy Info"
+msgstr "Копиране на информация"
+
+#: jobtrackerwidget.cpp:109
+#, kde-format
+msgid "Collapse All"
+msgstr "Сгъване на всичко"
+
+#: jobtrackerwidget.cpp:110
+#, kde-format
+msgid "Expand All"
+msgstr "Разгъване на всичко"
+
+#: logging.cpp:44
+#, kde-format
+msgid "Enable"
+msgstr "Включване"
+
+#: logging.cpp:56 notificationmonitor.cpp:64
+#, kde-format
+msgid "Types:"
+msgstr "Видове:"
+
+#: logging.cpp:59 loggingmodel.cpp:137
+#, kde-format
+msgid "Debug"
+msgstr "Откриване на грешки"
+
+#: logging.cpp:61 loggingmodel.cpp:141
+#, kde-format
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: logging.cpp:62 loggingmodel.cpp:143
+#, kde-format
+msgid "Critical"
+msgstr "Критично"
+
+#: logging.cpp:63 loggingmodel.cpp:145
+#, kde-format
+msgid "Fatal"
+msgstr "Фатално"
+
+#: logging.cpp:64
+#, kde-format
+msgid "Categories:"
+msgstr "Категории:"
+
+#: logging.cpp:90 logging.cpp:129 notificationmonitor.cpp:93
+#, kde-format
+msgid "Save to File..."
+msgstr "Запис във файл..."
+
+#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
+#, kde-format
+msgid "Error"
+msgstr "Грешка"
+
+#: logging.cpp:136 notificationmonitor.cpp:610
+#, kde-format
+msgid "Failed to open file: %1"
+msgstr "Неуспешно отваряне на файл: %1"
+
+#: loggingmodel.cpp:104
+#, kde-format
+msgid "Time"
+msgstr "Време"
+
+#: loggingmodel.cpp:106
+#, kde-format
+msgid "Program"
+msgstr "Програма"
+
+#: loggingmodel.cpp:108 notificationmodel.cpp:209 notificationmonitor.cpp:143
+#: notificationmonitor.cpp:256
+#, kde-format
+msgid "Type"
+msgstr "Вид"
+
+#: loggingmodel.cpp:110
+#, kde-format
+msgid "Category"
+msgstr "Категория"
+
+#: loggingmodel.cpp:112
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: loggingmodel.cpp:114
+#, kde-format
+msgid "Function"
+msgstr "Функция"
+
+#: loggingmodel.cpp:154 loggingmodel.cpp:170
+#, kde-format
+msgid "%1:%2"
+msgstr "%1:%2"
+
+#: main.cpp:27
+#, kde-format
+msgid "Akonadi Console"
+msgstr "Аконади конзола"
+
+#: main.cpp:29
+#, kde-format
+msgid "The Management and Debugging Console for Akonadi"
+msgstr "Конзола за управление и отстраняване на грешки на Akonadi"
+
+#: main.cpp:31
+#, kde-format
+msgid "(c) 2006-2024 the Akonadi developer"
+msgstr "(c) 2006-2024 the Akonadi developer"
+
+#: main.cpp:35 main.cpp:36
+#, kde-format
+msgid "Author"
+msgstr "Автор"
+
+#: mainwidget.cpp:49
+#, kde-format
+msgid "Agents"
+msgstr "Агент"
+
+#: mainwidget.cpp:51
+#, kde-format
+msgid "Browser"
+msgstr "Браузер"
+
+#: mainwidget.cpp:52
+#, kde-format
+msgid "Debugger"
+msgstr "Програма за откриване на грешки"
+
+#: mainwidget.cpp:53
+#, kde-format
+msgid "Logging"
+msgstr "Влизане"
+
+#: mainwidget.cpp:54
+#, kde-format
+msgid "DB Browser"
+msgstr "DB Browser"
+
+#: mainwidget.cpp:55
+#, kde-format
+msgid "DB Console"
+msgstr "DB Console"
+
+#: mainwidget.cpp:56
+#, kde-format
+msgid "Query Debugger"
+msgstr "Дебъгер на заявки"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Enable job tracker"
+msgstr "Активиране на инструмента за проследяване на работа"
+
+#: mainwidget.cpp:57
+#, kde-format
+msgid "Job Tracker"
+msgstr "Инструмента за проследяване на зданието"
+
+#: mainwidget.cpp:58
+#, kde-format
+msgid "Enable tracking of Resource Schedulers"
+msgstr "Разрешете проследяването на планировчиците на ресурси"
+
+#: mainwidget.cpp:58
+#, kde-format
+msgid "Resources Schedulers"
+msgstr "Планировчици на ресурси"
+
+#: mainwidget.cpp:59
+#, kde-format
+msgid "Notification Monitor"
+msgstr "Монитор за известия"
+
+#: mainwidget.cpp:61
+#, kde-format
+msgid "Item Search"
+msgstr "Търсене на елемент"
+
+#: mainwidget.cpp:63
+#, kde-format
+msgid "Monitors"
+msgstr "Монитори"
+
+#: mainwidget.cpp:66
+#, kde-format
+msgid "Dump to XML..."
+msgstr "Изхвърляне в XML..."
+
+#: mainwidget.cpp:70
+#, kde-format
+msgid "Clear Akonadi Cache"
+msgstr "Изчистване на кеш-паметта на Akonadi"
+
+#: mainwidget.cpp:74
+#, kde-format
+msgid "Start Server"
+msgstr "Стартиране на сървъра"
+
+#: mainwidget.cpp:78
+#, kde-format
+msgid "Stop Server"
+msgstr "Спиране на сървъра"
+
+#: mainwidget.cpp:82
+#, kde-format
+msgid "Restart Server"
+msgstr "Рестартиране на сървъра"
+
+#: mainwindow.cpp:33
+#, kde-format
+msgid ""
+"<p>Akonadi Console is purely a development tool. It allows you to view and "
+"change internal data structures of Akonadi. You should only change data in "
+"here if you know what you are doing, otherwise you risk damaging or losing "
+"your personal information management data.<br/><b>Use at your own risk!</b></"
+"p>"
+msgstr ""
+"<p>Akonadi Console е инструмент за разработка. Той ви позволява да "
+"преглеждате и променяте вътрешни структури от данни на Akonadi. Трябва да "
+"променяте данните тук само ако знаете какво правите, в противен случай "
+"рискувате да повредите или загубите данните си за управление на личната "
+"информация.<br/><b>Използвайте на свой собствен риск!</b></p>"
+
+#: monitorsmodel.cpp:97
+#, kde-format
+msgid "Session/Subscriber"
+msgstr "Сесия/Абонат"
+
+#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:230
+#: notificationmonitor.cpp:486
+#, kde-format
+msgid "Items"
+msgstr "Елементи"
+
+#: monitorswidget.cpp:82 notificationmonitor.cpp:489
+#, kde-format
+msgid "Collections"
+msgstr "Колекции"
+
+#: monitorswidget.cpp:88 notificationmonitor.cpp:291
+#: notificationmonitor.cpp:495
+#, kde-format
+msgid "Relations"
+msgstr "Връзки"
+
+#: monitorswidget.cpp:91
+#, kde-format
+msgid "Subscribers"
+msgstr "Абонати"
+
+#: monitorswidget.cpp:94
+#, kde-format
+msgid "Notification"
+msgstr "Известие"
+
+#: monitorswidget.cpp:103 notificationmonitor.cpp:568
+#, kde-format
+msgid "List Filter"
+msgstr "Списък филтри"
+
+#: monitorswidget.cpp:104 notificationmonitor.cpp:569
+#, kde-format
+msgid "Include Statistics"
+msgstr "Включване на статистика"
+
+#: monitorswidget.cpp:105 notificationmonitor.cpp:201
+#: notificationmonitor.cpp:400 notificationmonitor.cpp:453
+#: notificationmonitor.cpp:570 tagpropertiesdialog.cpp:80
+#, kde-format
+msgid "Resource"
+msgstr "Ресурс"
+
+#: monitorswidget.cpp:106
+#, kde-format
+msgid "Content MimeTypes"
+msgstr "Съдържание MimeTypes"
+
+#: monitorswidget.cpp:107 monitorswidget.cpp:160 notificationmonitor.cpp:586
+#, kde-format
+msgid "Ancestor Retrieval"
+msgstr "Извличане на предци"
+
+#: monitorswidget.cpp:111
+#, kde-format
+msgid "Ancestor Fetch Scope"
+msgstr "Обхват на извличане на предшественик"
+
+#: monitorswidget.cpp:117 monitorswidget.cpp:124 notificationmonitor.cpp:573
+#: notificationmonitor.cpp:594
+#, kde-format
+msgid "Fetch ID Only"
+msgstr "Само извличане на ID"
+
+#: monitorswidget.cpp:118
+#, kde-format
+msgid "Ignore Retrieval Error"
+msgstr "Игнориране на грешката при извличане"
+
+#: monitorswidget.cpp:132 notificationmonitor.cpp:135 searchwidget.cpp:205
+#, kde-format
+msgid "Values"
+msgstr "Стойности"
+
+#: monitorswidget.cpp:132 notificationmonitor.cpp:135
+#, kde-format
+msgid "Properties"
+msgstr "Подробности"
+
+#: monitorswidget.cpp:140 notificationmonitor.cpp:477
+#, kde-format
+msgid "Subscriber"
+msgstr "Абонат"
+
+#: monitorswidget.cpp:141
+#, kde-format
+msgid "Session ID"
+msgstr "Сесиен идентификатор"
+
+#: monitorswidget.cpp:142
+#, kde-format
+msgid "Monitored Collections:"
+msgstr "Наблюдавани колекции:"
+
+#: monitorswidget.cpp:143
+#, kde-format
+msgid "Monitored Items:"
+msgstr "Наблюдавани елементи:"
+
+#: monitorswidget.cpp:144
+#, kde-format
+msgid "Monitored Tags:"
+msgstr "Наблюдавани етикети:"
+
+#: monitorswidget.cpp:145
+#, kde-format
+msgid "Monitored Types:"
+msgstr "Наблюдавани типове:"
+
+#: monitorswidget.cpp:146
+#, kde-format
+msgid "Monitored Mime Types:"
+msgstr "Наблюдавани типове Mime:"
+
+#: monitorswidget.cpp:147
+#, kde-format
+msgid "Monitored Resources:"
+msgstr "Наблюдавани ресурси:"
+
+#: monitorswidget.cpp:148
+#, kde-format
+msgid "Ignored Sessions:"
+msgstr "Игнорирани сесии:"
+
+#: monitorswidget.cpp:149
+#, kde-format
+msgid "All Monitored:"
+msgstr "Всички наблюдавани:"
+
+#: monitorswidget.cpp:150
+#, kde-format
+msgid "Is Exclusive:"
+msgstr "Изключителен е:"
+
+#: monitorswidget.cpp:152 notificationmonitor.cpp:515
+#, kde-format
+msgid "Item Fetch Scope"
+msgstr "Обхват на извличане на елемент"
+
+#: monitorswidget.cpp:154
+#, kde-format
+msgid "Payload Parts"
+msgstr "Части на натоварване"
+
+#: monitorswidget.cpp:155 notificationmonitor.cpp:534
+#, kde-format
+msgid "Full Payload"
+msgstr "Пълно натоварване"
+
+#: monitorswidget.cpp:157 notificationmonitor.cpp:535
+#, kde-format
+msgid "All Attributes"
+msgstr "Всички атрибути"
+
+#: monitorswidget.cpp:158
+#, kde-format
+msgid "Cache only"
+msgstr "Само кеш"
+
+#: monitorswidget.cpp:159
+#, kde-format
+msgid "Check for Cached Payloads Parts Only"
+msgstr "Проверка само за кеширани полезни натоварвания"
+
+#: monitorswidget.cpp:161
+#, kde-format
+msgid "Fetch mtime"
+msgstr "Извличане на mtime"
+
+#: monitorswidget.cpp:162 notificationmonitor.cpp:542
+#, kde-format
+msgid "Fetch GID"
+msgstr "Извличане на GID"
+
+#: monitorswidget.cpp:163 notificationmonitor.cpp:589
+#, kde-format
+msgid "Ignore Retrieval Errors"
+msgstr "Игнориране на грешките при извличане"
+
+#: monitorswidget.cpp:164
+#, kde-format
+msgid "Fetch Change Since"
+msgstr "Извличане на промяна от"
+
+#: monitorswidget.cpp:165
+#, kde-format
+msgid "Fetch RID"
+msgstr "Извличане на RID"
+
+#: monitorswidget.cpp:166 notificationmonitor.cpp:543
+#, kde-format
+msgid "Fetch Tags"
+msgstr "Извличане на етикети"
+
+#: monitorswidget.cpp:169
+#, kde-format
+msgid "Collection Fetch Scope"
+msgstr "Обхват на извличане на колекция"
+
+#: monitorswidget.cpp:172 notificationmonitor.cpp:592
+#, kde-format
+msgid "Tag Fetch Scope"
+msgstr "Обхват на извличане на етикети"
+
+#: notificationmodel.cpp:77 notificationmonitor.cpp:454
+#, kde-format
+msgid "Tag"
+msgstr "Етикет"
+
+#: notificationmodel.cpp:79 notificationmonitor.cpp:425
+#, kde-format
+msgid "Relation"
+msgstr "Отношение"
+
+#: notificationmodel.cpp:81
+#, kde-format
+msgid "Subscription"
+msgstr "Абонамент"
+
+#: notificationmodel.cpp:89 notificationmodel.cpp:113 notificationmodel.cpp:131
+#: notificationmodel.cpp:143 notificationmodel.cpp:153
+#: notificationmonitor.cpp:169 notificationmonitor.cpp:378
+#: notificationmonitor.cpp:415 notificationmonitor.cpp:440
+#: notificationmonitor.cpp:464
+#, kde-format
+msgid "Add"
+msgstr "Добавяне"
+
+#: notificationmodel.cpp:93 notificationmodel.cpp:117
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:384
+#, kde-format
+msgid "Move"
+msgstr " Преместване"
+
+#: notificationmodel.cpp:101 notificationmonitor.cpp:187
+#, kde-format
+msgid "ModifyFlags"
+msgstr "ModifyFlags"
+
+#: notificationmodel.cpp:103 notificationmonitor.cpp:190
+#, kde-format
+msgid "ModifyTags"
+msgstr "ModifyTags"
+
+#: notificationmodel.cpp:105 notificationmonitor.cpp:193
+#, kde-format
+msgid "ModifyRelations"
+msgstr "ModifyRelations"
+
+#: notificationmodel.cpp:107 notificationmodel.cpp:137
+#: notificationmodel.cpp:147 notificationmodel.cpp:159
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:421
+#: notificationmonitor.cpp:449 notificationmonitor.cpp:473
+#, kde-format
+msgid "InvalidOp"
+msgstr "InvalidOp"
+
+#: notificationmodel.cpp:121 notificationmonitor.cpp:390
+#, kde-format
+msgid "Subscribe"
+msgstr "Абониране"
+
+#: notificationmodel.cpp:123 notificationmonitor.cpp:393
+#, kde-format
+msgid "Unsubscribe"
+msgstr "Отписване"
+
+#: notificationmodel.cpp:125 notificationmonitor.cpp:396
+#, kde-format
+msgid "InvalidIp"
+msgstr "InvalidIp"
+
+#: notificationmodel.cpp:163
+#, kde-format
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: notificationmodel.cpp:211 notificationmonitor.cpp:200
+#: notificationmonitor.cpp:399 notificationmonitor.cpp:424
+#: notificationmonitor.cpp:452 notificationmonitor.cpp:476
+#, kde-format
+msgid "Operation"
+msgstr "Действие"
+
+#: notificationmodel.cpp:213
+#, kde-format
+msgid "IDs"
+msgstr "IDs"
+
+#: notificationmodel.cpp:215
+#, kde-format
+msgid "Session"
+msgstr "Сесия"
+
+#: notificationmodel.cpp:217 notificationmonitor.cpp:144
+#, kde-format
+msgid "Listeners"
+msgstr "Слушатели"
+
+#: notificationmonitor.cpp:59
+#, kde-format
+msgid "Enable notification monitor"
+msgstr "Активиране на монитора за известия"
+
+#: notificationmonitor.cpp:142
+#, kde-format
+msgid "Timestamp"
+msgstr "Времево клеймо"
+
+#: notificationmonitor.cpp:202 notificationmonitor.cpp:401
+#, kde-format
+msgid "Parent Collection"
+msgstr "Родителска колекция"
+
+#: notificationmonitor.cpp:203
+#, kde-format
+msgid "Parent Dest Col"
+msgstr "Родител Цел Кол"
+
+#: notificationmonitor.cpp:204 notificationmonitor.cpp:403
+#, kde-format
+msgid "Destination Resource"
+msgstr "Ресурс за дестинация"
+
+#: notificationmonitor.cpp:205
+#, kde-format
+msgid "Item Parts"
+msgstr "Части на елемент"
+
+#: notificationmonitor.cpp:206
+#, kde-format
+msgid "Added Flags"
+msgstr "Добавени флагове"
+
+#: notificationmonitor.cpp:207
+#, kde-format
+msgid "Removed Flags"
+msgstr "Премахнати флагове"
+
+#: notificationmonitor.cpp:208
+#, kde-format
+msgid "Added Tags"
+msgstr "Добавени етикети"
+
+#: notificationmonitor.cpp:209
+#, kde-format
+msgid "Removed Tags"
+msgstr "Премахнати етикети"
+
+#: notificationmonitor.cpp:219
+#, kde-format
+msgid "Removed Relations"
+msgstr "Премахнати връзки"
+
+#: notificationmonitor.cpp:228
+#, kde-format
+msgid "Must retrieve"
+msgstr "Трябва да се извлече"
+
+#: notificationmonitor.cpp:242
+#, kde-format
+msgid "id"
+msgstr "id"
+
+#: notificationmonitor.cpp:243
+#, kde-format
+msgid "remoteId"
+msgstr "remoteId"
+
+#: notificationmonitor.cpp:244
+#, kde-format
+msgid "name"
+msgstr "име"
+
+#: notificationmonitor.cpp:246 notificationmonitor.cpp:301
+#: notificationmonitor.cpp:349
+#, kde-format
+msgid "Ancestor"
+msgstr "Прародител"
+
+#: notificationmonitor.cpp:253 notificationmonitor.cpp:335
+#, kde-format
+msgid "ID"
+msgstr "Номер"
+
+#: notificationmonitor.cpp:254 notificationmonitor.cpp:336
+#, kde-format
+msgid "Parent ID"
+msgstr "ID на родител"
+
+#: notificationmonitor.cpp:255 notificationmonitor.cpp:276
+#, kde-format
+msgid "GID"
+msgstr "GID"
+
+#: notificationmonitor.cpp:257 notificationmonitor.cpp:339
+#: notificationmonitor.cpp:431 tagpropertiesdialog.cpp:80
+#, kde-format
+msgid "Remote ID"
+msgstr "Отдалечен идентификатор"
+
+#: notificationmonitor.cpp:272
+#, kde-format
+msgid "Revision"
+msgstr "Ревизия"
+
+#: notificationmonitor.cpp:273
+#, kde-format
+msgid "ParentID"
+msgstr "ParentID"
+
+#: notificationmonitor.cpp:274
+#, kde-format
+msgid "RemoteID"
+msgstr "RemoteID"
+
+#: notificationmonitor.cpp:275
+#, kde-format
+msgid "RemoteRev"
+msgstr "RemoteRev"
+
+#: notificationmonitor.cpp:277 notificationmonitor.cpp:323
+#: notificationmonitor.cpp:345
+#, kde-format
+msgid "Size"
+msgstr "Големина"
+
+#: notificationmonitor.cpp:278
+#, kde-format
+msgid "MimeType"
+msgstr "Типове MIME"
+
+#: notificationmonitor.cpp:279
+#, kde-format
+msgid "MTime"
+msgstr "MTime"
+
+#: notificationmonitor.cpp:290
+#, kde-format
+msgid "VRefs"
+msgstr "VRefs"
+
+#: notificationmonitor.cpp:307
+#, kde-format
+msgid "Parts"
+msgstr "Части"
+
+#: notificationmonitor.cpp:314
+#, kde-format
+msgid "External"
+msgstr "Външен"
+
+#: notificationmonitor.cpp:317
+#, kde-format
+msgid "Internal"
+msgstr "Вътрешен"
+
+#: notificationmonitor.cpp:320
+#, kde-format
+msgid "Foreign"
+msgstr "Чужд"
+
+#: notificationmonitor.cpp:324
+#, kde-format
+msgid "Storage Type"
+msgstr "Тип съхранение"
+
+#: notificationmonitor.cpp:325
+#, kde-format
+msgid "Version"
+msgstr "Версия"
+
+#: notificationmonitor.cpp:326
+#, kde-format
+msgid "Data"
+msgstr "Данни"
+
+#: notificationmonitor.cpp:337
+#, kde-format
+msgid "Name"
+msgstr "Име"
+
+#: notificationmonitor.cpp:338
+#, kde-format
+msgid "Mime Types"
+msgstr "Типове MIME"
+
+#: notificationmonitor.cpp:340
+#, kde-format
+msgid "Remote Revision"
+msgstr "Дистанционна ревизия"
+
+#: notificationmonitor.cpp:341
+#, kde-format
+msgid "Statistics"
+msgstr "Статистика"
+
+#: notificationmonitor.cpp:343
+#, kde-format
+msgid "Count"
+msgstr "Броене"
+
+#: notificationmonitor.cpp:344
+#, kde-format
+msgid "Unseen"
+msgstr "Невиждано"
+
+#: notificationmonitor.cpp:347
+#, kde-format
+msgid "Search Query"
+msgstr "Заявка за търсене"
+
+#: notificationmonitor.cpp:348
+#, kde-format
+msgid "Search Collections"
+msgstr "Търсене в колекции"
+
+#: notificationmonitor.cpp:355
+#, kde-format
+msgid "Cache Policy"
+msgstr "Политика за кеша"
+
+#: notificationmonitor.cpp:357
+#, kde-format
+msgid "Inherit"
+msgstr "Наследяване"
+
+#: notificationmonitor.cpp:358
+#, kde-format
+msgid "Check Interval"
+msgstr "Интервал на проверката"
+
+#: notificationmonitor.cpp:359
+#, kde-format
+msgid "Cache Timeout"
+msgstr "Време за изчакване на кеша"
+
+#: notificationmonitor.cpp:360
+#, kde-format
+msgid "Sync on Demand"
+msgstr "Синхронизиране при поискване"
+
+#: notificationmonitor.cpp:361
+#, kde-format
+msgid "Local Parts"
+msgstr "Местни части"
+
+#: notificationmonitor.cpp:366 notificationmonitor.cpp:559
+#, kde-format
+msgid "Enabled"
+msgstr "Включено"
+
+#: notificationmonitor.cpp:367
+#, kde-format
+msgid "DisplayPref"
+msgstr "DisplayPref"
+
+#: notificationmonitor.cpp:368
+#, kde-format
+msgid "SyncPref"
+msgstr "SyncPref"
+
+#: notificationmonitor.cpp:369
+#, kde-format
+msgid "IndexPref"
+msgstr "IndexPref"
+
+#: notificationmonitor.cpp:370
+#, kde-format
+msgid "Virtual"
+msgstr "Виртуален"
+
+#: notificationmonitor.cpp:402
+#, kde-format
+msgid "Parent Dest Collection"
+msgstr "Родителска целева колекция"
+
+#: notificationmonitor.cpp:404
+#, kde-format
+msgid "Changed Parts"
+msgstr "Сменени части"
+
+#: notificationmonitor.cpp:427
+#, kde-format
+msgid "Left ID"
+msgstr "Ляво ID"
+
+#: notificationmonitor.cpp:428
+#, kde-format
+msgid "Left MimeType"
+msgstr "Ляв MimeType"
+
+#: notificationmonitor.cpp:429
+#, kde-format
+msgid "Right ID"
+msgstr "Право ID"
+
+#: notificationmonitor.cpp:430
+#, kde-format
+msgid "Right MimeType"
+msgstr "Правилно MimeType"
+
+#: notificationmonitor.cpp:478
+#, kde-format
+msgid "Monitored Collections"
+msgstr "Наблюдавани колекции"
+
+#: notificationmonitor.cpp:479
+#, kde-format
+msgid "Monitored Items"
+msgstr "Наблюдавани елементи"
+
+#: notificationmonitor.cpp:480
+#, kde-format
+msgid "Monitored Tags"
+msgstr "Наблюдавани етикети"
+
+#: notificationmonitor.cpp:498
+#, kde-format
+msgid "Subscriptions"
+msgstr "Абонаменти"
+
+#: notificationmonitor.cpp:501
+#, kde-format
+msgid "Changes"
+msgstr "Промени"
+
+#: notificationmonitor.cpp:504
+#, kde-format
+msgid "No Type"
+msgstr "Без тип"
+
+#: notificationmonitor.cpp:508
+#, kde-format
+msgid "Monitored Types"
+msgstr "Наблюдавани типове"
+
+#: notificationmonitor.cpp:509
+#, kde-format
+msgid "Monitored Mime Types"
+msgstr "Наблюдавани типове Mime"
+
+#: notificationmonitor.cpp:510
+#, kde-format
+msgid "Monitored Resources"
+msgstr "Наблюдавани ресурси"
+
+#: notificationmonitor.cpp:511
+#, kde-format
+msgid "Ignored Sessions"
+msgstr "Игнорирани сесии"
+
+#: notificationmonitor.cpp:512
+#, kde-format
+msgid "All Monitored"
+msgstr "Всички наблюдавани"
+
+#: notificationmonitor.cpp:513
+#, kde-format
+msgid "Exclusive"
+msgstr "Изключителен"
+
+#: notificationmonitor.cpp:517
+#, kde-format
+msgid "Requested Parts"
+msgstr "Заявени части"
+
+#: notificationmonitor.cpp:518
+#, kde-format
+msgid "Changed Since"
+msgstr "Променено от"
+
+#: notificationmonitor.cpp:522
+#, kde-format
+msgid "No Ancestor"
+msgstr "Без предшественик"
+
+#: notificationmonitor.cpp:525
+#, kde-format
+msgid "Parent  Ancestor"
+msgstr "Родител Предшественик"
+
+#: notificationmonitor.cpp:528
+#, kde-format
+msgid "All Ancestors"
+msgstr "Всички предци"
+
+#: notificationmonitor.cpp:531
+#, kde-format
+msgid "Ancestor Depth"
+msgstr "Дълбочина на предците"
+
+#: notificationmonitor.cpp:532
+#, kde-format
+msgid "Cache Only"
+msgstr "Само кеш"
+
+#: notificationmonitor.cpp:533
+#, kde-format
+msgid "Check Cached Payload Parts Only"
+msgstr "Проверете само частите на кеширания полезен товар"
+
+#: notificationmonitor.cpp:536
+#, kde-format
+msgid "Fetch Size"
+msgstr "Извличане на размер"
+
+#: notificationmonitor.cpp:537
+#, kde-format
+msgid "Fetch MTime"
+msgstr "Извличане на MTime"
+
+#: notificationmonitor.cpp:538
+#, kde-format
+msgid "Fetch Remote Revision"
+msgstr "Извличане на отдалечена версия"
+
+#: notificationmonitor.cpp:539
+#, kde-format
+msgid "Ignore Errors"
+msgstr "Игнориране на грешки"
+
+#: notificationmonitor.cpp:540
+#, kde-format
+msgid "Fetch Flags"
+msgstr "Извличане на флагове"
+
+#: notificationmonitor.cpp:541 notificationmonitor.cpp:595
+#, kde-format
+msgid "Fetch RemoteID"
+msgstr "Извличане на RemoteID"
+
+#: notificationmonitor.cpp:544
+#, kde-format
+msgid "Fetch Relations"
+msgstr "Отношения за извличане"
+
+#: notificationmonitor.cpp:545
+#, kde-format
+msgid "Fetch VRefs"
+msgstr "Извличане на VRefs"
+
+#: notificationmonitor.cpp:553
+#, kde-format
+msgid "No Filter"
+msgstr "Без филтър"
+
+#: notificationmonitor.cpp:556
+#, kde-format
+msgid "Display"
+msgstr "Показване"
+
+#: notificationmonitor.cpp:562
+#, kde-format
+msgid "Index"
+msgstr "Индекс"
+
+#: notificationmonitor.cpp:565
+#, kde-format
+msgid "Sync"
+msgstr "Синхронизация"
+
+#: notificationmonitor.cpp:571
+#, kde-format
+msgid "Content Mime Types"
+msgstr "Типове Mime съдържание"
+
+#: notificationmonitor.cpp:580
+#, kde-format
+msgid "Parent"
+msgstr "Родител"
+
+#: notificationmonitor.cpp:583
+#, kde-format
+msgid "None"
+msgstr "Без"
+
+#: notificationmonitor.cpp:587
+#, kde-format
+msgid "Ancestor Fetch ID Only"
+msgstr "Само ID за извличане на предшественик"
+
+#: notificationmonitor.cpp:588
+#, kde-format
+msgid "Ancestor Attributes"
+msgstr "Атрибути на предците"
+
+#: notificationmonitor.cpp:596
+#, kde-format
+msgid "Fetch All Attributes"
+msgstr "Извличане на всички атрибути"
+
+#: querydebugger.cpp:341
+#, kde-format
+msgid "Name / Query"
+msgstr "Име / Запитване"
+
+#: querydebugger.cpp:343
+#, kde-format
+msgid "Started"
+msgstr "Започнато"
+
+#: querydebugger.cpp:347
+#, kde-format
+msgid "Duration"
+msgstr "Duration"
+
+#: querydebugger.cpp:525
+#, kde-format
+msgid "Query"
+msgstr "Заявка"
+
+#: querydebugger.cpp:527
+#, kde-format
+msgid "Duration [ms]"
+msgstr "Продължителност [ms]"
+
+#: querydebugger.cpp:529
+#, kde-format
+msgid "Calls"
+msgstr "Повиквания"
+
+#: querydebugger.cpp:531
+#, kde-format
+msgid "Avg. Duration [ms]"
+msgstr "Средна продължителност [ms]"
+
+#: querydebugger.cpp:653
+#, kde-format
+msgid "Affected Rows:"
+msgstr "Засегнати редове:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
+#: querydebugger.ui:17
+#, kde-format
+msgid "Enable query debugging (slows down server!)"
+msgstr "Активирайте отстраняването на грешки в заявките (забавя сървъра!)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
+#: querydebugger.ui:28
+#, kde-format
+msgid "Query Sequence"
+msgstr "Последователност на заявката"
+
+#. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
+#: querydebugger.ui:48
+#, kde-format
+msgid "Query Tree"
+msgstr "Дърво на заявките"
+
+#. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
+#: querydebugger.ui:72
+#, kde-format
+msgid "Save To File"
+msgstr "Запис във файл"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
+#: queryviewdialog.ui:14
+#, kde-format
+msgid "Query View"
+msgstr "Изглед на заявка"
+
+#. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
+#: queryviewdialog.ui:28
+#, kde-format
+msgid "Query:"
+msgstr "Заявка:"
+
+#. i18n: ectx: property (text), widget (QLabel, queryLbl)
+#. i18n: ectx: property (text), widget (QLabel, resultsLbl)
+#: queryviewdialog.ui:41 queryviewdialog.ui:67
+#, kde-format
+msgid "TextLabel"
+msgstr "Текстов етикет"
+
+#. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
+#: queryviewdialog.ui:60
+#, kde-format
+msgid "Results:"
+msgstr "Резултати:"
+
+#: searchwidget.cpp:50
+#, kde-format
+msgid "Search store:"
+msgstr "Търсене в магазина:"
+
+#: searchwidget.cpp:55 searchwidget.cpp:171
+#, kde-format
+msgid "Search"
+msgstr "Търсене"
+
+#: searchwidget.cpp:63
+#, kde-format
+msgid "Search query:"
+msgstr "Заявка за търсене:"
+
+#: searchwidget.cpp:72
+#, kde-format
+msgid "Results (Documents):"
+msgstr "Резултати (документи):"
+
+#: searchwidget.cpp:82
+#, kde-format
+msgid "Document:"
+msgstr "Документ:"
+
+#: searchwidget.cpp:92
+#, kde-format
+msgid "Item:"
+msgstr "Елемент:"
+
+#: searchwidget.cpp:154
+#, kde-format
+msgid "Xapian error"
+msgstr "Грешка на Xapian"
+
+#: searchwidget.cpp:160
+#, kde-format
+msgid "No Xapian database is opened"
+msgstr "Не е отворена база данни на Xapian"
+
+#: searchwidget.cpp:171
+#, kde-format
+msgid "No element found."
+msgstr "Няма намерен елемент."
+
+#: searchwidget.cpp:197
+#, kde-format
+msgid "Term/Value"
+msgstr "Срок/Стойност"
+
+#: searchwidget.cpp:197
+#, kde-format
+msgid "WDF/Slot"
+msgstr "WDF/Slot"
+
+#: searchwidget.cpp:199
+#, kde-format
+msgid "Terms"
+msgstr "Условия"
+
+#: searchwidget.cpp:226
+#, kde-format
+msgid "Error on fetching item"
+msgstr "Грешка при извличането на елемент"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: tagpropertiesdialog.ui:21
+#, kde-format
+msgid "General"
+msgstr "Общи"
+
+#. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
+#: tagpropertiesdialog.ui:51
+#, kde-format
+msgid "Parent Tag Id:"
+msgstr "Идент. № на родителския маркер:"
+
+#. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
+#. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
+#: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
+#, kde-format
+msgid "&Remove"
+msgstr "&Премахване"
+
+#. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
+#: tagpropertiesdialog.ui:107
+#, kde-format
+msgid "Remote Identifiers"
+msgstr "Дистанционни идентификатори"
