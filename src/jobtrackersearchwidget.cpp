@@ -25,7 +25,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
 
     mSearchLineEdit->setObjectName("searchline"_L1);
     mSearchLineEdit->setClearButtonEnabled(true);
-    mSearchLineEdit->setPlaceholderText(i18n("Search..."));
+    mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search..."));
     mainLayout->addWidget(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &JobTrackerSearchWidget::searchTextChanged);
 
