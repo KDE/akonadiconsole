@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 05:50+0200\n"
+"PO-Revision-Date: 2024-07-04 04:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -838,8 +838,7 @@ msgid "Show Only Errors"
 msgstr "მხოლოდ შეცდომების ჩვენება"
 
 #: jobtrackersearchwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "ძებნა..."

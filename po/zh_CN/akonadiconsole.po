@@ -833,8 +833,7 @@ msgid "Show Only Errors"
 msgstr "仅显示错误"
 
 #: jobtrackersearchwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "搜索"

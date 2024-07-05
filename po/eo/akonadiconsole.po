@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-19 22:33+0200\n"
+"PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -838,8 +838,7 @@ msgid "Show Only Errors"
 msgstr "Montri Nur Erarojn"
 
 #: jobtrackersearchwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Serĉi..."
@@ -2037,33 +2036,3 @@ msgstr "Fo&rigi"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Foraj Identigiloj"
-
-#~ msgid "Synchronize Relations"
-#~ msgstr "Sinkronigi Rilatojn"
-
-#~ msgid "Relations"
-#~ msgstr "Rilatoj"
-
-#~ msgid "Relation"
-#~ msgstr "Rilato"
-
-#~ msgid "ModifyRelations"
-#~ msgstr "Modifi Rilatojn"
-
-#~ msgid "Removed Relations"
-#~ msgstr "Forigitaj Rilatoj"
-
-#~ msgid "Left ID"
-#~ msgstr "Maldekstra ID"
-
-#~ msgid "Left MimeType"
-#~ msgstr "Maldekstre MimeType"
-
-#~ msgid "Right ID"
-#~ msgstr "Ĝusta ID"
-
-#~ msgid "Right MimeType"
-#~ msgstr "Ĝuste MimeType"
-
-#~ msgid "Fetch Relations"
-#~ msgstr "Preni Rilatojn"
