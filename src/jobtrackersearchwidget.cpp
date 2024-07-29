@@ -17,7 +17,7 @@ JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)
     , mSearchLineEdit(new QLineEdit(this))
     , mSelectColumn(new QComboBox(this))
-    , mSelectOnlyError(new QCheckBox(i18n("Show Only Errors"), this))
+    , mSelectOnlyError(new QCheckBox(i18nc("@option:check", "Show Only Errors"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);

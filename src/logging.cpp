@@ -41,7 +41,7 @@ Logging::Logging(QWidget *parent)
     auto l = new QVBoxLayout(this);
     setLayout(l);
 
-    mEnabledCheckbox = new QCheckBox(i18n("Enable"), this);
+    mEnabledCheckbox = new QCheckBox(i18nc("@option:check", "Enable"), this);
     connect(mEnabledCheckbox, &QCheckBox::toggled, this, [this](bool toggled) {
         Q_EMIT enabledChanged(toggled);
     });
