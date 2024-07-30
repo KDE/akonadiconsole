@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-02-09 19:15+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -705,7 +705,9 @@ msgid "Message"
 msgstr "메시지"
 
 #: debugwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable debugger"
+msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "디버거 활성화"
 
@@ -838,7 +840,9 @@ msgid "Info"
 msgstr "정보"
 
 #: jobtrackersearchwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Only Errors"
+msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "오류만 표시"
 
@@ -882,7 +886,9 @@ msgid "Expand All"
 msgstr "모두 펴기"
 
 #: logging.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "활성화"
 

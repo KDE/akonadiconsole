@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-21 22:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -710,7 +710,9 @@ msgid "Message"
 msgstr "Сообщение"
 
 #: debugwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable debugger"
+msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Включить отладчик"
 
@@ -843,7 +845,9 @@ msgid "Info"
 msgstr "Сведения"
 
 #: jobtrackersearchwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Only Errors"
+msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "Показывать только ошибки"
 
@@ -887,7 +891,9 @@ msgid "Expand All"
 msgstr "Развернуть все"
 
 #: logging.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Включить"
 

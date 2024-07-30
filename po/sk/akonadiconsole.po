@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-11-04 08:35+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -707,7 +707,9 @@ msgid "Message"
 msgstr "Správa"
 
 #: debugwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable debugger"
+msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Povoliť ladenie"
 
@@ -840,7 +842,9 @@ msgid "Info"
 msgstr "Info"
 
 #: jobtrackersearchwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Only Errors"
+msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "Zobraziť len chyby"
 
@@ -884,7 +888,9 @@ msgid "Expand All"
 msgstr "Rozbaliť všetko"
 
 #: logging.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check"
 msgid "Enable"
 msgstr "Povoliť"
 
