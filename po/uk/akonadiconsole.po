@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 21:30+0300\n"
+"PO-Revision-Date: 2024-07-30 09:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -707,8 +707,7 @@ msgid "Message"
 msgstr "Повідомлення"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Увімкнути діагностику"
@@ -837,8 +836,7 @@ msgid "Info"
 msgstr "Інформація"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "Показувати лише помилки"
@@ -881,8 +879,7 @@ msgid "Expand All"
 msgstr "Розгорнути всі"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Увімкнути"

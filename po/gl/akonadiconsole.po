@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 14:43+0200\n"
+"PO-Revision-Date: 2024-07-30 17:30+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -704,11 +704,10 @@ msgid "Message"
 msgstr "Mensaxe"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
-msgstr "Activar o depurador"
+msgstr "Activar o depurador."
 
 #: debugwidget.cpp:49 notificationmonitor.cpp:516
 #, kde-format
@@ -834,11 +833,10 @@ msgid "Info"
 msgstr "Información"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
-msgstr "Só amosar os errores"
+msgstr "Só amosar os errores."
 
 #: jobtrackersearchwidget.cpp:28
 #, kde-format
@@ -878,11 +876,10 @@ msgid "Expand All"
 msgstr "Expandilo todo"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
-msgstr "Activar"
+msgstr "Activar."
 
 #: logging.cpp:56 notificationmonitor.cpp:64
 #, kde-format

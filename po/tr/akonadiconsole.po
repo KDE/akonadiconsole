@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 13:48+0300\n"
+"PO-Revision-Date: 2024-07-30 17:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -655,7 +655,7 @@ msgstr "Sahip:"
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr "Uzak Revizyon:"
+msgstr "Uzak revizyon:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
@@ -704,11 +704,10 @@ msgid "Message"
 msgstr "İleti"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
-msgstr "Hata ayıklayıcıyı etkinleştir"
+msgstr "Hata ayıklayıcısını etkinleştir"
 
 #: debugwidget.cpp:49 notificationmonitor.cpp:516
 #, kde-format
@@ -834,11 +833,10 @@ msgid "Info"
 msgstr "Bilgi"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
-msgstr "Yalnızca Hataları Göster"
+msgstr "Yalnızca hataları göster"
 
 #: jobtrackersearchwidget.cpp:28
 #, kde-format
@@ -878,8 +876,7 @@ msgid "Expand All"
 msgstr "Tümünü Genişlet"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Etkinleştir"
@@ -1195,42 +1192,42 @@ msgstr "Oturum Kimliği"
 #: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Collections:"
-msgstr "İzlenen Koleksiyonlar:"
+msgstr "İzlenen koleksiyonlar:"
 
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Items:"
-msgstr "İzlenen Ögeler:"
+msgstr "İzlenen ögeler:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Tags:"
-msgstr "İzlenen Etiketler:"
+msgstr "İzlenen etiketler:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Types:"
-msgstr "İzlenen Türler:"
+msgstr "İzlenen türler:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr "İzlenen MIME Türleri:"
+msgstr "İzlenen MIME türleri:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Resources:"
-msgstr "İzlenen Özkaynaklar:"
+msgstr "İzlenen özkaynaklar:"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr "Yok Sayılan Oturumlar:"
+msgstr "Yok sayılan oturumlar:"
 
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "All Monitored:"
-msgstr "Tüm İzlenenler:"
+msgstr "Tüm izlenenler:"
 
 #: monitorswidget.cpp:147
 #, kde-format
@@ -1891,7 +1888,7 @@ msgstr "Ortalama Süre [ms]"
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr "Etkilenen Satırlar:"
+msgstr "Etkilenen satırlar:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
@@ -2028,7 +2025,7 @@ msgstr "Genel"
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr "Üst Etiket Kimliği:"
+msgstr "Üst etiket kimliği:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
