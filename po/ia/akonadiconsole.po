@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 11:51+0200\n"
+"PO-Revision-Date: 2024-07-31 10:10+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -705,8 +705,7 @@ msgid "Message"
 msgstr "Message"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Habilita Cribrator (debugger)"
@@ -835,11 +834,10 @@ msgid "Info"
 msgstr "Info"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
-msgstr "Monstra solo errores"
+msgstr "Monstra solmente errores"
 
 #: jobtrackersearchwidget.cpp:28
 #, kde-format
@@ -879,8 +877,7 @@ msgid "Expand All"
 msgstr "Expande omne"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Habilita"
