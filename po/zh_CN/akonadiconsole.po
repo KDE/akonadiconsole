@@ -702,8 +702,7 @@ msgid "Message"
 msgstr "消息"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "启用调试器"
@@ -830,8 +829,7 @@ msgid "Info"
 msgstr "信息"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "仅显示错误"
@@ -874,8 +872,7 @@ msgid "Expand All"
 msgstr "全部展开"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "启用"
@@ -982,7 +979,7 @@ msgstr "Akonadi 管理和调试控制台"
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr ""
+msgstr "(c) 2006-2024 the Akonadi developers"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
