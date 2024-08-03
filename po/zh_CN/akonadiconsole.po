@@ -976,7 +976,7 @@ msgstr "Akonadi 管理和调试控制台"
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr ""
+msgstr "(c) 2006-2024 the Akonadi developers"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
