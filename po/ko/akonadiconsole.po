@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 19:15+0100\n"
+"PO-Revision-Date: 2024-08-19 21:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: agentconfigdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
 msgstr "설정 저장"
 
 #: agentconfigdialog.cpp:34
-#, fuzzy, kde-format
-#| msgid "Refresh"
+#, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
 msgstr "새로 고침"
@@ -671,8 +669,7 @@ msgid "Content Types"
 msgstr "내용 형식"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "프로그램:"
@@ -715,36 +712,31 @@ msgid "All"
 msgstr "모두"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Information View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "정보 보기 비우기"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Filtered Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "필터된 메시지 비우기"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "모든 메시지 비우기"
 
 #: debugwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Save Filtered Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "필터된 메시지 저장..."
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Save All Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "모든 메시지 저장..."
@@ -843,8 +835,7 @@ msgid "Show Only Errors"
 msgstr "오류만 표시"
 
 #: jobtrackersearchwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "검색..."
@@ -855,8 +846,7 @@ msgid "All Columns"
 msgstr "모든 열"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "파일로 저장..."
@@ -887,8 +877,7 @@ msgid "Enable"
 msgstr "활성화"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "형식:"
@@ -914,15 +903,13 @@ msgid "Fatal"
 msgstr "심각함"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "분류:"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "파일로 저장..."
@@ -1947,43 +1934,37 @@ msgid "Results:"
 msgstr "결과:"
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search store:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
 msgstr "검색 저장소:"
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "검색"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "검색 질의:"
 
 #: searchwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Results (Documents):"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "결과(문서):"
 
 #: searchwidget.cpp:82
-#, fuzzy, kde-format
-#| msgid "Document:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "문서:"
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Item:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
 msgstr "항목:"
