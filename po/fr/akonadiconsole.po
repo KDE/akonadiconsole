@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 10:30+0200\n"
+"PO-Revision-Date: 2024-07-31 09:04+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -702,8 +702,7 @@ msgid "Message"
 msgstr "Message"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Activer le débogueur"
@@ -833,8 +832,7 @@ msgid "Info"
 msgstr "Info"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "Afficher uniquement les erreurs"
@@ -877,8 +875,7 @@ msgid "Expand All"
 msgstr "Tout développer"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Activer"
