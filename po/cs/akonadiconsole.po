@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-06 11:15+0200\n"
+"PO-Revision-Date: 2024-08-23 15:38+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -1456,7 +1456,7 @@ msgstr "název"
 #: notificationmonitor.cpp:317
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Předek"
 
 #: notificationmonitor.cpp:229 notificationmonitor.cpp:303
 #, kde-format
@@ -1603,7 +1603,7 @@ msgstr "Chování mezipaměti"
 #: notificationmonitor.cpp:325
 #, kde-format
 msgid "Inherit"
-msgstr ""
+msgstr "Zdědit"
 
 #: notificationmonitor.cpp:326
 #, kde-format
