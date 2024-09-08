@@ -983,7 +983,7 @@ msgstr "A consola de xestión e depuración de Akonadi."
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "© 2006-2024 Equipo de desenvolvemento de Akonadi"
+msgstr "© 2006-2024 Equipo desenvolvedor de Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
