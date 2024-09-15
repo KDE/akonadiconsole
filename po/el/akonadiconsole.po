@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
@@ -10,243 +10,242 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Δημήτρης Μηλιάτης"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "demetresmeliates+i18n@gmail.com"
 
 #: agentconfigdialog.cpp:33
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
-msgstr ""
+msgstr "Αποθήκευση διαμόρφωσης"
 
 #: agentconfigdialog.cpp:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
-msgstr ""
+msgstr "Ανανέωση"
 
 #: agentconfigdialog.cpp:35
 #, kde-format
 msgid "Apply Configuration"
-msgstr ""
+msgstr "Εφαρμογή διαμόρφωσης"
 
 #: agentconfigdialog.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
-msgstr ""
+msgstr "Διαμόρφωση πράκτορα"
 
 #: agentwidget.cpp:94
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Διαμόρφωση"
 
 #: agentwidget.cpp:95
 #, kde-format
 msgid "Configure Natively..."
-msgstr ""
+msgstr "Διαμόρφωση φυσικά..."
 
 #: agentwidget.cpp:96
 #, kde-format
 msgid "Configure Remotely..."
-msgstr ""
+msgstr "Διαμόρφωση απομακρυσμένα..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:102 agentwidget.ui:240
 #, kde-format
 msgid "Synchronize"
-msgstr ""
+msgstr "Συγχρονισμός"
 
 #: agentwidget.cpp:103
 #, kde-format
 msgid "Synchronize All"
-msgstr ""
+msgstr "Συγχρονισμός όλων"
 
 #: agentwidget.cpp:104
 #, kde-format
 msgid "Synchronize Collection Tree"
-msgstr ""
+msgstr "Συγχρονισμός δέντρου συλλογής"
 
 #: agentwidget.cpp:105
 #, kde-format
 msgid "Synchronize Tags"
-msgstr ""
+msgstr "Συγχρονισμός ετικετών"
 
 #: agentwidget.cpp:194
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Θέλετε πραγματικά να διαγράψετε την επιλεγμένη παρουσία-πράκτορα;"
+msgstr[1] "Θέλετε πραγματικά να διαγράψετε αυτές τις παρουσίες-πράκτορα %1;"
 
 #: agentwidget.cpp:195
 #, kde-format
 msgid "Agent Deletion"
-msgstr ""
+msgstr "Διαγραφή πράκτορα"
 
 #: agentwidget.cpp:195
 #, kde-format
 msgid "Multiple Agent Deletion"
-msgstr ""
+msgstr "Διαγραφή πολλαπλών πρακτόρων"
 
 #: agentwidget.cpp:265
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
-msgstr ""
+msgstr "Κατάλογος πόρων εργασιών"
 
 #: agentwidget.cpp:289
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr ""
+msgstr "Αλλαγή καταγραφής ειδοποιήσεων"
 
 #: agentwidget.cpp:339
 #, kde-format
 msgid "Cloning agent failed: %1."
-msgstr ""
+msgstr "Ο πράκτορας κλωνοποίησης απέτυχε: %1."
 
 #: agentwidget.cpp:402
 #, kde-format
 msgid "Online"
-msgstr ""
+msgstr "Σε σύνδεση"
 
 #: agentwidget.cpp:402
 #, kde-format
 msgid "Offline"
-msgstr ""
+msgstr "Εκτός σύνδεσης"
 
 #: agentwidget.cpp:406
 #, kde-format
 msgid "Idle"
-msgstr ""
+msgstr "Αδρανής"
 
 #: agentwidget.cpp:409
 #, kde-format
 msgid "Running (%1%)"
-msgstr ""
+msgstr "Εκτελείται (%1%)"
 
 #: agentwidget.cpp:412
 #, kde-format
 msgid "Broken"
-msgstr ""
+msgstr "Σπασμένο"
 
 #: agentwidget.cpp:415
 #, kde-format
 msgid "Not Configured"
-msgstr ""
+msgstr "Δεν έχει διαμορφωθεί"
 
 #: agentwidget.cpp:418
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: agentwidget.cpp:434
 #, kde-format
 msgid "Add Agent..."
-msgstr ""
+msgstr "Προσθήκη πράκτορα..."
 
 #: agentwidget.cpp:435
 #, kde-format
 msgid "Clone Agent"
-msgstr ""
+msgstr "Κλωνοποίηση πράκτορα"
 
 #: agentwidget.cpp:438
 #, kde-format
 msgid "Abort Activity"
-msgstr ""
+msgstr "Διακοπή δραστηριότητας"
 
 #: agentwidget.cpp:440
 #, kde-format
 msgid "Restart Agent"
-msgstr ""
+msgstr "Επανεκκίνηση πράκτορα"
 
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "Εναλλαγή σε σύνδεση/Εκτός σύνδεσης"
 
 #: agentwidget.cpp:444
 #, kde-format
 msgid "Show task list"
-msgstr ""
+msgstr "Εμφάνιση λίστας εργασιών"
 
 #: agentwidget.cpp:445
 #, kde-format
 msgid "Show change-notification log"
-msgstr ""
+msgstr "Εμφάνιση αρχείου καταγραφής ειδοποιήσεων αλλαγής"
 
 #: agentwidget.cpp:447
 #, kde-format
 msgid "Remove Agent"
-msgstr ""
+msgstr "Αφαίρεση πράκτορα"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsBox)
 #: agentwidget.ui:37
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, idLabelBuddy)
 #: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
 #, kde-format
 msgid "Identifier:"
-msgstr ""
+msgstr "Αναγνωριστικό:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: agentwidget.ui:69 tagpropertiesdialog.ui:65
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "Τύπος:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: agentwidget.ui:92
 #, kde-format
 msgid "Status:"
-msgstr ""
+msgstr "Κατάσταση:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: agentwidget.ui:118
 #, kde-format
 msgid "Status Message:"
-msgstr ""
+msgstr "Μήνυμα κατάστασης:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr ""
+msgstr "Δυνατότητες:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
 #, kde-format
 msgid "Mimetypes:"
-msgstr ""
+msgstr "Τύποι mime:"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Προσθήκη..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
@@ -255,172 +254,172 @@ msgstr ""
 #: notificationmonitor.cpp:389 notificationmonitor.cpp:413
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Αφαίρεση"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr ""
+msgstr "Διαμόρφωση..."
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
 #, kde-format
 msgid "Abort"
-msgstr ""
+msgstr "Διακοπή"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
 #: agentwidget.ui:247
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"
-msgstr ""
+msgstr "Επανεκκίνηση"
 
 #: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
 #: notificationmonitor.cpp:373
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Συλλογή"
 
 #: akonadibrowsermodel.cpp:70
 #, kde-format
 msgid "Subject"
-msgstr ""
+msgstr "Θέμα"
 
 #: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
-msgstr ""
+msgstr "Αποστολέας"
 
 #: akonadibrowsermodel.cpp:70 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Ημερομηνία"
 
 #. i18n: ectx: Menu (collection)
 #: akonadiconsoleui.rc:8
 #, kde-format
 msgid "&Collection"
-msgstr ""
+msgstr "&Συλλογή"
 
 #. i18n: ectx: Menu (item)
 #: akonadiconsoleui.rc:28
 #, kde-format
 msgid "&Item"
-msgstr ""
+msgstr "&Αντικείμενο"
 
 #. i18n: ectx: Menu (cache)
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr ""
+msgstr "&Κρυφή μνήμη"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
 #, kde-format
 msgid "&Server"
-msgstr ""
+msgstr "&Διακομιστής"
 
 #: browserwidget.cpp:177
 #, kde-format
 msgid "Generic"
-msgstr ""
+msgstr "Γενικό"
 
 #: browserwidget.cpp:178
 #, kde-format
 msgid "Mail"
-msgstr ""
+msgstr "Ταχυδρομείο"
 
 #: browserwidget.cpp:179
 #, kde-format
 msgid "Contacts"
-msgstr ""
+msgstr "Επαφές"
 
 #: browserwidget.cpp:180
 #, kde-format
 msgid "Calendar/Tasks"
-msgstr ""
+msgstr "Ημερολόγιο/Εργασίες"
 
 #: browserwidget.cpp:240
 #, kde-format
 msgid "Cache only retrieval"
-msgstr ""
+msgstr "Ανάκτηση μόνο από τη κρυφή μνήμη"
 
 #: browserwidget.cpp:472
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr ""
+msgstr "Αποτυχία αποθήκευσης αλλαγών: %1"
 
 #: browserwidget.cpp:511
 #, kde-format
 msgid "Select XML file"
-msgstr ""
+msgstr "Επιλέξτε αρχείο XML"
 
 #: browserwidget.cpp:549
 #, kde-format
 msgid "&Add tag..."
-msgstr ""
+msgstr "&Προσθήκη ετικέτας..."
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr ""
+msgstr "Προσθήκη &υποετικέτας..."
 
 #: browserwidget.cpp:553
 #, kde-format
 msgid "&Edit tag..."
-msgstr ""
+msgstr "&Επεξεργασία ετικέτας..."
 
 #: browserwidget.cpp:558
 #, kde-format
 msgid "&Delete tag..."
-msgstr ""
+msgstr "&Διαγραφή ετικέτας..."
 
 #: browserwidget.cpp:572
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr ""
+msgstr "Προσθήκη ετικέτας"
 
 #: browserwidget.cpp:587
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr ""
+msgstr "Προσθήκη υποετικέτας"
 
 #: browserwidget.cpp:598 browserwidget.cpp:615
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr ""
+msgstr "Τροποποίηση ετικέτας"
 
 #: browserwidget.cpp:624
 #, kde-format
 msgid "Do you really want to remove selected tag?"
-msgstr ""
+msgstr "Θέλετε πραγματικά να αφαιρέσετε την επιλεγμένη ετικέτα;"
 
 #: browserwidget.cpp:625
 #, kde-format
 msgid "Delete tag?"
-msgstr ""
+msgstr "Διαγραφή ετικέτας;"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
 #: browserwidget_contentview.ui:30
 #, kde-format
 msgid "&Save"
-msgstr ""
+msgstr "&Αποθήκευση"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: browserwidget_contentview.ui:41
 #, kde-format
 msgid "Payload"
-msgstr ""
+msgstr "Ωφέλιμο φορτίο"
 
 #. i18n: ectx: property (text), widget (QLabel, unsupportedType)
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr ""
+msgstr "Μη υποστηριζόμενος τύπος"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -430,7 +429,7 @@ msgstr ""
 #: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
-msgstr ""
+msgstr "Χαρακτηριστικά"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, attrName)
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, newAttrEdit)
@@ -438,7 +437,7 @@ msgstr ""
 #: tagpropertiesdialog.ui:82
 #, kde-format
 msgid "New Attribute"
-msgstr ""
+msgstr "Νέο χαρακτηριστικό"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrAddButton)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
@@ -448,32 +447,32 @@ msgstr ""
 #: tagpropertiesdialog.ui:89 tagpropertiesdialog.ui:126
 #, kde-format
 msgid "&Add"
-msgstr ""
+msgstr "&Προσθήκη"
 
 #. i18n: ectx: property (text), widget (QPushButton, attrDeleteButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: browserwidget_contentview.ui:130 collectionattributespage.ui:40
 #, kde-format
 msgid "&Delete"
-msgstr ""
+msgstr "&Διαγραφή"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr ""
+msgstr "Ακατέργαστο φορτίο"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr ""
+msgstr "Εσωτερικά"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
 #, kde-format
 msgid "Unique ID:"
-msgstr ""
+msgstr "Μοναδικό ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, id)
 #. i18n: ectx: property (text), widget (QLabel, revision)
@@ -483,50 +482,50 @@ msgstr ""
 #: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
 #, kde-format
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: browserwidget_contentview.ui:202
 #, kde-format
 msgid "Remote ID:"
-msgstr ""
+msgstr "Απομακρυσμένο ID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
 #, kde-format
 msgid "GID:"
-msgstr ""
+msgstr "GID:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: browserwidget_contentview.ui:236
 #, kde-format
 msgid "Revision:"
-msgstr ""
+msgstr "Αναθεώρηση:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: browserwidget_contentview.ui:260
 #, kde-format
 msgid "Size:"
-msgstr ""
+msgstr "Μέγεθος:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr ""
+msgstr "Τελευταία τροποποίηση:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
 #, kde-format
 msgid "Mimetype:"
-msgstr ""
+msgstr "Τύπος mime:"
 
 #. i18n: ectx: property (text), widget (QLabel, mimeType)
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr ""
+msgstr "άκυρη/άκυρη"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -535,39 +534,39 @@ msgstr ""
 #: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
 #, kde-format
 msgid "Flags"
-msgstr ""
+msgstr "Σημαίες"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:85
 #: notificationmonitor.cpp:257 notificationmonitor.cpp:435
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: browserwidget_itemview.ui:31
 #, kde-format
 msgctxt "model name"
 msgid "Model:"
-msgstr ""
+msgstr "Μοντέλο:"
 
 #: collectionaclpage.cpp:17
 #, kde-format
 msgid "ACL"
-msgstr ""
+msgstr "ACL"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectionaclpage.ui:17
 #, kde-format
 msgid "Item Access Rights"
-msgstr ""
+msgstr "Στοιχείο δικαιώματα πρόσβασης"
 
 #. i18n: ectx: property (text), widget (QCheckBox, createItem)
 #. i18n: ectx: property (text), widget (QCheckBox, createCollection)
 #: collectionaclpage.ui:23 collectionaclpage.ui:67
 #, kde-format
 msgid "Create"
-msgstr ""
+msgstr "Δημιουργία"
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
@@ -578,32 +577,32 @@ msgstr ""
 #: notificationmonitor.cpp:410
 #, kde-format
 msgid "Modify"
-msgstr ""
+msgstr "Τροποποίηση"
 
 #. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
 #. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
 #: collectionaclpage.ui:37 collectionaclpage.ui:81
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:95 notificationmonitor.cpp:178
 #, kde-format
 msgid "Link"
-msgstr ""
+msgstr "Σύνδεση"
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:97 notificationmonitor.cpp:181
 #, kde-format
 msgid "Unlink"
-msgstr ""
+msgstr "Αποσύνδεση"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
 #, kde-format
 msgid "Collection Access Rights"
-msgstr ""
+msgstr "Δικαιώματα πρόσβασης συλλογής"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: collectionaclpage.ui:91
@@ -613,151 +612,154 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
+"<b>Σημείωση: </b>Αυτές οι τιμές παρέχονται από το αντίστοιχο backend και δεν "
+"προορίζονται να αλλάξουν από εσάς, οπότε να είστε προετοιμασμένοι αν κάτι "
+"χαλάσει κατά την αλλαγή τους!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
 #, kde-format
 msgid "Attribute"
-msgstr ""
+msgstr "Χαρακτηριστικό"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
 #, kde-format
 msgid "Value"
-msgstr ""
+msgstr "Τιμή"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:21 tagpropertiesdialog.ui:230
 #, kde-format
 msgid "Do not even think about changing anything in here!"
-msgstr ""
+msgstr "Μην διανοηθείτε καν να αλλάξετε τίποτα εδώ μέσα!"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: collectioninternalspage.ui:28
 #, kde-format
 msgid "Identification"
-msgstr ""
+msgstr "Ταυτοποίηση"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr ""
+msgstr "Απομακρυσμένο αναγνωριστικό:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
 #, kde-format
 msgid "Owner:"
-msgstr ""
+msgstr "Ιδιοκτήτης:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr ""
+msgstr "Απομακρυσμένη αναθεώρηση:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
 #, kde-format
 msgid "Virtual:"
-msgstr ""
+msgstr "Εικονικό:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (KEditListWidget, contentTypes)
 #: collectioninternalspage.ui:106 collectioninternalspage.ui:115
 #, kde-format
 msgid "Content Types"
-msgstr ""
+msgstr "Τύποι περιεχομένου"
 
 #: connectionpage.cpp:37 logging.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
-msgstr ""
+msgstr "Προγράμματα:"
 
 #. i18n: ectx: property (text), widget (QPushButton, refreshButton)
 #: dbbrowser.ui:28
 #, kde-format
 msgid "Refresh"
-msgstr ""
+msgstr "Ανανέωση"
 
 #: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
-msgstr ""
+msgstr "Ερώτηση #%1"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, execButton)
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr ""
+msgstr "Εκτέλεση ερώτησης"
 
 #: debugmodel.cpp:144
 #, kde-format
 msgid "Direction"
-msgstr ""
+msgstr "Κατεύθυνση"
 
 #: debugmodel.cpp:146 loggingmodel.cpp:116
 #, kde-format
 msgid "Message"
-msgstr ""
+msgstr "Μήνυμα"
 
 #: debugwidget.cpp:40
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
-msgstr ""
+msgstr "Ενεργοποίηση αποσφαλμάτωσης"
 
 #: debugwidget.cpp:49 notificationmonitor.cpp:516
 #, kde-format
 msgid "All"
-msgstr ""
+msgstr "Όλα"
 
 #: debugwidget.cpp:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
-msgstr ""
+msgstr "Εκκαθάριση προβολής πληροφοριών"
 
 #: debugwidget.cpp:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
-msgstr ""
+msgstr "Εκκαθάριση φιλτραρισμένων μηνυμάτων"
 
 #: debugwidget.cpp:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
-msgstr ""
+msgstr "Εκκαθάριση όλων των μηνυμάτων"
 
 #: debugwidget.cpp:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
-msgstr ""
+msgstr "Αποθήκευση φιλτραρισμένων μηνυμάτων ..."
 
 #: debugwidget.cpp:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
-msgstr ""
+msgstr "Αποθήκευση όλων των μηνυμάτων ..."
 
 #: instanceselector.cpp:44
 #, kde-format
 msgid "Connect"
-msgstr ""
+msgstr "Σύνδεση"
 
 #: instanceselector.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
-msgstr ""
+msgstr "Απομακρυσμένη κονσόλα Akonadi (%1)"
 
 #: instanceselector.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Console (Instance: %1)"
-msgstr ""
+msgstr "Κονσόλα Akonadi (Διεργασία: %1)"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: instanceselector.ui:20
@@ -766,320 +768,323 @@ msgid ""
 "There are multiple instances of Akonadi running in the current D-Bus "
 "session. Please select the instance you want to connect to."
 msgstr ""
+"Υπάρχουν πολλαπλές διεργασίες του Akonadi που εκτελούνται στην τρέχουσα "
+"συνεδρία D-Bus. Παρακαλούμε επιλέξτε την διεργασία στην οποία θέλετε να "
+"συνδεθείτε."
 
 #: jobtracker.cpp:26
 #, kde-format
 msgid "Waiting"
-msgstr ""
+msgstr "Αναμονή"
 
 #: jobtracker.cpp:28
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Εκτελείται"
 
 #: jobtracker.cpp:30 querydebugger.cpp:345
 #, kde-format
 msgid "Ended"
-msgstr ""
+msgstr "Τερματίστηκε"
 
 #: jobtracker.cpp:32
 #, kde-format
 msgid "Failed: %1"
-msgstr ""
+msgstr "Απέτυχε: %1"
 
 #: jobtracker.cpp:34
 #, kde-format
 msgid "Unknown state!"
-msgstr ""
+msgstr "Άγνωστη κατάσταση!"
 
 #: jobtrackermodel.cpp:209 jobtrackersearchwidget.cpp:39
 #, kde-format
 msgid "Job ID"
-msgstr ""
+msgstr "ID εργασίας"
 
 #: jobtrackermodel.cpp:211 jobtrackersearchwidget.cpp:40
 #, kde-format
 msgid "Created"
-msgstr ""
+msgstr "Δημιουργήθηκε"
 
 #: jobtrackermodel.cpp:213 jobtrackersearchwidget.cpp:41
 #, kde-format
 msgid "Wait time"
-msgstr ""
+msgstr "Χρόνος αναμονής"
 
 #: jobtrackermodel.cpp:215 jobtrackersearchwidget.cpp:42
 #, kde-format
 msgid "Job duration"
-msgstr ""
+msgstr "Διάρκεια εργασίας"
 
 #: jobtrackermodel.cpp:217 jobtrackersearchwidget.cpp:43
 #, kde-format
 msgid "Job Type"
-msgstr ""
+msgstr "Τύπος εργασίας"
 
 #: jobtrackermodel.cpp:219 jobtrackersearchwidget.cpp:44
 #, kde-format
 msgid "State"
-msgstr ""
+msgstr "Κατάσταση"
 
 #: jobtrackermodel.cpp:221 jobtrackersearchwidget.cpp:45 logging.cpp:60
 #: loggingmodel.cpp:139
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Πληροφορίες"
 
 #: jobtrackersearchwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
-msgstr ""
+msgstr "Εμφάνιση μόνο σφάλματα"
 
 #: jobtrackersearchwidget.cpp:28
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr ""
+msgstr "Αναζήτηση..."
 
 #: jobtrackersearchwidget.cpp:38
 #, kde-format
 msgid "All Columns"
-msgstr ""
+msgstr "Όλες οι στήλες"
 
 #: jobtrackerwidget.cpp:73
 #, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
-msgstr ""
+msgstr "Αποθήκευση σε αρχείο..."
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:119
 #, kde-format
 msgid "Clear View"
-msgstr ""
+msgstr "Εκκαθάριση προβολής"
 
 #: jobtrackerwidget.cpp:107
 #, kde-format
 msgid "Copy Info"
-msgstr ""
+msgstr "Αντιγραφή πληροφοριών"
 
 #: jobtrackerwidget.cpp:109
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "Σύμπτυξη όλων"
 
 #: jobtrackerwidget.cpp:110
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "Ανάπτυξη όλων"
 
 #: logging.cpp:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable"
-msgstr ""
+msgstr "Ενεργοποίηση"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
-msgstr ""
+msgstr "Τύποι:"
 
 #: logging.cpp:59 loggingmodel.cpp:137
 #, kde-format
 msgid "Debug"
-msgstr ""
+msgstr "Αποσφαλμάτωση"
 
 #: logging.cpp:61 loggingmodel.cpp:141
 #, kde-format
 msgid "Warning"
-msgstr ""
+msgstr "Προειδοποίηση"
 
 #: logging.cpp:62 loggingmodel.cpp:143
 #, kde-format
 msgid "Critical"
-msgstr ""
+msgstr "Κρίσιμη"
 
 #: logging.cpp:63 loggingmodel.cpp:145
 #, kde-format
 msgid "Fatal"
-msgstr ""
+msgstr "Μοιραία"
 
 #: logging.cpp:64
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
-msgstr ""
+msgstr "Κατηγορίες:"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
-msgstr ""
+msgstr "Αποθήκευση σε αρχείο..."
 
 #: logging.cpp:129
 #, kde-format
 msgid "Save to File..."
-msgstr ""
+msgstr "Αποθήκευση σε αρχείο..."
 
 #: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Σφάλμα"
 
 #: logging.cpp:136 notificationmonitor.cpp:549
 #, kde-format
 msgid "Failed to open file: %1"
-msgstr ""
+msgstr "Αποτυχία ανοίγματος αρχείου: %1"
 
 #: loggingmodel.cpp:104
 #, kde-format
 msgid "Time"
-msgstr ""
+msgstr "Χρόνος"
 
 #: loggingmodel.cpp:106
 #, kde-format
 msgid "Program"
-msgstr ""
+msgstr "Πρόγραμμα"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
 #: notificationmonitor.cpp:232
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "Τύπος"
 
 #: loggingmodel.cpp:110
 #, kde-format
 msgid "Category"
-msgstr ""
+msgstr "Κατηγορία"
 
 #: loggingmodel.cpp:112
 #, kde-format
 msgid "File"
-msgstr ""
+msgstr "Αρχείο"
 
 #: loggingmodel.cpp:114
 #, kde-format
 msgid "Function"
-msgstr ""
+msgstr "Λειτουργία"
 
 #: loggingmodel.cpp:154 loggingmodel.cpp:170
 #, kde-format
 msgid "%1:%2"
-msgstr ""
+msgstr "%1:%2"
 
 #: main.cpp:27
 #, kde-format
 msgid "Akonadi Console"
-msgstr ""
+msgstr "Κονσόλα Akonadi"
 
 #: main.cpp:29
 #, kde-format
 msgid "The Management and Debugging Console for Akonadi"
-msgstr ""
+msgstr "Κονσόλα διαχείρισης και αποσφαλμάτωσης Akonadi"
 
 #: main.cpp:31
 #, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr ""
+msgstr "(γ) 2006-2024 ο κατασκευαστής Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
 msgid "Author"
-msgstr ""
+msgstr "Συγγραφέας"
 
 #: mainwidget.cpp:49
 #, kde-format
 msgid "Agents"
-msgstr ""
+msgstr "Πράκτορες"
 
 #: mainwidget.cpp:51
 #, kde-format
 msgid "Browser"
-msgstr ""
+msgstr "Περιηγητής"
 
 #: mainwidget.cpp:52
 #, kde-format
 msgid "Debugger"
-msgstr ""
+msgstr "Αποσφαλματωτής"
 
 #: mainwidget.cpp:53
 #, kde-format
 msgid "Logging"
-msgstr ""
+msgstr "Καταγραφή"
 
 #: mainwidget.cpp:54
 #, kde-format
 msgid "DB Browser"
-msgstr ""
+msgstr "Περιηγητής ΒΔ"
 
 #: mainwidget.cpp:55
 #, kde-format
 msgid "DB Console"
-msgstr ""
+msgstr "Κονσόλα ΒΔ"
 
 #: mainwidget.cpp:56
 #, kde-format
 msgid "Query Debugger"
-msgstr ""
+msgstr "Αποσφαλματωτής ερωτήσεων"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Enable job tracker"
-msgstr ""
+msgstr "Ενεργοποίηση του εντοπισμού εργασιών"
 
 #: mainwidget.cpp:57
 #, kde-format
 msgid "Job Tracker"
-msgstr ""
+msgstr "Ανιχνευτής εργασίας"
 
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Enable tracking of Resource Schedulers"
-msgstr ""
+msgstr "Ενεργοποίηση παρακολούθησης των προγραμματιστών πόρων"
 
 #: mainwidget.cpp:58
 #, kde-format
 msgid "Resources Schedulers"
-msgstr ""
+msgstr "Προγραμματιστές πόρων"
 
 #: mainwidget.cpp:59
 #, kde-format
 msgid "Notification Monitor"
-msgstr ""
+msgstr "Παρακολούθηση ειδοποίησης"
 
 #: mainwidget.cpp:61
 #, kde-format
 msgid "Item Search"
-msgstr ""
+msgstr "Παρακολούθηση ειδοποίησης"
 
 #: mainwidget.cpp:63
 #, kde-format
 msgid "Monitors"
-msgstr ""
+msgstr "Οθόνες"
 
 #: mainwidget.cpp:66
 #, kde-format
 msgid "Dump to XML..."
-msgstr ""
+msgstr "Εκφόρτωση σε XML..."
 
 #: mainwidget.cpp:70
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr ""
+msgstr "Εκκαθάριση κρυφής μνήμης Akonadi"
 
 #: mainwidget.cpp:74
 #, kde-format
 msgid "Start Server"
-msgstr ""
+msgstr "Εκκίνηση διακομιστή"
 
 #: mainwidget.cpp:78
 #, kde-format
 msgid "Stop Server"
-msgstr ""
+msgstr "Διακοπή διακομιστή"
 
 #: mainwidget.cpp:82
 #, kde-format
 msgid "Restart Server"
-msgstr ""
+msgstr "Επανεκκίνηση διακομιστή"
 
 #: mainwindow.cpp:33
 #, kde-format
@@ -1090,220 +1095,225 @@ msgid ""
 "your personal information management data.<br/><b>Use at your own risk!</b></"
 "p>"
 msgstr ""
+"<p>Η Κονσόλα Akonadi είναι καθαρά ένα εργαλείο ανάπτυξης. Σας επιτρέπει να "
+"βλέπετε και να αλλάζετε τις εσωτερικές δομές δεδομένων του Akonadi. Θα "
+"πρέπει να αλλάζετε τα δεδομένα εδώ μόνο αν γνωρίζετε τι κάνετε, διαφορετικά "
+"κινδυνεύετε να καταστρέψετε ή να χάσετε τα δεδομένα διαχείρισης προσωπικών "
+"πληροφοριών σας.<br/><b>Χρήση με δική σας ευθύνη!</b></p>"
 
 #: monitorsmodel.cpp:97
 #, kde-format
 msgid "Session/Subscriber"
-msgstr ""
+msgstr "Συνεδρία/Συνδρομητής"
 
 #: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:206
 #: notificationmonitor.cpp:429
 #, kde-format
 msgid "Items"
-msgstr ""
+msgstr "Στοιχεία"
 
 #: monitorswidget.cpp:82 notificationmonitor.cpp:432
 #, kde-format
 msgid "Collections"
-msgstr ""
+msgstr "Συλλογές"
 
 #: monitorswidget.cpp:88
 #, kde-format
 msgid "Subscribers"
-msgstr ""
+msgstr "Συνδρομητές"
 
 #: monitorswidget.cpp:91
 #, kde-format
 msgid "Notification"
-msgstr ""
+msgstr "Ειδοποίηση"
 
 #: monitorswidget.cpp:100 notificationmonitor.cpp:507
 #, kde-format
 msgid "List Filter"
-msgstr ""
+msgstr "Φίλτρο λίστας"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:508
 #, kde-format
 msgid "Include Statistics"
-msgstr ""
+msgstr "Συμπερίληψη στατιστικών"
 
 #: monitorswidget.cpp:102 notificationmonitor.cpp:195
 #: notificationmonitor.cpp:368 notificationmonitor.cpp:396
 #: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
-msgstr ""
+msgstr "Πόροι"
 
 #: monitorswidget.cpp:103
 #, kde-format
 msgid "Content MimeTypes"
-msgstr ""
+msgstr "Τύποι mime περιεχομένου"
 
 #: monitorswidget.cpp:104 monitorswidget.cpp:157 notificationmonitor.cpp:525
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "Ανάκτηση προγόνων"
 
 #: monitorswidget.cpp:108
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Πεδίο ανάκτησης προγόνων"
 
 #: monitorswidget.cpp:114 monitorswidget.cpp:121 notificationmonitor.cpp:512
 #: notificationmonitor.cpp:533
 #, kde-format
 msgid "Fetch ID Only"
-msgstr ""
+msgstr "Λήψη Μόνο ID"
 
 #: monitorswidget.cpp:115
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "Αγνόηση σφάλματος ανάκτησης"
 
 #: monitorswidget.cpp:129 notificationmonitor.cpp:135 searchwidget.cpp:205
 #, kde-format
 msgid "Values"
-msgstr ""
+msgstr "Τιμές"
 
 #: monitorswidget.cpp:129 notificationmonitor.cpp:135
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Ιδιότητες"
 
 #: monitorswidget.cpp:137 notificationmonitor.cpp:420
 #, kde-format
 msgid "Subscriber"
-msgstr ""
+msgstr "Συνδρομητής"
 
 #: monitorswidget.cpp:138
 #, kde-format
 msgid "Session ID"
-msgstr ""
+msgstr "ID συνεδρίας"
 
 #: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Collections:"
-msgstr ""
+msgstr "Παρακολουθούμενες συλλογές:"
 
 #: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Items:"
-msgstr ""
+msgstr "Παρακολουθούμενα στοιχεία:"
 
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Tags:"
-msgstr ""
+msgstr "Παρακολουθούμενες ετικέτες:"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Types:"
-msgstr ""
+msgstr "Παρακολουθούμενοι τύποι:"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr ""
+msgstr "Παρακολουθούμενοι τύποι mime:"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Monitored Resources:"
-msgstr ""
+msgstr "Παρακολουθούμενοι πόροι:"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr ""
+msgstr "Αγνοημένες συνεδρίες:"
 
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "All Monitored:"
-msgstr ""
+msgstr "Όλα παρακολουθούμενα:"
 
 #: monitorswidget.cpp:147
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "Είναι αποκλειστικό:"
 
 #: monitorswidget.cpp:149 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Πεδίο στοιχείων λήψης"
 
 #: monitorswidget.cpp:151
 #, kde-format
 msgid "Payload Parts"
-msgstr ""
+msgstr "Μέρη ωφέλιμου φορτίου"
 
 #: monitorswidget.cpp:152 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
-msgstr ""
+msgstr "Πλήρες φορτίο"
 
 #: monitorswidget.cpp:154 notificationmonitor.cpp:475
 #, kde-format
 msgid "All Attributes"
-msgstr ""
+msgstr "Όλα τα χαρακτηριστικά"
 
 #: monitorswidget.cpp:155
 #, kde-format
 msgid "Cache only"
-msgstr ""
+msgstr "Μόνο κρυφή μνήμη"
 
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr ""
+msgstr "Έλεγχος μόνο για τα αποθηκευμένα μέρη του φορτίου"
 
 #: monitorswidget.cpp:158
 #, kde-format
 msgid "Fetch mtime"
-msgstr ""
+msgstr "Λήψη mtime"
 
 #: monitorswidget.cpp:159 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
-msgstr ""
+msgstr "Λήψη GID"
 
 #: monitorswidget.cpp:160 notificationmonitor.cpp:528
 #, kde-format
 msgid "Ignore Retrieval Errors"
-msgstr ""
+msgstr "Αγνόηση σφαλμάτων ανάκτησης"
 
 #: monitorswidget.cpp:161
 #, kde-format
 msgid "Fetch Change Since"
-msgstr ""
+msgstr "Λήψη αλλαγής από"
 
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch RID"
-msgstr ""
+msgstr "Λήψη RID"
 
 #: monitorswidget.cpp:163 notificationmonitor.cpp:483
 #, kde-format
 msgid "Fetch Tags"
-msgstr ""
+msgstr "Λήψη ετικετών"
 
 #: monitorswidget.cpp:166
 #, kde-format
 msgid "Collection Fetch Scope"
-msgstr ""
+msgstr "Πεδίο λήψης συλλογής"
 
 #: monitorswidget.cpp:169 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Πεδίο λήψης ετικέτας"
 
 #: notificationmodel.cpp:77 notificationmonitor.cpp:397
 #, kde-format
 msgid "Tag"
-msgstr ""
+msgstr "Ετικέτα"
 
 #: notificationmodel.cpp:79
 #, kde-format
 msgid "Subscription"
-msgstr ""
+msgstr "Συνδρομή"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
@@ -1311,722 +1321,722 @@ msgstr ""
 #: notificationmonitor.cpp:407
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
 #: notificationmonitor.cpp:172 notificationmonitor.cpp:352
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Μετακίνηση"
 
 #: notificationmodel.cpp:99 notificationmonitor.cpp:184
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "ΤροποποίησηΣημαιών"
 
 #: notificationmodel.cpp:101 notificationmonitor.cpp:187
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "ΤροποποίησηΕτικετών"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
 #: notificationmonitor.cpp:392 notificationmonitor.cpp:416
 #, kde-format
 msgid "InvalidOp"
-msgstr ""
+msgstr "ΆκυροOp"
 
 #: notificationmodel.cpp:117 notificationmonitor.cpp:358
 #, kde-format
 msgid "Subscribe"
-msgstr ""
+msgstr "Εγγραφή"
 
 #: notificationmodel.cpp:119 notificationmonitor.cpp:361
 #, kde-format
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Απεγγραφή"
 
 #: notificationmodel.cpp:121 notificationmonitor.cpp:364
 #, kde-format
 msgid "InvalidIp"
-msgstr ""
+msgstr "ΆκυρηIp"
 
 #: notificationmodel.cpp:149
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Άγνωστο"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
 #: notificationmonitor.cpp:367 notificationmonitor.cpp:395
 #: notificationmonitor.cpp:419
 #, kde-format
 msgid "Operation"
-msgstr ""
+msgstr "Λειτουργία"
 
 #: notificationmodel.cpp:198
 #, kde-format
 msgid "IDs"
-msgstr ""
+msgstr "IDs"
 
 #: notificationmodel.cpp:200
 #, kde-format
 msgid "Session"
-msgstr ""
+msgstr "Συνεδρία"
 
 #: notificationmodel.cpp:202 notificationmonitor.cpp:144
 #, kde-format
 msgid "Listeners"
-msgstr ""
+msgstr "Ακροατές"
 
 #: notificationmonitor.cpp:59
 #, kde-format
 msgid "Enable notification monitor"
-msgstr ""
+msgstr "Ενεργοποίηση παρακολούθησης ειδοποιήσεων"
 
 #: notificationmonitor.cpp:142
 #, kde-format
 msgid "Timestamp"
-msgstr ""
+msgstr "Χρονοσφραγίδα"
 
 #: notificationmonitor.cpp:196 notificationmonitor.cpp:369
 #, kde-format
 msgid "Parent Collection"
-msgstr ""
+msgstr "Συλλογή γονέα"
 
 #: notificationmonitor.cpp:197
 #, kde-format
 msgid "Parent Dest Col"
-msgstr ""
+msgstr "Γονική dest Col"
 
 #: notificationmonitor.cpp:198 notificationmonitor.cpp:371
 #, kde-format
 msgid "Destination Resource"
-msgstr ""
+msgstr "Πόρος προορισμού"
 
 #: notificationmonitor.cpp:199
 #, kde-format
 msgid "Item Parts"
-msgstr ""
+msgstr "Μέρη στοιχείου"
 
 #: notificationmonitor.cpp:200
 #, kde-format
 msgid "Added Flags"
-msgstr ""
+msgstr "Προστιθέμενες σημαίες"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Removed Flags"
-msgstr ""
+msgstr "Αφαίρεση σημαιών"
 
 #: notificationmonitor.cpp:202
 #, kde-format
 msgid "Added Tags"
-msgstr ""
+msgstr "Προστιθέμενες ετικέτες"
 
 #: notificationmonitor.cpp:203
 #, kde-format
 msgid "Removed Tags"
-msgstr ""
+msgstr "Αφαίρεση ετικετών"
 
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Must retrieve"
-msgstr ""
+msgstr "Πρέπει να ανακτηθεί"
 
 #: notificationmonitor.cpp:218
 #, kde-format
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: notificationmonitor.cpp:219
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "remoteId"
 
 #: notificationmonitor.cpp:220
 #, kde-format
 msgid "name"
-msgstr ""
+msgstr "όνομα"
 
 #: notificationmonitor.cpp:222 notificationmonitor.cpp:269
 #: notificationmonitor.cpp:317
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Πρόγονος"
 
 #: notificationmonitor.cpp:229 notificationmonitor.cpp:303
 #, kde-format
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: notificationmonitor.cpp:230 notificationmonitor.cpp:304
 #, kde-format
 msgid "Parent ID"
-msgstr ""
+msgstr "ID γονέα"
 
 #: notificationmonitor.cpp:231 notificationmonitor.cpp:252
 #, kde-format
 msgid "GID"
-msgstr ""
+msgstr "GID"
 
 #: notificationmonitor.cpp:233 notificationmonitor.cpp:307
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
-msgstr ""
+msgstr "Απομακρυσμένο ID"
 
 #: notificationmonitor.cpp:248
 #, kde-format
 msgid "Revision"
-msgstr ""
+msgstr "Αναθεώρηση"
 
 #: notificationmonitor.cpp:249
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "IDΓονέα"
 
 #: notificationmonitor.cpp:250
 #, kde-format
 msgid "RemoteID"
-msgstr ""
+msgstr "Απομακρυσμένο ID"
 
 #: notificationmonitor.cpp:251
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "Απομακρυσμένο Rev"
 
 #: notificationmonitor.cpp:253 notificationmonitor.cpp:291
 #: notificationmonitor.cpp:313
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "Μέγεθος"
 
 #: notificationmonitor.cpp:254
 #, kde-format
 msgid "MimeType"
-msgstr ""
+msgstr "ΤύποςMime"
 
 #: notificationmonitor.cpp:255
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "ΧρόνοςM"
 
 #: notificationmonitor.cpp:266
 #, kde-format
 msgid "VRefs"
-msgstr ""
+msgstr "VRefs"
 
 #: notificationmonitor.cpp:275
 #, kde-format
 msgid "Parts"
-msgstr ""
+msgstr "Ανταλλακτικά"
 
 #: notificationmonitor.cpp:282
 #, kde-format
 msgid "External"
-msgstr ""
+msgstr "Εξωτερικό"
 
 #: notificationmonitor.cpp:285
 #, kde-format
 msgid "Internal"
-msgstr ""
+msgstr "Εσωτερικό"
 
 #: notificationmonitor.cpp:288
 #, kde-format
 msgid "Foreign"
-msgstr ""
+msgstr "Ξένο"
 
 #: notificationmonitor.cpp:292
 #, kde-format
 msgid "Storage Type"
-msgstr ""
+msgstr "Τύπος αποθήκευσης"
 
 #: notificationmonitor.cpp:293
 #, kde-format
 msgid "Version"
-msgstr ""
+msgstr "Έκδοση"
 
 #: notificationmonitor.cpp:294
 #, kde-format
 msgid "Data"
-msgstr ""
+msgstr "Δεδομένα"
 
 #: notificationmonitor.cpp:305
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: notificationmonitor.cpp:306
 #, kde-format
 msgid "Mime Types"
-msgstr ""
+msgstr "Τύποι mime"
 
 #: notificationmonitor.cpp:308
 #, kde-format
 msgid "Remote Revision"
-msgstr ""
+msgstr "Απομακρυσμένη αναθεώρηση"
 
 #: notificationmonitor.cpp:309
 #, kde-format
 msgid "Statistics"
-msgstr ""
+msgstr "Στατιστικά"
 
 #: notificationmonitor.cpp:311
 #, kde-format
 msgid "Count"
-msgstr ""
+msgstr "Μέτρηση"
 
 #: notificationmonitor.cpp:312
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "Αόρατο"
 
 #: notificationmonitor.cpp:315
 #, kde-format
 msgid "Search Query"
-msgstr ""
+msgstr "Αναζήτηση ερωτημάτων"
 
 #: notificationmonitor.cpp:316
 #, kde-format
 msgid "Search Collections"
-msgstr ""
+msgstr "Αναζήτηση συλλογών"
 
 #: notificationmonitor.cpp:323
 #, kde-format
 msgid "Cache Policy"
-msgstr ""
+msgstr "Πολιτική κρυφής μνήμης"
 
 #: notificationmonitor.cpp:325
 #, kde-format
 msgid "Inherit"
-msgstr ""
+msgstr "Κληρονόμος"
 
 #: notificationmonitor.cpp:326
 #, kde-format
 msgid "Check Interval"
-msgstr ""
+msgstr "Διάστημα ελέγχου"
 
 #: notificationmonitor.cpp:327
 #, kde-format
 msgid "Cache Timeout"
-msgstr ""
+msgstr "Χρονικό όριο κρυφής μνήμης"
 
 #: notificationmonitor.cpp:328
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "Συγχρονισμός κατά απαίτηση"
 
 #: notificationmonitor.cpp:329
 #, kde-format
 msgid "Local Parts"
-msgstr ""
+msgstr "Τοπικά ανταλλακτικά"
 
 #: notificationmonitor.cpp:334 notificationmonitor.cpp:498
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Ενεργό"
 
 #: notificationmonitor.cpp:335
 #, kde-format
 msgid "DisplayPref"
-msgstr ""
+msgstr "ΠροεπιλογήΟθόνης"
 
 #: notificationmonitor.cpp:336
 #, kde-format
 msgid "SyncPref"
-msgstr ""
+msgstr "ΠροεπιλογήΣυγχρονισμού"
 
 #: notificationmonitor.cpp:337
 #, kde-format
 msgid "IndexPref"
-msgstr ""
+msgstr "ΠροεπιλογήΕυρετηρίου"
 
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Εικονικό"
 
 #: notificationmonitor.cpp:370
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Συλλογή γονικού Dest"
 
 #: notificationmonitor.cpp:372
 #, kde-format
 msgid "Changed Parts"
-msgstr ""
+msgstr "Αλλαγμένα μέρη"
 
 #: notificationmonitor.cpp:421
 #, kde-format
 msgid "Monitored Collections"
-msgstr ""
+msgstr "Παρακολουθούμενες συλλογές"
 
 #: notificationmonitor.cpp:422
 #, kde-format
 msgid "Monitored Items"
-msgstr ""
+msgstr "Παρακολουθούμενα στοιχεία"
 
 #: notificationmonitor.cpp:423
 #, kde-format
 msgid "Monitored Tags"
-msgstr ""
+msgstr "Παρακολουθούμενες ετικέτες"
 
 #: notificationmonitor.cpp:438
 #, kde-format
 msgid "Subscriptions"
-msgstr ""
+msgstr "Συνδρομές"
 
 #: notificationmonitor.cpp:441
 #, kde-format
 msgid "Changes"
-msgstr ""
+msgstr "Αλλαγές"
 
 #: notificationmonitor.cpp:444
 #, kde-format
 msgid "No Type"
-msgstr ""
+msgstr "Κανένας τύπος"
 
 #: notificationmonitor.cpp:448
 #, kde-format
 msgid "Monitored Types"
-msgstr ""
+msgstr "Παρακολουθούμενοι τύποι"
 
 #: notificationmonitor.cpp:449
 #, kde-format
 msgid "Monitored Mime Types"
-msgstr ""
+msgstr "Παρακολουθούμενοι τύποι mime"
 
 #: notificationmonitor.cpp:450
 #, kde-format
 msgid "Monitored Resources"
-msgstr ""
+msgstr "Παρακολουθούμενοι πόροι"
 
 #: notificationmonitor.cpp:451
 #, kde-format
 msgid "Ignored Sessions"
-msgstr ""
+msgstr "Αγνοημένες συνεδρίες"
 
 #: notificationmonitor.cpp:452
 #, kde-format
 msgid "All Monitored"
-msgstr ""
+msgstr "Όλα τα παρακολουθούμενα"
 
 #: notificationmonitor.cpp:453
 #, kde-format
 msgid "Exclusive"
-msgstr ""
+msgstr "Αποκλειστικό"
 
 #: notificationmonitor.cpp:457
 #, kde-format
 msgid "Requested Parts"
-msgstr ""
+msgstr "Ζητούμενα μέρη"
 
 #: notificationmonitor.cpp:458
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "Αλλαγή από"
 
 #: notificationmonitor.cpp:462
 #, kde-format
 msgid "No Ancestor"
-msgstr ""
+msgstr "Χωρίς πρόγονο"
 
 #: notificationmonitor.cpp:465
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "Γονέας  πρόγονος"
 
 #: notificationmonitor.cpp:468
 #, kde-format
 msgid "All Ancestors"
-msgstr ""
+msgstr "Όλοι οι πρόγονοι"
 
 #: notificationmonitor.cpp:471
 #, kde-format
 msgid "Ancestor Depth"
-msgstr ""
+msgstr "Βάθος προγόνων"
 
 #: notificationmonitor.cpp:472
 #, kde-format
 msgid "Cache Only"
-msgstr ""
+msgstr "Μόνο κρυφή μνήμη"
 
 #: notificationmonitor.cpp:473
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr ""
+msgstr "Έλεγχος μόνο των αποθηκευμένων τμημάτων φορτίου"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "Fetch Size"
-msgstr ""
+msgstr "Μέγεθος ανάκτησης"
 
 #: notificationmonitor.cpp:477
 #, kde-format
 msgid "Fetch MTime"
-msgstr ""
+msgstr "Λήψη MTime"
 
 #: notificationmonitor.cpp:478
 #, kde-format
 msgid "Fetch Remote Revision"
-msgstr ""
+msgstr "Λήψη απομακρυσμένης αναθεώρησης"
 
 #: notificationmonitor.cpp:479
 #, kde-format
 msgid "Ignore Errors"
-msgstr ""
+msgstr "Αγνόηση σφαλμάτων"
 
 #: notificationmonitor.cpp:480
 #, kde-format
 msgid "Fetch Flags"
-msgstr ""
+msgstr "Λήψη σημαιών"
 
 #: notificationmonitor.cpp:481 notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch RemoteID"
-msgstr ""
+msgstr "Λήψη RemoteID"
 
 #: notificationmonitor.cpp:484
 #, kde-format
 msgid "Fetch VRefs"
-msgstr ""
+msgstr "Λήψη VRefs"
 
 #: notificationmonitor.cpp:492
 #, kde-format
 msgid "No Filter"
-msgstr ""
+msgstr "Χωρίς φίλτρο"
 
 #: notificationmonitor.cpp:495
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Οθόνη"
 
 #: notificationmonitor.cpp:501
 #, kde-format
 msgid "Index"
-msgstr ""
+msgstr "Ευρετήριο"
 
 #: notificationmonitor.cpp:504
 #, kde-format
 msgid "Sync"
-msgstr ""
+msgstr "Συγχρονισμός"
 
 #: notificationmonitor.cpp:510
 #, kde-format
 msgid "Content Mime Types"
-msgstr ""
+msgstr "Τύποι mime περιεχομένου"
 
 #: notificationmonitor.cpp:519
 #, kde-format
 msgid "Parent"
-msgstr ""
+msgstr "Γονέας"
 
 #: notificationmonitor.cpp:522
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: notificationmonitor.cpp:526
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Μόνο ID λήψης προγόνου"
 
 #: notificationmonitor.cpp:527
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "Ιδιότητες προγόνου"
 
 #: notificationmonitor.cpp:535
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "Λήψη όλων των ιδιοτήτων"
 
 #: querydebugger.cpp:341
 #, kde-format
 msgid "Name / Query"
-msgstr ""
+msgstr "Όνομα / Ερώτημα"
 
 #: querydebugger.cpp:343
 #, kde-format
 msgid "Started"
-msgstr ""
+msgstr "Ξεκίνησε"
 
 #: querydebugger.cpp:347
 #, kde-format
 msgid "Duration"
-msgstr ""
+msgstr "Διάρκεια"
 
 #: querydebugger.cpp:525
 #, kde-format
 msgid "Query"
-msgstr ""
+msgstr "Ερώτημα"
 
 #: querydebugger.cpp:527
 #, kde-format
 msgid "Duration [ms]"
-msgstr ""
+msgstr "Διάρκεια [ms]"
 
 #: querydebugger.cpp:529
 #, kde-format
 msgid "Calls"
-msgstr ""
+msgstr "Κλήσεις"
 
 #: querydebugger.cpp:531
 #, kde-format
 msgid "Avg. Duration [ms]"
-msgstr ""
+msgstr "ΜΟ διάρκειας [ms]"
 
 #: querydebugger.cpp:653
 #, kde-format
 msgid "Affected Rows:"
-msgstr ""
+msgstr "Επηρεαζόμενες σειρές:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "Ενεργοποίηση αποσφαλμάτωσης ερωτημάτων (επιβραδύνει τον διακομιστή!)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "Ακολουθία ερωτημάτων"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "Δέντρο ερωτήσεων"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
 #, kde-format
 msgid "Save To File"
-msgstr ""
+msgstr "Αποθήκευση σε αρχείο"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr ""
+msgstr "Προβολή ερωτημάτων"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr ""
+msgstr "Ερώτημα:"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "ΕτικέταΚειμένου"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60
 #, kde-format
 msgid "Results:"
-msgstr ""
+msgstr "Αποτελέσματα:"
 
 #: searchwidget.cpp:50
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
-msgstr ""
+msgstr "Κατάστημα αναζήτησης:"
 
 #: searchwidget.cpp:55
 #, kde-format
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: searchwidget.cpp:63
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
-msgstr ""
+msgstr "Ερώτημα αναζήτησης:"
 
 #: searchwidget.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
-msgstr ""
+msgstr "Αποτελέσματα (Έγγραφα):"
 
 #: searchwidget.cpp:82
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
-msgstr ""
+msgstr "Έγγραφο:"
 
 #: searchwidget.cpp:92
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
-msgstr ""
+msgstr "Αντικείμενο:"
 
 #: searchwidget.cpp:154
 #, kde-format
 msgid "Xapian error"
-msgstr ""
+msgstr "Σφάλμα Xapian"
 
 #: searchwidget.cpp:160
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "Καμία βάση δεδομένων Xapian δεν έχει ανοίξει"
 
 #: searchwidget.cpp:171
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: searchwidget.cpp:171
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "Δεν βρέθηκε κανένα στοιχείο."
 
 #: searchwidget.cpp:197
 #, kde-format
 msgid "Term/Value"
-msgstr ""
+msgstr "Όρος/Αξία"
 
 #: searchwidget.cpp:197
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/Υποδοχή"
 
 #: searchwidget.cpp:199
 #, kde-format
 msgid "Terms"
-msgstr ""
+msgstr "Όροι"
 
 #: searchwidget.cpp:226
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "Σφάλμα κατά τη λήψη στοιχείου"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Γενικά"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "ID ετικέτας γονέα:"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
 #: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "&Αφαίρεση"
 
 #. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr ""
+msgstr "Απομακρυσμένα αναγνωριστικά"
