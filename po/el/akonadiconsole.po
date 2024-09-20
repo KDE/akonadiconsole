@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the akonadiconsole package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-09-19 13:45+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1406,7 +1407,7 @@ msgstr "Συλλογή γονέα"
 #: notificationmonitor.cpp:197
 #, kde-format
 msgid "Parent Dest Col"
-msgstr "Γονική dest Col"
+msgstr "Συλλογή γονέα προορ."
 
 #: notificationmonitor.cpp:198 notificationmonitor.cpp:371
 #, kde-format
@@ -1659,7 +1660,7 @@ msgstr "Εικονικό"
 #: notificationmonitor.cpp:370
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr "Συλλογή γονικού Dest"
+msgstr "Συλλογή γονέα προορισμού"
 
 #: notificationmonitor.cpp:372
 #, kde-format
