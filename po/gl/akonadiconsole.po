@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 17:30+0200\n"
+"PO-Revision-Date: 2024-09-22 00:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -177,6 +177,7 @@ msgstr "Interromper a actividade"
 msgid "Restart Agent"
 msgstr "Reiniciar o axente"
 
+# skip-rule: rag-en-online, rag-en-offline
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Toggle Online/Offline"
@@ -460,7 +461,7 @@ msgstr "&Eliminar"
 #: browserwidget_contentview.ui:138
 #, kde-format
 msgid "Raw Payload"
-msgstr "Datos en bruto"
+msgstr "Corpo en bruto"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
@@ -490,6 +491,7 @@ msgstr "0"
 msgid "Remote ID:"
 msgstr "Identificador remoto:"
 
+# skip-rule: trasno-login2_reverse
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
@@ -534,7 +536,7 @@ msgstr "non válido/non válido"
 #: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
 #, kde-format
 msgid "Flags"
-msgstr "Marcadores"
+msgstr "Marcas"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:85
@@ -566,7 +568,7 @@ msgstr "Dereitos de acceso do elemento"
 #: collectionaclpage.ui:23 collectionaclpage.ui:67
 #, kde-format
 msgid "Create"
-msgstr "Crear"
+msgstr "Crear."
 
 #. i18n: ectx: property (text), widget (QCheckBox, changeItem)
 #. i18n: ectx: property (text), widget (QCheckBox, changeCollection)
@@ -577,26 +579,26 @@ msgstr "Crear"
 #: notificationmonitor.cpp:410
 #, kde-format
 msgid "Modify"
-msgstr "Modificar"
+msgstr "Modificar."
 
 #. i18n: ectx: property (text), widget (QCheckBox, deleteItem)
 #. i18n: ectx: property (text), widget (QCheckBox, deleteCollection)
 #: collectionaclpage.ui:37 collectionaclpage.ui:81
 #, kde-format
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Eliminar."
 
 #. i18n: ectx: property (text), widget (QCheckBox, linkItem)
 #: collectionaclpage.ui:44 notificationmodel.cpp:95 notificationmonitor.cpp:178
 #, kde-format
 msgid "Link"
-msgstr "Ligar"
+msgstr "Ligar."
 
 #. i18n: ectx: property (text), widget (QCheckBox, unlinkItem)
 #: collectionaclpage.ui:51 notificationmodel.cpp:97 notificationmonitor.cpp:181
 #, kde-format
 msgid "Unlink"
-msgstr "Desligar"
+msgstr "Desligar."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: collectionaclpage.ui:61
@@ -691,7 +693,7 @@ msgstr "Consulta n.° %1"
 #: dbconsoletab.ui:87
 #, kde-format
 msgid "Execute query"
-msgstr "Executar a consulta"
+msgstr "Executar a consulta."
 
 #: debugmodel.cpp:144
 #, kde-format
@@ -1242,12 +1244,12 @@ msgstr "Ámbito de obtención de elementos"
 #: monitorswidget.cpp:151
 #, kde-format
 msgid "Payload Parts"
-msgstr "Partes dos datos"
+msgstr "Partes do corpo"
 
 #: monitorswidget.cpp:152 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
-msgstr "Datos completos"
+msgstr "Corpo completo"
 
 #: monitorswidget.cpp:154 notificationmonitor.cpp:475
 #, kde-format
@@ -1262,13 +1264,14 @@ msgstr "Só a caché"
 #: monitorswidget.cpp:156
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
-msgstr "Só comprobar as partes de datos da caché"
+msgstr "Só comprobar as partes do corpo da caché"
 
 #: monitorswidget.cpp:158
 #, kde-format
 msgid "Fetch mtime"
 msgstr "Obter a hora de modificación"
 
+# skip-rule: trasno-login2_reverse
 #: monitorswidget.cpp:159 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
@@ -1284,6 +1287,7 @@ msgstr "Ignorar os erros de obtención"
 msgid "Fetch Change Since"
 msgstr "Obter os cambios desde"
 
+# skip-rule: trasno-login2_reverse
 #: monitorswidget.cpp:162
 #, kde-format
 msgid "Fetch RID"
@@ -1331,7 +1335,7 @@ msgstr "Mover"
 #: notificationmodel.cpp:99 notificationmonitor.cpp:184
 #, kde-format
 msgid "ModifyFlags"
-msgstr "Modificar os marcadores"
+msgstr "Modificar as marcas"
 
 #: notificationmodel.cpp:101 notificationmonitor.cpp:187
 #, kde-format
@@ -1420,12 +1424,12 @@ msgstr "Partes do elemento"
 #: notificationmonitor.cpp:200
 #, kde-format
 msgid "Added Flags"
-msgstr "Marcadores engadidos"
+msgstr "Marcas engadidas"
 
 #: notificationmonitor.cpp:201
 #, kde-format
 msgid "Removed Flags"
-msgstr "Marcadores retirados"
+msgstr "Marcas retiradas"
 
 #: notificationmonitor.cpp:202
 #, kde-format
@@ -1447,6 +1451,7 @@ msgstr "Debe obterse"
 msgid "id"
 msgstr "identificador"
 
+# skip-rule: trasno-login2_reverse
 #: notificationmonitor.cpp:219
 #, kde-format
 msgid "remoteId"
@@ -1473,6 +1478,7 @@ msgstr "Identificador"
 msgid "Parent ID"
 msgstr "Identificador de mai"
 
+# skip-rule: trasno-login2_reverse
 #: notificationmonitor.cpp:231 notificationmonitor.cpp:252
 #, kde-format
 msgid "GID"
@@ -1489,11 +1495,13 @@ msgstr "Identificador remoto"
 msgid "Revision"
 msgstr "Revisión"
 
+# skip-rule: trasno-login2_reverse
 #: notificationmonitor.cpp:249
 #, kde-format
 msgid "ParentID"
 msgstr "Identificador superior"
 
+# skip-rule: trasno-login2_reverse
 #: notificationmonitor.cpp:250
 #, kde-format
 msgid "RemoteID"
@@ -1513,7 +1521,7 @@ msgstr "Tamaño"
 #: notificationmonitor.cpp:254
 #, kde-format
 msgid "MimeType"
-msgstr "Tipo mime"
+msgstr "Tipo MIME"
 
 #: notificationmonitor.cpp:255
 #, kde-format
@@ -1763,7 +1771,7 @@ msgstr "Só a caché"
 #: notificationmonitor.cpp:473
 #, kde-format
 msgid "Check Cached Payload Parts Only"
-msgstr "Só comprobaras as partes dos datos da caché"
+msgstr "Só comprobar as partes de corpo da caché"
 
 #: notificationmonitor.cpp:476
 #, kde-format
@@ -1788,8 +1796,9 @@ msgstr "Ignorar os erros"
 #: notificationmonitor.cpp:480
 #, kde-format
 msgid "Fetch Flags"
-msgstr "Obter os marcadores"
+msgstr "Obter as marcas"
 
+# skip-rule: trasno-login2_reverse
 #: notificationmonitor.cpp:481 notificationmonitor.cpp:534
 #, kde-format
 msgid "Fetch RemoteID"
@@ -1894,7 +1903,7 @@ msgstr "Filas afectadas:"
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr "Activar a depuración de consultas (lentifica o servidor!)"
+msgstr "Activar a depuración de consultas (lentifica o servidor!)."
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
