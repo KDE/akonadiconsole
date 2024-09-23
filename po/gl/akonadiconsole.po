@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-09-22 00:34+0200\n"
+"PO-Revision-Date: 2024-09-22 12:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -177,7 +177,7 @@ msgstr "Interromper a actividade"
 msgid "Restart Agent"
 msgstr "Reiniciar o axente"
 
-# skip-rule: rag-en-online, rag-en-offline
+# skip-rule: rag-en-online, rag-en-offline, trasno-offline
 #: agentwidget.cpp:443
 #, kde-format
 msgid "Toggle Online/Offline"
@@ -1332,6 +1332,7 @@ msgstr "Engadir"
 msgid "Move"
 msgstr "Mover"
 
+# skip-rule: trasno-check3_reverse
 #: notificationmodel.cpp:99 notificationmonitor.cpp:184
 #, kde-format
 msgid "ModifyFlags"
