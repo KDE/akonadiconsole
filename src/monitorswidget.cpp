@@ -36,7 +36,6 @@ MonitorsWidget::MonitorsWidget(QWidget *parent)
 
     mTreeView = new QTreeView(this);
     auto mProxyModel = new QSortFilterProxyModel(this);
-    mProxyModel->setDynamicSortFilter(true);
     mProxyModel->sort(0);
     mProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     mProxyModel->setSourceModel(mModel);

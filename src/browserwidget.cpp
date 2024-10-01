@@ -141,7 +141,6 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     collectionFilter->setSourceModel(mBrowserModel);
     collectionFilter->addMimeTypeInclusionFilter(Collection::mimeType());
     collectionFilter->setHeaderGroup(EntityTreeModel::CollectionTreeHeaders);
-    collectionFilter->setDynamicSortFilter(true);
     collectionFilter->setSortCaseSensitivity(Qt::CaseInsensitive);
 
     statisticsProxyModel = new Akonadi::StatisticsProxyModel(this);
@@ -162,7 +161,6 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     const KConfigGroup group = KSharedConfig::openConfig()->group(QStringLiteral("FavoriteCollectionsModel"));
     connect(mBrowserModel, &AkonadiBrowserModel::columnsChanged, itemFilter, &EntityMimeTypeFilterModel::invalidate);
     auto sortModel = new AkonadiBrowserSortModel(mBrowserModel, this);
-    sortModel->setDynamicSortFilter(true);
     sortModel->setSourceModel(itemFilter);
     auto favoritesModel = new FavoriteCollectionsModel(mBrowserModel, group, this);
     favoritesView->setModel(favoritesModel);

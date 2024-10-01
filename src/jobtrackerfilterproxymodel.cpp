@@ -14,7 +14,6 @@ JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setRecursiveFilteringEnabled(true);
-    setDynamicSortFilter(true);
 }
 
 JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel() = default;

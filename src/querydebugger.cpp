@@ -698,7 +698,6 @@ QueryDebugger::QueryDebugger(QWidget *parent)
     mQueryList = new QueryDebuggerModel(this);
     auto proxy = new QSortFilterProxyModel(this);
     proxy->setSourceModel(mQueryList);
-    proxy->setDynamicSortFilter(true);
     mUi->queryListView->setModel(proxy);
     mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::CallsColumn, QHeaderView::Fixed);
     mUi->queryListView->header()->setSectionResizeMode(QueryDebuggerModel::DurationColumn, QHeaderView::Fixed);
