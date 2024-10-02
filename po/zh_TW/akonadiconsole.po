@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-08-09 03:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -319,85 +319,85 @@ msgstr "快取(&C)"
 msgid "&Server"
 msgstr "伺服器(&S)"
 
-#: browserwidget.cpp:177
+#: browserwidget.cpp:175
 #, kde-format
 msgid "Generic"
 msgstr "一般"
 
-#: browserwidget.cpp:178
+#: browserwidget.cpp:176
 #, kde-format
 msgid "Mail"
 msgstr "郵件"
 
-#: browserwidget.cpp:179
+#: browserwidget.cpp:177
 #, kde-format
 msgid "Contacts"
 msgstr "聯絡人"
 
-#: browserwidget.cpp:180
+#: browserwidget.cpp:178
 #, kde-format
 msgid "Calendar/Tasks"
 msgstr "行事曆/工作項目"
 
-#: browserwidget.cpp:240
+#: browserwidget.cpp:238
 #, kde-format
 msgid "Cache only retrieval"
 msgstr "僅暫存取得動作"
 
-#: browserwidget.cpp:472
+#: browserwidget.cpp:470
 #, kde-format
 msgid "Failed to save changes: %1"
 msgstr "儲存變更失敗：%1"
 
-#: browserwidget.cpp:511
+#: browserwidget.cpp:509
 #, kde-format
 msgid "Select XML file"
 msgstr "選擇 XML 檔案"
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:547
 #, kde-format
 msgid "&Add tag..."
 msgstr "新增標籤(&A)..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:549
 #, kde-format
 msgid "Add &subtag..."
 msgstr "新增子標籤(&S)..."
 
-#: browserwidget.cpp:553
+#: browserwidget.cpp:551
 #, kde-format
 msgid "&Edit tag..."
 msgstr "編輯標籤(&E)..."
 
-#: browserwidget.cpp:558
+#: browserwidget.cpp:556
 #, kde-format
 msgid "&Delete tag..."
 msgstr "刪除標籤(&D)..."
 
-#: browserwidget.cpp:572
+#: browserwidget.cpp:570
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "新增標籤"
 
-#: browserwidget.cpp:587
+#: browserwidget.cpp:585
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "新增子標籤"
 
-#: browserwidget.cpp:598 browserwidget.cpp:615
+#: browserwidget.cpp:596 browserwidget.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "修改標籤"
 
-#: browserwidget.cpp:624
+#: browserwidget.cpp:622
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "您確定要移除所選的標籤嗎？"
 
-#: browserwidget.cpp:625
+#: browserwidget.cpp:623
 #, kde-format
 msgid "Delete tag?"
 msgstr "刪除標籤？"
@@ -423,7 +423,7 @@ msgstr "不支援的類型"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 monitorswidget.cpp:153
+#: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
 #: notificationmonitor.cpp:239 notificationmonitor.cpp:511
 #: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
 #, kde-format
@@ -536,7 +536,7 @@ msgid "Flags"
 msgstr "旗標"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: browserwidget_contentview.ui:355 monitorswidget.cpp:85
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:84
 #: notificationmonitor.cpp:257 notificationmonitor.cpp:435
 #, kde-format
 msgid "Tags"
@@ -1102,201 +1102,201 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "工作階段/訂閱者"
 
-#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:206
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
 #: notificationmonitor.cpp:429
 #, kde-format
 msgid "Items"
 msgstr "項目"
 
-#: monitorswidget.cpp:82 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:432
 #, kde-format
 msgid "Collections"
 msgstr "收藏"
 
-#: monitorswidget.cpp:88
+#: monitorswidget.cpp:87
 #, kde-format
 msgid "Subscribers"
 msgstr "訂閱者"
 
-#: monitorswidget.cpp:91
+#: monitorswidget.cpp:90
 #, kde-format
 msgid "Notification"
 msgstr "通知"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:507
 #, kde-format
 msgid "List Filter"
 msgstr "列出過濾器"
 
-#: monitorswidget.cpp:101 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:508
 #, kde-format
 msgid "Include Statistics"
 msgstr "包含統計資料"
 
-#: monitorswidget.cpp:102 notificationmonitor.cpp:195
+#: monitorswidget.cpp:101 notificationmonitor.cpp:195
 #: notificationmonitor.cpp:368 notificationmonitor.cpp:396
 #: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "資源"
 
-#: monitorswidget.cpp:103
+#: monitorswidget.cpp:102
 #, kde-format
 msgid "Content MimeTypes"
 msgstr "內容 MIME 類型"
 
-#: monitorswidget.cpp:104 monitorswidget.cpp:157 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "祖先取得"
 
-#: monitorswidget.cpp:108
+#: monitorswidget.cpp:107
 #, kde-format
 msgid "Ancestor Fetch Scope"
 msgstr "祖先抓取範圍"
 
-#: monitorswidget.cpp:114 monitorswidget.cpp:121 notificationmonitor.cpp:512
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
 #: notificationmonitor.cpp:533
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "僅抓取 ID"
 
-#: monitorswidget.cpp:115
+#: monitorswidget.cpp:114
 #, kde-format
 msgid "Ignore Retrieval Error"
 msgstr "忽略取得時的錯誤"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135 searchwidget.cpp:205
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135 searchwidget.cpp:205
 #, kde-format
 msgid "Values"
 msgstr "數值"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135
 #, kde-format
 msgid "Properties"
 msgstr "內容"
 
-#: monitorswidget.cpp:137 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:420
 #, kde-format
 msgid "Subscriber"
 msgstr "訂閱者"
 
-#: monitorswidget.cpp:138
+#: monitorswidget.cpp:137
 #, kde-format
 msgid "Session ID"
 msgstr "工作階段 ID"
 
-#: monitorswidget.cpp:139
+#: monitorswidget.cpp:138
 #, kde-format
 msgid "Monitored Collections:"
 msgstr "監控中收藏："
 
-#: monitorswidget.cpp:140
+#: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Items:"
 msgstr "監控中項目："
 
-#: monitorswidget.cpp:141
+#: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Tags:"
 msgstr "監控中標籤："
 
-#: monitorswidget.cpp:142
+#: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Types:"
 msgstr "監控中類型："
 
-#: monitorswidget.cpp:143
+#: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Mime Types:"
 msgstr "監控中 MIME 類型："
 
-#: monitorswidget.cpp:144
+#: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Resources:"
 msgstr "監控中資源："
 
-#: monitorswidget.cpp:145
+#: monitorswidget.cpp:144
 #, kde-format
 msgid "Ignored Sessions:"
 msgstr "忽略的工作階段："
 
-#: monitorswidget.cpp:146
+#: monitorswidget.cpp:145
 #, kde-format
 msgid "All Monitored:"
 msgstr "所有監控中："
 
-#: monitorswidget.cpp:147
+#: monitorswidget.cpp:146
 #, kde-format
 msgid "Is Exclusive:"
 msgstr "是排除式的："
 
-#: monitorswidget.cpp:149 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "項目抓取範圍"
 
-#: monitorswidget.cpp:151
+#: monitorswidget.cpp:150
 #, kde-format
 msgid "Payload Parts"
 msgstr "負載部分"
 
-#: monitorswidget.cpp:152 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
 msgstr "完整負載"
 
-#: monitorswidget.cpp:154 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:475
 #, kde-format
 msgid "All Attributes"
 msgstr "所有屬性"
 
-#: monitorswidget.cpp:155
+#: monitorswidget.cpp:154
 #, kde-format
 msgid "Cache only"
 msgstr "僅快取"
 
-#: monitorswidget.cpp:156
+#: monitorswidget.cpp:155
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
 msgstr "只為已快取的負載部分檢查"
 
-#: monitorswidget.cpp:158
+#: monitorswidget.cpp:157
 #, kde-format
 msgid "Fetch mtime"
 msgstr "抓取變更時間"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
 msgstr "抓取 GID"
 
-#: monitorswidget.cpp:160 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:528
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "忽略取得時的錯誤"
 
-#: monitorswidget.cpp:161
+#: monitorswidget.cpp:160
 #, kde-format
 msgid "Fetch Change Since"
 msgstr "抓取何時以後的變更"
 
-#: monitorswidget.cpp:162
+#: monitorswidget.cpp:161
 #, kde-format
 msgid "Fetch RID"
 msgstr "抓取 RID"
 
-#: monitorswidget.cpp:163 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:483
 #, kde-format
 msgid "Fetch Tags"
 msgstr "抓取標籤"
 
-#: monitorswidget.cpp:166
+#: monitorswidget.cpp:165
 #, kde-format
 msgid "Collection Fetch Scope"
 msgstr "收藏抓取範圍"
 
-#: monitorswidget.cpp:169 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "標籤抓取範圍"

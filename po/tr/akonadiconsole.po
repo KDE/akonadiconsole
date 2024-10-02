@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-09-23 15:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -320,85 +320,85 @@ msgstr "Ö&nbellek"
 msgid "&Server"
 msgstr "&Sunucu"
 
-#: browserwidget.cpp:177
+#: browserwidget.cpp:175
 #, kde-format
 msgid "Generic"
 msgstr "Temel"
 
-#: browserwidget.cpp:178
+#: browserwidget.cpp:176
 #, kde-format
 msgid "Mail"
 msgstr "Posta"
 
-#: browserwidget.cpp:179
+#: browserwidget.cpp:177
 #, kde-format
 msgid "Contacts"
 msgstr "Kişiler"
 
-#: browserwidget.cpp:180
+#: browserwidget.cpp:178
 #, kde-format
 msgid "Calendar/Tasks"
 msgstr "Takvim/Görevler"
 
-#: browserwidget.cpp:240
+#: browserwidget.cpp:238
 #, kde-format
 msgid "Cache only retrieval"
 msgstr "Yalnızca önbellekli alım"
 
-#: browserwidget.cpp:472
+#: browserwidget.cpp:470
 #, kde-format
 msgid "Failed to save changes: %1"
 msgstr "Değişiklikler kaydedilemedi: %1"
 
-#: browserwidget.cpp:511
+#: browserwidget.cpp:509
 #, kde-format
 msgid "Select XML file"
 msgstr "XML dosyası seç"
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:547
 #, kde-format
 msgid "&Add tag..."
 msgstr "&Etiket Ekle…"
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:549
 #, kde-format
 msgid "Add &subtag..."
 msgstr "&Alt Etiket Ekle…"
 
-#: browserwidget.cpp:553
+#: browserwidget.cpp:551
 #, kde-format
 msgid "&Edit tag..."
 msgstr "Etiketi &Düzenle…"
 
-#: browserwidget.cpp:558
+#: browserwidget.cpp:556
 #, kde-format
 msgid "&Delete tag..."
 msgstr "Etiketi &Sil…"
 
-#: browserwidget.cpp:572
+#: browserwidget.cpp:570
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Etiket Ekle"
 
-#: browserwidget.cpp:587
+#: browserwidget.cpp:585
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Alt Etiket Ekle"
 
-#: browserwidget.cpp:598 browserwidget.cpp:615
+#: browserwidget.cpp:596 browserwidget.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Etiketi Değiştir"
 
-#: browserwidget.cpp:624
+#: browserwidget.cpp:622
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Seçili etiketi silmeyi istediğinizden gerçekten emin misiniz?"
 
-#: browserwidget.cpp:625
+#: browserwidget.cpp:623
 #, kde-format
 msgid "Delete tag?"
 msgstr "Etiket silinsin mi?"
@@ -424,7 +424,7 @@ msgstr "Desteklenmeyen Tür"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 monitorswidget.cpp:153
+#: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
 #: notificationmonitor.cpp:239 notificationmonitor.cpp:511
 #: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
 #, kde-format
@@ -537,7 +537,7 @@ msgid "Flags"
 msgstr "Bayraklar"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: browserwidget_contentview.ui:355 monitorswidget.cpp:85
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:84
 #: notificationmonitor.cpp:257 notificationmonitor.cpp:435
 #, kde-format
 msgid "Tags"
@@ -1105,201 +1105,201 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "Oturum/Abone"
 
-#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:206
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
 #: notificationmonitor.cpp:429
 #, kde-format
 msgid "Items"
 msgstr "Ögeler"
 
-#: monitorswidget.cpp:82 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:432
 #, kde-format
 msgid "Collections"
 msgstr "Koleksiyonlar"
 
-#: monitorswidget.cpp:88
+#: monitorswidget.cpp:87
 #, kde-format
 msgid "Subscribers"
 msgstr "Aboneler"
 
-#: monitorswidget.cpp:91
+#: monitorswidget.cpp:90
 #, kde-format
 msgid "Notification"
 msgstr "Bildirim"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:507
 #, kde-format
 msgid "List Filter"
 msgstr "Liste Süzgeci"
 
-#: monitorswidget.cpp:101 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:508
 #, kde-format
 msgid "Include Statistics"
 msgstr "İstatistikleri İçer"
 
-#: monitorswidget.cpp:102 notificationmonitor.cpp:195
+#: monitorswidget.cpp:101 notificationmonitor.cpp:195
 #: notificationmonitor.cpp:368 notificationmonitor.cpp:396
 #: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "Özkaynak"
 
-#: monitorswidget.cpp:103
+#: monitorswidget.cpp:102
 #, kde-format
 msgid "Content MimeTypes"
 msgstr "İçerik MIME Türleri"
 
-#: monitorswidget.cpp:104 monitorswidget.cpp:157 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "Ata Alımı"
 
-#: monitorswidget.cpp:108
+#: monitorswidget.cpp:107
 #, kde-format
 msgid "Ancestor Fetch Scope"
 msgstr "Ata Getirim Kapsamı"
 
-#: monitorswidget.cpp:114 monitorswidget.cpp:121 notificationmonitor.cpp:512
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
 #: notificationmonitor.cpp:533
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "Yalnızca Kimliği Getir"
 
-#: monitorswidget.cpp:115
+#: monitorswidget.cpp:114
 #, kde-format
 msgid "Ignore Retrieval Error"
 msgstr "Alım Hatasını Yok Say"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135 searchwidget.cpp:205
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135 searchwidget.cpp:205
 #, kde-format
 msgid "Values"
 msgstr "Değerler"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135
 #, kde-format
 msgid "Properties"
 msgstr "Özellikler"
 
-#: monitorswidget.cpp:137 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:420
 #, kde-format
 msgid "Subscriber"
 msgstr "Aboneler"
 
-#: monitorswidget.cpp:138
+#: monitorswidget.cpp:137
 #, kde-format
 msgid "Session ID"
 msgstr "Oturum Kimliği"
 
-#: monitorswidget.cpp:139
+#: monitorswidget.cpp:138
 #, kde-format
 msgid "Monitored Collections:"
 msgstr "İzlenen koleksiyonlar:"
 
-#: monitorswidget.cpp:140
+#: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Items:"
 msgstr "İzlenen ögeler:"
 
-#: monitorswidget.cpp:141
+#: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Tags:"
 msgstr "İzlenen etiketler:"
 
-#: monitorswidget.cpp:142
+#: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Types:"
 msgstr "İzlenen türler:"
 
-#: monitorswidget.cpp:143
+#: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Mime Types:"
 msgstr "İzlenen MIME türleri:"
 
-#: monitorswidget.cpp:144
+#: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Resources:"
 msgstr "İzlenen özkaynaklar:"
 
-#: monitorswidget.cpp:145
+#: monitorswidget.cpp:144
 #, kde-format
 msgid "Ignored Sessions:"
 msgstr "Yok sayılan oturumlar:"
 
-#: monitorswidget.cpp:146
+#: monitorswidget.cpp:145
 #, kde-format
 msgid "All Monitored:"
 msgstr "Tüm izlenenler:"
 
-#: monitorswidget.cpp:147
+#: monitorswidget.cpp:146
 #, kde-format
 msgid "Is Exclusive:"
 msgstr "Özel:"
 
-#: monitorswidget.cpp:149 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "Öge Getirim Kapsamı"
 
-#: monitorswidget.cpp:151
+#: monitorswidget.cpp:150
 #, kde-format
 msgid "Payload Parts"
 msgstr "Yük Kısımları"
 
-#: monitorswidget.cpp:152 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
 msgstr "Tüm Yük"
 
-#: monitorswidget.cpp:154 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:475
 #, kde-format
 msgid "All Attributes"
 msgstr "Tüm Özkaynaklar"
 
-#: monitorswidget.cpp:155
+#: monitorswidget.cpp:154
 #, kde-format
 msgid "Cache only"
 msgstr "Yalnızca özkaynak"
 
-#: monitorswidget.cpp:156
+#: monitorswidget.cpp:155
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
 msgstr "Yalnızca Önbelleklenmiş Yük Kısımları için Denetle"
 
-#: monitorswidget.cpp:158
+#: monitorswidget.cpp:157
 #, kde-format
 msgid "Fetch mtime"
 msgstr "mtime Getir"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
 msgstr "GID Getir"
 
-#: monitorswidget.cpp:160 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:528
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "Alım Hatalarını Yok Say"
 
-#: monitorswidget.cpp:161
+#: monitorswidget.cpp:160
 #, kde-format
 msgid "Fetch Change Since"
 msgstr "Şundan Bu Yana Olan Değişiklikleri Getir"
 
-#: monitorswidget.cpp:162
+#: monitorswidget.cpp:161
 #, kde-format
 msgid "Fetch RID"
 msgstr "RID Getir"
 
-#: monitorswidget.cpp:163 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:483
 #, kde-format
 msgid "Fetch Tags"
 msgstr "Etiketleri Getir"
 
-#: monitorswidget.cpp:166
+#: monitorswidget.cpp:165
 #, kde-format
 msgid "Collection Fetch Scope"
 msgstr "Koleksiyon Getirim Kapsamı"
 
-#: monitorswidget.cpp:169 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "Etiket Getirim Kapsamı"

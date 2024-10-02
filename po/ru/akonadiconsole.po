@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-05-21 22:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -325,85 +325,85 @@ msgstr "&Кэш"
 msgid "&Server"
 msgstr "&Сервер"
 
-#: browserwidget.cpp:177
+#: browserwidget.cpp:175
 #, kde-format
 msgid "Generic"
 msgstr "Общий"
 
-#: browserwidget.cpp:178
+#: browserwidget.cpp:176
 #, kde-format
 msgid "Mail"
 msgstr "Почта"
 
-#: browserwidget.cpp:179
+#: browserwidget.cpp:177
 #, kde-format
 msgid "Contacts"
 msgstr "Контакты"
 
-#: browserwidget.cpp:180
+#: browserwidget.cpp:178
 #, kde-format
 msgid "Calendar/Tasks"
 msgstr "События и задачи"
 
-#: browserwidget.cpp:240
+#: browserwidget.cpp:238
 #, kde-format
 msgid "Cache only retrieval"
 msgstr "Кэшировать только полученные данные"
 
-#: browserwidget.cpp:472
+#: browserwidget.cpp:470
 #, kde-format
 msgid "Failed to save changes: %1"
 msgstr "Не удалось сохранить изменения: %1"
 
-#: browserwidget.cpp:511
+#: browserwidget.cpp:509
 #, kde-format
 msgid "Select XML file"
 msgstr "Выбор файла XML"
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:547
 #, kde-format
 msgid "&Add tag..."
 msgstr "&Добавить метку..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:549
 #, kde-format
 msgid "Add &subtag..."
 msgstr "Добавить &вложенную метку…"
 
-#: browserwidget.cpp:553
+#: browserwidget.cpp:551
 #, kde-format
 msgid "&Edit tag..."
 msgstr "&Изменить метку..."
 
-#: browserwidget.cpp:558
+#: browserwidget.cpp:556
 #, kde-format
 msgid "&Delete tag..."
 msgstr "&Удалить метку..."
 
-#: browserwidget.cpp:572
+#: browserwidget.cpp:570
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Добавление метки"
 
-#: browserwidget.cpp:587
+#: browserwidget.cpp:585
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Добавление вложенной метки"
 
-#: browserwidget.cpp:598 browserwidget.cpp:615
+#: browserwidget.cpp:596 browserwidget.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Изменение метки"
 
-#: browserwidget.cpp:624
+#: browserwidget.cpp:622
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Удалить выбранную метку?"
 
-#: browserwidget.cpp:625
+#: browserwidget.cpp:623
 #, kde-format
 msgid "Delete tag?"
 msgstr "Удалить метку?"
@@ -429,7 +429,7 @@ msgstr "Неподдерживаемые типы"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 monitorswidget.cpp:153
+#: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
 #: notificationmonitor.cpp:239 notificationmonitor.cpp:511
 #: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
 #, kde-format
@@ -542,7 +542,7 @@ msgid "Flags"
 msgstr "Флаги"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: browserwidget_contentview.ui:355 monitorswidget.cpp:85
+#: browserwidget_contentview.ui:355 monitorswidget.cpp:84
 #: notificationmonitor.cpp:257 notificationmonitor.cpp:435
 #, kde-format
 msgid "Tags"
@@ -1125,201 +1125,201 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "Сеанс/Подписчик"
 
-#: monitorswidget.cpp:79 notificationmodel.cpp:73 notificationmonitor.cpp:206
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
 #: notificationmonitor.cpp:429
 #, kde-format
 msgid "Items"
 msgstr "Объекты"
 
-#: monitorswidget.cpp:82 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:432
 #, kde-format
 msgid "Collections"
 msgstr "Коллекции"
 
-#: monitorswidget.cpp:88
+#: monitorswidget.cpp:87
 #, kde-format
 msgid "Subscribers"
 msgstr "Подписчики"
 
-#: monitorswidget.cpp:91
+#: monitorswidget.cpp:90
 #, kde-format
 msgid "Notification"
 msgstr "Уведомление"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:507
 #, kde-format
 msgid "List Filter"
 msgstr "Фильтр списка"
 
-#: monitorswidget.cpp:101 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:508
 #, kde-format
 msgid "Include Statistics"
 msgstr "Включить статистику"
 
-#: monitorswidget.cpp:102 notificationmonitor.cpp:195
+#: monitorswidget.cpp:101 notificationmonitor.cpp:195
 #: notificationmonitor.cpp:368 notificationmonitor.cpp:396
 #: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "Ресурс"
 
-#: monitorswidget.cpp:103
+#: monitorswidget.cpp:102
 #, kde-format
 msgid "Content MimeTypes"
 msgstr "Типы MIME данных"
 
-#: monitorswidget.cpp:104 monitorswidget.cpp:157 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "Получение предка"
 
-#: monitorswidget.cpp:108
+#: monitorswidget.cpp:107
 #, kde-format
 msgid "Ancestor Fetch Scope"
 msgstr "Область получения предка"
 
-#: monitorswidget.cpp:114 monitorswidget.cpp:121 notificationmonitor.cpp:512
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
 #: notificationmonitor.cpp:533
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "Получить только идентификатор"
 
-#: monitorswidget.cpp:115
+#: monitorswidget.cpp:114
 #, kde-format
 msgid "Ignore Retrieval Error"
 msgstr "Игнорировать ошибку извлечения"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135 searchwidget.cpp:205
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135 searchwidget.cpp:205
 #, kde-format
 msgid "Values"
 msgstr "Значения"
 
-#: monitorswidget.cpp:129 notificationmonitor.cpp:135
+#: monitorswidget.cpp:128 notificationmonitor.cpp:135
 #, kde-format
 msgid "Properties"
 msgstr "Свойства"
 
-#: monitorswidget.cpp:137 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:420
 #, kde-format
 msgid "Subscriber"
 msgstr "Подписчик"
 
-#: monitorswidget.cpp:138
+#: monitorswidget.cpp:137
 #, kde-format
 msgid "Session ID"
 msgstr "Идентификатор сеанса"
 
-#: monitorswidget.cpp:139
+#: monitorswidget.cpp:138
 #, kde-format
 msgid "Monitored Collections:"
 msgstr "Отслеживаемые коллекции:"
 
-#: monitorswidget.cpp:140
+#: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Items:"
 msgstr "Отслеживаемые объекты:"
 
-#: monitorswidget.cpp:141
+#: monitorswidget.cpp:140
 #, kde-format
 msgid "Monitored Tags:"
 msgstr "Отслеживаемые метки:"
 
-#: monitorswidget.cpp:142
+#: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Types:"
 msgstr "Отслеживаемые типы:"
 
-#: monitorswidget.cpp:143
+#: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Mime Types:"
 msgstr "Отслеживаемые типы MIME:"
 
-#: monitorswidget.cpp:144
+#: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Resources:"
 msgstr "Отслеживаемые ресурсы:"
 
-#: monitorswidget.cpp:145
+#: monitorswidget.cpp:144
 #, kde-format
 msgid "Ignored Sessions:"
 msgstr "Игнорируемые сеансы:"
 
-#: monitorswidget.cpp:146
+#: monitorswidget.cpp:145
 #, kde-format
 msgid "All Monitored:"
 msgstr "Все отслеживаемые:"
 
-#: monitorswidget.cpp:147
+#: monitorswidget.cpp:146
 #, kde-format
 msgid "Is Exclusive:"
 msgstr "Исключающий:"
 
-#: monitorswidget.cpp:149 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "Область получения объекта"
 
-#: monitorswidget.cpp:151
+#: monitorswidget.cpp:150
 #, kde-format
 msgid "Payload Parts"
 msgstr "Части данных нагрузки"
 
-#: monitorswidget.cpp:152 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:474
 #, kde-format
 msgid "Full Payload"
 msgstr "Полная нагрузка"
 
-#: monitorswidget.cpp:154 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:475
 #, kde-format
 msgid "All Attributes"
 msgstr "Все атрибуты"
 
-#: monitorswidget.cpp:155
+#: monitorswidget.cpp:154
 #, kde-format
 msgid "Cache only"
 msgstr "Только кэш"
 
-#: monitorswidget.cpp:156
+#: monitorswidget.cpp:155
 #, kde-format
 msgid "Check for Cached Payloads Parts Only"
 msgstr "Проверять только кэшированные части данных нагрузки"
 
-#: monitorswidget.cpp:158
+#: monitorswidget.cpp:157
 #, kde-format
 msgid "Fetch mtime"
 msgstr "Получить mtime"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:482
 #, kde-format
 msgid "Fetch GID"
 msgstr "Получить GID"
 
-#: monitorswidget.cpp:160 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:528
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "Игнорировать ошибки получения"
 
-#: monitorswidget.cpp:161
+#: monitorswidget.cpp:160
 #, kde-format
 msgid "Fetch Change Since"
 msgstr "Получить изменения после"
 
-#: monitorswidget.cpp:162
+#: monitorswidget.cpp:161
 #, kde-format
 msgid "Fetch RID"
 msgstr "Получить RID"
 
-#: monitorswidget.cpp:163 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:483
 #, kde-format
 msgid "Fetch Tags"
 msgstr "Получить метки"
 
-#: monitorswidget.cpp:166
+#: monitorswidget.cpp:165
 #, kde-format
 msgid "Collection Fetch Scope"
 msgstr "Область получения коллекции"
 
-#: monitorswidget.cpp:169 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "Область получения меток"
