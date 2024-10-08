@@ -14,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/AgentConfigurationDialog>
 #include <Akonadi/AgentFilterProxyModel>
 #include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentInstanceFilterProxyModel>
 #include <Akonadi/AgentInstanceWidget>
 #include <Akonadi/AgentManager>
 #include <Akonadi/AgentTypeDialog>
@@ -118,7 +119,7 @@ AgentWidget::AgentWidget(QWidget *parent)
     ui.restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot"))); // FIXME: Is using system-reboot icon here a good idea?
     connect(ui.restartButton, &QPushButton::clicked, this, &AgentWidget::restartAgent);
 
-    ui.instanceWidget->agentFilterProxyModel()->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    ui.instanceWidget->agentInstanceFilterProxyModel()->setFilterCaseSensitivity(Qt::CaseInsensitive);
     connect(ui.mFilterAccount, &QLineEdit::textChanged, this, &AgentWidget::slotSearchAgentType);
     ui.mFilterAccount->installEventFilter(this);
     ControlGui::widgetNeedsAkonadi(this);
@@ -126,7 +127,7 @@ AgentWidget::AgentWidget(QWidget *parent)
 
 void AgentWidget::slotSearchAgentType(const QString &str)
 {
-    ui.instanceWidget->agentFilterProxyModel()->setFilterRegularExpression(str);
+    ui.instanceWidget->agentInstanceFilterProxyModel()->setFilterRegularExpression(str);
 }
 
 bool AgentWidget::eventFilter(QObject *obj, QEvent *event)
