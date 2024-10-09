@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-09 00:40+0000\n"
 "PO-Revision-Date: 2024-07-30 16:28+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -53,149 +53,149 @@ msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Configuración del agente"
 
-#: agentwidget.cpp:94
+#: agentwidget.cpp:95
 #, kde-format
 msgid "Configure"
 msgstr "Configurar"
 
-#: agentwidget.cpp:95
+#: agentwidget.cpp:96
 #, kde-format
 msgid "Configure Natively..."
 msgstr "Configurar de forma nativa..."
 
-#: agentwidget.cpp:96
+#: agentwidget.cpp:97
 #, kde-format
 msgid "Configure Remotely..."
 msgstr "Configurar de forma remota..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
-#: agentwidget.cpp:102 agentwidget.ui:240
+#: agentwidget.cpp:103 agentwidget.ui:240
 #, kde-format
 msgid "Synchronize"
 msgstr "Sincronizar"
 
-#: agentwidget.cpp:103
+#: agentwidget.cpp:104
 #, kde-format
 msgid "Synchronize All"
 msgstr "Sincronizar todo"
 
-#: agentwidget.cpp:104
+#: agentwidget.cpp:105
 #, kde-format
 msgid "Synchronize Collection Tree"
 msgstr "Sincronizar el árbol de la colección"
 
-#: agentwidget.cpp:105
+#: agentwidget.cpp:106
 #, kde-format
 msgid "Synchronize Tags"
 msgstr "Sincronizar etiquetas"
 
-#: agentwidget.cpp:194
+#: agentwidget.cpp:195
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
 msgstr[0] "¿Realmente desea borrar la instancia del agente seleccionada?"
 msgstr[1] "¿Realmente desea borrar estas %1 instancias del agente?"
 
-#: agentwidget.cpp:195
+#: agentwidget.cpp:196
 #, kde-format
 msgid "Agent Deletion"
 msgstr "Borrado de agente"
 
-#: agentwidget.cpp:195
+#: agentwidget.cpp:196
 #, kde-format
 msgid "Multiple Agent Deletion"
 msgstr "Borrado de agente múltiple"
 
-#: agentwidget.cpp:265
+#: agentwidget.cpp:266
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Lista de tareas de recursos"
 
-#: agentwidget.cpp:289
+#: agentwidget.cpp:290
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Registro de notificaciones de cambios"
 
-#: agentwidget.cpp:339
+#: agentwidget.cpp:340
 #, kde-format
 msgid "Cloning agent failed: %1."
 msgstr "La clonación del agente ha fallado: %1."
 
-#: agentwidget.cpp:402
+#: agentwidget.cpp:403
 #, kde-format
 msgid "Online"
 msgstr "Con conexión"
 
-#: agentwidget.cpp:402
+#: agentwidget.cpp:403
 #, kde-format
 msgid "Offline"
 msgstr "Sin conexión"
 
-#: agentwidget.cpp:406
+#: agentwidget.cpp:407
 #, kde-format
 msgid "Idle"
 msgstr "Inactivo"
 
-#: agentwidget.cpp:409
+#: agentwidget.cpp:410
 #, kde-format
 msgid "Running (%1%)"
 msgstr "En ejecución (%1%)"
 
-#: agentwidget.cpp:412
+#: agentwidget.cpp:413
 #, kde-format
 msgid "Broken"
 msgstr "No operativo"
 
-#: agentwidget.cpp:415
+#: agentwidget.cpp:416
 #, kde-format
 msgid "Not Configured"
 msgstr "Sin configurar"
 
-#: agentwidget.cpp:418
+#: agentwidget.cpp:419
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:434
+#: agentwidget.cpp:435
 #, kde-format
 msgid "Add Agent..."
 msgstr "Añadir agente..."
 
-#: agentwidget.cpp:435
+#: agentwidget.cpp:436
 #, kde-format
 msgid "Clone Agent"
 msgstr "Clonar agente"
 
-#: agentwidget.cpp:438
+#: agentwidget.cpp:439
 #, kde-format
 msgid "Abort Activity"
 msgstr "Interrumpir actividad"
 
-#: agentwidget.cpp:440
+#: agentwidget.cpp:441
 #, kde-format
 msgid "Restart Agent"
 msgstr "Reiniciar agente"
 
-#: agentwidget.cpp:443
+#: agentwidget.cpp:444
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Conmutar estado de conexión"
 
-#: agentwidget.cpp:444
+#: agentwidget.cpp:445
 #, kde-format
 msgid "Show task list"
 msgstr "Mostrar lista de tareas"
 
-#: agentwidget.cpp:445
+#: agentwidget.cpp:446
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Mostrar el registro de notificaciones de cambios"
 
-#: agentwidget.cpp:447
+#: agentwidget.cpp:448
 #, kde-format
 msgid "Remove Agent"
 msgstr "Eliminar agente"
