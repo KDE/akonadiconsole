@@ -37,7 +37,12 @@ public:
     QDateTime timestamp;
     QDateTime startedTimestamp;
     QDateTime endedTimestamp;
-    enum JobState { Initial = 0, Running, Ended, Failed };
+    enum JobState {
+        Initial = 0,
+        Running,
+        Ended,
+        Failed
+    };
     JobState state;
     QString error;
     QString debugString;

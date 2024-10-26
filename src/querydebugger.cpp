@@ -68,7 +68,11 @@ class QueryTreeModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum RowType { Connection, Transaction, Query };
+    enum RowType {
+        Connection,
+        Transaction,
+        Query
+    };
 
 private:
     class Node
@@ -100,7 +104,11 @@ private:
             qDeleteAll(queries);
         }
 
-        enum TransactionType { Begin, Commit, Rollback };
+        enum TransactionType {
+            Begin,
+            Commit,
+            Rollback
+        };
         TransactionType transactionType;
         QList<QueryNode *> queries;
     };
@@ -118,7 +126,13 @@ private:
     };
 
 public:
-    enum { RowTypeRole = Qt::UserRole + 1, QueryRole, QueryResultsCountRole, QueryResultsRole, QueryValuesRole };
+    enum {
+        RowTypeRole = Qt::UserRole + 1,
+        QueryRole,
+        QueryResultsCountRole,
+        QueryResultsRole,
+        QueryValuesRole
+    };
 
     QueryTreeModel(QObject *parent)
         : QAbstractItemModel(parent)
@@ -512,8 +526,17 @@ public:
         mSpecialRows[TOTAL].calls = 0;
     }
 
-    enum SPECIAL_ROWS { TOTAL, NUM_SPECIAL_ROWS };
-    enum COLUMNS { DurationColumn, CallsColumn, AvgDurationColumn, QueryColumn, NUM_COLUMNS };
+    enum SPECIAL_ROWS {
+        TOTAL,
+        NUM_SPECIAL_ROWS
+    };
+    enum COLUMNS {
+        DurationColumn,
+        CallsColumn,
+        AvgDurationColumn,
+        QueryColumn,
+        NUM_COLUMNS
+    };
 
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {

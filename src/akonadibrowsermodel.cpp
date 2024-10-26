@@ -39,7 +39,12 @@ public:
 
     ~GenericState() override = default;
 
-    enum Columns { IdColumn = 0, RemoteIdColumn = 1, GIDColumn = 2, MimeTypeColumn = 3 };
+    enum Columns {
+        IdColumn = 0,
+        RemoteIdColumn = 1,
+        GIDColumn = 2,
+        MimeTypeColumn = 3
+    };
 
     [[nodiscard]] QVariant entityData(const Item &item, int column, int role) const override
     {

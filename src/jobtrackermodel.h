@@ -25,7 +25,9 @@ public:
 
     JobTracker &jobTracker(); // for the unittest
 
-    enum Roles { FailedIdRole = Qt::UserRole + 1 };
+    enum Roles {
+        FailedIdRole = Qt::UserRole + 1
+    };
 
     enum Column {
         ColumnJobId,

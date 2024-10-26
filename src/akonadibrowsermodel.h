@@ -20,7 +20,12 @@ public:
     explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = nullptr);
     ~AkonadiBrowserModel() override;
 
-    enum ItemDisplayMode { GenericMode, MailMode, ContactsMode, CalendarMode };
+    enum ItemDisplayMode {
+        GenericMode,
+        MailMode,
+        ContactsMode,
+        CalendarMode
+    };
 
     void setItemDisplayMode(ItemDisplayMode itemDisplayMode);
     ItemDisplayMode itemDisplayMode() const;

@@ -21,7 +21,9 @@ class LIBAKONADICONSOLE_EXPORT MonitorsModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    enum Roles { SubscriberRole = Qt::UserRole };
+    enum Roles {
+        SubscriberRole = Qt::UserRole
+    };
 
     explicit MonitorsModel(QObject *parent = nullptr);
     ~MonitorsModel() override;

@@ -27,7 +27,9 @@ public:
         int line;
     };
 
-    enum Roles { MessageRole = Qt::UserRole };
+    enum Roles {
+        MessageRole = Qt::UserRole
+    };
 
     enum Columns {
         TimeColumn,
