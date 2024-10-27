@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2024-08-23 15:38+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -276,23 +276,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "Restartovat"
 
-#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:373
 #, kde-format
 msgid "Collection"
 msgstr "Sbírka"
 
-#: akonadibrowsermodel.cpp:70
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "Předmět"
 
-#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
 msgstr "Odesílatel"
 
-#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Datum"
@@ -777,7 +777,7 @@ msgstr "Čeká se"
 msgid "Running"
 msgstr "Spuštěno"
 
-#: jobtracker.cpp:30 querydebugger.cpp:345
+#: jobtracker.cpp:30 querydebugger.cpp:359
 #, kde-format
 msgid "Ended"
 msgstr "Ukončeno"
@@ -920,7 +920,7 @@ msgstr "Uložit do souboru..."
 msgid "Save to File..."
 msgstr "Uložit do souboru..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
+#: logging.cpp:136 querydebugger.cpp:363 searchwidget.cpp:160
 #, kde-format
 msgid "Error"
 msgstr "Chyba"
@@ -1845,42 +1845,42 @@ msgstr ""
 msgid "Fetch All Attributes"
 msgstr ""
 
-#: querydebugger.cpp:341
+#: querydebugger.cpp:355
 #, kde-format
 msgid "Name / Query"
 msgstr "Název / Dotaz"
 
-#: querydebugger.cpp:343
+#: querydebugger.cpp:357
 #, kde-format
 msgid "Started"
 msgstr "Spuštěno"
 
-#: querydebugger.cpp:347
+#: querydebugger.cpp:361
 #, kde-format
 msgid "Duration"
 msgstr "Trvání"
 
-#: querydebugger.cpp:525
+#: querydebugger.cpp:548
 #, kde-format
 msgid "Query"
 msgstr "Dotaz"
 
-#: querydebugger.cpp:527
+#: querydebugger.cpp:550
 #, kde-format
 msgid "Duration [ms]"
 msgstr ""
 
-#: querydebugger.cpp:529
+#: querydebugger.cpp:552
 #, kde-format
 msgid "Calls"
 msgstr "Volání"
 
-#: querydebugger.cpp:531
+#: querydebugger.cpp:554
 #, kde-format
 msgid "Avg. Duration [ms]"
 msgstr ""
 
-#: querydebugger.cpp:653
+#: querydebugger.cpp:676
 #, kde-format
 msgid "Affected Rows:"
 msgstr ""

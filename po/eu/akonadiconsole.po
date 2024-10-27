@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2024-08-03 11:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -279,23 +279,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "Berrabiarazi"
 
-#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:373
 #, kde-format
 msgid "Collection"
 msgstr "Bilduma"
 
-#: akonadibrowsermodel.cpp:70
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "Gaia"
 
-#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
 msgstr "Bidaltzailea"
 
-#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Data"
@@ -785,7 +785,7 @@ msgstr "Itxoiten"
 msgid "Running"
 msgstr "Exekutatzen"
 
-#: jobtracker.cpp:30 querydebugger.cpp:345
+#: jobtracker.cpp:30 querydebugger.cpp:359
 #, kde-format
 msgid "Ended"
 msgstr "Bukatuta"
@@ -928,7 +928,7 @@ msgstr "Gorde fitxategian..."
 msgid "Save to File..."
 msgstr "Gorde fitxategian..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
+#: logging.cpp:136 querydebugger.cpp:363 searchwidget.cpp:160
 #, kde-format
 msgid "Error"
 msgstr "Errorea"
@@ -1853,42 +1853,42 @@ msgstr "Arbasoaren atributuak"
 msgid "Fetch All Attributes"
 msgstr "Ekarri atributu guztiak"
 
-#: querydebugger.cpp:341
+#: querydebugger.cpp:355
 #, kde-format
 msgid "Name / Query"
 msgstr "Izena / Itauna"
 
-#: querydebugger.cpp:343
+#: querydebugger.cpp:357
 #, kde-format
 msgid "Started"
 msgstr "Abiatuta"
 
-#: querydebugger.cpp:347
+#: querydebugger.cpp:361
 #, kde-format
 msgid "Duration"
 msgstr "Iraupena"
 
-#: querydebugger.cpp:525
+#: querydebugger.cpp:548
 #, kde-format
 msgid "Query"
 msgstr "Itauna"
 
-#: querydebugger.cpp:527
+#: querydebugger.cpp:550
 #, kde-format
 msgid "Duration [ms]"
 msgstr "Iraupena [ms]"
 
-#: querydebugger.cpp:529
+#: querydebugger.cpp:552
 #, kde-format
 msgid "Calls"
 msgstr "Deiak"
 
-#: querydebugger.cpp:531
+#: querydebugger.cpp:554
 #, kde-format
 msgid "Avg. Duration [ms]"
 msgstr "Batezbesteko iraupena [ms]"
 
-#: querydebugger.cpp:653
+#: querydebugger.cpp:676
 #, kde-format
 msgid "Affected Rows:"
 msgstr "Ukitutako errenkadak:"

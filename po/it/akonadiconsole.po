@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2024-07-31 01:26+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -275,23 +275,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "Riavvia"
 
-#: akonadibrowsermodel.cpp:69 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:373
 #, kde-format
 msgid "Collection"
 msgstr "Raccolta"
 
-#: akonadibrowsermodel.cpp:70
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "Oggetto"
 
-#: akonadibrowsermodel.cpp:70 debugmodel.cpp:142
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:142
 #, kde-format
 msgid "Sender"
 msgstr "Mittente"
 
-#: akonadibrowsermodel.cpp:70 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Data"
@@ -781,7 +781,7 @@ msgstr "In attesa"
 msgid "Running"
 msgstr "In esecuzione"
 
-#: jobtracker.cpp:30 querydebugger.cpp:345
+#: jobtracker.cpp:30 querydebugger.cpp:359
 #, kde-format
 msgid "Ended"
 msgstr "Terminato"
@@ -924,7 +924,7 @@ msgstr "Salva su file..."
 msgid "Save to File..."
 msgstr "Salva su file..."
 
-#: logging.cpp:136 querydebugger.cpp:349 searchwidget.cpp:160
+#: logging.cpp:136 querydebugger.cpp:363 searchwidget.cpp:160
 #, kde-format
 msgid "Error"
 msgstr "Errore"
@@ -1850,42 +1850,42 @@ msgstr "Attributi dei predecessori"
 msgid "Fetch All Attributes"
 msgstr "Recupera tutti gli attributi"
 
-#: querydebugger.cpp:341
+#: querydebugger.cpp:355
 #, kde-format
 msgid "Name / Query"
 msgstr "Nome / Interrogazione"
 
-#: querydebugger.cpp:343
+#: querydebugger.cpp:357
 #, kde-format
 msgid "Started"
 msgstr "Iniziato"
 
-#: querydebugger.cpp:347
+#: querydebugger.cpp:361
 #, kde-format
 msgid "Duration"
 msgstr "Durata"
 
-#: querydebugger.cpp:525
+#: querydebugger.cpp:548
 #, kde-format
 msgid "Query"
 msgstr "Interroga"
 
-#: querydebugger.cpp:527
+#: querydebugger.cpp:550
 #, kde-format
 msgid "Duration [ms]"
 msgstr "Durata [ms]"
 
-#: querydebugger.cpp:529
+#: querydebugger.cpp:552
 #, kde-format
 msgid "Calls"
 msgstr "Chiamate"
 
-#: querydebugger.cpp:531
+#: querydebugger.cpp:554
 #, kde-format
 msgid "Avg. Duration [ms]"
 msgstr "Durata media [ms]"
 
-#: querydebugger.cpp:653
+#: querydebugger.cpp:676
 #, kde-format
 msgid "Affected Rows:"
 msgstr "Righe interessate:"
