@@ -7,6 +7,7 @@
 #include "dbconsole.h"
 #include <Akonadi/DbAccess>
 
+#include <KStandardActions>
 #include <QAction>
 
 #include <KConfigGroup>
@@ -86,7 +87,7 @@ DbConsoleTab::DbConsoleTab(int index, QWidget *parent)
 {
     ui.setupUi(this);
 
-    QAction *copyAction = KStandardAction::copy(this, &DbConsoleTab::copyCell, this);
+    QAction *copyAction = KStandardActions::copy(this, &DbConsoleTab::copyCell, this);
     ui.resultView->addAction(copyAction);
 
     ui.execButton->setIcon(QIcon::fromTheme(QStringLiteral("application-x-executable")));

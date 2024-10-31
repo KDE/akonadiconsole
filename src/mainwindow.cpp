@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     setCentralWidget(mMain);
 
-    KStandardAction::quit(qApp, &QApplication::quit, actionCollection());
+    KStandardActions::quit(qApp, &QApplication::quit, actionCollection());
 
     setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, QStringLiteral("akonadiconsoleui.rc"));
     AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("UiState")));
