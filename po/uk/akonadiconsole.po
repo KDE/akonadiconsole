@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2024-11-01 00:40+0000\n"
 "PO-Revision-Date: 2024-07-30 09:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -685,7 +685,7 @@ msgstr "Програми:"
 msgid "Refresh"
 msgstr "Оновити"
 
-#: dbconsole.cpp:79
+#: dbconsole.cpp:80
 #, kde-format
 msgid "Query #%1"
 msgstr "Запит %1"
