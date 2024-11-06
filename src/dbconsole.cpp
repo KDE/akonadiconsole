@@ -13,7 +13,6 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KStandardAction>
 #include <QIcon>
 
 #include <QApplication>
