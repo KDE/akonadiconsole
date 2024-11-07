@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-01 00:40+0000\n"
+"POT-Creation-Date: 2024-11-07 00:40+0000\n"
 "PO-Revision-Date: 2024-07-31 10:10+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -683,7 +683,7 @@ msgstr "Programmas:"
 msgid "Refresh"
 msgstr "Refresca"
 
-#: dbconsole.cpp:80
+#: dbconsole.cpp:79
 #, kde-format
 msgid "Query #%1"
 msgstr "Requesta #%1"
