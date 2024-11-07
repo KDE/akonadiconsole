@@ -10,9 +10,12 @@ Dependencies:
     'pim/akonadi' : '@same'
     'pim/akonadi-contacts' : '@same'
     'pim/akonadi-mime' : '@same'
-    'pim/akonadi-search' : '@same'
     'pim/calendarsupport' : '@same'
     'pim/kimap' : '@same'
     'pim/kmime' : '@same'
     'pim/libkdepim' : '@same'
     'pim/messagelib' : '@same'
+
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'pim/akonadi-search' : '@same'    
