@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-# Tommi Nieminen <translator@legisign.org>, 2023, 2024.
+# SPDX-FileCopyrightText: 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-07 00:40+0000\n"
-"PO-Revision-Date: 2024-01-29 17:39+0200\n"
+"PO-Revision-Date: 2024-11-18 09:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: agentconfigdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Save Configuration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Configuration"
 msgstr "Tallenna määritys"
 
 #: agentconfigdialog.cpp:34
-#, fuzzy, kde-format
-#| msgid "Refresh"
+#, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
 msgstr "Virkistä"
@@ -47,8 +45,7 @@ msgid "Apply Configuration"
 msgstr "Ota määritys käyttöön"
 
 #: agentconfigdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Agent Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Agent Configuration"
 msgstr "Agentin määritys"
@@ -107,15 +104,13 @@ msgid "Multiple Agent Deletion"
 msgstr "Usean agentin poistaminen"
 
 #: agentwidget.cpp:266
-#, fuzzy, kde-format
-#| msgid "Resource Task List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Resurssin tehtäväluettelo"
 
 #: agentwidget.cpp:290
-#, fuzzy, kde-format
-#| msgid "Change Notification Log"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Muutosilmoitusloki"
@@ -381,25 +376,22 @@ msgid "&Delete tag..."
 msgstr "&Poista luokitus…"
 
 #: browserwidget.cpp:570
-#, fuzzy, kde-format
-#| msgid "Added Tags"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr "Lisätyt luokitukset"
+msgstr "Lisää luokitus"
 
 #: browserwidget.cpp:585
-#, fuzzy, kde-format
-#| msgid "Add &subtag..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr "Lisää &aliluokitus…"
+msgstr "Lisää aliluokitus"
 
 #: browserwidget.cpp:596 browserwidget.cpp:613
-#, fuzzy, kde-format
-#| msgid "Modify"
+#, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr "Muuta"
+msgstr "Muuta luokitusta"
 
 #: browserwidget.cpp:622
 #, kde-format
@@ -678,8 +670,7 @@ msgid "Content Types"
 msgstr "Sisältötyypit"
 
 #: connectionpage.cpp:37 logging.cpp:53
-#, fuzzy, kde-format
-#| msgid "Programs:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
 msgstr "Ohjelmat:"
@@ -712,8 +703,7 @@ msgid "Message"
 msgstr "Viesti"
 
 #: debugwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Enable debugger"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Käytä virheenpaikannusta"
@@ -724,36 +714,31 @@ msgid "All"
 msgstr "Kaikki"
 
 #: debugwidget.cpp:64
-#, fuzzy, kde-format
-#| msgid "Clear Information View"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Information View"
 msgstr "Tyhjennä tietonäkymä"
 
 #: debugwidget.cpp:65
-#, fuzzy, kde-format
-#| msgid "Clear Filtered Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear Filtered Messages"
 msgstr "Tyhjennä suodatetut viestit"
 
 #: debugwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Clear All Messages"
+#, kde-format
 msgctxt "@action:button"
 msgid "Clear All Messages"
 msgstr "Tyhjennä kaikki viestit"
 
 #: debugwidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "Save Filtered Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
 msgstr "Tallenna suodatetut viestit…"
 
 #: debugwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Save All Messages ..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
 msgstr "Tallenna kaikki viestit…"
@@ -764,8 +749,7 @@ msgid "Connect"
 msgstr "Yhdistä"
 
 #: instanceselector.cpp:88
-#, fuzzy, kde-format
-#| msgid "Remote Akonadi Console (%1)"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remote Akonadi Console (%1)"
 msgstr "Akonadi-etäkonsoli (%1)"
@@ -848,15 +832,13 @@ msgid "Info"
 msgstr "Tietoa"
 
 #: jobtrackersearchwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Show Only Errors"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show Only Errors"
 msgstr "Näytä vain virheet"
 
 #: jobtrackersearchwidget.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Etsi…"
@@ -867,8 +849,7 @@ msgid "All Columns"
 msgstr "Kaikki sarakkeet"
 
 #: jobtrackerwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Save to file..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
 msgstr "Tallenna tiedostoon…"
@@ -894,15 +875,13 @@ msgid "Expand All"
 msgstr "Laajenna kaikki"
 
 #: logging.cpp:44
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable"
 msgstr "Käytä"
 
 #: logging.cpp:56 notificationmonitor.cpp:64
-#, fuzzy, kde-format
-#| msgid "Types:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
 msgstr "Tyypit:"
@@ -928,15 +907,13 @@ msgid "Fatal"
 msgstr "Vakava"
 
 #: logging.cpp:64
-#, fuzzy, kde-format
-#| msgid "Categories:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
 msgstr "Luokat:"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
-#, fuzzy, kde-format
-#| msgid "Save to File..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
 msgstr "Tallenna tiedostoon…"
@@ -1003,10 +980,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadin hallinta- ja virheenpaikannuskonsoli"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2023 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2024 the Akonadi developer"
-msgstr "© 2006–2023 Akonadin kehittäjä"
+msgstr "© 2006–2024 Akonadin kehittäjä"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
@@ -1255,12 +1231,12 @@ msgstr "Kaikki tarkkaillut:"
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Is Exclusive:"
-msgstr ""
+msgstr "On eksklusiivinen:"
 
 #: monitorswidget.cpp:148 notificationmonitor.cpp:455
 #, kde-format
 msgid "Item Fetch Scope"
-msgstr ""
+msgstr "Tietueen noudon ala"
 
 #: monitorswidget.cpp:150
 #, kde-format
@@ -1325,7 +1301,7 @@ msgstr "Kokoelmanoudon ala"
 #: monitorswidget.cpp:168 notificationmonitor.cpp:531
 #, kde-format
 msgid "Tag Fetch Scope"
-msgstr ""
+msgstr "Luokituksen noudon ala"
 
 #: notificationmodel.cpp:77 notificationmonitor.cpp:397
 #, kde-format
@@ -1354,12 +1330,12 @@ msgstr "Siirrä"
 #: notificationmodel.cpp:99 notificationmonitor.cpp:184
 #, kde-format
 msgid "ModifyFlags"
-msgstr ""
+msgstr "Muutosliput"
 
 #: notificationmodel.cpp:101 notificationmonitor.cpp:187
 #, kde-format
 msgid "ModifyTags"
-msgstr ""
+msgstr "Muutosluokitukset"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
@@ -1463,7 +1439,7 @@ msgstr "Poistetut luokitukset"
 #: notificationmonitor.cpp:204
 #, kde-format
 msgid "Must retrieve"
-msgstr ""
+msgstr "Pitää noutaa"
 
 #: notificationmonitor.cpp:218
 #, kde-format
@@ -1746,7 +1722,7 @@ msgstr "Kaikki tarkkaillut"
 #: notificationmonitor.cpp:453
 #, kde-format
 msgid "Exclusive"
-msgstr ""
+msgstr "Eksklusiivinen"
 
 #: notificationmonitor.cpp:457
 #, kde-format
@@ -1963,46 +1939,40 @@ msgid "Results:"
 msgstr "Tulokset"
 
 #: searchwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
-msgstr "Hakukysely:"
+msgstr "Hakutalletustila:"
 
 #: searchwidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Etsi"
 
 #: searchwidget.cpp:63
-#, fuzzy, kde-format
-#| msgid "Search query:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
 msgstr "Hakukysely:"
 
 #: searchwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Results (Documents):"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
 msgstr "Tulokset (tiedostot):"
 
 #: searchwidget.cpp:82
-#, fuzzy, kde-format
-#| msgid "Document:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
 msgstr "Tiedosto:"
 
 #: searchwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Item:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
-msgstr "Kohde:"
+msgstr "Tietue:"
 
 #: searchwidget.cpp:154
 #, kde-format
