@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:40+0000\n"
+"POT-Creation-Date: 2024-12-20 00:41+0000\n"
 "PO-Revision-Date: 2024-08-03 11:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -254,8 +254,8 @@ msgstr "Gehitu..."
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:355
-#: notificationmonitor.cpp:389 notificationmonitor.cpp:413
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:363
+#: notificationmonitor.cpp:397 notificationmonitor.cpp:421
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"
@@ -280,7 +280,7 @@ msgid "Restart"
 msgstr "Berrabiarazi"
 
 #: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
-#: notificationmonitor.cpp:373
+#: notificationmonitor.cpp:381
 #, kde-format
 msgid "Collection"
 msgstr "Bilduma"
@@ -429,8 +429,8 @@ msgstr "Euskarririk gabeko mota"
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
 #: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
-#: notificationmonitor.cpp:239 notificationmonitor.cpp:511
-#: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
+#: notificationmonitor.cpp:247 notificationmonitor.cpp:519
+#: notificationmonitor.cpp:544 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "Atributuak"
@@ -535,14 +535,14 @@ msgstr "baliogabea/baliogabea"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:264
 #, kde-format
 msgid "Flags"
 msgstr "Banderak"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:84
-#: notificationmonitor.cpp:257 notificationmonitor.cpp:435
+#: notificationmonitor.cpp:265 notificationmonitor.cpp:443
 #, kde-format
 msgid "Tags"
 msgstr "Etiketak"
@@ -577,8 +577,8 @@ msgstr "Sortu"
 #: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
 #: notificationmodel.cpp:111 notificationmodel.cpp:129
 #: notificationmodel.cpp:141 notificationmonitor.cpp:169
-#: notificationmonitor.cpp:349 notificationmonitor.cpp:386
-#: notificationmonitor.cpp:410
+#: notificationmonitor.cpp:357 notificationmonitor.cpp:394
+#: notificationmonitor.cpp:418
 #, kde-format
 msgid "Modify"
 msgstr "Aldatu"
@@ -713,7 +713,7 @@ msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Gaitu araztailea"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:516
+#: debugwidget.cpp:49 notificationmonitor.cpp:524
 #, kde-format
 msgid "All"
 msgstr "Dena"
@@ -933,7 +933,7 @@ msgstr "Gorde fitxategian..."
 msgid "Error"
 msgstr "Errorea"
 
-#: logging.cpp:136 notificationmonitor.cpp:549
+#: logging.cpp:136 notificationmonitor.cpp:557
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "Fitxategia irekitzea huts egin du: %1"
@@ -949,7 +949,7 @@ msgid "Program"
 msgstr "Programa"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:232
+#: notificationmonitor.cpp:240
 #, kde-format
 msgid "Type"
 msgstr "Mota"
@@ -1108,13 +1108,13 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "Saioa/Harpideduna"
 
-#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
-#: notificationmonitor.cpp:429
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:214
+#: notificationmonitor.cpp:437
 #, kde-format
 msgid "Items"
 msgstr "Elementuak"
 
-#: monitorswidget.cpp:81 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:440
 #, kde-format
 msgid "Collections"
 msgstr "Bildumak"
@@ -1129,19 +1129,19 @@ msgstr "Harpidedunak"
 msgid "Notification"
 msgstr "Jakinarazpena"
 
-#: monitorswidget.cpp:99 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:515
 #, kde-format
 msgid "List Filter"
 msgstr "Zerrenda-iragazkia"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:516
 #, kde-format
 msgid "Include Statistics"
 msgstr "Sartu estatistikak"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:195
-#: notificationmonitor.cpp:368 notificationmonitor.cpp:396
-#: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:376 notificationmonitor.cpp:404
+#: notificationmonitor.cpp:517 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "Baliabidea"
@@ -1151,7 +1151,7 @@ msgstr "Baliabidea"
 msgid "Content MimeTypes"
 msgstr "Edukiaren MIME-motak"
 
-#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:533
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "Arbasoa berreskuratzea"
@@ -1161,8 +1161,8 @@ msgstr "Arbasoa berreskuratzea"
 msgid "Ancestor Fetch Scope"
 msgstr "Arbasoa ekartzeko esparrua"
 
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
-#: notificationmonitor.cpp:533
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:520
+#: notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "Ekarri IDa bakarrik"
@@ -1182,7 +1182,7 @@ msgstr "Balioak"
 msgid "Properties"
 msgstr "Propietateak"
 
-#: monitorswidget.cpp:136 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:428
 #, kde-format
 msgid "Subscriber"
 msgstr "Harpideduna"
@@ -1237,7 +1237,7 @@ msgstr "Gainbegiratutako guztia:"
 msgid "Is Exclusive:"
 msgstr "Esklusiboa da:"
 
-#: monitorswidget.cpp:148 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:463
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "Elementua ekartzeko esparrua"
@@ -1247,12 +1247,12 @@ msgstr "Elementua ekartzeko esparrua"
 msgid "Payload Parts"
 msgstr "Zama erabilgarriaren atalak"
 
-#: monitorswidget.cpp:151 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:482
 #, kde-format
 msgid "Full Payload"
 msgstr "Zama erabilgarri osoa"
 
-#: monitorswidget.cpp:153 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:483
 #, kde-format
 msgid "All Attributes"
 msgstr "Atributu guztiak"
@@ -1272,12 +1272,12 @@ msgstr "Ikuskatu cacheratutako zama erabilgarri atalak bakarrik"
 msgid "Fetch mtime"
 msgstr "Ekarri MIME"
 
-#: monitorswidget.cpp:158 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:490
 #, kde-format
 msgid "Fetch GID"
 msgstr "Ekarri GID"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:536
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "Ezikusi berreskuratze erroreak"
@@ -1292,7 +1292,7 @@ msgstr "Ekarri aldaketa noiztik"
 msgid "Fetch RID"
 msgstr "Ekarri RID"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:491
 #, kde-format
 msgid "Fetch Tags"
 msgstr "Ekarri etiketak"
@@ -1302,12 +1302,12 @@ msgstr "Ekarri etiketak"
 msgid "Collection Fetch Scope"
 msgstr "Bilduma ekartzeko esparrua"
 
-#: monitorswidget.cpp:168 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:539
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "Etiketa ekartzeko esparrua"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:397
+#: notificationmodel.cpp:77 notificationmonitor.cpp:405
 #, kde-format
 msgid "Tag"
 msgstr "Etiketa"
@@ -1319,14 +1319,14 @@ msgstr "Harpidetza"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
-#: notificationmonitor.cpp:346 notificationmonitor.cpp:383
-#: notificationmonitor.cpp:407
+#: notificationmonitor.cpp:354 notificationmonitor.cpp:391
+#: notificationmonitor.cpp:415
 #, kde-format
 msgid "Add"
 msgstr "Gehitu"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
-#: notificationmonitor.cpp:172 notificationmonitor.cpp:352
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:360
 #, kde-format
 msgid "Move"
 msgstr "Mugitu"
@@ -1343,22 +1343,22 @@ msgstr "ModifyTags"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
-#: notificationmonitor.cpp:392 notificationmonitor.cpp:416
+#: notificationmonitor.cpp:400 notificationmonitor.cpp:424
 #, kde-format
 msgid "InvalidOp"
 msgstr "InvalidOp"
 
-#: notificationmodel.cpp:117 notificationmonitor.cpp:358
+#: notificationmodel.cpp:117 notificationmonitor.cpp:366
 #, kde-format
 msgid "Subscribe"
 msgstr "Harpidetu"
 
-#: notificationmodel.cpp:119 notificationmonitor.cpp:361
+#: notificationmodel.cpp:119 notificationmonitor.cpp:369
 #, kde-format
 msgid "Unsubscribe"
 msgstr "Harpidetza kendu"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:364
+#: notificationmodel.cpp:121 notificationmonitor.cpp:372
 #, kde-format
 msgid "InvalidIp"
 msgstr "InvalidIp"
@@ -1369,8 +1369,8 @@ msgid "Unknown"
 msgstr "Ezezaguna"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
-#: notificationmonitor.cpp:367 notificationmonitor.cpp:395
-#: notificationmonitor.cpp:419
+#: notificationmonitor.cpp:375 notificationmonitor.cpp:403
+#: notificationmonitor.cpp:427
 #, kde-format
 msgid "Operation"
 msgstr "Eragiketa"
@@ -1400,7 +1400,7 @@ msgstr "Gaitu jakinarazpen begiralea"
 msgid "Timestamp"
 msgstr "Denbora-zigilua"
 
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:369
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:377
 #, kde-format
 msgid "Parent Collection"
 msgstr "Guraso-bilduma"
@@ -1410,7 +1410,7 @@ msgstr "Guraso-bilduma"
 msgid "Parent Dest Col"
 msgstr "Guraso jomuga Zut."
 
-#: notificationmonitor.cpp:198 notificationmonitor.cpp:371
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:379
 #, kde-format
 msgid "Destination Resource"
 msgstr "Jomugako baliabidea"
@@ -1430,425 +1430,420 @@ msgstr "Gehitutako banderak"
 msgid "Removed Flags"
 msgstr "Kendutako banderak"
 
-#: notificationmonitor.cpp:202
+#: notificationmonitor.cpp:209
 #, kde-format
 msgid "Added Tags"
 msgstr "Gehitutako etiketak"
 
-#: notificationmonitor.cpp:203
-#, kde-format
-msgid "Removed Tags"
-msgstr "Ezabatutako etiketak"
-
-#: notificationmonitor.cpp:204
+#: notificationmonitor.cpp:212
 #, kde-format
 msgid "Must retrieve"
 msgstr "Berreskuratu egin behar da"
 
-#: notificationmonitor.cpp:218
+#: notificationmonitor.cpp:226
 #, kde-format
 msgid "id"
 msgstr "ID"
 
-#: notificationmonitor.cpp:219
+#: notificationmonitor.cpp:227
 #, kde-format
 msgid "remoteId"
 msgstr "remoteId"
 
-#: notificationmonitor.cpp:220
+#: notificationmonitor.cpp:228
 #, kde-format
 msgid "name"
 msgstr "izena"
 
-#: notificationmonitor.cpp:222 notificationmonitor.cpp:269
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:230 notificationmonitor.cpp:277
+#: notificationmonitor.cpp:325
 #, kde-format
 msgid "Ancestor"
 msgstr "Arbasoa"
 
-#: notificationmonitor.cpp:229 notificationmonitor.cpp:303
+#: notificationmonitor.cpp:237 notificationmonitor.cpp:311
 #, kde-format
 msgid "ID"
 msgstr "ID"
 
-#: notificationmonitor.cpp:230 notificationmonitor.cpp:304
+#: notificationmonitor.cpp:238 notificationmonitor.cpp:312
 #, kde-format
 msgid "Parent ID"
 msgstr "Guraso ID"
 
-#: notificationmonitor.cpp:231 notificationmonitor.cpp:252
+#: notificationmonitor.cpp:239 notificationmonitor.cpp:260
 #, kde-format
 msgid "GID"
 msgstr "GID"
 
-#: notificationmonitor.cpp:233 notificationmonitor.cpp:307
+#: notificationmonitor.cpp:241 notificationmonitor.cpp:315
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "Urrutiko ID"
 
-#: notificationmonitor.cpp:248
+#: notificationmonitor.cpp:256
 #, kde-format
 msgid "Revision"
 msgstr "Berrikuspena"
 
-#: notificationmonitor.cpp:249
+#: notificationmonitor.cpp:257
 #, kde-format
 msgid "ParentID"
 msgstr "ParentID"
 
-#: notificationmonitor.cpp:250
+#: notificationmonitor.cpp:258
 #, kde-format
 msgid "RemoteID"
 msgstr "RemoteID"
 
-#: notificationmonitor.cpp:251
+#: notificationmonitor.cpp:259
 #, kde-format
 msgid "RemoteRev"
 msgstr "RemoteRev"
 
-#: notificationmonitor.cpp:253 notificationmonitor.cpp:291
-#: notificationmonitor.cpp:313
+#: notificationmonitor.cpp:261 notificationmonitor.cpp:299
+#: notificationmonitor.cpp:321
 #, kde-format
 msgid "Size"
 msgstr "Neurria"
 
-#: notificationmonitor.cpp:254
+#: notificationmonitor.cpp:262
 #, kde-format
 msgid "MimeType"
 msgstr "MIME-mota"
 
-#: notificationmonitor.cpp:255
+#: notificationmonitor.cpp:263
 #, kde-format
 msgid "MTime"
 msgstr "MTime"
 
-#: notificationmonitor.cpp:266
+#: notificationmonitor.cpp:274
 #, kde-format
 msgid "VRefs"
 msgstr "VRefs"
 
-#: notificationmonitor.cpp:275
+#: notificationmonitor.cpp:283
 #, kde-format
 msgid "Parts"
 msgstr "Atalak"
 
-#: notificationmonitor.cpp:282
+#: notificationmonitor.cpp:290
 #, kde-format
 msgid "External"
 msgstr "Kanpokoa"
 
-#: notificationmonitor.cpp:285
+#: notificationmonitor.cpp:293
 #, kde-format
 msgid "Internal"
 msgstr "Barnekoa"
 
-#: notificationmonitor.cpp:288
+#: notificationmonitor.cpp:296
 #, kde-format
 msgid "Foreign"
 msgstr "Atzerrikoa"
 
-#: notificationmonitor.cpp:292
+#: notificationmonitor.cpp:300
 #, kde-format
 msgid "Storage Type"
 msgstr "Biltegiratze-mota"
 
-#: notificationmonitor.cpp:293
+#: notificationmonitor.cpp:301
 #, kde-format
 msgid "Version"
 msgstr "Bertsioa"
 
-#: notificationmonitor.cpp:294
+#: notificationmonitor.cpp:302
 #, kde-format
 msgid "Data"
 msgstr "Datuak"
 
-#: notificationmonitor.cpp:305
+#: notificationmonitor.cpp:313
 #, kde-format
 msgid "Name"
 msgstr "Izena"
 
-#: notificationmonitor.cpp:306
+#: notificationmonitor.cpp:314
 #, kde-format
 msgid "Mime Types"
 msgstr "MIME motak"
 
-#: notificationmonitor.cpp:308
+#: notificationmonitor.cpp:316
 #, kde-format
 msgid "Remote Revision"
 msgstr "Urrutiko berrikuspena"
 
-#: notificationmonitor.cpp:309
+#: notificationmonitor.cpp:317
 #, kde-format
 msgid "Statistics"
 msgstr "Estatistikak"
 
-#: notificationmonitor.cpp:311
+#: notificationmonitor.cpp:319
 #, kde-format
 msgid "Count"
 msgstr "Kopurua"
 
-#: notificationmonitor.cpp:312
+#: notificationmonitor.cpp:320
 #, kde-format
 msgid "Unseen"
 msgstr "Ikusi gabe"
 
-#: notificationmonitor.cpp:315
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Search Query"
 msgstr "Bilaketa itauna"
 
-#: notificationmonitor.cpp:316
+#: notificationmonitor.cpp:324
 #, kde-format
 msgid "Search Collections"
 msgstr "Bilatu bildumak"
 
-#: notificationmonitor.cpp:323
+#: notificationmonitor.cpp:331
 #, kde-format
 msgid "Cache Policy"
 msgstr "Cache-gidalerroa"
 
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:333
 #, kde-format
 msgid "Inherit"
 msgstr "Heredatu"
 
-#: notificationmonitor.cpp:326
+#: notificationmonitor.cpp:334
 #, kde-format
 msgid "Check Interval"
 msgstr "Egiaztatze bitartea"
 
-#: notificationmonitor.cpp:327
+#: notificationmonitor.cpp:335
 #, kde-format
 msgid "Cache Timeout"
 msgstr "Cachearen denbora-muga"
 
-#: notificationmonitor.cpp:328
+#: notificationmonitor.cpp:336
 #, kde-format
 msgid "Sync on Demand"
 msgstr "Sinkronizatu eskatu ahala"
 
-#: notificationmonitor.cpp:329
+#: notificationmonitor.cpp:337
 #, kde-format
 msgid "Local Parts"
 msgstr "Atal lokalak"
 
-#: notificationmonitor.cpp:334 notificationmonitor.cpp:498
+#: notificationmonitor.cpp:342 notificationmonitor.cpp:506
 #, kde-format
 msgid "Enabled"
 msgstr "Gaituta"
 
-#: notificationmonitor.cpp:335
+#: notificationmonitor.cpp:343
 #, kde-format
 msgid "DisplayPref"
 msgstr "DisplayPref"
 
-#: notificationmonitor.cpp:336
+#: notificationmonitor.cpp:344
 #, kde-format
 msgid "SyncPref"
 msgstr "SyncPref"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:345
 #, kde-format
 msgid "IndexPref"
 msgstr "IndexPref"
 
-#: notificationmonitor.cpp:338
+#: notificationmonitor.cpp:346
 #, kde-format
 msgid "Virtual"
 msgstr "Alegiazkoa"
 
-#: notificationmonitor.cpp:370
+#: notificationmonitor.cpp:378
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "Guraso jomuga bilduma"
 
-#: notificationmonitor.cpp:372
+#: notificationmonitor.cpp:380
 #, kde-format
 msgid "Changed Parts"
 msgstr "Aldatutako atalak"
 
-#: notificationmonitor.cpp:421
+#: notificationmonitor.cpp:429
 #, kde-format
 msgid "Monitored Collections"
 msgstr "Gainbegiratutako bildumak"
 
-#: notificationmonitor.cpp:422
+#: notificationmonitor.cpp:430
 #, kde-format
 msgid "Monitored Items"
 msgstr "Gainbegiratutako elementuak"
 
-#: notificationmonitor.cpp:423
+#: notificationmonitor.cpp:431
 #, kde-format
 msgid "Monitored Tags"
 msgstr "Gainbegiratutako etiketak"
 
-#: notificationmonitor.cpp:438
+#: notificationmonitor.cpp:446
 #, kde-format
 msgid "Subscriptions"
 msgstr "Harpidetzak"
 
-#: notificationmonitor.cpp:441
+#: notificationmonitor.cpp:449
 #, kde-format
 msgid "Changes"
 msgstr "Aldaketak"
 
-#: notificationmonitor.cpp:444
+#: notificationmonitor.cpp:452
 #, kde-format
 msgid "No Type"
 msgstr "Mota gabe"
 
-#: notificationmonitor.cpp:448
+#: notificationmonitor.cpp:456
 #, kde-format
 msgid "Monitored Types"
 msgstr "Gainbegiratutako motak"
 
-#: notificationmonitor.cpp:449
+#: notificationmonitor.cpp:457
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "Gainbegiratutako MIME motak"
 
-#: notificationmonitor.cpp:450
+#: notificationmonitor.cpp:458
 #, kde-format
 msgid "Monitored Resources"
 msgstr "Gainbegiratutako baliabideak"
 
-#: notificationmonitor.cpp:451
+#: notificationmonitor.cpp:459
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "Ezikusitako saioak"
 
-#: notificationmonitor.cpp:452
+#: notificationmonitor.cpp:460
 #, kde-format
 msgid "All Monitored"
 msgstr "Gainbegiratutako guztia"
 
-#: notificationmonitor.cpp:453
+#: notificationmonitor.cpp:461
 #, kde-format
 msgid "Exclusive"
 msgstr "Esklusiboa"
 
-#: notificationmonitor.cpp:457
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Requested Parts"
 msgstr "Eskatutako atalak"
 
-#: notificationmonitor.cpp:458
+#: notificationmonitor.cpp:466
 #, kde-format
 msgid "Changed Since"
 msgstr "Noiztik aldatua"
 
-#: notificationmonitor.cpp:462
+#: notificationmonitor.cpp:470
 #, kde-format
 msgid "No Ancestor"
 msgstr "Arbasorik ez"
 
-#: notificationmonitor.cpp:465
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "Guraso arbasoa"
 
-#: notificationmonitor.cpp:468
+#: notificationmonitor.cpp:476
 #, kde-format
 msgid "All Ancestors"
 msgstr "Arbaso guztiak"
 
-#: notificationmonitor.cpp:471
+#: notificationmonitor.cpp:479
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "Arbasoaren sakonera"
 
-#: notificationmonitor.cpp:472
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Cache Only"
 msgstr "Cachea bakarrik"
 
-#: notificationmonitor.cpp:473
+#: notificationmonitor.cpp:481
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "Ikuskatu cacheratutako zama erabilgarri atalak bakarrik"
 
-#: notificationmonitor.cpp:476
+#: notificationmonitor.cpp:484
 #, kde-format
 msgid "Fetch Size"
 msgstr "Ekarri neurria"
 
-#: notificationmonitor.cpp:477
+#: notificationmonitor.cpp:485
 #, kde-format
 msgid "Fetch MTime"
 msgstr "Ekarri MTime"
 
-#: notificationmonitor.cpp:478
+#: notificationmonitor.cpp:486
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "Ekarri urrutiko berrikuspena"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:487
 #, kde-format
 msgid "Ignore Errors"
 msgstr "Ezikusi erroreak"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:488
 #, kde-format
 msgid "Fetch Flags"
 msgstr "Ekarri banderak"
 
-#: notificationmonitor.cpp:481 notificationmonitor.cpp:534
+#: notificationmonitor.cpp:489 notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "Ekarri RemoteID"
 
-#: notificationmonitor.cpp:484
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "Ekarri VRefs"
 
-#: notificationmonitor.cpp:492
+#: notificationmonitor.cpp:500
 #, kde-format
 msgid "No Filter"
 msgstr "Iragazkirik gabe"
 
-#: notificationmonitor.cpp:495
+#: notificationmonitor.cpp:503
 #, kde-format
 msgid "Display"
 msgstr "Azaldu"
 
-#: notificationmonitor.cpp:501
+#: notificationmonitor.cpp:509
 #, kde-format
 msgid "Index"
 msgstr "Indizea"
 
-#: notificationmonitor.cpp:504
+#: notificationmonitor.cpp:512
 #, kde-format
 msgid "Sync"
 msgstr "Sink"
 
-#: notificationmonitor.cpp:510
+#: notificationmonitor.cpp:518
 #, kde-format
 msgid "Content Mime Types"
 msgstr "Edukiaren MIME motak"
 
-#: notificationmonitor.cpp:519
+#: notificationmonitor.cpp:527
 #, kde-format
 msgid "Parent"
 msgstr "Gurasoa"
 
-#: notificationmonitor.cpp:522
+#: notificationmonitor.cpp:530
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: notificationmonitor.cpp:526
+#: notificationmonitor.cpp:534
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "Ekarri arbasoaren ID bakarrik"
 
-#: notificationmonitor.cpp:527
+#: notificationmonitor.cpp:535
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "Arbasoaren atributuak"
 
-#: notificationmonitor.cpp:535
+#: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "Ekarri atributu guztiak"
@@ -2042,6 +2037,9 @@ msgstr "&Kendu"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Urrutiko identifikatzaileak"
+
+#~ msgid "Removed Tags"
+#~ msgstr "Ezabatutako etiketak"
 
 #~ msgid "Synchronize Relations"
 #~ msgstr "Sinkronizatu harremanak"

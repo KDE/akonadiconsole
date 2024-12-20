@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:40+0000\n"
+"POT-Creation-Date: 2024-12-20 00:41+0000\n"
 "PO-Revision-Date: 2024-09-09 20:31+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -250,8 +250,8 @@ msgstr "Hozzáadás…"
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:355
-#: notificationmonitor.cpp:389 notificationmonitor.cpp:413
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:363
+#: notificationmonitor.cpp:397 notificationmonitor.cpp:421
 #, kde-format
 msgid "Remove"
 msgstr "Eltávolítás"
@@ -276,7 +276,7 @@ msgid "Restart"
 msgstr "Újraindítás"
 
 #: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
-#: notificationmonitor.cpp:373
+#: notificationmonitor.cpp:381
 #, kde-format
 msgid "Collection"
 msgstr "Gyűjtemény"
@@ -425,8 +425,8 @@ msgstr "Nem támogatott típus"
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
 #: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
-#: notificationmonitor.cpp:239 notificationmonitor.cpp:511
-#: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
+#: notificationmonitor.cpp:247 notificationmonitor.cpp:519
+#: notificationmonitor.cpp:544 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "Attribútumok"
@@ -531,14 +531,14 @@ msgstr "érvénytelen/érvénytelen"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:264
 #, kde-format
 msgid "Flags"
 msgstr "Jelzők"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:84
-#: notificationmonitor.cpp:257 notificationmonitor.cpp:435
+#: notificationmonitor.cpp:265 notificationmonitor.cpp:443
 #, kde-format
 msgid "Tags"
 msgstr "Címkék"
@@ -573,8 +573,8 @@ msgstr "Létrehozás"
 #: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
 #: notificationmodel.cpp:111 notificationmodel.cpp:129
 #: notificationmodel.cpp:141 notificationmonitor.cpp:169
-#: notificationmonitor.cpp:349 notificationmonitor.cpp:386
-#: notificationmonitor.cpp:410
+#: notificationmonitor.cpp:357 notificationmonitor.cpp:394
+#: notificationmonitor.cpp:418
 #, kde-format
 msgid "Modify"
 msgstr "Módosítás"
@@ -709,7 +709,7 @@ msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "Hibakereső bekapcsolása"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:516
+#: debugwidget.cpp:49 notificationmonitor.cpp:524
 #, kde-format
 msgid "All"
 msgstr "Összes"
@@ -929,7 +929,7 @@ msgstr "Mentés fájlba…"
 msgid "Error"
 msgstr "Hiba"
 
-#: logging.cpp:136 notificationmonitor.cpp:549
+#: logging.cpp:136 notificationmonitor.cpp:557
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "Nem sikerült megnyitni a fájlt: %1"
@@ -945,7 +945,7 @@ msgid "Program"
 msgstr "Program"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:232
+#: notificationmonitor.cpp:240
 #, kde-format
 msgid "Type"
 msgstr "Típus"
@@ -1104,13 +1104,13 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "Munkamenet/Feliratkozó"
 
-#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
-#: notificationmonitor.cpp:429
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:214
+#: notificationmonitor.cpp:437
 #, kde-format
 msgid "Items"
 msgstr "Elemek"
 
-#: monitorswidget.cpp:81 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:440
 #, kde-format
 msgid "Collections"
 msgstr "Gyűjtemények"
@@ -1125,19 +1125,19 @@ msgstr "Feliratkozók"
 msgid "Notification"
 msgstr "Értesítés"
 
-#: monitorswidget.cpp:99 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:515
 #, kde-format
 msgid "List Filter"
 msgstr "Listaszűrő"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:516
 #, kde-format
 msgid "Include Statistics"
 msgstr "Statisztikák belevétele"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:195
-#: notificationmonitor.cpp:368 notificationmonitor.cpp:396
-#: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:376 notificationmonitor.cpp:404
+#: notificationmonitor.cpp:517 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "Erőforrás"
@@ -1147,7 +1147,7 @@ msgstr "Erőforrás"
 msgid "Content MimeTypes"
 msgstr "Tartalom MIME-típusok"
 
-#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:533
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "Ősök visszakeresése"
@@ -1157,8 +1157,8 @@ msgstr "Ősök visszakeresése"
 msgid "Ancestor Fetch Scope"
 msgstr "Őslekérési hatókör"
 
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
-#: notificationmonitor.cpp:533
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:520
+#: notificationmonitor.cpp:541
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "Csak azonosító lekérése"
@@ -1178,7 +1178,7 @@ msgstr "Értékek"
 msgid "Properties"
 msgstr "Tulajdonságok"
 
-#: monitorswidget.cpp:136 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:428
 #, kde-format
 msgid "Subscriber"
 msgstr "Feliratkozó"
@@ -1233,7 +1233,7 @@ msgstr "Összes figyelt:"
 msgid "Is Exclusive:"
 msgstr "Kizárólagos:"
 
-#: monitorswidget.cpp:148 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:463
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "Elemlekérési hatókör"
@@ -1243,12 +1243,12 @@ msgstr "Elemlekérési hatókör"
 msgid "Payload Parts"
 msgstr "Hasznos adat részek"
 
-#: monitorswidget.cpp:151 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:482
 #, kde-format
 msgid "Full Payload"
 msgstr "Teljes hasznos adat"
 
-#: monitorswidget.cpp:153 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:483
 #, kde-format
 msgid "All Attributes"
 msgstr "Minden attribútum"
@@ -1268,12 +1268,12 @@ msgstr "Csak a gyorsítótárban lévő hasznos adat részeket ellenőrizze"
 msgid "Fetch mtime"
 msgstr "Módosítási idő lekérése"
 
-#: monitorswidget.cpp:158 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:490
 #, kde-format
 msgid "Fetch GID"
 msgstr "GID lekérése"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:536
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "Lekérési hibák mellőzése"
@@ -1288,7 +1288,7 @@ msgstr "Változások lekérése ekkortól"
 msgid "Fetch RID"
 msgstr "RID lekérése"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:491
 #, kde-format
 msgid "Fetch Tags"
 msgstr "Címkék lekérése"
@@ -1298,12 +1298,12 @@ msgstr "Címkék lekérése"
 msgid "Collection Fetch Scope"
 msgstr "Gyűjteménylekérési hatókör"
 
-#: monitorswidget.cpp:168 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:539
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "Címkelekérési hatókör"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:397
+#: notificationmodel.cpp:77 notificationmonitor.cpp:405
 #, kde-format
 msgid "Tag"
 msgstr "Címke"
@@ -1315,14 +1315,14 @@ msgstr "Felíratkozás"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
-#: notificationmonitor.cpp:346 notificationmonitor.cpp:383
-#: notificationmonitor.cpp:407
+#: notificationmonitor.cpp:354 notificationmonitor.cpp:391
+#: notificationmonitor.cpp:415
 #, kde-format
 msgid "Add"
 msgstr "Hozzáadás"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
-#: notificationmonitor.cpp:172 notificationmonitor.cpp:352
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:360
 #, kde-format
 msgid "Move"
 msgstr "Áthelyezés"
@@ -1339,22 +1339,22 @@ msgstr "Címkék módosítása"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
-#: notificationmonitor.cpp:392 notificationmonitor.cpp:416
+#: notificationmonitor.cpp:400 notificationmonitor.cpp:424
 #, kde-format
 msgid "InvalidOp"
 msgstr "Érvénytelen művelet"
 
-#: notificationmodel.cpp:117 notificationmonitor.cpp:358
+#: notificationmodel.cpp:117 notificationmonitor.cpp:366
 #, kde-format
 msgid "Subscribe"
 msgstr "Feliratkozás"
 
-#: notificationmodel.cpp:119 notificationmonitor.cpp:361
+#: notificationmodel.cpp:119 notificationmonitor.cpp:369
 #, kde-format
 msgid "Unsubscribe"
 msgstr "Leiratkozás"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:364
+#: notificationmodel.cpp:121 notificationmonitor.cpp:372
 #, kde-format
 msgid "InvalidIp"
 msgstr "Érvénytelen IP"
@@ -1365,8 +1365,8 @@ msgid "Unknown"
 msgstr "Ismeretlen"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
-#: notificationmonitor.cpp:367 notificationmonitor.cpp:395
-#: notificationmonitor.cpp:419
+#: notificationmonitor.cpp:375 notificationmonitor.cpp:403
+#: notificationmonitor.cpp:427
 #, kde-format
 msgid "Operation"
 msgstr "Művelet"
@@ -1396,7 +1396,7 @@ msgstr "Értesítésfigyelő bekapcsolása"
 msgid "Timestamp"
 msgstr "Időbélyeg"
 
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:369
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:377
 #, kde-format
 msgid "Parent Collection"
 msgstr "Szülőgyűjtemény"
@@ -1406,7 +1406,7 @@ msgstr "Szülőgyűjtemény"
 msgid "Parent Dest Col"
 msgstr "Szülő céloszlop"
 
-#: notificationmonitor.cpp:198 notificationmonitor.cpp:371
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:379
 #, kde-format
 msgid "Destination Resource"
 msgstr "Célerőforrás"
@@ -1426,425 +1426,420 @@ msgstr "Hozzáadott jelzők"
 msgid "Removed Flags"
 msgstr "Eltávolított jelzők"
 
-#: notificationmonitor.cpp:202
+#: notificationmonitor.cpp:209
 #, kde-format
 msgid "Added Tags"
 msgstr "Hozzáadott címkék"
 
-#: notificationmonitor.cpp:203
-#, kde-format
-msgid "Removed Tags"
-msgstr "Eltávolított címkék"
-
-#: notificationmonitor.cpp:204
+#: notificationmonitor.cpp:212
 #, kde-format
 msgid "Must retrieve"
 msgstr "Le kell kérni"
 
-#: notificationmonitor.cpp:218
+#: notificationmonitor.cpp:226
 #, kde-format
 msgid "id"
 msgstr "azonosító"
 
-#: notificationmonitor.cpp:219
+#: notificationmonitor.cpp:227
 #, kde-format
 msgid "remoteId"
 msgstr "távoli azonosító"
 
-#: notificationmonitor.cpp:220
+#: notificationmonitor.cpp:228
 #, kde-format
 msgid "name"
 msgstr "név"
 
-#: notificationmonitor.cpp:222 notificationmonitor.cpp:269
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:230 notificationmonitor.cpp:277
+#: notificationmonitor.cpp:325
 #, kde-format
 msgid "Ancestor"
 msgstr "Ős"
 
-#: notificationmonitor.cpp:229 notificationmonitor.cpp:303
+#: notificationmonitor.cpp:237 notificationmonitor.cpp:311
 #, kde-format
 msgid "ID"
 msgstr "Azonosító"
 
-#: notificationmonitor.cpp:230 notificationmonitor.cpp:304
+#: notificationmonitor.cpp:238 notificationmonitor.cpp:312
 #, kde-format
 msgid "Parent ID"
 msgstr "Szülő azonosítója"
 
-#: notificationmonitor.cpp:231 notificationmonitor.cpp:252
+#: notificationmonitor.cpp:239 notificationmonitor.cpp:260
 #, kde-format
 msgid "GID"
 msgstr "GID"
 
-#: notificationmonitor.cpp:233 notificationmonitor.cpp:307
+#: notificationmonitor.cpp:241 notificationmonitor.cpp:315
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "Távoli azonosító"
 
-#: notificationmonitor.cpp:248
+#: notificationmonitor.cpp:256
 #, kde-format
 msgid "Revision"
 msgstr "Verzió"
 
-#: notificationmonitor.cpp:249
+#: notificationmonitor.cpp:257
 #, kde-format
 msgid "ParentID"
 msgstr "Szülőazonosító"
 
-#: notificationmonitor.cpp:250
+#: notificationmonitor.cpp:258
 #, kde-format
 msgid "RemoteID"
 msgstr "Távoli azonosító"
 
-#: notificationmonitor.cpp:251
+#: notificationmonitor.cpp:259
 #, kde-format
 msgid "RemoteRev"
 msgstr "Távoli verzió"
 
-#: notificationmonitor.cpp:253 notificationmonitor.cpp:291
-#: notificationmonitor.cpp:313
+#: notificationmonitor.cpp:261 notificationmonitor.cpp:299
+#: notificationmonitor.cpp:321
 #, kde-format
 msgid "Size"
 msgstr "Méret"
 
-#: notificationmonitor.cpp:254
+#: notificationmonitor.cpp:262
 #, kde-format
 msgid "MimeType"
 msgstr "MIME-típus"
 
-#: notificationmonitor.cpp:255
+#: notificationmonitor.cpp:263
 #, kde-format
 msgid "MTime"
 msgstr "Módosítási idő"
 
-#: notificationmonitor.cpp:266
+#: notificationmonitor.cpp:274
 #, kde-format
 msgid "VRefs"
 msgstr "VRefs"
 
-#: notificationmonitor.cpp:275
+#: notificationmonitor.cpp:283
 #, kde-format
 msgid "Parts"
 msgstr "Részek"
 
-#: notificationmonitor.cpp:282
+#: notificationmonitor.cpp:290
 #, kde-format
 msgid "External"
 msgstr "Külső"
 
-#: notificationmonitor.cpp:285
+#: notificationmonitor.cpp:293
 #, kde-format
 msgid "Internal"
 msgstr "Belső"
 
-#: notificationmonitor.cpp:288
+#: notificationmonitor.cpp:296
 #, kde-format
 msgid "Foreign"
 msgstr "Idegen"
 
-#: notificationmonitor.cpp:292
+#: notificationmonitor.cpp:300
 #, kde-format
 msgid "Storage Type"
 msgstr "Tárolótípus"
 
-#: notificationmonitor.cpp:293
+#: notificationmonitor.cpp:301
 #, kde-format
 msgid "Version"
 msgstr "Verzió"
 
-#: notificationmonitor.cpp:294
+#: notificationmonitor.cpp:302
 #, kde-format
 msgid "Data"
 msgstr "Adat"
 
-#: notificationmonitor.cpp:305
+#: notificationmonitor.cpp:313
 #, kde-format
 msgid "Name"
 msgstr "Név"
 
-#: notificationmonitor.cpp:306
+#: notificationmonitor.cpp:314
 #, kde-format
 msgid "Mime Types"
 msgstr "MIME-típusok"
 
-#: notificationmonitor.cpp:308
+#: notificationmonitor.cpp:316
 #, kde-format
 msgid "Remote Revision"
 msgstr "Távoli verzió"
 
-#: notificationmonitor.cpp:309
+#: notificationmonitor.cpp:317
 #, kde-format
 msgid "Statistics"
 msgstr "Statisztikák"
 
-#: notificationmonitor.cpp:311
+#: notificationmonitor.cpp:319
 #, kde-format
 msgid "Count"
 msgstr "Szám"
 
-#: notificationmonitor.cpp:312
+#: notificationmonitor.cpp:320
 #, kde-format
 msgid "Unseen"
 msgstr "Nem látott"
 
-#: notificationmonitor.cpp:315
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Search Query"
 msgstr "Keresési lekérdezés"
 
-#: notificationmonitor.cpp:316
+#: notificationmonitor.cpp:324
 #, kde-format
 msgid "Search Collections"
 msgstr "Keresési gyűjtemény"
 
-#: notificationmonitor.cpp:323
+#: notificationmonitor.cpp:331
 #, kde-format
 msgid "Cache Policy"
 msgstr "Gyorsítótárkezelés beállítása"
 
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:333
 #, kde-format
 msgid "Inherit"
 msgstr "Öröklés"
 
-#: notificationmonitor.cpp:326
+#: notificationmonitor.cpp:334
 #, kde-format
 msgid "Check Interval"
 msgstr "Ellenőrzési időköz"
 
-#: notificationmonitor.cpp:327
+#: notificationmonitor.cpp:335
 #, kde-format
 msgid "Cache Timeout"
 msgstr "Gyorsítótár időkorlátja"
 
-#: notificationmonitor.cpp:328
+#: notificationmonitor.cpp:336
 #, kde-format
 msgid "Sync on Demand"
 msgstr "Szinkronizálás kérésre"
 
-#: notificationmonitor.cpp:329
+#: notificationmonitor.cpp:337
 #, kde-format
 msgid "Local Parts"
 msgstr "Helyi részek"
 
-#: notificationmonitor.cpp:334 notificationmonitor.cpp:498
+#: notificationmonitor.cpp:342 notificationmonitor.cpp:506
 #, kde-format
 msgid "Enabled"
 msgstr "Bekapcsolva"
 
-#: notificationmonitor.cpp:335
+#: notificationmonitor.cpp:343
 #, kde-format
 msgid "DisplayPref"
 msgstr "Megjelenítési beállítás"
 
-#: notificationmonitor.cpp:336
+#: notificationmonitor.cpp:344
 #, kde-format
 msgid "SyncPref"
 msgstr "Szinkronizálási beállítás"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:345
 #, kde-format
 msgid "IndexPref"
 msgstr "Indexelési beállítás"
 
-#: notificationmonitor.cpp:338
+#: notificationmonitor.cpp:346
 #, kde-format
 msgid "Virtual"
 msgstr "Virtuális"
 
-#: notificationmonitor.cpp:370
+#: notificationmonitor.cpp:378
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "Szülő célgyűjteménye"
 
-#: notificationmonitor.cpp:372
+#: notificationmonitor.cpp:380
 #, kde-format
 msgid "Changed Parts"
 msgstr "Módosított részek"
 
-#: notificationmonitor.cpp:421
+#: notificationmonitor.cpp:429
 #, kde-format
 msgid "Monitored Collections"
 msgstr "Figyelt gyűjtemények"
 
-#: notificationmonitor.cpp:422
+#: notificationmonitor.cpp:430
 #, kde-format
 msgid "Monitored Items"
 msgstr "Figyelt elemek"
 
-#: notificationmonitor.cpp:423
+#: notificationmonitor.cpp:431
 #, kde-format
 msgid "Monitored Tags"
 msgstr "Figyelt címkék"
 
-#: notificationmonitor.cpp:438
+#: notificationmonitor.cpp:446
 #, kde-format
 msgid "Subscriptions"
 msgstr "Feliratkozások"
 
-#: notificationmonitor.cpp:441
+#: notificationmonitor.cpp:449
 #, kde-format
 msgid "Changes"
 msgstr "Változások"
 
-#: notificationmonitor.cpp:444
+#: notificationmonitor.cpp:452
 #, kde-format
 msgid "No Type"
 msgstr "Nincs típus"
 
-#: notificationmonitor.cpp:448
+#: notificationmonitor.cpp:456
 #, kde-format
 msgid "Monitored Types"
 msgstr "Figyelt típusok"
 
-#: notificationmonitor.cpp:449
+#: notificationmonitor.cpp:457
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "Figyelt MIME-típusok"
 
-#: notificationmonitor.cpp:450
+#: notificationmonitor.cpp:458
 #, kde-format
 msgid "Monitored Resources"
 msgstr "Figyelt erőforrások"
 
-#: notificationmonitor.cpp:451
+#: notificationmonitor.cpp:459
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "Mellőzött munkamenetek"
 
-#: notificationmonitor.cpp:452
+#: notificationmonitor.cpp:460
 #, kde-format
 msgid "All Monitored"
 msgstr "Összes figyelt"
 
-#: notificationmonitor.cpp:453
+#: notificationmonitor.cpp:461
 #, kde-format
 msgid "Exclusive"
 msgstr "Kizárólagos"
 
-#: notificationmonitor.cpp:457
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Requested Parts"
 msgstr "Kért részek"
 
-#: notificationmonitor.cpp:458
+#: notificationmonitor.cpp:466
 #, kde-format
 msgid "Changed Since"
 msgstr "Módosítva ezóta"
 
-#: notificationmonitor.cpp:462
+#: notificationmonitor.cpp:470
 #, kde-format
 msgid "No Ancestor"
 msgstr "Nincs ős"
 
-#: notificationmonitor.cpp:465
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "Szülő őse"
 
-#: notificationmonitor.cpp:468
+#: notificationmonitor.cpp:476
 #, kde-format
 msgid "All Ancestors"
 msgstr "Összes ős"
 
-#: notificationmonitor.cpp:471
+#: notificationmonitor.cpp:479
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "Ős mélysége"
 
-#: notificationmonitor.cpp:472
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Cache Only"
 msgstr "Csak gyorsítótár"
 
-#: notificationmonitor.cpp:473
+#: notificationmonitor.cpp:481
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "Csak a gyorsítótárban lévő hasznos adat részek ellenőrzése"
 
-#: notificationmonitor.cpp:476
+#: notificationmonitor.cpp:484
 #, kde-format
 msgid "Fetch Size"
 msgstr "Méret lekérése"
 
-#: notificationmonitor.cpp:477
+#: notificationmonitor.cpp:485
 #, kde-format
 msgid "Fetch MTime"
 msgstr "Módosítási idő lekérése"
 
-#: notificationmonitor.cpp:478
+#: notificationmonitor.cpp:486
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "Távoli verzió lekérése"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:487
 #, kde-format
 msgid "Ignore Errors"
 msgstr "Hibák mellőzése"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:488
 #, kde-format
 msgid "Fetch Flags"
 msgstr "Jelzők lekérése"
 
-#: notificationmonitor.cpp:481 notificationmonitor.cpp:534
+#: notificationmonitor.cpp:489 notificationmonitor.cpp:542
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "Távoli azonosító lekérése"
 
-#: notificationmonitor.cpp:484
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "VRefs lekérése"
 
-#: notificationmonitor.cpp:492
+#: notificationmonitor.cpp:500
 #, kde-format
 msgid "No Filter"
 msgstr "Nincs szűrő"
 
-#: notificationmonitor.cpp:495
+#: notificationmonitor.cpp:503
 #, kde-format
 msgid "Display"
 msgstr "Megjelenítés"
 
-#: notificationmonitor.cpp:501
+#: notificationmonitor.cpp:509
 #, kde-format
 msgid "Index"
 msgstr "Index"
 
-#: notificationmonitor.cpp:504
+#: notificationmonitor.cpp:512
 #, kde-format
 msgid "Sync"
 msgstr "Szinkronizálás"
 
-#: notificationmonitor.cpp:510
+#: notificationmonitor.cpp:518
 #, kde-format
 msgid "Content Mime Types"
 msgstr "Tartalom MIME-típusok"
 
-#: notificationmonitor.cpp:519
+#: notificationmonitor.cpp:527
 #, kde-format
 msgid "Parent"
 msgstr "Szülő"
 
-#: notificationmonitor.cpp:522
+#: notificationmonitor.cpp:530
 #, kde-format
 msgid "None"
 msgstr "Nincs"
 
-#: notificationmonitor.cpp:526
+#: notificationmonitor.cpp:534
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "Csak az ős lekérési azonosítója"
 
-#: notificationmonitor.cpp:527
+#: notificationmonitor.cpp:535
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "Ős attribútumok"
 
-#: notificationmonitor.cpp:535
+#: notificationmonitor.cpp:543
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "Összes attribútum lekérése"
@@ -2038,6 +2033,9 @@ msgstr "&Eltávolítás"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Távoli azonosítók"
+
+#~ msgid "Removed Tags"
+#~ msgstr "Eltávolított címkék"
 
 #~ msgid "Synchronize Relations"
 #~ msgstr "Kapcsolatok szinkronizálása"
