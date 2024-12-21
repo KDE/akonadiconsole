@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-20 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:10+0530\n"
+"PO-Revision-Date: 2024-12-20 21:51+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -140,7 +140,7 @@ msgstr "आलम"
 #: agentwidget.cpp:410
 #, kde-format
 msgid "Running (%1%)"
-msgstr "धावति (%1%) २."
+msgstr "धावति (%1%)"
 
 #: agentwidget.cpp:413
 #, kde-format
@@ -210,7 +210,7 @@ msgstr "वर्णन"
 #: agentwidget.ui:46 collectioninternalspage.ui:34 tagpropertiesdialog.ui:27
 #, kde-format
 msgid "Identifier:"
-msgstr "परिचयकः : १."
+msgstr "परिचयकः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -229,19 +229,19 @@ msgstr "स्थितिः:"
 #: agentwidget.ui:118
 #, kde-format
 msgid "Status Message:"
-msgstr "स्थितिसन्देशः : १."
+msgstr "स्थितिसन्देशः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: agentwidget.ui:144
 #, kde-format
 msgid "Capabilities:"
-msgstr "क्षमता : १."
+msgstr "क्षमता :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: agentwidget.ui:170
 #, kde-format
 msgid "Mimetypes:"
-msgstr "अनुकरणप्रकाराः : १."
+msgstr "अनुकरणप्रकाराः :"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:212
@@ -490,14 +490,14 @@ msgstr "०"
 #: browserwidget_contentview.ui:202
 #, kde-format
 msgid "Remote ID:"
-msgstr "दूरस्थः आईडी : १."
+msgstr "दूरस्थः आईडी :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_gid)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:219 tagpropertiesdialog.ui:41
 #, kde-format
 msgid "GID:"
-msgstr "जीआईडी : १."
+msgstr "जीआईडी :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: browserwidget_contentview.ui:236
@@ -515,13 +515,13 @@ msgstr "आकृति:"
 #: browserwidget_contentview.ui:284
 #, kde-format
 msgid "Last modification time:"
-msgstr "अन्तिमः परिवर्तनसमयः : १."
+msgstr "अन्तिमः परिवर्तनसमयः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: browserwidget_contentview.ui:308
 #, kde-format
 msgid "Mimetype:"
-msgstr "अनुकरणप्रकारः : १."
+msgstr "अनुकरणप्रकारः :"
 
 #. i18n: ectx: property (text), widget (QLabel, mimeType)
 #: browserwidget_contentview.ui:321
@@ -644,7 +644,7 @@ msgstr "परिचयः"
 #: collectioninternalspage.ui:48
 #, kde-format
 msgid "Remote identifier:"
-msgstr "दूरस्थपरिचयः : १."
+msgstr "दूरस्थपरिचयः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: collectioninternalspage.ui:61
@@ -656,7 +656,7 @@ msgstr "स्वामी:"
 #: collectioninternalspage.ui:75
 #, kde-format
 msgid "Remote Revision:"
-msgstr "दूरस्थसंशोधनम् : १."
+msgstr "दूरस्थसंशोधनम् :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: collectioninternalspage.ui:88
@@ -675,7 +675,7 @@ msgstr "सामग्रीप्रकाराः"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Programs:"
-msgstr "कार्यक्रमाः : १."
+msgstr "कार्यक्रमाः :"
 
 #. i18n: ectx: property (text), widget (QPushButton, refreshButton)
 #: dbbrowser.ui:28
@@ -886,7 +886,7 @@ msgstr "सक्रियं करोतु"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Types:"
-msgstr "प्रकाराः : १."
+msgstr "प्रकाराः :"
 
 #: logging.cpp:59 loggingmodel.cpp:137
 #, kde-format
@@ -912,7 +912,7 @@ msgstr "प्राणहर"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Categories:"
-msgstr "श्रेणियाँ : १."
+msgstr "श्रेणियाँ :"
 
 #: logging.cpp:90 notificationmonitor.cpp:93
 #, kde-format
@@ -1193,12 +1193,12 @@ msgstr "सत्र ID"
 #: monitorswidget.cpp:138
 #, kde-format
 msgid "Monitored Collections:"
-msgstr "निरीक्षितसङ्ग्रहाः : १."
+msgstr "निरीक्षितसङ्ग्रहाः :"
 
 #: monitorswidget.cpp:139
 #, kde-format
 msgid "Monitored Items:"
-msgstr "निरीक्षितवस्तूनि : १."
+msgstr "निरीक्षितवस्तूनि :"
 
 #: monitorswidget.cpp:140
 #, kde-format
@@ -1208,32 +1208,32 @@ msgstr "निगरानीय टैग्स्:"
 #: monitorswidget.cpp:141
 #, kde-format
 msgid "Monitored Types:"
-msgstr "निरीक्षिताः प्रकाराः : १."
+msgstr "निरीक्षिताः प्रकाराः :"
 
 #: monitorswidget.cpp:142
 #, kde-format
 msgid "Monitored Mime Types:"
-msgstr "निरीक्षिताः माइमप्रकाराः : १."
+msgstr "निरीक्षिताः माइमप्रकाराः :"
 
 #: monitorswidget.cpp:143
 #, kde-format
 msgid "Monitored Resources:"
-msgstr "निरीक्षिताः संसाधनाः : १."
+msgstr "निरीक्षिताः संसाधनाः :"
 
 #: monitorswidget.cpp:144
 #, kde-format
 msgid "Ignored Sessions:"
-msgstr "उपेक्षिताः सत्राः : १."
+msgstr "उपेक्षिताः सत्राः :"
 
 #: monitorswidget.cpp:145
 #, kde-format
 msgid "All Monitored:"
-msgstr "सर्वे निरीक्षिताः : १."
+msgstr "सर्वे निरीक्षिताः :"
 
 #: monitorswidget.cpp:146
 #, kde-format
 msgid "Is Exclusive:"
-msgstr "अनन्यम् अस्ति : १."
+msgstr "अनन्यम् अस्ति :"
 
 #: monitorswidget.cpp:148 notificationmonitor.cpp:463
 #, kde-format
@@ -1884,7 +1884,7 @@ msgstr "औसत। अवधिः [ms] ।"
 #: querydebugger.cpp:676
 #, kde-format
 msgid "Affected Rows:"
-msgstr "प्रभावित पङ्क्तयः : १."
+msgstr "प्रभावित पङ्क्तयः :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
@@ -1939,7 +1939,7 @@ msgstr "परिणामाः:"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search store:"
-msgstr "अन्वेषण भण्डारः : १."
+msgstr "अन्वेषण भण्डारः :"
 
 #: searchwidget.cpp:55
 #, kde-format
@@ -1951,13 +1951,13 @@ msgstr "अन्वेषण"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
-msgstr "अन्वेषणप्रश्नः : १."
+msgstr "अन्वेषणप्रश्नः :"
 
 #: searchwidget.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
-msgstr "परिणाम (दस्तावेज) : १."
+msgstr "परिणाम (दस्तावेज) :"
 
 #: searchwidget.cpp:82
 #, kde-format
