@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-20 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2023-11-04 08:35+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -999,7 +999,7 @@ msgstr "Konzola na správu a ladenie pre Akonadi"
 #: main.cpp:31
 #, fuzzy, kde-format
 #| msgid "(c) 2006-2023 the Akonadi developer"
-msgid "(c) 2006-2024 the Akonadi developer"
+msgid "(c) 2006-2025 the Akonadi developer"
 msgstr "(c) 2006-2023 Vývojár Akonadi"
 
 #: main.cpp:35 main.cpp:36

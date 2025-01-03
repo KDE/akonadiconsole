@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-20 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2023-02-17 00:58+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -979,7 +979,7 @@ msgstr ""
 
 #: main.cpp:31
 #, kde-format
-msgid "(c) 2006-2024 the Akonadi developer"
+msgid "(c) 2006-2025 the Akonadi developer"
 msgstr ""
 
 #: main.cpp:35 main.cpp:36

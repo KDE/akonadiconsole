@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-20 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 10:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -984,8 +984,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "La consola de gestió i depuració per a Akonadi"
 
 #: main.cpp:31
-#, kde-format
-msgid "(c) 2006-2024 the Akonadi developer"
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2024 the Akonadi developer"
+msgid "(c) 2006-2025 the Akonadi developer"
 msgstr "(c) 2006-2024 Els desenvolupadors d'Akonadi"
 
 #: main.cpp:35 main.cpp:36
