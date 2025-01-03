@@ -201,12 +201,19 @@ void NotificationMonitor::populateItemNtfTree(QStandardItemModel *model, const A
     appendRow(model, i18n("Removed Flags"), toString(ntf.removedFlags()));
 
     {
-        QStringList lst;
-        for (const auto &tag : ntf.addedTags()) {
-            lst = QStringList() << QString::number(tag.id()) << QString::number(tag.parentId()) << QString::fromLatin1(tag.gid())
-                                << QString::fromLatin1(tag.type()) << QString::fromLatin1(tag.remoteId());
-        }
-        appendRow(model, i18n("Added Tags"), lst.join(QLatin1Char(',')));
+        QSet<qint64> set;
+        std::ranges::transform(ntf.addedTags(), std::inserter(set, set.begin()), [](const auto &tagResponse) -> Akonadi::Tag::Id {
+            return tagResponse.id();
+        });
+        appendRow(model, i18n("Added Tags"), toString(set));
+    }
+
+    {
+        QSet<qint64> set;
+        std::ranges::transform(ntf.removedTags(), std::inserter(set, set.begin()), [](const auto &tagResponse) -> Akonadi::Tag::Id {
+            return tagResponse.id();
+        });
+        appendRow(model, i18n("Removed Tags"), toString(set));
     }
 
     appendRow(model, i18n("Must retrieve"), toString(ntf.mustRetrieve()));
