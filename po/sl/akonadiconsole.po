@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:42+0000\n"
-"PO-Revision-Date: 2024-07-30 08:51+0200\n"
+"PO-Revision-Date: 2025-01-03 06:50+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -986,10 +986,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Konzola za upravljanje in razhroščevanje za Akonadi"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2024 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2025 the Akonadi developer"
-msgstr "(c) 2006-2024 razvijalec Akonadi"
+msgstr "(c) 2006-2025 razvijalec Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format

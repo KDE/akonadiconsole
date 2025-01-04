@@ -1,16 +1,16 @@
 # Translation of akonadiconsole.po to Catalan (Valencian)
-# Copyright (C) 2023-2024 This_file_is_part_of_KDE
+# Copyright (C) 2023-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 # or the same license as the source of its messages in English.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:42+0000\n"
-"PO-Revision-Date: 2024-07-30 10:00+0200\n"
+"PO-Revision-Date: 2025-01-03 10:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -984,10 +984,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "La consola de gestió i depuració per a Akonadi"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2024 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2025 the Akonadi developer"
-msgstr "(c) 2006-2024 Els desenvolupadors d'Akonadi"
+msgstr "(c) 2006-2025 Els desenvolupadors d'Akonadi"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
@@ -2038,6 +2037,3 @@ msgstr "&Elimina"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identificadors del remot"
-
-#~ msgid "Removed Tags"
-#~ msgstr "Etiquetes eliminades"
