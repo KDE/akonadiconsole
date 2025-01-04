@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:40+0000\n"
+"POT-Creation-Date: 2025-01-04 02:31+0000\n"
 "PO-Revision-Date: 2024-08-09 03:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -249,8 +249,8 @@ msgstr "新增..."
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:355
-#: notificationmonitor.cpp:389 notificationmonitor.cpp:413
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:370
+#: notificationmonitor.cpp:404 notificationmonitor.cpp:428
 #, kde-format
 msgid "Remove"
 msgstr "移除"
@@ -275,7 +275,7 @@ msgid "Restart"
 msgstr "重新啟動"
 
 #: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
-#: notificationmonitor.cpp:373
+#: notificationmonitor.cpp:388
 #, kde-format
 msgid "Collection"
 msgstr "收藏"
@@ -424,8 +424,8 @@ msgstr "不支援的類型"
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
 #: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
-#: notificationmonitor.cpp:239 notificationmonitor.cpp:511
-#: notificationmonitor.cpp:536 tagpropertiesdialog.ui:76
+#: notificationmonitor.cpp:254 notificationmonitor.cpp:526
+#: notificationmonitor.cpp:551 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "屬性"
@@ -530,14 +530,14 @@ msgstr "無效/無效"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:256
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:271
 #, kde-format
 msgid "Flags"
 msgstr "旗標"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:84
-#: notificationmonitor.cpp:257 notificationmonitor.cpp:435
+#: notificationmonitor.cpp:272 notificationmonitor.cpp:450
 #, kde-format
 msgid "Tags"
 msgstr "標籤"
@@ -572,8 +572,8 @@ msgstr "建立"
 #: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
 #: notificationmodel.cpp:111 notificationmodel.cpp:129
 #: notificationmodel.cpp:141 notificationmonitor.cpp:169
-#: notificationmonitor.cpp:349 notificationmonitor.cpp:386
-#: notificationmonitor.cpp:410
+#: notificationmonitor.cpp:364 notificationmonitor.cpp:401
+#: notificationmonitor.cpp:425
 #, kde-format
 msgid "Modify"
 msgstr "修改"
@@ -707,7 +707,7 @@ msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "啟用除錯器"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:516
+#: debugwidget.cpp:49 notificationmonitor.cpp:531
 #, kde-format
 msgid "All"
 msgstr "全部"
@@ -927,7 +927,7 @@ msgstr "儲存到檔案..."
 msgid "Error"
 msgstr "錯誤"
 
-#: logging.cpp:136 notificationmonitor.cpp:549
+#: logging.cpp:136 notificationmonitor.cpp:564
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "開啟檔案失敗：%1"
@@ -943,7 +943,7 @@ msgid "Program"
 msgstr "程式"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:232
+#: notificationmonitor.cpp:247
 #, kde-format
 msgid "Type"
 msgstr "類型"
@@ -1102,13 +1102,13 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "工作階段/訂閱者"
 
-#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:206
-#: notificationmonitor.cpp:429
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:221
+#: notificationmonitor.cpp:444
 #, kde-format
 msgid "Items"
 msgstr "項目"
 
-#: monitorswidget.cpp:81 notificationmonitor.cpp:432
+#: monitorswidget.cpp:81 notificationmonitor.cpp:447
 #, kde-format
 msgid "Collections"
 msgstr "收藏"
@@ -1123,19 +1123,19 @@ msgstr "訂閱者"
 msgid "Notification"
 msgstr "通知"
 
-#: monitorswidget.cpp:99 notificationmonitor.cpp:507
+#: monitorswidget.cpp:99 notificationmonitor.cpp:522
 #, kde-format
 msgid "List Filter"
 msgstr "列出過濾器"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:508
+#: monitorswidget.cpp:100 notificationmonitor.cpp:523
 #, kde-format
 msgid "Include Statistics"
 msgstr "包含統計資料"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:195
-#: notificationmonitor.cpp:368 notificationmonitor.cpp:396
-#: notificationmonitor.cpp:509 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:383 notificationmonitor.cpp:411
+#: notificationmonitor.cpp:524 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "資源"
@@ -1145,7 +1145,7 @@ msgstr "資源"
 msgid "Content MimeTypes"
 msgstr "內容 MIME 類型"
 
-#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:525
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:540
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "祖先取得"
@@ -1155,8 +1155,8 @@ msgstr "祖先取得"
 msgid "Ancestor Fetch Scope"
 msgstr "祖先抓取範圍"
 
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:512
-#: notificationmonitor.cpp:533
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:527
+#: notificationmonitor.cpp:548
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "僅抓取 ID"
@@ -1176,7 +1176,7 @@ msgstr "數值"
 msgid "Properties"
 msgstr "內容"
 
-#: monitorswidget.cpp:136 notificationmonitor.cpp:420
+#: monitorswidget.cpp:136 notificationmonitor.cpp:435
 #, kde-format
 msgid "Subscriber"
 msgstr "訂閱者"
@@ -1231,7 +1231,7 @@ msgstr "所有監控中："
 msgid "Is Exclusive:"
 msgstr "是排除式的："
 
-#: monitorswidget.cpp:148 notificationmonitor.cpp:455
+#: monitorswidget.cpp:148 notificationmonitor.cpp:470
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "項目抓取範圍"
@@ -1241,12 +1241,12 @@ msgstr "項目抓取範圍"
 msgid "Payload Parts"
 msgstr "負載部分"
 
-#: monitorswidget.cpp:151 notificationmonitor.cpp:474
+#: monitorswidget.cpp:151 notificationmonitor.cpp:489
 #, kde-format
 msgid "Full Payload"
 msgstr "完整負載"
 
-#: monitorswidget.cpp:153 notificationmonitor.cpp:475
+#: monitorswidget.cpp:153 notificationmonitor.cpp:490
 #, kde-format
 msgid "All Attributes"
 msgstr "所有屬性"
@@ -1266,12 +1266,12 @@ msgstr "只為已快取的負載部分檢查"
 msgid "Fetch mtime"
 msgstr "抓取變更時間"
 
-#: monitorswidget.cpp:158 notificationmonitor.cpp:482
+#: monitorswidget.cpp:158 notificationmonitor.cpp:497
 #, kde-format
 msgid "Fetch GID"
 msgstr "抓取 GID"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:528
+#: monitorswidget.cpp:159 notificationmonitor.cpp:543
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "忽略取得時的錯誤"
@@ -1286,7 +1286,7 @@ msgstr "抓取何時以後的變更"
 msgid "Fetch RID"
 msgstr "抓取 RID"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:483
+#: monitorswidget.cpp:162 notificationmonitor.cpp:498
 #, kde-format
 msgid "Fetch Tags"
 msgstr "抓取標籤"
@@ -1296,12 +1296,12 @@ msgstr "抓取標籤"
 msgid "Collection Fetch Scope"
 msgstr "收藏抓取範圍"
 
-#: monitorswidget.cpp:168 notificationmonitor.cpp:531
+#: monitorswidget.cpp:168 notificationmonitor.cpp:546
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "標籤抓取範圍"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:397
+#: notificationmodel.cpp:77 notificationmonitor.cpp:412
 #, kde-format
 msgid "Tag"
 msgstr "標籤"
@@ -1313,14 +1313,14 @@ msgstr "訂閱"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
-#: notificationmonitor.cpp:346 notificationmonitor.cpp:383
-#: notificationmonitor.cpp:407
+#: notificationmonitor.cpp:361 notificationmonitor.cpp:398
+#: notificationmonitor.cpp:422
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
-#: notificationmonitor.cpp:172 notificationmonitor.cpp:352
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:367
 #, kde-format
 msgid "Move"
 msgstr "移動"
@@ -1337,22 +1337,22 @@ msgstr "修改標籤"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
-#: notificationmonitor.cpp:392 notificationmonitor.cpp:416
+#: notificationmonitor.cpp:407 notificationmonitor.cpp:431
 #, kde-format
 msgid "InvalidOp"
 msgstr "無效的操作"
 
-#: notificationmodel.cpp:117 notificationmonitor.cpp:358
+#: notificationmodel.cpp:117 notificationmonitor.cpp:373
 #, kde-format
 msgid "Subscribe"
 msgstr "訂閱"
 
-#: notificationmodel.cpp:119 notificationmonitor.cpp:361
+#: notificationmodel.cpp:119 notificationmonitor.cpp:376
 #, kde-format
 msgid "Unsubscribe"
 msgstr "取消訂閱"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:364
+#: notificationmodel.cpp:121 notificationmonitor.cpp:379
 #, kde-format
 msgid "InvalidIp"
 msgstr "無效 IP"
@@ -1363,8 +1363,8 @@ msgid "Unknown"
 msgstr "未知"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
-#: notificationmonitor.cpp:367 notificationmonitor.cpp:395
-#: notificationmonitor.cpp:419
+#: notificationmonitor.cpp:382 notificationmonitor.cpp:410
+#: notificationmonitor.cpp:434
 #, kde-format
 msgid "Operation"
 msgstr "操作"
@@ -1394,7 +1394,7 @@ msgstr "啟用通知監控"
 msgid "Timestamp"
 msgstr "時間戳記"
 
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:369
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:384
 #, kde-format
 msgid "Parent Collection"
 msgstr "親收藏"
@@ -1404,7 +1404,7 @@ msgstr "親收藏"
 msgid "Parent Dest Col"
 msgstr "親目標收藏"
 
-#: notificationmonitor.cpp:198 notificationmonitor.cpp:371
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:386
 #, kde-format
 msgid "Destination Resource"
 msgstr "目的地資源"
@@ -1424,425 +1424,425 @@ msgstr "已新增旗標"
 msgid "Removed Flags"
 msgstr "已移除的旗標"
 
-#: notificationmonitor.cpp:202
+#: notificationmonitor.cpp:208
 #, kde-format
 msgid "Added Tags"
 msgstr "已新增標籤"
 
-#: notificationmonitor.cpp:203
+#: notificationmonitor.cpp:216
 #, kde-format
 msgid "Removed Tags"
 msgstr "已移除的標籤"
 
-#: notificationmonitor.cpp:204
+#: notificationmonitor.cpp:219
 #, kde-format
 msgid "Must retrieve"
 msgstr "必須取得"
 
-#: notificationmonitor.cpp:218
+#: notificationmonitor.cpp:233
 #, kde-format
 msgid "id"
 msgstr "id"
 
-#: notificationmonitor.cpp:219
+#: notificationmonitor.cpp:234
 #, kde-format
 msgid "remoteId"
 msgstr "遠端 ID"
 
-#: notificationmonitor.cpp:220
+#: notificationmonitor.cpp:235
 #, kde-format
 msgid "name"
 msgstr "名稱"
 
-#: notificationmonitor.cpp:222 notificationmonitor.cpp:269
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:237 notificationmonitor.cpp:284
+#: notificationmonitor.cpp:332
 #, kde-format
 msgid "Ancestor"
 msgstr "祖先"
 
-#: notificationmonitor.cpp:229 notificationmonitor.cpp:303
+#: notificationmonitor.cpp:244 notificationmonitor.cpp:318
 #, kde-format
 msgid "ID"
 msgstr "ID"
 
-#: notificationmonitor.cpp:230 notificationmonitor.cpp:304
+#: notificationmonitor.cpp:245 notificationmonitor.cpp:319
 #, kde-format
 msgid "Parent ID"
 msgstr "親 ID"
 
-#: notificationmonitor.cpp:231 notificationmonitor.cpp:252
+#: notificationmonitor.cpp:246 notificationmonitor.cpp:267
 #, kde-format
 msgid "GID"
 msgstr "GID"
 
-#: notificationmonitor.cpp:233 notificationmonitor.cpp:307
+#: notificationmonitor.cpp:248 notificationmonitor.cpp:322
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "遠端 ID"
 
-#: notificationmonitor.cpp:248
+#: notificationmonitor.cpp:263
 #, kde-format
 msgid "Revision"
 msgstr "修訂版"
 
-#: notificationmonitor.cpp:249
+#: notificationmonitor.cpp:264
 #, kde-format
 msgid "ParentID"
 msgstr "親 ID"
 
-#: notificationmonitor.cpp:250
+#: notificationmonitor.cpp:265
 #, kde-format
 msgid "RemoteID"
 msgstr "遠端 ID"
 
-#: notificationmonitor.cpp:251
+#: notificationmonitor.cpp:266
 #, kde-format
 msgid "RemoteRev"
 msgstr "遠端修訂版"
 
-#: notificationmonitor.cpp:253 notificationmonitor.cpp:291
-#: notificationmonitor.cpp:313
+#: notificationmonitor.cpp:268 notificationmonitor.cpp:306
+#: notificationmonitor.cpp:328
 #, kde-format
 msgid "Size"
 msgstr "大小"
 
-#: notificationmonitor.cpp:254
+#: notificationmonitor.cpp:269
 #, kde-format
 msgid "MimeType"
 msgstr "MIME 類型"
 
-#: notificationmonitor.cpp:255
+#: notificationmonitor.cpp:270
 #, kde-format
 msgid "MTime"
 msgstr "變更時間"
 
-#: notificationmonitor.cpp:266
+#: notificationmonitor.cpp:281
 #, kde-format
 msgid "VRefs"
 msgstr "虛擬參照"
 
-#: notificationmonitor.cpp:275
+#: notificationmonitor.cpp:290
 #, kde-format
 msgid "Parts"
 msgstr "部分"
 
-#: notificationmonitor.cpp:282
+#: notificationmonitor.cpp:297
 #, kde-format
 msgid "External"
 msgstr "外部"
 
-#: notificationmonitor.cpp:285
+#: notificationmonitor.cpp:300
 #, kde-format
 msgid "Internal"
 msgstr "內部"
 
-#: notificationmonitor.cpp:288
+#: notificationmonitor.cpp:303
 #, kde-format
 msgid "Foreign"
 msgstr "外來"
 
-#: notificationmonitor.cpp:292
+#: notificationmonitor.cpp:307
 #, kde-format
 msgid "Storage Type"
 msgstr "儲存類型"
 
-#: notificationmonitor.cpp:293
+#: notificationmonitor.cpp:308
 #, kde-format
 msgid "Version"
 msgstr "版本"
 
-#: notificationmonitor.cpp:294
+#: notificationmonitor.cpp:309
 #, kde-format
 msgid "Data"
 msgstr "資料"
 
-#: notificationmonitor.cpp:305
+#: notificationmonitor.cpp:320
 #, kde-format
 msgid "Name"
 msgstr "名稱"
 
-#: notificationmonitor.cpp:306
+#: notificationmonitor.cpp:321
 #, kde-format
 msgid "Mime Types"
 msgstr "MIME 類型"
 
-#: notificationmonitor.cpp:308
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Remote Revision"
 msgstr "遠端修訂版"
 
-#: notificationmonitor.cpp:309
+#: notificationmonitor.cpp:324
 #, kde-format
 msgid "Statistics"
 msgstr "統計資料"
 
-#: notificationmonitor.cpp:311
+#: notificationmonitor.cpp:326
 #, kde-format
 msgid "Count"
 msgstr "計數"
 
-#: notificationmonitor.cpp:312
+#: notificationmonitor.cpp:327
 #, kde-format
 msgid "Unseen"
 msgstr "未讀"
 
-#: notificationmonitor.cpp:315
+#: notificationmonitor.cpp:330
 #, kde-format
 msgid "Search Query"
 msgstr "搜尋內容"
 
-#: notificationmonitor.cpp:316
+#: notificationmonitor.cpp:331
 #, kde-format
 msgid "Search Collections"
 msgstr "搜尋收藏"
 
-#: notificationmonitor.cpp:323
+#: notificationmonitor.cpp:338
 #, kde-format
 msgid "Cache Policy"
 msgstr "快取策略"
 
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:340
 #, kde-format
 msgid "Inherit"
 msgstr "繼承"
 
-#: notificationmonitor.cpp:326
+#: notificationmonitor.cpp:341
 #, kde-format
 msgid "Check Interval"
 msgstr "檢查間隔"
 
-#: notificationmonitor.cpp:327
+#: notificationmonitor.cpp:342
 #, kde-format
 msgid "Cache Timeout"
 msgstr "快取逾時"
 
-#: notificationmonitor.cpp:328
+#: notificationmonitor.cpp:343
 #, kde-format
 msgid "Sync on Demand"
 msgstr "要求時同步"
 
-#: notificationmonitor.cpp:329
+#: notificationmonitor.cpp:344
 #, kde-format
 msgid "Local Parts"
 msgstr "本地部分"
 
-#: notificationmonitor.cpp:334 notificationmonitor.cpp:498
+#: notificationmonitor.cpp:349 notificationmonitor.cpp:513
 #, kde-format
 msgid "Enabled"
 msgstr "已啟用"
 
-#: notificationmonitor.cpp:335
+#: notificationmonitor.cpp:350
 #, kde-format
 msgid "DisplayPref"
 msgstr "顯示設定"
 
-#: notificationmonitor.cpp:336
+#: notificationmonitor.cpp:351
 #, kde-format
 msgid "SyncPref"
 msgstr "同步設定"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:352
 #, kde-format
 msgid "IndexPref"
 msgstr "索引設定"
 
-#: notificationmonitor.cpp:338
+#: notificationmonitor.cpp:353
 #, kde-format
 msgid "Virtual"
 msgstr "虛擬"
 
-#: notificationmonitor.cpp:370
+#: notificationmonitor.cpp:385
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "親目標收藏"
 
-#: notificationmonitor.cpp:372
+#: notificationmonitor.cpp:387
 #, kde-format
 msgid "Changed Parts"
 msgstr "變更的部分"
 
-#: notificationmonitor.cpp:421
+#: notificationmonitor.cpp:436
 #, kde-format
 msgid "Monitored Collections"
 msgstr "監控中收藏"
 
-#: notificationmonitor.cpp:422
+#: notificationmonitor.cpp:437
 #, kde-format
 msgid "Monitored Items"
 msgstr "監控中項目"
 
-#: notificationmonitor.cpp:423
+#: notificationmonitor.cpp:438
 #, kde-format
 msgid "Monitored Tags"
 msgstr "監控中標籤"
 
-#: notificationmonitor.cpp:438
+#: notificationmonitor.cpp:453
 #, kde-format
 msgid "Subscriptions"
 msgstr "訂閱"
 
-#: notificationmonitor.cpp:441
+#: notificationmonitor.cpp:456
 #, kde-format
 msgid "Changes"
 msgstr "變更"
 
-#: notificationmonitor.cpp:444
+#: notificationmonitor.cpp:459
 #, kde-format
 msgid "No Type"
 msgstr "無類型"
 
-#: notificationmonitor.cpp:448
+#: notificationmonitor.cpp:463
 #, kde-format
 msgid "Monitored Types"
 msgstr "監控中類型"
 
-#: notificationmonitor.cpp:449
+#: notificationmonitor.cpp:464
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "監控中 MIME 類型"
 
-#: notificationmonitor.cpp:450
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Monitored Resources"
 msgstr "監控中資源"
 
-#: notificationmonitor.cpp:451
+#: notificationmonitor.cpp:466
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "忽略的工作階段"
 
-#: notificationmonitor.cpp:452
+#: notificationmonitor.cpp:467
 #, kde-format
 msgid "All Monitored"
 msgstr "所有已監控"
 
-#: notificationmonitor.cpp:453
+#: notificationmonitor.cpp:468
 #, kde-format
 msgid "Exclusive"
 msgstr "排除式"
 
-#: notificationmonitor.cpp:457
+#: notificationmonitor.cpp:472
 #, kde-format
 msgid "Requested Parts"
 msgstr "要求的部分"
 
-#: notificationmonitor.cpp:458
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Changed Since"
 msgstr "從何時以來更新"
 
-#: notificationmonitor.cpp:462
+#: notificationmonitor.cpp:477
 #, kde-format
 msgid "No Ancestor"
 msgstr "無祖先"
 
-#: notificationmonitor.cpp:465
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "親祖先"
 
-#: notificationmonitor.cpp:468
+#: notificationmonitor.cpp:483
 #, kde-format
 msgid "All Ancestors"
 msgstr "所有祖先"
 
-#: notificationmonitor.cpp:471
+#: notificationmonitor.cpp:486
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "祖先深度"
 
-#: notificationmonitor.cpp:472
+#: notificationmonitor.cpp:487
 #, kde-format
 msgid "Cache Only"
 msgstr "僅快取"
 
-#: notificationmonitor.cpp:473
+#: notificationmonitor.cpp:488
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "只檢查已快取的負載部分"
 
-#: notificationmonitor.cpp:476
+#: notificationmonitor.cpp:491
 #, kde-format
 msgid "Fetch Size"
 msgstr "抓取大小"
 
-#: notificationmonitor.cpp:477
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "Fetch MTime"
 msgstr "抓取變更時間"
 
-#: notificationmonitor.cpp:478
+#: notificationmonitor.cpp:493
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "抓取遠端修訂版"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:494
 #, kde-format
 msgid "Ignore Errors"
 msgstr "忽略錯誤"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:495
 #, kde-format
 msgid "Fetch Flags"
 msgstr "抓取旗標"
 
-#: notificationmonitor.cpp:481 notificationmonitor.cpp:534
+#: notificationmonitor.cpp:496 notificationmonitor.cpp:549
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "抓取遠端 ID"
 
-#: notificationmonitor.cpp:484
+#: notificationmonitor.cpp:499
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "抓取 VRef"
 
-#: notificationmonitor.cpp:492
+#: notificationmonitor.cpp:507
 #, kde-format
 msgid "No Filter"
 msgstr "沒有過濾器"
 
-#: notificationmonitor.cpp:495
+#: notificationmonitor.cpp:510
 #, kde-format
 msgid "Display"
 msgstr "顯示"
 
-#: notificationmonitor.cpp:501
+#: notificationmonitor.cpp:516
 #, kde-format
 msgid "Index"
 msgstr "索引"
 
-#: notificationmonitor.cpp:504
+#: notificationmonitor.cpp:519
 #, kde-format
 msgid "Sync"
 msgstr "同步"
 
-#: notificationmonitor.cpp:510
+#: notificationmonitor.cpp:525
 #, kde-format
 msgid "Content Mime Types"
 msgstr "內容 MIME 類型"
 
-#: notificationmonitor.cpp:519
+#: notificationmonitor.cpp:534
 #, kde-format
 msgid "Parent"
 msgstr "親"
 
-#: notificationmonitor.cpp:522
+#: notificationmonitor.cpp:537
 #, kde-format
 msgid "None"
 msgstr "無"
 
-#: notificationmonitor.cpp:526
+#: notificationmonitor.cpp:541
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "祖先僅抓取 ID"
 
-#: notificationmonitor.cpp:527
+#: notificationmonitor.cpp:542
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "祖先屬性"
 
-#: notificationmonitor.cpp:535
+#: notificationmonitor.cpp:550
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "抓取所有屬性"
