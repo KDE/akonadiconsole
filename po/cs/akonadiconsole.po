@@ -977,10 +977,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Konzole pro správu a ladění Akonadi"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2024 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2025 the Akonadi developer"
-msgstr "(c) 2009-2024 vývojář Akonadi"
+msgstr ""
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
