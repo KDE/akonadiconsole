@@ -150,8 +150,20 @@ void AgentWidget::addAgent()
 
         if (agentType.isValid()) {
             auto job = new AgentInstanceCreateJob(agentType, this);
-            job->configure(this);
-            job->start(); // TODO: check result
+            connect(job, &Akonadi::AgentInstanceCreateJob::result, this, [this, job](KJob *) {
+                if (job->error()) {
+                    qCWarning(AKONADICONSOLE_LOG) << job->errorText();
+                    return;
+                }
+                auto configureDialog = new Akonadi::AgentConfigurationDialog(job->instance(), this);
+                configureDialog->setAttribute(Qt::WA_DeleteOnClose);
+                connect(configureDialog, &QDialog::rejected, this, [instance = job->instance()] {
+                    Akonadi::AgentManager::self()->removeInstance(instance);
+                });
+                configureDialog->show();
+            });
+
+            job->start();
         }
     }
     delete dlg;
