@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:42+0000\n"
+"POT-Creation-Date: 2025-03-10 02:53+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -252,8 +252,8 @@ msgstr "संयोजयति..."
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:363
-#: notificationmonitor.cpp:397 notificationmonitor.cpp:421
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:370
+#: notificationmonitor.cpp:404 notificationmonitor.cpp:428
 #, kde-format
 msgid "Remove"
 msgstr "अपाकरोति"
@@ -278,7 +278,7 @@ msgid "Restart"
 msgstr "पुनः आरभत"
 
 #: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
-#: notificationmonitor.cpp:381
+#: notificationmonitor.cpp:388
 #, kde-format
 msgid "Collection"
 msgstr "सङ्ग्रह"
@@ -427,8 +427,8 @@ msgstr "असमर्थितः प्रकारः"
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
 #: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
-#: notificationmonitor.cpp:247 notificationmonitor.cpp:519
-#: notificationmonitor.cpp:544 tagpropertiesdialog.ui:76
+#: notificationmonitor.cpp:254 notificationmonitor.cpp:526
+#: notificationmonitor.cpp:551 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "गुणाः"
@@ -533,14 +533,14 @@ msgstr "असिद्ध/असिद्ध"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:264
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:271
 #, kde-format
 msgid "Flags"
 msgstr "ध्वजाः"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:84
-#: notificationmonitor.cpp:265 notificationmonitor.cpp:443
+#: notificationmonitor.cpp:272 notificationmonitor.cpp:450
 #, kde-format
 msgid "Tags"
 msgstr "टैग्स"
@@ -575,8 +575,8 @@ msgstr "निर्मियताम्"
 #: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
 #: notificationmodel.cpp:111 notificationmodel.cpp:129
 #: notificationmodel.cpp:141 notificationmonitor.cpp:169
-#: notificationmonitor.cpp:357 notificationmonitor.cpp:394
-#: notificationmonitor.cpp:418
+#: notificationmonitor.cpp:364 notificationmonitor.cpp:401
+#: notificationmonitor.cpp:425
 #, kde-format
 msgid "Modify"
 msgstr "परिवर्तनं कुर्वन्तु"
@@ -710,7 +710,7 @@ msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "त्रुटिनिवारणं सक्षमं कुर्वन्तु"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:524
+#: debugwidget.cpp:49 notificationmonitor.cpp:531
 #, kde-format
 msgid "All"
 msgstr "सर्वे"
@@ -930,7 +930,7 @@ msgstr "सञ्चिकायां रक्षतु..."
 msgid "Error"
 msgstr "त्रुटि"
 
-#: logging.cpp:136 notificationmonitor.cpp:557
+#: logging.cpp:136 notificationmonitor.cpp:564
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "सञ्चिकां उद्घाटयितुं असफलम्: %1"
@@ -946,7 +946,7 @@ msgid "Program"
 msgstr "कार्यक्रम"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:240
+#: notificationmonitor.cpp:247
 #, kde-format
 msgid "Type"
 msgstr "प्रकारः"
@@ -1107,13 +1107,13 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "सत्र/सब्सक्राइबर"
 
-#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:214
-#: notificationmonitor.cpp:437
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:221
+#: notificationmonitor.cpp:444
 #, kde-format
 msgid "Items"
 msgstr "मदा"
 
-#: monitorswidget.cpp:81 notificationmonitor.cpp:440
+#: monitorswidget.cpp:81 notificationmonitor.cpp:447
 #, kde-format
 msgid "Collections"
 msgstr "संग्रह"
@@ -1128,19 +1128,19 @@ msgstr "ग्राहक"
 msgid "Notification"
 msgstr "अधिसूचना"
 
-#: monitorswidget.cpp:99 notificationmonitor.cpp:515
+#: monitorswidget.cpp:99 notificationmonitor.cpp:522
 #, kde-format
 msgid "List Filter"
 msgstr "सूची फ़िल्टर"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:516
+#: monitorswidget.cpp:100 notificationmonitor.cpp:523
 #, kde-format
 msgid "Include Statistics"
 msgstr "सांख्यिकी समावेशित करें"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:195
-#: notificationmonitor.cpp:376 notificationmonitor.cpp:404
-#: notificationmonitor.cpp:517 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:383 notificationmonitor.cpp:411
+#: notificationmonitor.cpp:524 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "संसाधनम्"
@@ -1150,7 +1150,7 @@ msgstr "संसाधनम्"
 msgid "Content MimeTypes"
 msgstr "सामग्री MimeTypes"
 
-#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:533
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:540
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "पूर्वज पुनर्प्राप्ति"
@@ -1160,8 +1160,8 @@ msgstr "पूर्वज पुनर्प्राप्ति"
 msgid "Ancestor Fetch Scope"
 msgstr "पूर्वजः व्याप्तिम् आनयन्तु"
 
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:520
-#: notificationmonitor.cpp:541
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:527
+#: notificationmonitor.cpp:548
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "केवलं ID आनयन्तु"
@@ -1181,7 +1181,7 @@ msgstr "मूल्यानि"
 msgid "Properties"
 msgstr "गुणाः"
 
-#: monitorswidget.cpp:136 notificationmonitor.cpp:428
+#: monitorswidget.cpp:136 notificationmonitor.cpp:435
 #, kde-format
 msgid "Subscriber"
 msgstr "सब्सक्राइबर"
@@ -1236,7 +1236,7 @@ msgstr "सर्वे निरीक्षिताः :"
 msgid "Is Exclusive:"
 msgstr "अनन्यम् अस्ति :"
 
-#: monitorswidget.cpp:148 notificationmonitor.cpp:463
+#: monitorswidget.cpp:148 notificationmonitor.cpp:470
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "मदं आनेतुं व्याप्तिम्"
@@ -1246,12 +1246,12 @@ msgstr "मदं आनेतुं व्याप्तिम्"
 msgid "Payload Parts"
 msgstr "पेलोड पार्ट्स"
 
-#: monitorswidget.cpp:151 notificationmonitor.cpp:482
+#: monitorswidget.cpp:151 notificationmonitor.cpp:489
 #, kde-format
 msgid "Full Payload"
 msgstr "पूर्ण पेलोड"
 
-#: monitorswidget.cpp:153 notificationmonitor.cpp:483
+#: monitorswidget.cpp:153 notificationmonitor.cpp:490
 #, kde-format
 msgid "All Attributes"
 msgstr "सर्वे गुणाः"
@@ -1271,12 +1271,12 @@ msgstr "Cached Payloads Parts Only इत्यस्य जाँचं कु�
 msgid "Fetch mtime"
 msgstr "mtime आनयतु"
 
-#: monitorswidget.cpp:158 notificationmonitor.cpp:490
+#: monitorswidget.cpp:158 notificationmonitor.cpp:497
 #, kde-format
 msgid "Fetch GID"
 msgstr "GID आनयतु"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:536
+#: monitorswidget.cpp:159 notificationmonitor.cpp:543
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "पुनर्प्राप्तिदोषान् अवहेलयन्तु"
@@ -1291,7 +1291,7 @@ msgstr "परिवर्तनं आनयन्तु यतः"
 msgid "Fetch RID"
 msgstr "RID आनयतु"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:491
+#: monitorswidget.cpp:162 notificationmonitor.cpp:498
 #, kde-format
 msgid "Fetch Tags"
 msgstr "टैग्स आनेतु"
@@ -1301,12 +1301,12 @@ msgstr "टैग्स आनेतु"
 msgid "Collection Fetch Scope"
 msgstr "संग्रह आनेतु व्याप्ति"
 
-#: monitorswidget.cpp:168 notificationmonitor.cpp:539
+#: monitorswidget.cpp:168 notificationmonitor.cpp:546
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "टैग आनेतु दायरा"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:405
+#: notificationmodel.cpp:77 notificationmonitor.cpp:412
 #, kde-format
 msgid "Tag"
 msgstr "सूचकपत्त्र"
@@ -1318,14 +1318,14 @@ msgstr "सदस्यता"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
-#: notificationmonitor.cpp:354 notificationmonitor.cpp:391
-#: notificationmonitor.cpp:415
+#: notificationmonitor.cpp:361 notificationmonitor.cpp:398
+#: notificationmonitor.cpp:422
 #, kde-format
 msgid "Add"
 msgstr "संयोजयति"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
-#: notificationmonitor.cpp:172 notificationmonitor.cpp:360
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:367
 #, kde-format
 msgid "Move"
 msgstr "चलनम्"
@@ -1342,22 +1342,22 @@ msgstr "ModifyTags"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
-#: notificationmonitor.cpp:400 notificationmonitor.cpp:424
+#: notificationmonitor.cpp:407 notificationmonitor.cpp:431
 #, kde-format
 msgid "InvalidOp"
 msgstr "अमान्यOp"
 
-#: notificationmodel.cpp:117 notificationmonitor.cpp:366
+#: notificationmodel.cpp:117 notificationmonitor.cpp:373
 #, kde-format
 msgid "Subscribe"
 msgstr "सब्सक्राइब करें"
 
-#: notificationmodel.cpp:119 notificationmonitor.cpp:369
+#: notificationmodel.cpp:119 notificationmonitor.cpp:376
 #, kde-format
 msgid "Unsubscribe"
 msgstr "सदस्यता रद्द करें"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:372
+#: notificationmodel.cpp:121 notificationmonitor.cpp:379
 #, kde-format
 msgid "InvalidIp"
 msgstr "असिद्धIp"
@@ -1368,8 +1368,8 @@ msgid "Unknown"
 msgstr "अज्ञात"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
-#: notificationmonitor.cpp:375 notificationmonitor.cpp:403
-#: notificationmonitor.cpp:427
+#: notificationmonitor.cpp:382 notificationmonitor.cpp:410
+#: notificationmonitor.cpp:434
 #, kde-format
 msgid "Operation"
 msgstr "संचालन"
@@ -1399,7 +1399,7 @@ msgstr "सूचनानिरीक्षकं सक्षमं कुर�
 msgid "Timestamp"
 msgstr "समयमुद्रिका"
 
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:377
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:384
 #, kde-format
 msgid "Parent Collection"
 msgstr "अभिभावक संग्रह"
@@ -1409,7 +1409,7 @@ msgstr "अभिभावक संग्रह"
 msgid "Parent Dest Col"
 msgstr "अभिभावक डेस्ट कर्नल"
 
-#: notificationmonitor.cpp:198 notificationmonitor.cpp:379
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:386
 #, kde-format
 msgid "Destination Resource"
 msgstr "गन्तव्यसंसाधनम्"
@@ -1429,420 +1429,425 @@ msgstr "ध्वजाः योजिताः"
 msgid "Removed Flags"
 msgstr "ध्वजाः निष्कासिताः"
 
-#: notificationmonitor.cpp:209
+#: notificationmonitor.cpp:208
 #, kde-format
 msgid "Added Tags"
 msgstr "Added Tags"
 
-#: notificationmonitor.cpp:212
+#: notificationmonitor.cpp:216
+#, kde-format
+msgid "Removed Tags"
+msgstr "टैग्स् निष्कासितम्"
+
+#: notificationmonitor.cpp:219
 #, kde-format
 msgid "Must retrieve"
 msgstr "अवश्यं पुनः प्राप्तव्यम्"
 
-#: notificationmonitor.cpp:226
+#: notificationmonitor.cpp:233
 #, kde-format
 msgid "id"
 msgstr "id"
 
-#: notificationmonitor.cpp:227
+#: notificationmonitor.cpp:234
 #, kde-format
 msgid "remoteId"
 msgstr "दूरस्थId"
 
-#: notificationmonitor.cpp:228
+#: notificationmonitor.cpp:235
 #, kde-format
 msgid "name"
 msgstr "नामः"
 
-#: notificationmonitor.cpp:230 notificationmonitor.cpp:277
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:237 notificationmonitor.cpp:284
+#: notificationmonitor.cpp:332
 #, kde-format
 msgid "Ancestor"
 msgstr "पूर्वजः"
 
-#: notificationmonitor.cpp:237 notificationmonitor.cpp:311
+#: notificationmonitor.cpp:244 notificationmonitor.cpp:318
 #, kde-format
 msgid "ID"
 msgstr "आईडी"
 
-#: notificationmonitor.cpp:238 notificationmonitor.cpp:312
+#: notificationmonitor.cpp:245 notificationmonitor.cpp:319
 #, kde-format
 msgid "Parent ID"
 msgstr "अभिभावक आईडी"
 
-#: notificationmonitor.cpp:239 notificationmonitor.cpp:260
+#: notificationmonitor.cpp:246 notificationmonitor.cpp:267
 #, kde-format
 msgid "GID"
 msgstr "जीआईडी"
 
-#: notificationmonitor.cpp:241 notificationmonitor.cpp:315
+#: notificationmonitor.cpp:248 notificationmonitor.cpp:322
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "दूरस्थ आईडी"
 
-#: notificationmonitor.cpp:256
+#: notificationmonitor.cpp:263
 #, kde-format
 msgid "Revision"
 msgstr "कार्यदर्शन"
 
-#: notificationmonitor.cpp:257
+#: notificationmonitor.cpp:264
 #, kde-format
 msgid "ParentID"
 msgstr "ParentID"
 
-#: notificationmonitor.cpp:258
+#: notificationmonitor.cpp:265
 #, kde-format
 msgid "RemoteID"
 msgstr "दूरस्थ आईडी"
 
-#: notificationmonitor.cpp:259
+#: notificationmonitor.cpp:266
 #, kde-format
 msgid "RemoteRev"
 msgstr "दूरस्थपुनर्वि"
 
-#: notificationmonitor.cpp:261 notificationmonitor.cpp:299
-#: notificationmonitor.cpp:321
+#: notificationmonitor.cpp:268 notificationmonitor.cpp:306
+#: notificationmonitor.cpp:328
 #, kde-format
 msgid "Size"
 msgstr "आकृति"
 
-#: notificationmonitor.cpp:262
+#: notificationmonitor.cpp:269
 #, kde-format
 msgid "MimeType"
 msgstr "MimeType इति"
 
-#: notificationmonitor.cpp:263
+#: notificationmonitor.cpp:270
 #, kde-format
 msgid "MTime"
 msgstr "MTtime"
 
-#: notificationmonitor.cpp:274
+#: notificationmonitor.cpp:281
 #, kde-format
 msgid "VRefs"
 msgstr "VRefs"
 
-#: notificationmonitor.cpp:283
+#: notificationmonitor.cpp:290
 #, kde-format
 msgid "Parts"
 msgstr "भागाः"
 
-#: notificationmonitor.cpp:290
+#: notificationmonitor.cpp:297
 #, kde-format
 msgid "External"
 msgstr "बाह्य"
 
-#: notificationmonitor.cpp:293
+#: notificationmonitor.cpp:300
 #, kde-format
 msgid "Internal"
 msgstr "आंतरिक"
 
-#: notificationmonitor.cpp:296
+#: notificationmonitor.cpp:303
 #, kde-format
 msgid "Foreign"
 msgstr "विदेशः"
 
-#: notificationmonitor.cpp:300
+#: notificationmonitor.cpp:307
 #, kde-format
 msgid "Storage Type"
 msgstr "भण्डारण प्रकार"
 
-#: notificationmonitor.cpp:301
+#: notificationmonitor.cpp:308
 #, kde-format
 msgid "Version"
 msgstr "संस्करण"
 
-#: notificationmonitor.cpp:302
+#: notificationmonitor.cpp:309
 #, kde-format
 msgid "Data"
 msgstr "दत्तांश"
 
-#: notificationmonitor.cpp:313
+#: notificationmonitor.cpp:320
 #, kde-format
 msgid "Name"
 msgstr "नामः"
 
-#: notificationmonitor.cpp:314
+#: notificationmonitor.cpp:321
 #, kde-format
 msgid "Mime Types"
 msgstr "माइम प्रकार"
 
-#: notificationmonitor.cpp:316
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Remote Revision"
 msgstr "दूरस्थ पुनरीक्षण"
 
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:324
 #, kde-format
 msgid "Statistics"
 msgstr "सांख्यिकी"
 
-#: notificationmonitor.cpp:319
+#: notificationmonitor.cpp:326
 #, kde-format
 msgid "Count"
 msgstr "गणनां कारोतु"
 
-#: notificationmonitor.cpp:320
+#: notificationmonitor.cpp:327
 #, kde-format
 msgid "Unseen"
 msgstr "अदृष्टम्"
 
-#: notificationmonitor.cpp:323
+#: notificationmonitor.cpp:330
 #, kde-format
 msgid "Search Query"
 msgstr "अन्वेषण प्रश्न"
 
-#: notificationmonitor.cpp:324
+#: notificationmonitor.cpp:331
 #, kde-format
 msgid "Search Collections"
 msgstr "अन्वेषण संग्रह"
 
-#: notificationmonitor.cpp:331
+#: notificationmonitor.cpp:338
 #, kde-format
 msgid "Cache Policy"
 msgstr "सञ्चयनीतिः"
 
-#: notificationmonitor.cpp:333
+#: notificationmonitor.cpp:340
 #, kde-format
 msgid "Inherit"
 msgstr "उत्तराधिकारः"
 
-#: notificationmonitor.cpp:334
+#: notificationmonitor.cpp:341
 #, kde-format
 msgid "Check Interval"
 msgstr "अन्तरालं पश्यन्तु"
 
-#: notificationmonitor.cpp:335
+#: notificationmonitor.cpp:342
 #, kde-format
 msgid "Cache Timeout"
 msgstr "Cache Timeout इति"
 
-#: notificationmonitor.cpp:336
+#: notificationmonitor.cpp:343
 #, kde-format
 msgid "Sync on Demand"
 msgstr "माङ्गल्यां समन्वयनम्"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:344
 #, kde-format
 msgid "Local Parts"
 msgstr "स्थानीय भाग"
 
-#: notificationmonitor.cpp:342 notificationmonitor.cpp:506
+#: notificationmonitor.cpp:349 notificationmonitor.cpp:513
 #, kde-format
 msgid "Enabled"
 msgstr "सक्षमम्"
 
-#: notificationmonitor.cpp:343
+#: notificationmonitor.cpp:350
 #, kde-format
 msgid "DisplayPref"
 msgstr "DisplayPref"
 
-#: notificationmonitor.cpp:344
+#: notificationmonitor.cpp:351
 #, kde-format
 msgid "SyncPref"
 msgstr "SyncPref"
 
-#: notificationmonitor.cpp:345
+#: notificationmonitor.cpp:352
 #, kde-format
 msgid "IndexPref"
 msgstr "अनुक्रमणिकाPref"
 
-#: notificationmonitor.cpp:346
+#: notificationmonitor.cpp:353
 #, kde-format
 msgid "Virtual"
 msgstr "आभास"
 
-#: notificationmonitor.cpp:378
+#: notificationmonitor.cpp:385
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "अभिभावक डेस्ट संग्रह"
 
-#: notificationmonitor.cpp:380
+#: notificationmonitor.cpp:387
 #, kde-format
 msgid "Changed Parts"
 msgstr "परिवर्तिताः भागाः"
 
-#: notificationmonitor.cpp:429
+#: notificationmonitor.cpp:436
 #, kde-format
 msgid "Monitored Collections"
 msgstr "निरीक्षित संग्रह"
 
-#: notificationmonitor.cpp:430
+#: notificationmonitor.cpp:437
 #, kde-format
 msgid "Monitored Items"
 msgstr "निरीक्षितवस्तूनि"
 
-#: notificationmonitor.cpp:431
+#: notificationmonitor.cpp:438
 #, kde-format
 msgid "Monitored Tags"
 msgstr "निरीक्षित टैग्स"
 
-#: notificationmonitor.cpp:446
+#: notificationmonitor.cpp:453
 #, kde-format
 msgid "Subscriptions"
 msgstr "सदस्यता"
 
-#: notificationmonitor.cpp:449
+#: notificationmonitor.cpp:456
 #, kde-format
 msgid "Changes"
 msgstr "परिवर्तनं करोति"
 
-#: notificationmonitor.cpp:452
+#: notificationmonitor.cpp:459
 #, kde-format
 msgid "No Type"
 msgstr "न प्रकारः"
 
-#: notificationmonitor.cpp:456
+#: notificationmonitor.cpp:463
 #, kde-format
 msgid "Monitored Types"
 msgstr "निरीक्षित प्रकार"
 
-#: notificationmonitor.cpp:457
+#: notificationmonitor.cpp:464
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "निरीक्षित माइम प्रकार"
 
-#: notificationmonitor.cpp:458
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Monitored Resources"
 msgstr "निरीक्षिताः संसाधनाः"
 
-#: notificationmonitor.cpp:459
+#: notificationmonitor.cpp:466
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "उपेक्षिताः सत्राः"
 
-#: notificationmonitor.cpp:460
+#: notificationmonitor.cpp:467
 #, kde-format
 msgid "All Monitored"
 msgstr "सर्वे निरीक्षिताः"
 
-#: notificationmonitor.cpp:461
+#: notificationmonitor.cpp:468
 #, kde-format
 msgid "Exclusive"
 msgstr "अनन्य"
 
-#: notificationmonitor.cpp:465
+#: notificationmonitor.cpp:472
 #, kde-format
 msgid "Requested Parts"
 msgstr "अनुरोधित भाग"
 
-#: notificationmonitor.cpp:466
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Changed Since"
 msgstr "परिवर्तितः यतः"
 
-#: notificationmonitor.cpp:470
+#: notificationmonitor.cpp:477
 #, kde-format
 msgid "No Ancestor"
 msgstr "न पूर्वजः"
 
-#: notificationmonitor.cpp:473
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "मातापितृ पूर्वज"
 
-#: notificationmonitor.cpp:476
+#: notificationmonitor.cpp:483
 #, kde-format
 msgid "All Ancestors"
 msgstr "सर्वे पूर्वजाः"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:486
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "पूर्वज गभीरता"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:487
 #, kde-format
 msgid "Cache Only"
 msgstr "Cache Only इति एव"
 
-#: notificationmonitor.cpp:481
+#: notificationmonitor.cpp:488
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "केवलं संग्रहीत पेलोड् भागानां जाँचं कुर्वन्तु"
 
-#: notificationmonitor.cpp:484
+#: notificationmonitor.cpp:491
 #, kde-format
 msgid "Fetch Size"
 msgstr "आकारं आनयन्तु"
 
-#: notificationmonitor.cpp:485
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "Fetch MTime"
 msgstr "MTtime आनयतु"
 
-#: notificationmonitor.cpp:486
+#: notificationmonitor.cpp:493
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "दूरस्थं संशोधनं आनयन्तु"
 
-#: notificationmonitor.cpp:487
+#: notificationmonitor.cpp:494
 #, kde-format
 msgid "Ignore Errors"
 msgstr "त्रुटिः अवहेलयतु"
 
-#: notificationmonitor.cpp:488
+#: notificationmonitor.cpp:495
 #, kde-format
 msgid "Fetch Flags"
 msgstr "ध्वजान् आनयन्तु"
 
-#: notificationmonitor.cpp:489 notificationmonitor.cpp:542
+#: notificationmonitor.cpp:496 notificationmonitor.cpp:549
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "RemoteID आनयन्तु"
 
-#: notificationmonitor.cpp:492
+#: notificationmonitor.cpp:499
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "VRefs आनयतु"
 
-#: notificationmonitor.cpp:500
+#: notificationmonitor.cpp:507
 #, kde-format
 msgid "No Filter"
 msgstr "No Filter इति"
 
-#: notificationmonitor.cpp:503
+#: notificationmonitor.cpp:510
 #, kde-format
 msgid "Display"
 msgstr "प्रदर्शन"
 
-#: notificationmonitor.cpp:509
+#: notificationmonitor.cpp:516
 #, kde-format
 msgid "Index"
 msgstr "अनुक्रमणिका"
 
-#: notificationmonitor.cpp:512
+#: notificationmonitor.cpp:519
 #, kde-format
 msgid "Sync"
 msgstr "समन्वयनम्"
 
-#: notificationmonitor.cpp:518
+#: notificationmonitor.cpp:525
 #, kde-format
 msgid "Content Mime Types"
 msgstr "सामग्री माइम प्रकार"
 
-#: notificationmonitor.cpp:527
+#: notificationmonitor.cpp:534
 #, kde-format
 msgid "Parent"
 msgstr "मातापिता"
 
-#: notificationmonitor.cpp:530
+#: notificationmonitor.cpp:537
 #, kde-format
 msgid "None"
 msgstr "न कश्चित्"
 
-#: notificationmonitor.cpp:534
+#: notificationmonitor.cpp:541
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "पूर्वजः केवलं ID आनयन्तु"
 
-#: notificationmonitor.cpp:535
+#: notificationmonitor.cpp:542
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "पूर्वज गुण"
 
-#: notificationmonitor.cpp:543
+#: notificationmonitor.cpp:550
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "सर्वाणि विशेषतानि आनयन्तु"
@@ -2036,6 +2041,3 @@ msgstr "&अपाकरोति"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "दूरस्थपरिचयकाः"
-
-#~ msgid "Removed Tags"
-#~ msgstr "टैग्स् निष्कासितम्"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:42+0000\n"
+"POT-Creation-Date: 2025-03-10 02:53+0000\n"
 "PO-Revision-Date: 2024-08-19 21:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -249,8 +249,8 @@ msgstr "추가..."
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
-#: notificationmonitor.cpp:175 notificationmonitor.cpp:363
-#: notificationmonitor.cpp:397 notificationmonitor.cpp:421
+#: notificationmonitor.cpp:175 notificationmonitor.cpp:370
+#: notificationmonitor.cpp:404 notificationmonitor.cpp:428
 #, kde-format
 msgid "Remove"
 msgstr "삭제"
@@ -275,7 +275,7 @@ msgid "Restart"
 msgstr "다시 시작"
 
 #: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
-#: notificationmonitor.cpp:381
+#: notificationmonitor.cpp:388
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
@@ -424,8 +424,8 @@ msgstr "지원하지 않는 형식"
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
 #: browserwidget_contentview.ui:103 collectionattributespage.cpp:21
 #: monitorswidget.cpp:112 monitorswidget.cpp:119 monitorswidget.cpp:152
-#: notificationmonitor.cpp:247 notificationmonitor.cpp:519
-#: notificationmonitor.cpp:544 tagpropertiesdialog.ui:76
+#: notificationmonitor.cpp:254 notificationmonitor.cpp:526
+#: notificationmonitor.cpp:551 tagpropertiesdialog.ui:76
 #, kde-format
 msgid "Attributes"
 msgstr "속성"
@@ -530,14 +530,14 @@ msgstr "잘못됨/잘못됨"
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
 #. i18n: ectx: property (title), widget (KEditListWidget, tags)
 #: browserwidget_contentview.ui:330 browserwidget_contentview.ui:345
-#: browserwidget_contentview.ui:370 notificationmonitor.cpp:264
+#: browserwidget_contentview.ui:370 notificationmonitor.cpp:271
 #, kde-format
 msgid "Flags"
 msgstr "플래그"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: browserwidget_contentview.ui:355 monitorswidget.cpp:84
-#: notificationmonitor.cpp:265 notificationmonitor.cpp:443
+#: notificationmonitor.cpp:272 notificationmonitor.cpp:450
 #, kde-format
 msgid "Tags"
 msgstr "태그"
@@ -572,8 +572,8 @@ msgstr "만들기"
 #: collectionaclpage.ui:30 collectionaclpage.ui:74 notificationmodel.cpp:89
 #: notificationmodel.cpp:111 notificationmodel.cpp:129
 #: notificationmodel.cpp:141 notificationmonitor.cpp:169
-#: notificationmonitor.cpp:357 notificationmonitor.cpp:394
-#: notificationmonitor.cpp:418
+#: notificationmonitor.cpp:364 notificationmonitor.cpp:401
+#: notificationmonitor.cpp:425
 #, kde-format
 msgid "Modify"
 msgstr "수정"
@@ -707,7 +707,7 @@ msgctxt "@option:check"
 msgid "Enable debugger"
 msgstr "디버거 활성화"
 
-#: debugwidget.cpp:49 notificationmonitor.cpp:524
+#: debugwidget.cpp:49 notificationmonitor.cpp:531
 #, kde-format
 msgid "All"
 msgstr "모두"
@@ -927,7 +927,7 @@ msgstr "파일로 저장..."
 msgid "Error"
 msgstr "오류"
 
-#: logging.cpp:136 notificationmonitor.cpp:557
+#: logging.cpp:136 notificationmonitor.cpp:564
 #, kde-format
 msgid "Failed to open file: %1"
 msgstr "파일을 열 수 없음: %1"
@@ -943,7 +943,7 @@ msgid "Program"
 msgstr "프로그램"
 
 #: loggingmodel.cpp:108 notificationmodel.cpp:194 notificationmonitor.cpp:143
-#: notificationmonitor.cpp:240
+#: notificationmonitor.cpp:247
 #, kde-format
 msgid "Type"
 msgstr "종류"
@@ -1103,13 +1103,13 @@ msgstr ""
 msgid "Session/Subscriber"
 msgstr "세션/구독자"
 
-#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:214
-#: notificationmonitor.cpp:437
+#: monitorswidget.cpp:78 notificationmodel.cpp:73 notificationmonitor.cpp:221
+#: notificationmonitor.cpp:444
 #, kde-format
 msgid "Items"
 msgstr "항목"
 
-#: monitorswidget.cpp:81 notificationmonitor.cpp:440
+#: monitorswidget.cpp:81 notificationmonitor.cpp:447
 #, kde-format
 msgid "Collections"
 msgstr "모음집"
@@ -1124,19 +1124,19 @@ msgstr "구독자"
 msgid "Notification"
 msgstr "알림"
 
-#: monitorswidget.cpp:99 notificationmonitor.cpp:515
+#: monitorswidget.cpp:99 notificationmonitor.cpp:522
 #, kde-format
 msgid "List Filter"
 msgstr "목록 필터"
 
-#: monitorswidget.cpp:100 notificationmonitor.cpp:516
+#: monitorswidget.cpp:100 notificationmonitor.cpp:523
 #, kde-format
 msgid "Include Statistics"
 msgstr "통계 포함"
 
 #: monitorswidget.cpp:101 notificationmonitor.cpp:195
-#: notificationmonitor.cpp:376 notificationmonitor.cpp:404
-#: notificationmonitor.cpp:517 tagpropertiesdialog.cpp:80
+#: notificationmonitor.cpp:383 notificationmonitor.cpp:411
+#: notificationmonitor.cpp:524 tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Resource"
 msgstr "리소스"
@@ -1146,7 +1146,7 @@ msgstr "리소스"
 msgid "Content MimeTypes"
 msgstr "내용의 MIME 형식"
 
-#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:533
+#: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:540
 #, kde-format
 msgid "Ancestor Retrieval"
 msgstr "상위 항목 가져오기"
@@ -1156,8 +1156,8 @@ msgstr "상위 항목 가져오기"
 msgid "Ancestor Fetch Scope"
 msgstr "상위 항목 가져오기 범위"
 
-#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:520
-#: notificationmonitor.cpp:541
+#: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:527
+#: notificationmonitor.cpp:548
 #, kde-format
 msgid "Fetch ID Only"
 msgstr "ID만 가져오기"
@@ -1177,7 +1177,7 @@ msgstr "값"
 msgid "Properties"
 msgstr "속성"
 
-#: monitorswidget.cpp:136 notificationmonitor.cpp:428
+#: monitorswidget.cpp:136 notificationmonitor.cpp:435
 #, kde-format
 msgid "Subscriber"
 msgstr "구독자"
@@ -1232,7 +1232,7 @@ msgstr "모든 관찰:"
 msgid "Is Exclusive:"
 msgstr "독점적:"
 
-#: monitorswidget.cpp:148 notificationmonitor.cpp:463
+#: monitorswidget.cpp:148 notificationmonitor.cpp:470
 #, kde-format
 msgid "Item Fetch Scope"
 msgstr "항목 가져오기 범위"
@@ -1242,12 +1242,12 @@ msgstr "항목 가져오기 범위"
 msgid "Payload Parts"
 msgstr "페이로드 부분"
 
-#: monitorswidget.cpp:151 notificationmonitor.cpp:482
+#: monitorswidget.cpp:151 notificationmonitor.cpp:489
 #, kde-format
 msgid "Full Payload"
 msgstr "전체 페이로드"
 
-#: monitorswidget.cpp:153 notificationmonitor.cpp:483
+#: monitorswidget.cpp:153 notificationmonitor.cpp:490
 #, kde-format
 msgid "All Attributes"
 msgstr "모든 속성"
@@ -1267,12 +1267,12 @@ msgstr "캐시된 페이로드 부분만 검사"
 msgid "Fetch mtime"
 msgstr "mtime 가져오기"
 
-#: monitorswidget.cpp:158 notificationmonitor.cpp:490
+#: monitorswidget.cpp:158 notificationmonitor.cpp:497
 #, kde-format
 msgid "Fetch GID"
 msgstr "GID 가져오기"
 
-#: monitorswidget.cpp:159 notificationmonitor.cpp:536
+#: monitorswidget.cpp:159 notificationmonitor.cpp:543
 #, kde-format
 msgid "Ignore Retrieval Errors"
 msgstr "가져오기 오류 무시"
@@ -1287,7 +1287,7 @@ msgstr "다음 이후의 변경 사항 가져오기"
 msgid "Fetch RID"
 msgstr "RID 가져오기"
 
-#: monitorswidget.cpp:162 notificationmonitor.cpp:491
+#: monitorswidget.cpp:162 notificationmonitor.cpp:498
 #, kde-format
 msgid "Fetch Tags"
 msgstr "태그 가져오기"
@@ -1297,12 +1297,12 @@ msgstr "태그 가져오기"
 msgid "Collection Fetch Scope"
 msgstr "모음집 가져오기 범위"
 
-#: monitorswidget.cpp:168 notificationmonitor.cpp:539
+#: monitorswidget.cpp:168 notificationmonitor.cpp:546
 #, kde-format
 msgid "Tag Fetch Scope"
 msgstr "태그 가져오기 범위"
 
-#: notificationmodel.cpp:77 notificationmonitor.cpp:405
+#: notificationmodel.cpp:77 notificationmonitor.cpp:412
 #, kde-format
 msgid "Tag"
 msgstr "태그"
@@ -1314,14 +1314,14 @@ msgstr "구독"
 
 #: notificationmodel.cpp:87 notificationmodel.cpp:109 notificationmodel.cpp:127
 #: notificationmodel.cpp:139 notificationmonitor.cpp:166
-#: notificationmonitor.cpp:354 notificationmonitor.cpp:391
-#: notificationmonitor.cpp:415
+#: notificationmonitor.cpp:361 notificationmonitor.cpp:398
+#: notificationmonitor.cpp:422
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
 #: notificationmodel.cpp:91 notificationmodel.cpp:113
-#: notificationmonitor.cpp:172 notificationmonitor.cpp:360
+#: notificationmonitor.cpp:172 notificationmonitor.cpp:367
 #, kde-format
 msgid "Move"
 msgstr "이동"
@@ -1338,22 +1338,22 @@ msgstr "태그수정"
 
 #: notificationmodel.cpp:103 notificationmodel.cpp:133
 #: notificationmodel.cpp:145 notificationmonitor.cpp:190
-#: notificationmonitor.cpp:400 notificationmonitor.cpp:424
+#: notificationmonitor.cpp:407 notificationmonitor.cpp:431
 #, kde-format
 msgid "InvalidOp"
 msgstr "잘못된동작"
 
-#: notificationmodel.cpp:117 notificationmonitor.cpp:366
+#: notificationmodel.cpp:117 notificationmonitor.cpp:373
 #, kde-format
 msgid "Subscribe"
 msgstr "구독"
 
-#: notificationmodel.cpp:119 notificationmonitor.cpp:369
+#: notificationmodel.cpp:119 notificationmonitor.cpp:376
 #, kde-format
 msgid "Unsubscribe"
 msgstr "구독해제"
 
-#: notificationmodel.cpp:121 notificationmonitor.cpp:372
+#: notificationmodel.cpp:121 notificationmonitor.cpp:379
 #, kde-format
 msgid "InvalidIp"
 msgstr "잘못된IP"
@@ -1364,8 +1364,8 @@ msgid "Unknown"
 msgstr "알 수 없음"
 
 #: notificationmodel.cpp:196 notificationmonitor.cpp:194
-#: notificationmonitor.cpp:375 notificationmonitor.cpp:403
-#: notificationmonitor.cpp:427
+#: notificationmonitor.cpp:382 notificationmonitor.cpp:410
+#: notificationmonitor.cpp:434
 #, kde-format
 msgid "Operation"
 msgstr "작업"
@@ -1395,7 +1395,7 @@ msgstr "알림 모니터 활성화"
 msgid "Timestamp"
 msgstr "타임스탬프"
 
-#: notificationmonitor.cpp:196 notificationmonitor.cpp:377
+#: notificationmonitor.cpp:196 notificationmonitor.cpp:384
 #, kde-format
 msgid "Parent Collection"
 msgstr "부모 모음집"
@@ -1405,7 +1405,7 @@ msgstr "부모 모음집"
 msgid "Parent Dest Col"
 msgstr "부모 대상 모음집"
 
-#: notificationmonitor.cpp:198 notificationmonitor.cpp:379
+#: notificationmonitor.cpp:198 notificationmonitor.cpp:386
 #, kde-format
 msgid "Destination Resource"
 msgstr "대상 리소스"
@@ -1425,420 +1425,425 @@ msgstr "추가된 플래그"
 msgid "Removed Flags"
 msgstr "삭제된 플래그"
 
-#: notificationmonitor.cpp:209
+#: notificationmonitor.cpp:208
 #, kde-format
 msgid "Added Tags"
 msgstr "추가된 태그"
 
-#: notificationmonitor.cpp:212
+#: notificationmonitor.cpp:216
+#, kde-format
+msgid "Removed Tags"
+msgstr "삭제된 태그"
+
+#: notificationmonitor.cpp:219
 #, kde-format
 msgid "Must retrieve"
 msgstr "반드시 가져와야 함"
 
-#: notificationmonitor.cpp:226
+#: notificationmonitor.cpp:233
 #, kde-format
 msgid "id"
 msgstr "id"
 
-#: notificationmonitor.cpp:227
+#: notificationmonitor.cpp:234
 #, kde-format
 msgid "remoteId"
 msgstr "원격ID"
 
-#: notificationmonitor.cpp:228
+#: notificationmonitor.cpp:235
 #, kde-format
 msgid "name"
 msgstr "이름"
 
-#: notificationmonitor.cpp:230 notificationmonitor.cpp:277
-#: notificationmonitor.cpp:325
+#: notificationmonitor.cpp:237 notificationmonitor.cpp:284
+#: notificationmonitor.cpp:332
 #, kde-format
 msgid "Ancestor"
 msgstr "상위 항목"
 
-#: notificationmonitor.cpp:237 notificationmonitor.cpp:311
+#: notificationmonitor.cpp:244 notificationmonitor.cpp:318
 #, kde-format
 msgid "ID"
 msgstr "ID"
 
-#: notificationmonitor.cpp:238 notificationmonitor.cpp:312
+#: notificationmonitor.cpp:245 notificationmonitor.cpp:319
 #, kde-format
 msgid "Parent ID"
 msgstr "부모 ID"
 
-#: notificationmonitor.cpp:239 notificationmonitor.cpp:260
+#: notificationmonitor.cpp:246 notificationmonitor.cpp:267
 #, kde-format
 msgid "GID"
 msgstr "GID"
 
-#: notificationmonitor.cpp:241 notificationmonitor.cpp:315
+#: notificationmonitor.cpp:248 notificationmonitor.cpp:322
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
 msgstr "원격 ID"
 
-#: notificationmonitor.cpp:256
+#: notificationmonitor.cpp:263
 #, kde-format
 msgid "Revision"
 msgstr "리비전"
 
-#: notificationmonitor.cpp:257
+#: notificationmonitor.cpp:264
 #, kde-format
 msgid "ParentID"
 msgstr "부모ID"
 
-#: notificationmonitor.cpp:258
+#: notificationmonitor.cpp:265
 #, kde-format
 msgid "RemoteID"
 msgstr "원격ID"
 
-#: notificationmonitor.cpp:259
+#: notificationmonitor.cpp:266
 #, kde-format
 msgid "RemoteRev"
 msgstr "원격리비전"
 
-#: notificationmonitor.cpp:261 notificationmonitor.cpp:299
-#: notificationmonitor.cpp:321
+#: notificationmonitor.cpp:268 notificationmonitor.cpp:306
+#: notificationmonitor.cpp:328
 #, kde-format
 msgid "Size"
 msgstr "크기"
 
-#: notificationmonitor.cpp:262
+#: notificationmonitor.cpp:269
 #, kde-format
 msgid "MimeType"
 msgstr "MIME형식"
 
-#: notificationmonitor.cpp:263
+#: notificationmonitor.cpp:270
 #, kde-format
 msgid "MTime"
 msgstr "MTime"
 
-#: notificationmonitor.cpp:274
+#: notificationmonitor.cpp:281
 #, kde-format
 msgid "VRefs"
 msgstr "VRefs"
 
-#: notificationmonitor.cpp:283
+#: notificationmonitor.cpp:290
 #, kde-format
 msgid "Parts"
 msgstr "부분"
 
-#: notificationmonitor.cpp:290
+#: notificationmonitor.cpp:297
 #, kde-format
 msgid "External"
 msgstr "외부"
 
-#: notificationmonitor.cpp:293
+#: notificationmonitor.cpp:300
 #, kde-format
 msgid "Internal"
 msgstr "내부"
 
-#: notificationmonitor.cpp:296
+#: notificationmonitor.cpp:303
 #, kde-format
 msgid "Foreign"
 msgstr "이외"
 
-#: notificationmonitor.cpp:300
+#: notificationmonitor.cpp:307
 #, kde-format
 msgid "Storage Type"
 msgstr "저장소 형식"
 
-#: notificationmonitor.cpp:301
+#: notificationmonitor.cpp:308
 #, kde-format
 msgid "Version"
 msgstr "버전"
 
-#: notificationmonitor.cpp:302
+#: notificationmonitor.cpp:309
 #, kde-format
 msgid "Data"
 msgstr "데이터"
 
-#: notificationmonitor.cpp:313
+#: notificationmonitor.cpp:320
 #, kde-format
 msgid "Name"
 msgstr "이름"
 
-#: notificationmonitor.cpp:314
+#: notificationmonitor.cpp:321
 #, kde-format
 msgid "Mime Types"
 msgstr "MIME 형식"
 
-#: notificationmonitor.cpp:316
+#: notificationmonitor.cpp:323
 #, kde-format
 msgid "Remote Revision"
 msgstr "원격 리비전"
 
-#: notificationmonitor.cpp:317
+#: notificationmonitor.cpp:324
 #, kde-format
 msgid "Statistics"
 msgstr "통계"
 
-#: notificationmonitor.cpp:319
+#: notificationmonitor.cpp:326
 #, kde-format
 msgid "Count"
 msgstr "개수"
 
-#: notificationmonitor.cpp:320
+#: notificationmonitor.cpp:327
 #, kde-format
 msgid "Unseen"
 msgstr "보지 않음"
 
-#: notificationmonitor.cpp:323
+#: notificationmonitor.cpp:330
 #, kde-format
 msgid "Search Query"
 msgstr "검색 질의"
 
-#: notificationmonitor.cpp:324
+#: notificationmonitor.cpp:331
 #, kde-format
 msgid "Search Collections"
 msgstr "검색 모음집"
 
-#: notificationmonitor.cpp:331
+#: notificationmonitor.cpp:338
 #, kde-format
 msgid "Cache Policy"
 msgstr "캐시 정책"
 
-#: notificationmonitor.cpp:333
+#: notificationmonitor.cpp:340
 #, kde-format
 msgid "Inherit"
 msgstr "상속"
 
-#: notificationmonitor.cpp:334
+#: notificationmonitor.cpp:341
 #, kde-format
 msgid "Check Interval"
 msgstr "검사 주기"
 
-#: notificationmonitor.cpp:335
+#: notificationmonitor.cpp:342
 #, kde-format
 msgid "Cache Timeout"
 msgstr "캐시 시간 제한"
 
-#: notificationmonitor.cpp:336
+#: notificationmonitor.cpp:343
 #, kde-format
 msgid "Sync on Demand"
 msgstr "필요할 때 동기화"
 
-#: notificationmonitor.cpp:337
+#: notificationmonitor.cpp:344
 #, kde-format
 msgid "Local Parts"
 msgstr "로컬 부분"
 
-#: notificationmonitor.cpp:342 notificationmonitor.cpp:506
+#: notificationmonitor.cpp:349 notificationmonitor.cpp:513
 #, kde-format
 msgid "Enabled"
 msgstr "사용함"
 
-#: notificationmonitor.cpp:343
+#: notificationmonitor.cpp:350
 #, kde-format
 msgid "DisplayPref"
 msgstr "표시선호"
 
-#: notificationmonitor.cpp:344
+#: notificationmonitor.cpp:351
 #, kde-format
 msgid "SyncPref"
 msgstr "동기화선호"
 
-#: notificationmonitor.cpp:345
+#: notificationmonitor.cpp:352
 #, kde-format
 msgid "IndexPref"
 msgstr "색인선호"
 
-#: notificationmonitor.cpp:346
+#: notificationmonitor.cpp:353
 #, kde-format
 msgid "Virtual"
 msgstr "가상"
 
-#: notificationmonitor.cpp:378
+#: notificationmonitor.cpp:385
 #, kde-format
 msgid "Parent Dest Collection"
 msgstr "부모 대상 모음집"
 
-#: notificationmonitor.cpp:380
+#: notificationmonitor.cpp:387
 #, kde-format
 msgid "Changed Parts"
 msgstr "변경된 부분"
 
-#: notificationmonitor.cpp:429
+#: notificationmonitor.cpp:436
 #, kde-format
 msgid "Monitored Collections"
 msgstr "관찰하는 모음집"
 
-#: notificationmonitor.cpp:430
+#: notificationmonitor.cpp:437
 #, kde-format
 msgid "Monitored Items"
 msgstr "관찰하는 항목"
 
-#: notificationmonitor.cpp:431
+#: notificationmonitor.cpp:438
 #, kde-format
 msgid "Monitored Tags"
 msgstr "관찰하는 태그"
 
-#: notificationmonitor.cpp:446
+#: notificationmonitor.cpp:453
 #, kde-format
 msgid "Subscriptions"
 msgstr "구독"
 
-#: notificationmonitor.cpp:449
+#: notificationmonitor.cpp:456
 #, kde-format
 msgid "Changes"
 msgstr "변경 사항"
 
-#: notificationmonitor.cpp:452
+#: notificationmonitor.cpp:459
 #, kde-format
 msgid "No Type"
 msgstr "형식 없음"
 
-#: notificationmonitor.cpp:456
+#: notificationmonitor.cpp:463
 #, kde-format
 msgid "Monitored Types"
 msgstr "관찰하는 형식"
 
-#: notificationmonitor.cpp:457
+#: notificationmonitor.cpp:464
 #, kde-format
 msgid "Monitored Mime Types"
 msgstr "관찰하는 MIME 형식"
 
-#: notificationmonitor.cpp:458
+#: notificationmonitor.cpp:465
 #, kde-format
 msgid "Monitored Resources"
 msgstr "관찰하는 리소스"
 
-#: notificationmonitor.cpp:459
+#: notificationmonitor.cpp:466
 #, kde-format
 msgid "Ignored Sessions"
 msgstr "무시하는 세션"
 
-#: notificationmonitor.cpp:460
+#: notificationmonitor.cpp:467
 #, kde-format
 msgid "All Monitored"
 msgstr "모두 관찰함"
 
-#: notificationmonitor.cpp:461
+#: notificationmonitor.cpp:468
 #, kde-format
 msgid "Exclusive"
 msgstr "독점적"
 
-#: notificationmonitor.cpp:465
+#: notificationmonitor.cpp:472
 #, kde-format
 msgid "Requested Parts"
 msgstr "요청한 부분"
 
-#: notificationmonitor.cpp:466
+#: notificationmonitor.cpp:473
 #, kde-format
 msgid "Changed Since"
 msgstr "다음 이후에 변경됨"
 
-#: notificationmonitor.cpp:470
+#: notificationmonitor.cpp:477
 #, kde-format
 msgid "No Ancestor"
 msgstr "상위 항목 없음"
 
-#: notificationmonitor.cpp:473
+#: notificationmonitor.cpp:480
 #, kde-format
 msgid "Parent  Ancestor"
 msgstr "부모 상위 항목"
 
-#: notificationmonitor.cpp:476
+#: notificationmonitor.cpp:483
 #, kde-format
 msgid "All Ancestors"
 msgstr "모든 상위 항목"
 
-#: notificationmonitor.cpp:479
+#: notificationmonitor.cpp:486
 #, kde-format
 msgid "Ancestor Depth"
 msgstr "상위 항목 깊이"
 
-#: notificationmonitor.cpp:480
+#: notificationmonitor.cpp:487
 #, kde-format
 msgid "Cache Only"
 msgstr "캐시만"
 
-#: notificationmonitor.cpp:481
+#: notificationmonitor.cpp:488
 #, kde-format
 msgid "Check Cached Payload Parts Only"
 msgstr "캐시된 페이로드 부분만 검사"
 
-#: notificationmonitor.cpp:484
+#: notificationmonitor.cpp:491
 #, kde-format
 msgid "Fetch Size"
 msgstr "가져오기 크기"
 
-#: notificationmonitor.cpp:485
+#: notificationmonitor.cpp:492
 #, kde-format
 msgid "Fetch MTime"
 msgstr "MTime 가져오기"
 
-#: notificationmonitor.cpp:486
+#: notificationmonitor.cpp:493
 #, kde-format
 msgid "Fetch Remote Revision"
 msgstr "원격 리비전 가져오기"
 
-#: notificationmonitor.cpp:487
+#: notificationmonitor.cpp:494
 #, kde-format
 msgid "Ignore Errors"
 msgstr "오류 무시"
 
-#: notificationmonitor.cpp:488
+#: notificationmonitor.cpp:495
 #, kde-format
 msgid "Fetch Flags"
 msgstr "플래그 가져오기"
 
-#: notificationmonitor.cpp:489 notificationmonitor.cpp:542
+#: notificationmonitor.cpp:496 notificationmonitor.cpp:549
 #, kde-format
 msgid "Fetch RemoteID"
 msgstr "원격ID 가져오기"
 
-#: notificationmonitor.cpp:492
+#: notificationmonitor.cpp:499
 #, kde-format
 msgid "Fetch VRefs"
 msgstr "VRefs 가져오기"
 
-#: notificationmonitor.cpp:500
+#: notificationmonitor.cpp:507
 #, kde-format
 msgid "No Filter"
 msgstr "필터 없음"
 
-#: notificationmonitor.cpp:503
+#: notificationmonitor.cpp:510
 #, kde-format
 msgid "Display"
 msgstr "표시"
 
-#: notificationmonitor.cpp:509
+#: notificationmonitor.cpp:516
 #, kde-format
 msgid "Index"
 msgstr "색인"
 
-#: notificationmonitor.cpp:512
+#: notificationmonitor.cpp:519
 #, kde-format
 msgid "Sync"
 msgstr "동기화"
 
-#: notificationmonitor.cpp:518
+#: notificationmonitor.cpp:525
 #, kde-format
 msgid "Content Mime Types"
 msgstr "내용의 MIME 형식"
 
-#: notificationmonitor.cpp:527
+#: notificationmonitor.cpp:534
 #, kde-format
 msgid "Parent"
 msgstr "부모"
 
-#: notificationmonitor.cpp:530
+#: notificationmonitor.cpp:537
 #, kde-format
 msgid "None"
 msgstr "없음"
 
-#: notificationmonitor.cpp:534
+#: notificationmonitor.cpp:541
 #, kde-format
 msgid "Ancestor Fetch ID Only"
 msgstr "상위 항목 ID만 가져오기"
 
-#: notificationmonitor.cpp:535
+#: notificationmonitor.cpp:542
 #, kde-format
 msgid "Ancestor Attributes"
 msgstr "상위 항목 속성"
 
-#: notificationmonitor.cpp:543
+#: notificationmonitor.cpp:550
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "모든 속성 가져오기"
@@ -2032,9 +2037,6 @@ msgstr "삭제(&R)"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "원격 식별자"
-
-#~ msgid "Removed Tags"
-#~ msgstr "삭제된 태그"
 
 #~ msgid "Synchronize Relations"
 #~ msgstr "관계 동기화"
