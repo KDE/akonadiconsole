@@ -1433,7 +1433,8 @@ msgid "Added Tags"
 msgstr "Étiquettes ajoutées"
 
 #: notificationmonitor.cpp:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Removed Tags"
 msgid "Removed Tags"
 msgstr "Étiquettes supprimées"
 
