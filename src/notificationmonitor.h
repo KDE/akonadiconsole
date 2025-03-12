@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QWidget>
-#include <akonadi/private/protocol_p.h>
+#include <private/protocol_p.h>
 
 class QModelIndex;
 class NotificationModel;

@@ -12,7 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardItem>
 #include <QStringList>
 
-#include <akonadi/private/protocol_p.h>
+#include <private/protocol_p.h>
 
 template<typename T>
 typename std::enable_if<std::is_integral<T>::value, QString>::type toString(T num)

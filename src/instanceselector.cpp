@@ -12,8 +12,8 @@
 #include "akonadiconsole_debug.h"
 #include <KLocalizedString>
 #include <QIcon>
-#include <akonadi/private/dbus_p.h>
-#include <akonadi/private/instance_p.h>
+#include <private/dbus_p.h>
+#include <private/instance_p.h>
 
 #include <QApplication>
 #include <QDBusConnection>

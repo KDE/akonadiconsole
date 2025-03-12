@@ -13,8 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 
 #include <QMetaMethod>
-#include <akonadi/private/imapparser_p.h>
-#include <akonadi/private/protocol_p.h>
+#include <private/imapparser_p.h>
+#include <private/protocol_p.h>
 
 Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 

@@ -13,7 +13,7 @@
 #include <KLocalizedString>
 #include <QString>
 #include <QStringList>
-#include <akonadi/private/instance_p.h>
+#include <private/instance_p.h>
 
 #include <cassert>
 #include <chrono>

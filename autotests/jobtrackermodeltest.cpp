@@ -11,7 +11,7 @@
 // #include "modeltest.h"
 #include <QSignalSpy>
 #include <QTest>
-#include <akonadi/private/instance_p.h>
+#include <private/instance_p.h>
 
 static QString rowSpyToText(const QSignalSpy &spy)
 {

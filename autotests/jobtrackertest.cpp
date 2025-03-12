@@ -9,7 +9,7 @@
 #include "jobtracker.h"
 #include <QSignalSpy>
 #include <QTest>
-#include <akonadi/private/instance_p.h>
+#include <private/instance_p.h>
 
 static QString intPairListToString(const QVariant &var)
 {

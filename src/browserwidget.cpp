@@ -37,7 +37,7 @@
 #include <Akonadi/TagModel>
 #include <Akonadi/XmlWriteJob>
 #include <KViewStateMaintainer>
-#include <akonadi/private/compressionstream_p.h>
+#include <private/compressionstream_p.h>
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/Incidence>
