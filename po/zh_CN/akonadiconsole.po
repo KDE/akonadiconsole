@@ -1427,10 +1427,9 @@ msgid "Added Tags"
 msgstr ""
 
 #: notificationmonitor.cpp:216
-#, fuzzy, kde-format
-#| msgid "Remove Agent"
+#, kde-format
 msgid "Removed Tags"
-msgstr "移除代理"
+msgstr ""
 
 #: notificationmonitor.cpp:219
 #, kde-format
