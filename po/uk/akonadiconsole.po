@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2025-01-03 13:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -87,7 +87,7 @@ msgstr "Синхронізувати ієрархію збірок"
 msgid "Synchronize Tags"
 msgstr "Синхронізувати мітки"
 
-#: agentwidget.cpp:195
+#: agentwidget.cpp:207
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
@@ -96,106 +96,106 @@ msgstr[1] "Ви справді бажаєте вилучити позначен�
 msgstr[2] "Ви справді бажаєте вилучити позначені %1 екземплярів агента?"
 msgstr[3] "Ви справді бажаєте вилучити позначений %1 екземпляр агента?"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Agent Deletion"
 msgstr "Вилучення агента"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Multiple Agent Deletion"
 msgstr "Вилучення декількох агентів"
 
-#: agentwidget.cpp:266
+#: agentwidget.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Список завдань ресурсу"
 
-#: agentwidget.cpp:290
+#: agentwidget.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Журнал сповіщень про зміни"
 
-#: agentwidget.cpp:340
+#: agentwidget.cpp:352
 #, kde-format
 msgid "Cloning agent failed: %1."
 msgstr "Не вдалося клонувати агент: %1."
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Online"
 msgstr "У мережі"
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Offline"
 msgstr "Поза мережею"
 
-#: agentwidget.cpp:407
+#: agentwidget.cpp:419
 #, kde-format
 msgid "Idle"
 msgstr "Бездіяльний"
 
-#: agentwidget.cpp:410
+#: agentwidget.cpp:422
 #, kde-format
 msgid "Running (%1%)"
 msgstr "Запущено (%1%)"
 
-#: agentwidget.cpp:413
+#: agentwidget.cpp:425
 #, kde-format
 msgid "Broken"
 msgstr "Помилка"
 
-#: agentwidget.cpp:416
+#: agentwidget.cpp:428
 #, kde-format
 msgid "Not Configured"
 msgstr "Не налаштовано"
 
-#: agentwidget.cpp:419
+#: agentwidget.cpp:431
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:435
+#: agentwidget.cpp:447
 #, kde-format
 msgid "Add Agent..."
 msgstr "Додати агент…"
 
-#: agentwidget.cpp:436
+#: agentwidget.cpp:448
 #, kde-format
 msgid "Clone Agent"
 msgstr "Клонувати агент"
 
-#: agentwidget.cpp:439
+#: agentwidget.cpp:451
 #, kde-format
 msgid "Abort Activity"
 msgstr "Перервати дію"
 
-#: agentwidget.cpp:441
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Restart Agent"
 msgstr "Перезапустити агент"
 
-#: agentwidget.cpp:444
+#: agentwidget.cpp:456
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Перемкнути стан «у мережі/поза мережею»"
 
-#: agentwidget.cpp:445
+#: agentwidget.cpp:457
 #, kde-format
 msgid "Show task list"
 msgstr "Показати список завдань"
 
-#: agentwidget.cpp:446
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Показати журнал сповіщень про зміни"
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Remove Agent"
 msgstr "Вилучити агент"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2025-01-03 15:07+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -86,113 +86,113 @@ msgstr "Sincronizza l'albero delle raccolte"
 msgid "Synchronize Tags"
 msgstr "Sincronizza le etichette"
 
-#: agentwidget.cpp:195
+#: agentwidget.cpp:207
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
 msgstr[0] "Vuoi davvero eliminare l'istanza selezionata dell'agente?"
 msgstr[1] "Vuoi davvero eliminare queste %1 istanze dell'agente?"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Agent Deletion"
 msgstr "Eliminazione agente"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Multiple Agent Deletion"
 msgstr "Eliminazione multipla agenti"
 
-#: agentwidget.cpp:266
+#: agentwidget.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "Elenco delle attività delle risorse"
 
-#: agentwidget.cpp:290
+#: agentwidget.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "Cambia il registro delle notifiche"
 
-#: agentwidget.cpp:340
+#: agentwidget.cpp:352
 #, kde-format
 msgid "Cloning agent failed: %1."
 msgstr "Clonazione dell'agente non riuscita: %1."
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Online"
 msgstr "In linea"
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Offline"
 msgstr "Non in linea"
 
-#: agentwidget.cpp:407
+#: agentwidget.cpp:419
 #, kde-format
 msgid "Idle"
 msgstr "Inattivo"
 
-#: agentwidget.cpp:410
+#: agentwidget.cpp:422
 #, kde-format
 msgid "Running (%1%)"
 msgstr "In esecuzione (%1%)"
 
-#: agentwidget.cpp:413
+#: agentwidget.cpp:425
 #, kde-format
 msgid "Broken"
 msgstr "Danneggiato"
 
-#: agentwidget.cpp:416
+#: agentwidget.cpp:428
 #, kde-format
 msgid "Not Configured"
 msgstr "Non configurato"
 
-#: agentwidget.cpp:419
+#: agentwidget.cpp:431
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:435
+#: agentwidget.cpp:447
 #, kde-format
 msgid "Add Agent..."
 msgstr "Aggiungi agente..."
 
-#: agentwidget.cpp:436
+#: agentwidget.cpp:448
 #, kde-format
 msgid "Clone Agent"
 msgstr "Clona agente"
 
-#: agentwidget.cpp:439
+#: agentwidget.cpp:451
 #, kde-format
 msgid "Abort Activity"
 msgstr "Interrompi l'attività"
 
-#: agentwidget.cpp:441
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Restart Agent"
 msgstr "Riavvia l'agente"
 
-#: agentwidget.cpp:444
+#: agentwidget.cpp:456
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Commuta in linea/non in linea"
 
-#: agentwidget.cpp:445
+#: agentwidget.cpp:457
 #, kde-format
 msgid "Show task list"
 msgstr "Mostra l'elenco delle attività"
 
-#: agentwidget.cpp:446
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Mostra il registro delle notifiche di modifica"
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Remove Agent"
 msgstr "Rimuovi agente"

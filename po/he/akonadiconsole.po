@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2025-01-24 09:18+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -87,7 +87,7 @@ msgstr "סנכרון עץ האוסף"
 msgid "Synchronize Tags"
 msgstr "סנכרון תגיות"
 
-#: agentwidget.cpp:195
+#: agentwidget.cpp:207
 #, kde-format
 msgid "Do you really want to delete the selected agent instance?"
 msgid_plural "Do you really want to delete these %1 agent instances?"
@@ -96,106 +96,106 @@ msgstr[1] "למחוק את שני מופעי הסוכנים האלה?"
 msgstr[2] "למחוק את %1 מופעי הסוכנים האלה?"
 msgstr[3] "למחוק את %1 מופעי הסוכנים האלה?"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Agent Deletion"
 msgstr "מחיקת סוכן"
 
-#: agentwidget.cpp:196
+#: agentwidget.cpp:208
 #, kde-format
 msgid "Multiple Agent Deletion"
 msgstr "מחיקת מספר סוכנים"
 
-#: agentwidget.cpp:266
+#: agentwidget.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Task List"
 msgstr "רשימת משימות משאבים"
 
-#: agentwidget.cpp:290
+#: agentwidget.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
 msgstr "החלפת יומן התראות"
 
-#: agentwidget.cpp:340
+#: agentwidget.cpp:352
 #, kde-format
 msgid "Cloning agent failed: %1."
 msgstr "שכפול סוכן נכשל: %1."
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Online"
 msgstr "מקוון"
 
-#: agentwidget.cpp:403
+#: agentwidget.cpp:415
 #, kde-format
 msgid "Offline"
 msgstr "מנותק"
 
-#: agentwidget.cpp:407
+#: agentwidget.cpp:419
 #, kde-format
 msgid "Idle"
 msgstr "בהמתנה"
 
-#: agentwidget.cpp:410
+#: agentwidget.cpp:422
 #, kde-format
 msgid "Running (%1%)"
 msgstr "פעיל (%1%)"
 
-#: agentwidget.cpp:413
+#: agentwidget.cpp:425
 #, kde-format
 msgid "Broken"
 msgstr "פגום"
 
-#: agentwidget.cpp:416
+#: agentwidget.cpp:428
 #, kde-format
 msgid "Not Configured"
 msgstr "לא מוגדר"
 
-#: agentwidget.cpp:419
+#: agentwidget.cpp:431
 #, kde-format
 msgctxt ""
 "Two statuses, for example \"Online, Running (66%)\" or \"Offline, Broken\""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:435
+#: agentwidget.cpp:447
 #, kde-format
 msgid "Add Agent..."
 msgstr "הוספת סוכן…"
 
-#: agentwidget.cpp:436
+#: agentwidget.cpp:448
 #, kde-format
 msgid "Clone Agent"
 msgstr "שכפול סוכן"
 
-#: agentwidget.cpp:439
+#: agentwidget.cpp:451
 #, kde-format
 msgid "Abort Activity"
 msgstr "ביטול גורף של הפעילות"
 
-#: agentwidget.cpp:441
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Restart Agent"
 msgstr "הפעלת הסוכן מחדש"
 
-#: agentwidget.cpp:444
+#: agentwidget.cpp:456
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "החלפה בין מקוון/ניתוק"
 
-#: agentwidget.cpp:445
+#: agentwidget.cpp:457
 #, kde-format
 msgid "Show task list"
 msgstr "הצגת רשימת משימות"
 
-#: agentwidget.cpp:446
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Show change-notification log"
 msgstr "הצגת יומן התראות שינוי"
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Remove Agent"
 msgstr "הסרת סוכן"
