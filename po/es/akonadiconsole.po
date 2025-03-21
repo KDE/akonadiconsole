@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 02:53+0000\n"
-"PO-Revision-Date: 2025-01-03 12:14+0100\n"
+"PO-Revision-Date: 2025-03-19 14:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -140,7 +140,7 @@ msgstr "Inactivo"
 #: agentwidget.cpp:410
 #, kde-format
 msgid "Running (%1%)"
-msgstr "En ejecución (%1%)"
+msgstr "En ejecución (%1 %)"
 
 #: agentwidget.cpp:413
 #, kde-format
@@ -2041,36 +2041,3 @@ msgstr "E&liminar"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identificadores remotos"
-
-#~ msgid "Synchronize Relations"
-#~ msgstr "Sincronizar relaciones"
-
-#~ msgid "Relations"
-#~ msgstr "Relaciones"
-
-#~ msgid "Relation"
-#~ msgstr "Relación"
-
-#~ msgid "ModifyRelations"
-#~ msgstr "ModifyRelations"
-
-#~ msgid "Removed Relations"
-#~ msgstr "Relaciones eliminadas"
-
-#~ msgid "Left ID"
-#~ msgstr "ID de la izquierda"
-
-#~ msgid "Left MimeType"
-#~ msgstr "Tipo MIME de la izquierda"
-
-#~ msgid "Right ID"
-#~ msgstr "ID de la derecha"
-
-#~ msgid "Right MimeType"
-#~ msgstr "Tipo MIME de la derecha"
-
-#~ msgid "Fetch Relations"
-#~ msgstr "Obtener relaciones"
-
-#~ msgid "Full Paryload"
-#~ msgstr "Carga útil completa"
