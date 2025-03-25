@@ -74,7 +74,8 @@ int AgentConfigModel::columnCount(const QModelIndex &parent) const
 
 int AgentConfigModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent)
+    if (parent.isValid()) // flat model
+        return 0;
     return m_settings.size();
 }
 
