@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the akonadiconsole package.
 #
 # SPDX-FileCopyrightText: 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
-# SPDX-FileCopyrightText: 2023, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 02:53+0000\n"
-"PO-Revision-Date: 2024-11-13 11:54+0300\n"
+"PO-Revision-Date: 2025-03-31 14:50+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -986,10 +986,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Управление Akonadi и консоль отладки"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2024 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2025 the Akonadi developer"
-msgstr "© Разработчик Akonadi, 2006—2024"
+msgstr "© Разработчик Akonadi, 2006–2025"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
