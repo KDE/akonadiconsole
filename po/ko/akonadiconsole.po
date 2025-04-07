@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-# SPDX-FileCopyrightText: 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 02:53+0000\n"
-"PO-Revision-Date: 2024-08-19 21:42+0200\n"
+"PO-Revision-Date: 2025-04-06 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -979,10 +979,9 @@ msgid "The Management and Debugging Console for Akonadi"
 msgstr "Akonadi 관리 및 디버깅 콘솔"
 
 #: main.cpp:31
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2024 the Akonadi developer"
+#, kde-format
 msgid "(c) 2006-2025 the Akonadi developer"
-msgstr "(c) 2006-2024 the Akonadi developer"
+msgstr "(c) 2006-2025 the Akonadi developer"
 
 #: main.cpp:35 main.cpp:36
 #, kde-format
