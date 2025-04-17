@@ -39,9 +39,7 @@ class JobTrackerPrivate
 {
 public:
     explicit JobTrackerPrivate(JobTracker *_q)
-        : lastId(42)
-        , timer(_q)
-        , disabled(false)
+        : timer(_q)
         , q(_q)
     {
         timer.setSingleShot(true);
@@ -65,9 +63,9 @@ public:
     QHash<QString, int> nameToId;
     QHash<int, QList<int>> childJobs;
     QHash<int, JobInfo> infoList;
-    int lastId;
+    int lastId{42};
     QTimer timer;
-    bool disabled;
+    bool disabled{false};
     QList<QPair<int, int>> unpublishedUpdates;
 
 private:

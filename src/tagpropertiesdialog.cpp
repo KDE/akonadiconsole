@@ -28,7 +28,7 @@ TagPropertiesDialog::TagPropertiesDialog(QWidget *parent)
 TagPropertiesDialog::TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *parent)
     : QDialog(parent)
     , mTag(tag)
-    , mChanged(false)
+
 {
     setupUi();
 }
