@@ -40,6 +40,7 @@ class StatisticsProxyModel;
 namespace Akonadi
 {
 class ContactViewer;
+class Tag;
 class ContactGroupViewer;
 }
 
@@ -82,10 +83,10 @@ private:
 
     void tagViewContextMenuRequested(const QPoint &pos);
     void tagViewDoubleClicked(const QModelIndex &index);
-    void addSubTagRequested();
+    void addSubTagRequested(const Akonadi::Tag &parentTag);
     void addTagRequested();
-    void editTagRequested();
-    void removeTagRequested();
+    void editTagRequested(const Akonadi::Tag &tag);
+    void removeTagRequested(const Akonadi::Tag &tag);
     void createTag();
     void modifyTag();
 
