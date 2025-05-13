@@ -546,19 +546,17 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
     connect(menu, &QMenu::aboutToHide, menu, &QMenu::deleteLater);
     menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("&Add tag..."), this, &BrowserWidget::addTagRequested);
     if (index.isValid()) {
-        menu->addAction(i18n("Add &subtag..."), this, &BrowserWidget::addSubTagRequested);
-        menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")),
-                        i18n("&Edit tag..."),
-                        QKeySequence(Qt::Key_Return),
-                        this,
-                        &BrowserWidget::editTagRequested);
-        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        i18n("&Delete tag..."),
-                        QKeySequence::Delete,
-                        this,
-                        &BrowserWidget::removeTagRequested);
+        const auto tag = index.data(TagModel::TagRole).value<Akonadi::Tag>();
 
-        menu->setProperty("Tag", index.data(TagModel::TagRole));
+        menu->addAction(i18n("Add &subtag..."), this, [this, tag] {
+            addSubTagRequested(tag);
+        });
+        menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("&Edit tag..."), QKeySequence(Qt::Key_Return), this, [this, tag] {
+            editTagRequested(tag);
+        });
+        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete tag..."), QKeySequence::Delete, this, [this, tag] {
+            removeTagRequested(tag);
+        });
     }
 
     menu->popup(mTagView->mapToGlobal(pos));
@@ -573,11 +571,8 @@ void BrowserWidget::addTagRequested()
     dlg->show();
 }
 
-void BrowserWidget::addSubTagRequested()
+void BrowserWidget::addSubTagRequested(const Akonadi::Tag &parentTag)
 {
-    auto action = qobject_cast<QAction *>(sender());
-    const auto parentTag = action->parent()->property("Tag").value<Akonadi::Tag>();
-
     Akonadi::Tag tag;
     tag.setParent(parentTag);
 
@@ -588,10 +583,8 @@ void BrowserWidget::addSubTagRequested()
     dlg->show();
 }
 
-void BrowserWidget::editTagRequested()
+void BrowserWidget::editTagRequested(const Akonadi::Tag &tag)
 {
-    auto action = qobject_cast<QAction *>(sender());
-    const auto tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     auto dlg = new TagPropertiesDialog(tag, this);
     dlg->setWindowTitle(i18nc("@title:window", "Modify Tag"));
     connect(dlg, &TagPropertiesDialog::accepted, this, &BrowserWidget::modifyTag);
@@ -616,7 +609,7 @@ void BrowserWidget::tagViewDoubleClicked(const QModelIndex &index)
     dlg->show();
 }
 
-void BrowserWidget::removeTagRequested()
+void BrowserWidget::removeTagRequested(const Akonadi::Tag &tag)
 {
     if (KMessageBox::questionTwoActions(this,
                                         i18n("Do you really want to remove selected tag?"),
@@ -629,8 +622,6 @@ void BrowserWidget::removeTagRequested()
         return;
     }
 
-    auto action = qobject_cast<QAction *>(sender());
-    const auto tag = action->parent()->property("Tag").value<Akonadi::Tag>();
     new Akonadi::TagDeleteJob(tag, this);
 }
 
