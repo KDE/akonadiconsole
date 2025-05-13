@@ -1428,10 +1428,9 @@ msgid "Added Tags"
 msgstr "Přidané značky"
 
 #: notificationmonitor.cpp:216
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Removed Tags"
-msgstr "Odstranit"
+msgstr ""
 
 #: notificationmonitor.cpp:219
 #, kde-format
