@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 02:53+0000\n"
+"POT-Creation-Date: 2025-05-14 02:38+0000\n"
 "PO-Revision-Date: 2023-11-04 08:35+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -362,45 +362,45 @@ msgstr "Vybrať XML súbor"
 msgid "&Add tag..."
 msgstr "Pridať značku..."
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "Pridať podznačku..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "Upraviť značku..."
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "Odstrániť značku..."
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Pridať značku"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Pridať podznačku"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Zmeniť značku"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Naozaj chcete odstrániť vybranú značku?"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "Vymazať značku?"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 02:53+0000\n"
+"POT-Creation-Date: 2025-05-14 02:38+0000\n"
 "PO-Revision-Date: 2025-04-06 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -359,45 +359,45 @@ msgstr "XML 파일 선택"
 msgid "&Add tag..."
 msgstr "태그 추가(&A)..."
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "하위 태그 추가(&A)..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "태그 편집(&E)..."
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "태그 삭제(&D)..."
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "태그 추가"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "하위 태그 추가"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "태그 수정"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "선택한 태그를 삭제하시겠습니까?"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "태그 삭제?"

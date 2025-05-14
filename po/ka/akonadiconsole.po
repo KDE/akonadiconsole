@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 02:53+0000\n"
+"POT-Creation-Date: 2025-05-14 02:38+0000\n"
 "PO-Revision-Date: 2025-01-03 04:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -361,45 +361,45 @@ msgstr "XML ფაილის არჩევა"
 msgid "&Add tag..."
 msgstr "&ჭდის დამატება..."
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "&ქვეჭდის დამატება..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "ჭდის ჩასწორება..."
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "&ჭდის წაშლა..."
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "ჭდის დამატება"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "ქვეჭდის დამატება"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "ჭდის ჩასწორება"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "მართლა გნებავთ მონიშნული ჭდის წაშლა?"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "წავშალო ჭდე?"
