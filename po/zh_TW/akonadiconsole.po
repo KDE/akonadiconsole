@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:43+0000\n"
 "PO-Revision-Date: 2025-01-08 17:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -359,45 +359,45 @@ msgstr "選擇 XML 檔案"
 msgid "&Add tag..."
 msgstr "新增標籤(&A)..."
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "新增子標籤(&S)..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "編輯標籤(&E)..."
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "刪除標籤(&D)..."
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "新增標籤"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "新增子標籤"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "修改標籤"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "您確定要移除所選的標籤嗎？"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "刪除標籤？"

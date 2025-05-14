@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:43+0000\n"
 "PO-Revision-Date: 2023-05-27 17:12+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -368,48 +368,48 @@ msgstr "Seleccionar o ficheiro XML"
 msgid "&Add tag..."
 msgstr "&Adicionar uma marca..."
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "Adicionar uma &sub-marca..."
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "&Editar a marca..."
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "&Remover a marca..."
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, fuzzy, kde-format
 #| msgid "Add Tag"
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Adicionar uma Marca"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, fuzzy, kde-format
 #| msgid "Add Subtag"
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Adicionar uma Sub-Marca"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, fuzzy, kde-format
 #| msgid "Modify Tag"
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Modificar a Marca"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Deseja realmente remover a marca seleccionada?"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "Remover a marca?"

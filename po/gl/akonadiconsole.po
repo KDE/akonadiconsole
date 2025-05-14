@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:43+0000\n"
 "PO-Revision-Date: 2025-01-04 15:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -361,45 +361,45 @@ msgstr "Seleccionar un ficheiro XML"
 msgid "&Add tag..."
 msgstr "Eng&adir unha etiqueta…"
 
-#: browserwidget.cpp:549
+#: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
 msgstr "Engadir unha &subetiqueta…"
 
-#: browserwidget.cpp:551
+#: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
 msgstr "&Editar a etiqueta…"
 
-#: browserwidget.cpp:556
+#: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
 msgstr "&Eliminar a etiqueta…"
 
-#: browserwidget.cpp:570
+#: browserwidget.cpp:568
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
 msgstr "Engadir unha etiqueta"
 
-#: browserwidget.cpp:585
+#: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
 msgstr "Engadir unha subetiqueta"
 
-#: browserwidget.cpp:596 browserwidget.cpp:613
+#: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
 msgstr "Modificar a etiqueta"
 
-#: browserwidget.cpp:622
+#: browserwidget.cpp:615
 #, kde-format
 msgid "Do you really want to remove selected tag?"
 msgstr "Seguro que quere eliminar a etiqueta seleccionada?"
 
-#: browserwidget.cpp:623
+#: browserwidget.cpp:616
 #, kde-format
 msgid "Delete tag?"
 msgstr "Quere eliminar a etiqueta?"
