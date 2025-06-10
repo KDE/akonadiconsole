@@ -59,7 +59,7 @@ public:
 
 private:
     QString cacheString(const QString &str, QMap<QString, QString> &cache, QStandardItemModel *model = nullptr);
-    QString displaySender(const QString &identifer) const;
+    QString displaySender(const QString &identifier) const;
 
     QList<Message> mMessages;
     QStandardItemModel *mSenderFilterModel = nullptr;

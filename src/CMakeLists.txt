@@ -1,4 +1,3 @@
-
 include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadiconsole\")
@@ -11,7 +10,7 @@ set(libakonadiconsole_tracker_SRCS
     jobtrackermodel.cpp
     jobtrackerfilterproxymodel.cpp
     jobtrackersearchwidget.cpp
-    )
+)
 
 set(libakonadiconsole_SRCS
     agentwidget.cpp
@@ -94,23 +93,28 @@ qt_add_dbus_adaptor(libakonadiconsole_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.a
 
 qt_add_dbus_interfaces(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.TracerNotification.xml
-    )
-# Use intalled interface once we can depend on Akoandi 1.1
-set_source_files_properties(org.freedesktop.Akonadi.DebugInterface.xml PROPERTIES CLASSNAME DebugInterface)
+)
+# Use installed interface once we can depend on Akoandi 1.1
+set_source_files_properties(
+    org.freedesktop.Akonadi.DebugInterface.xml
+    PROPERTIES CLASSNAME DebugInterface
+)
 qt_add_dbus_interface(libakonadiconsole_SRCS
     org.freedesktop.Akonadi.DebugInterface.xml
     debuginterface
-    )
+)
 
-set_source_files_properties(${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
+set_source_files_properties(
+    ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     PROPERTIES INCLUDE querydebugger.h
 )
 qt_add_dbus_interface(libakonadiconsole_SRCS
     ${AKONADI_DBUS_INTERFACES_DIR}/org.freedesktop.Akonadi.StorageDebugger.xml
     storagedebuggerinterface
-    )
+)
 
-qt_wrap_ui(libakonadiconsole_SRCS
+qt_wrap_ui(
+    libakonadiconsole_SRCS
     agentwidget.ui
     agentconfigdialog.ui
     browserwidget_itemview.ui
@@ -124,23 +128,22 @@ qt_wrap_ui(libakonadiconsole_SRCS
     tagpropertiesdialog.ui
     querydebugger.ui
     queryviewdialog.ui
-    )
-
+)
 
 add_library(libakonadiconsole ${libakonadiconsole_SRCS})
 
 ecm_qt_declare_logging_category(libakonadiconsole HEADER akonadiconsole_debug.h IDENTIFIER AKONADICONSOLE_LOG CATEGORY_NAME org.kde.pim.akonadiconsole
         OLD_CATEGORY_NAMES log_akonadiconsole
-        DESCRIPTION "akonadiconsole (akonadiconsole)" EXPORT AKONADICONSOLE)
-
-
+        DESCRIPTION "akonadiconsole (akonadiconsole)" EXPORT AKONADICONSOLE
+)
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libakonadiconsole PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(libakonadiconsole BASE_NAME libakonadiconsole)
 
-target_link_libraries(libakonadiconsole
+target_link_libraries(
+    libakonadiconsole
     KPim6::AkonadiCore
     KPim6::AkonadiPrivate
     KPim6::AkonadiWidgets
@@ -154,41 +157,45 @@ target_link_libraries(libakonadiconsole
     KF6::TextWidgets
     KF6::XmlGui
     KPim6::Libkdepim
-    )
+)
 
 if(ENABLE_SEARCH)
-    target_link_libraries(libakonadiconsole
+    target_link_libraries(
+        libakonadiconsole
         KPim6::AkonadiSearchCore
         KPim6::AkonadiSearchXapian
     )
 endif()
 
 if(ENABLE_CONTENTVIEWS)
-    target_link_libraries(libakonadiconsole
+    target_link_libraries(
+        libakonadiconsole
         KPim6::AkonadiContactWidgets
         KPim6::CalendarSupport
         KPim6::MessageViewer
     )
 endif()
 
-set_target_properties(libakonadiconsole
-    PROPERTIES OUTPUT_NAME akonadiconsole
-    VERSION ${KDEPIM_LIB_VERSION}
-    SOVERSION ${KDEPIM_LIB_SOVERSION}
-    )
+set_target_properties(
+    libakonadiconsole
+    PROPERTIES
+        OUTPUT_NAME akonadiconsole
+        VERSION ${KDEPIM_LIB_VERSION}
+        SOVERSION ${KDEPIM_LIB_SOVERSION}
+)
 
+set(akonadiconsole_SRCS main.cpp akonadiconsole.qrc)
 
-set(akonadiconsole_SRCS
-    main.cpp
-    akonadiconsole.qrc
-    )
-
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-akonadiconsole.png")
+file(
+    GLOB ICONS_SRCS
+    "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-akonadiconsole.png"
+)
 ecm_add_app_icon(akonadiconsole_SRCS ICONS ${ICONS_SRCS})
 
 add_executable(akonadiconsole ${akonadiconsole_SRCS})
 
-target_link_libraries(akonadiconsole
+target_link_libraries(
+    akonadiconsole
     libakonadiconsole
     KF6::DBusAddons
     KF6::CoreAddons
@@ -196,7 +203,13 @@ target_link_libraries(akonadiconsole
 )
 
 install(TARGETS akonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(PROGRAMS org.kde.akonadiconsole.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(TARGETS libakonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+install(
+    PROGRAMS org.kde.akonadiconsole.desktop
+    DESTINATION ${KDE_INSTALL_APPDIR}
+)
+install(
+    TARGETS libakonadiconsole ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY NAMELINK_SKIP
+)
 
 ecm_qt_install_logging_categories(EXPORT AKONADICONSOLE FILE akonadiconsole.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})

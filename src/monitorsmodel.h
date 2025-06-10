@@ -42,7 +42,7 @@ private:
     void slotSubscriberChanged(const Akonadi::NotificationSubscriber &subscriber);
     void slotSubscriberRemoved(const Akonadi::NotificationSubscriber &subscriber);
     void init();
-    QModelIndex indexForSession(const QByteArray &sesion);
+    QModelIndex indexForSession(const QByteArray &session);
     QList<QByteArray> mSessions;
     QHash<QByteArray /* session */, QList<Akonadi::NotificationSubscriber>> mData;
     Akonadi::Monitor *mMonitor;

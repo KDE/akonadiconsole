@@ -22,12 +22,12 @@ DebugModel::DebugModel(QObject *parent)
 
 DebugModel::~DebugModel() = default;
 
-QString DebugModel::displaySender(const QString &identifer) const
+QString DebugModel::displaySender(const QString &identifier) const
 {
-    if (mSenderCache[identifer].isEmpty()) {
-        return identifer;
+    if (mSenderCache[identifier].isEmpty()) {
+        return identifier;
     } else {
-        return QString(mSenderCache[identifer] + QStringLiteral(" (") + identifer + QStringLiteral(")"));
+        return QString(mSenderCache[identifier] + QStringLiteral(" (") + identifier + QStringLiteral(")"));
     }
 }
 
@@ -76,16 +76,16 @@ bool DebugModel::removeRows(int row, int count, const QModelIndex &parent)
     QList<QString> toDelete;
 
     // find elements that needs to be deleted.
-    for (const auto &identifer : mSenderCache.keys()) {
+    for (const auto &identifier : mSenderCache.keys()) {
         bool found = false;
         for (const auto &msg : std::as_const(mMessages)) {
-            if (msg.sender == identifer) {
+            if (msg.sender == identifier) {
                 found = true;
                 break;
             }
         }
         if (!found) {
-            toDelete.push_back(identifer);
+            toDelete.push_back(identifier);
         }
     }
 
