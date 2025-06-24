@@ -7,6 +7,8 @@
 */
 
 #include "instanceselector.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_instanceselector.h"
 
 #include "akonadiconsole_debug.h"
@@ -40,7 +42,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
     connect(buttonBox, &QDialogButtonBox::accepted, this, &InstanceSelector::slotAccept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &InstanceSelector::slotReject);
     mainLayout->addWidget(buttonBox);
-    okButton->setIcon(QIcon::fromTheme(QStringLiteral("network-connect")));
+    okButton->setIcon(QIcon::fromTheme(u"network-connect"_s));
     okButton->setText(i18n("Connect"));
 
     const QStringList insts = instances();
@@ -55,7 +57,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
         auto model = new QStandardItemModel(this);
         for (const QString &inst : insts) {
             auto item = new QStandardItem;
-            item->setText(inst.isEmpty() ? QStringLiteral("<global>") : inst);
+            item->setText(inst.isEmpty() ? u"<global>"_s : inst);
             item->setData(inst, Qt::UserRole);
             model->appendRow(item);
         }

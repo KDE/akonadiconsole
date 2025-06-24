@@ -62,23 +62,23 @@ MainWidget::MainWidget(KXmlGuiWindow *parent)
 #endif
     tabWidget->addTab(new MonitorsWidget(tabWidget), i18n("Monitors"));
 
-    auto action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_akonadi2xml"));
+    auto action = parent->actionCollection()->addAction(u"akonadiconsole_akonadi2xml"_s);
     action->setText(i18n("Dump to XML..."));
     connect(action, &QAction::triggered, mBrowser, &BrowserWidget::dumpToXml);
 
-    action = parent->actionCollection()->addAction(QStringLiteral("akonadiconsole_clearcache"));
+    action = parent->actionCollection()->addAction(u"akonadiconsole_clearcache"_s);
     action->setText(i18n("Clear Akonadi Cache"));
     connect(action, &QAction::triggered, mBrowser, &BrowserWidget::clearCache);
 
-    action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_start"));
+    action = parent->actionCollection()->addAction(u"akonadiserver_start"_s);
     action->setText(i18n("Start Server"));
     connect(action, &QAction::triggered, this, &MainWidget::startServer);
 
-    action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_stop"));
+    action = parent->actionCollection()->addAction(u"akonadiserver_stop"_s);
     action->setText(i18n("Stop Server"));
     connect(action, &QAction::triggered, this, &MainWidget::stopServer);
 
-    action = parent->actionCollection()->addAction(QStringLiteral("akonadiserver_restart"));
+    action = parent->actionCollection()->addAction(u"akonadiserver_restart"_s);
     action->setText(i18n("Restart Server"));
     connect(action, &QAction::triggered, this, &MainWidget::restartServer);
 }

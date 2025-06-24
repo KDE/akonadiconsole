@@ -5,6 +5,8 @@
 */
 
 #include "jobtrackersearchwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobtrackersearchwidget.h"
 #include <QCheckBox>
 #include <QComboBox>
@@ -23,7 +25,7 @@ JobTrackerSearchWidgetTest::~JobTrackerSearchWidgetTest() = default;
 void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
 {
     JobTrackerSearchWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     int top = -1;
     int bottom = -1;
@@ -35,17 +37,17 @@ void JobTrackerSearchWidgetTest::shouldHaveDefaultValue()
     QCOMPARE(left, 0);
     QCOMPARE(right, 0);
 
-    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
+    auto mSearchLineEdit = w.findChild<QLineEdit *>(u"searchline"_s);
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
     QVERIFY(mSearchLineEdit->text().isEmpty());
 
-    auto mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
+    auto mSelectColumn = w.findChild<QComboBox *>(u"selectcolumn"_s);
     QVERIFY(mSelectColumn);
     QCOMPARE(mSelectColumn->count(), 8);
     QCOMPARE(mSelectColumn->currentIndex(), 0);
 
-    auto mSelectOnlyError = w.findChild<QCheckBox *>(QStringLiteral("selectonlyerror"));
+    auto mSelectOnlyError = w.findChild<QCheckBox *>(u"selectonlyerror"_s);
     QVERIFY(mSelectOnlyError);
     QVERIFY(!mSelectOnlyError->text().isEmpty());
     QCOMPARE(mSelectOnlyError->checkState(), Qt::Unchecked);
@@ -55,8 +57,8 @@ void JobTrackerSearchWidgetTest::shouldEmitSignal()
 {
     JobTrackerSearchWidget w;
     QSignalSpy searchWidgetSignal(&w, &JobTrackerSearchWidget::searchTextChanged);
-    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
-    const QString foo = QStringLiteral("foo");
+    auto mSearchLineEdit = w.findChild<QLineEdit *>(u"searchline"_s);
+    const QString foo = u"foo"_s;
     mSearchLineEdit->setText(foo);
     QCOMPARE(searchWidgetSignal.count(), 1);
     QCOMPARE(searchWidgetSignal.at(0).at(0).toString(), foo);
@@ -69,7 +71,7 @@ void JobTrackerSearchWidgetTest::shouldEmitColumnChanged()
 {
     JobTrackerSearchWidget w;
     QSignalSpy columnChangedSignal(&w, &JobTrackerSearchWidget::columnChanged);
-    auto mSelectColumn = w.findChild<QComboBox *>(QStringLiteral("selectcolumn"));
+    auto mSelectColumn = w.findChild<QComboBox *>(u"selectcolumn"_s);
     mSelectColumn->setCurrentIndex(2);
     QCOMPARE(columnChangedSignal.count(), 1);
 }
@@ -78,7 +80,7 @@ void JobTrackerSearchWidgetTest::shouldEmitSelectOnlyErrorChanged()
 {
     JobTrackerSearchWidget w;
     QSignalSpy selectOnlyErrorChangedSignal(&w, &JobTrackerSearchWidget::selectOnlyErrorChanged);
-    auto mSelectOnlyError = w.findChild<QCheckBox *>(QStringLiteral("selectonlyerror"));
+    auto mSelectOnlyError = w.findChild<QCheckBox *>(u"selectonlyerror"_s);
     mSelectOnlyError->setChecked(true);
     QCOMPARE(selectOnlyErrorChangedSignal.count(), 1);
 }

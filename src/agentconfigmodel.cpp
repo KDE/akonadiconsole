@@ -5,6 +5,7 @@
 */
 
 #include "agentconfigmodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "akonadiconsole_debug.h"
 #include <QDBusInterface>
@@ -25,7 +26,7 @@ void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
     beginResetModel();
     m_settings.clear();
 
-    m_interface = new QDBusInterface(QStringLiteral("org.freedesktop.Akonadi.Agent.%1").arg(instance.identifier()), QStringLiteral("/Settings"));
+    m_interface = new QDBusInterface(u"org.freedesktop.Akonadi.Agent.%1"_s.arg(instance.identifier()), u"/Settings"_s);
     if (!m_interface->isValid()) {
         qCritical() << "Unable to obtain KConfigXT D-Bus interface of agent" << instance.identifier();
         delete m_interface;
@@ -90,7 +91,7 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
             return setting.first;
         } else if (index.column() == 1) {
             if (setting.second.metaType().id() == QMetaType::QStringList) {
-                return setting.second.toStringList().join(QStringLiteral(", "));
+                return setting.second.toStringList().join(u", "_s);
             } else {
                 return setting.second;
             }
@@ -106,7 +107,7 @@ bool AgentConfigModel::setData(const QModelIndex &index, const QVariant &value, 
     if (index.column() == 1 && role == Qt::EditRole && index.row() >= 0 && index.row() < m_settings.size()) {
         const QPair<QString, QVariant> setting = m_settings.at(index.row());
         if (setting.second != value) {
-            m_interface->call(QStringLiteral("set%1").arg(setting.first), value);
+            m_interface->call(u"set%1"_s.arg(setting.first), value);
             reload();
         }
     }
@@ -117,11 +118,11 @@ QVariant AgentConfigModel::headerData(int section, Qt::Orientation orientation, 
 {
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
         if (section == 0) {
-            return QStringLiteral("Setting");
+            return u"Setting"_s;
         } else if (section == 1) {
-            return QStringLiteral("Value");
+            return u"Value"_s;
         } else if (section == 2) {
-            return QStringLiteral("Type");
+            return u"Type"_s;
         }
     }
     return QAbstractItemModel::headerData(section, orientation, role);
@@ -137,7 +138,7 @@ Qt::ItemFlags AgentConfigModel::flags(const QModelIndex &index) const
 
 void AgentConfigModel::writeConfig()
 {
-    m_interface->call(QStringLiteral("save"));
+    m_interface->call(u"save"_s);
 }
 
 #include "moc_agentconfigmodel.cpp"

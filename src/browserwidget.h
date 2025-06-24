@@ -7,6 +7,8 @@
 #pragma once
 
 #include <ui_browserwidget_contentview.h>
+using namespace Qt::Literals::StringLiterals;
+
 #include <ui_browserwidget_itemview.h>
 
 #include <Akonadi/Collection>

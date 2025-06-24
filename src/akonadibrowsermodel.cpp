@@ -5,6 +5,7 @@
 */
 
 #include "akonadibrowsermodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <KMime/Message>
@@ -33,8 +34,8 @@ class GenericState : public AkonadiBrowserModel::State
 public:
     GenericState()
     {
-        m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("Id") << QStringLiteral("Remote Id") << QStringLiteral("GID") << QStringLiteral("MimeType");
+        m_collectionHeaders << u"Collection"_s;
+        m_itemHeaders << u"Id"_s << u"Remote Id"_s << QStringLiteral("GID") << QStringLiteral("MimeType");
     }
 
     ~GenericState() override = default;
@@ -94,7 +95,7 @@ public:
             if (mail->subject()) {
                 return mail->subject()->asUnicodeString();
             } else {
-                return QStringLiteral("(No subject)");
+                return u"(No subject)"_s;
             }
         case 1:
             if (mail->from()) {
@@ -119,8 +120,8 @@ class ContactsState : public AkonadiBrowserModel::State
 public:
     ContactsState()
     {
-        m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("Given Name") << QStringLiteral("Family Name") << QStringLiteral("Email");
+        m_collectionHeaders << u"Collection"_s;
+        m_itemHeaders << u"Given Name"_s << u"Family Name"_s << QStringLiteral("Email");
     }
 
     ~ContactsState() override = default;
@@ -165,9 +166,8 @@ class CalendarState : public AkonadiBrowserModel::State
 public:
     CalendarState()
     {
-        m_collectionHeaders << QStringLiteral("Collection");
-        m_itemHeaders << QStringLiteral("UID") << QStringLiteral("Summary") << QStringLiteral("DateTime start") << QStringLiteral("DateTime End")
-                      << QStringLiteral("Type");
+        m_collectionHeaders << u"Collection"_s;
+        m_itemHeaders << u"UID"_s << u"Summary"_s << QStringLiteral("DateTime start") << QStringLiteral("DateTime End") << u"Type"_s;
     }
 
     ~CalendarState() override = default;

@@ -5,6 +5,8 @@
 */
 
 #include "logging.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "loggeradaptor.h"
 #include "loggingfiltermodel.h"
 #include "loggingmodel.h"
@@ -30,8 +32,8 @@
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(LoggingModel::Message)
 #endif
-#define DBUS_PATH QStringLiteral("/logger")
-#define DBUS_INTERFACE QStringLiteral("org.kde.akonadiconsole.logger")
+#define DBUS_PATH u"/logger"_s
+#define DBUS_INTERFACE u"org.kde.akonadiconsole.logger"_s
 
 using namespace KPIM;
 
@@ -95,13 +97,13 @@ Logging::Logging(QWidget *parent)
     new LoggerAdaptor(this);
     QDBusConnection::sessionBus().registerObject(DBUS_PATH, this, QDBusConnection::ExportAdaptors);
 
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Logging"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"Logging"_s);
     mView->header()->restoreState(config.readEntry<QByteArray>("view", QByteArray()));
 }
 
 Logging::~Logging()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Logging"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"Logging"_s);
     config.writeEntry("view", mView->header()->saveState());
 }
 

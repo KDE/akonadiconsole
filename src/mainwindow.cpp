@@ -7,6 +7,8 @@
 */
 
 #include "mainwindow.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "config-akonadiconsole.h"
 
 #include "uistatesaver.h"
@@ -27,8 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     KStandardActions::quit(qApp, &QApplication::quit, actionCollection());
 
-    setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, QStringLiteral("akonadiconsoleui.rc"));
-    AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("UiState")));
+    setupGUI(Keys /*| ToolBar | StatusBar*/ | Save | Create, u"akonadiconsoleui.rc"_s);
+    AkonadiConsole::UiStateSaver::restoreState(this, KConfigGroup(KSharedConfig::openConfig(), u"UiState"_s));
     KMessageBox::information(this,
                              i18n("<p>Akonadi Console is purely a development tool. "
                                   "It allows you to view and change internal data structures of Akonadi. "
@@ -36,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
                                   "you risk damaging or losing your personal information management data.<br/>"
                                   "<b>Use at your own risk!</b></p>"),
                              QString(),
-                             QStringLiteral("UseAtYourOwnRiskWarning"));
+                             u"UseAtYourOwnRiskWarning"_s);
 }
 
 MainWindow::~MainWindow()
@@ -46,7 +48,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("UiState"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"UiState"_s);
     AkonadiConsole::UiStateSaver::saveState(this, config);
     KSharedConfig::openConfig()->sync();
     KXmlGuiWindow::closeEvent(event);

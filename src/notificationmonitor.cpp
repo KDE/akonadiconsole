@@ -65,8 +65,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
     hLayout->addWidget(mTypeFilterCombo = new KCheckComboBox(this));
     hLayout->addStretch();
     mTypeFilterCombo->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-    mTypeFilterCombo->setMinimumWidth(fontMetrics().boundingRect(QStringLiteral("Subscription,Items,Collections")).width()
-                                      + 60); // make it wide enough for most use cases
+    mTypeFilterCombo->setMinimumWidth(fontMetrics().boundingRect(u"Subscription,Items,Collections"_s).width() + 60); // make it wide enough for most use cases
     m_filterModel->setTypeFilter(mTypeFilterCombo);
 
     m_splitter = new QSplitter(this);
@@ -97,7 +96,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
 
     onNotificationSelected({});
 
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("NotificationMonitor"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"NotificationMonitor"_s);
     m_treeView->header()->restoreState(config.readEntry<QByteArray>("tv", QByteArray()));
     m_ntfView->header()->restoreState(config.readEntry<QByteArray>("ntfView", QByteArray()));
     m_splitter->restoreState(config.readEntry<QByteArray>("splitter", QByteArray()));
@@ -107,7 +106,7 @@ NotificationMonitor::NotificationMonitor(QWidget *parent)
 
 NotificationMonitor::~NotificationMonitor()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("NotificationMonitor"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"NotificationMonitor"_s);
     config.writeEntry("tv", m_treeView->header()->saveState());
     config.writeEntry("ntfView", m_ntfView->header()->saveState());
     config.writeEntry("splitter", m_splitter->saveState());
@@ -499,7 +498,7 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
     appendRow(item, i18n("Fetch VRefs"), toString(ifs.fetchVirtualReferences()));
     model->appendRow(item);
 
-    item = new QStandardItem(QStringLiteral("Collection Fetch Scope"));
+    item = new QStandardItem(u"Collection Fetch Scope"_s);
     const auto cfs = ntf.collectionFetchScope();
     QString listFilter;
     switch (cfs.listFilter()) {
@@ -554,14 +553,14 @@ void NotificationMonitor::populateSubscriptionNtfTree(QStandardItemModel *model,
 
 void NotificationMonitor::saveToFile()
 {
-    const auto filename = QFileDialog::getSaveFileName(this, QStringLiteral("Save to File..."));
+    const auto filename = QFileDialog::getSaveFileName(this, u"Save to File..."_s);
     if (filename.isEmpty()) {
         return;
     }
 
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-        QMessageBox::warning(this, QStringLiteral("Error"), i18n("Failed to open file: %1").arg(file.errorString()));
+        QMessageBox::warning(this, u"Error"_s, i18n("Failed to open file: %1").arg(file.errorString()));
         return;
     }
 
@@ -575,7 +574,7 @@ void NotificationMonitor::saveToFile()
     for (int row = 0; row < rows; ++row) {
         QJsonObject rowObject;
         // The Ntf model has all the data that m_model has in its columns, apart from the session
-        rowObject.insert(QStringLiteral("Session"), m_model->index(row, NotificationModel::SessionColumn).data().toString());
+        rowObject.insert(u"Session"_s, m_model->index(row, NotificationModel::SessionColumn).data().toString());
 
         populateNtfModel(m_model->index(row, 0));
         for (int r = 0, cnt = ntfModel->rowCount(); r < cnt; ++r) {
@@ -586,7 +585,7 @@ void NotificationMonitor::saveToFile()
 
         rowArray.append(rowObject);
     }
-    json.insert(QStringLiteral("notifications"), rowArray);
+    json.insert(u"notifications"_s, rowArray);
     QJsonDocument saveDoc(json);
     file.write(saveDoc.toJson());
 }

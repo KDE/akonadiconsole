@@ -8,6 +8,8 @@
  */
 
 #include "jobtracker.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadiconsole_debug.h"
 #include "jobtrackeradaptor.h"
 #include <KLocalizedString>
@@ -77,9 +79,9 @@ JobTracker::JobTracker(const char *name, QObject *parent)
     , d(new JobTrackerPrivate(this))
 {
     new JobTrackerAdaptor(this);
-    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
-    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
-    QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1StringView(name), this, QDBusConnection::ExportAdaptors);
+    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : u'-' + Akonadi::Instance::identifier();
+    QDBusConnection::sessionBus().registerService(u"org.kde.akonadiconsole"_s + suffix);
+    QDBusConnection::sessionBus().registerObject(u'/' + QLatin1StringView(name), this, QDBusConnection::ExportAdaptors);
 }
 
 JobTracker::~JobTracker() = default;
@@ -95,7 +97,7 @@ void JobTracker::jobCreated(const QString &session, const QString &jobName, cons
     if (!parent.isEmpty() && parentId == -1) {
         qCWarning(AKONADICONSOLE_LOG) << "JobTracker: Job" << jobName << "arrived before its parent" << parent << " jobType=" << jobType
                                       << "! Fix the library!";
-        jobCreated(session, parent, QString(), QStringLiteral("dummy job type"), QString());
+        jobCreated(session, parent, QString(), u"dummy job type"_s, QString());
         parentId = idForJob(parent);
         assert(parentId != -1);
     }

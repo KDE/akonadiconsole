@@ -5,6 +5,7 @@
 */
 
 #include "debugmodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -27,13 +28,13 @@ QString DebugModel::displaySender(const QString &identifier) const
     if (mSenderCache[identifier].isEmpty()) {
         return identifier;
     } else {
-        return QString(mSenderCache[identifier] + QStringLiteral(" (") + identifier + QStringLiteral(")"));
+        return QString(mSenderCache[identifier] + u" ("_s + identifier + u")"_s);
     }
 }
 
 QString DebugModel::cacheString(const QString &str, QMap<QString, QString> &cache, QStandardItemModel *model)
 {
-    auto pos = str.lastIndexOf(QLatin1Char('('));
+    auto pos = str.lastIndexOf(u'(');
     auto identifier = str;
     QString name;
     if (pos != -1) {
@@ -162,9 +163,9 @@ QVariant DebugModel::data(const QModelIndex &index, int role) const
         case DirectionColumn:
             switch (message.direction) {
             case ClientToServer:
-                return QStringLiteral("<-");
+                return u"<-"_s;
             case ServerToClient:
-                return QStringLiteral("->");
+                return u"->"_s;
             }
             return {};
         case MessageColumn:

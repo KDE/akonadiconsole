@@ -110,13 +110,13 @@ SearchWidget::SearchWidget(QWidget *parent)
 
     openStore(0);
 
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SearchWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"SearchWidget"_s);
     mQueryWidget->setPlainText(config.readEntry("query"));
 }
 
 SearchWidget::~SearchWidget()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SearchWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"SearchWidget"_s);
     config.writeEntry("query", mQueryWidget->toPlainText());
     config.sync();
     closeDataBase();
@@ -151,7 +151,7 @@ void SearchWidget::openStore(int idx)
 void SearchWidget::xapianError(const Xapian::Error &e)
 {
     qCWarning(AKONADICONSOLE_LOG) << e.get_type() << QString::fromStdString(e.get_description()) << e.get_error_string();
-    QMessageBox::critical(this, i18n("Xapian error"), QStringLiteral("%1: %2").arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
+    QMessageBox::critical(this, i18n("Xapian error"), u"%1: %2"_s.arg(QString::fromUtf8(e.get_type()), QString::fromStdString(e.get_msg())));
 }
 
 void SearchWidget::search()

@@ -7,6 +7,8 @@
  */
 
 #include "querydebugger.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "storagedebuggerinterface.h"
 #include "ui_querydebugger.h"
 #include "ui_queryviewdialog.h"
@@ -393,7 +395,7 @@ public:
     {
         if (idx.isValid()) {
             QTextStream stream(&file);
-            stream << QStringLiteral("  |").repeated(depth) << QLatin1StringView("- ");
+            stream << u"  |"_s.repeated(depth) << QLatin1StringView("- ");
 
             Node *node = reinterpret_cast<Node *>(idx.internalPointer());
             switch (node->type) {
@@ -420,7 +422,7 @@ public:
             if (node->type >= Transaction) {
                 auto query = static_cast<QueryNode *>(node);
                 if (!query->error.isEmpty()) {
-                    stream << '\n' << QStringLiteral("  |").repeated(depth) << QStringLiteral("  Error: ") << query->error;
+                    stream << '\n' << u"  |"_s.repeated(depth) << u"  Error: "_s << query->error;
                 }
             }
 
@@ -435,7 +437,7 @@ public:
 private:
     [[nodiscard]] QString fromMSecsSinceEpoch(qint64 msecs) const
     {
-        return QDateTime::fromMSecsSinceEpoch(msecs).toString(QStringLiteral("dd.MM.yyyy HH:mm:ss.zzz"));
+        return QDateTime::fromMSecsSinceEpoch(msecs).toString(u"dd.MM.yyyy HH:mm:ss.zzz"_s);
     }
 
     QVariant connectionData(ConnectionNode *connection, int column, int role) const
@@ -460,16 +462,16 @@ private:
             QString mode;
             switch (transaction->transactionType) {
             case TransactionNode::Begin:
-                mode = QStringLiteral("BEGIN");
+                mode = u"BEGIN"_s;
                 break;
             case TransactionNode::Commit:
-                mode = QStringLiteral("COMMIT");
+                mode = u"COMMIT"_s;
                 break;
             case TransactionNode::Rollback:
-                mode = QStringLiteral("ROLLBACK");
+                mode = u"ROLLBACK"_s;
                 break;
             }
-            return QStringLiteral("%1 %2").arg(mode, transaction->query);
+            return u"%1 %2"_s.arg(mode, transaction->query);
         } else {
             return queryData(transaction, column, role);
         }
@@ -492,7 +494,7 @@ private:
             case 2:
                 return fromMSecsSinceEpoch(query->start + query->duration);
             case 3:
-                return QTime(0, 0, 0).addMSecs(query->duration).toString(QStringLiteral("HH:mm:ss.zzz"));
+                return QTime(0, 0, 0).addMSecs(query->duration).toString(u"HH:mm:ss.zzz"_s);
             case 4:
                 return query->error;
             }
@@ -521,7 +523,7 @@ public:
     QueryDebuggerModel(QObject *parent)
         : QAbstractListModel(parent)
     {
-        mSpecialRows[TOTAL].query = QStringLiteral("TOTAL");
+        mSpecialRows[TOTAL].query = u"TOTAL"_s;
         mSpecialRows[TOTAL].duration = 0;
         mSpecialRows[TOTAL].calls = 0;
     }
@@ -665,11 +667,11 @@ public:
 
         QString q = query;
         for (int i = 0; i < values.count(); ++i) {
-            const int pos = q.indexOf(QLatin1Char('?'));
+            const int pos = q.indexOf(u'?');
             if (pos == -1) {
                 break;
             }
-            q.replace(pos, 1, values.value(QStringLiteral(":%1").arg(i)).toString());
+            q.replace(pos, 1, values.value(u":%1"_s.arg(i)).toString());
         }
         mUi->queryLbl->setText(q);
         if (!q.startsWith(QLatin1StringView("SELECT"))) {
@@ -707,11 +709,11 @@ QueryDebugger::QueryDebugger(QWidget *parent)
     qDBusRegisterMetaType<DbConnection>();
     qDBusRegisterMetaType<QList<DbConnection>>();
 
-    QString service = QStringLiteral("org.freedesktop.Akonadi");
+    QString service = u"org.freedesktop.Akonadi"_s;
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-        service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+        service += u'.' + Akonadi::ServerManager::instanceIdentifier();
     }
-    mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service, QStringLiteral("/storageDebug"), QDBusConnection::sessionBus(), this);
+    mDebugger = new org::freedesktop::Akonadi::StorageDebugger(service, u"/storageDebug"_s, QDBusConnection::sessionBus(), this);
 
     connect(mDebugger, &OrgFreedesktopAkonadiStorageDebuggerInterface::queryExecuted, this, &QueryDebugger::addQuery);
 

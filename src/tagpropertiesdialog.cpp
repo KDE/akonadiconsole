@@ -275,9 +275,9 @@ void TagPropertiesDialog::slotAccept()
             "WHERE ");
         QStringList conds;
         for (int i = 0; i < mRemovedRIDs.count(); ++i) {
-            conds << QStringLiteral("name = ?");
+            conds << u"name = ?"_s;
         }
-        queryStr += conds.join(" OR "_L1) + QLatin1Char(')');
+        queryStr += conds.join(" OR "_L1) + u')';
         query.prepare(queryStr);
         query.addBindValue(mTag.id());
         for (const QString &removedRid : std::as_const(mRemovedRIDs)) {
@@ -294,10 +294,10 @@ void TagPropertiesDialog::slotAccept()
         QList<qint64> existingResourceRecords;
         {
             QSqlQuery query(DbAccess::database());
-            QString queryStr = QStringLiteral("SELECT id, name FROM ResourceTable WHERE ");
+            QString queryStr = u"SELECT id, name FROM ResourceTable WHERE "_s;
             QStringList conds;
             for (int i = 0; i < mChangedRIDs.count(); ++i) {
-                conds << QStringLiteral("name = ?");
+                conds << u"name = ?"_s;
             }
             queryStr += conds.join(" OR "_L1);
             query.prepare(queryStr);
@@ -318,7 +318,7 @@ void TagPropertiesDialog::slotAccept()
         // This is a workaround for PSQL not supporting UPSERTs
         {
             QSqlQuery query(DbAccess::database());
-            query.prepare(QStringLiteral("SELECT resourceId FROM TagRemoteIdResourceRelationTable WHERE tagId = ?"));
+            query.prepare(u"SELECT resourceId FROM TagRemoteIdResourceRelationTable WHERE tagId = ?"_s);
             query.addBindValue(mTag.id());
             if (!query.exec()) {
                 qCritical() << query.executedQuery();
@@ -342,12 +342,12 @@ void TagPropertiesDialog::slotAccept()
             QSqlQuery query(DbAccess::database());
             const qlonglong resourceId = resourceNameToIdMap[resIndex.data().toString()];
             if (existingResourceRecords.contains(resourceId)) {
-                query.prepare(QStringLiteral("UPDATE TagRemoteIdResourceRelationTable SET remoteId = ? WHERE tagId = ? AND resourceId = ?"));
+                query.prepare(u"UPDATE TagRemoteIdResourceRelationTable SET remoteId = ? WHERE tagId = ? AND resourceId = ?"_s);
                 query.addBindValue(valueIndex.data().toString());
                 query.addBindValue(mTag.id());
                 query.addBindValue(resourceId);
             } else {
-                query.prepare(QStringLiteral("INSERT INTO TagRemoteIdResourceRelationTable (tagId, resourceId, remoteId) VALUES (?, ?, ?)"));
+                query.prepare(u"INSERT INTO TagRemoteIdResourceRelationTable (tagId, resourceId, remoteId) VALUES (?, ?, ?)"_s);
                 query.addBindValue(mTag.id());
                 query.addBindValue(resourceId);
                 query.addBindValue(valueIndex.data().toString());

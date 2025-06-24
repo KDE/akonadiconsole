@@ -8,6 +8,8 @@
  */
 
 #include "jobtrackermodel.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobtracker.h"
 
 #include <KLocalizedString>
@@ -129,14 +131,14 @@ int JobTrackerModel::columnCount(const QModelIndex &parent) const
 
 static QString formatTimeWithMsec(const QTime &time)
 {
-    return time.toString(QStringLiteral("HH:mm:ss.zzz t"));
+    return time.toString(u"HH:mm:ss.zzz t"_s);
 }
 
 static QString formatDurationWithMsec(qint64 msecs)
 {
     QTime time(0, 0, 0);
     time = time.addMSecs(msecs);
-    return time.toString(QStringLiteral("HH:mm:ss.zzz"));
+    return time.toString(u"HH:mm:ss.zzz"_s);
 }
 
 QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const

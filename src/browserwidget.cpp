@@ -158,7 +158,7 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
     itemFilter->addMimeTypeExclusionFilter(Collection::mimeType());
     itemFilter->setHeaderGroup(EntityTreeModel::ItemListHeaders);
 
-    const KConfigGroup group = KSharedConfig::openConfig()->group(QStringLiteral("FavoriteCollectionsModel"));
+    const KConfigGroup group = KSharedConfig::openConfig()->group(u"FavoriteCollectionsModel"_s);
     connect(mBrowserModel, &AkonadiBrowserModel::columnsChanged, itemFilter, &EntityMimeTypeFilterModel::invalidate);
     auto sortModel = new AkonadiBrowserSortModel(mBrowserModel, this);
     sortModel->setSourceModel(itemFilter);
@@ -237,10 +237,10 @@ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent)
 
     mCacheOnlyAction = new KToggleAction(i18n("Cache only retrieval"), xmlGuiWindow);
     mCacheOnlyAction->setChecked(true);
-    xmlGuiWindow->actionCollection()->addAction(QStringLiteral("akonadiconsole_cacheonly"), mCacheOnlyAction);
+    xmlGuiWindow->actionCollection()->addAction(u"akonadiconsole_cacheonly"_s, mCacheOnlyAction);
     connect(mCacheOnlyAction, &KToggleAction::toggled, this, &BrowserWidget::updateItemFetchScope);
 
-    m_stateMaintainer = new KViewStateMaintainer<ETMViewStateSaver>(KSharedConfig::openConfig()->group(QStringLiteral("CollectionViewState")), this);
+    m_stateMaintainer = new KViewStateMaintainer<ETMViewStateSaver>(KSharedConfig::openConfig()->group(u"CollectionViewState"_s), this);
     m_stateMaintainer->setView(mCollectionView);
 
     m_stateMaintainer->restoreState();
@@ -362,7 +362,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     contentUi.mimeType->setText(item.mimeType());
     contentUi.revision->setText(QString::number(item.revision()));
     contentUi.size->setText(QString::number(item.size()));
-    contentUi.modificationtime->setText(item.modificationTime().toString() + QStringLiteral(" UTC"));
+    contentUi.modificationtime->setText(item.modificationTime().toString() + u" UTC"_s);
     QStringList flags;
     const auto itemFlags = item.flags();
     for (const Item::Flag &f : itemFlags) {
@@ -380,7 +380,7 @@ void BrowserWidget::setItem(const Akonadi::Item &item)
     Attribute::List list = item.attributes();
     delete mAttrModel;
     mAttrModel = new QStandardItemModel();
-    QStringList labels{QStringLiteral("Attribute"), QStringLiteral("Value")};
+    QStringList labels{u"Attribute"_s, u"Value"_s};
     mAttrModel->setHorizontalHeaderLabels(labels);
     for (const auto attr : list) {
         auto type = new QStandardItem(QString::fromLatin1(attr->type()));
@@ -506,7 +506,7 @@ void BrowserWidget::dumpToXml()
     if (!root.isValid()) {
         return;
     }
-    const QString fileName = QFileDialog::getSaveFileName(this, i18n("Select XML file"), QString(), QStringLiteral("*.xml"));
+    const QString fileName = QFileDialog::getSaveFileName(this, i18n("Select XML file"), QString(), u"*.xml"_s);
     if (fileName.isEmpty()) {
         return;
     }
@@ -544,17 +544,17 @@ void BrowserWidget::tagViewContextMenuRequested(const QPoint &pos)
     const QModelIndex index = mTagView->indexAt(pos);
     auto menu = new QMenu(this);
     connect(menu, &QMenu::aboutToHide, menu, &QMenu::deleteLater);
-    menu->addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("&Add tag..."), this, &BrowserWidget::addTagRequested);
+    menu->addAction(QIcon::fromTheme(u"list-add"_s), i18n("&Add tag..."), this, &BrowserWidget::addTagRequested);
     if (index.isValid()) {
         const auto tag = index.data(TagModel::TagRole).value<Akonadi::Tag>();
 
         menu->addAction(i18n("Add &subtag..."), this, [this, tag] {
             addSubTagRequested(tag);
         });
-        menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("&Edit tag..."), QKeySequence(Qt::Key_Return), this, [this, tag] {
+        menu->addAction(QIcon::fromTheme(u"document-edit"_s), i18n("&Edit tag..."), QKeySequence(Qt::Key_Return), this, [this, tag] {
             editTagRequested(tag);
         });
-        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete tag..."), QKeySequence::Delete, this, [this, tag] {
+        menu->addAction(QIcon::fromTheme(u"edit-delete"_s), i18n("&Delete tag..."), QKeySequence::Delete, this, [this, tag] {
             removeTagRequested(tag);
         });
     }

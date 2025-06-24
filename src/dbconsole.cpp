@@ -5,6 +5,8 @@
 */
 
 #include "dbconsole.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/DbAccess>
 
 #include <KStandardActions>
@@ -36,12 +38,12 @@ DbConsole::DbConsole(QWidget *parent)
     });
     l->addWidget(mTabWidget);
 
-    auto addTabButton = new QPushButton(QIcon::fromTheme(QStringLiteral("tab-new")), QString());
+    auto addTabButton = new QPushButton(QIcon::fromTheme(u"tab-new"_s), QString());
     connect(addTabButton, &QPushButton::clicked, this, &DbConsole::addTab);
     mTabWidget->setCornerWidget(addTabButton, Qt::TopRightCorner);
 
     auto config = KSharedConfig::openConfig();
-    auto group = config->group(QStringLiteral("DBConsole"));
+    auto group = config->group(u"DBConsole"_s);
     QStringList queries;
     const QString queryText = group.readEntry("queryText");
     if (!queryText.isEmpty()) {
@@ -68,7 +70,7 @@ void DbConsole::saveQueries()
         auto tab = qobject_cast<DbConsoleTab *>(mTabWidget->widget(i));
         queries << tab->query();
     }
-    KSharedConfig::openConfig()->group(QStringLiteral("DBConsole")).writeEntry("queryTexts", queries);
+    KSharedConfig::openConfig()->group(u"DBConsole"_s).writeEntry("queryTexts", queries);
 }
 
 DbConsoleTab *DbConsole::addTab()
@@ -89,7 +91,7 @@ DbConsoleTab::DbConsoleTab(int index, QWidget *parent)
     QAction *copyAction = KStandardActions::copy(this, &DbConsoleTab::copyCell, this);
     ui.resultView->addAction(copyAction);
 
-    ui.execButton->setIcon(QIcon::fromTheme(QStringLiteral("application-x-executable")));
+    ui.execButton->setIcon(QIcon::fromTheme(u"application-x-executable"_s));
     ui.execButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(ui.execButton, &QPushButton::clicked, this, &DbConsoleTab::execClicked);
 

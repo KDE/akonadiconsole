@@ -5,6 +5,7 @@
 */
 
 #include "loggingmodel.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -130,7 +131,7 @@ QVariant LoggingModel::data(const QModelIndex &index, int role) const
         case TimeColumn:
             return QDateTime::fromMSecsSinceEpoch(message.timestamp).toString(Qt::ISODateWithMs);
         case AppColumn:
-            return QStringLiteral("%1(%2)").arg(message.app, QString::number(message.pid));
+            return u"%1(%2)"_s.arg(message.app, QString::number(message.pid));
         case TypeColumn:
             switch (message.type) {
             case QtDebugMsg:

@@ -6,6 +6,8 @@
 */
 
 #include "jobtrackertest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "jobtracker.h"
 #include <QSignalSpy>
 #include <QTest>
@@ -17,9 +19,9 @@ static QString intPairListToString(const QVariant &var)
     QString ret;
     for (const auto &pair : arg) {
         if (!ret.isEmpty()) {
-            ret += QLatin1Char(' ');
+            ret += u' ';
         }
-        ret += QString::number(pair.first) + QLatin1Char(',') + QString::number(pair.second);
+        ret += QString::number(pair.first) + u',' + QString::number(pair.second);
     }
     return ret;
 }
@@ -34,7 +36,7 @@ JobTrackerTest::~JobTrackerTest() = default;
 void JobTrackerTest::initTestCase()
 {
     // Don't interfere with a running akonadiconsole
-    Akonadi::Instance::setIdentifier(QStringLiteral("jobtrackertest"));
+    Akonadi::Instance::setIdentifier(u"jobtrackertest"_s);
 
     qRegisterMetaType<QList<QPair<int, int>>>();
 }
@@ -50,18 +52,18 @@ void JobTrackerTest::shouldDisplayOneJob()
 {
     // GIVEN
     JobTracker tracker("jobtracker");
-    const QString jobName(QStringLiteral("job1"));
+    const QString jobName(u"job1"_s);
     QSignalSpy spyAboutToAdd(&tracker, &JobTracker::aboutToAdd);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
 
     // WHEN
-    tracker.jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
+    tracker.jobCreated(u"session1"_s, jobName, QString(), u"type1"_s, QStringLiteral("debugStr1"));
 
     // THEN
     QCOMPARE(tracker.sessions().count(), 1);
-    QCOMPARE(tracker.sessions().at(0), QStringLiteral("session1"));
-    QCOMPARE(tracker.idForSession(QStringLiteral("session1")), -2);
-    QCOMPARE(tracker.sessionForId(-2), QStringLiteral("session1"));
+    QCOMPARE(tracker.sessions().at(0), u"session1"_s);
+    QCOMPARE(tracker.idForSession(u"session1"_s), -2);
+    QCOMPARE(tracker.sessionForId(-2), u"session1"_s);
     QCOMPARE(tracker.parentId(-2), -1);
     QCOMPARE(tracker.jobCount(-2), 1);
     QCOMPARE(tracker.jobIdAt(0, -2), 42); // job is child of session
@@ -84,8 +86,8 @@ void JobTrackerTest::shouldHandleJobStart()
 {
     // GIVEN
     JobTracker tracker("jobtracker");
-    const QString jobName(QStringLiteral("job1"));
-    tracker.jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
+    const QString jobName(u"job1"_s);
+    tracker.jobCreated(u"session1"_s, jobName, QString(), u"type1"_s, QStringLiteral("debugStr1"));
     tracker.signalUpdates();
     QSignalSpy spyAdded(&tracker, &JobTracker::added);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
@@ -100,32 +102,32 @@ void JobTrackerTest::shouldHandleJobStart()
 
     QCOMPARE(spyAdded.count(), 0);
     QCOMPARE(spyUpdated.count(), 1);
-    QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), QStringLiteral("0,-2"));
+    QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), u"0,-2"_s);
 }
 
 void JobTrackerTest::shouldHandleJobEnd()
 {
     // GIVEN
     JobTracker tracker("jobtracker");
-    const QString jobName(QStringLiteral("job1"));
-    tracker.jobCreated(QStringLiteral("session1"), jobName, QString(), QStringLiteral("type1"), QStringLiteral("debugStr1"));
+    const QString jobName(u"job1"_s);
+    tracker.jobCreated(u"session1"_s, jobName, QString(), u"type1"_s, QStringLiteral("debugStr1"));
     tracker.jobStarted(jobName);
     tracker.signalUpdates();
     QSignalSpy spyAdded(&tracker, &JobTracker::added);
     QSignalSpy spyUpdated(&tracker, &JobTracker::updated);
 
     // WHEN
-    tracker.jobEnded(QStringLiteral("job1"), QStringLiteral("errorString"));
+    tracker.jobEnded(u"job1"_s, u"errorString"_s);
 
     // THEN
     QCOMPARE(tracker.info(42).state, JobInfo::Failed);
-    QCOMPARE(tracker.info(42).error, QStringLiteral("errorString"));
+    QCOMPARE(tracker.info(42).error, u"errorString"_s);
 
     tracker.signalUpdates();
 
     QCOMPARE(spyAdded.count(), 0);
     QCOMPARE(spyUpdated.count(), 1);
-    QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), QStringLiteral("0,-2"));
+    QCOMPARE(intPairListToString(spyUpdated.at(0).at(0)), u"0,-2"_s);
 }
 
 QTEST_GUILESS_MAIN(JobTrackerTest)

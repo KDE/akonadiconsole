@@ -54,7 +54,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent)
 
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("MonitorsWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"MonitorsWidget"_s);
 
     mTreeView->header()->restoreState(config.readEntry<QByteArray>("state", QByteArray()));
     mSubscriberView->header()->restoreState(config.readEntry<QByteArray>("subscriberViewState", QByteArray()));
@@ -62,7 +62,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent)
 
 MonitorsWidget::~MonitorsWidget()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("MonitorsWidget"));
+    KConfigGroup config(KSharedConfig::openConfig(), u"MonitorsWidget"_s);
     config.writeEntry("state", mTreeView->header()->saveState());
     config.writeEntry("subscriberViewState", mSubscriberView->header()->saveState());
 }

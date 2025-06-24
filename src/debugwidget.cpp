@@ -32,11 +32,11 @@ DebugWidget::DebugWidget(QWidget *parent)
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
 
-    QString service = QStringLiteral("org.freedesktop.Akonadi");
+    QString service = u"org.freedesktop.Akonadi"_s;
     if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-        service += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+        service += u'.' + Akonadi::ServerManager::instanceIdentifier();
     }
-    mDebugInterface = new DebugInterface(service, QStringLiteral("/debug"), QDBusConnection::sessionBus(), this);
+    mDebugInterface = new DebugInterface(service, u"/debug"_s, QDBusConnection::sessionBus(), this);
     auto cb = new QCheckBox(i18nc("@option:check", "Enable debugger"), this);
     cb->setChecked(mDebugInterface->isValid() && mDebugInterface->tracer().value() == "dbus"_L1);
     connect(cb, &QCheckBox::toggled, this, &DebugWidget::enableDebugger);
@@ -52,7 +52,7 @@ DebugWidget::DebugWidget(QWidget *parent)
     mGeneralView = new KTextEdit(splitter);
     mGeneralView->setReadOnly(true);
 
-    auto iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
+    auto iface = new org::freedesktop::Akonadi::TracerNotification(QString(), u"/tracing/notifications"_s, QDBusConnection::sessionBus(), this);
 
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::signalEmitted, this, &DebugWidget::signalEmitted);
     connect(iface, &org::freedesktop::Akonadi::TracerNotification::warningEmitted, this, &DebugWidget::warningEmitted);
@@ -84,22 +84,22 @@ DebugWidget::DebugWidget(QWidget *parent)
 
 void DebugWidget::signalEmitted(const QString &signalName, const QString &msg)
 {
-    mGeneralView->append(QStringLiteral("<font color=\"green\">%1 ( %2 )</font>").arg(signalName, msg));
+    mGeneralView->append(u"<font color=\"green\">%1 ( %2 )</font>"_s.arg(signalName, msg));
 }
 
 void DebugWidget::warningEmitted(const QString &componentName, const QString &msg)
 {
-    mGeneralView->append(QStringLiteral("<font color=\"blue\">%1: %2</font>").arg(componentName, msg));
+    mGeneralView->append(u"<font color=\"blue\">%1: %2</font>"_s.arg(componentName, msg));
 }
 
 void DebugWidget::errorEmitted(const QString &componentName, const QString &msg)
 {
-    mGeneralView->append(QStringLiteral("<font color=\"red\">%1: %2</font>").arg(componentName, msg));
+    mGeneralView->append(u"<font color=\"red\">%1: %2</font>"_s.arg(componentName, msg));
 }
 
 void DebugWidget::enableDebugger(bool enable)
 {
-    mDebugInterface->setTracer(enable ? QStringLiteral("dbus") : QStringLiteral("null"));
+    mDebugInterface->setTracer(enable ? u"dbus"_s : u"null"_s);
 }
 
 void DebugWidget::saveRichText()

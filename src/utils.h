@@ -22,7 +22,7 @@ typename std::enable_if<std::is_integral<T>::value, QString>::type toString(T nu
 
 inline QString toString(bool value)
 {
-    return value ? QStringLiteral("true") : QStringLiteral("false");
+    return value ? u"true"_s : u"false"_s;
 }
 
 inline QString toString(const QDateTime &dt)
@@ -44,11 +44,11 @@ inline QString toString(Akonadi::Tristate tristate)
 {
     switch (tristate) {
     case Akonadi::Tristate::True:
-        return QStringLiteral("true");
+        return u"true"_s;
     case Akonadi::Tristate::False:
-        return QStringLiteral("false");
+        return u"false"_s;
     case Akonadi::Tristate::Undefined:
-        return QStringLiteral("undefined");
+        return u"undefined"_s;
     }
     return {};
 }

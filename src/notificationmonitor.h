@@ -7,6 +7,8 @@
 #pragma once
 
 #include <QWidget>
+using namespace Qt::Literals::StringLiterals;
+
 #include <private/protocol_p.h>
 
 class QModelIndex;

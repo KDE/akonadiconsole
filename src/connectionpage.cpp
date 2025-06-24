@@ -7,6 +7,7 @@
 */
 
 #include "connectionpage.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "debugfiltermodel.h"
 #include "debugmodel.h"
@@ -53,7 +54,7 @@ ConnectionPage::ConnectionPage(const QString &identifier, QWidget *parent)
 
     layout->addWidget(mDataView);
 
-    auto iface = new org::freedesktop::Akonadi::TracerNotification(QString(), QStringLiteral("/tracing/notifications"), QDBusConnection::sessionBus(), this);
+    auto iface = new org::freedesktop::Akonadi::TracerNotification(QString(), u"/tracing/notifications"_s, QDBusConnection::sessionBus(), this);
 
     connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataInput, this, &ConnectionPage::connectionDataInput);
     connect(iface, &OrgFreedesktopAkonadiTracerNotificationInterface::connectionDataOutput, this, &ConnectionPage::connectionDataOutput);
@@ -89,8 +90,8 @@ QString ConnectionPage::toHtml(QAbstractItemModel *model) const
         const auto message = model->data(model->index(row, 0), DebugModel::MessageRole).value<DebugModel::Message>();
         const auto &sender = model->data(model->index(row, DebugModel::SenderColumn)).toString();
 
-        ret += (message.direction == DebugModel::ClientToServer ? QStringLiteral("<- ") : QStringLiteral("-> "));
-        ret += sender + QStringLiteral(" ") + message.message + QStringLiteral("\n");
+        ret += (message.direction == DebugModel::ClientToServer ? u"<- "_s : u"-> "_s);
+        ret += sender + u" "_s + message.message + u"\n"_s;
     }
     return ret;
 }

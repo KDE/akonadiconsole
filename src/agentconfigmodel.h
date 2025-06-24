@@ -7,6 +7,7 @@
 #pragma once
 
 #include <Akonadi/AgentInstance>
+using namespace Qt::Literals::StringLiterals;
 
 #include <QAbstractItemModel>
 #include <QList>

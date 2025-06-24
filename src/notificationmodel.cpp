@@ -78,7 +78,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             case ChangeNotification::Subscription:
                 return i18n("Subscription");
             }
-            return QStringLiteral("Unknown");
+            return u"Unknown"_s;
         case OperationColumn:
             switch (msg.type()) {
             case ChangeNotification::Items:

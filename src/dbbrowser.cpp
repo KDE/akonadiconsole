@@ -5,6 +5,8 @@
 */
 
 #include "dbbrowser.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/DbAccess>
 
 #include <QSqlTableModel>
@@ -25,7 +27,7 @@ DbBrowser::DbBrowser(QWidget *parent)
         ui.tableBox->addItems(QStringList() << userTables << systemTables);
     }
 
-    ui.refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
+    ui.refreshButton->setIcon(QIcon::fromTheme(u"view-refresh"_s));
     connect(ui.refreshButton, &QPushButton::clicked, this, &DbBrowser::refreshClicked);
     connect(ui.tableBox, &KComboBox::currentTextChanged, this, &DbBrowser::refreshClicked);
 }
