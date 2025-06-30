@@ -1,15 +1,15 @@
 # Spanish translations for akonadiconsole.po package.
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2025 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
-#
 # Automatically generated, 2023.
+#
 # SPDX-FileCopyrightText: 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-19 14:18+0100\n"
+"PO-Revision-Date: 2025-06-29 13:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -60,12 +60,12 @@ msgstr "Configurar"
 #: agentwidget.cpp:96
 #, kde-format
 msgid "Configure Natively..."
-msgstr "Configurar de forma nativa..."
+msgstr "Configurar de forma nativa…"
 
 #: agentwidget.cpp:97
 #, kde-format
 msgid "Configure Remotely..."
-msgstr "Configurar de forma remota..."
+msgstr "Configurar de forma remota…"
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
 #: agentwidget.cpp:103 agentwidget.ui:240
@@ -162,7 +162,7 @@ msgstr "%1, %2"
 #: agentwidget.cpp:447
 #, kde-format
 msgid "Add Agent..."
-msgstr "Añadir agente..."
+msgstr "Añadir agente…"
 
 #: agentwidget.cpp:448
 #, kde-format
@@ -247,7 +247,7 @@ msgstr "Tipos MIME:"
 #: agentwidget.ui:212
 #, kde-format
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
@@ -262,7 +262,7 @@ msgstr "Eliminar"
 #: agentwidget.ui:226
 #, kde-format
 msgid "Configure..."
-msgstr "Configurar..."
+msgstr "Configurar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:233
@@ -360,22 +360,22 @@ msgstr "Seleccionar archivo XML"
 #: browserwidget.cpp:547
 #, kde-format
 msgid "&Add tag..."
-msgstr "&Añadir etiqueta..."
+msgstr "&Añadir etiqueta…"
 
 #: browserwidget.cpp:551
 #, kde-format
 msgid "Add &subtag..."
-msgstr "Añadir &subetiqueta..."
+msgstr "Añadir &subetiqueta…"
 
 #: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
-msgstr "&Editar etiqueta..."
+msgstr "&Editar etiqueta…"
 
 #: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
-msgstr "&Borrar etiqueta..."
+msgstr "&Borrar etiqueta…"
 
 #: browserwidget.cpp:568
 #, kde-format
@@ -738,13 +738,13 @@ msgstr "Borrar todos los mensajes"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Filtered Messages ..."
-msgstr "Guardar los mensajes filtrados..."
+msgstr "Guardar los mensajes filtrados…"
 
 #: debugwidget.cpp:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Save All Messages ..."
-msgstr "Guardar todos los mensajes..."
+msgstr "Guardar todos los mensajes…"
 
 #: instanceselector.cpp:46
 #, kde-format
@@ -844,7 +844,7 @@ msgstr "Mostrar solo errores"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: jobtrackersearchwidget.cpp:38
 #, kde-format
@@ -855,7 +855,7 @@ msgstr "Todas las columnas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save to file..."
-msgstr "Guardar en archivo..."
+msgstr "Guardar en archivo…"
 
 #: jobtrackerwidget.cpp:105 notificationmonitor.cpp:118
 #, kde-format
@@ -919,12 +919,12 @@ msgstr "Categorías:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
-msgstr "Guardar en archivo..."
+msgstr "Guardar en archivo…"
 
 #: logging.cpp:131
 #, kde-format
 msgid "Save to File..."
-msgstr "Guardar en archivo..."
+msgstr "Guardar en archivo…"
 
 #: logging.cpp:138 querydebugger.cpp:365 searchwidget.cpp:160
 #, kde-format
@@ -1065,7 +1065,7 @@ msgstr "Monitores"
 #: mainwidget.cpp:66
 #, kde-format
 msgid "Dump to XML..."
-msgstr "Volcar a XML..."
+msgstr "Volcar a XML…"
 
 #: mainwidget.cpp:70
 #, kde-format
