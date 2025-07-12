@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:43+0000\n"
-"PO-Revision-Date: 2025-02-04 22:14+0200\n"
+"PO-Revision-Date: 2025-07-11 09:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -180,7 +180,7 @@ msgstr "Käynnistä agentti uudelleen"
 #: agentwidget.cpp:456
 #, kde-format
 msgid "Toggle Online/Offline"
-msgstr ""
+msgstr "Vaihda toiminnassa / ei toiminnassa"
 
 #: agentwidget.cpp:457
 #, kde-format
@@ -1150,12 +1150,12 @@ msgstr "Sisällön MIME-tyypit"
 #: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:539
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "Edeltäjän nouto"
 
 #: monitorswidget.cpp:107
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "Edeltäjän noudon ala"
 
 #: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:526
 #: notificationmonitor.cpp:547
@@ -1414,7 +1414,7 @@ msgstr "Kohderesurssi"
 #: notificationmonitor.cpp:198
 #, kde-format
 msgid "Item Parts"
-msgstr ""
+msgstr "Kohteen osat"
 
 #: notificationmonitor.cpp:199
 #, kde-format
@@ -1460,7 +1460,7 @@ msgstr "nimi"
 #: notificationmonitor.cpp:331
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Edeltäjä"
 
 #: notificationmonitor.cpp:243 notificationmonitor.cpp:317
 #, kde-format
@@ -1657,7 +1657,7 @@ msgstr "Virtuaalinen"
 #: notificationmonitor.cpp:384
 #, kde-format
 msgid "Parent Dest Collection"
-msgstr ""
+msgstr "Emokohdekokoelma"
 
 #: notificationmonitor.cpp:386
 #, kde-format
@@ -1732,27 +1732,27 @@ msgstr "Pyydetyt osat"
 #: notificationmonitor.cpp:472
 #, kde-format
 msgid "Changed Since"
-msgstr ""
+msgstr "Muuttunut jälkeen"
 
 #: notificationmonitor.cpp:476
 #, kde-format
 msgid "No Ancestor"
-msgstr ""
+msgstr "Ei edeltäjää"
 
 #: notificationmonitor.cpp:479
 #, kde-format
 msgid "Parent  Ancestor"
-msgstr ""
+msgstr "Välitön edeltäjä"
 
 #: notificationmonitor.cpp:482
 #, kde-format
 msgid "All Ancestors"
-msgstr ""
+msgstr "Kaikki edeltäjät"
 
 #: notificationmonitor.cpp:485
 #, kde-format
 msgid "Ancestor Depth"
-msgstr ""
+msgstr "Edeltäjäsyvyys"
 
 #: notificationmonitor.cpp:486
 #, kde-format
@@ -1837,12 +1837,12 @@ msgstr "Ei mitään"
 #: notificationmonitor.cpp:540
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "Nouda vain edeltäjän tunniste"
 
 #: notificationmonitor.cpp:541
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "Edeltäjän määritteet"
 
 #: notificationmonitor.cpp:549
 #, kde-format
@@ -2024,7 +2024,7 @@ msgstr "Perusasetukset"
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "Edeltäjän luokituksen tunniste"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
