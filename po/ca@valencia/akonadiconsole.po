@@ -356,7 +356,7 @@ msgstr "No s'han pogut guardar els canvis: %1"
 #: browserwidget.cpp:509
 #, kde-format
 msgid "Select XML file"
-msgstr "Seleccioneu un fitxer en XML"
+msgstr "Trieu un fitxer en XML"
 
 #: browserwidget.cpp:547
 #, kde-format
@@ -772,7 +772,7 @@ msgid ""
 "session. Please select the instance you want to connect to."
 msgstr ""
 "Hi ha múltiples instàncies d'Akonadi executant-se a la sessió actual de D-"
-"Bus. Seleccioneu la instància amb la qual voleu connectar."
+"Bus. Trieu la instància amb la qual voleu connectar."
 
 #: jobtracker.cpp:28
 #, kde-format
