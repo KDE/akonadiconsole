@@ -13,7 +13,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 
-#include <KCalendarCore/Event>
 #include <KCalendarCore/Incidence>
 
 using IncidencePtr = QSharedPointer<KCalendarCore::Incidence>;
