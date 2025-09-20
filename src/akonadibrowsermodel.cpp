@@ -86,7 +86,7 @@ public:
         if (!item.hasPayload<KMime::Message::Ptr>()) {
             return {};
         }
-        const auto mail = item.payload<KMime::Message::Ptr>();
+        const auto mail = item.payload<QSharedPointer<const KMime::Message>>();
 
         // NOTE: remember to update AkonadiBrowserSortModel::lessThan if you insert/move columns
         switch (column) {
@@ -357,10 +357,10 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
             if (!leftItem.hasPayload<KMime::Message::Ptr>() || !rightItem.hasPayload<KMime::Message::Ptr>()) {
                 return false;
             }
-            const auto leftMail = leftItem.payload<KMime::Message::Ptr>();
-            const auto rightMail = rightItem.payload<KMime::Message::Ptr>();
-            const KMime::Headers::Date *ldate = leftMail->date(false);
-            const KMime::Headers::Date *rdate = rightMail->date(false);
+            const auto leftMail = leftItem.payload<QSharedPointer<const KMime::Message>>();
+            const auto rightMail = rightItem.payload<QSharedPointer<const KMime::Message>>();
+            const KMime::Headers::Date *ldate = leftMail->date();
+            const KMime::Headers::Date *rdate = rightMail->date();
             if (ldate && rdate) {
                 return ldate->dateTime() < rdate->dateTime();
             } else {
