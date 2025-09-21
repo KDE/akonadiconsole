@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2025-01-04 15:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -276,23 +276,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:387
 #, kde-format
 msgid "Collection"
 msgstr "Colección"
 
-#: akonadibrowsermodel.cpp:76
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "Asunto"
 
-#: akonadibrowsermodel.cpp:76 debugmodel.cpp:143
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:143
 #, kde-format
 msgid "Sender"
 msgstr "Remitente"
 
-#: akonadibrowsermodel.cpp:76 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Data"

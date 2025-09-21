@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2025-09-17 19:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
@@ -280,23 +280,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "أعد التشغيل"
 
-#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:387
 #, kde-format
 msgid "Collection"
 msgstr "التجميعة"
 
-#: akonadibrowsermodel.cpp:76
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "الموضوع"
 
-#: akonadibrowsermodel.cpp:76 debugmodel.cpp:143
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:143
 #, kde-format
 msgid "Sender"
 msgstr "المرسل"
 
-#: akonadibrowsermodel.cpp:76 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "التاريخ"

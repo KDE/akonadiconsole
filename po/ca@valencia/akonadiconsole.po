@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2025-01-03 10:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -278,23 +278,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "Reinicia"
 
-#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:387
 #, kde-format
 msgid "Collection"
 msgstr "Col·lecció"
 
-#: akonadibrowsermodel.cpp:76
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "Assumpte"
 
-#: akonadibrowsermodel.cpp:76 debugmodel.cpp:143
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:143
 #, kde-format
 msgid "Sender"
 msgstr "Remitent"
 
-#: akonadibrowsermodel.cpp:76 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "Data"

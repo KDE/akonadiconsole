@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2025-04-06 21:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -274,23 +274,23 @@ msgctxt "restart the agent"
 msgid "Restart"
 msgstr "다시 시작"
 
-#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:75
+#: akonadibrowsermodel.cpp:74 notificationmodel.cpp:75
 #: notificationmonitor.cpp:387
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
 
-#: akonadibrowsermodel.cpp:76
+#: akonadibrowsermodel.cpp:75
 #, kde-format
 msgid "Subject"
 msgstr "제목"
 
-#: akonadibrowsermodel.cpp:76 debugmodel.cpp:143
+#: akonadibrowsermodel.cpp:75 debugmodel.cpp:143
 #, kde-format
 msgid "Sender"
 msgstr "보낸 사람"
 
-#: akonadibrowsermodel.cpp:76 notificationmodel.cpp:192
+#: akonadibrowsermodel.cpp:75 notificationmodel.cpp:192
 #, kde-format
 msgid "Date"
 msgstr "날짜"
