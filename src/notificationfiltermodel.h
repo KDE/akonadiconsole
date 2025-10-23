@@ -38,6 +38,7 @@ protected:
 
 private:
     void slotRowsInserted(const QModelIndex &source_parent, int start, int end);
+    void slotInvalidateFilter();
 
     KPIM::KCheckComboBox *mTypeFilter = nullptr;
     QSet<Akonadi::ChangeNotification::Type> mCheckedTypes;

@@ -23,10 +23,20 @@ NotificationFilterModel::NotificationFilterModel(QObject *parent)
 {
     mInvalidateTimer.setInterval(50ms);
     mInvalidateTimer.setSingleShot(true);
-    connect(&mInvalidateTimer, &QTimer::timeout, this, &NotificationFilterModel::invalidateFilter);
+    connect(&mInvalidateTimer, &QTimer::timeout, this, &NotificationFilterModel::slotInvalidateFilter);
 }
 
 NotificationFilterModel::~NotificationFilterModel() = default;
+
+void NotificationFilterModel::slotInvalidateFilter()
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
+    invalidateFilter();
+#endif
+}
 
 void NotificationFilterModel::setTypeFilter(KPIM::KCheckComboBox *typeFilter)
 {

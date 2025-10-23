@@ -62,16 +62,30 @@ bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
 void JobTrackerFilterProxyModel::setShowOnlyFailed(bool showOnlyFailed)
 {
     if (mShowOnlyFailed != showOnlyFailed) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         mShowOnlyFailed = showOnlyFailed;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
 void JobTrackerFilterProxyModel::setSearchColumn(int column)
 {
     if (mSearchColumn != column) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         mSearchColumn = column;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
