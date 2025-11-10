@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "KDE 中国,  ShiroAzusa"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-china@kde.org, azusa@shiroazusa.net"
 
 #: agentconfigdialog.cpp:33
 #, kde-format
@@ -378,19 +378,19 @@ msgstr "删除标签(&D)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tag"
-msgstr ""
+msgstr "添加标签"
 
 #: browserwidget.cpp:580
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Subtag"
-msgstr ""
+msgstr "添加子标签"
 
 #: browserwidget.cpp:589 browserwidget.cpp:606
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Tag"
-msgstr ""
+msgstr "修改标签"
 
 #: browserwidget.cpp:615
 #, kde-format
@@ -481,7 +481,7 @@ msgstr "唯一标识："
 #: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
 #, kde-format
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: browserwidget_contentview.ui:202
@@ -1145,12 +1145,12 @@ msgstr "内容 MIME 类型"
 #: monitorswidget.cpp:103 monitorswidget.cpp:156 notificationmonitor.cpp:539
 #, kde-format
 msgid "Ancestor Retrieval"
-msgstr ""
+msgstr "祖先节点检索"
 
 #: monitorswidget.cpp:107
 #, kde-format
 msgid "Ancestor Fetch Scope"
-msgstr ""
+msgstr "祖先获取范围"
 
 #: monitorswidget.cpp:113 monitorswidget.cpp:120 notificationmonitor.cpp:526
 #: notificationmonitor.cpp:547
@@ -1161,7 +1161,7 @@ msgstr "仅获取ID"
 #: monitorswidget.cpp:114
 #, kde-format
 msgid "Ignore Retrieval Error"
-msgstr ""
+msgstr "忽略检索错误"
 
 #: monitorswidget.cpp:128 notificationmonitor.cpp:134 searchwidget.cpp:205
 #, kde-format
@@ -1414,17 +1414,17 @@ msgstr "项目部分"
 #: notificationmonitor.cpp:199
 #, kde-format
 msgid "Added Flags"
-msgstr ""
+msgstr "已添加标记"
 
 #: notificationmonitor.cpp:200
 #, kde-format
 msgid "Removed Flags"
-msgstr ""
+msgstr "已移除标记"
 
 #: notificationmonitor.cpp:207
 #, kde-format
 msgid "Added Tags"
-msgstr ""
+msgstr "已添加标签"
 
 #: notificationmonitor.cpp:215
 #, kde-format
@@ -1434,190 +1434,190 @@ msgstr ""
 #: notificationmonitor.cpp:218
 #, kde-format
 msgid "Must retrieve"
-msgstr ""
+msgstr "必须获取"
 
 #: notificationmonitor.cpp:232
 #, kde-format
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: notificationmonitor.cpp:233
 #, kde-format
 msgid "remoteId"
-msgstr ""
+msgstr "remoteId"
 
 #: notificationmonitor.cpp:234
 #, kde-format
 msgid "name"
-msgstr ""
+msgstr "name"
 
 #: notificationmonitor.cpp:236 notificationmonitor.cpp:283
 #: notificationmonitor.cpp:331
 #, kde-format
 msgid "Ancestor"
-msgstr ""
+msgstr "Ancestor"
 
 #: notificationmonitor.cpp:243 notificationmonitor.cpp:317
 #, kde-format
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: notificationmonitor.cpp:244 notificationmonitor.cpp:318
 #, kde-format
 msgid "Parent ID"
-msgstr ""
+msgstr "Parent ID"
 
 #: notificationmonitor.cpp:245 notificationmonitor.cpp:266
 #, kde-format
 msgid "GID"
-msgstr ""
+msgstr "GID"
 
 #: notificationmonitor.cpp:247 notificationmonitor.cpp:321
 #: tagpropertiesdialog.cpp:80
 #, kde-format
 msgid "Remote ID"
-msgstr ""
+msgstr "Remote ID"
 
 #: notificationmonitor.cpp:262
 #, kde-format
 msgid "Revision"
-msgstr ""
+msgstr "修订版本"
 
 #: notificationmonitor.cpp:263
 #, kde-format
 msgid "ParentID"
-msgstr ""
+msgstr "ParentID"
 
 #: notificationmonitor.cpp:264
 #, kde-format
 msgid "RemoteID"
-msgstr ""
+msgstr "RemoteID"
 
 #: notificationmonitor.cpp:265
 #, kde-format
 msgid "RemoteRev"
-msgstr ""
+msgstr "RemoteRev"
 
 #: notificationmonitor.cpp:267 notificationmonitor.cpp:305
 #: notificationmonitor.cpp:327
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 #: notificationmonitor.cpp:268
 #, kde-format
 msgid "MimeType"
-msgstr ""
+msgstr "MIME 类型"
 
 #: notificationmonitor.cpp:269
 #, kde-format
 msgid "MTime"
-msgstr ""
+msgstr "MTime"
 
 #: notificationmonitor.cpp:280
 #, kde-format
 msgid "VRefs"
-msgstr ""
+msgstr "VRefs"
 
 #: notificationmonitor.cpp:289
 #, kde-format
 msgid "Parts"
-msgstr ""
+msgstr "Parts"
 
 #: notificationmonitor.cpp:296
 #, kde-format
 msgid "External"
-msgstr ""
+msgstr "外部"
 
 #: notificationmonitor.cpp:299
 #, kde-format
 msgid "Internal"
-msgstr ""
+msgstr "内部"
 
 #: notificationmonitor.cpp:302
 #, kde-format
 msgid "Foreign"
-msgstr ""
+msgstr "Foreign"
 
 #: notificationmonitor.cpp:306
 #, kde-format
 msgid "Storage Type"
-msgstr ""
+msgstr "存储类型"
 
 #: notificationmonitor.cpp:307
 #, kde-format
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 #: notificationmonitor.cpp:308
 #, kde-format
 msgid "Data"
-msgstr ""
+msgstr "数据"
 
 #: notificationmonitor.cpp:319
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: notificationmonitor.cpp:320
 #, kde-format
 msgid "Mime Types"
-msgstr ""
+msgstr "MIME 类型"
 
 #: notificationmonitor.cpp:322
 #, kde-format
 msgid "Remote Revision"
-msgstr ""
+msgstr "远程修订版本"
 
 #: notificationmonitor.cpp:323
 #, kde-format
 msgid "Statistics"
-msgstr ""
+msgstr "统计"
 
 #: notificationmonitor.cpp:325
 #, kde-format
 msgid "Count"
-msgstr ""
+msgstr "数量"
 
 #: notificationmonitor.cpp:326
 #, kde-format
 msgid "Unseen"
-msgstr ""
+msgstr "未读"
 
 #: notificationmonitor.cpp:329
 #, kde-format
 msgid "Search Query"
-msgstr ""
+msgstr "搜索查询"
 
 #: notificationmonitor.cpp:330
 #, kde-format
 msgid "Search Collections"
-msgstr ""
+msgstr "搜索集合"
 
 #: notificationmonitor.cpp:337
 #, kde-format
 msgid "Cache Policy"
-msgstr ""
+msgstr "缓存策略"
 
 #: notificationmonitor.cpp:339
 #, kde-format
 msgid "Inherit"
-msgstr ""
+msgstr "继承"
 
 #: notificationmonitor.cpp:340
 #, kde-format
 msgid "Check Interval"
-msgstr ""
+msgstr "检查间隔"
 
 #: notificationmonitor.cpp:341
 #, kde-format
 msgid "Cache Timeout"
-msgstr ""
+msgstr "缓存超时"
 
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Sync on Demand"
-msgstr ""
+msgstr "需求时同步"
 
 #: notificationmonitor.cpp:343
 #, kde-format
@@ -1832,106 +1832,106 @@ msgstr "空"
 #: notificationmonitor.cpp:540
 #, kde-format
 msgid "Ancestor Fetch ID Only"
-msgstr ""
+msgstr "仅获取祖先 ID"
 
 #: notificationmonitor.cpp:541
 #, kde-format
 msgid "Ancestor Attributes"
-msgstr ""
+msgstr "祖先属性"
 
 #: notificationmonitor.cpp:549
 #, kde-format
 msgid "Fetch All Attributes"
-msgstr ""
+msgstr "获取所有属性"
 
 #: querydebugger.cpp:357
 #, kde-format
 msgid "Name / Query"
-msgstr ""
+msgstr "名称/查询"
 
 #: querydebugger.cpp:359
 #, kde-format
 msgid "Started"
-msgstr ""
+msgstr "已开始"
 
 #: querydebugger.cpp:363
 #, kde-format
 msgid "Duration"
-msgstr ""
+msgstr "时长"
 
 #: querydebugger.cpp:550
 #, kde-format
 msgid "Query"
-msgstr ""
+msgstr "查询"
 
 #: querydebugger.cpp:552
 #, kde-format
 msgid "Duration [ms]"
-msgstr ""
+msgstr "持续时间 [ms]"
 
 #: querydebugger.cpp:554
 #, kde-format
 msgid "Calls"
-msgstr ""
+msgstr "调用"
 
 #: querydebugger.cpp:556
 #, kde-format
 msgid "Avg. Duration [ms]"
-msgstr ""
+msgstr "平均持续时间 [ms]"
 
 #: querydebugger.cpp:678
 #, kde-format
 msgid "Affected Rows:"
-msgstr ""
+msgstr "受影响的行："
 
 #. i18n: ectx: property (text), widget (QCheckBox, enableDebuggingChkBox)
 #: querydebugger.ui:17
 #, kde-format
 msgid "Enable query debugging (slows down server!)"
-msgstr ""
+msgstr "启用查询调试（会降低服务器速度！）"
 
 #. i18n: ectx: attribute (title), widget (QWidget, querySequenceTab)
 #: querydebugger.ui:28
 #, kde-format
 msgid "Query Sequence"
-msgstr ""
+msgstr "查询序列"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTreeTab)
 #: querydebugger.ui:48
 #, kde-format
 msgid "Query Tree"
-msgstr ""
+msgstr "查询树"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveToFileBtn)
 #: querydebugger.ui:72
 #, kde-format
 msgid "Save To File"
-msgstr ""
+msgstr "保存到文件"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, QueryViewDialog)
 #: queryviewdialog.ui:14
 #, kde-format
 msgid "Query View"
-msgstr ""
+msgstr "查询视图"
 
 #. i18n: ectx: property (text), widget (QLabel, queryLabelLbl)
 #: queryviewdialog.ui:28
 #, kde-format
 msgid "Query:"
-msgstr ""
+msgstr "查询："
 
 #. i18n: ectx: property (text), widget (QLabel, queryLbl)
 #. i18n: ectx: property (text), widget (QLabel, resultsLbl)
 #: queryviewdialog.ui:41 queryviewdialog.ui:67
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "文本标签"
 
 #. i18n: ectx: property (text), widget (QLabel, resultsLabelLbl)
 #: queryviewdialog.ui:60
 #, kde-format
 msgid "Results:"
-msgstr ""
+msgstr "结果："
 
 #: searchwidget.cpp:50
 #, kde-format
@@ -1949,35 +1949,35 @@ msgstr "搜索"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search query:"
-msgstr ""
+msgstr "搜索队列："
 
 #: searchwidget.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Results (Documents):"
-msgstr ""
+msgstr "结果(文件)："
 
 #: searchwidget.cpp:82
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Document:"
-msgstr ""
+msgstr "文件："
 
 #: searchwidget.cpp:92
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Item:"
-msgstr ""
+msgstr "项目："
 
 #: searchwidget.cpp:154
 #, kde-format
 msgid "Xapian error"
-msgstr ""
+msgstr "Xapian 错误"
 
 #: searchwidget.cpp:160
 #, kde-format
 msgid "No Xapian database is opened"
-msgstr ""
+msgstr "未打开Xapian数据库"
 
 #: searchwidget.cpp:171
 #, kde-format
@@ -1987,49 +1987,49 @@ msgstr "搜索"
 #: searchwidget.cpp:171
 #, kde-format
 msgid "No element found."
-msgstr ""
+msgstr "未找到元素"
 
 #: searchwidget.cpp:197
 #, kde-format
 msgid "Term/Value"
-msgstr ""
+msgstr "Term/值"
 
 #: searchwidget.cpp:197
 #, kde-format
 msgid "WDF/Slot"
-msgstr ""
+msgstr "WDF/槽位"
 
 #: searchwidget.cpp:199
 #, kde-format
 msgid "Terms"
-msgstr ""
+msgstr "Terms"
 
 #: searchwidget.cpp:226
 #, kde-format
 msgid "Error on fetching item"
-msgstr ""
+msgstr "获取项目时出现错误"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "通用"
 
 #. i18n: ectx: property (text), widget (QLabel, parentIdLabelBuddy)
 #: tagpropertiesdialog.ui:51
 #, kde-format
 msgid "Parent Tag Id:"
-msgstr ""
+msgstr "父标签ID："
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteAttrButton)
 #. i18n: ectx: property (text), widget (QPushButton, deleteRIDButton)
 #: tagpropertiesdialog.ui:96 tagpropertiesdialog.ui:116
 #, kde-format
 msgid "&Remove"
-msgstr ""
+msgstr "移除(&R)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, remoteIDsTab)
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr ""
+msgstr "远程标识符"
