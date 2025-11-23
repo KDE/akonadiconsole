@@ -1429,7 +1429,7 @@ msgstr "已添加标签"
 #: notificationmonitor.cpp:215
 #, kde-format
 msgid "Removed Tags"
-msgstr ""
+msgstr "移除的标签"
 
 #: notificationmonitor.cpp:218
 #, kde-format
