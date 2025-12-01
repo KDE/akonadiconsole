@@ -2042,36 +2042,3 @@ msgstr "&Elimina"
 #, kde-format
 msgid "Remote Identifiers"
 msgstr "Identificadors del remot"
-
-#~ msgid "Synchronize Relations"
-#~ msgstr "Sincronitza les relacions"
-
-#~ msgid "Relations"
-#~ msgstr "Relacions"
-
-#~ msgid "Relation"
-#~ msgstr "Relació"
-
-#~ msgid "ModifyRelations"
-#~ msgstr "ModifyRelations"
-
-#~ msgid "Removed Relations"
-#~ msgstr "Relacions eliminades"
-
-#~ msgid "Left ID"
-#~ msgstr "ID de l'esquerra"
-
-#~ msgid "Left MimeType"
-#~ msgstr "Tipus MIME de l'esquerra"
-
-#~ msgid "Right ID"
-#~ msgstr "ID de la dreta"
-
-#~ msgid "Right MimeType"
-#~ msgstr "Tipus MIME de la dreta"
-
-#~ msgid "Fetch Relations"
-#~ msgstr "Recupera les relacions"
-
-#~ msgid "Full Paryload"
-#~ msgstr "Contingut complet"
