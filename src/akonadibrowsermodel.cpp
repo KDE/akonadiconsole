@@ -83,7 +83,7 @@ public:
             return {};
         }
 
-        if (!item.hasPayload<KMime::Message::Ptr>()) {
+        if (!item.hasPayload<std::shared_ptr<KMime::Message>>()) {
             return {};
         }
         const auto mail = item.payload<std::shared_ptr<const KMime::Message>>();
@@ -354,7 +354,7 @@ bool AkonadiBrowserSortModel::lessThan(const QModelIndex &left, const QModelInde
         if (left.column() == 2) {
             const Item leftItem = left.data(EntityTreeModel::ItemRole).value<Item>();
             const Item rightItem = right.data(EntityTreeModel::ItemRole).value<Item>();
-            if (!leftItem.hasPayload<KMime::Message::Ptr>() || !rightItem.hasPayload<KMime::Message::Ptr>()) {
+            if (!leftItem.hasPayload<std::shared_ptr<KMime::Message>>() || !rightItem.hasPayload<std::shared_ptr<KMime::Message>>()) {
                 return false;
             }
             const auto leftMail = leftItem.payload<std::shared_ptr<const KMime::Message>>();
