@@ -351,7 +351,7 @@ msgstr "Recuperació de només la memòria cau"
 #: browserwidget.cpp:470
 #, kde-format
 msgid "Failed to save changes: %1"
-msgstr "No s'han pogut guardar els canvis: %1"
+msgstr "Ha fallat mentre es guardaven els canvis: %1"
 
 #: browserwidget.cpp:509
 #, kde-format
@@ -935,7 +935,7 @@ msgstr "S'ha produït un error"
 #: logging.cpp:138 notificationmonitor.cpp:563
 #, kde-format
 msgid "Failed to open file: %1"
-msgstr "No s'ha pogut obrir el fitxer: %1"
+msgstr "Ha fallat mentre s'obria el fitxer: %1"
 
 #: loggingmodel.cpp:105
 #, kde-format
@@ -2016,7 +2016,7 @@ msgstr "Termes"
 #: searchwidget.cpp:226
 #, kde-format
 msgid "Error on fetching item"
-msgstr "S'ha produït un error en recuperar un element"
+msgstr "S'ha produït un error mentre es recuperava un element"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: tagpropertiesdialog.ui:21
