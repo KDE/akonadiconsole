@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadiconsole package.
 #
-# SPDX-FileCopyrightText: 2023, 2024, 2025 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-01-08 15:58+0100\n"
+"PO-Revision-Date: 2026-02-06 17:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -613,9 +613,9 @@ msgid ""
 "not intended to be changed by you, so be warned if something breaks when "
 "changing them nevertheless!"
 msgstr ""
-"<b>Nota:</b>Iste valores es fornite per le retro-admiistration corrspondente "
-"e non es intendite per esser cambiate per te, assi que tu es avisate si "
-"alcun cosa se rumpe quando los cambia nonobstante!"
+"<b>Nota:</b>Iste valores es fornite per le retro-administration "
+"correspondente e non es intendite per esser cambiate per te, assi que tu es "
+"avisate si alcun cosa se rumpe quando los cambia nonobstante!"
 
 #: collectionattributespage.cpp:39 tagpropertiesdialog.cpp:73
 #, kde-format
