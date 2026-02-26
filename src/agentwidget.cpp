@@ -432,12 +432,14 @@ void AgentWidget::currentChanged()
         ui.statusMessageLabel->setText(instance.statusMessage());
         ui.capabilitiesLabel->setText(instance.type().capabilities().join(", "_L1));
         ui.mimeTypeLabel->setText(instance.type().mimeTypes().join(", "_L1));
+        ui.accountIdLabel->setText(instance.accountId());
     } else {
         ui.identifierLabel->setText(QString());
         ui.typeLabel->setText(QString());
         ui.statusLabel->setText(QString());
         ui.capabilitiesLabel->setText(QString());
         ui.mimeTypeLabel->setText(QString());
+        ui.accountIdLabel->setText(QString());
     }
 }
 
