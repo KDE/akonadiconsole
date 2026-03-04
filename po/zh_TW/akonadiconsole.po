@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-04 00:45+0000\n"
 "PO-Revision-Date: 2025-01-08 17:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -66,7 +66,7 @@ msgid "Configure Remotely..."
 msgstr "設定遠端..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
-#: agentwidget.cpp:103 agentwidget.ui:240
+#: agentwidget.cpp:103 agentwidget.ui:266
 #, kde-format
 msgid "Synchronize"
 msgstr "同步"
@@ -156,42 +156,42 @@ msgctxt ""
 msgid "%1, %2"
 msgstr "%1，%2"
 
-#: agentwidget.cpp:447
+#: agentwidget.cpp:449
 #, kde-format
 msgid "Add Agent..."
 msgstr "新增代理程式..."
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:450
 #, kde-format
 msgid "Clone Agent"
 msgstr "建立代理程式複本"
 
-#: agentwidget.cpp:451
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Abort Activity"
 msgstr "中止活動"
 
-#: agentwidget.cpp:453
+#: agentwidget.cpp:455
 #, kde-format
 msgid "Restart Agent"
 msgstr "重新啟動代理程式"
 
-#: agentwidget.cpp:456
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "切換上線/離線"
 
-#: agentwidget.cpp:457
+#: agentwidget.cpp:459
 #, kde-format
 msgid "Show task list"
 msgstr "顯示工作列表"
 
-#: agentwidget.cpp:458
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Show change-notification log"
 msgstr "顯示變更通知紀錄"
 
-#: agentwidget.cpp:460
+#: agentwidget.cpp:462
 #, kde-format
 msgid "Remove Agent"
 msgstr "移除代理程式"
@@ -240,14 +240,20 @@ msgstr "功能："
 msgid "Mimetypes:"
 msgstr "MIME 類型："
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: agentwidget.ui:196
+#, kde-format
+msgid "Account ID:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: agentwidget.ui:212
+#: agentwidget.ui:238
 #, kde-format
 msgid "Add..."
 msgstr "新增..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
+#: agentwidget.ui:245 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
 #: notificationmonitor.cpp:174 notificationmonitor.cpp:369
 #: notificationmonitor.cpp:403 notificationmonitor.cpp:427
@@ -256,19 +262,19 @@ msgid "Remove"
 msgstr "移除"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
-#: agentwidget.ui:226
+#: agentwidget.ui:252
 #, kde-format
 msgid "Configure..."
 msgstr "設定..."
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
-#: agentwidget.ui:233
+#: agentwidget.ui:259
 #, kde-format
 msgid "Abort"
 msgstr "中止"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
-#: agentwidget.ui:247
+#: agentwidget.ui:273
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"

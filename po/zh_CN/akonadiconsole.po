@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-04 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -66,7 +66,7 @@ msgid "Configure Remotely..."
 msgstr "远程配置"
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
-#: agentwidget.cpp:103 agentwidget.ui:240
+#: agentwidget.cpp:103 agentwidget.ui:266
 #, kde-format
 msgid "Synchronize"
 msgstr "同步"
@@ -156,42 +156,42 @@ msgctxt ""
 msgid "%1, %2"
 msgstr "%1，%2"
 
-#: agentwidget.cpp:447
+#: agentwidget.cpp:449
 #, kde-format
 msgid "Add Agent..."
 msgstr "添加代理"
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:450
 #, kde-format
 msgid "Clone Agent"
 msgstr "克隆代理"
 
-#: agentwidget.cpp:451
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Abort Activity"
 msgstr "中止活动"
 
-#: agentwidget.cpp:453
+#: agentwidget.cpp:455
 #, kde-format
 msgid "Restart Agent"
 msgstr "重新启动代理"
 
-#: agentwidget.cpp:456
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "在线、离线切换"
 
-#: agentwidget.cpp:457
+#: agentwidget.cpp:459
 #, kde-format
 msgid "Show task list"
 msgstr "显示任务列表"
 
-#: agentwidget.cpp:458
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Show change-notification log"
 msgstr "显示更改通知日志"
 
-#: agentwidget.cpp:460
+#: agentwidget.cpp:462
 #, kde-format
 msgid "Remove Agent"
 msgstr "移除代理"
@@ -240,14 +240,20 @@ msgstr "功能："
 msgid "Mimetypes:"
 msgstr "MIME 类型："
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: agentwidget.ui:196
+#, kde-format
+msgid "Account ID:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: agentwidget.ui:212
+#: agentwidget.ui:238
 #, kde-format
 msgid "Add..."
 msgstr "添加"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
+#: agentwidget.ui:245 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
 #: notificationmonitor.cpp:174 notificationmonitor.cpp:369
 #: notificationmonitor.cpp:403 notificationmonitor.cpp:427
@@ -256,19 +262,19 @@ msgid "Remove"
 msgstr "移除"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
-#: agentwidget.ui:226
+#: agentwidget.ui:252
 #, kde-format
 msgid "Configure..."
 msgstr "配置"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
-#: agentwidget.ui:233
+#: agentwidget.ui:259
 #, kde-format
 msgid "Abort"
 msgstr "中止"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
-#: agentwidget.ui:247
+#: agentwidget.ui:273
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"

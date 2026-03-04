@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-04 00:45+0000\n"
 "PO-Revision-Date: 2025-12-23 11:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -66,7 +66,7 @@ msgid "Configure Remotely..."
 msgstr "Uzaktan Yapılandır…"
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
-#: agentwidget.cpp:103 agentwidget.ui:240
+#: agentwidget.cpp:103 agentwidget.ui:266
 #, kde-format
 msgid "Synchronize"
 msgstr "Eşzamanla"
@@ -157,42 +157,42 @@ msgctxt ""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:447
+#: agentwidget.cpp:449
 #, kde-format
 msgid "Add Agent..."
 msgstr "Aracı Ekle…"
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:450
 #, kde-format
 msgid "Clone Agent"
 msgstr "Aracıyı Klonla"
 
-#: agentwidget.cpp:451
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Abort Activity"
 msgstr "Etkinliği İptal Et"
 
-#: agentwidget.cpp:453
+#: agentwidget.cpp:455
 #, kde-format
 msgid "Restart Agent"
 msgstr "Aracıyı Yeniden Başlat"
 
-#: agentwidget.cpp:456
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Çevrimiçi/Çevrimdışı Yap"
 
-#: agentwidget.cpp:457
+#: agentwidget.cpp:459
 #, kde-format
 msgid "Show task list"
 msgstr "Görev listesini göster"
 
-#: agentwidget.cpp:458
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Değişiklik bildirim günlüğünü göster"
 
-#: agentwidget.cpp:460
+#: agentwidget.cpp:462
 #, kde-format
 msgid "Remove Agent"
 msgstr "Aracıyı Kaldır"
@@ -241,14 +241,20 @@ msgstr "Yetenekler:"
 msgid "Mimetypes:"
 msgstr "MIME Türleri:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: agentwidget.ui:196
+#, kde-format
+msgid "Account ID:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: agentwidget.ui:212
+#: agentwidget.ui:238
 #, kde-format
 msgid "Add..."
 msgstr "Ekle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
+#: agentwidget.ui:245 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
 #: notificationmonitor.cpp:174 notificationmonitor.cpp:369
 #: notificationmonitor.cpp:403 notificationmonitor.cpp:427
@@ -257,19 +263,19 @@ msgid "Remove"
 msgstr "Kaldır"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
-#: agentwidget.ui:226
+#: agentwidget.ui:252
 #, kde-format
 msgid "Configure..."
 msgstr "Yapılandır…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
-#: agentwidget.ui:233
+#: agentwidget.ui:259
 #, kde-format
 msgid "Abort"
 msgstr "İptal Et"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
-#: agentwidget.ui:247
+#: agentwidget.ui:273
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"

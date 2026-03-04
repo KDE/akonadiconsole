@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-03-04 00:45+0000\n"
 "PO-Revision-Date: 2025-01-06 18:58+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -67,7 +67,7 @@ msgid "Configure Remotely..."
 msgstr "Agordi Fore..."
 
 #. i18n: ectx: property (text), widget (QPushButton, syncButton)
-#: agentwidget.cpp:103 agentwidget.ui:240
+#: agentwidget.cpp:103 agentwidget.ui:266
 #, kde-format
 msgid "Synchronize"
 msgstr "Sinkronigi"
@@ -158,42 +158,42 @@ msgctxt ""
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: agentwidget.cpp:447
+#: agentwidget.cpp:449
 #, kde-format
 msgid "Add Agent..."
 msgstr "Aldoni agenton..."
 
-#: agentwidget.cpp:448
+#: agentwidget.cpp:450
 #, kde-format
 msgid "Clone Agent"
 msgstr "Kloni Agenton"
 
-#: agentwidget.cpp:451
+#: agentwidget.cpp:453
 #, kde-format
 msgid "Abort Activity"
 msgstr "Ĉesi Agadon"
 
-#: agentwidget.cpp:453
+#: agentwidget.cpp:455
 #, kde-format
 msgid "Restart Agent"
 msgstr "Rekomenci Agenton"
 
-#: agentwidget.cpp:456
+#: agentwidget.cpp:458
 #, kde-format
 msgid "Toggle Online/Offline"
 msgstr "Baskuligi Interrete/Senrete"
 
-#: agentwidget.cpp:457
+#: agentwidget.cpp:459
 #, kde-format
 msgid "Show task list"
 msgstr "Montri taskoliston"
 
-#: agentwidget.cpp:458
+#: agentwidget.cpp:460
 #, kde-format
 msgid "Show change-notification log"
 msgstr "Montri protokolon pri ŝanĝaj sciigoj"
 
-#: agentwidget.cpp:460
+#: agentwidget.cpp:462
 #, kde-format
 msgid "Remove Agent"
 msgstr "Forigi Agenton"
@@ -242,14 +242,20 @@ msgstr "Kapabloj:"
 msgid "Mimetypes:"
 msgstr "Mimetipoj:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: agentwidget.ui:196
+#, kde-format
+msgid "Account ID:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: agentwidget.ui:212
+#: agentwidget.ui:238
 #, kde-format
 msgid "Add..."
 msgstr "Aldoni..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: agentwidget.ui:219 notificationmodel.cpp:93 notificationmodel.cpp:115
+#: agentwidget.ui:245 notificationmodel.cpp:93 notificationmodel.cpp:115
 #: notificationmodel.cpp:131 notificationmodel.cpp:143
 #: notificationmonitor.cpp:174 notificationmonitor.cpp:369
 #: notificationmonitor.cpp:403 notificationmonitor.cpp:427
@@ -258,19 +264,19 @@ msgid "Remove"
 msgstr "Forigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, configButton)
-#: agentwidget.ui:226
+#: agentwidget.ui:252
 #, kde-format
 msgid "Configure..."
 msgstr "Agordi..."
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
-#: agentwidget.ui:233
+#: agentwidget.ui:259
 #, kde-format
 msgid "Abort"
 msgstr "Ĉesi"
 
 #. i18n: ectx: property (text), widget (QPushButton, restartButton)
-#: agentwidget.ui:247
+#: agentwidget.ui:273
 #, kde-format
 msgctxt "restart the agent"
 msgid "Restart"
