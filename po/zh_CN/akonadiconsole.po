@@ -244,7 +244,7 @@ msgstr "MIME 类型："
 #: agentwidget.ui:196
 #, kde-format
 msgid "Account ID:"
-msgstr ""
+msgstr "账户 ID："
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: agentwidget.ui:238
