@@ -157,7 +157,7 @@ target_link_libraries(
     KPim6::AkonadiPrivate
     KPim6::AkonadiWidgets
     KPim6::AkonadiXml
-    KPim6::Mime
+    KF6::Mime
     KF6::Contacts
     KF6::CalendarCore
     Qt::Sql
