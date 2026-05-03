@@ -12,7 +12,7 @@ Dependencies:
     'pim/akonadi-mime': '@same'
     'pim/calendarsupport': '@same'
     'pim/kimap': '@same'
-    'pim/kmime': '@same'
+    'frameworks/kmime': '@latest-kf6'
     'pim/libkdepim': '@same'
     'pim/messagelib': '@same'
 
