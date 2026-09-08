@@ -25,14 +25,15 @@ void AgentConfigModel::setAgentInstance(const Akonadi::AgentInstance &instance)
 {
     beginResetModel();
     m_settings.clear();
+    endResetModel();
 
     m_interface = new QDBusInterface(u"org.freedesktop.Akonadi.Agent.%1"_s.arg(instance.identifier()), u"/Settings"_s);
     if (!m_interface->isValid()) {
         qCritical() << "Unable to obtain KConfigXT D-Bus interface of agent" << instance.identifier();
         delete m_interface;
+        m_interface = nullptr;
         return;
     }
-    endResetModel();
     reload();
 }
 
