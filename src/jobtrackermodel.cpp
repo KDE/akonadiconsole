@@ -147,7 +147,7 @@ QVariant JobTrackerModel::data(const QModelIndex &idx, int role) const
     if (!idx.parent().isValid()) {
         if (role == Qt::DisplayRole) {
             const QStringList sessions = d->tracker.sessions();
-            if (idx.column() == 0 && idx.row() <= sessions.size()) {
+            if (idx.column() == 0 && idx.row() < sessions.size()) {
                 return sessions.at(idx.row());
             }
         }
