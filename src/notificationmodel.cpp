@@ -222,6 +222,9 @@ void NotificationModel::clear()
 void NotificationModel::setEnabled(bool enable)
 {
     if (enable) {
+        if (m_monitor) {
+            return;
+        }
         m_monitor = new Akonadi::Monitor(this);
         m_monitor->setObjectName("notificationMonitor"_L1);
         m_monitor->setTypeMonitored(Akonadi::Monitor::Notifications);
