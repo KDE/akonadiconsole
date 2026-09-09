@@ -34,7 +34,7 @@ msgstr "Enregistrer une configuration"
 #, kde-format
 msgctxt "@action:button"
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "Rafraichir"
 
 #: agentconfigdialog.cpp:35
 #, kde-format
@@ -684,7 +684,7 @@ msgstr "Programmes :"
 #: dbbrowser.ui:28
 #, kde-format
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "Rafraichir"
 
 #: dbconsole.cpp:81
 #, kde-format
