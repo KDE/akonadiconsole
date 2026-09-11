@@ -112,7 +112,7 @@ msgstr "资源任务列表"
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Notification Log"
-msgstr "更改通知日志"
+msgstr "变动通知日志"
 
 #: agentwidget.cpp:352
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "显示任务列表"
 #: agentwidget.cpp:460
 #, kde-format
 msgid "Show change-notification log"
-msgstr "显示更改通知日志"
+msgstr "显示变动通知日志"
 
 #: agentwidget.cpp:462
 #, kde-format
