@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-04 00:45+0000\n"
-"PO-Revision-Date: 2026-05-28 16:54-0400\n"
+"PO-Revision-Date: 2026-09-22 18:02+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -488,7 +488,7 @@ msgstr ""
 #: browserwidget_contentview.ui:273 browserwidget_contentview.ui:297
 #, kde-format
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: browserwidget_contentview.ui:202
@@ -969,7 +969,7 @@ msgstr "فۇنكسىيە"
 #: loggingmodel.cpp:155 loggingmodel.cpp:171
 #, kde-format
 msgid "%1:%2"
-msgstr "%1:%2"
+msgstr ""
 
 #: main.cpp:29
 #, kde-format
@@ -1649,7 +1649,7 @@ msgstr ""
 #: notificationmonitor.cpp:352
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "مەۋھۇم"
 
 #: notificationmonitor.cpp:384
 #, kde-format
