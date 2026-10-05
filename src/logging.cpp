@@ -5,7 +5,6 @@
 */
 
 #include "logging.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "loggeradaptor.h"
 #include "loggingfiltermodel.h"
@@ -28,6 +27,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+
+using namespace Qt::Literals::StringLiterals;
 
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(LoggingModel::Message)

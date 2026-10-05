@@ -6,7 +6,6 @@
 */
 
 #include "jobtrackermodeltest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobtracker.h"
 #include "jobtrackermodel.h"
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSignalSpy>
 #include <QTest>
 #include <private/instance_p.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 static QString rowSpyToText(const QSignalSpy &spy)
 {

@@ -5,13 +5,14 @@
 */
 
 #include "jobtrackersearchwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QHBoxLayout>
 #include <QLineEdit>
+
+using namespace Qt::Literals::StringLiterals;
 
 JobTrackerSearchWidget::JobTrackerSearchWidget(QWidget *parent)
     : QWidget(parent)

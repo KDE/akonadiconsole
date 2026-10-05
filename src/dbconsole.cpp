@@ -5,7 +5,6 @@
 */
 
 #include "dbconsole.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/DbAccess>
 
@@ -24,6 +23,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSqlQueryModel>
 #include <QTabBar>
 #include <QTabWidget>
+
+using namespace Qt::Literals::StringLiterals;
 
 DbConsole::DbConsole(QWidget *parent)
     : QWidget(parent)

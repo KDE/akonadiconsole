@@ -5,7 +5,6 @@
 */
 
 #include "notificationmodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadiconsole_debug.h"
 #include <Akonadi/ServerManager>
@@ -15,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QMetaMethod>
 #include <private/imapparser_p.h>
 #include <private/protocol_p.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(Akonadi::ChangeNotification)
 

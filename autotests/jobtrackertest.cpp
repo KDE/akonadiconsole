@@ -6,12 +6,13 @@
 */
 
 #include "jobtrackertest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobtracker.h"
 #include <QSignalSpy>
 #include <QTest>
 #include <private/instance_p.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 static QString intPairListToString(const QVariant &var)
 {

@@ -5,7 +5,6 @@
 */
 
 #include "akonadibrowsermodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <KMime/Message>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KContacts/ContactGroup>
 
 #include <KCalendarCore/Incidence>
+
+using namespace Qt::Literals::StringLiterals;
 
 using IncidencePtr = QSharedPointer<KCalendarCore::Incidence>;
 

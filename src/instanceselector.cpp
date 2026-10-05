@@ -7,7 +7,6 @@
 */
 
 #include "instanceselector.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_instanceselector.h"
 
@@ -24,6 +23,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QStandardItemModel>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags)

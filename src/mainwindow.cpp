@@ -7,7 +7,6 @@
 */
 
 #include "mainwindow.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "config-akonadiconsole.h"
 
@@ -20,6 +19,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KStandardAction>
 
 #include <KSharedConfig>
+
+using namespace Qt::Literals::StringLiterals;
 
 MainWindow::MainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)

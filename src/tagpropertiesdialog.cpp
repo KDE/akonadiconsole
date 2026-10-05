@@ -6,7 +6,6 @@
  */
 
 #include "tagpropertiesdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/DbAccess>
 
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSqlError>
 #include <QSqlQuery>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 TagPropertiesDialog::TagPropertiesDialog(QWidget *parent)

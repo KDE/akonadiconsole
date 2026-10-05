@@ -5,12 +5,13 @@
 */
 
 #include "debugmodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
 #include <QColor>
 #include <QStandardItemModel>
+
+using namespace Qt::Literals::StringLiterals;
 
 #ifndef COMPILE_WITH_UNITY_CMAKE_SUPPORT
 Q_DECLARE_METATYPE(DebugModel::Message)

@@ -8,7 +8,6 @@
  */
 
 #include "jobtracker.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadiconsole_debug.h"
 #include "jobtrackeradaptor.h"
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <cassert>
 #include <chrono>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace std::chrono_literals;
 QString JobInfo::stateAsString() const
 {

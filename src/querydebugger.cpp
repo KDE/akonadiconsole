@@ -7,7 +7,6 @@
  */
 
 #include "querydebugger.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "storagedebuggerinterface.h"
 #include "ui_querydebugger.h"
@@ -33,6 +32,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KColorScheme>
 
 #include <algorithm>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(QList<QList<QVariant>>)
 

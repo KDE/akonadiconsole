@@ -6,7 +6,6 @@
  */
 
 #include "monitorswidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "monitorsmodel.h"
 #include "utils.h"
@@ -25,6 +24,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(Akonadi::NotificationSubscriber)
 

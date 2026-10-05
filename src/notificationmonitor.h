@@ -7,9 +7,10 @@
 #pragma once
 
 #include <QWidget>
-using namespace Qt::Literals::StringLiterals;
 
 #include <private/protocol_p.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 class QModelIndex;
 class NotificationModel;

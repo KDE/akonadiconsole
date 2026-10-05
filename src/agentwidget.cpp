@@ -7,7 +7,6 @@
 */
 
 #include "agentwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "agentconfigdialog.h"
 #include "akonadiconsole_debug.h"
@@ -37,6 +36,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QResizeEvent>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 class TextDialog : public QDialog
 {

@@ -7,7 +7,6 @@
 #pragma once
 
 #include <ui_browserwidget_contentview.h>
-using namespace Qt::Literals::StringLiterals;
 
 #include <ui_browserwidget_itemview.h>
 
@@ -16,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/Item>
 
 #include <QWidget>
+
+using namespace Qt::Literals::StringLiterals;
 
 class QModelIndex;
 class QStandardItemModel;

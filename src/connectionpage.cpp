@@ -7,7 +7,6 @@
 */
 
 #include "connectionpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "debugfiltermodel.h"
 #include "debugmodel.h"
@@ -24,6 +23,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "tracernotificationinterface.h"
 #include <QStandardItemModel>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(DebugModel::Message)
 

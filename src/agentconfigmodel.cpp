@@ -5,11 +5,12 @@
 */
 
 #include "agentconfigmodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadiconsole_debug.h"
 #include <QDBusInterface>
 #include <QMetaMethod>
+
+using namespace Qt::Literals::StringLiterals;
 
 AgentConfigModel::AgentConfigModel(QObject *parent)
     : QAbstractTableModel(parent)

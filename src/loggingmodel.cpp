@@ -5,13 +5,14 @@
 */
 
 #include "loggingmodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
 #include <QDateTime>
 #include <QDir>
 #include <QStandardItemModel>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(LoggingModel::Message)
 

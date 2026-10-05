@@ -8,7 +8,6 @@
  */
 
 #include "jobtrackermodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobtracker.h"
 
@@ -21,6 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStringList>
 
 #include <cassert>
+
+using namespace Qt::Literals::StringLiterals;
 
 class JobTrackerModelPrivate
 {

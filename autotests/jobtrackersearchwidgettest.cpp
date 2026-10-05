@@ -5,7 +5,6 @@
 */
 
 #include "jobtrackersearchwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "jobtrackersearchwidget.h"
 #include <QCheckBox>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLineEdit>
 #include <QSignalSpy>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 JobTrackerSearchWidgetTest::JobTrackerSearchWidgetTest(QObject *parent)
     : QObject(parent)

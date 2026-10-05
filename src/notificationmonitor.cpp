@@ -5,7 +5,6 @@
 */
 
 #include "notificationmonitor.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "notificationfiltermodel.h"
 #include "notificationmodel.h"
@@ -35,6 +34,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <Libkdepim/KCheckComboBox>
+
+using namespace Qt::Literals::StringLiterals;
 
 using KPIM::KCheckComboBox;
 

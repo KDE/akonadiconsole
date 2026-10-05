@@ -7,12 +7,13 @@
 #pragma once
 
 #include <QDateTime>
-using namespace Qt::Literals::StringLiterals;
 
 #include <QStandardItem>
 #include <QStringList>
 
 #include <private/protocol_p.h>
+
+using namespace Qt::Literals::StringLiterals;
 
 template<typename T>
 typename std::enable_if<std::is_integral<T>::value, QString>::type toString(T num)

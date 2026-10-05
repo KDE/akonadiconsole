@@ -5,13 +5,14 @@
 */
 
 #include "dbbrowser.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/DbAccess>
 
 #include <QSqlTableModel>
 
 #include <QIcon>
+
+using namespace Qt::Literals::StringLiterals;
 
 DbBrowser::DbBrowser(QWidget *parent)
     : QWidget(parent)

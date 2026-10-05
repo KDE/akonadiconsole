@@ -7,7 +7,6 @@
 */
 
 #include "debugwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "connectionpage.h"
 #include "tracernotificationinterface.h"
@@ -23,6 +22,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QSplitter>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 using org::freedesktop::Akonadi::DebugInterface;
 
