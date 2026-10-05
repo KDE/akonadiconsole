@@ -256,7 +256,7 @@ msgstr "Идентификатор учётной записи:"
 #: agentwidget.ui:238
 #, kde-format
 msgid "Add..."
-msgstr "Добавить..."
+msgstr "Добавить…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: agentwidget.ui:245 notificationmodel.cpp:93 notificationmodel.cpp:115
@@ -271,7 +271,7 @@ msgstr "Удалить"
 #: agentwidget.ui:252
 #, kde-format
 msgid "Configure..."
-msgstr "Настроить..."
+msgstr "Настроить…"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: agentwidget.ui:259
@@ -354,7 +354,7 @@ msgstr "События и задачи"
 #: browserwidget.cpp:238
 #, kde-format
 msgid "Cache only retrieval"
-msgstr "Кэшировать только полученные данные"
+msgstr "Получать только из кэша"
 
 #: browserwidget.cpp:470
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "Выбор файла XML"
 #: browserwidget.cpp:547
 #, kde-format
 msgid "&Add tag..."
-msgstr "&Добавить метку..."
+msgstr "&Добавить метку…"
 
 #: browserwidget.cpp:551
 #, kde-format
@@ -379,12 +379,12 @@ msgstr "Добавить &вложенную метку…"
 #: browserwidget.cpp:554
 #, kde-format
 msgid "&Edit tag..."
-msgstr "&Изменить метку..."
+msgstr "&Изменить метку…"
 
 #: browserwidget.cpp:557
 #, kde-format
 msgid "&Delete tag..."
-msgstr "&Удалить метку..."
+msgstr "&Удалить метку…"
 
 #: browserwidget.cpp:568
 #, kde-format
@@ -430,7 +430,7 @@ msgstr "Полезные данные"
 #: browserwidget_contentview.ui:81
 #, kde-format
 msgid "Unsupported Type"
-msgstr "Неподдерживаемые типы"
+msgstr "Неподдерживаемый тип"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #. i18n: ectx: attribute (title), widget (QWidget, attributesTab)
@@ -477,7 +477,7 @@ msgstr "Исходные полезные данные"
 #: browserwidget_contentview.ui:155 collectioninternalspage.cpp:15
 #, kde-format
 msgid "Internals"
-msgstr "Внутренние особенности"
+msgstr "Внутренние данные"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: browserwidget_contentview.ui:178
@@ -536,7 +536,7 @@ msgstr "Тип MIME:"
 #: browserwidget_contentview.ui:321
 #, kde-format
 msgid "invalid/invalid"
-msgstr "допустимый/недопустимый"
+msgstr "недопустимый/недопустимый"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (KEditListWidget, flags)
@@ -928,12 +928,12 @@ msgstr "Категории:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save to File..."
-msgstr "Сохранить в файл..."
+msgstr "Сохранить в файл…"
 
 #: logging.cpp:131
 #, kde-format
 msgid "Save to File..."
-msgstr "Сохранить в файл..."
+msgstr "Сохранить в файл…"
 
 #: logging.cpp:138 querydebugger.cpp:365 searchwidget.cpp:160
 #, kde-format
@@ -1555,7 +1555,7 @@ msgstr "Внутренний"
 #: notificationmonitor.cpp:302
 #, kde-format
 msgid "Foreign"
-msgstr "Иностранный"
+msgstr "Сторонний"
 
 #: notificationmonitor.cpp:306
 #, kde-format
@@ -1570,7 +1570,7 @@ msgstr "Версия"
 #: notificationmonitor.cpp:308
 #, kde-format
 msgid "Data"
-msgstr "Дата"
+msgstr "Данные"
 
 #: notificationmonitor.cpp:319
 #, kde-format
@@ -1820,7 +1820,7 @@ msgstr "Без фильтра"
 #: notificationmonitor.cpp:509
 #, kde-format
 msgid "Display"
-msgstr "Отображение"
+msgstr "Показ"
 
 #: notificationmonitor.cpp:515
 #, kde-format
@@ -2010,7 +2010,7 @@ msgstr "Элементы не найдены."
 #: searchwidget.cpp:197
 #, kde-format
 msgid "Term/Value"
-msgstr "Компонент/Значение"
+msgstr "Терм/Значение"
 
 #: searchwidget.cpp:197
 #, kde-format
@@ -2020,7 +2020,7 @@ msgstr "WDF/Слот"
 #: searchwidget.cpp:199
 #, kde-format
 msgid "Terms"
-msgstr "Компонент"
+msgstr "Термы"
 
 #: searchwidget.cpp:226
 #, kde-format
@@ -2050,7 +2050,7 @@ msgstr "&Удалить"
 #: tagpropertiesdialog.ui:107
 #, kde-format
 msgid "Remote Identifiers"
-msgstr "Удалить идентификаторы"
+msgstr "Удалённые идентификаторы"
 
 #~ msgid "Synchronize Relations"
 #~ msgstr "Синхронизировать отношения"
