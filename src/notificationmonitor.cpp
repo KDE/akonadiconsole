@@ -561,7 +561,7 @@ void NotificationMonitor::saveToFile()
 
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
-        QMessageBox::warning(this, u"Error"_s, i18n("Failed to open file: %1").arg(file.errorString()));
+        QMessageBox::warning(this, i18nc("@title:window", "Error"), i18n("Failed to open file: %1", file.errorString()));
         return;
     }
 
