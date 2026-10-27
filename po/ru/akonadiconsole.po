@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-27 01:00+0000\n"
 "PO-Revision-Date: 2026-03-06 14:06+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1861,6 +1861,13 @@ msgstr "Атрибуты предка"
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "Получить все атрибуты"
+
+#: notificationmonitor.cpp:564
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@title:window"
+msgid "Error"
+msgstr "Ошибка"
 
 #: querydebugger.cpp:358
 #, kde-format

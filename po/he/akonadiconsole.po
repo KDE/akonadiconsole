@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-27 01:00+0000\n"
 "PO-Revision-Date: 2026-03-05 06:59+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1857,6 +1857,13 @@ msgstr "מאפייני אבות קדומים"
 #, kde-format
 msgid "Fetch All Attributes"
 msgstr "משיכת כל המאפיינים"
+
+#: notificationmonitor.cpp:564
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@title:window"
+msgid "Error"
+msgstr "שגיאה"
 
 #: querydebugger.cpp:358
 #, kde-format
