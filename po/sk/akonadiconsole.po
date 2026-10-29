@@ -1856,8 +1856,7 @@ msgid "Fetch All Attributes"
 msgstr "Stiahnuť všetky atribúty"
 
 #: notificationmonitor.cpp:564
-#, fuzzy, kde-format
-#| msgid "Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error"
 msgstr "Chyba"
