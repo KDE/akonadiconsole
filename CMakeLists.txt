@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.8.40")
+set(PIM_VERSION "6.8.80")
 project(akonadiconsole VERSION ${PIM_VERSION})
 
 set(KF_MIN_VERSION "6.30.0")
@@ -88,13 +88,13 @@ include(ECMFeatureSummary)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION alpha)
+set(KDEPIM_DEV_VERSION beta1)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
-set(RELEASE_SERVICE_VERSION "26.11.40")
+set(RELEASE_SERVICE_VERSION "26.11.80")
 
 set(KDEPIM_VERSION "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})")
 
