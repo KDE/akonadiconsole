@@ -16,7 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 
 static QString intPairListToString(const QVariant &var)
 {
-    const auto arg = var.value<QList<QPair<int, int>>>();
+    const auto arg = var.value<QList<std::pair<int, int>>>();
     QString ret;
     for (const auto &pair : arg) {
         if (!ret.isEmpty()) {
@@ -39,7 +39,7 @@ void JobTrackerTest::initTestCase()
     // Don't interfere with a running akonadiconsole
     Akonadi::Instance::setIdentifier(u"jobtrackertest"_s);
 
-    qRegisterMetaType<QList<QPair<int, int>>>();
+    qRegisterMetaType<QList<std::pair<int, int>>>();
 }
 
 void JobTrackerTest::shouldBeEmpty()

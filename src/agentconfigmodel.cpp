@@ -64,7 +64,7 @@ void AgentConfigModel::reload()
             continue;
         }
         const QString settingName = methodName.at(0).toUpper() + methodName.mid(1);
-        m_settings.append(qMakePair(settingName, reply.arguments().at(0)));
+        m_settings.append(std::make_pair(settingName, reply.arguments().at(0)));
     }
     endResetModel();
 }
@@ -87,7 +87,7 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= m_settings.size()) {
         return {};
     }
-    QPair<QString, QVariant> setting = m_settings.at(index.row());
+    std::pair<QString, QVariant> setting = m_settings.at(index.row());
     if (role == Qt::DisplayRole || role == Qt::EditRole) {
         if (index.column() == 0) {
             return setting.first;
@@ -107,7 +107,7 @@ QVariant AgentConfigModel::data(const QModelIndex &index, int role) const
 bool AgentConfigModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     if (index.column() == 1 && role == Qt::EditRole && index.row() >= 0 && index.row() < m_settings.size()) {
-        const QPair<QString, QVariant> setting = m_settings.at(index.row());
+        const std::pair<QString, QVariant> setting = m_settings.at(index.row());
         if (setting.second != value) {
             m_interface->call(u"set%1"_s.arg(setting.first), value);
             reload();

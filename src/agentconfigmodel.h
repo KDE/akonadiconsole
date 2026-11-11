@@ -35,6 +35,6 @@ public Q_SLOTS:
     void writeConfig();
 
 private:
-    QList<QPair<QString, QVariant>> m_settings;
+    QList<std::pair<QString, QVariant>> m_settings;
     QDBusInterface *m_interface = nullptr;
 };

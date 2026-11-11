@@ -13,7 +13,7 @@
 #include <QDateTime>
 #include <QList>
 #include <QObject>
-#include <QPair>
+#include <utility>
 
 #include <memory>
 
@@ -103,7 +103,7 @@ Q_SIGNALS:
      * This makes it easy for the model to find and update the right
      * part of the model, for efficiency.
      */
-    void updated(const QList<QPair<int, int>> &updates);
+    void updated(const QList<std::pair<int, int>> &updates);
 
 public Q_SLOTS:
     Q_SCRIPTABLE void jobCreated(const QString &session, const QString &jobName, const QString &parentJob, const QString &jobType, const QString &debugString);

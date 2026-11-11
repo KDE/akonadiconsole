@@ -68,7 +68,7 @@ public:
     int lastId{42};
     QTimer timer;
     bool disabled{false};
-    QList<QPair<int, int>> unpublishedUpdates;
+    QList<std::pair<int, int>> unpublishedUpdates;
 
 private:
     JobTracker *const q;
@@ -165,7 +165,7 @@ void JobTracker::jobEnded(const QString &jobName, const QString &error)
     }
     info.endedTimestamp = QDateTime::currentDateTime();
 
-    d->unpublishedUpdates << QPair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
+    d->unpublishedUpdates << std::pair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
     d->startUpdatedSignalTimer();
 }
 
@@ -184,7 +184,7 @@ void JobTracker::jobStarted(const QString &jobName)
     info.state = JobInfo::Running;
     info.startedTimestamp = QDateTime::currentDateTime();
 
-    d->unpublishedUpdates << QPair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
+    d->unpublishedUpdates << std::pair<int, int>(d->childJobs[info.parent].size() - 1, info.parent);
     d->startUpdatedSignalTimer();
 }
 

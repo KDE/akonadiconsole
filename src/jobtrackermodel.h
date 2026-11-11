@@ -55,7 +55,7 @@ public:
 private Q_SLOTS:
     void jobAboutToBeAdded(int pos, int parentId);
     void jobAdded();
-    void jobsUpdated(const QList<QPair<int, int>> &);
+    void jobsUpdated(const QList<std::pair<int, int>> &);
 
 private:
     std::unique_ptr<JobTrackerModelPrivate> const d;

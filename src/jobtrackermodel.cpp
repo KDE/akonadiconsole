@@ -16,8 +16,8 @@
 #include <QColor>
 #include <QFont>
 #include <QModelIndex>
-#include <QPair>
 #include <QStringList>
+#include <utility>
 
 #include <cassert>
 
@@ -262,7 +262,7 @@ void JobTrackerModel::jobAdded()
     endInsertRows();
 }
 
-void JobTrackerModel::jobsUpdated(const QList<QPair<int, int>> &jobs)
+void JobTrackerModel::jobsUpdated(const QList<std::pair<int, int>> &jobs)
 {
     // TODO group them by parent? It's likely that multiple jobs for the same
     // parent will come in in the same batch, isn't it?
