@@ -100,4 +100,5 @@ Comment[vi]=Bàn điều khiển quản lí và gỡ lỗi Akonadi
 Comment[zh_CN]=用于管理和调试 Akonadi 的控制台
 Comment[zh_TW]=Akonadi 管理與偵錯控制台
 Categories=Qt;KDE;Development;
+Keywords=Akonadi;debug;console;PIM;
 X-AppStream-Ignore=true
