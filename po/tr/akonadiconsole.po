@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadiconsole\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 01:00+0000\n"
-"PO-Revision-Date: 2026-11-03 21:13+0300\n"
+"PO-Revision-Date: 2026-11-19 19:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -318,7 +318,7 @@ msgstr "&Öge"
 #: akonadiconsoleui.rc:36
 #, kde-format
 msgid "&Cache"
-msgstr "Ö&nbellek"
+msgstr "Ö&n Bellek"
 
 #. i18n: ectx: Menu (server)
 #: akonadiconsoleui.rc:39
@@ -349,7 +349,7 @@ msgstr "Takvim/Görevler"
 #: browserwidget.cpp:238
 #, kde-format
 msgid "Cache only retrieval"
-msgstr "Yalnızca önbellekli alım"
+msgstr "Yalnızca ön bellekli alım"
 
 #: browserwidget.cpp:470
 #, kde-format
@@ -1074,7 +1074,7 @@ msgstr "XML’ye Dök…"
 #: mainwidget.cpp:71
 #, kde-format
 msgid "Clear Akonadi Cache"
-msgstr "Akonadi Önbelleğini Temizle"
+msgstr "Akonadi Ön Belleğini Temizle"
 
 #: mainwidget.cpp:75
 #, kde-format
@@ -1609,7 +1609,7 @@ msgstr "Koleksiyonları Ara"
 #: notificationmonitor.cpp:338
 #, kde-format
 msgid "Cache Policy"
-msgstr "Önbellek Politikası"
+msgstr "Ön Bellek Politikası"
 
 #: notificationmonitor.cpp:340
 #, kde-format
@@ -1624,7 +1624,7 @@ msgstr "Aralığı Denetle"
 #: notificationmonitor.cpp:342
 #, kde-format
 msgid "Cache Timeout"
-msgstr "Önbellek Zaman Aşımı"
+msgstr "Ön Bellek Zaman Aşımı"
 
 #: notificationmonitor.cpp:343
 #, kde-format
@@ -1764,7 +1764,7 @@ msgstr "Ata Derinliği"
 #: notificationmonitor.cpp:487
 #, kde-format
 msgid "Cache Only"
-msgstr "Yalnızca Önbellek"
+msgstr "Yalnızca Ön Bellek"
 
 #: notificationmonitor.cpp:488
 #, kde-format
