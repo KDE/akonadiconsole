@@ -1851,8 +1851,7 @@ msgid "Fetch All Attributes"
 msgstr "获取所有属性"
 
 #: notificationmonitor.cpp:564
-#, fuzzy, kde-format
-#| msgid "Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error"
 msgstr "错误"
